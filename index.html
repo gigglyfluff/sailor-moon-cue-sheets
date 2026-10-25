@@ -34,6 +34,11 @@
 <script src="data.js"></script>
 <script>
 (async () => {
+/* Browser auto-translate. The Japanese and romaji are marked translate="no", so translation can only ever change the
+   English. A reader whose browser already reads English gets no offer to translate (Chrome otherwise sees the hidden
+   Japanese lines and offers to translate the page into English); everyone else can still translate the English. */
+document.documentElement.lang = 'en';
+if ((navigator.languages || [navigator.language || '']).some(l => /^en\b/i.test(l))) document.documentElement.setAttribute('translate', 'no');
 /* data.js normally arrives through the script tag above. Where script tags for local files are blocked
    (some hosts' security rules), fetch it instead and read the JSON after its first line. */
 let D = window.MMB_DATA;
