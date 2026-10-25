@@ -322,8 +322,8 @@ window.MMB_DATA =
        "t": "1'26\"",
        "d": [
         "喜び・地味め〈頭にブリッジ付〉（カントリー風）",
-        "Yorokobi, jimime 〈atama ni burijji tsuki〉 (kantorii-fuu)",
-        "Joy, understated 〈with a bridge at the start〉 (country style)"
+        "Yorokobi, jimime [atama ni burijji tsuki] (kantorii-fuu)",
+        "Joy, understated [with a bridge at the start] (country style)"
        ],
        "cd": "1-42"
       },
@@ -441,7 +441,7 @@ window.MMB_DATA =
        "c": "E-12",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -450,8 +450,8 @@ window.MMB_DATA =
        "t": "1'10\"",
        "d": [
         "絶望感〈頭J-18・（不気味）（悪の登場）のブリッジ付〉",
-        "Zetsuboukan 〈atama J-18 (bukimi) (aku no toujou) no burijji tsuki〉",
-        "Despair 〈with the J-18 bridge (eerie) (villain appears) at the start〉"
+        "Zetsuboukan [atama J-18 (bukimi) (aku no toujou) no burijji tsuki]",
+        "Despair [with the J-18 bridge (eerie) (villain appears) at the start]"
        ],
        "cd": "2-17"
       },
@@ -592,8 +592,8 @@ window.MMB_DATA =
        ],
        "d": [
         "爽やかなの清々しさ〈頭にブリッジ付〉",
-        "Sawayaka na no sugasugashisa 〈atama ni burijji tsuki〉",
-        "Fresh and refreshing 〈with a bridge at the start〉"
+        "Sawayaka na no sugasugashisa [atama ni burijji tsuki]",
+        "Fresh and refreshing [with a bridge at the start]"
        ],
        "cd": "1-9",
        "dx": {
@@ -646,7 +646,7 @@ window.MMB_DATA =
        "c": "F-7",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -659,8 +659,8 @@ window.MMB_DATA =
        ],
        "d": [
         "和服でお淑やかに（琴音）〈頭に登場ブリッジ付〉",
-        "Wafuku de oshitoyaka ni (koto-ne) 〈atama ni toujou burijji tsuki〉",
-        "Graceful in kimono (koto sounds) 〈with an entrance bridge at the start〉"
+        "Wafuku de oshitoyaka ni (koto-ne) [atama ni toujou burijji tsuki]",
+        "Graceful in kimono (koto sounds) [with an entrance bridge at the start]"
        ],
        "cd": "4-19-3"
       },
@@ -669,8 +669,8 @@ window.MMB_DATA =
        "t": "1'22\"",
        "d": [
         "不良（やくざ）の登場〈頭に恐いブリッジ付〉",
-        "Furyou (yakuza) no toujou 〈atama ni kowai burijji tsuki〉",
-        "A thug (yakuza) appears 〈with a scary bridge at the start〉"
+        "Furyou (yakuza) no toujou [atama ni kowai burijji tsuki]",
+        "A thug (yakuza) appears [with a scary bridge at the start]"
        ],
        "cd": "1-6"
       },
@@ -716,7 +716,7 @@ window.MMB_DATA =
        "c": "F-13",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -729,8 +729,8 @@ window.MMB_DATA =
        ],
        "d": [
         "美しき悪〈頭J-19・（派手な）（悪の登場）のブリッジ付〉",
-        "Utsukushiki aku 〈atama J-19 (hade na) (aku no toujou) no burijji tsuki〉",
-        "Beautiful evil 〈with the J-19 bridge (flashy) (villain appears) at the start〉"
+        "Utsukushiki aku [atama J-19 (hade na) (aku no toujou) no burijji tsuki]",
+        "Beautiful evil [with the J-19 bridge (flashy) (villain appears) at the start]"
        ],
        "cd": "2-21"
       },
@@ -739,8 +739,8 @@ window.MMB_DATA =
        "t": "1'23\"",
        "d": [
         "強大な悪の力　〈頭J-17（物凄く恐ろしいもの出現！）付〉",
-        "Kyoudai na aku no chikara 〈atama J-17 (monosugoku osoroshii mono shutsugen!) tsuki〉",
-        "Mighty power of evil 〈with J-17 (something terrifying appears!) at the start〉"
+        "Kyoudai na aku no chikara [atama J-17 (monosugoku osoroshii mono shutsugen!) tsuki]",
+        "Mighty power of evil [with J-17 (something terrifying appears!) at the start]"
        ],
        "cd": "2-19"
       }
@@ -774,7 +774,7 @@ window.MMB_DATA =
        "c": "G-2",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -782,7 +782,7 @@ window.MMB_DATA =
        "c": "G-3",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -809,7 +809,7 @@ window.MMB_DATA =
        "c": "G-6",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -827,7 +827,7 @@ window.MMB_DATA =
        "c": "G-8",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -835,7 +835,7 @@ window.MMB_DATA =
        "c": "G-9",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -1891,7 +1891,7 @@ window.MMB_DATA =
        "c": "M-112",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -2065,7 +2065,7 @@ window.MMB_DATA =
        "c": "M-124",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -2720,7 +2720,7 @@ window.MMB_DATA =
        "c": "M-319",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -2798,7 +2798,7 @@ window.MMB_DATA =
        "c": "M-324",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -2966,7 +2966,7 @@ window.MMB_DATA =
        "c": "M-335",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -3082,7 +3082,7 @@ window.MMB_DATA =
        "c": "M-343",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -3200,7 +3200,7 @@ window.MMB_DATA =
        "c": "M-352",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -3208,7 +3208,7 @@ window.MMB_DATA =
        "c": "M-353",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -3216,7 +3216,7 @@ window.MMB_DATA =
        "c": "M-354",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -3224,7 +3224,7 @@ window.MMB_DATA =
        "c": "M-355",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -3232,7 +3232,7 @@ window.MMB_DATA =
        "c": "M-356",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -3314,7 +3314,7 @@ window.MMB_DATA =
        "c": "M-365",
        "d": [
         "※欠番",
-        "※Ketsuban",
+        "*Ketsuban",
         "*Unused number"
        ]
       },
@@ -3501,7 +3501,12 @@ window.MMB_DATA =
         "Aikyatchi (koorasu-nuki)",
         "Eyecatch (without chorus)"
        ],
-       "cd": "5-17-2"
+       "cd": "5-17-2",
+       "cn": [
+        "M-2 コーラスヌキ",
+        "M-2 koorasu-nuki",
+        "M-2 without chorus"
+       ]
       },
       {
        "c": "M-3",
@@ -3567,8 +3572,13 @@ window.MMB_DATA =
        "t": "31\"",
        "d": [
         "〃（コーラスヌキ）",
-        "〃 (koorasu-nuki)",
+        "Onaji (koorasu-nuki)",
         "Ditto (without chorus)"
+       ],
+       "cn": [
+        "M-9 コーラスヌキ",
+        "M-9 koorasu-nuki",
+        "M-9 without chorus"
        ]
       },
       {
@@ -3672,7 +3682,12 @@ window.MMB_DATA =
         "Amazon Baa BGM (rajio toon ni saiku baajon)",
         "Amazon bar BGM (version processed to sound like a radio)"
        ],
-       "cd": "5-7-1"
+       "cd": "5-7-1",
+       "cn": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ]
       },
       {
        "c": "M-17",
@@ -3795,7 +3810,12 @@ window.MMB_DATA =
         "M-33 no atama no hou nomi",
         "Opening of M-33 only"
        ],
-       "cd": "5-4-2"
+       "cd": "5-4-2",
+       "cn": [
+        "M-33 別バージョン",
+        "M-33 betsu baajon",
+        "M-33 alternate version"
+       ]
       },
       {
        "c": "M-34",
@@ -3853,7 +3873,12 @@ window.MMB_DATA =
         "M-40 no sutoringusu-nuki",
         "M-40 without strings"
        ],
-       "cd": "5-12-2"
+       "cd": "5-12-2",
+       "cn": [
+        "M-40 ストリングスヌキ",
+        "M-40 sutoringusu-nuki",
+        "M-40 without strings"
+       ]
       },
       {
        "c": "M-41",
@@ -4146,7 +4171,12 @@ window.MMB_DATA =
         "M-23 no gurokken baajon",
         "Glockenspiel version of M-23"
        ],
-       "cd": "5-18-2"
+       "cd": "5-18-2",
+       "cn": [
+        "M-23 グロッケンバージョン",
+        "M-23 gurokken baajon",
+        "M-23 glockenspiel version"
+       ]
       },
       {
        "c": "M-26",
@@ -4404,6 +4434,11 @@ window.MMB_DATA =
         "セーラー戦士の新変身　（コーラスなし）",
         "Seeraa senshi no shin-henshin (koorasu nashi)",
         "The Sailor Senshi's new transformation (no chorus)"
+       ],
+       "cn": [
+        "M-58 カラオケ",
+        "M-58 karaoke",
+        "M-58 karaoke"
        ]
       },
       {
@@ -4418,7 +4453,12 @@ window.MMB_DATA =
         "Seeraa Maakyurii shin-henshin (te UP + zenshin koorasu-iri)",
         "Sailor Mercury's new transformation (hand close-up + full body, with chorus)"
        ],
-       "cd": "SS-12-4"
+       "cd": "SS-12-4",
+       "cn": [
+        "M-58 S・マーキュリー",
+        "M-58 Seeraa Maakyurii",
+        "M-58 Sailor Mercury"
+       ]
       },
       {
        "c": "M-58 S・ジュピター",
@@ -4432,7 +4472,12 @@ window.MMB_DATA =
         "Seeraa Jupitaa shin-henshin (te UP + zenshin koorasu-iri)",
         "Sailor Jupiter's new transformation (hand close-up + full body, with chorus)"
        ],
-       "cd": "SS-12-5"
+       "cd": "SS-12-5",
+       "cn": [
+        "M-58 S・ジュピター",
+        "M-58 Seeraa Jupitaa",
+        "M-58 Sailor Jupiter"
+       ]
       },
       {
        "c": "M-58 S・ヴィーナス",
@@ -4446,7 +4491,12 @@ window.MMB_DATA =
         "Seeraa Viinasu shin-henshin (te UP + zenshin koorasu-iri)",
         "Sailor Venus's new transformation (hand close-up + full body, with chorus)"
        ],
-       "cd": "SS-12-6"
+       "cd": "SS-12-6",
+       "cn": [
+        "M-58 S・ヴィーナス",
+        "M-58 Seeraa Viinasu",
+        "M-58 Sailor Venus"
+       ]
       },
       {
        "c": "M-58 S・マーズ",
@@ -4460,7 +4510,12 @@ window.MMB_DATA =
         "Seeraa Maazu shin-henshin (te UP + zenshin koorasu-iri)",
         "Sailor Mars's new transformation (hand close-up + full body, with chorus)"
        ],
-       "cd": "SS-12-7"
+       "cd": "SS-12-7",
+       "cn": [
+        "M-58 S・マーズ",
+        "M-58 Seeraa Maazu",
+        "M-58 Sailor Mars"
+       ]
       },
       {
        "c": "M-59",
@@ -4483,6 +4538,11 @@ window.MMB_DATA =
         "M-59の手UP×4なしバージョン　（コーラスなし）",
         "M-59 no te UP ×4 nashi baajon (koorasu nashi)",
         "Version of M-59 without the four hand close-ups (no chorus)"
+       ],
+       "cn": [
+        "M-59 カラオケ",
+        "M-59 karaoke",
+        "M-59 karaoke"
        ]
       },
       {
@@ -4962,7 +5022,12 @@ window.MMB_DATA =
         "M-624 koorasu-nuki",
         "M-624 without chorus"
        ],
-       "cd": "ST2-19"
+       "cd": "ST2-19",
+       "cn": [
+        "M-624 CHOナシ",
+        "M-624 CHO nashi",
+        "M-624 without chorus"
+       ]
       },
       {
        "c": "M-625 CHOナシ",
@@ -4976,7 +5041,12 @@ window.MMB_DATA =
         "M-625 koorasu-nuki",
         "M-625 without chorus"
        ],
-       "cd": "ST2-20"
+       "cd": "ST2-20",
+       "cn": [
+        "M-625 CHOナシ",
+        "M-625 CHO nashi",
+        "M-625 without chorus"
+       ]
       },
       {
        "c": "M-625",
@@ -5147,7 +5217,12 @@ window.MMB_DATA =
         "M-634 koorasu-nuki",
         "M-634 without chorus"
        ],
-       "cd": "ST2-18"
+       "cd": "ST2-18",
+       "cn": [
+        "M-634 CHOナシ",
+        "M-634 CHO nashi",
+        "M-634 without chorus"
+       ]
       }
      ],
      "tt": false,
@@ -6079,7 +6154,7 @@ window.MMB_DATA =
        "m": "2",
        "d": [
         "※TVオープニング曲",
-        "※TV oopuningu kyoku",
+        "*TV oopuningu kyoku",
         "*TV opening song"
        ],
        "c": "M-202",
@@ -6391,7 +6466,7 @@ window.MMB_DATA =
        "m": "25",
        "d": [
         "※主題歌「Moon Revenge」",
-        "※Shudaika 「Moon Revenge」",
+        "*Shudaika \"Moon Revenge\"",
         "*Theme song \"Moon Revenge\""
        ],
        "c": "M-225",
@@ -6413,7 +6488,7 @@ window.MMB_DATA =
        "m": "27",
        "d": [
         "※エンディング曲「Moon Revenge」",
-        "※Endingu kyoku 「Moon Revenge」",
+        "*Endingu kyoku \"Moon Revenge\"",
         "*Ending song \"Moon Revenge\""
        ],
        "c": "M-227",
@@ -6739,8 +6814,8 @@ window.MMB_DATA =
        "m": "1",
        "d": [
         "宇宙（静かで平和な印象）〜（転調）邪悪な存在が迫って来る〈スノーカグヤのテーマ〉",
-        "Uchuu (shizuka de heiwa na inshou) ~ (tenchou) jaaku na sonzai ga sematte kuru 〈Sunoo Kaguya no teema〉",
-        "Space (quiet, peaceful) ~ (key change) an evil presence approaches 〈Snow Kaguya's theme〉"
+        "Uchuu (shizuka de heiwa na inshou) ~ (tenchou) jaaku na sonzai ga sematte kuru [Sunoo Kaguya no teema]",
+        "Space (quiet, peaceful) ~ (key change) an evil presence approaches [Snow Kaguya's theme]"
        ],
        "c": "M-401",
        "t": [
@@ -6765,7 +6840,7 @@ window.MMB_DATA =
        "m": "3",
        "d": [
         "「ムーンライト伝説」ムーンリップス版（TVサイズ）",
-        "「Muunraito Densetsu」 Muun Rippusu-ban (TV saizu)",
+        "\"Muunraito Densetsu\" Muun Rippusu-ban (TV saizu)",
         "\"Moonlight Legend,\" Moon Lips version (TV size)"
        ],
        "t": "1'22\"",
@@ -6797,8 +6872,8 @@ window.MMB_DATA =
        "m": "6",
        "d": [
         "〈翔のテーマ〉翔の優しさ〜（やわらかく静かにしのび込む）〜（優しさに心打たれるルナ）",
-        "〈Kakeru no teema〉 Kakeru no yasashisa ~ (yawarakaku shizuka ni shinobikomu) ~ (yasashisa ni kokoro utareru Runa)",
-        "〈Kakeru's theme〉 Kakeru's kindness ~ (steals in softly and quietly) ~ (Luna is moved by his kindness)"
+        "[Kakeru no teema] Kakeru no yasashisa ~ (yawarakaku shizuka ni shinobikomu) ~ (yasashisa ni kokoro utareru Runa)",
+        "[Kakeru's theme] Kakeru's kindness ~ (steals in softly and quietly) ~ (Luna is moved by his kindness)"
        ],
        "c": "M-406",
        "t": [
@@ -6838,8 +6913,8 @@ window.MMB_DATA =
        "m": "9",
        "d": [
         "〈翔のテーマ〉翔の夢　優しく",
-        "〈Kakeru no teema〉 Kakeru no yume, yasashiku",
-        "〈Kakeru's theme〉 Kakeru's dream, gently"
+        "[Kakeru no teema] Kakeru no yume, yasashiku",
+        "[Kakeru's theme] Kakeru's dream, gently"
        ],
        "c": "M-409",
        "t": "42\"",
@@ -6849,8 +6924,8 @@ window.MMB_DATA =
        "m": "10",
        "d": [
         "恋の目覚め　〈ルナのテーマ〉",
-        "Koi no mezame 〈Runa no teema〉",
-        "Love awakens 〈Luna's theme〉"
+        "Koi no mezame [Runa no teema]",
+        "Love awakens [Luna's theme]"
        ],
        "c": "M-410",
        "t": [
@@ -6864,8 +6939,8 @@ window.MMB_DATA =
        "m": "11",
        "d": [
         "〈スノーカグヤのテーマ〉侵略作戦開始",
-        "〈Sunoo Kaguya no teema〉 shinryaku sakusen kaishi",
-        "〈Snow Kaguya's theme〉 The invasion begins"
+        "[Sunoo Kaguya no teema] shinryaku sakusen kaishi",
+        "[Snow Kaguya's theme] The invasion begins"
        ],
        "c": "M-411",
        "t": [
@@ -7022,7 +7097,7 @@ window.MMB_DATA =
        ],
        "d": [
         "セーラームーン登場（劇場版「R」劇伴曲流用）",
-        "Seeraa Muun toujou (gekijou-ban 「R」 gekiban-kyoku ryuuyou)",
+        "Seeraa Muun toujou (gekijou-ban \"R\" gekiban-kyoku ryuuyou)",
         "Sailor Moon appears (score cue reused from the movie \"R\")"
        ],
        "c": "M-203",
@@ -7113,8 +7188,8 @@ window.MMB_DATA =
        "m": "26",
        "d": [
         "〈スノーカグヤのテーマ〉野望〜（転調）死の影",
-        "〈Sunoo Kaguya no teema〉 yabou ~ (tenchou) shi no kage",
-        "〈Snow Kaguya's theme〉 Ambition ~ (key change) shadow of death"
+        "[Sunoo Kaguya no teema] yabou ~ (tenchou) shi no kage",
+        "[Snow Kaguya's theme] Ambition ~ (key change) shadow of death"
        ],
        "c": "M-427",
        "t": [
@@ -7173,8 +7248,8 @@ window.MMB_DATA =
        "m": "30",
        "d": [
         "〈翔のテーマ〉翔の思い",
-        "〈Kakeru no teema〉 Kakeru no omoi",
-        "〈Kakeru's theme〉 Kakeru's feelings"
+        "[Kakeru no teema] Kakeru no omoi",
+        "[Kakeru's theme] Kakeru's feelings"
        ],
        "c": "M-431",
        "t": [
@@ -7214,8 +7289,8 @@ window.MMB_DATA =
        "m": "33",
        "d": [
         "辛い別れ〈翔のテーマ〉",
-        "Tsurai wakare 〈Kakeru no teema〉",
-        "A painful parting 〈Kakeru's theme〉"
+        "Tsurai wakare [Kakeru no teema]",
+        "A painful parting [Kakeru's theme]"
        ],
        "c": "M-434",
        "t": "1'08\"",
@@ -7225,8 +7300,8 @@ window.MMB_DATA =
        "m": "34",
        "d": [
         "〈ルナのテーマ〉ルナの哀しみ",
-        "〈Runa no teema〉 Runa no kanashimi",
-        "〈Luna's theme〉 Luna's sorrow"
+        "[Runa no teema] Runa no kanashimi",
+        "[Luna's theme] Luna's sorrow"
        ],
        "c": "M-435",
        "t": [
@@ -7240,8 +7315,8 @@ window.MMB_DATA =
        "m": "35",
        "d": [
         "〈スノーカグヤのテーマ〉スノーカグヤ出現",
-        "〈Sunoo Kaguya no teema〉 Sunoo Kaguya shutsugen",
-        "〈Snow Kaguya's theme〉 Snow Kaguya appears"
+        "[Sunoo Kaguya no teema] Sunoo Kaguya shutsugen",
+        "[Snow Kaguya's theme] Snow Kaguya appears"
        ],
        "c": "M-436",
        "t": [
@@ -7270,8 +7345,8 @@ window.MMB_DATA =
        "m": "37",
        "d": [
         "〈ルナのテーマ〉切ない愛",
-        "〈Runa no teema〉 setsunai ai",
-        "〈Luna's theme〉 Bittersweet love"
+        "[Runa no teema] setsunai ai",
+        "[Luna's theme] Bittersweet love"
        ],
        "c": "M-438",
        "t": "38\"",
@@ -7388,8 +7463,8 @@ window.MMB_DATA =
        "m": "46",
        "d": [
         "〈ルナのテーマ〉愛の奇跡〜美しく盛り上がる〜（セリフ聞かせ）静かに〜盛り上がる〜静か（楽器の構成を変化するとかしてシーン変わりで印象を変える）〜盛り上がり〜またまた静かにしてルナのテーマ切なく聞かせる",
-        "〈Runa no teema〉 ai no kiseki ~ utsukushiku moriagaru ~ (serifu kikase) shizuka ni ~ moriagaru ~ shizuka (gakki no kousei wo henka suru toka shite shiin-gawari de inshou wo kaeru) ~ moriagari ~ matamata shizuka ni shite Runa no teema setsunaku kikaseru",
-        "〈Luna's theme〉 Miracle of love ~ swells beautifully ~ (let the dialogue be heard) quietly ~ swells ~ quiet (change the impression at scene changes, e.g. by changing the instrumentation) ~ climax ~ quiet again; let Luna's theme be heard poignantly"
+        "[Runa no teema] ai no kiseki ~ utsukushiku moriagaru ~ (serifu kikase) shizuka ni ~ moriagaru ~ shizuka (gakki no kousei wo henka suru toka shite shiin-gawari de inshou wo kaeru) ~ moriagari ~ matamata shizuka ni shite Runa no teema setsunaku kikaseru",
+        "[Luna's theme] Miracle of love ~ swells beautifully ~ (let the dialogue be heard) quietly ~ swells ~ quiet (change the impression at scene changes, e.g. by changing the instrumentation) ~ climax ~ quiet again; let Luna's theme be heard poignantly"
        ],
        "c": "M-447",
        "t": [
@@ -7403,8 +7478,8 @@ window.MMB_DATA =
        "m": "47",
        "d": [
         "〈ルナのテーマ〉愛のメッセージ〜優しく温かく盛り上がる（他の楽器くわわる）",
-        "〈Runa no teema〉 ai no messeeji ~ yasashiku atatakaku moriagaru (hoka no gakki kuwawaru)",
-        "〈Luna's theme〉 Message of love ~ builds gently and warmly (other instruments join)"
+        "[Runa no teema] ai no messeeji ~ yasashiku atatakaku moriagaru (hoka no gakki kuwawaru)",
+        "[Luna's theme] Message of love ~ builds gently and warmly (other instruments join)"
        ],
        "c": "M-448",
        "t": "54\"",
@@ -7452,7 +7527,7 @@ window.MMB_DATA =
        "m": "1",
        "d": [
         "プブランの笛〜子供達の楽しそうな歌声入る　（「三時の妖精」）",
-        "Puburan no fue ~ kodomo-tachi no tanoshisou na utagoe hairu (「Sanji no Yousei」)",
+        "Puburan no fue ~ kodomo-tachi no tanoshisou na utagoe hairu (\"Sanji no Yousei\")",
         "Poupelin's flute ~ the children's happy singing comes in (\"The 3 O'Clock Fairy\")"
        ],
        "c": "M-512",
@@ -7474,7 +7549,7 @@ window.MMB_DATA =
        "m": "3",
        "d": [
         "オープニング「ムーンライト伝説」ムーンリップス（唄入り）",
-        "Oopuningu 「Muunraito Densetsu」 Muun Rippusu (uta-iri)",
+        "Oopuningu \"Muunraito Densetsu\" Muun Rippusu (uta-iri)",
         "Opening \"Moonlight Legend,\" Moon Lips (with vocals)"
        ],
        "t": "1'22\"",
@@ -7558,7 +7633,7 @@ window.MMB_DATA =
        "m": "10",
        "d": [
         "プブランの笛〜子供達の歌入ってくる〜笛止〜歌は遅れて（笛）に止まる　（「三時の妖精」）",
-        "Puburan no fue ~ kodomo-tachi no uta haitte kuru ~ fue tome ~ uta wa okurete (fue) ni tomaru (「Sanji no Yousei」)",
+        "Puburan no fue ~ kodomo-tachi no uta haitte kuru ~ fue tome ~ uta wa okurete (fue) ni tomaru (\"Sanji no Yousei\")",
         "Poupelin's flute ~ the children's singing comes in ~ flute stops ~ singing stops just after the flute (\"The 3 O'Clock Fairy\")"
        ],
        "c": "M-519",
@@ -7732,7 +7807,7 @@ window.MMB_DATA =
        "m": "21",
        "d": [
         "※注2　M-520と同じモノなのでM-21としては不要　プブランの笛",
-        "※Chuu 2: M-520 to onaji mono na no de M-21 to shite wa fuyou. Puburan no fue",
+        "*Chuu 2: M-520 to onaji mono na no de M-21 to shite wa fuyou. Puburan no fue",
         "*Note 2: Same as M-520, so not needed as M-21. Poupelin's flute"
        ],
        "t": [
@@ -7795,7 +7870,7 @@ window.MMB_DATA =
        "m": "26",
        "d": [
         "M-1同様プブランの笛〜子供達の歌入る　（「三時の妖精」）",
-        "M-1 douyou Puburan no fue ~ kodomo-tachi no uta hairu (「Sanji no Yousei」)",
+        "M-1 douyou Puburan no fue ~ kodomo-tachi no uta hairu (\"Sanji no Yousei\")",
         "Poupelin's flute as in M-1 ~ children's singing comes in (\"The 3 O'Clock Fairy\")"
        ],
        "c": "M-532",
@@ -7810,7 +7885,7 @@ window.MMB_DATA =
        "m": "27",
        "d": [
         "M-1同様プブランの笛（頭から子供達の歌入り）〜笛三重奏になる（オランジャ、バナーヌ入り）　（「三時の妖精」）",
-        "M-1 douyou Puburan no fue (atama kara kodomo-tachi no uta-iri) ~ fue sanjuusou ni naru (Oranja, Banaanu iri) (「Sanji no Yousei」)",
+        "M-1 douyou Puburan no fue (atama kara kodomo-tachi no uta-iri) ~ fue sanjuusou ni naru (Oranja, Banaanu iri) (\"Sanji no Yousei\")",
         "Poupelin's flute as in M-1 (children's singing from the start) ~ becomes a flute trio (Orange and Banane join) (\"The 3 O'Clock Fairy\")"
        ],
        "c": "(M-532B)",
@@ -8339,7 +8414,7 @@ window.MMB_DATA =
        "m": "18",
        "d": [
         "エンディング「\"らしく\"いきましょ」TVサイズ",
-        "Endingu 「\"Rashiku\" Ikimasho」 TV saizu",
+        "Endingu \"\"Rashiku\" Ikimasho\" TV saizu",
         "Ending \"Let's Be True to Ourselves,\" TV size"
        ],
        "t": "1'30\"",
@@ -11059,8 +11134,8 @@ window.MMB_DATA =
        "m": "23",
        "d": [
         "雨出のCD新曲",
-        "Ude no CD shinkyoku",
-        "Ude's new CD single (as printed 雨出)"
+        "Amade no CD shinkyoku",
+        "Amade's new CD single"
        ],
        "c": [
         "ライブラリー",
@@ -15676,7 +15751,7 @@ window.MMB_DATA =
          null
         ],
         [
-         "H-2",
+         "2",
          "cue-H-2",
          null
         ]
@@ -19862,7 +19937,7 @@ window.MMB_DATA =
          null
         ],
         [
-         "H-2",
+         "2",
          "cue-H-2",
          null
         ]
@@ -20181,7 +20256,7 @@ window.MMB_DATA =
          null
         ],
         [
-         "H-2",
+         "2",
          "cue-H-2",
          null
         ]
@@ -21225,7 +21300,7 @@ window.MMB_DATA =
          null
         ],
         [
-         "H-2",
+         "2",
          "cue-H-2",
          null
         ]
@@ -22954,7 +23029,7 @@ window.MMB_DATA =
          null
         ],
         [
-         "H-2",
+         "2",
          "cue-H-2",
          null
         ]
@@ -23816,7 +23891,7 @@ window.MMB_DATA =
        "m": "14",
        "cl": [
         [
-         "F-4B2",
+         "F-4B",
          "cue-F-4B",
          null
         ]
@@ -24469,8 +24544,8 @@ window.MMB_DATA =
        ],
        "d": [
         "悪の対立　＼",
-        "Aku no tairitsu ＼",
-        "Evil at odds ＼"
+        "Aku no tairitsu",
+        "Evil at odds"
        ],
        "c": "J-16",
        "t": "21\""
@@ -24693,7 +24768,7 @@ window.MMB_DATA =
          null
         ],
         [
-         "H-2",
+         "2",
          "cue-H-2",
          null
         ]
@@ -25674,10 +25749,16 @@ window.MMB_DATA =
        "d": [
         "絶対絶命／",
         "Zettai zetsumei!",
-        "Desperate situation! (printed 絶対絶命)"
+        "Desperate situation!"
        ],
        "c": "E-22",
-       "t": "1'08\""
+       "t": "1'08\"",
+       "dx": {
+        "p": "絶対絶命",
+        "c": "絶体絶命",
+        "u": "https://jisho.org/word/絶体絶命",
+        "n": "The idiom is written 絶体絶命; 絶対絶命 is a common misspelling."
+       }
       },
       {
        "m": "21",
@@ -27852,7 +27933,7 @@ window.MMB_DATA =
          null
         ],
         [
-         "H-2",
+         "2",
          "cue-H-2",
          null
         ]
@@ -28570,7 +28651,7 @@ window.MMB_DATA =
        ],
        "d": [
         "エイルの笛の音＼",
-        "Eiru no fue no ne＼",
+        "Eiru no fue no ne",
         "The sound of Ail's flute"
        ],
        "c": "M-129C",
@@ -33554,7 +33635,11 @@ window.MMB_DATA =
         "35\"半",
         "35.5\"",
         "35.5\""
-       ]
+       ],
+       "dn": {
+        "t": "[Editor's note: Ultra Q is the 1966 monster series that led to Ultraman, known for its eerie theme]",
+        "u": "https://en.wikipedia.org/wiki/Ultra_Q"
+       }
       },
       {
        "m": "15",
@@ -35351,7 +35436,11 @@ window.MMB_DATA =
         "Orijinaru",
         "Original"
        ],
-       "t": "40\""
+       "t": "40\"",
+       "dn": {
+        "t": "[Editor's note: radio calisthenics (ラジオ体操) is Japan's daily exercise broadcast, set to a piano tune nearly everyone there knows]",
+        "u": "https://en.wikipedia.org/wiki/Radio_calisthenics"
+       }
       },
       {
        "m": "6",
@@ -46691,7 +46780,13 @@ window.MMB_DATA =
         "New ending \"Tuxedo Mirage\": stay tuned for next time!"
        ],
        "c": "M-102",
-       "t": "36\""
+       "t": "36\"",
+       "dx": {
+        "p": "好御期待",
+        "c": "乞御期待",
+        "u": "https://jisho.org/word/乞うご期待",
+        "n": "The stock phrase is 乞うご期待 (\"stay tuned\"); 好 is printed for 乞, which looks alike."
+       }
       }
      ]
     }
@@ -48455,7 +48550,11 @@ window.MMB_DATA =
         "Bridge: a close call"
        ],
        "c": "J-18",
-       "t": "7\""
+       "t": "7\"",
+       "dn": {
+        "t": "[Editor's note: 危機一発 is a pun on the idiom 危機一髪, \"by a hair's breadth\", made famous by the Japanese title of the James Bond film From Russia with Love]",
+        "u": "https://en.wikipedia.org/wiki/From_Russia_with_Love_(film)"
+       }
       },
       {
        "m": "25",
@@ -57470,7 +57569,11 @@ window.MMB_DATA =
         "Comedy duo banter"
        ],
        "c": "E-14",
-       "t": "29\""
+       "t": "29\"",
+       "dn": {
+        "t": "[Editor's note: boke and tsukkomi are the funny man and the straight man of a manzai comedy duo]",
+        "u": "https://en.wikipedia.org/wiki/Manzai"
+       }
       },
       {
        "m": "13",
@@ -63321,7 +63424,7 @@ window.MMB_DATA =
        "m": "10",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -63331,7 +63434,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "51\""
       },
       {
@@ -63607,7 +63714,7 @@ window.MMB_DATA =
        "m": "4",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -63617,7 +63724,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": [
         "1'05\"半",
         "1'05.5\"",
@@ -63923,10 +64034,16 @@ window.MMB_DATA =
        "d": [
         "敵の闘場",
         "Teki no toujou",
-        "The enemy appears (printed 闘場)"
+        "The enemy appears"
        ],
        "c": "M-42",
-       "t": "19\""
+       "t": "19\"",
+       "dx": {
+        "p": "闘場",
+        "c": "登場",
+        "u": "https://jisho.org/word/登場",
+        "n": "登場 (\"appearance\") printed with 闘 (\"fight\"), which has the same reading とう."
+       }
       },
       {
        "m": "21",
@@ -64161,7 +64278,7 @@ window.MMB_DATA =
        "m": "6",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -64171,7 +64288,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "47\""
       },
       {
@@ -64389,10 +64510,16 @@ window.MMB_DATA =
        "d": [
         "絶対絶命／",
         "Zettai zetsumei!",
-        "Desperate situation! (printed 絶対絶命)"
+        "Desperate situation!"
        ],
        "c": "M-55",
-       "t": "41\""
+       "t": "41\"",
+       "dx": {
+        "p": "絶対絶命",
+        "c": "絶体絶命",
+        "u": "https://jisho.org/word/絶体絶命",
+        "n": "The idiom is written 絶体絶命; 絶対絶命 is a common misspelling."
+       }
       },
       {
        "m": "19",
@@ -64567,7 +64694,7 @@ window.MMB_DATA =
        "m": "5",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -64577,7 +64704,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "1'14\""
       },
       {
@@ -64622,7 +64753,7 @@ window.MMB_DATA =
        "m": "8",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -64632,7 +64763,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "45\""
       },
       {
@@ -65040,7 +65175,7 @@ window.MMB_DATA =
        "m": "6",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -65050,7 +65185,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "33\""
       },
       {
@@ -65535,7 +65674,7 @@ window.MMB_DATA =
        "m": "8",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -65545,7 +65684,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": [
         "48\"半",
         "48.5\"",
@@ -66467,7 +66610,7 @@ window.MMB_DATA =
        "m": "7",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -66477,7 +66620,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "50\""
       },
       {
@@ -66929,7 +67076,7 @@ window.MMB_DATA =
        "m": "6",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -66939,7 +67086,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "35\""
       },
       {
@@ -67315,7 +67466,7 @@ window.MMB_DATA =
        "m": "5",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -67325,7 +67476,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "1'40\""
       },
       {
@@ -67422,7 +67577,7 @@ window.MMB_DATA =
        "m": "11",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -67432,14 +67587,18 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "12\""
       },
       {
        "m": "12",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -67449,7 +67608,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "16\""
       },
       {
@@ -67706,7 +67869,7 @@ window.MMB_DATA =
        "m": "6",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -67716,7 +67879,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": [
         "59\"半",
         "59.5\"",
@@ -68129,7 +68296,7 @@ window.MMB_DATA =
        "m": "4",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -68139,7 +68306,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "45\""
       },
       {
@@ -68552,7 +68723,7 @@ window.MMB_DATA =
        "m": "5",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -68562,7 +68733,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "47\""
       },
       {
@@ -69073,7 +69248,7 @@ window.MMB_DATA =
        "m": "5",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -69083,7 +69258,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "1'28\""
       },
       {
@@ -69351,7 +69530,7 @@ window.MMB_DATA =
        "m": "20",
        "cl": [
         [
-         "M-9 コーラスヌキ",
+         "M-9",
          "cue-M-9 コーラスヌキ",
          null
         ]
@@ -69361,7 +69540,11 @@ window.MMB_DATA =
         "Seeraa Viinasu toujou ~ tatakai!",
         "Sailor Venus appears ~ battle!"
        ],
-       "c": "M-9 コーラスヌキ",
+       "c": [
+        "M-9 コーラスヌキ",
+        "M-9 koorasu-nuki",
+        "M-9 without chorus"
+       ],
        "t": "30\""
       },
       {
@@ -69385,7 +69568,7 @@ window.MMB_DATA =
        "m": "22",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -69395,7 +69578,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": [
         "17\"半",
         "17.5\"",
@@ -69554,7 +69741,7 @@ window.MMB_DATA =
        "m": "7",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -69564,7 +69751,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": [
         "35\"半",
         "35.5\"",
@@ -69992,7 +70183,7 @@ window.MMB_DATA =
        "m": "5",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -70002,7 +70193,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": [
         "38\"半",
         "38.5\"",
@@ -70489,7 +70684,7 @@ window.MMB_DATA =
        "m": "5",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -70499,7 +70694,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "34\""
       },
       {
@@ -71383,7 +71582,7 @@ window.MMB_DATA =
        "m": "6",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -71393,7 +71592,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "39\""
       },
       {
@@ -71832,7 +72035,7 @@ window.MMB_DATA =
        "m": "4",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -71842,7 +72045,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "56\""
       },
       {
@@ -72274,7 +72481,7 @@ window.MMB_DATA =
        "m": "3",
        "cl": [
         [
-         "M-16 ラジオトーン",
+         "M-16",
          "cue-M-16 ラジオトーン",
          null
         ]
@@ -72284,7 +72491,11 @@ window.MMB_DATA =
         "Amazon Baa BGM",
         "Amazon bar BGM"
        ],
-       "c": "M-16 ラジオトーン",
+       "c": [
+        "M-16 ラジオトーン",
+        "M-16 rajio toon",
+        "M-16 radio tone"
+       ],
        "t": "1'26\""
       },
       {
@@ -73723,7 +73934,7 @@ window.MMB_DATA =
        "m": "21",
        "cl": [
         [
-         "M-58 マーキュリー",
+         "M-58",
          "cue-M-58 S・マーキュリー",
          null
         ]
@@ -73733,7 +73944,11 @@ window.MMB_DATA =
         "Shin-henshin Suupaa Seeraa Maakyurii",
         "New transformation: Super Sailor Mercury"
        ],
-       "c": "M-58 マーキュリー",
+       "c": [
+        "M-58 マーキュリー",
+        "M-58 Maakyurii",
+        "M-58 Mercury"
+       ],
        "t": "20\""
       },
       {
@@ -74207,7 +74422,7 @@ window.MMB_DATA =
        "m": "22",
        "cl": [
         [
-         "M-58 S・マーズ",
+         "M-58",
          "cue-M-58 S・マーズ",
          null
         ]
@@ -74217,7 +74432,11 @@ window.MMB_DATA =
         "Rei SS Maazu ni henshin",
         "Rei transforms into Super Sailor Mars"
        ],
-       "c": "M-58 S・マーズ",
+       "c": [
+        "M-58 S・マーズ",
+        "M-58 Seeraa Maazu",
+        "M-58 Sailor Mars"
+       ],
        "t": "22\""
       },
       {
@@ -75156,24 +75375,32 @@ window.MMB_DATA =
        "m": "20A",
        "cl": [
         [
-         "M-58 ジュピター",
+         "M-58",
          "cue-M-58 S・ジュピター",
          null
         ]
        ],
-       "c": "M-58 ジュピター",
+       "c": [
+        "M-58 ジュピター",
+        "M-58 Jupitaa",
+        "M-58 Jupiter"
+       ],
        "t": "22\""
       },
       {
        "m": "20B",
        "cl": [
         [
-         "M-58 ビーナス",
+         "M-58",
          "cue-M-58 S・ヴィーナス",
          null
         ]
        ],
-       "c": "M-58 ビーナス",
+       "c": [
+        "M-58 ビーナス",
+        "M-58 Biinasu",
+        "M-58 Venus"
+       ],
        "t": [
         "24\"半",
         "24.5\"",
@@ -75511,7 +75738,7 @@ window.MMB_DATA =
        "m": "14",
        "cl": [
         [
-         "M-59カラオケ",
+         "M-59",
          "cue-M-59 カラオケ",
          null
         ],
@@ -75526,7 +75753,11 @@ window.MMB_DATA =
         "Seeraa Chiimu henshin",
         "Sailor Team transformation"
        ],
-       "c": "M-59カラオケ+M-59",
+       "c": [
+        "M-59カラオケ+M-59",
+        "M-59 karaoke+M-59",
+        "M-59 karaoke+M-59"
+       ],
        "t": [
         "1'20\"半",
         "1'20.5\"",
@@ -81908,14 +82139,18 @@ window.MMB_DATA =
        "d": [
         "ワイドショーOP的BGM",
         "Waidoshou OP-teki BGM",
-        "BGM like a TV variety show's opening"
+        "BGM like the opening of a TV wide show"
        ],
        "c": [
         "ライブラリー",
         "Raiburarii",
         "Library"
        ],
-       "t": "10\""
+       "t": "10\"",
+       "dn": {
+        "t": "[Editor's note: a wide show (ワイドショー) is a Japanese daytime talk show mixing news, gossip and entertainment]",
+        "u": "https://ja.wikipedia.org/wiki/%E3%83%AF%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC"
+       }
       },
       {
        "m": "4",
@@ -82782,11 +83017,16 @@ window.MMB_DATA =
        ],
        "d": [
         "敵身（美しく切なく）",
-        "Tekimi (utsukushiku setsunaku)",
-        "Enemy's body (beautiful and bittersweet) (as printed; probably 献身 \"devotion\")"
+        "Kenshin (utsukushiku setsunaku)",
+        "Devotion (beautiful and bittersweet)"
        ],
        "c": "M-603",
-       "t": "1'27\""
+       "t": "1'27\"",
+       "dx": {
+        "p": "敵身",
+        "c": "献身",
+        "n": "Probably 献身 (\"devotion\"); 敵身 is not a word, and 献 and 敵 look alike in handwriting."
+       }
       },
       {
        "m": "12",
@@ -84216,7 +84456,7 @@ window.MMB_DATA =
        "m": "15",
        "cl": [
         [
-         "M-58 ビーナス",
+         "M-58",
          "cue-M-58 S・ヴィーナス",
          null
         ]
@@ -84226,7 +84466,11 @@ window.MMB_DATA =
         "Suupaa Seeraa Viinasu henshin!",
         "Super Sailor Venus transformation!"
        ],
-       "c": "M-58 ビーナス",
+       "c": [
+        "M-58 ビーナス",
+        "M-58 Biinasu",
+        "M-58 Venus"
+       ],
        "t": "24\""
       },
       {
@@ -85955,7 +86199,7 @@ window.MMB_DATA =
        "m": "16",
        "cl": [
         [
-         "M-625（Choなし）",
+         "M-625",
          "cue-M-625 CHOナシ",
          null
         ],
@@ -85970,7 +86214,11 @@ window.MMB_DATA =
         "Futari no henshin (barabara ja naku ikkyoku no hou ga ii sou desu)",
         "The two transform (apparently better as one piece than as separate cues)"
        ],
-       "c": "M-625（Choなし）+M-625",
+       "c": [
+        "M-625（Choなし）+M-625",
+        "M-625 (Cho nashi)+M-625",
+        "M-625 (without chorus)+M-625"
+       ],
        "t": [
         "42\"半",
         "42.5\"",
@@ -87591,7 +87839,7 @@ window.MMB_DATA =
        "m": "12",
        "cl": [
         [
-         "M-58 マーズ",
+         "M-58",
          "cue-M-58 S・マーズ",
          null
         ]
@@ -87601,7 +87849,11 @@ window.MMB_DATA =
         "Rei Maazu e to henshin",
         "Rei transforms into Mars"
        ],
-       "c": "M-58 マーズ",
+       "c": [
+        "M-58 マーズ",
+        "M-58 Maazu",
+        "M-58 Mars"
+       ],
        "t": [
         "20\"半",
         "20.5\"",
@@ -89487,7 +89739,7 @@ window.MMB_DATA =
        "m": "17",
        "cl": [
         [
-         "M-624 CHOなし",
+         "M-624",
          "cue-M-624 CHOナシ",
          null
         ]
@@ -89497,7 +89749,11 @@ window.MMB_DATA =
         "Etaanaru Muun e henshin",
         "Transformation into Eternal Moon"
        ],
-       "c": "M-624 CHOなし",
+       "c": [
+        "M-624 CHOなし",
+        "M-624 CHO nashi",
+        "M-624 without chorus"
+       ],
        "t": "36\""
       },
       {
@@ -90216,10 +90472,16 @@ window.MMB_DATA =
        "d": [
         "対立する 鳥丸VS鈴",
         "Tairitsu suru Karasuma VS Suzu",
-        "Karasuma (printed 鳥丸) vs. Suzu, at odds"
+        "Karasuma (Lead Crow) vs. Suzu (Tin Nyanko), at odds"
        ],
        "c": "M-344A",
-       "t": "44\""
+       "t": "44\"",
+       "dx": {
+        "p": "鳥丸",
+        "c": "烏丸",
+        "u": "https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%A3%E3%83%89%E3%82%A6%E3%83%BB%E3%82%AE%E3%83%A3%E3%83%A9%E3%82%AF%E3%83%86%E3%82%A3%E3%82%AB",
+        "n": "烏丸 あかね (Karasuma Akane) is the name Sailor Lead Crow uses as a Galaxy TV staffer in the anime; 鳥 and 烏 differ by one stroke. 鈴 is Sailor Tin Nyanko's Earth name, 鈴 にゃん子 (Suzu Nyanko); the two are rivals from episode 188. (Japanese Wikipedia, シャドウ・ギャラクティカ)"
+       }
       },
       {
        "m": "10",
@@ -92260,7 +92522,11 @@ window.MMB_DATA =
         "Radio calisthenics-style goofy music"
        ],
        "c": "M-107",
-       "t": "37\""
+       "t": "37\"",
+       "dn": {
+        "t": "[Editor's note: radio calisthenics (ラジオ体操) is Japan's daily exercise broadcast, set to a piano tune nearly everyone there knows]",
+        "u": "https://en.wikipedia.org/wiki/Radio_calisthenics"
+       }
       },
       {
        "m": "15",
@@ -92992,7 +93258,7 @@ window.MMB_DATA =
          null
         ],
         [
-         "M-625 Choなし",
+         "M-625",
          "cue-M-625 CHOナシ",
          null
         ]
@@ -93002,7 +93268,11 @@ window.MMB_DATA =
         "Iku zo! Yaruki no ketsui",
         "Let's go! Determined resolve"
        ],
-       "c": "M-625+M-625 Choなし",
+       "c": [
+        "M-625+M-625 Choなし",
+        "M-625+M-625 Cho nashi",
+        "M-625+M-625 without chorus"
+       ],
        "t": [
         "2'00\"半",
         "2'00.5\"",

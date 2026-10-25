@@ -87,8 +87,9 @@ details.sub>.inner{margin-left:19px;padding-left:clamp(10px,3vw,28px)}
 .cats{display:grid;gap:10px}  /* one table per row */
 .cat{break-inside:avoid;margin-bottom:10px}
 .heart{color:var(--accent);text-align:center;font-size:var(--s1);line-height:1;margin-block:6px 10px}
-.session{font-weight:700;margin-block:8px}
-.session::before{content:"■";margin-right:.3em}
+.session{font-weight:700;margin-block:8px;display:flex;gap:.3em}  /* ■ beside the heading's stacked language lines */
+.session::before{content:"■"}
+.session .cv.cr, .session .cv.ce{font-weight:400}
 
 /* tables: a coloured header band, a soft column-head row, then alternating rows divided by thin white lines */
 .scroll{overflow-x:auto;max-width:100%}
@@ -101,7 +102,7 @@ table.bk td:last-child{border-right:0}
 table.bk tbody:last-child tr:last-child td{border-bottom:0}
 /* the title band (episode / list section / film) */
 table.bk .cap{background:var(--band);color:var(--band-ink);font-size:var(--s0);font-weight:700;padding:.7em .9em}
-table.bk .cap .tx>.en, body.l-ja.l-en table.bk .cap .tx>.ja+.en{color:rgb(255 255 255 / .88)}
+table.bk .cap .cv.cr, table.bk .cap .cv.ce{color:rgb(255 255 255 / .88);font-weight:400}
 table.bk .cap .fixed s, body.fixes table.bk .cap .fixed s{color:rgb(255 255 255 / .75)}
 table.bk .cap a, table.bk .cap .ast, body:not(.fixes) table.bk .cap .fixed::after{color:var(--band-ink)}
 /* column-head rows */
