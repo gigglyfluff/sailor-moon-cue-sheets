@@ -1,0 +1,193 @@
+/* Layout: a booklet-like column. A mincho title, a collapsible tree (Notes, then one section per season), tables
+   with a blue title band and alternating rows, small hearts between list sections, and a frozen control bar. */
+:root{
+  /* one light theme for everyone (no separate dark mode) */
+  color-scheme:light;
+  --paper:#fbfafd; --ink:#1c1925; --head:#4a4656; --muted:#6a6478;
+  --accent:#c2185b; --accent-ink:#ffffff; --hover:#f6f2fa; --fixbg:#fbe3ec;
+  /* tables: a solid title band, soft column-head and part rows, alternating rows on a light grey grid */
+  --band:#2f7fb0; --band-ink:#ffffff; --colhead:#d7e8f4; --part:#eef5fb;  /* blue from the Sailor Moon logo (#3a8abb), deepened slightly so white text reads clearly */
+  --row:#f9fafc; --stripe:#ecf0f4; --rowhover:#dfe7ef; --cellborder:#d3dae1; --guide:#e1e6eb; --tableborder:#bdbdbd;
+  --display:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --body:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,sans-serif;
+  --s-1:.8125rem; --s0:.9375rem; --s1:1.125rem; --s2:1.5rem; --s3:2.1rem;
+}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:var(--s0);line-height:1.55;
+  padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:1180px;margin-inline:auto;display:grid;gap:4px;padding-top:24px}
+/* grid children may shrink below their content, so a wide table scrolls inside its own box instead of widening the page */
+.wrap>*, .sec-body>*, .inner>*, .cats>*, .eplist>*, .epbody>*{min-width:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* language visibility: the checkboxes set body.l-ja / l-ro / l-en, and these rules are the only ones that read them */
+/* two-language text (.tx, from bi()/tx()): Japanese and/or English; English if only romaji is on */
+.tx>span{display:none}
+body.l-ja .tx>.ja, body.l-en .tx>.en, body:not(.l-ja):not(.l-en) .tx>.en{display:inline}
+/* both on: the English sits under the Japanese, quieter */
+body.l-ja.l-en .tx>.ja+.en{display:block;font-size:.86em;font-weight:400;color:var(--muted);margin-top:.15em;line-height:1.35}
+/* .full (notes, running text): English full-size; .inl (buttons, counts): both on one line */
+body.l-ja.l-en .tx.full>.ja+.en{font-size:1em;line-height:inherit}
+body.l-ja.l-en .tx.inl>.ja+.en{display:inline;font-size:inherit;color:inherit;font-weight:inherit;margin:0;line-height:inherit}
+body.l-ja.l-en .tx.inl>.ja+.en::before{content:' / '}
+/* table cells: each enabled language on its own line in the same cell (Japanese, romaji, English) */
+.cv{display:block}
+body:not(.l-ja) .cv.cj, body:not(.l-ro) .cv.cr, body:not(.l-en) .cv.ce{display:none}
+/* a line that also stands in for a later language with identical text */
+body.l-ro .cv.cj.or-ro, body.l-en .cv.cj.or-en, body.l-en .cv.cr.or-en{display:block}
+/* second and third lines are quieter */
+body.l-ja .cv.cr, body.l-ja .cv.ce, body.l-ro .cv.ce{color:var(--muted);font-size:.92em}
+/* times: as printed with Japanese on; decimals with Japanese off, and under the printed time when English is on too */
+.tj,.te{display:block}
+body:not(.l-ja) .tj:not(.tsame), body.l-ja:not(.l-en) .te{display:none}
+body.l-ja .te{color:var(--muted);font-size:.92em}
+
+/* English in headings uses the same sans-serif as the tables; the mincho display face is for Japanese only */
+.tx>.en{font-family:var(--body)}
+
+/* masthead */
+.mast{display:grid;gap:14px;justify-items:start;margin-bottom:20px}
+.plate{font-family:var(--display);font-weight:800;font-size:var(--s3);line-height:1.25;text-wrap:balance;
+  padding:.2em 0;text-align:left}
+.lede{color:var(--muted)}
+.lede p{margin:0}
+.btn, .lt span{font:inherit;font-size:var(--s-1);border:1px solid var(--tableborder);background:var(--paper);color:var(--ink);
+  border-radius:999px;padding:.35em .9em;cursor:pointer}
+.btn:hover, .lt span:hover{background:var(--hover)}
+.btn[aria-pressed="true"], .lt input:checked+span{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:700}
+
+/* collapsible sections */
+details>summary{list-style:none;cursor:pointer}
+details>summary::-webkit-details-marker{display:none}
+details.sec>summary{display:flex;gap:12px;align-items:center;padding-block:8px;
+  font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--head);text-wrap:balance}
+details.sec>summary img{height:44px;width:auto;flex:none}
+.sec-body{display:grid;gap:2px;padding-bottom:10px}
+/* tree levels: each level's contents are indented and hang from a guide line that starts under its chevron */
+.sec-body, details.sub>.inner{border-left:2px solid var(--guide)}
+.sec-body{margin-left:.35em;padding-left:clamp(10px,3vw,28px)}
+details>summary .chev{font-family:var(--body);font-size:var(--s-1);color:var(--accent);transition:transform .15s;display:inline-block;flex:none}
+details[open]>summary .chev{transform:rotate(90deg)}
+details.sub{border-radius:10px;background:var(--paper)}
+details.sub>summary{display:flex;gap:12px;align-items:center;padding:6px 14px;
+  font-family:var(--display);font-weight:600;font-size:1rem;color:var(--head)}
+details.sub>summary img{height:44px;width:auto}
+details.sub>summary .meta{margin-left:auto;font-family:var(--body);font-size:var(--s-1);color:var(--muted);font-weight:400;
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.inner{padding:4px clamp(12px,4vw,40px) 18px;display:grid;gap:18px}  /* room either side of the tables */
+details.sub>.inner{margin-left:19px;padding-left:clamp(10px,3vw,28px)}
+@media (prefers-reduced-motion: reduce){details>summary .chev{transition:none}}
+
+/* BGM list layout */
+.bgm-head{display:flex;flex-wrap:wrap;gap:28px;align-items:center}
+.bgm-head .sheets{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start}
+.bgm-head img{width:340px;max-width:100%;height:auto;filter:drop-shadow(0 6px 14px rgb(0 0 0 / .28))}
+.cats{display:grid;gap:10px}  /* one table per row */
+.cat{break-inside:avoid;margin-bottom:10px}
+.heart{color:var(--accent);text-align:center;font-size:var(--s1);line-height:1;margin-block:6px 10px}
+.session{font-weight:700;margin-block:8px}
+.session::before{content:"■";margin-right:.3em}
+
+/* tables: a coloured header band, a soft column-head row, then alternating rows divided by thin white lines */
+.scroll{overflow-x:auto;max-width:100%}
+table.bk{border-collapse:separate;border-spacing:0;width:100%;font-size:var(--s-1);background:var(--row);
+  border:1px solid var(--tableborder);border-radius:10px;overflow:hidden}
+table.bk th,table.bk td{padding:.5em .75em;vertical-align:top;text-align:left;border:0}  /* no dividers between header cells */
+/* data cells: a light grey grid, lighter than the table's outline and darker than the shaded rows */
+table.bk td{border-right:1px solid var(--cellborder);border-bottom:1px solid var(--cellborder)}
+table.bk td:last-child{border-right:0}
+table.bk tbody:last-child tr:last-child td{border-bottom:0}
+/* the title band (episode / list section / film) */
+table.bk .cap{background:var(--band);color:var(--band-ink);font-size:var(--s0);font-weight:700;padding:.7em .9em}
+table.bk .cap .tx>.en, body.l-ja.l-en table.bk .cap .tx>.ja+.en{color:rgb(255 255 255 / .88)}
+table.bk .cap .fixed s, body.fixes table.bk .cap .fixed s{color:rgb(255 255 255 / .75)}
+table.bk .cap a, table.bk .cap .ast, body:not(.fixes) table.bk .cap .fixed::after{color:var(--band-ink)}
+/* column-head rows */
+table.bk th:not(.cap){background:var(--part);font-weight:700;color:var(--band);border-top:1px solid var(--cellborder);border-bottom:1px solid var(--cellborder)}
+table.bk th:not(.cap) .cv.cr, table.bk th:not(.cap) .cv.ce{font-weight:500}
+/* part rows inside a cue sheet (A part, B part…) */
+table.bk tbody th[colspan]:not(.cap){background:var(--colhead);color:var(--ink);border-top:1px solid var(--band);border-bottom:1px solid var(--band);letter-spacing:.03em}
+table.bk .num,table.bk .tm{font-variant-numeric:tabular-nums;white-space:nowrap}
+/* column headings may wrap, so a heading never runs under the ? button beside it */
+table.bk th.num,table.bk th.tm{white-space:normal}
+table.bk .tm{text-align:right}
+table.bk .code{word-break:keep-all;overflow-wrap:break-word}
+/* credit codes link to their BGM-list row: same colour as the text, a quiet pink underline */
+table.bk td.code a.go{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+table.bk td.code a.go:hover{color:var(--accent)}
+/* the ? in the Source CD heading, and the key it opens */
+.keybtn{float:right;font:inherit;font-size:.85em;font-weight:700;line-height:1;width:1.45em;height:1.45em;padding:0;margin-left:.3em;
+  border-radius:50%;border:1px solid currentColor;background:var(--paper);color:var(--band);cursor:help}
+.keybtn:hover,.keybtn:focus-visible{background:var(--band);color:var(--band-ink)}
+.pop{position:fixed;z-index:30;width:max-content;max-width:min(34em,calc(100vw - 16px));margin:0;padding:12px 14px;
+  background:var(--paper);border:1px solid var(--tableborder);border-radius:8px;box-shadow:0 6px 20px rgb(0 0 0 / .15);text-align:left;font-weight:400;overflow:auto}  /* long cue names wrap at the space, e.g. M-58 / S・マーキュリー */
+/* the same column widths in every table of a kind; the text column takes the rest */
+table.bk{table-layout:fixed;min-width:34em}
+col.w-m{width:3.2em} col.w-no{width:3.6em} col.w-mno{width:10em} col.w-credit{width:10em}
+col.w-time{width:5.2em} col.w-cd{width:6.5em}
+/* alternating rows (header rows inside a cue sheet's tbody come in pairs, so the pattern stays even) */
+table.bk tbody tr:nth-child(even) td{background:var(--stripe)}
+table.bk tbody tr:hover td{background:var(--rowhover)}
+/* corrections: hidden until "Show annotations" is on; then the printed text is struck and the fix shown, linked to its source */
+.fixed{white-space:nowrap}
+.fixed s{text-decoration:none;color:inherit}
+.fixed mark{display:none;background:var(--fixbg);color:var(--ink);border-radius:3px;padding:0 .25em;margin-left:.3em}
+.fixed mark a{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:2px}
+body.fixes .fixed s{text-decoration:line-through;text-decoration-thickness:1.5px;color:var(--muted)}
+body.fixes .fixed s b{color:inherit}
+body.fixes .fixed mark{display:inline}
+.fixed.ins{white-space:normal} .fixed.ins mark{margin-left:.2em}
+/* in the two-column CD key a long correction wraps inside its own column instead of running into the next */
+.cols2 .fixed{white-space:normal}
+/* corrections hidden: flag each typo with a pink asterisk */
+body:not(.fixes) .fixed::after,.ast{content:"*";color:var(--accent);font-weight:700;margin-left:.1em}
+tr.flash td{background:var(--fixbg)!important}
+.blank{color:var(--muted)}
+
+/* TV episodes: a clickable list; each entry opens its cue sheet in place */
+.eplist{display:grid;gap:3px;padding-top:4px}
+details.epi{border-radius:8px;scroll-margin-top:84px}
+details.epi>summary{display:grid;grid-template-columns:1em 2.6em minmax(0,1fr);gap:10px;
+  align-items:baseline;padding:.5em .8em;border-radius:8px;background:var(--row)}
+details.epi:nth-of-type(even)>summary{background:var(--stripe)}
+details.epi>summary:hover{background:var(--rowhover)}
+details.epi[open]>summary{background:var(--band);color:var(--band-ink)}
+details.epi[open]>summary .chev, details.epi[open]>summary .epn{color:var(--band-ink)}
+details.epi[open]>summary .tx>.en, body.l-ja.l-en details.epi[open]>summary .tx>.ja+.en{color:rgb(255 255 255 / .9)}
+.epn{font-weight:700;color:var(--band);font-variant-numeric:tabular-nums;text-align:right}
+.epbody{padding:10px 0 18px}
+.epbody table.bk{border-radius:0}  /* episode cue sheets: square corners */
+.ep-head{font-family:var(--display);font-weight:600;font-size:1rem;color:var(--head);text-wrap:balance;margin:14px 0 4px}
+.page{font-size:var(--s-1);color:var(--muted);font-variant-numeric:tabular-nums}
+/* notes: small muted text, the same size in every language */
+.note, .ednotes, .notes-top{font-size:var(--s-1);color:var(--muted);max-width:90ch}
+.note{margin:4px 0 0}
+.inner > .cat{margin-top:8px}  /* a film's instrumentals table, under its cue sheet */
+.ednotes{margin:0;padding-left:1.3em;display:grid;gap:10px}
+.ednotes li::marker{color:var(--accent)}
+.notes-top{margin-bottom:16px}
+.notes-top ul{margin:0;padding-left:1.3em;display:grid;gap:3px}
+.notes-top ul.kome{list-style:none;padding-left:0;gap:10px}
+.notes-top ul ul{margin-top:3px}
+.notes-top ul.cols2{display:block;columns:2 18em;column-gap:2.5em;margin-top:3px}
+.notes-top ul.cols2>li{break-inside:avoid;margin-bottom:4px}
+.nh-key .tx>span, body.l-ja.l-en .nh-key .tx>.ja+.en{font-weight:700;color:var(--ink)}
+.notes-top ul ul li::marker{color:var(--accent)}
+.notes-top b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+
+/* frozen control bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;margin-inline:-16px;padding:10px 16px;
+  background:var(--guide);box-shadow:0 2px 8px rgb(60 20 40 / .10)}
+.bar-in{max-width:1180px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.bar .grp{display:flex;gap:6px;align-items:center}
+/* language checkboxes, drawn as toggle pills */
+.langs{display:inline-flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+.lt{position:relative;display:inline-flex}
+.lt input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.lt span{user-select:none}
+.lt span::before{content:"";display:inline-block;width:.6em;margin-right:.35em;text-align:center}
+.lt input:checked+span::before{content:"✓"}
+.lt input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:520px){.langs{margin-left:0} .plate{font-size:var(--s2)}}
