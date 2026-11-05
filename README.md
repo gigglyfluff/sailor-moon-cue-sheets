@@ -4,7 +4,8 @@ The background music lists and TV/movie cue sheets from pages 104–195 of the *
 
 **[Open the page](index.html)** (or the GitHub Pages address in the sidebar).
 
-- Japanese is transcribed exactly as printed, typos and mistakes included. Typos, mistakes and editor's comments are marked with an asterisk; the "Show annotations" button shows the corrections and their sources.
+- Japanese is transcribed exactly as printed, typos and mistakes included. Typos, mistakes and editor's comments are marked with an asterisk; the "Show notes & related info" button adds the editor's columns: Notes (corrections and their sources), what each cue-sheet credit is in the BGM lists, and every episode that uses each piece.
+- Every row has its own link (for example `#r-TV-98-B-19` or `#cue-M-206`), and the browser's Back button returns from a jump.
 - Every cue code in the cue sheets links to its entry in the BGM lists.
 - English episode titles are Viz Media's official translations.
 

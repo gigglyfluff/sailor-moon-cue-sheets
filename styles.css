@@ -145,6 +145,44 @@ body.fixes .fixed mark{display:inline}
 /* corrections hidden: flag each typo with a pink asterisk */
 body:not(.fixes) .fixed::after,.ast{content:"*";color:var(--accent);font-weight:700;margin-left:.1em}
 tr.flash td{background:var(--fixbg)!important}
+
+/* the editor's columns (Notes, List description, CD, Used in): not in the booklet, so hidden until
+   "Show notes & related info" is on, then tinted and headed in pink so they never pass for the book's own */
+col.w-notes{width:18em} col.w-used{width:14em}
+body:not(.fixes) table.bk .ed{display:none}
+body.fixes table.bk{min-width:64em}
+table.bk th.ed:not(.cap){background:var(--fixbg);color:var(--accent)}
+table.bk td.ed{background-image:linear-gradient(rgb(194 24 91 / .04),rgb(194 24 91 / .04))}
+table.bk td.ed a.go{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+table.bk td.ed a.go:hover{color:var(--accent)}
+td.notes p{margin:0 0 .45em;overflow-wrap:anywhere} td.notes p:last-child{margin-bottom:0}
+.was{color:var(--muted)}
+.ld+.ld{margin-top:.5em}
+.ldc{display:block}
+.ldt{display:block;color:var(--muted);font-size:.92em;font-variant-numeric:tabular-nums}
+td.used .cnt{display:block;color:var(--muted);font-size:.92em}
+td.used .x{color:var(--muted);font-size:.85em;margin-left:.1em}
+details.more{display:inline}
+details.more>summary{display:inline;color:var(--accent);font-weight:700}
+details.more[open]>summary{margin-right:.3em}
+/* note markers: * while the editor's columns are hidden, the note's number while they're shown */
+.mk{color:var(--accent);font-weight:700;font-size:.78em;line-height:0;margin-left:.1em}
+.mk::after{content:"*"}
+body.fixes .mk::after{content:attr(data-n)}
+/* a marker for the whole cell goes on every language line; only the last line showing keeps it */
+.mk.end{display:none}
+body.l-en .ce .mk.end, body.l-en .or-en .mk.end,
+body.l-ro:not(.l-en) .cr .mk.end, body.l-ro:not(.l-en) .or-ro .mk.end,
+body.l-ja:not(.l-ro):not(.l-en) .cj .mk.end{display:inline}
+/* a misprint marker sits in the Japanese line; with Japanese off it moves to the end of the cell */
+body.l-ja .mk.noja{display:none!important}
+body.l-ja .te .mk{display:none}
+
+/* the Back button that appears after a jump */
+.btn.back{position:fixed;right:16px;bottom:16px;z-index:25;background:var(--accent);color:var(--accent-ink);border-color:var(--accent);
+  font-weight:700;box-shadow:0 4px 14px rgb(60 20 40 / .25)}
+.btn.back:hover{background:var(--accent);filter:brightness(1.1)}
+.btn.back[hidden]{display:none}
 .blank{color:var(--muted)}
 
 /* TV episodes: a clickable list; each entry opens its cue sheet in place */

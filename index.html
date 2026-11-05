@@ -65,7 +65,8 @@ if (!D) {
 }
 const UI = {
   mast: ['セーラームーン　BGMリスト＆Qシート','Seeraa Muun BGM Risuto & Q Shiito','Sailor Moon BGM Lists & Cue Sheets'],
-  fixes: ['注釈を表示','Chuushaku wo hyouji','Show annotations'],
+  fixes: ['注釈と関連情報を表示','Chuushaku to kanren jouhou wo hyouji','Show notes & related info'],
+  back: ['戻る','Modoru','Back'],
   openAll: ['すべて開く','Subete hiraku','Expand all'], closeAll: ['すべて閉じる','Subete tojiru','Collapse all'],
   part: p => p==='TOP' ? ['TOPパート','TOP paato','Top part'] : [p+'パート',p+' paato',p+' part'],
   // the book's columns: h = header as [Japanese (as printed), romaji, English], c = the column's class
@@ -73,6 +74,14 @@ const UI = {
   bgmHead: [{h: ['M-NO.','M-NO.','M-NO.'], c: 'code'}, {h: ['TIME','TIME','Time'], c: 'tm'}, {h: ['内容','Naiyou','Description']}, {h: ['収録CD','Shuuroku CD','Source CD'], c: 'num', key: true}],
   qHead: [{h: ['NO.','NO.','No.'], c: 'num'}, {h: ['M-NO.','M-NO.','M-NO.'], c: 'code'}, {h: ['TIME','TIME','Time'], c: 'tm'}, {h: ['内容','Naiyou','Description']}, {h: ['収録CD','Shuuroku CD','Source CD'], c: 'num', key: true}],
   cues: ['曲','kyoku','tracks'],
+  uses: ['回','kai','uses'],
+};
+/* the editor's columns, after the book's own: not in the booklet, shown only with "Show notes & related info" */
+const ED_HEAD = {
+  desc: {h: ['BGMリストの内容','BGM risuto no naiyou','List description'], c: 'ed'},
+  cd: {h: ['収録CD','Shuuroku CD','CD'], c: 'num ed'},
+  used: {h: ['使用話','Shiyou-wa','Used in'], c: 'ed'},
+  notes: {h: ['編注','Henchuu','Notes'], c: 'ed'},
 };
 
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -123,8 +132,8 @@ const INTRO = ['「セーラームーン　メモリアルミュージックボ�
 const ED_NOTES = [
   ['上部の「日本語」「Rōmaji」「English」ボタンで、表示する言語を選べます。組み合わせは自由で、表の各セルには選んだ言語が1行ずつ表示されます。最初は、ブラウザの言語が日本語なら日本語、それ以外なら英語で表示されます。',
    'Use the 日本語, Rōmaji and English buttons at the top to choose which languages are shown. Any combination works: each table cell shows every chosen language on its own line. The page starts in Japanese if that is your browser\'s language, and in English otherwise.'],
-  ['「メモリアルミュージックボックス」ブックレットの表記を、誤字や誤りも含め原文のまま書き起こしています。誤字・誤り・編注には<span class="ast">*</span>を付けています。「注釈を表示」ボタンを押すと、詳しい情報が表示されます。',
-   'Text is transcribed as printed in the Memorial Music Box booklet, typos and mistakes included. Typos, mistakes, and editor\'s comments are marked with an asterisk (<span class="ast">*</span>). Click the "show annotations" button for more info.'],
+  ['「メモリアルミュージックボックス」ブックレットの表記を、誤字や誤りも含め原文のまま書き起こしています。誤字・誤り・編注には<span class="ast">*</span>を付けています。「注釈と関連情報を表示」ボタンを押すと、ブックレットにはない編集者の列が表示されます：訂正と出典を載せた「編注」、Qシートの各クレジットがBGMリストで何の曲かを示す「BGMリストの内容」と「収録CD」、各曲がどの話で使われているかを示す「使用話」。<span class="ast">*</span>は「編注」の番号に変わります。',
+   'Text is transcribed as printed in the Memorial Music Box booklet, typos and mistakes included. Typos, mistakes, and editor\'s comments are marked with an asterisk (<span class="ast">*</span>). The "Show notes & related info" button adds the editor\'s columns, which are not in the booklet: Notes, with corrections and their sources; List description and CD, showing what each cue-sheet credit is in the BGM lists; and Used in, listing every episode that uses a piece. The asterisks then turn into the numbers of their notes.'],
   ['英語のエピソードタイトルは、Viz Mediaによる公式英語訳（<a href="https://www.hulu.com/series/sailor-moon-4e1c9108-f973-48fb-8824-a69280ca0438" target="_blank" rel="noopener">Hulu</a>掲載のもの）を使用しています。',
    'English episode titles are Viz Media\'s official translations, as listed on <a href="https://www.hulu.com/series/sailor-moon-4e1c9108-f973-48fb-8824-a69280ca0438" target="_blank" rel="noopener">Hulu</a>.'],
   ['原文の「半」は「と半分」の意味で、28"半は28.5秒。「日本語」ボタンをオフにすると、時間は小数で表示されます。',
@@ -174,44 +183,146 @@ function stack(a, fmt = s => esc(s)){
 }
 const KEY_BTN = '<button class="keybtn" type="button" aria-label="収録CD表示凡例 / Key to the CD references" aria-describedby="cdkey">?</button>';
 /* fixed column widths, so every table of a kind lines up the same way (widths are in styles.css) */
+/* the editor's columns come last. A fixed-layout table takes its column count from its first row, so the colgroup and
+   the spanning title rows change with "Show notes & related info" (edOn); setFixes() updates tables already built. */
 const COLS = {
-  tv: '<colgroup><col class="w-m"><col><col class="w-credit"><col class="w-time"></colgroup>',
-  list: '<colgroup><col class="w-mno"><col class="w-time"><col><col class="w-cd"></colgroup>',
-  film: '<colgroup><col class="w-no"><col class="w-mno"><col class="w-time"><col><col class="w-cd"></colgroup>',
+  tv: ['w-m', '', 'w-credit', 'w-time', 'ed', 'ed w-cd', 'ed w-notes'],
+  list: ['w-mno', 'w-time', '', 'w-cd', 'ed w-used', 'ed w-notes'],
+  film: ['w-no', 'w-mno', 'w-time', '', 'w-cd', 'ed w-used', 'ed w-notes'],
 };
+const edOn = () => document.body.classList.contains('fixes');
+const colgroup = kind => '<colgroup>' + COLS[kind].filter(c => edOn() || !c.startsWith('ed')).map(c => `<col class="${c}">`).join('') + '</colgroup>';
+/* a title row's colspan: the book's columns, or all of them with the editor's */
+const spanAttr = kind => { const all = COLS[kind].length, book = COLS[kind].filter(c => !c.startsWith('ed')).length;
+  return `colspan="${edOn() ? all : book}" data-span="${book},${all}"`; };
+const tableTag = kind => `<table class="bk" data-kind="${kind}">${colgroup(kind)}`;
 function headRow(h){
   // the Source CD heading carries a ? button that shows the key to the CD references
   return '<tr>' + h.map(col => `<th class="${col.c || ''}">${col.key ? KEY_BTN : ''}${stack(col.h)}</th>`).join('') + '</tr>';
 }
-/* a description cell: f = a misprint in the Japanese; n = an editor's note on the English line ({t, u}) */
-/* stack() line formatter: a misprint (f) marked in the Japanese line, an editor's note (n = {t, u}) after the English one */
+/* stack() line formatter for headings: a misprint (f) corrected in place in the Japanese line, an editor's note
+   (n = {t, u}) after the English one. Table rows put theirs in the Notes column instead (rowNotes below). */
 const lineFmt = (f, n) => (s, l) => l === 'ja' ? jaFix(s, f) : esc(s) + (l === 'en' && n ? edNote(n.t, n.u, n.t) : '');
-const dcells = (a, f, n) => `<td>${stack(a, lineFmt(f, n))}</td>`;
-function cdCell(r){
-  if (!r.cdx) return esc(r.cd);
-  return fixSpan(esc(r.cd), ext(r.cdu, esc(r.cdx), r.cdn + ' (sailormusic.net; VGMdb album 26875)'));
+
+/* ---------- the Notes column ----------
+   Table cells keep the booklet's text exactly as printed. Anything the editor adds (a correction, an explanation, a
+   source) goes in the row's Notes column, numbered; a matching marker in the cell shows where it applies.
+   The marker reads * while the editor's columns are hidden and turns into the note's number when they're shown. */
+const mk = (k, cls) => k ? `<sup class="mk${cls ? ' ' + cls : ''}" data-n="${k}"></sup>` : '';
+/* web addresses written in a note's text ("reddit.com/r/…") become links */
+const linkify = html => html.replace(/\b((?:https?:\/\/)?(?:[a-z0-9-]+\.)+(?:com|net|org|jp)\/[^\s<)"]*[^\s<)".,;])/gi,
+  url => `<a href="${url.startsWith('http') ? url : 'https://' + url}" target="_blank" rel="noopener">${url}</a>`);
+const noteText = s => jaWords(linkify(esc(s)));
+const printedAs = p => ` <span class="was">(printed ${jaWords(esc(p))})</span>`;
+/* an editor's note is stored as "[Editor's note: …]"; in its own column the brackets and label are dropped */
+const edText = t => t.replace(/^\[Editor's note:\s*/, '').replace(/\]$/, '').replace(/^./, c => c.toUpperCase());
+const goTitle = id => id.startsWith('q-') ? '劇場版のQシートで表示 / Show in the movie cue sheet' : 'BGMリストで表示 / Show in the BGM list';
+/* a row's notes, numbered in the order their markers appear across the row: credit/code, description, time, CD.
+   Returns the note list and the number each marker should show (0 = none). */
+function rowNotes(r){
+  const items = [], mark = {cl: []};
+  const add = html => items.push(html);
+  (r.cl || []).forEach(([p, t, fix, note], i) => {
+    if (fix) mark.cl[i] = add(`<b>${t ? goLink(t, fix, goTitle(t)) : esc(fix)}</b>${printedAs(p)}.${note ? ' ' + noteText(note) : ''}`);
+  });
+  if (r.cx) mark.code = add(`<b>${ext(r.cx[1], esc(r.cx[0]), '')}</b>${printedAs(r.c)}. ${noteText(r.cx[2])}`);
+  if (r.dx) {
+    const f = r.dx, fix = f.u ? ext(f.u, esc(f.c), '') : f.g ? goLink(f.g, f.c, goTitle(f.g)) : esc(f.c);
+    mark.dx = add(`<b lang="ja">${fix}</b>${printedAs(f.p)}. ${noteText(f.n)}`);
+  }
+  if (r.dn) mark.dn = add(noteText(edText(r.dn.t)) + (r.dn.u ? ` ${ext(r.dn.u, '(source)', '')}` : ''));
+  if (r.tx) mark.tx = add(`<b>${jaWords(esc(r.tx.c))}</b>${printedAs(r.tx.p)}. ${noteText(r.tx.n)}`);
+  // CD notes open with "Book prints 1-18;", which the "(printed …)" already says
+  if (r.cdx) mark.cd = add(`<b>${ext(r.cdu, 'CD ' + esc(r.cdx), '')}</b>${printedAs(r.cd)}. `
+    + `${noteText(r.cdn.replace(/^Book prints [^;]+;\s*/, '').replace(/^./, c => c.toUpperCase()))} (sailormusic.net; VGMdb album 26875)`);
+  return {items, mark};
 }
+const notesCell = n => `<td class="ed notes">${n.items.map((h, i) => `<p>${mk(i + 1)} ${h}</p>`).join('')}</td>`;
+
+/* a description cell, as printed: a marker after a misprint in the Japanese line (or at the end of the cell while
+   Japanese is off), and one at the end for an editor's note. End-of-cell markers go on every line and styles.css shows
+   only the one on the last line showing. */
+const dcells = (a, f, kf, kn) => `<td>${stack(a, (s, l) =>
+  (l === 'ja' && f ? esc(s).replace(esc(f.p), esc(f.p) + mk(kf)) : esc(s)) + (l !== 'ja' ? mk(kf, 'end noja') : '') + mk(kn, 'end'))}</td>`;
+/* a time as printed, with a marker after a misprint */
+const tmMark = (t, f, k) => {
+  if (!f) return tm(t);
+  const [j, , e] = tri(t), jm = esc(j).replace(esc(f.p), esc(f.p) + mk(k));
+  return j === e ? `<span class="tj tsame">${jm}</span>` : `<span class="tj">${jm}</span><span class="te">${esc(e)}${mk(k)}</span>`;
+};
+const cdCell = (r, k) => esc(r.cd) + mk(k);
 /* a BGM-list code: as printed, or with its variant word in each language (r.cn: M-16 ラジオトーン / M-16 radio tone) */
-function codeCell(r){
-  if (r.cx) return fixSpan(esc(r.c), ext(r.cx[1], esc(r.cx[0]), r.cx[2]));
-  return r.cn ? stack(r.cn) : esc(r.c);
+function codeCell(r, k){
+  return (r.cn ? stack(r.cn) : esc(r.c)) + mk(k);
 }
 /* a cue-sheet credit: a cue code reads the same in every language; variant words after it (ラジオトーン) and other credits
-   (ライブラリー, songs…) show each language that is switched on. Each code links to its row in the BGM lists (or the film cue sheet that lists it), and a misprinted
-   code is struck through with the corrected one shown. r.cl = [[printed, target, corrected], …] in printed order. */
-const goTitle = id => id.startsWith('q-') ? '劇場版のQシートで表示 / Show in the movie cue sheet' : 'BGMリストで表示 / Show in the BGM list';
-function creditCell(r){
+   (ライブラリー, songs…) show each language that is switched on. Each code links to its row in the BGM lists (or the film
+   cue sheet that lists it). r.cl = [[printed, target, corrected, note], …] in printed order; a misprinted code stays as
+   printed, links to the corrected cue's row, and carries a marker for its note. */
+function creditCell(r, mark){
   const one = s => {
     let out = '', at = 0;
-    (r.cl || []).forEach(([p, t, fix]) => {
+    (r.cl || []).forEach(([p, t, fix], n) => {
       const i = s.indexOf(p, at); if (i < 0) return;
-      const link = text => t ? goLink(t, text, goTitle(t)) : esc(text);
-      out += esc(s.slice(at, i)) + (fix ? fixSpan(esc(p), link(fix)) : link(p));
+      out += esc(s.slice(at, i)) + (t ? goLink(t, p, goTitle(t)) : esc(p)) + mk(mark?.cl[n]);
       at = i + p.length;
     });
     return out + esc(s.slice(at));
   };
   return stack(r.c, one);
+}
+
+/* ---------- related info: what each code points to, and where each cue is used ---------- */
+/* every linkable row (a BGM-list cue or a film cue), by its row id: code, description, time and CD as the list gives them
+   (with any CD correction applied) */
+const TARGET = {};
+D.bgm.forEach(b => b.cats.forEach(c => c.r.forEach(r => { if (r.c !== '—') TARGET['cue-' + r.c] = {c: r.cx ? r.cx[0] : r.c, d: r.d, t: r.t, cd: r.cdx || r.cd}; })));
+D.works.forEach(w => { if (w.type === 'movie') w.parts.forEach(p => p.r.forEach(r => { TARGET[`q-${w.id}-${r.m}`] = {c: tri(r.c)[0], d: r.d, t: r.t, cd: r.cd}; })); });
+/* short names for the films in "Used in" lists */
+const FILM_SHORT = {'MOVIE-R': ['劇場版R', 'R movie'], 'MOVIE-MAKEUP': ['メイクアップ！', 'Make Up!'], 'MOVIE-S': ['劇場版S', 'S movie'],
+                    'MOVIE-SS': ['劇場版SuperS', 'SuperS movie'], 'MOVIE-AMI': ['亜美ちゃんの初恋', 'Ami\'s First Love']};
+/* the id of a cue-sheet row: TV rows r-TV-98-B-19, film rows q-MOVIE-R-6 (the film tables double as music lists).
+   A few episodes repeat an M number in another part, and three print one twice in a part: the second gets -2. */
+const ROW_ID = new Map();
+D.works.forEach(w => { const seen = new Set(); w.parts.forEach(p => p.r.forEach(r => {
+  let id = w.type === 'movie' ? `q-${w.id}-${r.m}` : `r-${w.id}-${p.k[0]}-${r.m}`;
+  if (seen.has(id)) id += '-2';
+  seen.add(id); ROW_ID.set(r, id);
+})); });
+const rowId = (w, p, r) => ROW_ID.get(r);
+/* every use of every cue, by the target's row id: [{w, rows: [{id, part, m}]}] in page order (TV episodes, then films) */
+const USES = {};
+[...D.works.filter(w => w.type !== 'movie'), ...D.works.filter(w => w.type === 'movie')].forEach(w => w.parts.forEach(p => p.r.forEach(r =>
+  new Set((r.cl || []).map(c => c[1]).filter(Boolean)).forEach(t => {
+    const list = USES[t] || (USES[t] = []);
+    let e = list[list.length - 1];
+    if (!e || e.w !== w) list.push(e = {w, rows: []});
+    e.rows.push({id: rowId(w, p, r), part: w.type === 'movie' ? null : p.k[0], m: r.m});
+  }))));
+const USED_SHOWN = 12;   // episodes listed before the rest fold into "+N more"
+function usedCell(id){
+  const list = USES[id]; if (!list) return '<td class="ed"></td>';
+  const n = list.reduce((a, e) => a + e.rows.length, 0);
+  const link = e => {
+    const [first] = e.rows, film = e.w.type === 'movie';
+    const name = film ? bi(...FILM_SHORT[e.w.id], 'inl') : esc(e.w.n ?? 'SP');
+    const where = e.rows.map(x => (x.part ? x.part + ' part, ' : '') + 'M ' + x.m).join('; ');
+    const title = (film ? FILM_SHORT[e.w.id][1] : e.w.n ? 'Episode ' + e.w.n : 'Special') + ': ' + where;
+    return `<a class="go" href="#${esc(first.id)}" data-go="${esc(first.id)}" title="${esc(title)}">${name}</a>${e.rows.length > 1 ? `<span class="x">×${e.rows.length}</span>` : ''}`;
+  };
+  const shown = list.slice(0, USED_SHOWN).map(link).join(' · ');
+  const rest = list.slice(USED_SHOWN);
+  return `<td class="ed used"><span class="cnt">${n} ${tx(n === 1 ? ['回', 'kai', 'use'] : UI.uses, null, 'inl')}</span>${shown}`
+    + (rest.length ? ` <details class="more"><summary>+${rest.length}</summary>${rest.map(link).join(' · ')}</details>` : '') + '</td>';
+}
+/* a TV cue-sheet row's List description and CD cells: what each linked code is in its list. A corrected code or a
+   credit with several codes gets each code's name in front of its description. */
+function relatedCells(r, rs){
+  const cl = r.cl || [], hits = cl.map(c => TARGET[c[1]]).filter(Boolean);
+  if (!hits.length) return `<td class="ed"${rs}></td><td class="ed num"${rs}></td>`;
+  const named = hits.length > 1 || cl.some(c => c[2]);
+  const desc = hits.map(h => `<div class="ld">${named ? `<b class="ldc">${esc(h.c)}</b>` : ''}${stack(h.d)}${h.t ? `<span class="ldt">${esc(tri(h.t)[2])}</span>` : ''}</div>`).join('');
+  return `<td class="ed"${rs}>${desc}</td><td class="ed num"${rs} translate="no">${hits.map(h => `<div>${esc(h.cd || '—')}</div>`).join('')}</td>`;
 }
 const pageTag = (a, b) => `<div class="page">${b && b !== a ? 'pp. ' + a + '–' + b : 'p. ' + a}</div>`;
 /* a heading note that also carries a ※ note (p.124): keep only the heading part */
@@ -226,10 +337,14 @@ const bookNotes = D.notes.filter(n => n.x[0].includes('※')).map(n => {
 
 /* one section of a BGM list: its table, any note printed under it, and its page */
 function catHtml(c, heart = true){
-  let html = `<div class="cat"><div class="scroll"><table class="bk">${COLS.list}<thead>
-      <tr><th colspan="4" class="cap">${stack(c.n)}</th></tr>${headRow(c.tt ? UI.bgmHead.map(col => col.h[0] === '内容' ? {h: ['曲タイトル', 'Kyoku taitoru', 'Song title']} : col) : UI.bgmHead)}</thead><tbody>`;
+  const head = c.tt ? UI.bgmHead.map(col => col.h[0] === '内容' ? {h: ['曲タイトル', 'Kyoku taitoru', 'Song title']} : col) : UI.bgmHead;
+  let html = `<div class="cat"><div class="scroll">${tableTag('list')}<thead>
+      <tr><th ${spanAttr('list')} class="cap">${stack(c.n)}</th></tr>${headRow([...head, ED_HEAD.used, ED_HEAD.notes])}</thead><tbody>`;
   c.r.forEach(r => {
-    html += `<tr${r.c !== '—' ? ` id="cue-${esc(r.c)}"` : ''}><td class="code">${codeCell(r)}</td><td class="tm" translate="no">${tm(r.t)}</td>${dcells(r.d, r.dx, r.dn)}<td class="num" translate="no">${cdCell(r) || '<span class="blank"></span>'}</td></tr>`;
+    const id = r.c !== '—' ? 'cue-' + r.c : '', n = rowNotes(r);
+    html += `<tr${id ? ` id="${esc(id)}"` : ''}><td class="code">${codeCell(r, n.mark.code)}</td><td class="tm" translate="no">${tm(r.t)}</td>`
+      + `${dcells(r.d, r.dx, n.mark.dx, n.mark.dn)}<td class="num" translate="no">${r.cd ? cdCell(r, n.mark.cd) : '<span class="blank"></span>'}</td>`
+      + `${id ? usedCell(id) : '<td class="ed"></td>'}${notesCell(n)}</tr>`;
   });
   return html + `</tbody></table></div>${noteBlock(bookNotes.filter(n => n.c === c.id))}${pageTag(c.pp[0] ?? c.p, c.pp[1])}${heart ? '<div class="heart" aria-hidden="true">❤</div>' : ''}</div>`;
 }
@@ -249,25 +364,28 @@ function renderBgm(s){
 
 function cueTable(w, noCap){
   const film = w.type === 'movie';
-  const nc = film ? 5 : 4;   // the table's real column count (title rows span all of them)
-  let html = `<div class="scroll"><table class="bk">${film ? COLS.film : COLS.tv}<thead>`
-    + (noCap ? '' : `<tr><th colspan="${nc}" class="cap">${stack(w.h, lineFmt(w.hx))}</th></tr>`);
+  const kind = film ? 'film' : 'tv', nc = spanAttr(kind);   // title rows span every column
+  let html = `<div class="scroll">${tableTag(kind)}<thead>`
+    + (noCap ? '' : `<tr><th ${nc} class="cap">${stack(w.h, lineFmt(w.hx))}</th></tr>`);
   // the Make Up!, SuperS and Ami film tables head their first column "M" instead of "NO."
-  if (film) html += headRow(['MOVIE-MAKEUP', 'MOVIE-SS', 'MOVIE-AMI'].includes(w.id) ? [{h: ['M','M','M'], c: 'num'}, ...UI.qHead.slice(1)] : UI.qHead);
+  if (film) html += headRow([...(['MOVIE-MAKEUP', 'MOVIE-SS', 'MOVIE-AMI'].includes(w.id) ? [{h: ['M','M','M'], c: 'num'}, ...UI.qHead.slice(1)] : UI.qHead), ED_HEAD.used, ED_HEAD.notes]);
   html += '</thead>';
   w.parts.forEach(p => {
     html += '<tbody>';
-    if (p.seg) html += `<tr><th colspan="${nc}" class="cap">${stack(p.seg)}</th></tr>`;
-    if (!film) html += `<tr><th colspan="${nc}">${stack(UI.part(p.k[0]))}</th></tr>` + headRow(UI.epHead);
+    if (p.seg) html += `<tr><th ${nc} class="cap">${stack(p.seg)}</th></tr>`;
+    if (!film) html += `<tr><th ${nc}>${stack(UI.part(p.k[0]))}</th></tr>` + headRow([...UI.epHead, ED_HEAD.desc, ED_HEAD.cd, ED_HEAD.notes]);
     // credit cells that the book prints merged across several M rows
     const span = {};
     p.r.forEach(r => { if (r.sh) span[r.sh] = (span[r.sh] || 1) + 1; });
     p.r.forEach(r => {
-      const rs = span[r.m] && !r.sh ? ` rowspan="${span[r.m]}"` : '';
-      const ct = r.sh ? '' : `<td class="code"${rs}>${creditCell(r)}</td><td class="tm" translate="no"${rs}>${tm(r.t, r.tx)}</td>`;  // credit + time
+      const rs = span[r.m] && !r.sh ? ` rowspan="${span[r.m]}"` : '', n = rowNotes(r), id = rowId(w, p, r);
+      // credit + time (+ on TV sheets, what the credit is in its list), merged like the book's credit cell
+      const ct = r.sh ? '' : `<td class="code"${rs}>${creditCell(r, n.mark)}</td><td class="tm" translate="no"${rs}>${tmMark(r.t, r.tx, n.mark.tx)}</td>`
+        + (film ? '' : relatedCells(r, rs));
       const m = `<td class="num" translate="no">${esc(r.m)}</td>`;
-      html += film ? `<tr id="q-${w.id}-${esc(r.m)}">${m}${ct}${dcells(r.d, r.dx, r.dn)}<td class="num" translate="no">${esc(r.cd)}</td></tr>`
-                   : `<tr>${m}${dcells(r.d, r.dx, r.dn)}${ct}</tr>`;
+      const d = dcells(r.d, r.dx, n.mark.dx, n.mark.dn);
+      html += film ? `<tr id="${esc(id)}">${m}${ct}${d}<td class="num" translate="no">${esc(r.cd)}</td>${usedCell(id)}${notesCell(n)}</tr>`
+                   : `<tr id="${esc(id)}">${m}${d}${ct}${notesCell(n)}</tr>`;
     });
     html += '</tbody>';
   });
@@ -428,6 +546,12 @@ function tvPanel(sid){
 const FILM_SEASON = {'MOVIE-R': 'R', 'MOVIE-MAKEUP': 'R', 'MOVIE-S': 'S', 'MOVIE-SS': 'SS', 'MOVIE-AMI': 'SS'};
 D.bgm.forEach(b => { if (b.id !== 'MOVIE') b.cats.forEach(c => c.r.forEach(r => { ROW_PANEL['cue-' + r.c] = {section: 'sec-' + b.id, panel: 'bgm-' + b.id}; })); });
 D.works.forEach(w => { if (FILM_SEASON[w.id]) w.parts.forEach(p => p.r.forEach(r => { ROW_PANEL[`q-${w.id}-${r.m}`] = {section: 'sec-' + FILM_SEASON[w.id], panel: 'film-' + w.id}; })); });
+/* TV cue-sheet rows (for "Used in" links and the Back button) and the episodes themselves (#ep98) */
+D.works.forEach(w => { if (w.type !== 'movie') {
+  const at = {section: 'sec-' + w.s, panel: 'tv-' + w.s, ep: w.n ? 'ep' + w.n : 'sp'};
+  ROW_PANEL[at.ep] = at;
+  w.parts.forEach(p => p.r.forEach(r => { ROW_PANEL[ROW_ID.get(r)] = at; }));
+} });
 /* one section per season: its BGM list, its TV cue sheets, then its films */
 ['SM','R','S','SS','ST'].forEach(sid => {
   const logo = `<img src="${D.logos[sid]}" alt="${esc(D.logoAlt[sid])}">`;
@@ -473,10 +597,15 @@ let saved = null; try { saved = localStorage.getItem('mmb-lang-choice'); } catch
 const savedLangs = (saved || '').split(',').filter(l => ['ja', 'ro', 'en'].includes(l));
 setLangs(savedLangs.length ? savedLangs : browserLangs());
 
-/* ---------- corrections toggle (off by default) ---------- */
+/* ---------- notes & related info toggle (off by default): shows the editor's columns and numbers the markers ---------- */
 const fixBtn = document.getElementById('fixBtn');
 function setFixes(on){
   document.body.classList.toggle('fixes', on);
+  // tables already built get the matching columns and title-row spans (see colgroup())
+  document.querySelectorAll('table.bk[data-kind]').forEach(t => {
+    t.querySelector('colgroup').outerHTML = colgroup(t.dataset.kind);
+    t.querySelectorAll('th[data-span]').forEach(th => { th.colSpan = +th.dataset.span.split(',')[on ? 1 : 0]; });
+  });
   fixBtn.setAttribute('aria-pressed', on);
   try { localStorage.setItem('mmb-fixes', on ? '1' : '0'); } catch (e) {}
 }
@@ -484,18 +613,53 @@ fixBtn.onclick = () => setFixes(!document.body.classList.contains('fixes'));
 let savedFix = false; try { savedFix = localStorage.getItem('mmb-fixes') === '1'; } catch (e) {}
 setFixes(savedFix);
 
-/* links to a row elsewhere on the page (credit codes, corrections): open the row's panel, then scroll to it */
+/* ---------- links to a row elsewhere on the page (credit codes, "Used in", notes) ----------
+   A jump opens the row's section, panel and episode, scrolls to it and flashes it. Each jump is a browser history
+   entry (the address shows #row-id), so Back returns to the row the link was in, and any row can be linked to. */
+function reveal(id, flash = true){
+  const p = ROW_PANEL[id]; if (!p) return false;
+  openPanel(p.section, p.panel);
+  if (p.ep) { const d = document.getElementById(p.ep); if (d) { d.open = true; buildEpisode(d); } }
+  const el = document.getElementById(id); if (!el) return false;
+  goTo(el, 'center', flash ? 1800 : 0);
+  return true;
+}
+/* a "← Back" button floats at the bottom of the screen after a jump */
+const backBtn = document.createElement('button');
+backBtn.className = 'btn back'; backBtn.type = 'button'; backBtn.hidden = true;
+backBtn.innerHTML = '← ' + tx(UI.back, null, 'inl');
+backBtn.onclick = () => history.back();
+document.body.appendChild(backBtn);
+let depth = history.state?.depth || 0;   // jumps since the page loaded, so Back is only offered when it goes somewhere here
+const showBack = () => { backBtn.hidden = depth < 1; };
+function jump(id, from){
+  // remember where the jump started (the row the link is in, or failing that the scroll position)
+  history.replaceState({...history.state, anchor: from?.closest('tr[id], details.epi')?.id, y: scrollY, depth}, '');
+  depth++;
+  history.pushState({anchor: id, depth}, '', '#' + id);
+  reveal(id); showBack();
+}
+addEventListener('popstate', e => {
+  const s = e.state || {};
+  depth = s.depth || 0;
+  if (!(s.anchor && reveal(s.anchor))) {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (!(id && reveal(id)) && s.y != null) scrollTo(0, s.y);
+  }
+  showBack();
+});
 document.addEventListener('click', e => {
   const a = e.target.closest('a[data-go]'); if (!a) return;
   e.preventDefault();
-  const p = ROW_PANEL[a.dataset.go]; if (!p) return;
-  openPanel(p.section, p.panel);
-  const el = document.getElementById(a.dataset.go); if (el) goTo(el, 'center', 1800);
+  if (ROW_PANEL[a.dataset.go]) jump(a.dataset.go, a);
 });
 
 /* open the first season so the page doesn't start as a wall of closed headings */
 document.getElementById('sec-SM').open = true;
-/* Editor's Notes start open: they explain the asterisks and the corrections button */
+/* Editor's Notes start open: they explain the asterisks and the notes button */
 openPanel('sec-notes', 'ed-notes');
+/* a link to a row or episode (#r-TV-98-B-19, #cue-M-206, #ep98) opens straight to it */
+{ const id = decodeURIComponent(location.hash.slice(1)); if (id && ROW_PANEL[id]) { history.replaceState({anchor: id, depth}, ''); reveal(id); } }
+showBack();
 })();
 </script>
