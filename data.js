@@ -1108,9 +1108,9 @@ window.MMB_DATA =
         "Pratfall"
        ],
        "cd": "1-4-2",
-       "cdx": "2-4",
+       "cdx": "2-4-2",
        "cdu": "https://sailormusic.net/anime/memorial-music-box/disc-2/",
-       "cdn": "Book prints 1-4-2; sailormusic.net tracklist and VGMdb track lengths place it on 2-4."
+       "cdn": "Book prints 1-4-2; only the disc is wrong. Disc 2, track 4 (Usagi -Bridge Collection-) holds J-4, J-7, J-20, J-21 and J-3a in that order, and the book prints J-4 as 2-4-1."
       },
       {
        "c": "J-8",
@@ -1266,9 +1266,9 @@ window.MMB_DATA =
         "Gag touch: boing"
        ],
        "cd": "1-4-3",
-       "cdx": "2-4",
+       "cdx": "2-4-3",
        "cdu": "https://sailormusic.net/anime/memorial-music-box/disc-2/",
-       "cdn": "Book prints 1-4-3; sailormusic.net tracklist and VGMdb track lengths place it on 2-4."
+       "cdn": "Book prints 1-4-3; only the disc is wrong. Disc 2, track 4 (Usagi -Bridge Collection-) holds J-4, J-7, J-20, J-21 and J-3a in that order, and the book prints J-4 as 2-4-1."
       },
       {
        "c": "J-21",
@@ -1279,9 +1279,9 @@ window.MMB_DATA =
         "Surprise! Stinger, conga"
        ],
        "cd": "1-4-4",
-       "cdx": "2-4",
+       "cdx": "2-4-4",
        "cdu": "https://sailormusic.net/anime/memorial-music-box/disc-2/",
-       "cdn": "Book prints 1-4-4; sailormusic.net tracklist and VGMdb track lengths place it on 2-4."
+       "cdn": "Book prints 1-4-4; only the disc is wrong. Disc 2, track 4 (Usagi -Bridge Collection-) holds J-4, J-7, J-20, J-21 and J-3a in that order, and the book prints J-4 as 2-4-1."
       },
       {
        "c": "J-22",
@@ -1989,10 +1989,7 @@ window.MMB_DATA =
         "Seeraa senshi no shimeikan, chikarazuyoku soshite utsukushii",
         "The Sailor Senshi's sense of mission, powerful and beautiful"
        ],
-       "cd": "3-12-3",
-       "cdx": "3-12-4",
-       "cdu": "https://sailormusic.net/anime/memorial-music-box/disc-3/",
-       "cdn": "Book prints 3-12-3; sailormusic.net tracklist and VGMdb track lengths place it on 3-12-4."
+       "cd": "3-12-3"
       },
       {
        "c": "M-119",
@@ -50832,8 +50829,9 @@ window.MMB_DATA =
        "cl": [
         [
          "M-221",
-         "q-MOVIE-R-21",
-         null
+         "q-MOVIE-R-6",
+         "M-206",
+         "The episode plays M-206, Usagi no Shinpai from the R movie (CD 8-5), not the R movie list's M-221 (CD 8-15-1). The TV cue sheets seem to number reused R-movie music differently from the movie's own list (compare p.120, S movie No. 20). Identified on r/sailormoon (reddit.com/r/sailormoon/comments/1xkkn9p) and confirmed against recordings of the episode."
         ]
        ],
        "d": [
@@ -74794,8 +74792,9 @@ window.MMB_DATA =
        "cl": [
         [
          "A-331B",
-         "cue-M-331B",
-         "M-331B"
+         "cue-M-331A",
+         "M-331A",
+         "Probably M-331A. A-331B is not in any list, and it can't be M-331B: the next row is M-331B, described as \"more gorgeous and elegant than M-13\", i.e. than this row. M-331A is the other version of M-331 and is used for plain classical scenes in episodes 159, 166, 186 and 187."
         ]
        ],
        "d": [
@@ -90480,7 +90479,7 @@ window.MMB_DATA =
         "p": "鳥丸",
         "c": "烏丸",
         "u": "https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%A3%E3%83%89%E3%82%A6%E3%83%BB%E3%82%AE%E3%83%A3%E3%83%A9%E3%82%AF%E3%83%86%E3%82%A3%E3%82%AB",
-        "n": "烏丸 あかね (Karasuma Akane) is the name Sailor Lead Crow uses as a Galaxy TV staffer in the anime; 鳥 and 烏 differ by one stroke. 鈴 is Sailor Tin Nyanko's Earth name, 鈴 にゃん子 (Suzu Nyanko); the two are rivals from episode 188. (Japanese Wikipedia, シャドウ・ギャラクティカ)"
+        "n": "烏丸 あかね (Karasuma Akane) is the name Sailor Lead Crow uses as a Galaxy TV staffer in the anime; 鳥 and 烏 differ by one stroke. 鈴 is Sailor Tin Nyanko's Earth name, 鈴 にゃん子 (Suzu Nyanko). (Japanese Wikipedia, シャドウ・ギャラクティカ)"
        }
       },
       {
