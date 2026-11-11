@@ -1,0 +1,207 @@
+id,ord,type,series_id,episode,page_from,page_to,title_ja,title_ro,title_en,title_fix_printed,title_fix_correct,title_fix_url,title_fix_note,label_ja,label_ro,label_en
+MOVIE-R,0,movie,R,\N,118,119,美少女戦士セーラームーンR　Qシート表&BGMリスト,"Bishoujo Senshi Seeraa Muun R, Q shiito hyou & BGM risuto",Pretty Guardian Sailor Moon R: cue sheet and BGM list,\N,\N,\N,\N,'94正月劇場用アニメーション,'94 Shougatsu Gekijou-you Animeeshon,1994 New Year theatrical animation
+MOVIE-MAKEUP,1,movie,R,\N,119,119,メイクアップ！セーラー戦士　Qシート表&BGMリスト,"Meikuappu! Seeraa Senshi, Q shiito hyou & BGM risuto",Make Up! Sailor Guardians: cue sheet and BGM list,\N,\N,\N,\N,'94正月劇場用アニメーション　短編映画,"'94 Shougatsu Gekijou-you Animeeshon, Tanpen Eiga","1994 New Year theatrical animation, short film"
+MOVIE-S,2,movie,S,\N,120,121,美少女戦士セーラームーンS　Qシート表&BGMリスト,"Bishoujo Senshi Seeraa Muun S, Q shiito hyou & BGM risuto",Pretty Guardian Sailor Moon S: cue sheet and BGM list,\N,\N,\N,\N,'95正月劇場用アニメーション,'95 Shougatsu Gekijou-you Animeeshon,1995 New Year theatrical animation
+MOVIE-SS,3,movie,SS,\N,121,123,美少女戦士セーラームーンSupers　Qシート表&BGMリスト,"Bishoujo Senshi Seeraa Muun SuperS, Q shiito hyou & BGM risuto",Pretty Guardian Sailor Moon SuperS: cue sheet and BGM list,\N,\N,\N,\N,'96正月劇場用アニメーション,'96 Shougatsu Gekijou-you Animeeshon,1996 New Year theatrical animation
+MOVIE-AMI,4,movie,SS,\N,123,123,美少女戦士セーラームーンSupers外伝亜美ちゃんの初恋　Qシート表&BGMリスト,"Bishoujo Senshi Seeraa Muun SuperS Gaiden: Ami-chan no Hatsukoi, Q shiito hyou & BGM risuto",Pretty Guardian Sailor Moon SuperS Side Story: Ami's First Love: cue sheet and BGM list,\N,\N,\N,\N,'96正月劇場用アニメーション,'96 Shougatsu Gekijou-you Animeeshon,1996 New Year theatrical animation
+TV-1,5,tv,SM,1,124,124,第1話　泣き虫うさぎの華麗なる変身,Dai 1-wa: Nakimushi Usagi no Kareinaru Henshin,Episode 1: The Crybaby: Usagi's Beautiful Transformation,\N,\N,\N,\N,\N,\N,\N
+TV-2,6,tv,SM,2,124,124,第2話　おしおきよ！占いハウスは妖魔の館,Dai 2-wa: Oshioki yo! Uranai Hausu wa Youma no Yakata,Episode 2: Punishment Awaits! The House of Fortune Is the Monster Mansion,\N,\N,\N,\N,\N,\N,\N
+TV-3,7,tv,SM,3,124,124,第3話　謎のねむり病、守れ乙女の恋する心,"Dai 3-wa: Nazo no Nemuribyou, Mamore Otome no Koisuru Kokoro",Episode 3: The Mysterious Sleeping Sickness: Protect the Girls in Love,\N,\N,\N,\N,\N,\N,\N
+TV-4,8,tv,SM,4,125,125,第4話　うさぎが教えます！スリムになる法,Dai 4-wa: Usagi ga Oshiemasu! Surimu ni Naruhou,Episode 4: Learn How to Be Skinny From Usagi,\N,\N,\N,\N,\N,\N,\N
+TV-5,9,tv,SM,5,125,125,第5話　妖魔の香り！シャネーラは愛を盗む,Dai 5-wa: Youma no Kaori! Shaneera wa Ai wo Nusume,Episode 5: Scent of a Monster! Chanela Will Steal Your Love,\N,\N,\N,\N,\N,\N,\N
+TV-6,10,tv,SM,6,125,125,第6話　守れ恋の曲！うさぎはキューピッド,Dai 6-wa: Mamore Koi no Merodi! Usagi wa Kyuupiddo,Episode 6: Protect the Melody of Love: Usagi Plays Cupid,\N,\N,\N,\N,\N,\N,\N
+TV-7,11,tv,SM,7,126,126,第7話　うさぎ反省！スターの道はきびしい,Dai 7-wa: Usagi Hansei! Sutaa no Michi wa Kibishii,Episode 7: Usagi Learns Her Lesson: Becoming a Star Is Hard Work,\N,\N,\N,\N,\N,\N,\N
+TV-8,12,tv,SM,8,126,126,第8話　天才少女は妖魔なの？恐怖の洗脳塾,Dai 8-wa: Tensai Shoujo wa Youma nano? Kyoufu no Sennoujuku,Episode 8: The Girl Genius Is a Monster: The Brainwashing Cram School of Horror,\N,\N,\N,\N,\N,\N,\N
+TV-9,13,tv,SM,9,126,126,第9話　うさぎの災難！あわて時計にご用心,Dai 9-wa: Usagi no Sainan! Awate Dokei ni Goyoujin,Episode 9: Usagi's Disaster: Beware of the Clock of Confusion,\N,\N,\N,\N,\N,\N,\N
+TV-10,14,tv,SM,10,127,127,第10話　呪われたバス！炎の戦士マーズ登場,Dai 10-wa: Norowareta Basu! Honoo no Senshi Maazu Toujou,"Episode 10: The Cursed Bus: Enter Mars, the Guardian of Fire",\N,\N,\N,\N,\N,\N,\N
+TV-11,15,tv,SM,11,127,127,第11話　うさぎとレイ対決？夢ランドの悪夢,Dai 11-wa: Usagi to Rei Taiketsu? Yume Rando no Akumu,Episode 11: Usagi vs. Rei: Nightmare in Dream Land,\N,\N,\N,\N,\N,\N,\N
+TV-12,16,tv,SM,12,127,127,第12話　私だって彼が欲しい！豪華船のワナ,Dai 12-wa: Watashi Datte Kare ga Hoshii! Goukasen no Wana,Episode 12: I Want a Boyfriend: The Luxury Cruise Ship Is a Trap,\N,\N,\N,\N,\N,\N,\N
+TV-13,17,tv,SM,13,128,128,第13話　女の子は団結よ！ジェダイトの最期,Dai 13-wa: Onna no Ko wa Danketsu yo! Jedaito no Saigo,Episode 13: Girls Unite: The End of Jadeite,\N,\N,\N,\N,\N,\N,\N
+TV-14,18,tv,SM,14,128,128,第14話　新たなる強敵、ネフライト魔の紋章,"Dai 14-wa: Aratanaru Kyouteki, Nefuraito Ma no Monshou",Episode 14: A New Enemy Appears: Nephrite's Evil Crest,\N,\N,\N,\N,\N,\N,\N
+TV-15,19,tv,SM,15,128,128,第15話　うさぎアセる！レイちゃん初デート,Dai 15-wa: Usagi Aseru! Rei-chan Hatsu Deeto,Episode 15: Usagi's Panic: Rei's First Date,\N,\N,\N,\N,\N,\N,\N
+TV-16,20,tv,SM,16,129,129,第16話　純白ドレスの夢！うさぎ花嫁になる,Dai 16-wa: Junpaku Doresu no Yume! Usagi Hanayome ni Naru,Episode 16: A Girl's Dream: Usagi Becomes a Bride,\N,\N,\N,\N,\N,\N,\N
+TV-17,21,tv,SM,17,129,129,第17話　モデルはうさぎ？妖魔カメラの熱写,Dai 17-wa: Moderu wa Usagi? Youma Kamera no Nessha,Episode 17: Usagi's a Model: The Flash of the Monster Camera,\N,\N,\N,\N,\N,\N,\N
+TV-18,22,tv,SM,18,129,129,第18話　進悟純情！哀しみのフランス人形,Dai 18-wa: Shingo no Junjou! Kanashimi no Furansu Ningyou,Episode 18: Shingo's Love: The Grieving Doll,\N,\N,\N,\N,\N,\N,\N
+TV-19,23,tv,SM,19,130,130,第19話　うさぎ感激！タキシード仮面の恋文,Dai 19-wa: Usagi Kangeki! Takishiido Kamen no Raburetaa,Episode 19: Usagi's Joy: A Love Letter From Tuxedo Mask,\N,\N,\N,\N,\N,\N,\N
+TV-20,24,tv,SM,20,130,130,第20話　夏よ海よ青春よ！おまけに幽霊もよ！,Dai 20-wa: Natsu yo Umi yo Seishun yo! Omake ni Yuurei mo yo,"Episode 20: The Summer, the Beach, Youth and Ghosts",\N,\N,\N,\N,\N,\N,\N
+TV-21,25,tv,SM,21,130,130,第21話　子供達の夢守れ！アニメに結ぶ友情,Dai 21-wa: Kodomo-tachi no Yume Mamore! Anime ni Musubu Yuujou,Episode 21: Protect the Children's Dreams: Friendship Through Anime,\N,\N,\N,\N,\N,\N,\N
+TV-22,26,tv,SM,22,131,131,第22話　月下のロマンス！うさぎの初キッス,Dai 22-wa: Gekka no Romansu! Usagi no Hatsu Kissu,Episode 22: Romance Under the Moon: Usagi's First Kiss,\N,\N,\N,\N,\N,\N,\N
+TV-23,27,tv,SM,23,131,131,第23話　流れ星に願いを！なるちゃんの純愛,Dai 23-wa: Nagareboshi ni Negai wo! Naru-chan no Junai,Episode 23: Wish Upon a Star: Naru's First Love,\N,\N,\N,\N,\N,\N,\N
+TV-24,28,tv,SM,24,131,131,第24話　なるちゃん号泣！ネフライト愛の死,Dai 24-wa: Naru-chan Goukyuu! Nefuraito Ai no Shi,Episode 24: Naru's Tears: Nephrite Dies for Love,\N,\N,\N,\N,\N,\N,\N
+TV-25,29,tv,SM,25,132,132,第25話　恋する怪力少女、ジュピターちゃん,"Dai 25-wa: Koisuru Kairiki Shoujo, Jupitaa-chan","Episode 25: Jupiter, the Powerful Girl in Love",\N,\N,\N,\N,\N,\N,\N
+TV-26,30,tv,SM,26,132,132,第26話　なるちゃんに笑顔を！うさぎの友情,Dai 26-wa: Naru-chan ni Egao wo! Usagi no Yuujou,Episode 26: Restore Naru's Smile: Usagi's Friendship,\N,\N,\N,\N,\N,\N,\N
+TV-27,31,tv,SM,27,132,132,第27話　亜美ちゃんへの恋!?　未来予知の少年,Dai 27-wa: Ami-chan e no Koi? Mirai Yochi no Shounen,Episode 27: Crushing on Ami: The Boy Who Can See the Future,\N,\N,\N,\N,\N,\N,\N
+TV-28,32,tv,SM,28,133,133,第28話　恋のイラスト、うさぎと衛が接近？,"Dai 28-wa: Koi no Irasuto, Usagi to Mamoru ga Sekkin?",Episode 28: The Painting of Love: Usagi and Mamoru Get Closer,\N,\N,\N,\N,\N,\N,\N
+TV-29,33,tv,SM,29,133,133,第29話　大混戦！グチャグチャ恋の四角関係,Dai 29-wa: Daikonsen! Guchagucha Koi no Shikaku Kankei,Episode 29: Total Chaos: The Messy Love Rectangle,\N,\N,\N,\N,\N,\N,\N
+TV-30,34,tv,SM,30,133,133,第30話　お爺ちゃん乱心、レイちゃんの危機,"Dai 30-wa: Ojiichan Ranshin, Rei-chan no Kiki",Episode 30: Grandpa Loses Control: Rei in Danger,\N,\N,\N,\N,\N,\N,\N
+TV-31,35,tv,SM,31,134,134,第31話　恋されて追われて！ルナの最悪の日,Dai 31-wa: Koisarete Owarete! Runa no Saiaku no Hi,Episode 31: Loved and Chased: Luna's Worst Day Ever,\N,\N,\N,\N,\N,\N,\N
+TV-32,36,tv,SM,32,134,134,第32話　海野の決心！なるちゃんは僕が守る,Dai 32-wa: Umino no Kesshin! Naru-chan wa Boku ga Mamoru,Episode 32: Umino's Resolve: I'll Protect Naru,\N,\N,\N,\N,\N,\N,\N
+TV-33,37,tv,SM,33,134,134,第33話　最後のセーラー戦士 ヴィーナス登場,"Dai 33-wa: Saigo no Seeraa Senshi, Viinasu Toujou","Episode 33: Enter Venus, the Last Sailor Guardian",\N,\N,\N,\N,\N,\N,\N
+TV-34,38,tv,SM,34,135,135,第34話　光輝く銀水晶！月のプリンセス登場,Dai 34-wa: Hikari Kagayaku Ginzuishou! Tsuki no Purinsesu Toujou,Episode 34: The Shining Silver Crystal: The Moon Princess Appears,\N,\N,\N,\N,\N,\N,\N
+TV-35,39,tv,SM,35,135,135,第35話　よみがえる記憶！うさぎと衛の過去,Dai 35-wa: Yomigaeru Kioku! Usagi to Mamoru no Kako,Episode 35: Returning Memories: Usagi and Mamoru's Past,\N,\N,\N,\N,\N,\N,\N
+TV-36,40,tv,SM,36,135,135,第36話　うさぎ混乱！タキシード仮面は悪？,Dai 36-wa: Usagi Konran! Takishiido Kamen wa Aku?,Episode 36: Usagi's Confusion: Is Tuxedo Mask Evil?,\N,\N,\N,\N,\N,\N,\N
+TV-37,41,tv,SM,37,136,136,第37話　めざせプリンセス？うさぎの珍特訓,Dai 37-wa: Mezase Purinsesu? Usagi no Chintokkun,Episode 37: Let's Become a Princess: Usagi's Bizarre Training,\N,\N,\N,\N,\N,\N,\N
+TV-38,42,tv,SM,38,136,136,第38話　雪よ山よ友情よ！やっぱり妖魔もよ,Dai 38-wa: Yuki yo Yama yo Yuujou yo! Yappari Youma mo yo,"Episode 38: The Snow, the Mountains, Friendship and Monsters",\N,\N,\N,\N,\N,\N,\N
+TV-39,43,tv,SM,39,136,136,第39話　妖魔とペア!?　氷上の女王まこちゃん,Dai 39-wa: Youma to Pea!? Hyoujou no Joou Mako-chan,"Episode 39: Paired With a Monster: Mako, the Ice Skating Queen",\N,\N,\N,\N,\N,\N,\N
+TV-40,44,tv,SM,40,137,137,第40話　湖の伝説妖怪！うさぎ家族のきずな,Dai 40-wa: Mizuumi no Densetsu Youkai! Usagi Kazoku no Kizuna,Episode 40: The Legendary Lake Yokai: The Bond of Usagi's Family,\N,\N,\N,\N,\N,\N,\N
+TV-41,45,tv,SM,41,137,137,第41話　もう恋から逃げない！亜美と衛対決,Dai 41-wa: Mou Koi kara Nigenai! Ami to Mamoru Taiketsu,Episode 41: I Won't Run Away From Love Anymore: Ami vs. Mamoru,\N,\N,\N,\N,\N,\N,\N
+TV-42,46,tv,SM,42,137,137,第42話　Sヴィーナスの過去、美奈子の悲恋,"Dai 42-wa: Seeraa Viinasu no Kako, Minako no Hiren",Episode 42: Sailor Venus' Past: Minako's Tragic Love,\N,\N,\N,\N,\N,\N,\N
+TV-43,47,tv,SM,43,138,138,第43話　さぎが孤立？S戦士達の大ゲンカ,Dai 43-wa: Usagi ga Koritsu? Seeraa Senshi-tachi no Oo Genka,Episode 43: Usagi Abandoned: The Falling-Out of the Sailor Guardians,さぎが孤立,うさぎが孤立,https://wikimoon.org/index.php/Is_Usagi_Going_it_Alone%3F_The_Sailor_Senshi_Get_Into_a_Big_Fight,The book drops the first う of the episode title (WikiMoon).,\N,\N,\N
+TV-44,48,tv,SM,44,138,138,第44話　うさぎの覚醒！超過去のメッセージ,Dai 44-wa: Usagi no Kakusei! Choukako no Messeeji,Episode 44: Usagi's Awakening: A Message From the Distant Past,\N,\N,\N,\N,\N,\N,\N
+TV-45,49,tv,SM,45,138,138,第45話　セーラー戦士死す！悲壮なる最終戦,Dai 45-wa: Seeraa Senshi Shisu! Hisounaru Saishuusen,Episode 45: Death of the Sailor Guardians: The Tragic Final Battle,\N,\N,\N,\N,\N,\N,\N
+TV-46,50,tv,SM,46,139,139,第46話　うさぎの想いは永遠に！新しき転生,Dai 46-wa: Usagi no Omoi wa Towa ni! Atarashiki Tensei,Episode 46: Usagi's Eternal Wish: A Brand New Life,\N,\N,\N,\N,\N,\N,\N
+TV-47,51,tv,R,47,140,140,第47話　ムーン復活！謎のエイリアン出現,Dai 47-wa: Muun Fukkatsu! Nazo no Eirian Shutsugen,Episode 47: Moon Returns: The Mysterious Aliens Appear,\N,\N,\N,\N,\N,\N,\N
+TV-48,52,tv,R,48,140,140,第48話　愛と正義ゆえ！セーラー戦士再び,Dai 48-wa: Ai to Seigi Yue! Seeraa Senshi Futatabi,Episode 48: For Love and for Justice: Sailor Guardians Once Again,\N,\N,\N,\N,\N,\N,\N
+TV-49,53,tv,R,49,140,140,第49話　白いバラは誰に？月影の騎士登場,Dai 49-wa: Shiroi Bara wa Dare ni? Tsukikage no Naito Toujou,Episode 49: For Whom Is the White Rose? The Moonlight Knight Appears,\N,\N,\N,\N,\N,\N,\N
+TV-50,54,tv,R,50,141,141,第50話　うさぎの危機！ティアラ作動せず,Dai 50-wa: Usagi no Kiki! Tiara Sadousezu,Episode 50: Usagi's Crisis: The Tiara Stops Working,\N,\N,\N,\N,\N,\N,\N
+TV-51,55,tv,R,51,141,141,第51話　新しき変身！うさぎパワーアップ,Dai 51-wa: Atarashiki Henshin! Usagi Pawaa Appu,Episode 51: A New Transformation: Usagi's Power-Up,\N,\N,\N,\N,\N,\N,\N
+TV-52,56,tv,R,52,141,141,第52話　狙われた園児！ヴィーナス大活躍,Dai 52-wa: Nerawareta Enji! Viinasu Daikatsuyaku,Episode 52: The Targeted Kindergarteners: Venus to the Rescue,\N,\N,\N,\N,\N,\N,\N
+TV-53,57,tv,R,53,142,142,第53話　衛とうさぎのベビーシッター騒動,Dai 53-wa: Mamoru to Usagi no Bebiishittaa Soudou,Episode 53: Mamoru and Usagi's Babysitting Mayhem,\N,\N,\N,\N,\N,\N,\N
+TV-54,58,tv,R,54,142,142,第54話　文化祭は私のため!?　レイ女王熱唱,Dai 54-wa: Bunkasai wa Watashi no Tame!? Rei Joou Nesshou,Episode 54: The School Festival Is for Me?! Queen Rei's Song,\N,\N,\N,\N,\N,\N,\N
+TV-55,59,tv,R,55,142,142,第55話　月影は星十郎？燃えるまこちゃん,Dai 55-wa: Tsukikage wa Seijuurou? Moeru Mako-chan,Episode 55: Is Seijuro the Moonlight Knight? Mako On Fire,\N,\N,\N,\N,\N,\N,\N
+TV-56,60,tv,R,56,143,143,第56話　衛のキス奪え！アンの白雪姫作戦,Dai 56-wa: Mamoru no Kisu Ubae! An no Shirayuki Hime Sakusen,Episode 56: Steal a Kiss from Mamoru: An's Project Snow White,\N,\N,\N,\N,\N,\N,\N
+TV-57,61,tv,R,57,143,143,第57話　放課後にご用心！狙われたうさぎ,Dai 57-wa: Houkago ni Goyoujin! Nerawareta Usagi,Episode 57: After-School Trouble: Usagi Is a Target,\N,\N,\N,\N,\N,\N,\N
+TV-58,62,tv,R,58,143,143,第58話　すれちがう愛の心！怒りの魔界樹,Dai 58-wa: Surechigau Ai no Kokoro! Ikari no Makaiju,Episode 58: Disconnecting Love: The Raging Makai Tree,\N,\N,\N,\N,\N,\N,\N
+TV-59,63,tv,R,59,144,144,第59話　めざめる真実の愛！魔界樹の秘密,Dai 59-wa: Mezameru Shinjitsu no Ai! Makaiju no Himitsu,Episode 59: True Love Awakens: The Makai Tree's Secret,\N,\N,\N,\N,\N,\N,\N
+TV-60,64,tv,R,60,144,144,第60話　天使？悪魔？空から来た謎の少女,Dai 60-wa: Tenshi? Akuma? Sora kara Kita Nazo no Shoujo,Episode 60: Angel or Devil? The Mysterious Girl from the Sky,\N,\N,\N,\N,\N,\N,\N
+TV-61,65,tv,R,61,144,144,第61話　うさぎ大ショック！衛の絶交宣言,Dai 61-wa: Usagi Dai Shokku! Mamoru no Zekkou Sengen,Episode 61: Usagi Devastated: Mamoru Declares a Break-Up,\N,\N,\N,\N,\N,\N,\N
+TV-62,66,tv,R,62,145,145,第62話　戦士の友情！さよなら亜美ちゃん,Dai 62-wa: Senshi no Yuujou! Sayonara Ami-chan,"Episode 62: A Guardian's Friendship: Goodbye, Ami",\N,\N,\N,\N,\N,\N,\N
+TV-63,67,tv,R,63,145,145,第63話　女は強く美しく！レイの新必殺技,Dai 63-wa: Onna wa Tsuyoku Utsukushiku! Rei no Shin Hissatsu Waza,Episode 63: Women Must Be Strong and Beautiful: Rei's New Special Technique,\N,\N,\N,\N,\N,\N,\N
+TV-64,68,tv,R,64,145,145,第64話　銀水晶を求めて！ちびうさの秘密,Dai 64-wa: Ginzuishou wo Motomete! Chibiusa no Himitsu,Episode 64: In Search of the Silver Crystal: Chibi-Usa's Secret,\N,\N,\N,\N,\N,\N,\N
+TV-65,69,tv,R,65,146,146,第65話　恋の論争！美奈子とまことが対立,Dai 65-wa: Koi no Ronsou! Minako to Makoto ga Tairitsu,Episode 65: Dispute Over Love: Minako and Makoto's Conflict,\N,\N,\N,\N,\N,\N,\N
+TV-66,70,tv,R,66,146,146,第66話　うさぎの親心？カレーな三角関係,Dai 66-wa: Usagi no Oyagokoro? Karee na Sankaku Kankei,Episode 66: Usagi's Parental Love: The Curry Romance Triangle,\N,\N,\N,\N,\N,\N,\N
+TV-67,71,tv,R,67,146,146,第67話　海よ島よバカンスよ！戦士の休息,Dai 67-wa: Umi yo! Shima yo! Bakansu yo! Senshi no Kyuusoku,"Episode 67: The Beach, the Island and a Vacation: The Guardians' Break",\N,\N,\N,\N,\N,\N,\N
+TV-68,72,tv,R,68,147,147,第68話　ちびうさを守れ！10戦士の大激戦,Dai 68-wa: Chibiusa wo Mamore! 10 Senshi no Daigekisen,Episode 68: Protect Chibi-Usa: Clash of the Ten Warriors,\N,\N,\N,\N,\N,\N,\N
+TV-69,73,tv,R,69,147,147,第69話　目覚めよ眠れる美少女！衛の苦悩,Dai 69-wa: Mezame yo Nemureru Bishoujo! Mamoru no Kunou,Episode 69: Awaken the Sleeping Beauty: Mamoru's Distress,\N,\N,\N,\N,\N,\N,\N
+TV-70,74,tv,R,70,147,147,第70話　愛の炎の対決！マーズVSコーアン,Dai 70-wa: Ai no Honoo no Taiketsu! Maazu tai Kooan,Episode 70: Battle of the Flames of Love! Mars vs. Koan,\N,\N,\N,\N,\N,\N,\N
+TV-71,75,tv,R,71,148,148,第71話　友情のため！亜美とベルチェ激突,Dai 71-wa: Yuujou no Tame! Ami to Beruche Gekitotsu,Episode 71: For Friendship: Ami vs. Berthier,\N,\N,\N,\N,\N,\N,\N
+TV-72,76,tv,R,72,148,148,第72話　非情のルベウス！悲しみの四姉妹,Dai 72-wa: Hijou no Rubeusu! Kanashimi no Yonshimai,Episode 72: Rubeus the Heartless: The Tragic Sisters,\N,\N,\N,\N,\N,\N,\N
+TV-73,77,tv,R,73,148,148,第73話　UFO出現！さらわれたS戦士達,Dai 73-wa: Yuufoo Shutsugen! Sarawareta Seeraa Senshi-tachi,Episode 73: A UFO Appears: The Sailor Guardians Abducted,\N,\N,\N,\N,\N,\N,\N
+TV-74,78,tv,R,74,149,149,第74話　ルベウスを倒せ！宇宙空間の決戦,Dai 74-wa: Rubeusu wo Taose! Uchuu Kuukan no Kessen,Episode 74: Defeat Rubeus: The Battle in Space,\N,\N,\N,\N,\N,\N,\N
+TV-75,79,tv,R,75,149,149,第75話　謎の新戦士セーラープルート登場,Dai 75-wa: Nazo no Shin Senshi Seeraa Puruuto Toujou,Episode 75: The Mysterious New Guardian: Sailor Pluto Appears,\N,\N,\N,\N,\N,\N,\N
+TV-76,80,tv,R,76,149,149,第76話　暗黒の魔力！エスメロードの侵略,Dai 76-wa: Ankoku no Maryoku! Esumeroodo no Shinryaku,Episode 76: Magic of Darkness: Esmeraude's Invasion,\N,\N,\N,\N,\N,\N,\N
+TV-77,81,tv,R,77,150,150,第77話　想いは同じ！うさぎと衛の愛再び,Dai 77-wa: Omoi wa Onaji! Usagi to Mamoru no Ai Futatabi,Episode 77: Shared Feelings: Usagi and Mamoru in Love Once Again,\N,\N,\N,\N,\N,\N,\N
+TV-78,82,tv,R,78,150,150,第78話　ヴィーナス美奈子のナース大騒動,Dai 78-wa: Viinasu Minako no Naasu Dai Soudou,Episode 78: Venus: Minako's Nurse Mayhem,\N,\N,\N,\N,\N,\N,\N
+TV-79,83,tv,R,79,151,151,第79話　アルテミスの冒険！魔の動物王国,Dai 79-wa: Arutemisu no Bouken! Ma no Doubutsu Oukoku,Episode 79: Artemis's Adventure: The Monster Animal Kingdom,\N,\N,\N,\N,\N,\N,\N
+TV-80,84,tv,R,80,151,151,第80話　恐怖の幻影！ひとりぼっちの亜美,Dai 80-wa: Kyoufu no Genei! Hitoribocchi no Ami,Episode 80: The Terrifying Illusion: Ami All Alone,\N,\N,\N,\N,\N,\N,\N
+TV-81,85,tv,R,81,151,151,第81話　暗黒ゲート完成？狙われた小学校,Dai 81-wa: Ankoku Geeto Kansei? Nerawareta Shougakkou,Episode 81: The Dark Gate Is Completed? The Targeted Elementary School,\N,\N,\N,\N,\N,\N,\N
+TV-82,86,tv,R,82,152,152,第82話　未来への旅立ち！時空回廊の戦い,Dai 82-wa: Mirai e no Tabidachi! Jikuu Kairou no Tatakai,Episode 82: Journey to the Future: Battle in the Space-Time Corridor,\N,\N,\N,\N,\N,\N,\N
+TV-83,87,tv,R,83,152,152,第83話　衝撃の未来！デマンドの黒き野望,Dai 83-wa: Shougeki no Mirai! Demando no Kuroki Yabou,Episode 83: The Shocking Future: Demande's Dark Ambition,\N,\N,\N,\N,\N,\N,\N
+TV-84,88,tv,R,84,152,152,第84話　ワイズマンの魔手！ちびうさ消滅,Dai 84-wa: Waizuman no Mashu! Chibiusa Shoumetsu,Episode 84: Wiseman's Evil Hand: Chibi-Usa Disappears,\N,\N,\N,\N,\N,\N,\N
+TV-85,89,tv,R,85,153,153,第85話　暗黒の女王ブラックレディの誕生,Dai 85-wa: Ankoku no Joou Burakku Redi no Tanjou,Episode 85: The Dark Queen: Birth of Black Lady,\N,\N,\N,\N,\N,\N,\N
+TV-86,90,tv,R,86,153,153,第86話　サフィール絶命！ワイズマンの罠,Dai 86-wa: Safiiru Zetsumei! Waizuman no Wana,Episode 86: Saphir Dies: Wiseman's Trap,\N,\N,\N,\N,\N,\N,\N
+TV-87,91,tv,R,87,153,153,第87話　愛と未来を信じて！うさぎの決心,Dai 87-wa: Ai to Mirai wo Shinjite! Usagi no Kesshin,Episode 87: Believing in Love and the Future: Usagi's Decision,\N,\N,\N,\N,\N,\N,\N
+TV-88,92,tv,R,88,154,154,第88話　光と闇の最終決戦！未来へ誓う愛,Dai 88-wa: Hikari to Yami no Saishuu Kessen! Mirai e Chikau Ai,Episode 88: The Final Battle Between Light and Dark: Pledge of Love for the Future,\N,\N,\N,\N,\N,\N,\N
+TV-89,93,tv,R,89,154,154,第89話　うさぎ達の決意！新しき戦いの序曲,Dai 89-wa: Usagi-tachi no Ketsui! Atarashiki Tatakai no Jokyoku,Episode 89: Usagi and the Girls' Resolve: Prelude to a New Battle,\N,\N,\N,\N,\N,\N,\N
+TV-90,94,tv,S,90,155,155,第90話　地球崩壊の予感？謎の新戦士出現,Dai 90-wa: Chikyuu Houkai no Yokan? Nazo no Shin Senshi Shutsugen,Episode 90: Premonition of the Apocalypse: The Mysterious New Guardians Appear,\N,\N,\N,\N,\N,\N,\N
+TV-91,95,tv,S,91,155,155,第91話　愛のロッド誕生！うさぎの新変身,Dai 91-wa: Ai no Roddo Tanjou! Usagi no Shin Henshin,Episode 91: The Rod of Love Is Born: Usagi's New Transformation,\N,\N,\N,\N,\N,\N,\N
+TV-92,96,tv,S,92,155,155,第92話　素敵な美少年？天王はるかの秘密,Dai 92-wa: Suteki na Bishounen? Tenou Haruka no Himitsu,Episode 92: A Handsome Boy? Haruka Tenoh's Secret,\N,\N,\N,\N,\N,\N,\N
+TV-93,97,tv,S,93,156,156,第93話　うさぎの憧れ！優美な天才みちる,Dai 93-wa: Usagi no Akogare! Yuubi na Tensai Michiru,Episode 93: Usagi's Idol: The Graceful Genius Michiru,\N,\N,\N,\N,\N,\N,\N
+TV-94,98,tv,S,94,156,156,第94話　純（ピュア）な心を守れ！敵味方三つ巴乱戦,Dai 94-wa: Pyua na Kokoro wo Mamore! Teki Mikata Mitsudomoe Ransen,Episode 94: Protect the Pure Heart: The Three-Way Battle,\N,\N,\N,\N,\N,\N,\N
+TV-95,99,tv,S,95,156,156,第95話　恋のおたすけはムーンにおまかせ,Dai 95-wa: Koi no Otasuke wa Muun ni Omakase,Episode 95: Let Moon Help With Your Love Problems,\N,\N,\N,\N,\N,\N,\N
+TV-96,100,tv,S,96,157,157,第96話　冷酷なウラヌス？まことのピンチ,Dai 96-wa: Reikoku na Uranusu? Makoto no Pinchi,Episode 96: Coldhearted Uranus: Makoto in Danger,\N,\N,\N,\N,\N,\N,\N
+TV-97,101,tv,S,97,157,157,第97話　水のラビリンス！ねらわれた亜美,Dai 97-wa: Mizu no Rabirinsu! Nerawareta Ami,Episode 97: The Labyrinth of Water: Ami Targeted,\N,\N,\N,\N,\N,\N,\N
+TV-98,102,tv,S,98,157,157,第98話　友達を救え！ムーンウラヌス連合,Dai 98-wa: Tomodachi wo Sukue! Muun Uranusu Rengou,Episode 98: To Save Our Friends: Moon and Uranus Join Forces,\N,\N,\N,\N,\N,\N,\N
+TV-99,103,tv,S,99,158,158,第99話　男の優しさ！雄一郎 レイに失恋？,Dai 99-wa: Otoko no Yasashisa! Yuuichirou Rei ni Shitsuren,Episode 99: A Man's Kindness: Yuichiro Heartbroken by Rei,\N,\N,\N,\N,\N,\N,\N
+TV-100,104,tv,S,100,158,158,第100話　S（セーラー）戦士をやめたい!?美奈子の悩み,Dai 100-wa: Seeraa Senshi wo Yametai!? Minako no Nayami,Episode 100: I Want to Quit Being a Sailor Guardian: Minako's Dilemma,\N,\N,\N,\N,\N,\N,\N
+TV-101,105,tv,S,101,158,158,第101話　うさぎ涙！誕生日にガラスの靴を,Dai 101-wa: Usagi Namida! Tanjoubi ni Garasu no Kutsu wo,Episode 101: Usagi in Tears: A Glass Slipper for My Birthday,\N,\N,\N,\N,\N,\N,\N
+TV-102,106,tv,S,102,159,159,第102話　奪われた純（ピュア）な心！うさぎ絶対絶命,Dai 102-wa: Ubawareta Pyua na Kokoro! Usagi Zettai Zetsumei,Episode 102: The Stolen Pure Heart: Usagi's Crisis,\N,\N,\N,\N,\N,\N,\N
+TV-103,107,tv,S,103,159,159,第103話　やって来たちっちゃな美少女戦士,Dai 103-wa: Yatte Kita Chicchana Bishoujo Senshi,Episode 103: The Arrival of a Small Pretty Guardian,\N,\N,\N,\N,\N,\N,\N
+TV-104,108,tv,S,104,160,160,第104話　友達を求めて！ちびムーンの活躍,Dai 104-wa: Tomodachi wo Motomete! Chibi Muun no Katsuyaku,Episode 104: Making New Friends: Chibi Moon's Adventure,\N,\N,\N,\N,\N,\N,\N
+TV-105,109,tv,S,105,160,160,第105話　力（パワー）が欲しい！まこちゃんの迷い道,Dai 105-wa: Pawaa ga Hoshii! Mako-chan no Mayoi Michi,Episode 105: I Want Power: Mako Lost in Doubt,\N,\N,\N,\N,\N,\N,\N
+TV-106,110,tv,S,106,161,161,第106話　運命のきずな！ウラヌスの遠い日,Dai 106-wa: Unmei no Kizuna! Uranusu no Tooi Hi,Episode 106: The Bond of Destiny: Uranus's Distant Past,\N,\N,\N,\N,\N,\N,\N
+TV-107,111,tv,S,107,161,161,第107話　芸術は愛の爆発！ちびうさの初恋,Dai 107-wa: Geijutsu wa Ai no Bakuhatsu! Chibiusa no Hatsukoi,Episode 107: Art Is an Explosion of Love: Chibi-Usa's First Love,\N,\N,\N,\N,\N,\N,\N
+TV-108,112,tv,S,108,162,162,第108話　うさぎのダンスはワルツに乗って,Dai 108-wa: Usagi no Dansu wa Warutsu ni Notte,Episode 108: Usagi Dancing to the Waltz,\N,\N,\N,\N,\N,\N,\N
+TV-109,113,tv,S,109,162,162,第109話　衝撃の刻！明かされた互いの正体,Dai 109-wa: Shougeki no Toki! Akasareta Tagai no Shoutai,Episode 109: The Shocking Moment: Everyone's Identities Revealed,\N,\N,\N,\N,\N,\N,\N
+TV-110,114,tv,S,110,163,163,第110話　ウラヌス達の死？タリスマン出現,Dai 110-wa: Uranusu-tachi no Shi? Tarisuman Shutsugen,Episode 110: The Death of Uranus and Neptune: The Talisman Appears,\N,\N,\N,\N,\N,\N,\N
+TV-111,115,tv,S,111,163,163,第111話　聖杯の神秘な力！ムーン二段変身,Dai 111-wa: Seihai no Shinpi na Chikara! Muun Nidan Henshin,Episode 111: The Holy Grail's Mystical Power: Moon's Double Transformation,\N,\N,\N,\N,\N,\N,\N
+TV-112,116,tv,S,112,163,163,第112話　真の救世主（メシア）は誰？光と影のカオス,Dai 112-wa: Shin no Meshia wa Dare? Hikari to Yami no Kaosu,Episode 112: Who Is the True Messiah? Chaos of Light and Darkness,\N,\N,\N,\N,\N,\N,\N
+TV-113,117,tv,S,113,164,164,第113話　妖気漂う家！美少女ほたるの秘密,Dai 113-wa: Youki Tadayou Ie! Bishoujo Hotaru no Himitsu,Episode 113: A House Filled With Evil Presence: The Beautiful Hotaru's Secret,\N,\N,\N,\N,\N,\N,\N
+TV-114,118,tv,S,114,164,164,第114話　アイドル大好き！悩めるミメット,Dai 114-wa: Aidoru Daisuki! Nayameru Mimetto,Episode 114: I Love Idols: Mimete's Dilemma,\N,\N,\N,\N,\N,\N,\N
+TV-115,119,tv,S,115,164,164,第115話　沈黙の影!?　あわき蛍火のゆらめき,Dai 115-wa: Chinmoku no Kage!? Awaki Hotarubi no Yurameki,Episode 115: Shadow of Silence: The Pale Glimmer of a Firefly,\N,\N,\N,\N,\N,\N,\N
+TV-116,120,tv,S,116,165,165,第116話　嵐のち晴れ！ほたるに捧げる友情,Dai 116-wa: Arashi nochi Hare! Hotaru ni Sasageru Yuujou,Episode 116: Sunny Skies After a Storm: A Friendship Dedicated to Hotaru,\N,\N,\N,\N,\N,\N,\N
+TV-117,121,tv,S,117,165,165,第117話　より高くより強く！うさぎの応援,Dai 117-wa: Yori Takaku Yori Tsuyoku! Usagi no Ouen!,Episode 117: Higher and Stronger: A Cheer from Usagi,\N,\N,\N,\N,\N,\N,\N
+TV-118,122,tv,S,118,165,165,第118話　魔空の戦い！セーラー戦士の賭け,Dai 118-wa: Makuu no Tatakai! Seeraa Senshi no Kake,Episode 118: Battle Inside the Demonic Space: The Sailor Guardians' Gamble,\N,\N,\N,\N,\N,\N,\N
+TV-119,123,tv,S,119,166,166,第119話　沈黙のメシア覚せい？運命の星々,Dai 119-wa: Chinmoku no Meshia Kakusei? Unmei no Hoshiboshi,Episode 119: The Messiah of Silence Awakens? Stars of Destiny,\N,\N,\N,\N,\N,\N,\N
+TV-120,124,tv,S,120,166,166,第120話　異次元からの侵略！無限学園の謎,Dai 120-wa: Ijigen Kara no Shinryaku! Mugen Gakuen no Nazo,Episode 120: An Invasion from Another Dimension: Mystery of Mugen Academy,\N,\N,\N,\N,\N,\N,\N
+TV-121,125,tv,S,121,166,166,第121話　心を奪う妖花！第三の魔女テルル,Dai 121-wa: Kokoro wo Ubau Youka! Daisan no Majo Teruru,"Episode 121: A Bewitching Flower That Steals Hearts: Tellu, the Third Witch",\N,\N,\N,\N,\N,\N,\N
+TV-122,126,tv,S,122,167,167,第122話　愛を信じて！亜美、心優しき戦士,"Dai 122-wa: Ai wo Shinjite! Ami, Kokoro Yasashiki Senshi","Episode 122: Believe in Love: Ami, the Kindhearted Guardian",\N,\N,\N,\N,\N,\N,\N
+TV-123,127,tv,S,123,167,167,第123話　破滅の影！沈黙のメシアの目覚め,Dai 123-wa: Hametsu no Kage! Chinmoku no Meshia no Mezame,Episode 123: Shadow of Destruction: The Messiah of Silence Awakens,\N,\N,\N,\N,\N,\N,\N
+TV-124,128,tv,S,124,167,167,第124話　迫り来る闇の恐怖！苦戦の8戦士,Dai 124-wa: Semari Kuru Yami no Kyoufu! Kusen no 8 Senshi,Episode 124: The Coming Terror of Darkness: Struggle of the Eight Guardians,\N,\N,\N,\N,\N,\N,\N
+TV-125,129,tv,S,125,168,168,第125話　輝く流星！サターンそして救世主（メシア）,Dai 125-wa: Kagayaku Ryuusei! Sataan Soshite Meshia,Episode 125: The Shining Shooting Star: Saturn and the Messiah,\N,\N,\N,\N,\N,\N,\N
+TV-126,130,tv,S,126,168,168,第126話　新しき生命！運命の星々別離（わかれ）の時,Dai 126-wa: Atarashiki Inochi! Unmei no Hoshiboshi Wakare no Toki,Episode 126: A New Life: Parting of the Stars of Destiny,\N,\N,\N,\N,\N,\N,\N
+TV-127,131,tv,S,127,168,168,第127話　戦士の自覚！強さは純（ピュア）な心の中に,Dai 127-wa: Senshi no Jikaku! Tsuyosa wa Pyua na Kokoro no Naka ni,Episode 127: A Guardian's Realization: Strength Lies Within a Pure Heart,\N,\N,\N,\N,\N,\N,\N
+TV-128,132,tv,SS,128,169,169,第128話　運命の出会い！ペガサスの舞う夜,Dai 128-wa: Unmei no Deai! Pegasasu no Mau Yoru,Episode 128: Meeting of Destiny: The Night Pegasus Dances,\N,\N,\N,\N,\N,\N,\N
+TV-129,133,tv,SS,129,169,169,第129話　スーパー変身再び！ペガサスの力,Dai 129-wa: Suupaa Henshin Futatabi! Pegasasu no Pawaa,Episode 129: Super Transformation Once Again: Pegasus's Power,\N,\N,\N,\N,\N,\N,\N
+TV-130,134,tv,SS,130,169,169,第130話　守れ母の夢！Wムーンの新必殺技,Dai 130-wa: Mamore Haha no Yume! Daburu Muun no Shin Hissatsu Waza,Episode 130: Protect Mom's Dream: Double Moon's New Attack,\N,\N,\N,\N,\N,\N,\N
+TV-131,135,tv,SS,131,170,170,第131話　ペガサスを捕えろ！アマゾンの罠,Dai 131-wa: Pegasasu wo Toraero! Amazon no Wana,Episode 131: Catch Pegasus: The Amazon's Trap,\N,\N,\N,\N,\N,\N,\N
+TV-132,136,tv,SS,132,170,170,第132話　お似合いの二人！うさぎと衛の愛,Dai 132-wa: Oniai no Futari! Usagi to Mamoru no Ai,Episode 132: The Perfect Couple: Usagi and Mamoru's Love,\N,\N,\N,\N,\N,\N,\N
+TV-133,137,tv,SS,133,170,170,第133話　アルテミスの浮気？謎の子猫登場,Dai 133-wa: Arutemisu no Uwaki? Nazo no Koneko Toujou,Episode 133: Artemis is Cheating? Enter the Mysterious Kitten,\N,\N,\N,\N,\N,\N,\N
+TV-134,138,tv,SS,134,171,171,第134話　まことの友情！天馬に憧れた少女,Dai 134-wa: Makoto no Yuujou! Pegasasu ni Akogareta Shoujo,Episode 134: Makoto's Friendship: The Girl Who Admired Pegasus,\N,\N,\N,\N,\N,\N,\N
+TV-135,139,tv,SS,135,171,171,第135話　触れ合う心！ちびうさとペガサス,Dai 135-wa: Fureau Kokoro! Chibiusa to Pegasasu,Episode 135: Connecting Hearts: Chibi-Usa and Pegasus,\N,\N,\N,\N,\N,\N,\N
+TV-136,140,tv,SS,136,172,172,第136話　衛を守れ！忍者うさぎのヤキモチ,Dai 136-wa: Mamoru wo Mamore! Ninja Usagi no Yakimochi,Episode 136: Protect Mamoru: Ninja Usagi's Jealousy,\N,\N,\N,\N,\N,\N,\N
+TV-137,141,tv,SS,137,172,172,第137話　あやかしの森！美しき妖精の誘い,Dai 137-wa: Ayakashi no Mori! Utsukushiki Yousei no Izanai,Episode 137: Forest of Illusion: A Beautiful Fairy's Invitation,\N,\N,\N,\N,\N,\N,\N
+TV-138,142,tv,SS,138,172,172,第138話　天国まで走れ！夢の車にかける愛,Dai 138-wa: Tengoku Made Hashire! Yume no Kuruma ni Kakeru Ai,Episode 138: Drive to the Heavens: The Dream Car Fueled with Love,\N,\N,\N,\N,\N,\N,\N
+TV-139,143,tv,SS,139,173,173,第139話　目指せ日本一！美少女剣士の悩み,Dai 139-wa: Mezase Nippon Ichi! Bishoujo Kenshi no Nayami,Episode 139: Aiming for the Top: The Pretty Swordswoman's Dilemma,\N,\N,\N,\N,\N,\N,\N
+TV-140,144,tv,SS,140,173,173,第140話　ミニが大好き！おしゃれな戦士達,Dai 140-wa: Mini ga Daisuki! Oshare na Senshi-tachi,Episode 140: We Love Fashion: The Stylish Guardians,\N,\N,\N,\N,\N,\N,\N
+TV-141,145,tv,SS,141,173,173,第141話　恋の嵐！美奈子のフタマタ大作戦,Dai 141-wa: Koi no Arashi! Minako no Futamata Daisakusen,Episode 141: Storm of Love: Minako's Grand Two-Timing Plan,\N,\N,\N,\N,\N,\N,\N
+TV-142,146,tv,SS,142,174,174,第142話　秘密の館！愛のメニューを貴方に,Dai 142-wa: Himitsu no Yakata! Ai no Menyuu wo Anata ni,Episode 142: The Secret Mansion: A Menu of Love for You,\N,\N,\N,\N,\N,\N,\N
+TV-143,147,tv,SS,143,174,174,第143話　天馬を信じる時！4戦士の超変身,Dai 143-wa: Pegasasu wo Shinjiru Toki! 4 Senshi no Suupaa Henshin,Episode 143: Believe in Pegasus: The Four Guardians' Super Transformation,\N,\N,\N,\N,\N,\N,\N
+TV-144,148,tv,SS,144,174,174,第144話　きらめく夏の日！潮風の少女亜美,Dai 144-wa: Kirameku Natsu no Hi! Shiokaze no Shoujo Ami,Episode 144: Shining Summer Days: Ami Under the Sea-Breeze,\N,\N,\N,\N,\N,\N,\N
+TV-145,149,tv,SS,145,175,175,第145話　プリマをねらえ！うさぎのバレエ,Dai 145-wa: Purima wo Nerae! Usagi no Baree,Episode 145: Become a Prima: Usagi's Ballet,\N,\N,\N,\N,\N,\N,\N
+TV-146,150,tv,SS,146,175,175,第146話　十番街の休日！無邪気な王女様,Dai 146-wa: Juubangai no Kyuujitsu! Mujaki na Oujosama,Episode 146: Juban Holiday: The Carefree Princess,\N,\N,\N,\N,\N,\N,\N
+TV-147,151,tv,SS,147,175,175,第147話　運命のパートナー？まことの純情,Dai 147-wa: Unmei no Paatonaa? Makoto no Junjou,Episode 147: Destined Partners? Makoto's Innocence,\N,\N,\N,\N,\N,\N,\N
+TV-148,152,tv,SS,148,176,176,第148話　巨悪の影！追いつめられたトリオ,Dai 148-wa: Kyoaku no Kage! Oitsumerareta Torio,Episode 148: Shadow of Evil: The Trio's Last Chance,\N,\N,\N,\N,\N,\N,\N
+TV-149,153,tv,SS,149,176,176,第149話　夢の鏡！アマゾン最後のステージ,Dai 149-wa: Yume no Kagami! Amazon Saigo no Suteeji,Episode 149: Mirrors of Dreams: The Amazon's Last Stage,\N,\N,\N,\N,\N,\N,\N
+TV-150,154,tv,SS,150,176,176,第150話　アマゾネス！鏡の裏から来た悪夢,Dai 150-wa: Amazonesu! Kagami no Ura kara Kita Akumu,Episode 150: The Amazoness: Nightmare from Behind the Mirrors,\N,\N,\N,\N,\N,\N,\N
+TV-151,155,tv,SS,151,177,177,第151話　真のパワー爆発！亜美心のしらべ,Dai 151-wa: Shin no Pawaa Bakuhatsu! Ami Kokoro no Shirabe,Episode 151: True Power Explodes: Ami's Melody of the Heart,\N,\N,\N,\N,\N,\N,\N
+TV-152,156,tv,SS,152,177,177,第152話　炎の情熱！マーズ怒りの超必殺技,Dai 152-wa: Honoo no Jounetsu! Maazu Ikari no Chou Hissatsu Waza,Episode 152: Flames of Passion: Mars's Raging Super Attack,\N,\N,\N,\N,\N,\N,\N
+TV-153,157,tv,SS,153,178,178,第153話　恐怖の歯医者さん？パラパラの館,Dai 153-wa: Kyoufu no Haishasan? ParaPara no Yakata,Episode 153: Dentist of Horrors? Palla-Palla's House,\N,\N,\N,\N,\N,\N,\N
+TV-154,158,tv,SS,154,178,178,第154話　夢対決！美奈子とまこと絶交宣言,Dai 154-wa: Yume Taiketsu! Minako to Makoto Zekkou Sengen,Episode 154: Clash of Dreams: Minako and Makoto's Broken Friendship,\N,\N,\N,\N,\N,\N,\N
+TV-155,159,tv,SS,155,178,178,第155話　恐怖を越えて！自由へのジャンプ,Dai 155-wa: Kyoufu wo Koete! Jiyuu e no Janpu,Episode 155: Overcome Your Fear: The Jump to Freedom,\N,\N,\N,\N,\N,\N,\N
+TV-156,160,tv,SS,156,179,179,第156話　夢を見失わないで！真実を映す鏡,Dai 156-wa: Yume wo Miushinawanaide! Shinjitsu wo Utsusu Kagami,Episode 156: Don't Lose Sight of Your Dreams: The Mirror of Truth,\N,\N,\N,\N,\N,\N,\N
+TV-157,161,tv,SS,157,179,179,第157話　ペガサスが消えた!?　ゆれ動く友情,Dai 157-wa: Pegasasu ga Kieta!? Yure Ugoku Yuujou,Episode 157: Pegasus Disappears: Wavering Friendship,\N,\N,\N,\N,\N,\N,\N
+TV-158,162,tv,SS,158,180,180,第158話　天馬の秘密！夢世界を守る美少年,Dai 158-wa: Pegasasu no Himitsu! Yume Sekai wo Mamoru Bishounen,Episode 158: Pegasus's Secret: The Boy Who Protects the Dream World,\N,\N,\N,\N,\N,\N,\N
+TV-159,163,tv,SS,159,180,180,第159話　ちびうさの小さな恋のラプソディ,Dai 159-wa: Chibi Usa no Chiisana Koi no Rapusodi,Episode 159: Chibi-Usa's Little Rhapsody of Love,\N,\N,\N,\N,\N,\N,\N
+TV-160,164,tv,SS,160,180,180,第160話　大人になる夢！アマゾネスの当惑,Dai 160-wa: Otona ni Naru Yume! Amazonesu no Touwaku,Episode 160: Dream to be an Adult: The Amazoness' Confusion,\N,\N,\N,\N,\N,\N,\N
+TV-161,165,tv,SS,161,181,181,第161話　動き出した恐怖！闇の女王の魔手,Dai 161-wa: Ugoki Dashita Kyoufu! Yami no Joou no Mashu,Episode 161: Terror in Motion: The Dark Queen's Evil Hand,\N,\N,\N,\N,\N,\N,\N
+TV-162,166,tv,SS,162,181,181,第162話　闇の震源地 テッドムーンサーカス,Dai 162-wa: Yami no Shingenchi Deddo Muun Saakasu,Episode 162: The Source of Darkness: Dead Moon Circus,テッドムーン,デッドムーン,https://wikimoon.org/index.php/The_Center_of_the_Darkness%3A_Dead_Moon_Circus,Printed テッド without the dakuten; the title is デッドムーンサーカス (WikiMoon).,\N,\N,\N
+TV-163,167,tv,SS,163,181,181,第163話　鏡の迷宮！捕らえられたちびムーン,Dai 163-wa: Kagami no Meikyuu! Toraerareta Chibi Muun,Episode 163: Labyrinth of Mirrors: Chibi Moon Captured,\N,\N,\N,\N,\N,\N,\N
+TV-164,168,tv,SS,164,182,182,第164話　黄金水晶出現！ネヘレニアの魔力,Dai 164-wa: Gooruden Kuristaru Shutsugen! Neherenia no Maryoku,Episode 164: The Golden Crystal Appears: Nehelenia's Magic,\N,\N,\N,\N,\N,\N,\N
+TV-165,169,tv,SS,165,182,182,第165話　クリスタル輝く時！美しき夢の力,Dai 165-wa: Kurisutaru no Kagayaku Toki Utsukushiki Yume no Pawaa,Episode 165: When the Crystal Shines: The Beautiful Power of Dreams,\N,\N,\N,\N,\N,\N,\N
+TV-166,170,tv,SS,166,182,182,第166話　夢よいつまでも！光、天に満ちて,Dai 166-wa: Yume yo Itsu made mo! Hikari Ten ni Michite,Episode 166: Dreams Forever: Fill the Heavens with Light,\N,\N,\N,\N,\N,\N,\N
+TV-SP,171,special,SS,\N,183,183,スペシャル,Supesharu,Special,\N,\N,\N,\N,\N,\N,\N
+TV-167,172,tv,ST,167,184,184,第167話　悪夢花を散らす時！闇の女王復活,Dai 167-wa: Akumu Hana wo Chirasu Toki! Yami no Joou Fukkatsu,Episode 167: The Flower of Nightmares Scatters: The Queen of Darkness Returns,\N,\N,\N,\N,\N,\N,\N
+TV-168,173,tv,ST,168,184,184,第168話　サターンの目覚め！S10戦士集結,Dai 168-wa: Sataan no Mezame! Seeraa 10 Senshi Shuuketsu,Episode 168: Saturn Awakens: The Ten Sailor Guardians Unite,\N,\N,\N,\N,\N,\N,\N
+TV-169,174,tv,ST,169,184,184,第169話　呪いの魔鏡！悪夢にとらわれた衛,Dai 169-wa: Noroi no Makyou! Akumu ni Torawareta Mamoru,Episode 169: The Cursed Mirror: Mamoru Caught in a Nightmare,\N,\N,\N,\N,\N,\N,\N
+TV-170,175,tv,ST,170,185,185,第170話　運命の一夜！セーラー戦士の苦難,Dai 170-wa: Unmei no Ichiya! Seeraa Senshi no Kunan,Episode 170: Night of Destiny: The Sailor Guardians' Ordeals,\N,\N,\N,\N,\N,\N,\N
+TV-171,176,tv,ST,171,185,185,第171話　愛ゆえに！果てしなき魔界の戦い,Dai 171-wa: Ai Yueni! Hateshinaki Makai no Tatakai,Episode 171: For Love: The Endless Battle in the Dark World,\N,\N,\N,\N,\N,\N,\N
+TV-172,177,tv,ST,172,185,185,第172話　愛のムーンパワー！悪夢の終わる時,Dai 172-wa: Ai no Muun Pawaa! Akumu no Owaru Toki,Episode 172: Moon Power of Love: The Nightmare Ends,\N,\N,\N,\N,\N,\N,\N
+TV-173,178,tv,ST,173,186,186,第173話　別れと出会い！運命の星々の流転,Dai 173-wa: Wakare to Deai! Unmei no Hoshiboshi no Ruten,Episode 173: Farewells and Encounters: The Transitioning Stars of Destiny,\N,\N,\N,\N,\N,\N,\N
+TV-174,179,tv,ST,174,186,186,第174話　学園に吹く嵐！転校生はアイドル,Dai 174-wa: Gakuen ni Fuku Arashi! Tenkousei wa Aidoru,Episode 174: A School Storm: The Transfer Students Are Idols,\N,\N,\N,\N,\N,\N,\N
+TV-175,180,tv,ST,175,186,186,第175話　アイドルをめざせ！美奈子の野望,Dai 175-wa: Aidoru wo Mezase! Minako no Yabou,Episode 175: Becoming an Idol: Minako's Ambition,\N,\N,\N,\N,\N,\N,\N
+TV-176,181,tv,ST,176,187,187,第176話　ファイターの正体！衝撃の超変身,Dai 176-wa: Faitaa no Shoutai! Shougeki no Chouhenshin,Episode 176: Fighter's Secret Identity: The Shocking Super Transformation,\N,\N,\N,\N,\N,\N,\N
+TV-177,182,tv,ST,177,187,187,第177話　星に託す夢とロマン！大気の変身,Dai 177-wa: Hoshi ni Takusu Yume to Roman! Taiki no Henshin,Episode 177: A Star of Dreams and Wishes: Taiki's Transformation,\N,\N,\N,\N,\N,\N,\N
+TV-178,183,tv,ST,178,187,187,第178話　ルナは見た!?　アイドル夜天の素顔,Dai 178-wa: Runa wa Mita!? Aidoru Yaten no Sugao,Episode 178: Luna's Discovery: The Real Face of Yaten,\N,\N,\N,\N,\N,\N,\N
+TV-179,184,tv,ST,179,188,188,第179話　敵？味方！スターライツとS戦士,Dai 179-wa: Teki? Mikata? Sutaa Raitsu to Seeraa Senshi,Episode 179: Friend or Foe? Star Lights and the Sailor Guardians,\N,\N,\N,\N,\N,\N,\N
+TV-180,185,tv,ST,180,188,188,第180話　呼び合う星の輝き！はるか達参戦,Dai 180-wa: Yobiau Hoshi no Kagayaki! Haruka-tachi Sansen,Episode 180: Calling of the Shining Stars: Enter Haruka and Michiru,\N,\N,\N,\N,\N,\N,\N
+TV-181,186,tv,ST,181,188,188,第181話　セイヤとうさぎのドキドキデート,Dai 181-wa: Seiya to Usagi no Doki Doki Deeto,Episode 181: Seiya and Usagi's Heart-Pounding Date,\N,\N,\N,\N,\N,\N,\N
+TV-182,187,tv,ST,182,189,189,第182話　宇宙からの侵略！セイレーン飛来,Dai 182-wa: Uchuu kara no Shinryaku! Seireen Hirai,Episode 182: Invaders from Outer Space: The Coming of Siren,\N,\N,\N,\N,\N,\N,\N
+TV-183,188,tv,ST,183,189,189,第183話　死霊の叫び!?　恐怖キャンプの怪人,Dai 183-wa: Shiryou no Sakebi? Kyoufu Kyanpu no Kaijin,Episode 183: The Screaming Dead: Terror of the Camp Monster,\N,\N,\N,\N,\N,\N,\N
+TV-184,189,tv,ST,184,189,189,第184話　ふたりきりの夜！うさぎのピンチ,Dai 184-wa: Futarikiri no Yoru! Usagi no Pinchi,Episode 184: A Night Alone Together: Usagi in Danger,\N,\N,\N,\N,\N,\N,\N
+TV-185,190,tv,ST,185,190,190,第185話　大気絶唱！信じる心を歌にこめて,Dai 185-wa: Taiki Zesshou! Shinjiru Kokoro wo Uta ni Komete,Episode 185: Taiki's Song Filled with Passion and Faith,\N,\N,\N,\N,\N,\N,\N
+TV-186,191,tv,ST,186,190,190,第186話　ちびちびの謎!?　おさわがせ大追跡,Dai 186-wa: Chibi Chibi no nazo!? Osawagase Daitsuiseki,Episode 186: Chibi-Chibi's Mystery: The Big Noisy Chase,\N,\N,\N,\N,\N,\N,\N
+TV-187,192,tv,ST,187,190,190,第187話　輝く星のパワー！ちびちびの変身,Dai 187-wa: Kagayaku Hoshi no Pawaa! Chibi Chibi no Henshin,Episode 187: The Shining Power of a Star: Chibi-Chibi's Transformation,\N,\N,\N,\N,\N,\N,\N
+TV-188,193,tv,ST,188,191,191,第188話　恐怖への招待！うさぎの夜間飛行,Dai 188-wa: Kyoufu e no Shoutai! Usagi no Yakan Hikou,Episode 188: Invitation to Terror: Usagi's Night Flight,\N,\N,\N,\N,\N,\N,\N
+TV-189,194,tv,ST,189,191,191,第189話　使命と友情の間！S戦士達の対立,Dai 189-wa: Shimei to Yuujou no Hazama! Seeraa Senshi-tachi no Tairitsu,Episode 189: Duty or Friendship: Conflict Between the Sailor Guardians,\N,\N,\N,\N,\N,\N,\N
+TV-190,195,tv,ST,190,191,191,第190話　明かされた真実！セイヤ達の過去,Dai 190-wa: Akasareta Shinjitsu! Seiya-tachi no Kako,Episode 190: Truth Revealed: The Star Lights' Past,\N,\N,\N,\N,\N,\N,\N
+TV-191,196,tv,ST,191,192,192,第191話　光の蝶が舞う時！新しい波の予感,Dai 191-wa: Hikari no Chou ga Mau Toki! Atarashii Nami no Yokan,Episode 191: Butterflies of Light: A New Chapter on the Horizon,\N,\N,\N,\N,\N,\N,\N
+TV-192,197,tv,ST,192,192,192,第192話　夢一直線！アイドル美奈子誕生!?,Dai 192-wa: Yume Icchokusen! Aidoru Minako Tanjou!?,Episode 192: Go for Your Dream: Minako Becomes an Idol,\N,\N,\N,\N,\N,\N,\N
+TV-193,198,tv,ST,193,192,192,第193話　うばわれた銀水晶！火球皇女出現,Dai 193-wa: Ubawareta Ginzuishou! Kakyuu Purinsesu Shutsugen,Episode 193: The Stolen Silver Crystal: Princess Kakyu Appears,\N,\N,\N,\N,\N,\N,\N
+TV-194,199,tv,ST,194,193,193,第194話　銀河の聖戦！ セーラーウォーズ伝説,Dai 194-wa: Ginga no Seisen Seeraa Woozu Densetsu,Episode 194: Crusade for the Galaxy: Legend of the Sailor Wars,\N,\N,\N,\N,\N,\N,\N
+TV-195,200,tv,ST,195,193,193,第195話　火球皇女消滅！ギャラクシア降臨,Dai 195-wa: Kakyuu Purinsesu Shoumetsu! Gyarakushia Kourin,Episode 195: Princess Kakyu Perishes: Advent of Galaxia,\N,\N,\N,\N,\N,\N,\N
+TV-196,201,tv,ST,196,193,193,第196話　銀河滅びる時！S戦士最後の戦い,Dai 196-wa: Ginga Horobirutoki! Seeraa Senshi Saigo no Tatakai,Episode 196: Countdown to Destruction: The Sailor Guardians' Last Battle,\N,\N,\N,\N,\N,\N,\N
+TV-197,202,tv,ST,197,194,194,第197話　銀河の支配者ギャラクシアの脅威,Dai 197-wa: Ginga no Shihaisha Gyarakushia no Kyoui,Episode 197: Ruler of the Galaxy: The Menace of Galaxia,\N,\N,\N,\N,\N,\N,\N
+TV-198,203,tv,ST,198,194,194,第198話　消えゆく星々！ウラヌス達の最期,Dai 198-wa: Kieyuku Hoshiboshi! Uranusu-tachi no Saigo,Episode 198: Dying Stars: Uranus and Neptune's Last Stand,\N,\N,\N,\N,\N,\N,\N
+TV-199,204,tv,ST,199,194,194,第199話　希望の光！銀河をかけた最終決戦,Dai 199-wa: Kibou no Hikari! Ginga wo Kaketa Saishuu Kessen,Episode 199: The Light of Hope: The Final Battle for the Galaxy,\N,\N,\N,\N,\N,\N,\N
+TV-200,205,tv,ST,200,195,195,第200話　うさぎの愛！月光銀河を照らす,Dai 200-wa: Usagi no Ai! Gekkou Ginga wo Terasu,Episode 200: Usagi's Love: The Moonlight Illuminates the Galaxy,\N,\N,\N,\N,\N,\N,\N

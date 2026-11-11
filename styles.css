@@ -4,7 +4,7 @@
   /* one light theme for everyone (no separate dark mode) */
   color-scheme:light;
   --paper:#fbfafd; --ink:#1c1925; --head:#4a4656; --muted:#6a6478;
-  --accent:#c2185b; --accent-ink:#ffffff; --hover:#f6f2fa; --fixbg:#fbe3ec;
+  --accent:#c2185b; --accent-ink:#ffffff; --hover:#f6f2fa; --fixbg:#fbe3ec; --flash:#dcf3e6;  /* the jumped-to row: a light green, the complement of the pink accent */
   /* tables: a solid title band, soft column-head and part rows, alternating rows on a light grey grid */
   --band:#2f7fb0; --band-ink:#ffffff; --colhead:#d7e8f4; --part:#eef5fb;  /* blue from the Sailor Moon logo (#3a8abb), deepened slightly so white text reads clearly */
   --row:#f9fafc; --stripe:#ecf0f4; --rowhover:#dfe7ef; --cellborder:#d3dae1; --guide:#e1e6eb; --tableborder:#bdbdbd;
@@ -16,7 +16,7 @@
 *{box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:var(--s0);line-height:1.55;
   padding-inline:16px;padding-block:0 64px}
-.wrap{max-width:1180px;margin-inline:auto;display:grid;gap:4px;padding-top:24px}
+.wrap{max-width:1760px;margin-inline:auto;display:grid;gap:4px;padding-top:24px}
 /* grid children may shrink below their content, so a wide table scrolls inside its own box instead of widening the page */
 .wrap>*, .sec-body>*, .inner>*, .cats>*, .eplist>*, .epbody>*{min-width:0}
 a{color:var(--accent)}
@@ -56,7 +56,7 @@ body.l-ja .te{color:var(--muted);font-size:.92em}
 .btn, .lt span{font:inherit;font-size:var(--s-1);border:1px solid var(--tableborder);background:var(--paper);color:var(--ink);
   border-radius:999px;padding:.35em .9em;cursor:pointer}
 .btn:hover, .lt span:hover{background:var(--hover)}
-.btn[aria-pressed="true"], .lt input:checked+span{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:700}
+.lt input:checked+span{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:700}
 
 /* collapsible sections */
 details>summary{list-style:none;cursor:pointer}
@@ -71,8 +71,8 @@ details.sec>summary img{height:44px;width:auto;flex:none}
 details>summary .chev{font-family:var(--body);font-size:var(--s-1);color:var(--accent);transition:transform .15s;display:inline-block;flex:none}
 details[open]>summary .chev{transform:rotate(90deg)}
 details.sub{border-radius:10px;background:var(--paper)}
-details.sub>summary{display:flex;gap:12px;align-items:center;padding:6px 14px;
-  font-family:var(--display);font-weight:600;font-size:1rem;color:var(--head)}
+details.sub>summary, .ep-head{font-family:var(--display);font-weight:600;font-size:1rem;color:var(--head)}
+details.sub>summary{display:flex;gap:12px;align-items:center;padding:6px 14px}
 details.sub>summary img{height:44px;width:auto}
 details.sub>summary .meta{margin-left:auto;font-family:var(--body);font-size:var(--s-1);color:var(--muted);font-weight:400;
   font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -103,72 +103,69 @@ table.bk tbody:last-child tr:last-child td{border-bottom:0}
 /* the title band (episode / list section / film) */
 table.bk .cap{background:var(--band);color:var(--band-ink);font-size:var(--s0);font-weight:700;padding:.7em .9em}
 table.bk .cap .cv.cr, table.bk .cap .cv.ce{color:rgb(255 255 255 / .88);font-weight:400}
-table.bk .cap .fixed s, body.fixes table.bk .cap .fixed s{color:rgb(255 255 255 / .75)}
-table.bk .cap a, table.bk .cap .ast, body:not(.fixes) table.bk .cap .fixed::after{color:var(--band-ink)}
+table.bk .cap .fixed s{color:rgb(255 255 255 / .75)}
+table.bk .cap a{color:var(--band-ink)}
 /* column-head rows */
 table.bk th:not(.cap){background:var(--part);font-weight:700;color:var(--band);border-top:1px solid var(--cellborder);border-bottom:1px solid var(--cellborder)}
 table.bk th:not(.cap) .cv.cr, table.bk th:not(.cap) .cv.ce{font-weight:500}
 /* part rows inside a cue sheet (A part, B part…) */
 table.bk tbody th[colspan]:not(.cap){background:var(--colhead);color:var(--ink);border-top:1px solid var(--band);border-bottom:1px solid var(--band);letter-spacing:.03em}
 table.bk .num,table.bk .tm{font-variant-numeric:tabular-nums;white-space:nowrap}
-/* column headings may wrap, so a heading never runs under the ? button beside it */
+/* column headings may wrap */
 table.bk th.num,table.bk th.tm{white-space:normal}
 table.bk .tm{text-align:right}
 table.bk .code{word-break:keep-all;overflow-wrap:break-word}
-/* credit codes link to their BGM-list row: same colour as the text, a quiet pink underline */
-table.bk td.code a.go{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
-table.bk td.code a.go:hover{color:var(--accent)}
-/* the ? in the Source CD heading, and the key it opens */
-.keybtn{float:right;font:inherit;font-size:.85em;font-weight:700;line-height:1;width:1.45em;height:1.45em;padding:0;margin-left:.3em;
-  border-radius:50%;border:1px solid currentColor;background:var(--paper);color:var(--band);cursor:help}
-.keybtn:hover,.keybtn:focus-visible{background:var(--band);color:var(--band-ink)}
-.pop{position:fixed;z-index:30;width:max-content;max-width:min(34em,calc(100vw - 16px));margin:0;padding:12px 14px;
-  background:var(--paper);border:1px solid var(--tableborder);border-radius:8px;box-shadow:0 6px 20px rgb(0 0 0 / .15);text-align:left;font-weight:400;overflow:auto}  /* long cue names wrap at the space, e.g. M-58 / S・マーキュリー */
+/* links to another row (credit codes, "Used in"): same colour as the text, a quiet pink underline */
+table.bk td:is(.code,.ed) a.go{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+table.bk td:is(.code,.ed) a.go:hover{color:var(--accent)}
 /* the same column widths in every table of a kind; the text column takes the rest */
-table.bk{table-layout:fixed;min-width:34em}
+table.bk{table-layout:fixed;min-width:64em} table.bk:is([data-kind=list],[data-kind=film]){min-width:92em}
 col.w-m{width:3.2em} col.w-no{width:3.6em} col.w-mno{width:10em} col.w-credit{width:10em}
 col.w-time{width:5.2em} col.w-cd{width:6.5em}
 /* alternating rows (header rows inside a cue sheet's tbody come in pairs, so the pattern stays even) */
 table.bk tbody tr:nth-child(even) td{background:var(--stripe)}
 table.bk tbody tr:hover td{background:var(--rowhover)}
-/* corrections: hidden until "Show annotations" is on; then the printed text is struck and the fix shown, linked to its source */
+/* corrections in headings: the printed text is struck and the fix shown, linked to its source */
 .fixed{white-space:nowrap}
-.fixed s{text-decoration:none;color:inherit}
-.fixed mark{display:none;background:var(--fixbg);color:var(--ink);border-radius:3px;padding:0 .25em;margin-left:.3em}
+.fixed s{text-decoration:line-through;text-decoration-thickness:1.5px;color:var(--muted)}
+.fixed s b{color:inherit}
+.fixed mark{background:var(--fixbg);color:var(--ink);border-radius:3px;padding:0 .25em;margin-left:.3em}
 .fixed mark a{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:2px}
-body.fixes .fixed s{text-decoration:line-through;text-decoration-thickness:1.5px;color:var(--muted)}
-body.fixes .fixed s b{color:inherit}
-body.fixes .fixed mark{display:inline}
 .fixed.ins{white-space:normal} .fixed.ins mark{margin-left:.2em}
 /* in the two-column CD key a long correction wraps inside its own column instead of running into the next */
 .cols2 .fixed{white-space:normal}
-/* corrections hidden: flag each typo with a pink asterisk */
-body:not(.fixes) .fixed::after,.ast{content:"*";color:var(--accent);font-weight:700;margin-left:.1em}
-tr.flash td{background:var(--fixbg)!important}
+tr.flash td{background:var(--flash)!important}
 
-/* the editor's columns (Notes, List description, CD, Used in): not in the booklet, so hidden until
-   "Show notes & related info" is on, then tinted and headed in pink so they never pass for the book's own */
-col.w-notes{width:18em} col.w-used{width:14em}
-body:not(.fixes) table.bk .ed{display:none}
-body.fixes table.bk{min-width:64em}
-table.bk th.ed:not(.cap){background:var(--fixbg);color:var(--accent)}
-table.bk td.ed{background-image:linear-gradient(rgb(194 24 91 / .04),rgb(194 24 91 / .04))}
-table.bk td.ed a.go{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
-table.bk td.ed a.go:hover{color:var(--accent)}
+/* the editor's columns (CD, Track, Used in, Notes): not in the booklet. They share the table's colours; a line in the
+   table's border grey down their left edge sets them apart from the book's own */
+col.w-notes{width:18em} col.w-used{width:14em} col.w-disc{width:16em} col.w-trk{width:15em}
+table.bk :is(td,th):not(.ed) + .ed{position:relative}
+table.bk th:not(.ed):has(+ th.ed){border-right:1px solid var(--cellborder)}  /* the column line body cells have beside it */
+table.bk :is(td,th):not(.ed) + .ed::before{content:"";position:absolute;left:0;top:-1px;bottom:-1px;width:1px;background:var(--tableborder)}  /* over the row lines, so it runs unbroken */
+td.notes b{color:var(--muted)}
 td.notes p{margin:0 0 .45em;overflow-wrap:anywhere} td.notes p:last-child{margin-bottom:0}
 .was{color:var(--muted)}
-.ld+.ld{margin-top:.5em}
-.ldc{display:block}
-.ldt{display:block;color:var(--muted);font-size:.92em;font-variant-numeric:tabular-nums}
+.trk{display:flow-root}
+.trk .cover{float:left;width:46px;height:auto;margin:0 .55em .2em 0;border-radius:3px;box-shadow:0 1px 3px rgb(0 0 0 / .25)}
+.trk>div>span{display:block}
+.tdisc,.catno{color:var(--muted);font-size:.88em}
+.trow{display:flex;gap:.4em;align-items:baseline}
+.tno{flex:none;min-width:1.4em;font-variant-numeric:tabular-nums;color:var(--muted)}
+.tname{min-width:0}
 td.used .cnt{display:block;color:var(--muted);font-size:.92em}
 td.used .x{color:var(--muted);font-size:.85em;margin-left:.1em}
 details.more{display:inline}
 details.more>summary{display:inline;color:var(--accent);font-weight:700}
 details.more[open]>summary{margin-right:.3em}
-/* note markers: * while the editor's columns are hidden, the note's number while they're shown */
+/* Editor's notes boxes (under the p.104 legend) */
+.ed-box{margin:16px 0 0;max-width:46em;border:1px solid var(--tableborder);border-radius:10px;background:var(--row);overflow:hidden;font-size:.95em}
+.ed-box-h{padding:.45em .9em;background:var(--part);color:var(--band);font-weight:700;border-bottom:1px solid var(--tableborder)}
+.ed-foot{margin:0;padding:.7em .9em .3em 2.4em}
+.ed-foot li{margin:0 0 .5em} .ed-foot li::marker{color:var(--accent);font-weight:700}
+.ed-box .ednotes{margin:0;padding:.7em .9em .3em 2.2em}
+/* note markers: the note's number, matching the Notes column */
 .mk{color:var(--accent);font-weight:700;font-size:.78em;line-height:0;margin-left:.1em}
-.mk::after{content:"*"}
-body.fixes .mk::after{content:attr(data-n)}
+.mk::after{content:attr(data-n)}
 /* a marker for the whole cell goes on every language line; only the last line showing keeps it */
 .mk.end{display:none}
 body.l-en .ce .mk.end, body.l-en .or-en .mk.end,
@@ -198,7 +195,7 @@ details.epi[open]>summary .tx>.en, body.l-ja.l-en details.epi[open]>summary .tx>
 .epn{font-weight:700;color:var(--band);font-variant-numeric:tabular-nums;text-align:right}
 .epbody{padding:10px 0 18px}
 .epbody table.bk{border-radius:0}  /* episode cue sheets: square corners */
-.ep-head{font-family:var(--display);font-weight:600;font-size:1rem;color:var(--head);text-wrap:balance;margin:14px 0 4px}
+.ep-head{text-wrap:balance;margin:14px 0 4px}
 .page{font-size:var(--s-1);color:var(--muted);font-variant-numeric:tabular-nums}
 /* notes: small muted text, the same size in every language */
 .note, .ednotes, .notes-top{font-size:var(--s-1);color:var(--muted);max-width:90ch}
@@ -206,20 +203,21 @@ details.epi[open]>summary .tx>.en, body.l-ja.l-en details.epi[open]>summary .tx>
 .inner > .cat{margin-top:8px}  /* a film's instrumentals table, under its cue sheet */
 .ednotes{margin:0;padding-left:1.3em;display:grid;gap:10px}
 .ednotes li::marker{color:var(--accent)}
+.ed-sub{margin:.3em 0 0;padding-left:1.3em;display:grid;gap:4px} .ed-sub li{list-style:circle}
 .notes-top{margin-bottom:16px}
 .notes-top ul{margin:0;padding-left:1.3em;display:grid;gap:3px}
 .notes-top ul.kome{list-style:none;padding-left:0;gap:10px}
 .notes-top ul ul{margin-top:3px}
 .notes-top ul.cols2{display:block;columns:2 18em;column-gap:2.5em;margin-top:3px}
 .notes-top ul.cols2>li{break-inside:avoid;margin-bottom:4px}
-.nh-key .tx>span, body.l-ja.l-en .nh-key .tx>.ja+.en{font-weight:700;color:var(--ink)}
+.nh-key .tx>span, body.l-ja.l-en .nh-key .tx>.ja+.en{font-weight:700;color:var(--muted)}
 .notes-top ul ul li::marker{color:var(--accent)}
-.notes-top b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+.notes-top b{color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}
 
 /* frozen control bar */
 .bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;margin-inline:-16px;padding:10px 16px;
   background:var(--guide);box-shadow:0 2px 8px rgb(60 20 40 / .10)}
-.bar-in{max-width:1180px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.bar-in{max-width:1760px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
 .bar .grp{display:flex;gap:6px;align-items:center}
 /* language checkboxes, drawn as toggle pills */
 .langs{display:inline-flex;gap:6px;margin-left:auto;flex-wrap:wrap}
@@ -230,3 +228,18 @@ details.epi[open]>summary .tx>.en, body.l-ja.l-en details.epi[open]>summary .tx>
 .lt input:checked+span::before{content:"✓"}
 .lt input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
 @media (max-width:520px){.langs{margin-left:0} .plate{font-size:var(--s2)}}
+
+/* the Notes dialog, opened from the bar */
+.notes-dlg{width:min(60em,calc(100vw - 24px));max-height:calc(100vh - 48px);padding:0;border:1px solid var(--tableborder);border-radius:12px;
+  background:var(--paper);color:var(--ink);box-shadow:0 12px 40px rgb(0 0 0 / .25);overflow:hidden}
+.notes-dlg[open]{display:flex;flex-direction:column}
+.notes-dlg::backdrop{background:rgb(30 25 40 / .45)}
+.dlg-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding:12px 16px;border-bottom:1px solid var(--tableborder);background:var(--part)}
+.dlg-head h2{margin:0;font-size:var(--s1);color:var(--band)}
+.dlg-toc{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:var(--s-1)}
+.dlg-toc a{color:var(--band)}
+.dlg-x{margin-left:auto}
+.dlg-body{overflow:auto;padding:4px 20px 20px}
+.dlg-body section{padding-top:14px}
+.dlg-body section+section{border-top:1px solid var(--tableborder);margin-top:16px}
+.dlg-body h3{margin:0 0 10px;font-size:var(--s0)}

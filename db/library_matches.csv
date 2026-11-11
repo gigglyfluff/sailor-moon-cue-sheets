@@ -1,0 +1,146 @@
+id,clip,clip_seconds,work_id,part,ord,m,confidence,identified_as,note,status
+1,Library Pieces - SMC 16 - Wedding Troubles.mp3,12.5,\N,\N,\N,\N,no row,\N,"Episode 16 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+2,Library Pieces - SMC 22 - Masquerade.mp3,127.2,TV-22,A,8,9,plausible,\N,\N,unverified
+3,Library Pieces - SMC 22 - Tuxedo Kamen's Dream.mp3,19.7,TV-22,B,1,14,plausible,\N,\N,unverified
+4,Library Pieces - SMC 26 - Uses of the Moon Stick.mp3,21.7,\N,\N,\N,\N,no row,\N,"Episode 26 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+5,Library Pieces - SMC 33 - Venus Appears.mp3,37.1,\N,\N,\N,\N,no row,\N,"Episode 33 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+6,Library Pieces - SMC 35 - Silver Millenium Story [Corza].mp3,79.8,TV-35,B,2,12,strong,\N,\N,unverified
+7,Library Pieces - SMC 35 - The Princess Awakens [Corza].mp3,45.4,TV-35,A,3,4,plausible,\N,\N,unverified
+8,Library Pieces - SMC 35 - Zoisite's Death [Corza].mp3,68.3,TV-35,A,7,8,strong,"Grieg, ""Solveig's Song""","Named by the collection (original_sources: ""Sailor Moon Ep 35 - Zosite Dies""); not confirmed by audio.",unverified
+9,Library Pieces - SMC 37 - Classical Dance.mp3,52.3,TV-37,B,1,15,plausible,\N,\N,unverified
+10,Library Pieces - SMC 37 - Dancing at Countess Rose's.mp3,101.8,TV-37,B,1,15,plausible,\N,\N,unverified
+11,Library Pieces - SMC 37 - Poems at Countess Rose's.mp3,33.6,TV-37,A,8,9,plausible,\N,\N,unverified
+12,Library Pieces - SMC 37 - The Sorrow of Tuxedo Kamen.mp3,11.3,TV-37,B,3,17,plausible,\N,\N,unverified
+13,Library Pieces - SMC 38 - Ski Racing Fanfare.mp3,11.9,\N,\N,\N,\N,no row,\N,"Episode 38 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+14,Library Pieces - SMC 38 - The Sorrow of Tuxedo Kamen 2.mp3,33.3,\N,\N,\N,\N,no row,\N,"Episode 38 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+15,Library Pieces - SMC 39 - Janelyn and Misha on TV.mp3,18.8,TV-39,A,1,2,plausible,\N,\N,unverified
+16,Library Pieces - SMC 39 - The Deadly Gold Medalists.mp3,119.3,TV-39,B,4,16,plausible,\N,"Same file as ""SMC 44 - Silver Millenium Aftermath"" (identical checksum), so one of the two labels is wrong.",unverified
+17,Library Pieces - SMC 41 - Reika's African Compilation.mp3,21.0,TV-41,A,1,2,strong,\N,\N,unverified
+18,Library Pieces - SMC 44 - Classical Dance (Extended).mp3,67.7,TV-44,A,6,7,plausible,\N,\N,unverified
+19,Library Pieces - SMC 44 - Queen Serenity's death scene.mp3,143.1,TV-44,B,4,14,plausible,\N,\N,unverified
+20,Library Pieces - SMC 44 - Silver Millenium Aftermath.mp3,119.3,TV-44,B,4,14,plausible,\N,"Same file as ""SMC 39 - The Deadly Gold Medalists"" (identical checksum), so one of the two labels is wrong.",unverified
+21,Library Pieces - SMC 44 - The Invasion of the Moon (Go Figure).mp3,51.3,TV-44,A,6,7,plausible,\N,\N,unverified
+22,Library Pieces - SMC 44 - The Invasion of the Moon.mp3,36.5,TV-44,B,1,11,strong,\N,\N,unverified
+23,Library Pieces - SMC 46 - Mamoru Dies.mp3,15.1,TV-46,B,5,16,plausible,\N,\N,unverified
+24,Library Pieces - SMC 46 - The End of the World.mp3,51.0,TV-46,B,5,16,plausible,\N,\N,unverified
+25,Library Pieces - SMC 6 - Amade Yusuke in Music Club.mp3,60.2,TV-6,A,4,5,strong,\N,"Two clips land on A-5 by length; this one may belong to B-14 (微かにライブハウス音楽, also 1'00"").",unverified
+26,Library Pieces - SMC 6 - Amade Yusuke on CD.mp3,58.0,TV-6,A,4,5,strong,\N,\N,unverified
+27,Library Pieces - SMC 6 - Amade Yusuke's New Song.mp3,39.0,TV-6,B,11,23,plausible,\N,\N,unverified
+28,Library Pieces - SMR 52 - Kindergarten Bullies.mp3,15.1,\N,\N,\N,\N,no row,\N,"Episode 52 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+29,Library Pieces - SMR 61 - Usagi's Sorrow.mp3,138.9,TV-61,B,1,11,strong,\N,\N,unverified
+30,Library Pieces - SMR 61 - Usagi's Wedding.mp3,30.2,TV-61,B,1,11,plausible,\N,\N,unverified
+31,Library Pieces - SMR 63 - Oji-chan's New Service - Protect Jazz Dance.mp3,44.2,TV-63,B,11,23,strong,\N,\N,unverified
+32,Library Pieces - SMR 63 - Oji-chan's Service - Protect Esthe.mp3,39.8,TV-63,B,11,23,plausible,\N,\N,unverified
+33,Library Pieces - SMR 64 - Hiding from the Rain.mp3,50.5,TV-64,A,6,7,strong,\N,\N,unverified
+34,Library Pieces - SMR 69 - Motoki and Mamoru in Crown.mp3,34.3,\N,\N,\N,\N,no row,\N,"Episode 69 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+35,Library Pieces - SMR 73 - Chibiusa Steals the Ginzuishou.mp3,33.6,TV-73,A,6,7,strong,\N,\N,unverified
+36,Library Pieces - SMR 77 - Promise Ring.mp3,8.5,TV-77,A,2,3,plausible,\N,\N,unverified
+37,Library Pieces - SMR 77 - Usagi's Wedding Dream.mp3,35.1,TV-77,A,2,3,plausible,\N,\N,unverified
+38,Library Pieces - SMR 78 - Flu Season atJuban.mp3,17.5,TV-78,A,1,2,strong,\N,\N,unverified
+39,Library Pieces - SMR 78 - Holiday Music in Juban.mp3,26.3,TV-78,A,1,2,plausible,\N,\N,unverified
+40,Library Pieces - SMR 78 - Minako Destroys Radio.mp3,14.7,TV-78,A,1,2,plausible,\N,\N,unverified
+41,Library Pieces - SMR 85 - Chibiusa's Birthday.mp3,17.2,TV-85,B,5,14,strong,\N,\N,unverified
+42,Library Pieces - SMS 100 - Minako's Pure-Heart Sorrow.mp3,24.1,\N,\N,\N,\N,no row,\N,"Episode 100 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+43,Library Pieces - SMS 102 - Kaorinite's Last Battle.mp3,109.2,TV-102,B,11,20,plausible,\N,\N,unverified
+44,Library Pieces - SMS 104 - Japanese Tea Ceremonies 1.mp3,19.9,\N,\N,\N,\N,no row,\N,"Episode 104 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+45,Library Pieces - SMS 104 - Japanese Tea Ceremonies 2.mp3,21.2,\N,\N,\N,\N,no row,\N,"Episode 104 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+46,Library Pieces - SMS 104 - Japanese Tea Ceremonies 3.mp3,6.2,\N,\N,\N,\N,no row,\N,"Episode 104 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+47,Library Pieces - SMS 108 - Chikoun's Waltz.mp3,9.7,TV-108,B,1,14',plausible,\N,\N,unverified
+48,Library Pieces - SMS 108 - The Rose Mansion Part 1.mp3,78.0,TV-108,A,8,9,strong,\N,\N,unverified
+49,Library Pieces - SMS 108 - The Rose Mansion Part 2 Continued.mp3,44.2,TV-108,B,12,25,strong,\N,\N,unverified
+50,Library Pieces - SMS 108 - The Rose Mansion Part 2.mp3,94.0,TV-108,A,11,12,plausible,\N,\N,unverified
+51,Library Pieces - SMS 108 - The Rose Mansion Part 3.mp3,5.1,TV-108,B,1,14',strong,\N,\N,unverified
+52,Library Pieces - SMS 110 - Eudial Plays Organ.mp3,83.0,TV-110,B,3,8,strong,"Bach, Toccata and Fugue in D minor","Named by the collection (original_sources: ""Episode 110 - Eudial's Pipe Organ Music""); not confirmed by audio.",unverified
+53,Library Pieces - SMS 110 - The Talisman Draw Near (Haruka and Michiru holding hands).mp3,110.2,TV-110,A,2,2',strong,\N,\N,unverified
+54,Library Pieces - SMS 111 - Crisis Makeup!.mp3,13.4,\N,\N,\N,\N,no row,\N,"Episode 111 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+55,Library Pieces - SMS 113 - The Outers Meet with Mamoru.mp3,41.6,\N,\N,\N,\N,no row,\N,"Episode 113 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+56,Library Pieces - SMS 114 - Blue Crisis Love.mp3,21.3,TV-114,A,2,3,plausible,\N,\N,unverified
+57,Library Pieces - SMS 114 - Utahime's...Song.mp3,9.9,TV-114,A,2,3,plausible,\N,\N,unverified
+58,Library Pieces - SMS 115 - Yuu Kazama (Quiet).mp3,33.2,TV-115,B,2,13,strong,\N,\N,unverified
+59,Library Pieces - SMS 116 - The Toy Store.mp3,61.2,TV-116,A,1,2,strong,\N,\N,unverified
+60,Library Pieces - SMS 117 - Go for Number One.mp3,47.7,TV-117,A,3,3',plausible,\N,\N,unverified
+61,Library Pieces - SMS 119 - Countdown 50.mp3,17.5,TV-119,A,6,6,strong,\N,\N,unverified
+62,Library Pieces - SMS 123 - Siprine and Pichirol Gather Heart Crystals.mp3,54.9,TV-123,A,6,7,strong,"Mozart, Requiem","Named by the collection (original_sources: ""Mozart - Dies irae"" and ""Princess Requiem""); the cue sheet also says モーツァルトのレクイエム. Movement not confirmed.",unverified
+63,Library Pieces - SMS 92 - Haruka and Michiru VS. Talismans.mp3,67.8,TV-92,A,7,8,plausible,\N,\N,unverified
+64,Library Pieces - SMS 93 - Michiru's Violin.mp3,160.6,TV-93,A,9,10,plausible,\N,\N,unverified
+65,Library Pieces - SMS 93 - Usagi Musical Troubles (Quiet).mp3,29.5,TV-93,A,9,10,strong,\N,\N,unverified
+66,Library Pieces - SMS 93 - Usagi's Violin.mp3,10.3,TV-93,A,9,10,plausible,\N,\N,unverified
+67,Library Pieces - SMS 95 - Let's Dancing.mp3,10.7,TV-95,B,4,16,plausible,\N,\N,unverified
+68,Library Pieces - SMS 95 - Umino & Naru's Pure Love.mp3,18.2,TV-95,B,4,16,strong,\N,\N,unverified
+69,Library Pieces - SMS 99 - Yuichirou's Song.mp3,127.6,\N,\N,\N,\N,no row,\N,"Probably the ""あずさ2号"" karaoke credited as 唄 in B-17 (2'08"").",unverified
+70,Library Pieces - SMSS 128 - Inside Crown (Quiet).mp3,26.1,TV-128,B,2,11,strong,\N,\N,unverified
+71,Library Pieces - SMSS 133 - Church Music.mp3,29.0,\N,\N,\N,\N,no row,\N,"Episode 133 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+72,Library Pieces - SMSS 133 - Diana Realization.mp3,5.5,\N,\N,\N,\N,no row,\N,"Episode 133 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+73,Library Pieces - SMSS 134 - Inside Crown (Quiet).mp3,48.3,TV-134,A,2,2',strong,\N,\N,unverified
+74,Library Pieces - SMSS 136 - Japanese Lemures.mp3,28.3,\N,\N,\N,\N,no row,\N,"Episode 136 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+75,Library Pieces - SMSS 137 - The Phony Fairy Fish-Eye.mp3,76.2,TV-137,A,5,6,strong,\N,\N,unverified
+76,Library Pieces - SMSS 139 - Miharu's Battle.mp3,24.0,TV-139,B,2,11',plausible,\N,\N,unverified
+77,Library Pieces - SMSS 140 - Yoshiku Usui's Show Part 1 & 2.mp3,102.8,TV-140,B,14,27,plausible,\N,\N,unverified
+78,Library Pieces - SMSS 140 - Yoshiku Usui's Show Part 3.mp3,61.8,TV-140,B,14,27,strong,\N,\N,unverified
+79,Library Pieces - SMSS 141 - The Gazra Movie Part 1.mp3,26.7,TV-141,B,2,12,plausible,\N,\N,unverified
+80,Library Pieces - SMSS 141 - The Gazra Movie Part 2.mp3,24.7,TV-141,B,2,12,strong,\N,\N,unverified
+81,Library Pieces - SMSS 142 - Monsieur Ohno.mp3,15.7,\N,\N,\N,\N,no row,\N,"Episode 142 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+82,Library Pieces - SMSS 143 - Small TV Jingle.mp3,5.7,TV-143,A,3,4,strong,\N,\N,unverified
+83,Library Pieces - SMSS 145 - Mr. Yamagishi & Fish-Eye Practice (Extended).mp3,29.0,TV-145,B,3,13,strong,\N,\N,unverified
+84,Library Pieces - SMSS 145 - Mr. Yamagishi & Fish-Eye Practice.mp3,8.7,TV-145,B,1,11,strong,\N,\N,unverified
+85,Library Pieces - SMSS 145 - Mr. Yamagishi's Performance.mp3,35.5,TV-145,B,14,23,strong,\N,\N,unverified
+86,Library Pieces - SMSS 145 - Yamagishi Ballet Troupe.mp3,45.2,TV-145,B,14,23,plausible,\N,\N,unverified
+87,Library Pieces - SMSS 147 - Mako Dances With Ami.mp3,70.7,TV-147,A,5,6,strong,\N,\N,unverified
+88,Library Pieces - SMSS 147 - Mako Dances With Tiger's Eye.mp3,62.9,TV-147,A,6,7,strong,\N,\N,unverified
+89,Library Pieces - SMSS 150 - The Dead Moon Circus Tent.mp3,65.7,TV-150,B,1,10,strong,\N,\N,unverified
+90,"Library Pieces - SMSS 151 - N.T.'s Mysterious Song (Extended, Voices).mp3",81.3,TV-151,A,1,4,plausible,\N,\N,unverified
+91,Library Pieces - SMSS 151 - N.T.'s Mysterious Song in Ami's Room.mp3,66.7,TV-151,A,5,8,strong,\N,\N,unverified
+92,Library Pieces - SMSS 151 - N.T.'s Mysterious Song in Person.mp3,37.5,TV-151,A,7,10,strong,\N,\N,unverified
+93,Library Pieces - SMSS 151 - N.T.'s Mysterious Song.mp3,27.5,TV-151,TOP,0,1,strong,\N,\N,unverified
+94,Library Pieces - SMSS 151 - Nishino's School of Music.mp3,10.0,TV-151,A,4,7,plausible,\N,\N,unverified
+95,Library Pieces - SMSS 152 - Rei's Dreams.mp3,14.2,\N,\N,\N,\N,no row,\N,"Episode 152 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+96,Library Pieces - SMSS 155 - Kyuske's Jump.mp3,5.8,\N,\N,\N,\N,no row,\N,"Episode 155 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+97,Library Pieces - SMSS 158 - Adult Chibiusa Searches for Pegasus.mp3,68.0,TV-158,A,6,8,strong,\N,\N,unverified
+98,Library Pieces - SMSS 158 - Pegasus Shows Chibiusa Elyssion.mp3,90.9,TV-158,B,3,"13""",plausible,\N,\N,unverified
+99,Library Pieces - SMSS 159 - Inside Crown (Quiet).mp3,25.3,TV-159,A,4,4C,strong,\N,\N,unverified
+100,Library Pieces - SMSS 159 - Neherenia's Regret.mp3,70.2,TV-159,A,4,4C,plausible,\N,\N,unverified
+101,Library Pieces - SMSS 160 - The Maturity Ceremony Part 1.mp3,12.4,TV-160,B,2,13,strong,\N,\N,unverified
+102,Library Pieces - SMSS 160 - The Maturity Ceremony Part 2.mp3,19.0,TV-160,B,13,24,strong,\N,\N,unverified
+103,Library Pieces - Stars 167 - The Aquarium.mp3,36.3,TV-167,B,1,10,strong,\N,\N,unverified
+104,Library Pieces - Stars 168 - Hotaru's Message.mp3,15.2,\N,\N,\N,\N,no row,\N,"Episode 168 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+105,Library Pieces - Stars 169 - TV Report.mp3,12.3,TV-169,A,2,3,strong,\N,\N,unverified
+106,Library Pieces - Stars 170 - Ami's Past 2.mp3,28.7,\N,\N,\N,\N,no row,\N,"Episode 170 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+107,Library Pieces - Stars 170 - Ami's Past.mp3,16.3,\N,\N,\N,\N,no row,\N,"Episode 170 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+108,Library Pieces - Stars 170 - Remembering Michiru.mp3,10.3,\N,\N,\N,\N,no row,\N,"Episode 170 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+109,Library Pieces - Stars 171 - Remembering Tuxedo Mask.mp3,28.4,\N,\N,\N,\N,no row,\N,"Episode 171 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+110,Library Pieces - Stars 173 - Iron Mouse Spys in a Tree.mp3,9.3,\N,\N,\N,\N,no row,\N,"Episode 173 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+111,Library Pieces - Stars 175 - Seiya Guitar Practice.mp3,13.9,\N,\N,\N,\N,no row,\N,"Episode 175 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+112,Library Pieces - Stars 176 - Rei Appears.mp3,8.1,TV-176,A,0,1,plausible,\N,\N,unverified
+113,Library Pieces - Stars 176 - Seiya Practices Alone.mp3,55.7,TV-176,B,4,17,plausible,\N,\N,unverified
+114,Library Pieces - Stars 176 - Senshi Watch Three Lights Dance Practice.mp3,18.8,TV-176,A,0,1,strong,\N,\N,unverified
+115,Library Pieces - Stars 176 - Three Lights Dance Practice.mp3,21.4,TV-176,A,4,5,strong,\N,\N,unverified
+116,Library Pieces - Stars 177 - Astronomy for Kids.mp3,13.4,\N,\N,\N,\N,no row,\N,"Episode 177 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+117,Library Pieces - Stars 177 - Inside Crown (Very Quiet).mp3,65.8,\N,\N,\N,\N,no row,\N,"Episode 177 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+118,Library Pieces - Stars 179 - Inside Crown Yet Again (Quiet).mp3,33.3,TV-179,B,12,21',strong,\N,\N,unverified
+119,Library Pieces - Stars 179 - Seiya's Short Song.mp3,10.5,TV-179,B,12,21',plausible,\N,\N,unverified
+120,Library Pieces - Stars 180 - Describing Garayan.mp3,8.9,\N,\N,\N,\N,no row,\N,"Confirms ガラヤン (ep 180 B-10) is a name, not a typo.",unverified
+121,Library Pieces - Stars 180 - Iron Mouse Faulters.mp3,5.6,\N,\N,\N,\N,no row,\N,"Episode 180 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+122,Library Pieces - Stars 180 - Iron Mouse Looks.mp3,12.3,\N,\N,\N,\N,no row,\N,"Episode 180 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+123,Library Pieces - Stars 180 - Phone Fun (Quiet).mp3,71.2,\N,\N,\N,\N,no row,\N,"Episode 180 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+124,Library Pieces - Stars 180 - Sailor Conductor.mp3,28.1,\N,\N,\N,\N,no row,\N,"Episode 180 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+125,Library Pieces - Stars 181 - Generic Dance Song 2.mp3,11.8,TV-181,B,3,15,strong,\N,\N,unverified
+126,Library Pieces - Stars 181 - Iron Mouse Excited.mp3,15.6,TV-181,B,3,15,plausible,\N,\N,unverified
+127,Library Pieces - Stars 183 - Super Commander Theme 1.mp3,21.4,TV-183,A,5,5',strong,\N,\N,unverified
+128,Library Pieces - Stars 183 - Super Commander Theme 2.mp3,16.3,TV-183,A,9,8',plausible,\N,\N,unverified
+129,Library Pieces - Stars 186 - Chibi Chibi's Umbrella.mp3,9.7,TV-186,A,5,6,box set,M-47 (Disc 5 track 9),Matches the box set; the cue sheet credits it correctly.,unverified
+130,Library Pieces - Stars 189 - Rei the Fortuneteller.mp3,19.5,TV-189,A,9,10,strong,\N,\N,unverified
+131,Library Pieces - Stars 189 - Three Lights on FM No 10.mp3,27.9,TV-189,B,1,16,strong,\N,\N,unverified
+132,Library Pieces - Stars 190 - Megalopolis (Quiet).mp3,29.0,\N,\N,\N,\N,no row,\N,"Episode 190 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+133,Library Pieces - Stars 191 - Chibi Chibi Follows Butterfly.mp3,50.2,\N,\N,\N,\N,no row,\N,"Episode 191 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+134,Library Pieces - Stars 191 - Senshi in Game Clothes.mp3,25.6,\N,\N,\N,\N,no row,\N,"Episode 191 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+135,Library Pieces - Stars 191 - The Game Contest.mp3,71.3,\N,\N,\N,\N,no row,\N,"Episode 191 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+136,Library Pieces - Stars 192 - Minako Dances.mp3,57.5,TV-192,B,2,12,strong,\N,\N,unverified
+137,Library Pieces - Stars 193 - Seiya's Angry Song.mp3,26.9,\N,\N,\N,\N,no row,\N,"Episode 193 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+138,Library Pieces - Stars 194 - Sailor Tin Nyanko Sneaks Up.mp3,21.0,TV-194,B,4,16,box set,M-656 (Disc 7 track 12),Matches the box set; the cue sheet credits it correctly.,unverified
+139,Library Pieces - Stars 195 - Chibi Chibi Ruins the Mood.mp3,21.2,\N,\N,\N,\N,no row,\N,"Episode 195 has no ライブラリー row; probably a song, an ""original"" cue, or a mislabelled clip.",unverified
+140,Library Pieces - Stars 196 - Tuxedo Kamen Attacks.mp3,13.5,TV-197,A,4,5,box set,M-536 (Disc 10 track 12),"Matches the box set M-536, credited in episode 197 A-5; the clip is labelled episode 196, so the label may be wrong.",unverified
+141,original_sources/Bach - Toccata and Fugue in D Minor [Episode 110 - Eudial's Pipe Organ Music].mp3,\N,TV-110,B,3,8,plausible,"Bach, Toccata and Fugue in D minor","Reference recording from the collection, not the episode's own audio.",unverified
+142,original_sources/Grieg - Solveig's Air (Sailor Moon Ep 35 - Zosite Dies).mp3,\N,TV-35,A,7,8,plausible,"Grieg, ""Solveig's Song""","Reference recording from the collection, not the episode's own audio.",unverified
+143,original_sources/Mozart - Sequenza - Dies irae.mp3,\N,TV-123,A,6,7,plausible,"Mozart, Requiem","Reference recording from the collection, not the episode's own audio.",unverified
+144,original_sources/Princess Requiem (Mozart's Requiem).mp3,\N,TV-123,A,6,7,plausible,"Mozart, Requiem","Reference recording from the collection, not the episode's own audio.",unverified
+145,original_sources/Chopin - Piano Sonata No. 2 in B flat minor - Marche Funebre (Funeral March) [SM Episode 181 - Iron Mouse Swan Song].ogg,\N,\N,\N,\N,\N,no row,"Chopin, Funeral March","Labelled episode 181, but ep 181 has no matching library row; the scene may be in ep 180 or credited differently.",unverified
