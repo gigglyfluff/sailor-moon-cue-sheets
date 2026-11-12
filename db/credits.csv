@@ -2204,7 +2204,7 @@ row_id,ord,printed,target,corrected,note
 2382,0,G-10,cue-G-10,\N,\N
 2383,0,E-19,cue-E-19,\N,\N
 2384,0,M-312,cue-M-312,\N,\N
-2385,0,M-221,q-MOVIE-R-6,M-206,"The episode plays M-206, Usagi no Shinpai from the R movie (CD 8-5), not the R movie list's M-221 (CD 8-15-1). The TV cue sheets seem to number reused R-movie music differently from the movie's own list (compare p.120, S movie No. 20). Identified on r/sailormoon (reddit.com/r/sailormoon/comments/1xkkn9p) and confirmed against recordings of the episode."
+2385,0,M-221,q-MOVIE-R-6,M-206,"The episode plays M-206, ""Usagi's Worry"" from the R movie (CD 8-5), not the R movie list's M-221 (CD 8-15-1). The TV cue sheets seem to number reused R-movie music differently from the movie's own list (compare p.120, S movie No. 20). Identified on r/sailormoon (reddit.com/r/sailormoon/comments/1xkkn9p) and confirmed against recordings of the episode."
 2386,0,E-15,cue-E-15,\N,\N
 2387,0,M-308,cue-M-308,\N,\N
 2388,0,D-1,cue-D-1,\N,\N
@@ -2993,7 +2993,7 @@ row_id,ord,printed,target,corrected,note
 3186,0,M-363,cue-M-363,\N,\N
 3187,0,M-326,cue-M-326,\N,\N
 3188,0,M-50,cue-M-50,\N,\N
-3189,0,M-213D,q-MOVIE-S-13,M-413D,"Disc 9, track 19 holds the four solo versions of M-413 (the box-set tray card prints M413―4種)."
+3189,0,M-213D,q-MOVIE-S-13,M-413D,"Disc 9, track 19 holds the four solo versions of M-413 (the box-set tray card for Disc 9 prints M413―4種)."
 3190,0,M-9,cue-M-9,\N,\N
 3191,0,M-52,cue-M-52,\N,\N
 3192,0,M-12,cue-M-12,\N,\N
@@ -3155,7 +3155,7 @@ row_id,ord,printed,target,corrected,note
 3356,0,M-52,cue-M-52,\N,\N
 3357,0,M-12,cue-M-12,\N,\N
 3358,0,M-53,cue-M-53,\N,\N
-3359,0,M-314E,q-MOVIE-S-13,M-413E,"Disc 9, track 19 holds the four solo versions of M-413 (the box-set tray card prints M413―4種)."
+3359,0,M-314E,q-MOVIE-S-13,M-413E,"Disc 9, track 19 holds the four solo versions of M-413 (the box-set tray card for Disc 9 prints M413―4種)."
 3360,0,M-9,cue-M-9 コーラスヌキ,\N,\N
 3361,0,M-11,cue-M-11,\N,\N
 3362,0,M-16,cue-M-16 ラジオトーン,\N,\N

@@ -116,7 +116,8 @@ CREATE TABLE albums (
   code TEXT PRIMARY KEY, ord INTEGER NOT NULL,
   parent TEXT REFERENCES albums(code),         -- the box set a disc belongs to
   disc INTEGER,                                -- its disc number in that set
-  name_ja TEXT, name_en TEXT, catalog TEXT, vgmdb INTEGER, img TEXT
+  name_ja TEXT, name_en TEXT, catalog TEXT, vgmdb INTEGER, img TEXT,
+  card TEXT                                    -- a box-set disc's tray card: VGMdb's scan, kept in images/tray-cards
 );
 -- the box-set discs' full track lists; for the other albums, only the tracks the booklet cites
 CREATE TABLE album_tracks (
@@ -141,7 +142,7 @@ CREATE TABLE library_matches (
   status TEXT NOT NULL DEFAULT 'unverified'    -- unverified, confirmed, rejected
 );
 -- The box set's tray cards (the back card in each disc's case): every track with the cue codes it contains, as printed.
--- An independent source for the booklet's 収録CD column. Photos: ~/Music/Sailor Moon Memorial Music Box/Tray Cards.
+-- An independent source for the booklet's 収録CD column. Read from VGMdb's flat scans, copied to images/tray-cards (albums.card).
 CREATE TABLE tray_cards (
   disc INTEGER NOT NULL, track INTEGER NOT NULL,
   ord INTEGER NOT NULL,                        -- the code's place in the track's list (1 = first piece)
@@ -238,7 +239,7 @@ def do_import(conn):
         ins('notes', None, (i, n.get('p'), n.get('c'), n.get('w'), n.get('s'), int(n['h']), *split3(n['x'])))
     # parents first, so a disc's parent exists when it is inserted
     for i, (code, a) in sorted(enumerate(albums.items()), key=lambda x: 'p' in x[1][1]):
-        ins('albums', (code, i, a.get('p'), a.get('d'), a['n'][0], a['n'][1], a.get('cat'), a.get('v'), a.get('img')))
+        ins('albums', (code, i, a.get('p'), a.get('d'), a['n'][0], a['n'][1], a.get('cat'), a.get('v'), a.get('img'), a.get('card')))
         for k, (track, tr) in enumerate(a['t'].items()):
             ins('album_tracks', (code, k, track, *tr))
     conn.commit()
@@ -324,13 +325,15 @@ ALBUMS_HEAD = ("/* Every album the booklet's CD column cites, keyed by its code 
                "   The box set (MMB) and its discs 1-10 (p = parent, d = disc number; disc names from each disc's cover, covers from\n"
                "   sailormusic.net, every track); the other albums R, S, SS, ST1, ST2, EX and 歌 (original CD releases, covers from\n"
                "   VGMdb, only the tracks the booklet cites; 歌 keyed by disc-track). n = name [Japanese, English], cat = catalog number,\n"
-               "   v = VGMdb album number, t = tracks [Japanese (VGMdb), romaji, English (the site's own)]. */\n")
+               "   v = VGMdb album number, card = the disc's tray card (VGMdb's scan, kept in images/tray-cards), t = tracks [Japanese (box-set\n"
+               "   discs: as printed on the tray card; other albums: VGMdb), romaji, English (many based on sailormusic.net\n"
+               "   and VGMdb's track lists, edited to the site's style)]. */\n")
 
 def build_albums(conn):
     albums = {}
     for a in rows(conn, 'SELECT * FROM albums ORDER BY ord'):
         o = {'n': [a['name_ja'], a['name_en']]}
-        put(o, 'p', a['parent']); put(o, 'd', a['disc']); put(o, 'cat', a['catalog']); put(o, 'v', a['vgmdb']); put(o, 'img', a['img'])
+        put(o, 'p', a['parent']); put(o, 'd', a['disc']); put(o, 'cat', a['catalog']); put(o, 'v', a['vgmdb']); put(o, 'img', a['img']); put(o, 'card', a['card'])
         o['t'] = {t['track']: [t['title_ja'], t['title_ro'], t['title_en']]
                   for t in rows(conn, 'SELECT * FROM album_tracks WHERE album=? ORDER BY ord', a['code'])}
         albums[a['code']] = o

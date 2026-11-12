@@ -2,7 +2,9 @@
    The box set (MMB) and its discs 1-10 (p = parent, d = disc number; disc names from each disc's cover, covers from
    sailormusic.net, every track); the other albums R, S, SS, ST1, ST2, EX and 歌 (original CD releases, covers from
    VGMdb, only the tracks the booklet cites; 歌 keyed by disc-track). n = name [Japanese, English], cat = catalog number,
-   v = VGMdb album number, t = tracks [Japanese (VGMdb), romaji, English (the site's own)]. */
+   v = VGMdb album number, card = the disc's tray card (VGMdb's scan, kept in images/tray-cards), t = tracks [Japanese (box-set
+   discs: as printed on the tray card; other albums: VGMdb), romaji, English (many based on sailormusic.net
+   and VGMdb's track lists, edited to the site's style)]. */
 window.MMB_ALBUMS =
 {
  "MMB": {
@@ -23,181 +25,182 @@ window.MMB_ALBUMS =
   "d": 1,
   "cat": "COCC-14785",
   "img": "images/album-covers/disc-01-sailor-moon-music-collection-1.jpg",
+  "card": "images/tray-cards/disc-01.jpg",
   "t": {
    "1": [
-    "ムーンライト伝説 TVサイズ",
+    "ムーンライト伝説　TVサイズ",
     "Muunraito Densetsu TV Saizu",
     "Moonlight Legend (TV Size)"
    ],
    "2": [
     "あたしだって普通の女の子1",
     "Atashi Datte Futsuu no Onnanoko 1",
-    "I'm Just an Ordinary Girl 1"
+    "I'm Just an Ordinary Girl, Too 1"
    ],
    "3": [
     "あたしだって普通の女の子2",
     "Atashi Datte Futsuu no Onnanoko 2",
-    "I'm Just an Ordinary Girl 2"
+    "I'm Just an Ordinary Girl, Too 2"
    ],
    "4": [
     "あたしだって普通の女の子3",
     "Atashi Datte Futsuu no Onnanoko 3",
-    "I'm Just an Ordinary Girl 3"
+    "I'm Just an Ordinary Girl, Too 3"
    ],
    "5": [
     "あたしだって普通の女の子4",
     "Atashi Datte Futsuu no Onnanoko 4",
-    "I'm Just an Ordinary Girl 4"
+    "I'm Just an Ordinary Girl, Too 4"
    ],
    "6": [
     "あたしだって普通の女の子5",
     "Atashi Datte Futsuu no Onnanoko 5",
-    "I'm Just an Ordinary Girl 5"
+    "I'm Just an Ordinary Girl, Too 5"
    ],
    "7": [
     "あたしだって普通の女の子6",
     "Atashi Datte Futsuu no Onnanoko 6",
-    "I'm Just an Ordinary Girl 6"
+    "I'm Just an Ordinary Girl, Too 6"
    ],
    "8": [
     "あたしだって普通の女の子7",
     "Atashi Datte Futsuu no Onnanoko 7",
-    "I'm Just an Ordinary Girl 7"
+    "I'm Just an Ordinary Girl, Too 7"
    ],
    "9": [
     "本当に選ばれた戦士なの？1",
     "Hontou ni Erabareta Senshi na no? 1",
-    "Am I Really the Chosen Guardian? 1"
+    "Was I Really Chosen to Be a Guardian? 1"
    ],
    "10": [
     "本当に選ばれた戦士なの？2",
     "Hontou ni Erabareta Senshi na no? 2",
-    "Am I Really the Chosen Guardian? 2"
+    "Was I Really Chosen to Be a Guardian? 2"
    ],
    "11": [
     "本当に選ばれた戦士なの？3",
     "Hontou ni Erabareta Senshi na no? 3",
-    "Am I Really the Chosen Guardian? 3"
+    "Was I Really Chosen to Be a Guardian? 3"
    ],
    "12": [
     "本当に選ばれた戦士なの？4",
     "Hontou ni Erabareta Senshi na no? 4",
-    "Am I Really the Chosen Guardian? 4"
+    "Was I Really Chosen to Be a Guardian? 4"
    ],
    "13": [
     "本当に選ばれた戦士なの？5",
     "Hontou ni Erabareta Senshi na no? 5",
-    "Am I Really the Chosen Guardian? 5"
+    "Was I Really Chosen to Be a Guardian? 5"
    ],
    "14": [
     "本当に選ばれた戦士なの？6",
     "Hontou ni Erabareta Senshi na no? 6",
-    "Am I Really the Chosen Guardian? 6"
+    "Was I Really Chosen to Be a Guardian? 6"
    ],
    "15": [
     "星空はミステリアス1",
     "Hoshizora wa Misuteriasu 1",
-    "Mysterious Starry Sky 1"
+    "The Starry Sky Is Mysterious 1"
    ],
    "16": [
     "星空はミステリアス2",
     "Hoshizora wa Misuteriasu 2",
-    "Mysterious Starry Sky 2"
+    "The Starry Sky Is Mysterious 2"
    ],
    "17": [
     "星空はミステリアス3",
     "Hoshizora wa Misuteriasu 3",
-    "Mysterious Starry Sky 3"
+    "The Starry Sky Is Mysterious 3"
    ],
    "18": [
     "星空はミステリアス4",
     "Hoshizora wa Misuteriasu 4",
-    "Mysterious Starry Sky 4"
+    "The Starry Sky Is Mysterious 4"
    ],
    "19": [
     "星空はミステリアス5",
     "Hoshizora wa Misuteriasu 5",
-    "Mysterious Starry Sky 5"
+    "The Starry Sky Is Mysterious 5"
    ],
    "20": [
     "星空はミステリアス6",
     "Hoshizora wa Misuteriasu 6",
-    "Mysterious Starry Sky 6"
+    "The Starry Sky Is Mysterious 6"
    ],
    "21": [
     "おっちょこちょいは生まれつき1",
     "Occhokochoi wa Umaretsuki 1",
-    "Scatterbrained By Nature 1"
+    "Scatterbrained by Nature 1"
    ],
    "22": [
     "おっちょこちょいは生まれつき2",
     "Occhokochoi wa Umaretsuki 2",
-    "Scatterbrained By Nature 2"
+    "Scatterbrained by Nature 2"
    ],
    "23": [
     "おっちょこちょいは生まれつき3",
     "Occhokochoi wa Umaretsuki 3",
-    "Scatterbrained By Nature 3"
+    "Scatterbrained by Nature 3"
    ],
    "24": [
     "おっちょこちょいは生まれつき4",
     "Occhokochoi wa Umaretsuki 4",
-    "Scatterbrained By Nature 4"
+    "Scatterbrained by Nature 4"
    ],
    "25": [
     "おっちょこちょいは生まれつき5",
     "Occhokochoi wa Umaretsuki 5",
-    "Scatterbrained By Nature 5"
+    "Scatterbrained by Nature 5"
    ],
    "26": [
     "おっちょこちょいは生まれつき6",
     "Occhokochoi wa Umaretsuki 6",
-    "Scatterbrained By Nature 6"
+    "Scatterbrained by Nature 6"
    ],
    "27": [
     "おっちょこちょいは生まれつき7",
     "Occhokochoi wa Umaretsuki 7",
-    "Scatterbrained By Nature 7"
+    "Scatterbrained by Nature 7"
    ],
    "28": [
     "恋する乙女心1",
     "Koisuru Otomegokoro 1",
-    "Feelings of a Girl in Love 1"
+    "A Maiden's Heart in Love 1"
    ],
    "29": [
     "恋する乙女心2",
     "Koisuru Otomegokoro 2",
-    "Feelings of a Girl in Love 2"
+    "A Maiden's Heart in Love 2"
    ],
    "30": [
     "恋する乙女心3",
     "Koisuru Otomegokoro 3",
-    "Feelings of a Girl in Love 3"
+    "A Maiden's Heart in Love 3"
    ],
    "31": [
     "恋する乙女心4",
     "Koisuru Otomegokoro 4",
-    "Feelings of a Girl in Love 4"
+    "A Maiden's Heart in Love 4"
    ],
    "32": [
     "恋する乙女心5",
     "Koisuru Otomegokoro 5",
-    "Feelings of a Girl in Love 5"
+    "A Maiden's Heart in Love 5"
    ],
    "33": [
     "恋する乙女心6",
     "Koisuru Otomegokoro 6",
-    "Feelings of a Girl in Love 6"
+    "A Maiden's Heart in Love 6"
    ],
    "34": [
     "恋する乙女心7",
     "Koisuru Otomegokoro 7",
-    "Feelings of a Girl in Love 7"
+    "A Maiden's Heart in Love 7"
    ],
    "35": [
     "恋する乙女心8",
     "Koisuru Otomegokoro 8",
-    "Feelings of a Girl in Love 8"
+    "A Maiden's Heart in Love 8"
    ],
    "36": [
     "誰かが狙われている1",
@@ -232,37 +235,37 @@ window.MMB_ALBUMS =
    "42": [
     "夢見るおだんごアタマ1",
     "Yumemiru Odango Atama 1",
-    "Dreaming Dumpling-head 1"
+    "Dreamy Bun-Head 1"
    ],
    "43": [
     "夢見るおだんごアタマ2",
     "Yumemiru Odango Atama 2",
-    "Dreaming Dumpling-head 2"
+    "Dreamy Bun-Head 2"
    ],
    "44": [
     "夢見るおだんごアタマ3",
     "Yumemiru Odango Atama 3",
-    "Dreaming Dumpling-head 3"
+    "Dreamy Bun-Head 3"
    ],
    "45": [
     "夢見るおだんごアタマ4",
     "Yumemiru Odango Atama 4",
-    "Dreaming Dumpling-head 4"
+    "Dreamy Bun-Head 4"
    ],
    "46": [
     "夢見るおだんごアタマ5",
     "Yumemiru Odango Atama 5",
-    "Dreaming Dumpling-head 5"
+    "Dreamy Bun-Head 5"
    ],
    "47": [
     "夢見るおだんごアタマ6",
     "Yumemiru Odango Atama 6",
-    "Dreaming Dumpling-head 6"
+    "Dreamy Bun-Head 6"
    ],
    "48": [
     "夢見るおだんごアタマ7",
     "Yumemiru Odango Atama 7",
-    "Dreaming Dumpling-head 7"
+    "Dreamy Bun-Head 7"
    ],
    "49": [
     "夕暮れ時は妖魔の予感1",
@@ -300,7 +303,7 @@ window.MMB_ALBUMS =
     "Dusk Brings a Premonition of Monsters 7"
    ],
    "56": [
-    "HEART MOVING TVサイズ",
+    "HEART MOVING　TVサイズ",
     "HEART MOVING TV Saizu",
     "HEART MOVING (TV Size)"
    ],
@@ -330,6 +333,7 @@ window.MMB_ALBUMS =
   "d": 2,
   "cat": "COCC-14786",
   "img": "images/album-covers/disc-02-sailor-moon-music-collection-2.jpg",
+  "card": "images/tray-cards/disc-02.jpg",
   "t": {
    "1": [
     "アバンタイトル音楽",
@@ -354,7 +358,7 @@ window.MMB_ALBUMS =
    "5": [
     "乙女心",
     "Otomegokoro",
-    "A Girl's Feelings"
+    "A Maiden's Heart"
    ],
    "6": [
     "「夢見るだけじゃダメ」～インストヴァージョン～",
@@ -379,12 +383,12 @@ window.MMB_ALBUMS =
    "10": [
     "ムーンパワーで変装",
     "Muun Pawaa de Hensou",
-    "Moon Power Disguise"
+    "Disguise with Moon Power"
    ],
    "11": [
-    "「合コトバはムーン･プリズム･パワー･メイクアップ!」～インストヴァージョン～",
+    "「合コトバはムーン・プリズム・パワー・メイクアップ！」～インストヴァージョン～",
     "\"Aikotoba wa Muun Purizumu Pawaa Meikuappu!\" ~Insuto Vaajon~",
-    "The Password is Moon Prism Power Make Up! ~Instrumental Version~"
+    "The Password Is Moon Prism Power Make Up! ~Instrumental Version~"
    ],
    "12": [
     "華麗なるムーンプリズムパワーメイクアップ",
@@ -447,7 +451,7 @@ window.MMB_ALBUMS =
     "Protected by the Stars"
    ],
    "24": [
-    "リベンジ! セーラー戦士",
+    "リベンジ！セーラー戦士",
     "Ribenji! Seeraa Senshi",
     "Revenge! Sailor Guardians"
    ],
@@ -477,7 +481,7 @@ window.MMB_ALBUMS =
     "Princess Moon ~Instrumental Version~"
    ],
    "30": [
-    "サブタイトル音楽、メイクアップのテーマ ロングヴァージョン",
+    "サブタイトル音楽、メイクアップのテーマ　ロングヴァージョン",
     "Sabutaitoru Ongaku, Meikuappu no Teema Rongu Vaajon",
     "Subtitle Music, Make Up Theme (Long Version)"
    ]
@@ -492,6 +496,7 @@ window.MMB_ALBUMS =
   "d": 3,
   "cat": "COCC-14787",
   "img": "images/album-covers/disc-03-sailor-moon-r-music-collection.jpg",
+  "card": "images/tray-cards/disc-03.jpg",
   "t": {
    "1": [
     "戦士の記憶",
@@ -604,6 +609,7 @@ window.MMB_ALBUMS =
   "d": 4,
   "cat": "COCC-14788",
   "img": "images/album-covers/disc-04-sailor-moon-s-music-collection.jpg",
+  "card": "images/tray-cards/disc-04.jpg",
   "t": {
    "1": [
     "運命の戦士",
@@ -611,8 +617,8 @@ window.MMB_ALBUMS =
     "Guardians of Destiny"
    ],
    "2": [
-    "「ムーンライト伝説」TVサイズ、SE入り",
-    "\"Muunraito Densetsu\" TV Saizu, SE-iri",
+    "「ムーンライト伝説」TVサイズSE入り",
+    "\"Muunraito Densetsu\" TV Saizu SE-iri",
     "Moonlight Legend (TV Size with Sound Effects)"
    ],
    "3": [
@@ -651,7 +657,7 @@ window.MMB_ALBUMS =
     "Pursuit"
    ],
    "10": [
-    "セーラーウラヌス&ネプチューン",
+    "セーラーウラヌス＆ネプチューン",
     "Seeraa Uranusu & Nepuchuun",
     "Sailor Uranus & Neptune"
    ],
@@ -668,7 +674,7 @@ window.MMB_ALBUMS =
    "13": [
     "ピュアな心の結晶は無事",
     "Pyua na Kokoro no Kesshou wa Buji",
-    "The Pure Heart Crystal is Safe"
+    "The Pure Heart Crystal Is Safe"
    ],
    "14": [
     "セーラー戦士同士の対立",
@@ -681,8 +687,8 @@ window.MMB_ALBUMS =
     "The Cape Is Rainbow-Colored"
    ],
    "16": [
-    "タキシード･ミラージュ～インストヴァージョン～",
-    "Takishiido Miraaju ~Insuto Vaajon~",
+    "「タキシード・ミラージュ」～インストヴァージョン～",
+    "\"Takishiido Miraaju\" ~Insuto Vaajon~",
     "Tuxedo Mirage ~Instrumental Version~"
    ],
    "17": [
@@ -711,7 +717,7 @@ window.MMB_ALBUMS =
     "Super Sailor Moon"
    ],
    "22": [
-    "「タキシード･ミラージュ」TVサイズ",
+    "「タキシード・ミラージュ」TVサイズ",
     "\"Takishiido Miraaju\" TV Saizu",
     "Tuxedo Mirage (TV Size)"
    ],
@@ -731,6 +737,7 @@ window.MMB_ALBUMS =
   "d": 5,
   "cat": "COCC-14789",
   "img": "images/album-covers/disc-05-sailor-moon-supers-music-collection.jpg",
+  "card": "images/tray-cards/disc-05.jpg",
   "t": {
    "1": [
     "水晶の森",
@@ -738,8 +745,8 @@ window.MMB_ALBUMS =
     "Crystal Forest"
    ],
    "2": [
-    "「ムーンライト伝説」TVサイズ、SE入り",
-    "\"Muunraito Densetsu\" TV Saizu, SE-iri",
+    "「ムーンライト伝説」TVサイズ SE入り",
+    "\"Muunraito Densetsu\" TV Saizu SE-iri",
     "Moonlight Legend (TV Size with Sound Effects)"
    ],
    "3": [
@@ -775,7 +782,7 @@ window.MMB_ALBUMS =
    "9": [
     "ゆれる心",
     "Yureru Kokoro",
-    "Trembling Heart"
+    "A Wavering Heart"
    ],
    "10": [
     "心の中のぞく",
@@ -863,6 +870,7 @@ window.MMB_ALBUMS =
   "d": 6,
   "cat": "COCC-14790",
   "img": "images/album-covers/disc-06-sailor-moon-sailor-stars-music-collection-1.jpg",
+  "card": "images/tray-cards/disc-06.jpg",
   "t": {
    "1": [
     "「ゴールデンクイーン・ギャラクシア」～オルゴールヴァージョン～",
@@ -882,12 +890,12 @@ window.MMB_ALBUMS =
    "4": [
     "5人は高校生",
     "5-nin wa Koukousei",
-    "Five High School Students"
+    "The Five Are High School Students"
    ],
    "5": [
     "ネヘレニア復活",
     "Neherenia Fukkatsu",
-    "Nehelenia Resurrection"
+    "Nehelenia's Resurrection"
    ],
    "6": [
     "ほたるの予言",
@@ -905,7 +913,7 @@ window.MMB_ALBUMS =
     "Captured Sailor Guardians"
    ],
    "9": [
-    "プリンセスのために......",
+    "プリンセスのために……",
     "Purinsesu no Tame ni......",
     "For the Princess......"
    ],
@@ -955,9 +963,9 @@ window.MMB_ALBUMS =
     "The Most Mismatched Unrequited Love in the Galaxy ~Instrumental Version~"
    ],
    "19": [
-    "「流れ星へ」～コーラスなしカラオケ～",
-    "\"Nagareboshi e\" ~Koorasu Nashi Karaoke~",
-    "To the Shooting Star ~Karaoke without Chorus~"
+    "「流れ星へ」コーラスなしカラオケ",
+    "\"Nagareboshi e\" Koorasu Nashi Karaoke",
+    "To the Shooting Star (Karaoke without Chorus)"
    ]
   }
  },
@@ -970,6 +978,7 @@ window.MMB_ALBUMS =
   "d": 7,
   "cat": "COCC-14791",
   "img": "images/album-covers/disc-07-sailor-moon-sailor-stars-music-collection-2.jpg",
+  "card": "images/tray-cards/disc-07.jpg",
   "t": {
    "1": [
     "「とどかぬ想い－my friend's love－」～インストヴァージョン～",
@@ -977,7 +986,7 @@ window.MMB_ALBUMS =
     "Unreachable Feelings - my friend's love - ~Instrumental Version~"
    ],
    "2": [
-    "あの方はどこに......",
+    "あの方はどこに……",
     "Ano Kata wa Doko ni......",
     "Where Is That Person......"
    ],
@@ -1032,7 +1041,7 @@ window.MMB_ALBUMS =
     "The Phage Attacks"
    ],
    "13": [
-    "スターパワーメイクアップ!",
+    "スターパワーメイクアップ！",
     "Sutaa Pawaa Meikuappu!",
     "Star Power Make Up!"
    ],
@@ -1062,8 +1071,8 @@ window.MMB_ALBUMS =
     "Chibi-Chibi"
    ],
    "19": [
-    "セーラームーン・クリスマス～インストヴァージョン～",
-    "Seeraa Muun Kurisumasu ~Insuto Vaajon~",
+    "「セーラームーン・クリスマス」～インストヴァージョン～",
+    "\"Seeraa Muun Kurisumasu\" ~Insuto Vaajon~",
     "Sailor Moon Christmas ~Instrumental Version~"
    ],
    "20": [
@@ -1077,7 +1086,7 @@ window.MMB_ALBUMS =
     "Resolve"
    ],
    "22": [
-    "窮極の愛",
+    "究極の愛",
     "Kyuukyoku no Ai",
     "Ultimate Love"
    ],
@@ -1107,6 +1116,7 @@ window.MMB_ALBUMS =
   "d": 8,
   "cat": "COCC-14792",
   "img": "images/album-covers/disc-08-sailor-moon-r-movie-music-collection.jpg",
+  "card": "images/tray-cards/disc-08.jpg",
   "t": {
    "1": [
     "プロローグ",
@@ -1144,8 +1154,8 @@ window.MMB_ALBUMS =
     "Four Sailor Guardians, Star Power Make Up"
    ],
    "8": [
-    "セーラームーンVSグリシナ",
-    "Seeraa Muun VS Gurishina",
+    "セーラームーンVSグリシア",
+    "Seeraa Muun VS Gurishia",
     "Sailor Moon vs. Glycina"
    ],
    "9": [
@@ -1154,7 +1164,7 @@ window.MMB_ALBUMS =
     "Xenian"
    ],
    "10": [
-    "タキシード仮面登場～衛とフィオレ",
+    "タキシード仮面登場 ～衛とフィオレ",
     "Takishiido Kamen Toujou ~ Mamoru to Fiore",
     "Tuxedo Mask Appears ~ Mamoru and Fiore"
    ],
@@ -1164,7 +1174,7 @@ window.MMB_ALBUMS =
     "Fiore's Reminiscence"
    ],
    "12": [
-    "セーラー・テレポート!",
+    "セーラー・テレポート！",
     "Seeraa Terepooto!",
     "Sailor Teleport!"
    ],
@@ -1219,7 +1229,7 @@ window.MMB_ALBUMS =
     "Tuxedo Knight ~Instrumental Version~"
    ],
    "23": [
-    "「ルナ!」～インストヴァージョン～",
+    "「ルナ！」～インストヴァージョン～",
     "\"Runa!\" ~Insuto Vaajon~",
     "Luna! ~Instrumental Version~"
    ],
@@ -1249,12 +1259,12 @@ window.MMB_ALBUMS =
     "Sound Effects: \"Moonlight Legend\" Arrangement"
    ],
    "29": [
-    "SE集 セーラームーン1",
+    "SE集 セーラームーン①",
     "SE-shuu Seeraa Muun 1",
     "Sound Effects: Sailor Moon 1"
    ],
    "30": [
-    "SE集 セーラームーン2",
+    "SE集 セーラームーン②",
     "SE-shuu Seeraa Muun 2",
     "Sound Effects: Sailor Moon 2"
    ]
@@ -1269,6 +1279,7 @@ window.MMB_ALBUMS =
   "d": 9,
   "cat": "COCC-14793",
   "img": "images/album-covers/disc-09-sailor-moon-s-movie-music-collection.jpg",
+  "card": "images/tray-cards/disc-09.jpg",
   "t": {
    "1": [
     "雪の女王",
@@ -1318,7 +1329,7 @@ window.MMB_ALBUMS =
    "10": [
     "ドキドキ",
     "Dokidoki",
-    "Heartbeats"
+    "Heart Pounding"
    ],
    "11": [
     "翔の想い",
@@ -1361,7 +1372,7 @@ window.MMB_ALBUMS =
     "Moonlight Destiny (Movie Size)"
    ],
    "19": [
-    "セーラー4戦士、メイクアップテーマ ソロヴァージョン",
+    "セーラー4戦士、メイクアップテーマ　ソロヴァージョン",
     "Seeraa 4 Senshi, Meikuappu Teema Soro Vaajon",
     "Four Sailor Guardians, Make Up Theme (Solo Version)"
    ],
@@ -1406,12 +1417,12 @@ window.MMB_ALBUMS =
     "I Believe in Love ~Music Box Version~"
    ],
    "28": [
-    "SE集 セーラームーン3",
+    "SE集 セーラームーン③",
     "SE-shuu Seeraa Muun 3",
     "Sound Effects: Sailor Moon 3"
    ],
    "29": [
-    "SE集 セーラームーン4",
+    "SE集 セーラームーン④",
     "SE-shuu Seeraa Muun 4",
     "Sound Effects: Sailor Moon 4"
    ],
@@ -1431,6 +1442,7 @@ window.MMB_ALBUMS =
   "d": 10,
   "cat": "COCC-14794",
   "img": "images/album-covers/disc-10-sailor-moon-supers-movie-music-collection.jpg",
+  "card": "images/tray-cards/disc-10.jpg",
   "t": {
    "1": [
     "笛吹き",
@@ -1510,7 +1522,7 @@ window.MMB_ALBUMS =
    "16": [
     "勇気100倍クッキー",
     "Yuuki 100-bai Kukkii",
-    "100-times Courage Cookie"
+    "100-Times Courage Cookie"
    ],
    "17": [
     "夢の棺",
