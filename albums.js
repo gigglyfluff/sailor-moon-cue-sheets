@@ -235,37 +235,37 @@ window.MMB_ALBUMS =
    "42": [
     "夢見るおだんごアタマ1",
     "Yumemiru Odango Atama 1",
-    "Dreamy Bun-Head 1"
+    "Dreamy Dumpling-Head 1"
    ],
    "43": [
     "夢見るおだんごアタマ2",
     "Yumemiru Odango Atama 2",
-    "Dreamy Bun-Head 2"
+    "Dreamy Dumpling-Head 2"
    ],
    "44": [
     "夢見るおだんごアタマ3",
     "Yumemiru Odango Atama 3",
-    "Dreamy Bun-Head 3"
+    "Dreamy Dumpling-Head 3"
    ],
    "45": [
     "夢見るおだんごアタマ4",
     "Yumemiru Odango Atama 4",
-    "Dreamy Bun-Head 4"
+    "Dreamy Dumpling-Head 4"
    ],
    "46": [
     "夢見るおだんごアタマ5",
     "Yumemiru Odango Atama 5",
-    "Dreamy Bun-Head 5"
+    "Dreamy Dumpling-Head 5"
    ],
    "47": [
     "夢見るおだんごアタマ6",
     "Yumemiru Odango Atama 6",
-    "Dreamy Bun-Head 6"
+    "Dreamy Dumpling-Head 6"
    ],
    "48": [
     "夢見るおだんごアタマ7",
     "Yumemiru Odango Atama 7",
-    "Dreamy Bun-Head 7"
+    "Dreamy Dumpling-Head 7"
    ],
    "49": [
     "夕暮れ時は妖魔の予感1",
