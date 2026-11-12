@@ -7,7 +7,7 @@ window.MMB_DISCS =
    "美少女戦士セーラームーン ミュージックコレクション-1",
    "Sailor Moon Music Collection 1"
   ],
-  "img": "images/covers/disc-01.jpg",
+  "img": "images/album-covers/disc-01-sailor-moon-music-collection-1.jpg",
   "t": [
    [
     "ムーンライト伝説 TVサイズ",
@@ -311,7 +311,7 @@ window.MMB_DISCS =
    "美少女戦士セーラームーン ミュージックコレクション-2",
    "Sailor Moon Music Collection 2"
   ],
-  "img": "images/covers/disc-02.jpg",
+  "img": "images/album-covers/disc-02-sailor-moon-music-collection-2.jpg",
   "t": [
    [
     "アバンタイトル音楽",
@@ -470,7 +470,7 @@ window.MMB_DISCS =
    "美少女戦士セーラームーンR ミュージックコレクション",
    "Sailor Moon R Music Collection"
   ],
-  "img": "images/covers/disc-03.jpg",
+  "img": "images/album-covers/disc-03-sailor-moon-r-music-collection.jpg",
   "t": [
    [
     "戦士の記憶",
@@ -579,7 +579,7 @@ window.MMB_DISCS =
    "美少女戦士セーラームーンS ミュージックコレクション",
    "Sailor Moon S Music Collection"
   ],
-  "img": "images/covers/disc-04.jpg",
+  "img": "images/album-covers/disc-04-sailor-moon-s-music-collection.jpg",
   "t": [
    [
     "運命の戦士",
@@ -703,7 +703,7 @@ window.MMB_DISCS =
    "美少女戦士セーラームーンSupers ミュージックコレクション",
    "Sailor Moon SuperS Music Collection"
   ],
-  "img": "images/covers/disc-05.jpg",
+  "img": "images/album-covers/disc-05-sailor-moon-supers-music-collection.jpg",
   "t": [
    [
     "水晶の森",
@@ -832,7 +832,7 @@ window.MMB_DISCS =
    "美少女戦士セーラームーン セーラースターズ ミュージックコレクション-1",
    "Sailor Moon Sailor Stars Music Collection 1"
   ],
-  "img": "images/covers/disc-06.jpg",
+  "img": "images/album-covers/disc-06-sailor-moon-sailor-stars-music-collection-1.jpg",
   "t": [
    [
     "「ゴールデンクイーン・ギャラクシア」～オルゴールヴァージョン～",
@@ -936,7 +936,7 @@ window.MMB_DISCS =
    "美少女戦士セーラームーン セーラースターズ ミュージックコレクション-2",
    "Sailor Moon Sailor Stars Music Collection 2"
   ],
-  "img": "images/covers/disc-07.jpg",
+  "img": "images/album-covers/disc-07-sailor-moon-sailor-stars-music-collection-2.jpg",
   "t": [
    [
     "「とどかぬ想い－my friend's love－」～インストヴァージョン～",
@@ -1070,7 +1070,7 @@ window.MMB_DISCS =
    "劇場版 美少女戦士セーラームーンR ミュージックコレクション",
    "Sailor Moon R Movie Music Collection"
   ],
-  "img": "images/covers/disc-08.jpg",
+  "img": "images/album-covers/disc-08-sailor-moon-r-movie-music-collection.jpg",
   "t": [
    [
     "プロローグ",
@@ -1229,7 +1229,7 @@ window.MMB_DISCS =
    "劇場版 美少女戦士セーラームーンS ミュージックコレクション",
    "Sailor Moon S Movie Music Collection"
   ],
-  "img": "images/covers/disc-09.jpg",
+  "img": "images/album-covers/disc-09-sailor-moon-s-movie-music-collection.jpg",
   "t": [
    [
     "雪の女王",
@@ -1388,7 +1388,7 @@ window.MMB_DISCS =
    "劇場版 美少女戦士セーラームーンSupers ミュージックコレクション",
    "Sailor Moon SuperS Movie Music Collection"
   ],
-  "img": "images/covers/disc-10.jpg",
+  "img": "images/album-covers/disc-10-sailor-moon-supers-movie-music-collection.jpg",
   "t": [
    [
     "笛吹き",
@@ -1569,7 +1569,7 @@ window.MMB_ALBUMS =
   ],
   "cat": "COCC-10705",
   "v": 26831,
-  "img": "images/covers/other-r.jpg",
+  "img": "images/album-covers/sailor-moon-r-music-collection.jpg",
   "t": {
    "3": [
     "魔界樹",
@@ -1595,7 +1595,7 @@ window.MMB_ALBUMS =
   ],
   "cat": "COCC-11777",
   "v": 26827,
-  "img": "images/covers/other-s.jpg",
+  "img": "images/album-covers/sailor-moon-s-music-collection.jpg",
   "t": {
    "1": [
     "聖杯、救世主(メシア)……神秘なる世界",
@@ -1621,7 +1621,7 @@ window.MMB_ALBUMS =
   ],
   "cat": "COCC-12836",
   "v": 26881,
-  "img": "images/covers/other-supers.jpg",
+  "img": "images/album-covers/sailor-moon-supers-music-collection.jpg",
   "t": {
    "4": [
     "セーラー戦士の優雅な放課後",
@@ -1642,7 +1642,7 @@ window.MMB_ALBUMS =
   ],
   "cat": "COCC-13576",
   "v": 26835,
-  "img": "images/covers/other-stars-1.jpg",
+  "img": "images/album-covers/sailor-moon-sailor-stars-music-collection-1.jpg",
   "t": {
    "1": [
     "エターナルセーラームーン",
@@ -1658,7 +1658,7 @@ window.MMB_ALBUMS =
   ],
   "cat": "COCC-13660",
   "v": 26836,
-  "img": "images/covers/other-stars-2.jpg",
+  "img": "images/album-covers/sailor-moon-sailor-stars-music-collection-2.jpg",
   "t": {
    "5": [
     "ギターソロ・コレクション",
@@ -1689,7 +1689,7 @@ window.MMB_ALBUMS =
   ],
   "cat": "COCC-13402",
   "v": 28536,
-  "img": "images/covers/other-extra.jpg",
+  "img": "images/album-covers/sailor-moon-music-collection-extra-version.jpg",
   "t": {
    "9": [
     "エンディングアレンジ ～明るく元気にそしてロマンティックに～",
@@ -1730,7 +1730,7 @@ window.MMB_ALBUMS =
   ],
   "cat": "COCC-14459~64",
   "v": 23044,
-  "img": "images/covers/other-song-box.jpg",
+  "img": "images/album-covers/sailor-moon-memorial-song-box.jpg",
   "t": {
    "2-10": [
     "Someday...Somebody...",

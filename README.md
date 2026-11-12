@@ -27,7 +27,7 @@ Please [open an issue](../../issues) with the episode or list, the row, and what
 | `discs.js` | The box set's disc names and track titles, and the other albums the booklet cites (not from the booklet), generated from `mmb.db` |
 | `booklet.txt` | The booklet's Japanese exactly as printed, in booklet order: the proofread baseline that `check` compares against |
 | `tools/mmb.py` | Builds `data.js`, `discs.js` and `db/*.csv` from the database |
-| `images/` | Series logos, the BGM-list illustrations and the disc covers |
+| `images/` | `logos/` (series logos), `bgm-list-illustrations/` and `album-covers/` (box-set discs as `disc-NN-…`, other albums by title) |
 
 ## Editing the data
 
