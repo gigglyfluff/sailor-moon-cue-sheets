@@ -1,0 +1,449 @@
+id,category_id,ord,code,time_ja,time_ro,time_en,desc_ja,desc_ro,desc_en,cd,cd_fix,cd_fix_url,cd_fix_note,code_name_ja,code_name_ro,code_name_en,code_fix,code_fix_url,code_fix_note,desc_fix_printed,desc_fix_correct,desc_fix_url,desc_fix_note
+1,1,0,A-1,"1'24""","1'24""","1'24""",クラリネットメロディー,Kurarinetto merodii,Clarinet melody,1-57-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+2,1,1,A-2,"1'30""","1'30""","1'30""",格好よくセーラームーンの活躍（華麗に）,Kakkoyoku Seeraa Muun no katsuyaku (karei ni),"Sailor Moon in action, cool (glamorous)",1-57-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+3,1,2,A-3,"1'11""","1'11""","1'11""",ロマンチックに恋心（タンゴ風）,Romanchikku ni koigokoro (tango-fuu),Romantic love (tango-style),1-57-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+4,1,3,A-4,"1'55""","1'55""","1'55""",淋しく（マイナー）,Sabishiku (mainaa),Lonely (minor key),1-57-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+5,1,4,A-5,"59""","59""","59""",ちょっとコミカルに（うさぎの日常）（軽め）,Chotto komikaru ni (Usagi no nichijou) (karume),A little comical (Usagi's everyday life) (light),1-57-5,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+6,1,5,A-6a,"28""半","28.5""","28.5""",予告用（30秒予告用）,Yokoku-you (30-byou yokoku-you),For the preview (30-second preview),2-27-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+7,1,6,A-6b,"13""半","13.5""","13.5""",予告用（15秒予告用）,Yokoku-you (15-byou yokoku-you),For the preview (15-second preview),2-27-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+8,2,0,B-1,"1'44""","1'44""","1'44""",フルートメロディー,Furuuto merodii,Flute melody,2-23-5,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+9,2,1,B-2,"1'38""半","1'38.5""","1'38.5""",優しく　温かく・友情,"Yasashiku, atatakaku, yuujou","Gentle, warm, friendship",2-23-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+10,2,2,B-3,"1'45""半","1'45.5""","1'45.5""",恋に悩む乙女心（UPテンポ）,Koi ni nayamu otomegokoro (UP tenpo),A maiden's heart troubled by love (up-tempo),2-23-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+11,2,3,B-4,"2'26""","2'26""","2'26""",最終回・感動的に実る恋（うさぎと衛）,"Saishuukai, kandou-teki ni minoru koi (Usagi to Mamoru)",Final episode: a love that movingly bears fruit (Usagi and Mamoru),2-23-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+12,3,0,C-1a,"29""","29""","29""",プロローグ用,Puroroogu-you,For the prologue,2-3-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+13,3,1,C-1b,"10""","10""","10""",サブタイトル用,Sabutaitoru-you,For the subtitle,2-3-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+14,3,2,C-2,"8""半","8.5""","8.5""",アイキャッチ用,Aikyatchi-you,For the eyecatch,2-7,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+15,3,3,C-3,"18""半","18.5""","18.5""",アバンタイトル用,Aban taitoru-you,For the avant-title,2-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+16,4,0,D-1,"1'20""","1'20""","1'20""",穏やかに,Odayaka ni,Calmly,1-45,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+17,4,1,D-2,"1'02""半","1'02.5""","1'02.5""",コミカルに（あいかわらずのうさぎちゃん）,Komikaru ni (aikawarazu no Usagi-chan),"Comical (Usagi-chan, same as ever)",1-53,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+18,4,2,D-3,"1'36""","1'36""","1'36""",爽やかに（よかったね）,Sawayaka ni (yokatta ne),"Refreshing (""That turned out well"")",1-48,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+19,4,3,D-4,"1'43""","1'43""","1'43""",感動的に（あまり大袈裟じゃなく）,Kandou-teki ni (amari oogesa ja naku),Movingly (not too exaggerated),1-14,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+20,4,4,D-5,"1'12""","1'12""","1'12""",悪の企み,Aku no takurami,Evil scheme,1-17,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+21,5,0,E-1,"1'09""","1'09""","1'09""",喜び・明るく元気にはしゃいだ感じ,"Yorokobi, akaruku genki ni hashaida kanji","Joy: bright, energetic, high-spirited",1-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+22,5,1,E-2,"1'26""","1'26""","1'26""",喜び・地味め〈頭にブリッジ付〉（カントリー風）,"Yorokobi, jimime [atama ni burijji tsuki] (kantorii-fuu)","Joy, understated [with a bridge at the start] (country style)",1-42,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+23,5,2,E-3,"1'15""","1'15""","1'15""",胸の高鳴り（ドキドキ恋心）（タンゴ風）,Mune no takanari (dokidoki koigokoro) (tango-fuu),Heart pounding (excited love) (tango style),1-29,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+24,5,3,E-4,"1'28""","1'28""","1'28""",憧れ・恋心（可愛い・オルゴールぽい感じ）,"Akogare, koigokoro (kawaii, orugooru-poi kanji)","Longing, love (cute, music box-like)",1-34,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+25,5,4,E-5,"56""半","56.5""","56.5""",静かに始まって段々盛り上がって感動的に,Shizuka ni hajimatte dandan moriagatte kandou-teki ni,"Starts quietly, gradually builds, becomes moving",2-14-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+26,5,5,E-6,"1'18""","1'18""","1'18""",ものすごい感動（ドラマチックに）,Monosugoi kandou (doramachikku ni),Tremendous emotion (dramatic),1-31,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+27,5,6,E-7,"1'18""半","1'18.5""","1'18.5""",わくわく好奇心·楽しいショッピング（女子学生）,"Wakuwaku koukishin, tanoshii shoppingu (joshi gakusei)",Excited curiosity; fun shopping (schoolgirls),1-5,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+28,5,7,E-8,"1'26""半","1'26.5""","1'26.5""",コミカルな悪企み（やってやろうかという感じ）,Komikaru na warudakumi (yatte yarou ka to iu kanji),"Comical scheming (like ""Shall I do it?"")",1-23,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+29,5,8,E-9,"1'22""半","1'22.5""","1'22.5""",寂しさ・孤独・一人ぼっち,"Sabishisa, kodoku, hitoribotchi","Sadness, loneliness, all alone",1-32,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+30,5,9,E-10,"1'23""","1'23""","1'23""",失敗してしょんぼりした感じ（コミカル）,Shippai shite shonbori shita kanji (komikaru),A dejected feel after failing (comical),1-25,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+31,5,10,E-11,"1'11""半","1'11.5""","1'11.5""",悲しみ・センチメンタル　（大袈裟じゃないけどドラマチック）,"Kanashimi, senchimentaru (oogesa ja nai kedo doramachikku)","Sorrow, sentimental (not exaggerated, but dramatic)",1-36,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+32,5,11,E-12,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+33,5,12,E-13,"1'10""","1'10""","1'10""",絶望感〈頭J-18・（不気味）（悪の登場）のブリッジ付〉,Zetsuboukan [atama J-18 (bukimi) (aku no toujou) no burijji tsuki],Despair [with the J-18 bridge (eerie) (villain appears) at the start],2-17,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+34,5,13,E-14,"1'10""","1'10""","1'10""",コミカルな怒り（ブンブン）,Komikaru na ikari (bunbun),Comical anger (huffing),1-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+35,5,14,E-15,"1'26""","1'26""","1'26""",怒りバクハツ！（頭強め）アクション炸裂！,Ikari bakuhatsu! (atama tsuyome) akushon sakuretsu!,Anger explodes! (strong at the start) Action bursts out!,1-55,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+36,5,15,E-16,"1'31""","1'31""","1'31""",イライラした感じ　タイムサスペンス,"Iraira shita kanji, taimu sasupensu",An irritated feel; race-against-time suspense,1-39,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+37,5,16,E-17,"1'08""","1'08""","1'08""",張りつめた緊張感、不気味な静けさ,"Haritsumeta kinchoukan, bukimi na shizukesa","Taut tension, eerie silence",1-15,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+38,5,17,E-18,"1'14""","1'14""","1'14""",かすかな不安,Kasuka na fuan,Faint anxiety,1-13,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+39,5,18,E-19,"1'16""半","1'16.5""","1'16.5""",苦しみ（心理的）（バイオリンソロ入り）,Kurushimi (shinri-teki) (baiorin soro-iri),Suffering (psychological) (with violin solo),1-52,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+40,5,19,E-20,"55""","55""","55""",力強い決意（UPテンポ）,Chikarazuyoi ketsui (UP tenpo),Strong resolve (up-tempo),2-22-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+41,5,20,E-21,"1'02""半","1'02.5""","1'02.5""",陰謀・悪の企み・スローサスペンス,"Inbou, aku no takurami, suroo sasupensu","Plot, evil scheme, slow suspense",1-37,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+42,5,21,E-22,"1'28""","1'28""","1'28""",迫りくる恐怖（静かめから段々と…）,Semarikuru kyoufu (shizukame kara dandan to…),"Approaching terror (from fairly quiet, gradually…)",1-54,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+43,6,0,F-1,"1'16""半","1'16.5""","1'16.5""",日常的な一日（お話）の始まり,Nichijou-teki na ichinichi (ohanashi) no hajimari,The start of an ordinary day (story),1-47,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+44,6,1,F-2,"1'15""半","1'15.5""","1'15.5""",爽やかなの清々しさ〈頭にブリッジ付〉,Sawayaka na no sugasugashisa [atama ni burijji tsuki],Fresh and refreshing [with a bridge at the start],1-9,\N,\N,\N,\N,\N,\N,\N,\N,\N,爽やかなの,爽やかな,\N,"Stray の: 爽やかな清々しさ reads ""fresh, refreshing""; 爽やかなの is ungrammatical."
+45,6,2,F-3,"1'25""","1'25""","1'25""",のんびりゴロゴロ昼寝でも…,Nonbiri gorogoro hirune de mo…,"Lazing around, maybe a nap…",1-44,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+46,6,3,F-4,"1'21""","1'21""","1'21""",夕暮れ時、ちょっぴり寂しく物思いにふける,"Yuugure-doki, choppiri sabishiku monoomoi ni fukeru","Dusk: a little lonely, lost in thought",1-50,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+47,6,4,F-5,"50""","50""","50""",静かな夜（星空）,Shizuka na yoru (hoshizora),A quiet night (starry sky),1-19,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+48,6,5,F-6,"1'11""","1'11""","1'11""",明るく元気な生徒達（登校の雰囲気）,Akaruku genki na seito-tachi (toukou no fun'iki),"Cheerful, energetic students (on the way to school)",1-10,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+49,6,6,F-7,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+50,6,7,F-8,"59""半","59.5""","59.5""",和服でお淑やかに（琴音）〈頭に登場ブリッジ付〉,Wafuku de oshitoyaka ni (koto-ne) [atama ni toujou burijji tsuki],Graceful in kimono (koto sounds) [with an entrance bridge at the start],4-19-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+51,6,8,F-9,"1'22""","1'22""","1'22""",不良（やくざ）の登場〈頭に恐いブリッジ付〉,Furyou (yakuza) no toujou [atama ni kowai burijji tsuki],A thug (yakuza) appears [with a scary bridge at the start],1-6,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+52,6,9,F-10,"1'29""","1'29""","1'29""",不思議な予感（神秘的に）,Fushigi na yokan (shinpi-teki ni),A strange premonition (mysterious),1-38,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+53,6,10,F-11,"1'42""半","1'42.5""","1'42.5""",月の世界（SFX風・神秘的・ファンタジー）,"Tsuki no sekai (SFX-fuu, shinpi-teki, fantajii)","The world of the Moon (SFX-like, mysterious, fantasy)",1-20,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+54,6,11,F-12,"1'03""半","1'03.5""","1'03.5""",殺伐とした大都会,Satsubatsu to shita daitokai,"A bleak, cutthroat big city",1-16,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+55,6,12,F-13,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+56,6,13,F-14,"1'18""半","1'18.5""","1'18.5""",美しき悪〈頭J-19・（派手な）（悪の登場）のブリッジ付〉,Utsukushiki aku [atama J-19 (hade na) (aku no toujou) no burijji tsuki],Beautiful evil [with the J-19 bridge (flashy) (villain appears) at the start],2-21,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+57,6,14,F-15,"1'23""","1'23""","1'23""",強大な悪の力　〈頭J-17（物凄く恐ろしいもの出現！）付〉,Kyoudai na aku no chikara [atama J-17 (monosugoku osoroshii mono shutsugen!) tsuki],Mighty power of evil [with J-17 (something terrifying appears!) at the start],2-19,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+58,7,0,G-1,"1'10""","1'10""","1'10""",また遅刻だぁ〜　キャーキャー！（UPテンポ）,Mata chikoku daa ~ kyaakyaa! (UP tenpo),"Late again~ eek, eek! (up-tempo)",1-22,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+59,7,1,G-2,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+60,7,2,G-3,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+61,7,3,G-4,"1'10""","1'10""","1'10""",楽しいピクニック(UPテンポ)(チャールストン風),Tanoshii pikunikku (UP tenpo) (Chaarusuton-fuu),A fun picnic (up-tempo) (Charleston style),\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+62,7,4,G-5,"1'08""","1'08""","1'08""",ワクワク・デート（ラブコメ風）,Wakuwaku deeto (rabukome-fuu),Exciting date (rom-com style),1-24,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+63,7,5,G-6,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+64,7,6,G-7,"1'16""","1'16""","1'16""",特訓・根性！根性！,"Tokkun, konjou! Konjou!",Special training: guts! Guts!,1-27,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+65,7,7,G-8,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+66,7,8,G-9,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+67,7,9,G-10,"1'55""","1'55""","1'55""",大パニック,Dai-panikku,Big panic,1-41,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+68,7,10,G-11,"1'12""","1'12""","1'12""",格好よく正義の味方〜活躍（ちょっと大袈裟）,Kakkoyoku seigi no mikata ~ katsuyaku (chotto oogesa),A cool champion of justice ~ in action (a bit exaggerated),1-8,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+69,7,11,G-12,"1'08""","1'08""","1'08""",絶体絶命！（シリアスな追っかけ）（UPテンポ）,Zettai zetsumei! (shiriasu na okkake) (UP tenpo),Desperate situation! (a serious chase) (up-tempo),2-12-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+70,8,0,H-1,"39""半","39.5""","39.5""",変身パターン（コーラス入り）,Henshin pataan (koorasu-iri),Transformation pattern (with chorus),2-12-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+71,8,1,H-2,"58""","58""","58""",アクション（H-1からつながる）（コーラス入り）,Akushon (H-1 kara tsunagaru) (koorasu-iri),Action (continues from H-1) (with chorus),2-12-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+72,8,2,H-3,"1'33""半","1'33.5""","1'33.5""",不利な戦い,Furi na tatakai,A losing battle,2-12-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+73,8,3,H-4,"1'21""","1'21""","1'21""",必殺技で勝利（ムーンティアラアクション）,Hissatsu-waza de shouri (Muun Tiara Akushon),Victory by special attack (Moon Tiara Action),2-14-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+74,8,4,H-5,"19""半","19.5""","19.5""",変装パターン,Hensou pataan,Disguise pattern,2-10-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+75,8,5,H-5b,"17""","17""","17""",H-5の尻cut outタイプ,H-5 no shiri cut out taipu,"H-5, version with the ending cut out",2-10-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+76,9,0,I-1,"40""","40""","40""",タキシード仮面のテーマ（カスタネット入り）,Takishiido Kamen no teema (kasutanetto-iri),Tuxedo Mask's theme (with castanets),1-35,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+77,9,1,I-2,"43""半","43.5""","43.5""",クインベリルのテーマ　（侵略者の女王・欲望の固まり）,"Kuin Beriru no teema (shinryakusha no joou, yokubou no katamari)","Queen Beryl's theme (queen of the invaders, a mass of greed)",2-8-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+78,10,0,J-1,"15""半","15.5""","15.5""",日常的（場面転換）,Nichijou-teki (bamen tenkan),Everyday (scene change),1-46,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+79,10,1,J-2,"15""半","15.5""","15.5""",コミカルに（場面転換）,Komikaru ni (bamen tenkan),Comical (scene change),1-43,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+80,10,2,J-3a,"17""","17""","17""",ファンファーレ→表彰式（ラッパのみ）,Fanfaare → hyoushoushiki (rappa nomi),Fanfare → awards ceremony (trumpets only),2-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+81,10,3,J-3b,"15""","15""","15""",ファンファーレ→運動会etc.女の子が好みそうな時,Fanfaare → undoukai etc. onna no ko ga konomisou na toki,"Fanfare → for sports days etc., when girls would like it",2-24-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+82,10,4,J-4,"14""","14""","14""",発見！　ジャジャーン！,Hakken! Jajaan!,Discovery! Ta-daah!,2-4-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+83,10,5,J-5,"13""半","13.5""","13.5""",スーパーヒーロー登場,Suupaa hiiroo toujou,A superhero appears,1-7,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+84,10,6,J-6,"17""半","17.5""","17.5""",大慌て（コミカル）,Ooawate (komikaru),Big panic (comical),1-21,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+85,10,7,J-7,"9""","9""","9""",ズッコケ,Zukkoke,Pratfall,1-4-2,2-4-2,\N,"Book prints 1-4-2; only the disc is wrong. The box-set tray card for Disc 2 lists track 4 as J4, J7, J20, J21, J3a, and the book prints J-4 as 2-4-1.",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+86,10,8,J-8,"18""","18""","18""",シラけて,Shiraketе,Deflated,1-51,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+87,10,9,J-9,"21""","21""","21""",憧れのあの人…,Akogare no ano hito…,The one I admire…,1-33,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+88,10,10,J-10,"16""半","16.5""","16.5""",可愛らしく,Kawairashiku,Cutely,1-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+89,10,11,J-11,"18""半","18.5""","18.5""",可憐に美しく,Karen ni utsukushiku,Lovely and beautiful,1-28,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+90,10,12,J-12,"17""半","17.5""","17.5""",謎めいた感じ（ミステリアス）,Nazomeita kanji (misuteriasu),Enigmatic (mysterious),1-18,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+91,10,13,J-13,"19""","19""","19""",寂しげに,Sabishige ni,Lonely,1-49,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+92,10,14,J-14,"16""","16""","16""",かすかな不安,Kasuka na fuan,Faint anxiety,1-12,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+93,10,15,J-15,"15""","15""","15""",闘志を燃やす（UPテンポ）,Toushi wo moyasu (UP tenpo),Burning with fighting spirit (up-tempo),1-26,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+94,10,16,J-16,"21""","21""","21""",衝撃的！（運命の出会い）（大ゲサ）,Shougeki-teki! (unmei no deai) (oogesa),Shocking! (a fateful meeting) (exaggerated),1-30,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+95,10,17,J-17,"24""","24""","24""",物凄く恐ろしいもの出現！,Monosugoku osoroshii mono shutsugen!,Something terrifying appears!,1-18,2-18,\N,Book prints 1-18; the box-set tray card for Disc 2 lists J17 as track 18; 1-18 is J-12's track.,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+96,10,18,J-18,"15""","15""","15""",悪の登場（不気味に）,Aku no toujou (bukimi ni),Evil appears (eerie),1-16,2-16,\N,Book prints 1-16; the box-set tray card for Disc 2 lists J18 as track 16.,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+97,10,19,J-19,"14""半","14.5""","14.5""",悪の登場（派手に）,Aku no toujou (hade ni),Evil appears (flashy),1-20,2-20,\N,Book prints 1-20; the box-set tray card for Disc 2 lists J19 as track 20.,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+98,10,20,J-20,"14""","14""","14""",ギャグタッチ　ビヨ〜ン,"Gyagu tatchi, biyoon",Gag touch: boing,1-4-3,2-4-3,\N,"Book prints 1-4-3; only the disc is wrong. The box-set tray card for Disc 2 lists track 4 as J4, J7, J20, J21, J3a, and the book prints J-4 as 2-4-1.",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+99,10,21,J-21,"11""","11""","11""",ビックリ！タッチ　コンガ,"Bikkuri! Tatchi, konga","Surprise! Stinger, conga",1-4-4,2-4-4,\N,"Book prints 1-4-4; only the disc is wrong. The box-set tray card for Disc 2 lists track 4 as J4, J7, J20, J21, J3a, and the book prints J-4 as 2-4-1.",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+100,10,22,J-22,"14""半","14.5""","14.5""",恐怖タッチ,Kyoufu tatchi,Terror stinger,1-40,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+101,11,0,K-1,"1'16""半","1'16.5""","1'16.5""",6話用　カセット音楽,6-wa-you kasetto ongaku,Cassette music for episode 6,3-13-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+102,11,1,K-2,"46""","46""","46""","""セーラーV・ゲーム""用ゲーム音楽","""Seeraa V Geemu""-you geemu ongaku","Game music for the ""Sailor V Game""",10-29-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+103,11,2,K-2b,"37""","37""","37""",K-2のUPテンポタイプ,K-2 no UP tenpo taipu,Up-tempo version of K-2,10-29-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+104,12,0,B-3B,"1'45""","1'45""","1'45""",B-3（恋に悩む・乙女心）のリズムぬき,B-3 (koi ni nayamu otomegokoro) no rizumu-nuki,B-3 (maiden heart troubled by love) without rhythm,2-23-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+105,12,1,D-1B,"1'19""","1'19""","1'19""",D-1（穏やかに）のリズムぬき,D-1 (odayaka ni) no rizumu-nuki,D-1 (calmly) without rhythm,10-29-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+106,12,2,D-4B,"1'42""","1'42""","1'42""",D-4（感動的に）のブラスぬき,D-4 (kandou-teki ni) no burasu-nuki,D-4 (movingly) without brass,10-29-5,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+107,12,3,E-8B,"1'25""","1'25""","1'25""",E-8（コミカルな悪企み）のハーモニカぬき,E-8 (komikaru na warudakumi) no haamonika-nuki,E-8 (comical scheming) without harmonica,2-8-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+108,12,4,E-19B,"1'14""","1'14""","1'14""",E-19（苦しみ）のリズムぬき,E-19 (kurushimi) no rizumu-nuki,E-19 (suffering) without rhythm,2-22-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+109,12,5,F-4B,"1'18""","1'18""","1'18""",F-4（ちょっぴり寂しく）のくりかえしより　リズム有り,"F-4 (choppiri sabishiku) no kurikaeshi yori, rizumu ari","F-4 (a little lonely), from the repeat, with rhythm",2-5-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+110,12,6,F-4B',"1'18""","1'18""","1'18""",F-4（ちょっぴり寂しく）の全部リズムぬき,F-4 (choppiri sabishiku) no zenbu rizumu-nuki,"F-4 (a little lonely), rhythm removed throughout",2-5-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+111,12,7,F-5B,\N,\N,\N,F-5のピアノ抜き,F-5 no piano-nuki,F-5 without piano,3-11-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+112,12,8,F-8B,"58""","58""","58""",F-8（和服でお淑やかに）の尺八ぬき,F-8 (wafuku de oshitoyaka ni) no shakuhachi-nuki,F-8 (graceful in kimono) without shakuhachi,4-19-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+113,12,9,F-11B,"24""","24""","24""",F-11（月の世界）のリズムぬき,F-11 (tsuki no sekai) no rizumu-nuki,F-11 (world of the Moon) without rhythm,2-22-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+114,12,10,G-7B,"1'04""","1'04""","1'04""",G-7（特訓！）の盛り上がりコーダーcut,G-7 (tokkun!) no moriagari koodaa cut,G-7 (special training!) with the climactic coda cut,10-29-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+115,12,11,G-11B,"1'10""","1'10""","1'10""",G-11（格好よく正義の味方）のリズムぬき,G-11 (kakkoyoku seigi no mikata) no rizumu-nuki,G-11 (cool champion of justice) without rhythm,2-24-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+116,12,12,J-12B,"1'05""","1'05""","1'05""",J-12（謎めいた感じ）のピアノぬき,J-12 (nazomeita kanji) no piano-nuki,J-12 (mysterious feel) without piano,3-11-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+117,13,0,—,"2'52""","2'52""","2'52""",ムーンライト伝説,Muunraito Densetsu,Moonlight Legend,2-25,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+118,13,1,—,"4'20""","4'20""","4'20""",合コトバはムーン・プリズム・パワー・メイクアップ！,Aikotoba wa Muun Purizumu Pawaa Meikuappu!,The Password Is Moon Prism Power Make Up!,2-11,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+119,13,2,—,"4'02""","4'02""","4'02""",プリンセス・ムーン,Purinsesu Muun,Princess Moon,2-29,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+120,13,3,—,"4'27""","4'27""","4'27""",ほっとけないよ,Hottokenai yo,I Can't Leave You Alone,3-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+121,13,4,—,"4'43""","4'43""","4'43""",愛のエナジーを奪え,Ai no Enajii wo Ubae,Steal the Energy of Love,2-9,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+122,13,5,—,"4'53""","4'53""","4'53""",タキシード・ナイト,Takishiido Naito,Tuxedo Knight,8-22,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+123,13,6,—,"3'37""","3'37""","3'37""",ルナ！,Runa!,Luna!,8-23,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+124,13,7,—,"4'38""","4'38""","4'38""",月にかわっておしおきよ,Tsuki ni Kawatte Oshioki yo,"In the Name of the Moon, I'll Punish You",2-13,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+125,13,8,—,"4'29""","4'29""","4'29""",幻の銀水晶〜シルバークリスタル,Maboroshi no Ginzuishou ~ Shirubaa Kurisutaru,The Illusionary Silver Crystal ~ Silver Crystal,2-15,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+126,13,9,—,"3'36""","3'36""","3'36""",HEART MOVING,HEART MOVING,HEART MOVING,2-28,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+127,13,10,—,"5'09""","5'09""","5'09""",夢見るだけじゃダメ,Yumemiru Dake ja Dame,Just Dreaming Isn't Enough,2-6,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+128,14,0,M-101,"1'31""","1'31""","1'31""",悲しみ（ピアノ）（ストリングス）,Kanashimi (piano) (sutoringusu),Sorrow (piano) (strings),3-1-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+129,15,0,M-102,"1'32""","1'32""","1'32""",明るく元気に　アップテンポ,"Akaruku genki ni, appu tenpo","Bright and energetic, up-tempo",EX-9-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+130,15,1,M-103,"1'50""","1'50""","1'50""",ロマンチックに,Romanchikku ni,Romantically,3-13-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+131,15,2,M-103B,"1'50""","1'50""","1'50""",M-103のシンセとエレキのみ,M-103 no shinse to ereki nomi,"M-103, synth and electric guitar only",3-13-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+132,15,3,M-104,"1'30""半","1'30.5""","1'30.5""",感動的に,Kandou-teki ni,Movingly,R-8-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+133,16,0,M-105A,"10""","10""","10""",アイキャッチ2用（宇田さん演出）（テンポ有り）,Aikyatchi 2-you (Uda-san enshutsu) (tenpo ari),For Eyecatch 2 (directed by Uda) (with tempo),3-8-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+134,16,1,M-105B,"10""","10""","10""",アイキャッチ1用（小坂さん演出）（怪しげ）,Aikyatchi 1-you (Kosaka-san enshutsu) (ayashige),For Eyecatch 1 (directed by Kosaka) (mysterious),3-11-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+135,17,0,M-106,"1'49""","1'49""","1'49""",明るく楽しく良かったね（学園生活等、日常的）,"Akaruku tanoshiku yokatta ne (gakuen seikatsu-tou, nichijou-teki)","Bright, fun, ""That turned out well"" (school life, etc.; everyday)",3-17-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+136,17,1,M-107,"1'57""","1'57""","1'57""",やっぱりどんくさいうさぎ（すっごくコミカル）,Yappari donkusai Usagi (suggoku komikaru),"Usagi, klutzy as ever (very comical)",3-3-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+137,17,2,M-108,"1'38""","1'38""","1'38""",温かく見守る感じ（フルート）,Atatakaku mimamoru kanji (furuuto),Warmly watching over (flute),3-17-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+138,18,0,M-109,"38""","38""","38""",変身パターン（コーラスいり）,Henshin pataan (koorasu-iri),Transformation pattern (with chorus),3-15-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+139,18,1,M-109B,"38""","38""","38""",M-109のコーラスぬき,M-109 no koorasu-nuki,M-109 without chorus,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+140,18,2,M-110,"1'28""半","1'28.5""","1'28.5""",アクション　5人の戦士の活躍（M-109とつながる）,"Akushon, go-nin no senshi no katsuyaku (M-109 to tsunagaru)",Action: the five Guardians in action (continues from M-109),3-15-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+141,18,3,M-110B,"1'28""半","1'28.5""","1'28.5""",M-110のコーラスぬき,M-110 no koorasu-nuki,M-110 without chorus,8-21-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+142,18,4,M-111,"1'24""","1'24""","1'24""",必殺技（オモチャのSEとO.Lする）,Hissatsu-waza (omocha no SE to O.L suru),Special attack (overlaps with the toy sound effect),3-15-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+143,18,5,M-111B,"1'24""","1'24""","1'24""",M-111のコーラスぬき,M-111 no koorasu-nuki,M-111 without chorus,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+144,19,0,M-112,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+145,19,1,M-113,"1'25""半","1'25.5""","1'25.5""",シラケた感じ（コミカル）（のんびり）（汗ジト風）,Shiraketa kanji (komikaru) (nonbiri) (ase jito-fuu),Deflated feel (comical) (leisurely) (cold-sweat style),3-3-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+146,19,2,M-114,"1'33""","1'33""","1'33""",大きな悲しみ（心の奥からうち震えている）　（オーバーめ）,Ooki na kanashimi (kokoro no oku kara uchifurueteiru) (oobaame),Great sorrow (trembling from the depths of the heart) (fairly over the top),3-12-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+147,19,3,M-114B,"28""","28""","28""",M-114冒頭のピアノソロのみバージョン,M-114 boutou no piano soro nomi baajon,Version of M-114 with only the opening piano solo,3-12-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+148,19,4,M-115,"57""","57""","57""",悲しみから〜どんどん盛り上がって最後勇気に変わる,Kanashimi kara ~ dondon moriagatte saigo yuuki ni kawaru,"From sorrow ~ building steadily, finally turning into courage",3-12-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+149,19,5,M-116,"1'18""半","1'18.5""","1'18.5""",辛さ（戦いたいけれど、助けたいけれど、心の葛藤）,"Tsurasa (tatakaitai keredo, tasuketai keredo, kokoro no kattou)","Pain (wanting to fight, wanting to help: inner conflict)",3-14-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+150,19,6,M-117,"1'26""半","1'26.5""","1'26.5""",うっとり夢心地　（恋人との時を夢見る、ゆったりした様）,"Uttori yumegokochi (koibito to no toki wo yumemiru, yuttari shita sama)",Enraptured and dreamy (dreaming of time with a lover; relaxed),3-9-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+151,19,7,M-117B,"1'17""","1'17""","1'17""",M-117のリズムきざみなし　バイオリンソロ,"M-117 no rizumu kizami nashi, baiorin soro",M-117 without rhythmic pulse; violin solo,3-9-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+152,19,8,M-118,"1'28""半","1'28.5""","1'28.5""",セーラー戦士の使命感力強くそして美しい,"Seeraa senshi no shimeikan, chikarazuyoku soshite utsukushii","The Sailor Guardians' sense of mission, powerful and beautiful",3-12-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+153,19,9,M-119,"1'46""半","1'46.5""","1'46.5""",さし迫った恋心（思い込みの激しい）（大げさ）,Sashisematta koigokoro (omoikomi no hageshii) (oogesa),Urgent love (intensely one-sided) (exaggerated),3-9-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+154,19,10,M-120,"1'49""半","1'49.5""","1'49.5""",温かい友情（学園生活の中で）,Atatakai yuujou (gakuen seikatsu no naka de),Warm friendship (in school life),3-9-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+155,19,11,M-121,"2'05""","2'05""","2'05""",月の王国のテーマ　（伝説的、回想的、ゆったり、美しく静か）,"Tsuki no oukoku no teema (densetsu-teki, kaisou-teki, yuttari, utsukushiku shizuka)","Theme of the Moon Kingdom (legendary, reminiscent, unhurried, beautiful and quiet)",3-16-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+156,19,12,M-122,"2'03""","2'03""","2'03""",愛のテーマ（Rのテーマ的）　広く大きな全人類的な愛,"Ai no teema (R no teema-teki), hiroku ooki na zenjinrui-teki na ai","Love theme (like the theme of R): a broad, great love for all humanity",3-16-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+157,19,13,M-122B,"2'03""","2'03""","2'03""",M-122のコーラスぬき,M-122 no koorasu-nuki,M-122 without chorus,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+158,19,14,M-123,"1'39""","1'39""","1'39""",頭から強めの危機!!　助けて!!,Atama kara tsuyome no kiki!! Tasukete!!,"Danger, strong from the start!! Help!!",3-14-5,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+159,19,15,M-124,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+160,19,16,M-125,"1'28""半","1'28.5""","1'28.5""",不気味な静けさ、闇のイメージ　重低音SE的,"Bukimi na shizukesa, yami no imeeji, juuteion SE-teki",Eerie silence; image of darkness; like a deep-bass sound effect,3-7-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+161,19,17,M-126,"1'45""半","1'45.5""","1'45.5""",おどろおどろしい怖さ、暗闇で生き物　（魔界樹イメージ）うごめく,"Odoroodoroshii kowasa, kurayami de ikimono (Makaiju imeeji) ugomeku",Eerie fear: something living stirs in the dark (image of the Makai Tree),3-7-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+162,19,18,M-127,"1'28""","1'28""","1'28""",エイルとアンの過去の記憶…懐かしく幻想的　（ブルガリアンボイス風）,Eiru to An no kako no kioku… natsukashiku gensou-teki (Burugarian boisu-fuu),Ail and An's memories of the past… nostalgic and dreamlike (Bulgarian-voices style),3-6-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+163,19,19,M-128A,"1'32""","1'32""","1'32""",エイルの吹くフルート　普段日常吹く場合、しゃれた感じ,"Eiru no fuku furuuto, fudan nichijou fuku baai, shareta kanji",The flute Ail plays in everyday moments; stylish,R-5-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+164,19,20,M-128B,"22""","22""","22""",エイルの吹くフルート　カードから魔力を出す時　やや明るめ,"Eiru no fuku furuuto, kaado kara maryoku wo dasu toki, yaya akarume",The flute Ail plays when drawing magic from a card; somewhat bright,EX-11-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+165,19,21,M-128C,"23""","23""","23""",エイルの吹くフルート　尻高音になる　怪しげ,"Eiru no fuku furuuto, shiri kouon ni naru, ayashige",The flute Ail plays; ends on a high note; suspicious,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+166,19,22,M-128D,"23""","23""","23""",エイルの吹くフルート　M-128CのF.D細工したバージョン,"Eiru no fuku furuuto, M-128C no F.D saiku shita baajon",The flute Ail plays: version of M-128C processed with a fade,3-5-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+167,19,23,M-129A,"1'37""半","1'37.5""","1'37.5""",敵側のテーマ・人間的じゃなく無感情な,"Teki-gawa no teema, ningen-teki ja naku mukanjou na","The enemy side's theme: not human, emotionless",3-14-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+168,19,24,M-129B,"1'03""半","1'03.5""","1'03.5""",敵側のテーマ・悪だけど美しい　アラブ風,"Teki-gawa no teema, aku da kedo utsukushii, Arabu-fuu","The enemy side's theme: evil but beautiful, Arabian style",R-3-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+169,19,25,M-129C,"53""半","53.5""","53.5""",M-129の曲を吹くエイルのフルートソロ　（ノーマル）,M-129 no kyoku wo fuku Eiru no furuuto soro (noomaru),Ail's flute solo playing M-129 (normal),3-5-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+170,19,26,M-129D,"53""半","53.5""","53.5""",M-129のF.D細工したバージョン,M-129 no F.D saiku shita baajon,Version of M-129 processed with a fade,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+171,19,27,M-130,"1'25""","1'25""","1'25""",異空間　タロット館内の不思議でちょっと怪しげな空気,"Ikuukan, Tarotto-kan-nai no fushigi de chotto ayashige na kuuki","Another dimension: the strange, slightly suspicious air inside the Tarot House",3-5-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+172,19,28,M-131,"1'55""半","1'55.5""","1'55.5""",悪の陰謀、企み,"Aku no inbou, takurami",Evil plot and scheme,3-7-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+173,19,29,M-131B,"1'37""半","1'37.5""","1'37.5""",M-131のかなりゆっくりバージョン,M-131 no kanari yukkuri baajon,Much slower version of M-131,3-7-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+174,19,30,M-132,"1'49""半","1'49.5""","1'49.5""",敵の圧倒的な強さ（クラシック調）　大げさでものものしい,"Teki no attou-teki na tsuyosa (kurashikku-chou), oogesa de monomonoshii","The enemy's overwhelming strength (classical style), exaggerated and imposing",3-6-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+175,20,0,M-133,"40""半","40.5""","40.5""",白き月影の騎士（月影のナイト）のテーマ,Shiroki Tsukikage no Kishi (Tsukikage no Naito) no teema,Theme of the White Moonlight Knight,3-1-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+176,20,1,M-133B,"40""半","40.5""","40.5""",M-133のメロディラインのみ,M-133 no merodi rain nomi,"M-133, melody line only",8-21-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+177,20,2,M-134,"1'35""半","1'35.5""","1'35.5""",新しい敵のテーマ（オルガン調）,Atarashii teki no teema (orugan-chou),New enemy theme (organ style),3-14-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+178,20,3,M-134B,"1'35""半","1'35.5""","1'35.5""",M-134のオルガンのみ,M-134 no orugan nomi,"M-134, organ only",3-14-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+179,20,4,M-135,"1'37""","1'37""","1'37""",うさぎの妹分　明るくてきゃぴきゃぴした子,"Usagi no imoutobun, akarukute kyapikyapi shita ko","Usagi's little-sister figure: a cheerful, bubbly girl",3-11-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+180,20,5,M-136,"28""","28""","28""","新""月に代わっておしおきよ！""曲","Shin ""Tsuki ni Kawatte Oshioki yo!"" kyoku","New ""In the name of the Moon, I'll punish you!"" music",3-15-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+181,20,6,M-105B SE,\N,\N,\N,SE用,SE-you,For sound effects,3-11-5,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+182,21,0,—,"3'13""","3'13""","3'13""",乙女のポリシー,Otome no Porishii,A Maiden's Policy,3-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+183,21,1,—,"4'37""","4'37""","4'37""",好きと言って,Suki to Itte,Say You Love Me,3-10,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+184,22,0,M-301,"1'46""","1'46""","1'46""",温かく感動的,Atatakaku kandou-teki,Warm and moving,4-11-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+185,22,1,M-302,"1'03""","1'03""","1'03""",不安感漂う　スローでマイナー,"Fuankan tadayou, suroo de mainaa",Unease in the air; slow and in a minor key,4-11-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+186,23,0,M-303,"2'03""","2'03""","2'03""",しみじみとやわらかく　ノスタルジックに　淋しい感じ,"Shimijimi to yawarakaku, nosutarujikku ni, sabishii kanji","Quietly moving and soft; nostalgic, lonely feel",4-15-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+187,23,1,M-303A,"2'03""","2'03""","2'03""",M-303　BASSヌキ,M-303 BASS-nuki,M-303 without bass,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+188,23,2,M-303B,"2'03""","2'03""","2'03""",M-303　BASS・DRUMSヌキ,M-303 BASS/DRUMS-nuki,M-303 without bass and drums,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+189,23,3,M-303C,"2'03""","2'03""","2'03""",M-303　PIANOソロ,M-303 PIANO soro,"M-303, piano solo",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+190,23,4,M-304,"1'54""","1'54""","1'54""",ロマンチックに　日常使用可程度　うさぎと衛　盛り上がる愛,"Romanchikku ni, nichijou shiyou ka teido, Usagi to Mamoru, moriagaru ai","Romantic, usable in everyday scenes: Usagi and Mamoru's growing love",4-15-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+191,23,5,M-304A,"1'54""","1'54""","1'54""",M-304　DRUMSヌキ,M-304 DRUMS-nuki,M-304 without drums,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+192,24,0,M-305,"31""","31""","31""",セーラームーン変身　（コーラス入り）,Seeraa Muun henshin (koorasu-iri),Sailor Moon transformation (with chorus),4-12-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+193,24,1,M-305A,"31""","31""","31""",M-305　コーラスヌキ,M-305 koorasu-nuki,M-305 without chorus,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+194,24,2,M-306,"2'07""","2'07""","2'07""",全戦士変身&戦い（M-305からつづく）,Zen-senshi henshin & tatakai (M-305 kara tsuzuku),All Guardians transform & battle (continues from M-305),4-12-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+195,24,3,M-307,"1'36""","1'36""","1'36""",ウラヌス&ネプチューン&プルート変身　（大人っぽく、ミステリアス、気高く）,"Uranusu & Nepuchuun & Puruuto henshin (otona-ppoku, misuteriasu, kedakaku)","Uranus, Neptune and Pluto transform (mature, mysterious, noble)",4-10-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+196,24,4,M-308,"51""","51""","51""",ムーンスパイラルハートアタック!!　（コーラス入り）,Muun Supairaru Haato Atakku!! (koorasu-iri),Moon Spiral Heart Attack!! (with chorus),4-12-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+197,24,5,M-309,"49""","49""","49""",セーラームーン二段変身後の必殺技　M-308　バージョンアップ（コーラス入り）,"Seeraa Muun nidan henshin-go no hissatsu-waza, M-308 baajon appu (koorasu-iri)",Sailor Moon's special attack after her second-stage transformation; upgraded M-308 (with chorus),4-21-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+198,25,0,M-310,"1'15""","1'15""","1'15""",聖杯―神秘の伝説、ミステリアスに,"Seihai, shinpi no densetsu, misuteriasu ni","The Holy Grail: a mystical legend, mysterious",S-1-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+199,25,1,M-311,"38""半","38.5""","38.5""",超祖神からの啓示、救世主（メシア）の出現　イノセント、M-330B対比（コーラス入り）,"Chousoshin kara no keiji, kyuuseishu (Meshia) no shutsugen, inosento, M-330B taihi (koorasu-iri)","Revelation from the supreme ancestral god: the Savior (Messiah) appears; innocent, contrasting with M-330B (with chorus)",S-1-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+200,25,2,M-311A,"1'51""","1'51""","1'51""",M-311+M-310バージョン（コーラス入り）,M-311 + M-310 baajon (koorasu-iri),M-311 + M-310 version (with chorus),4-18,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+201,25,3,M-312,"1'36""","1'36""","1'36""",戦士の宿命　少しつらい使命感　使命感はあるがあまり戦いたくないつらさ,"Senshi no shukumei, sukoshi tsurai shimeikan, shimeikan wa aru ga amari tatakaitakunai tsurasa",A Guardian's fate: a slightly painful sense of duty; the pain of having a mission but not really wanting to fight,4-14-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+202,25,4,M-313,"1'31""","1'31""","1'31""",敵の企み、悪の胎動、静かに重々しく　土萠教授研究所のアジトBGM、怪しく,"Teki no takurami, aku no taidou, shizuka ni omoomoshiku, Tomoe-kyouju kenkyuujo no ajito BGM, ayashiku","The enemy's scheme; evil stirring, quiet and grave; BGM for Professor Tomoe's laboratory hideout, sinister",4-6-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+203,25,5,M-314,"1'36""","1'36""","1'36""","敵の野望、悪の企み　おどろおどろしく　""今度こそは……""的（次回へのヒキ）","Teki no yabou, aku no takurami, odoroodoroshiku ""Kondo koso wa……""-teki (jikai e no hiki)","The enemy's ambition, evil scheme, eerie, like ""This time for sure……"" (hook for the next episode)",4-8-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+204,25,6,M-315,"36""","36""","36""",謎の戦士（ウラヌス、ネプチューン）登場　（正義じゃないけど優雅で格好良い）,"Nazo no senshi (Uranusu, Nepuchuun) toujou (seigi ja nai kedo yuuga de kakkoii)","The mysterious Guardians (Uranus, Neptune) appear (not heroes, but elegant and cool)",4-10-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+205,25,7,M-316,"1'29""","1'29""","1'29""",謎の戦士（ウラヌス、ネプチューン）活躍　アクション（ピアノ+バイオリン）,"Nazo no senshi (Uranusu, Nepuchuun) katsuyaku, akushon (piano + baiorin)","The mysterious Guardians (Uranus, Neptune) in action (piano + violin)",4-10-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+206,26,0,M-317,"8""","8""","8""",サブタイトル,Sabutaitoru,Subtitle,4-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+207,26,1,M-318,"10""","10""","10""",アイキャッチ（A・B共通）（コーラス入り）,Aikyatchi (A/B kyoutsuu) (koorasu-iri),Eyecatch (shared by A and B parts) (with chorus),4-17,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+208,26,2,M-319,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+209,26,3,M-320,"29""","29""","29""",30秒用予告（コーラス入り）,30-byou-you yokoku (koorasu-iri),30-second next-episode preview (with chorus),4-23-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+210,26,4,M-320A,"29""","29""","29""",M-320　コーラスヌキ,M-320 koorasu-nuki,M-320 without chorus,4-23-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+211,26,5,M-321,"15""","15""","15""",15秒用予告（コーラス入り）,15-byou-you yokoku (koorasu-iri),15-second next-episode preview (with chorus),4-23-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+212,27,0,M-322,"1'14""","1'14""","1'14""",明るい日常、のんびり、ほのぼの,"Akarui nichijou, nonbiri, honobono","Bright everyday life, relaxed, heartwarming",4-4-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+213,27,1,M-323,"2'15""半","2'15.5""","2'15.5""",さわやかな朝、気持ちのいいすがすがしさ,"Sawayaka na asa, kimochi no ii sugasugashisa",A crisp morning; pleasant and refreshing,S-3-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+214,27,2,M-324,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+215,27,3,M-325,"2'01""","2'01""","2'01""",幼い子供同士（ちびうさとほたる）の友情　心にしみる友情、優しく温かく励まされて,"Osanai kodomo doushi (Chibiusa to Hotaru) no yuujou, kokoro ni shimiru yuujou, yasashiku atatakaku hagemasarete","Friendship between little children (Chibi-Usa and Hotaru): a touching friendship, gently and warmly encouraged",4-19-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+216,27,4,M-326,"1'49""","1'49""","1'49""",将来を夢見る年頃の少女 うっとりと空想に　ふける（ロマンチックじゃなく　さわやか）,"Shourai wo yumemiru toshigoro no shoujo, uttori to kuusou ni fukeru (romanchikku ja naku sawayaka)","A girl at the age of dreaming about the future, lost in a daydream (refreshing rather than romantic)",4-4-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+217,27,5,M-327,"1'45""","1'45""","1'45""",わくわく期待感に（ドキドキ）胸踊る、元気なうさぎ,"Wakuwaku kitaikan ni (dokidoki) mune odoru, genki na Usagi","Excited anticipation (heart pounding), heart dancing; energetic Usagi",EX-16-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+218,27,6,M-327A,"1'45""","1'45""","1'45""",M-327のsaxヌキ,M-327 no sax-nuki,M-327 without sax,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+219,27,7,M-328,"1'31""","1'31""","1'31""",おかしな会話　かみあわず　スローコミカル,"Okashi na kaiwa, kamiawazu, suroo komikaru",A strange conversation that goes nowhere; slow comical,4-19-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+220,27,8,M-329,"1'40""半","1'40.5""","1'40.5""",恋人同士のいい雰囲気,Koibito doushi no ii fun'iki,A sweet mood between lovers,4-4-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+221,27,9,M-329A,"2'06""","2'06""","2'06""",M-329の頭にM-362（ハート目ピコピコ）付き,M-329 no atama ni M-362 (haato-me pikopiko) tsuki,M-329 with M-362 (heart-eyes blinking) at the start,S-6-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+222,27,10,M-330,"1'39""","1'39""","1'39""",不吉な予感、胸騒ぎ〜怪し気な雰囲気　暗雲たれこめるような不気味さ（世界崩壊）　〜重々しく危機迫る（3曲が一緒になってます）,"Fukitsu na yokan, munasawagi ~ ayashige na fun'iki, ankun tarekomeru you na bukimisa (sekai houkai) ~ omoomoshiku kiki semaru (3 kyoku ga issho ni nattemasu)","Ominous premonition, uneasiness ~ suspicious atmosphere, eeriness like gathering dark clouds (the world's collapse) ~ grave, danger closing in (three pieces combined into one)",4-20-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+223,27,11,M-330A,"50""","50""","50""",M-330の前半のみ、不吉な予感、胸騒ぎ,"M-330 no zenhan nomi, fukitsu na yokan, munasawagi","First half of M-330 only: ominous premonition, uneasiness",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+224,27,12,M-330B,"57""","57""","57""",M-330の後半のみ　スローバージョン,"M-330 no kouhan nomi, suroo baajon","Second half of M-330 only, slow version",4-1-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+225,27,13,M-331,"1'27""","1'27""","1'27""",みちるとはるかの日常　大人の雰囲気,"Michiru to Haruka no nichijou, otona no fun'iki",Michiru and Haruka's everyday life; grown-up atmosphere,4-5-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+226,27,14,M-331A,"1'27""","1'27""","1'27""",M-331の打ち込みDRUMSヌキ,M-331 no uchikomi DRUMS-nuki,M-331 without programmed drums,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+227,27,15,M-331B,"1'27""","1'27""","1'27""",M-331の弦、木管、チェンバロのみ,"M-331 no gen, mokkan, chenbaro nomi","M-331, strings, woodwinds and harpsichord only",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+228,27,16,M-332,"1'04""","1'04""","1'04""",非日常的な日常、上流階級の優雅さ,"Hi-nichijou-teki na nichijou, jouryuu kaikyuu no yuugasa",An extraordinary everyday life; upper-class elegance,4-5-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+229,27,17,M-333,"47""","47""","47""",緊張感、敵の潜む場所でのピリピリ,"Kinchoukan, teki no hisomu basho de no piripiri",Tension: on edge where the enemy lurks,4-7-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+230,27,18,M-334,"1'29""","1'29""","1'29""",緊張感、コミカルな緊張、出来の悪いテスト待つ,"Kinchoukan, komikaru na kinchou, deki no warui tesuto matsu","Tension: comical tension, awaiting a bad test result",EX-17-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+231,27,19,M-335,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+232,27,20,M-336,"1'52""半","1'52.5""","1'52.5""",忍びよる敵、静かに身をひそめるダイモーンの　卵+（ブリッジ）卵がとりつく時　不気味に　変形する恐ろしさ（ダイモーンの出現）,"Shinobiyoru teki, shizuka ni mi wo hisomeru Daimoon no tamago + (burijji) tamago ga toritsuku toki, bukimi ni henkei suru osoroshisa (Daimoon no shutsugen)",A creeping enemy: the Daimon egg lying quietly in wait + (bridge) when the egg takes hold: the horror of eerie transformation (a Daimon appears),4-7-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+233,27,21,M-337,"1'49""","1'49""","1'49""",対立、一触即発のにらみ合い（ムーン達vs　ウラヌス、ネプチューン）　不安感漂う、　これからどうなるの（M-366付き）,"Tairitsu, isshoku sokuhatsu no niramiai (Muun-tachi vs Uranusu, Nepuchuun), fuankan tadayou, kore kara dou naru no (M-366 tsuki)","Confrontation: a tense staredown (Moon and the others vs. Uranus and Neptune), unease in the air, what will happen now (with M-366)",4-14-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+234,27,22,M-338,"2'03""","2'03""","2'03""",静かに想いをめぐらせる　悲しくなく　盛り上がらず　淡々と,"Shizuka ni omoi wo megurasaseru, kanashiku naku, moriagarazu, tantan to","Quietly reflecting; not sad, not building, matter-of-fact",4-1-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+235,28,0,M-339,"2'04""","2'04""","2'04""",スピード感あふれる、F1等モータースポーツ　の雰囲気,"Supiido-kan afureru, F1-tou mootaa supootsu no fun'iki",Full of speed; the atmosphere of motorsports like F1,4-14-5,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+236,28,1,M-340,"1'33""半","1'33.5""","1'33.5""","追っかけ　コミカルにドタバタ　ややコミカルに決意""やってやろうじゃない""","Okkake, komikaru ni dotabata, yaya komikaru ni ketsui ""Yatte yarou ja nai""","Chase: comical slapstick; somewhat comical resolve, ""Let's do this""",4-4-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+237,28,2,M-341,"1'26""半","1'26.5""","1'26.5""",追っかけ　超シリアスに、つかまったら殺される,"Okkake, chou-shiriasu ni, tsukamattara korosareru",Chase: super serious; if they're caught they'll be killed,4-8-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+238,28,3,M-342,"1'53""","1'53""","1'53""",行動開始！　敵を追跡していく,Koudou kaishi! Teki wo tsuiseki shite iku,Making a move! Pursuing the enemy,4-9-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+239,28,4,M-342A,"1'53""","1'53""","1'53""",M-342　BRASS、HANDCLADヌキ,"M-342 BRASS, HANDCLAP-nuki",M-342 without brass and handclaps,4-9-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+240,28,5,M-343,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+241,28,6,M-344,"1'38""半","1'38.5""","1'38.5""",事件発生 何かが起きたのでは？ おそるおそる　のぞきこむ、疑惑 敵なの?味方なの? やや緊張,"Jiken hassei, nani ka ga okita no de wa? Osoruosoru nozokikomu, giwaku, teki na no? Mikata na no? Yaya kinchou",Something happens: has something occurred? Peeking in timidly; suspicion: enemy or ally? Somewhat tense,4-14-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+242,28,7,M-344A,"1'38""半","1'38.5""","1'38.5""",M-344　SAXヌキ,M-344 SAX-nuki,M-344 without sax,4-14-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+243,28,8,M-345,"1'42""","1'42""","1'42""",事件発生、敵が現れた！サスペンスタッチ,"Jiken hassei, teki ga arawareta! Sasupensu tatchi",Something happens: the enemy appears! Suspense touch,4-8-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+244,28,9,M-346,"1'36""","1'36""","1'36""",激闘、危機、敵が強くて歯がたたない、　手が出ない+（ブリッジ）不意打ち,"Gekitou, kiki, teki ga tsuyokute ha ga tatanai, te ga denai + (burijji) fuiuchi","Fierce fight, danger: the enemy is too strong to beat, nothing works + (bridge) a surprise attack",4-6-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+245,28,10,M-347,"1'47""半","1'47.5""","1'47.5""",激闘、大攻勢、必殺技炸裂,"Gekitou, daikousei, hissatsu-waza sakuretsu","Fierce fight, all-out offensive, special attack unleashed",5-13-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+246,29,0,M-348,"1'39""","1'39""","1'39""",一人でひっそりと涙にくれる静かな悲しみ,Hitori de hissori to namida ni kureru shizuka na kanashimi,"Quiet sorrow, weeping alone in secret",4-20-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+247,29,1,M-349,"2'57""","2'57""","2'57""",悲しみ、弱い自分がくやしい　強くなりたい！　〜決意、使命感に燃えてやる気を出す　〜どうしてこんな事に　悲しみから怒りへ　〜使命感徐々に高まる　負けるわけにはいかない,"Kanashimi, yowai jibun ga kuyashii, tsuyoku naritai! ~ ketsui, shimeikan ni moete yaruki wo dasu ~ doushite konna koto ni, kanashimi kara ikari e ~ shimeikan jojo ni takamaru, makeru wake ni wa ikanai","Sorrow; frustration at her own weakness; ""I want to be stronger!"" ~ resolve, fired up by her mission ~ ""How did it come to this?"", from sorrow to anger ~ sense of mission gradually rising; ""I can't lose""",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+248,29,2,M-351,"1'37""半","1'37.5""","1'37.5""",つらい別れ、大げさに悲しむ,"Tsurai wakare, oogesa ni kanashimu",A painful parting; exaggerated grief,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+249,29,3,M-352,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+250,29,4,M-353,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+251,29,5,M-354,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+252,29,6,M-355,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+253,29,7,M-356,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+254,29,8,M-357,"1'28""半","1'28.5""","1'28.5""",感動的な愛の奇跡、愛のテーマ,"Kandou-teki na ai no kiseki, ai no teema",A moving miracle of love; love theme,4-21-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+255,30,0,M-361,"21""","21""","21""",驚きタッチ、シリアスに（事件を見て等）,"Odoroki tatchi, shiriasu ni (jiken wo mite-tou)","Surprise stinger, serious (on seeing an incident, etc.)",4-13-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+256,30,1,M-362,"29""","29""","29""",ハート目ぴこぴこ ロマンチックに（ちょっとコミカル）,"Haato-me pikopiko, romanchikku ni (chotto komikaru)","Heart-eyes blinking, romantic (a little comical)",4-1-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+257,30,2,M-363,"32""半","32.5""","32.5""",不思議だけどキレイなモノ、心の結晶,"Fushigi da kedo kirei na mono, kokoro no kesshou",Something strange but beautiful: a heart crystal,4-13-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+258,30,3,M-364,"13""","13""","13""",セーラームーン パワーアップ二段変身の決めポーズ！,Seeraa Muun pawaa appu nidan henshin no kime poozu!,Sailor Moon's powered-up second-stage transformation pose!,4-21-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+259,30,4,M-365,\N,\N,\N,※欠番,※Ketsuban,※Unused number,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+260,30,5,M-366,"40""","40""","40""",不安感漂う これからどうなるの？ M-377冒頭,"Fuankan tadayou, kore kara dou naru no? M-377 boutou",Unease in the air: what will happen now? Opening of M-377,4-14-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+261,31,0,M-371,"1'10""","1'10""","1'10""",M-31のバイオリンソロ,M-31 no baiorin soro,Violin solo of M-31,4-5-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+262,31,1,M-372,"53""","53""","53""",M-32のバイオリンソロ,M-32 no baiorin soro,Violin solo of M-32,4-5-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+263,32,0,M-373,"3'19""半","3'19.5""","3'19.5""","みちるのバイオリンソロ""愛の悲しみ""","Michiru no baiorin soro ""Ai no Kanashimi""","Michiru's violin solo ""Liebesleid"" (Love's Sorrow)",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+264,32,1,M-374,"2'10""半","2'10.5""","2'10.5""","みちるとはるか""メヌエット""","Michiru to Haruka ""Menuetto""","Michiru and Haruka ""Minuet""",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+265,32,2,M-375,"3'26""半","3'26.5""","3'26.5""","みちるのバイオリンソロ""愛の喜び""","Michiru no baiorin soro ""Ai no Yorokobi""","Michiru's violin solo ""Liebesfreud"" (Love's Joy)",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+266,33,0,—,"3'34""","3'34""","3'34""",タキシード・ミラージュ,Takishiido Miraaju,Tuxedo Mirage,4-16,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+267,34,0,M-1,"8""","8""","8""",サブタイトル,Sabutaitoru,Subtitle,5-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+268,34,1,M-2,"10""","10""","10""",アイキャッチ（A・B共通）（コーラス入り）,Aikyatchi (A/B kyoutsuu) (koorasu-iri),Eyecatch (shared by A and B parts) (with chorus),5-17-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+269,34,2,M-2 コーラスヌキ,"10""","10""","10""",アイキャッチ（コーラスヌキ）,Aikyatchi (koorasu-nuki),Eyecatch (without chorus),5-17-2,\N,\N,\N,M-2 コーラスヌキ,M-2 koorasu-nuki,M-2 without chorus,\N,\N,\N,\N,\N,\N,\N
+270,34,3,M-3,"13""半","13.5""","13.5""",15秒用　予告,15-byou-you yokoku,15-second next-episode preview,5-23-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+271,34,4,M-4,"28""半","28.5""","28.5""",30秒用　予告,30-byou-you yokoku,30-second next-episode preview,5-23-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+272,35,0,M-9,"31""","31""","31""",セーラームーン、セーラーちびムーン　ダブル変身（コーラス入り）,"Seeraa Muun, Seeraa Chibi Muun daburu henshin (koorasu-iri)",Sailor Moon and Sailor Chibi Moon double transformation (with chorus),5-14-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+273,35,1,M-9 コーラスヌキ,"31""","31""","31""",〃（コーラスヌキ）,Onaji (koorasu-nuki),Ditto (without chorus),\N,\N,\N,\N,M-9 コーラスヌキ,M-9 koorasu-nuki,M-9 without chorus,\N,\N,\N,\N,\N,\N,\N
+274,35,2,M-10,"1'47""","1'47""","1'47""",変身から続く戦い,Henshin kara tsuzuku tatakai,Battle continuing from the transformation,5-22-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+275,35,3,M-11,"44""半","44.5""","44.5""",ムーンゴージャスメディテイション！ 必殺技,Muun Goojasu Mediteishon! Hissatsu-waza,Moon Gorgeous Meditation! Special attack,5-14-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+276,35,4,M-12,"24""","24""","24""",決め台詞　おしおきよ！,"Kimezerifu, oshioki yo!","Catchphrase: ""I'll punish you!""",5-14-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+277,36,0,M-13,"2'12""半","2'12.5""","2'12.5""",敵のテーマ　サーカス団BGM　（怪しく、哀しく、コミカル）,"Teki no teema, saakasu-dan BGM (ayashiku, kanashiku, komikaru)","Enemy theme: circus troupe BGM (sinister, sad, comical)",5-6-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+278,36,1,M-15,"1'29""半","1'29.5""","1'29.5""",敵のテーマ　ジルコニアの企み,"Teki no teema, Jirukonia no takurami",Enemy theme: Zirconia's scheme,5-6-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+279,36,2,M-16,"2'00""","2'00""","2'00""",アマゾンバーBGM（ノーマル）,Amazon Baa BGM (noomaru),Amazon bar BGM (normal),5-7-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+280,36,3,M-16 ラジオトーン,"2'00""","2'00""","2'00""",アマゾンバーBGM　（ラジオトーンに細工バージョン）,Amazon Baa BGM (rajio toon ni saiku baajon),Amazon bar BGM (version processed to sound like a radio),5-7-1,\N,\N,\N,M-16 ラジオトーン,M-16 rajio toon,M-16 radio tone,\N,\N,\N,\N,\N,\N,\N
+281,36,4,M-17,"1'37""半","1'37.5""","1'37.5""",敵のテーマ アマゾントリオ　自らの美貌に対する自信・余裕,"Teki no teema, Amazon Torio, mizukara no bibou ni taisuru jishin, yoyuu","Enemy theme: Amazon Trio, confidence and composure in their own good looks",5-8-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+282,36,5,M-18,"1'15""","1'15""","1'15""",敵のテーマ　アマゾントリオ　ナンパ手段　甘いささやき,"Teki no teema, Amazon Torio, nanpa shudan: amai sasayaki","Enemy theme: Amazon Trio, pick-up method: sweet whispers",5-8-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+283,36,6,M-19,"1'50""半","1'50.5""","1'50.5""",敵のテーマ アマゾントリオ ナンパ手段 泣き落し,"Teki no teema, Amazon Torio, nanpa shudan: nakiotoshi","Enemy theme: Amazon Trio, pick-up method: winning sympathy with tears",5-8-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+284,36,7,M-22,"1'22""","1'22""","1'22""",ペガサス　幻想的な美しさ,"Pegasasu, gensou-teki na utsukushisa",Pegasus: dreamlike beauty,5-1-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+285,36,8,M-24,"1'31""","1'31""","1'31""",ペガサス　軽快、颯爽と駆け巡る,"Pegasasu, keikai, sassou to kakemeguru","Pegasus: light and dashing, galloping around",5-13-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+286,36,9,M-25,"27""","27""","27""",M-24　Br.バージョン,M-24 Br. baajon,Bridge version of M-24,EX-22-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+287,36,10,M-27,"1'38""半","1'38.5""","1'38.5""",地底世界　水晶の森　美しい（回想的に使用）,"Chitei sekai, suishou no mori, utsukushii (kaisou-teki ni shiyou)","The underground world, the crystal forest, beautiful (used for flashbacks)",5-1-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+288,37,0,M-33,"1'40""","1'40""","1'40""",ちびうさの幼い恋、初恋の切なさ,"Chibiusa no osanai koi, hatsukoi no setsunasa",Chibi-Usa's young love; the ache of first love,5-4-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+289,37,1,M-33 別バージョン,"55""","55""","55""",M-33の頭の方のみ,M-33 no atama no hou nomi,Opening of M-33 only,5-4-2,\N,\N,\N,M-33 別バージョン,M-33 betsu baajon,M-33 alternate version,\N,\N,\N,\N,\N,\N,\N
+290,37,2,M-34,"21""","21""","21""",M-33　Br.バージョン,M-33 Br. baajon,Bridge version of M-33,EX-23-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+291,37,3,M-38,"20""","20""","20""",大きな不安　Br.バージョン,"Ooki na fuan, Br. baajon","Great anxiety, bridge version",EX-23-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+292,37,4,M-39,"25""","25""","25""",大きな不安　Br.バージョン,"Ooki na fuan, Br. baajon","Great anxiety, bridge version",EX-23-5,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+293,37,5,M-40,1'32半,1'32.5,1'32.5,高まる不安　Br.バージョン,"Takamaru fuan, Br. baajon","Growing anxiety, bridge version",5-12-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+294,37,6,M-40 ストリングスヌキ,1'32半,1'32.5,1'32.5,M-40のストリングスヌキ,M-40 no sutoringusu-nuki,M-40 without strings,5-12-2,\N,\N,\N,M-40 ストリングスヌキ,M-40 sutoringusu-nuki,M-40 without strings,\N,\N,\N,\N,\N,\N,\N
+295,37,7,M-41,"1'24""","1'24""","1'24""",はりつめた緊張感,Haritsumeta kinchoukan,Taut tension,5-11-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+296,37,8,M-42,"22""半","22.5""","22.5""",M-41　Br.バージョン,M-41 Br. baajon,Bridge version of M-41,EX-23-8,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+297,37,9,M-43,"1'55""","1'55""","1'55""",不気味　怪しい雰囲気,"Bukimi, ayashii fun'iki","Eerie, suspicious atmosphere",5-7-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+298,37,10,M-44,"22""","22""","22""",M-43　Br.バージョン,M-43 Br. baajon,Bridge version of M-43,EX-23-10,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+299,37,11,M-50,"22""","22""","22""",敵の企み　Br.,Teki no takurami Br.,Bridge: the enemy's scheme,5-21-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+300,38,0,M-51,"25""半","25.5""","25.5""",ターゲット発見Br.　（アマゾントリオのナンパ前に使用）,Taagetto hakken Br. (Amazon Torio no nanpa mae ni shiyou),Bridge: target found (used before the Amazon Trio's pick-ups),5-10-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+301,38,1,M-52,"23""半","23.5""","23.5""",襲撃パターン　鏡を出すBr.+鏡をのぞくBr.,"Shuugeki pataan, kagami wo dasu Br. + kagami wo nozoku Br.",Attack pattern: bridge for bringing out the mirror + bridge for peering into the mirror,5-10-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+302,38,2,M-53,"1'24""半","1'24.5""","1'24.5""",レムレスの攻撃　追いかけ回されて必死に　逃げる（ややコミカル）,"Remuresu no kougeki, oikakemawasarete hisshi ni nigeru (yaya komikaru)","The Lemures attack: chased around, running for their lives (somewhat comical)",5-11-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+303,38,3,M-54,"1'54""","1'54""","1'54""",レムレスの攻撃　戦士達以外への攻撃,"Remuresu no kougeki, senshi-tachi igai e no kougeki",The Lemures attack people other than the Guardians,5-11-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+304,38,4,M-55,"1'46""","1'46""","1'46""",レムレスの攻撃　テンポおさえめ（エレキギター）,"Remuresu no kougeki, tenpo osaeme (ereki gitaa)","The Lemures attack, restrained tempo (electric guitar)",5-11-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+305,39,0,M-5,"1'47""半","1'47.5""","1'47.5""",やわらかく　温かく,"Yawarakaku, atatakaku",Soft and warm,5-15,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+306,39,1,M-6,"1'54""半","1'54.5""","1'54.5""",センチメンタルに 淋し気（ハーモニカとピアノ）,Senchimentaru ni sabishige (haamonika to piano),Sentimental and lonely (harmonica and piano),5-19-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+307,39,2,M-7,"1'57""","1'57""","1'57""",はじめ静かめで感動的に盛り上がる,Hajime shizukame de kandou-teki ni moriagaru,"Starts fairly quiet, then builds movingly",5-22-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+308,39,3,M-8,"57""半","57.5""","57.5""",ややアップテンポで力強く、勇ましく,"Yaya appu tenpo de chikarazuyoku, isamashiku","Slightly up-tempo, powerful and brave",5-19-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+309,40,0,M-14,"1'27""半","1'27.5""","1'27.5""",敵のテーマ　ジルコニアの野望（ややハデめ）,"Teki no teema, Jirukonia no yabou (yaya hademe)",Enemy theme: Zirconia's ambition (somewhat flashy),5-6-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+310,40,1,M-20,"1'27""","1'27""","1'27""",アマゾントリオ　嫉妬心　お互いの間の不信感,"Amazon Torio, shittoshin, otagai no aida no fushinkan","Amazon Trio: jealousy, mutual distrust",5-20-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+311,40,2,M-21,"1'23""半","1'23.5""","1'23.5""",アマゾネスカルテット用曲・無邪気でいたずら　好きな子供,"Amazonesu Karutetto-you kyoku, mujaki de itazurazuki na kodomo","Piece for the Amazoness Quartet: innocent, mischievous children",5-20-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+312,40,3,M-23,"58""半","58.5""","58.5""",ちびうさとエリオスつかのまの逢瀬 オルゴール的,"Chibiusa to Eriosu tsukanoma no ouse, orugooru-teki",Chibi-Usa and Helios's brief meeting; music box-like,5-18-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+313,40,4,M-23 グロッケンバージョン,"55""","55""","55""",M-23のグロッケンバージョン,M-23 no gurokken baajon,Glockenspiel version of M-23,5-18-2,\N,\N,\N,M-23 グロッケンバージョン,M-23 gurokken baajon,M-23 glockenspiel version,\N,\N,\N,\N,\N,\N,\N
+314,40,5,M-26,"1'13""半","1'13.5""","1'13.5""",ペガサスの地底世界（故郷）を奪われた悲しみ,Pegasasu no chitei sekai (kokyou) wo ubawareta kanashimi,Pegasus's sorrow at losing the underground world (his home),5-18-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+315,41,0,M-28,"1'15""","1'15""","1'15""",小学生くらいの　遊び、楽しく,"Shougakusei kurai no asobi, tanoshiku","Elementary-school-age play, fun",5-5-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+316,41,1,M-29,"1'41""半","1'41.5""","1'41.5""",うさぎとちびうさのドタバタ　軽い口ゲンカ,"Usagi to Chibiusa no dotabata, karui kuchigenka",Usagi and Chibi-Usa's slapstick; light bickering,5-5-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+317,41,2,M-30,"1'19""","1'19""","1'19""",お化け屋敷のような　少しコミカルな怖さ,"Obakeyashiki no you na, sukoshi komikaru na kowasa",Like a haunted house; slightly comical fear,5-5-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+318,41,3,M-31,"23""","23""","23""",M-30のBr.バージョン,M-30 no Br. baajon,Bridge version of M-30,EX-23-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+319,41,4,M-32,"1'37""半","1'37.5""","1'37.5""",子供のいたずら　悪意なくおちゃめに,"Kodomo no itazura, akui naku ochame ni","A child's mischief, playful and without malice",SS-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+320,41,5,M-35,"1'33""","1'33""","1'33""",悩み・迷い,"Nayami, mayoi",Worries and indecision,5-9-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+321,41,6,M-36,"1'16""","1'16""","1'16""",焦り,Aseri,Impatience,5-21-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+322,41,7,M-37,"1'22""","1'22""","1'22""",微かな不安,Kasuka na fuan,Faint anxiety,5-21-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+323,41,8,M-37',"34""","34""","34""",微かな不安Br.（静かに終わるバージョン）,Kasuka na fuan Br. (shizuka ni owaru baajon),Bridge: faint anxiety (version that ends quietly),EX-23-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+324,41,9,M-45,"20""","20""","20""",悲しみBr.,Kanashimi Br.,Bridge: sorrow,5-9-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+325,41,10,M-46,"22""","22""","22""",感動Br.　唐突に盛り上がる,"Kandou Br., toutotsu ni moriagaru","Bridge: emotion, swelling suddenly",EX-23-12,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+326,41,11,M-47,"23""","23""","23""",ひとめぼれBr.　綺麗に,"Hitomebore Br., kirei ni","Bridge: love at first sight, beautifully",5-9-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+327,41,12,M-48,"25""半","25.5""","25.5""",かわいいBr.,Kawaii Br.,Cute bridge,EX-23-13,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+328,41,13,M-49,"22""","22""","22""",衝撃Br.,Shougeki Br.,Bridge: shock,5-21-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+329,42,0,M-56,"1'43""","1'43""","1'43""",やっぱりレムレス達とは違う！　敵幹部の圧倒的パワー,Yappari Remuresu-tachi to wa chigau! Teki kanbu no attou-teki pawaa,Definitely different from the Lemures! The overwhelming power of the enemy leaders,SS-12-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+330,42,1,M-57,"1'22""","1'22""","1'22""","高まってゆく使命感　決意　戦闘前に""何とかしなくちゃ""と話し合う等に使用","Takamatte yuku shimeikan, ketsui, sentou mae ni ""Nan to ka shinakucha"" to hanashiau-tou ni shiyou","A growing sense of mission, resolve; used before battle when they discuss ""We have to do something""",5-21-5,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+331,43,0,M-58 カラオケ,"20""","20""","20""",セーラー戦士の新変身　（コーラスなし）,Seeraa senshi no shin-henshin (koorasu nashi),The Sailor Guardians' new transformation (no chorus),\N,\N,\N,\N,M-58 カラオケ,M-58 karaoke,M-58 karaoke,\N,\N,\N,\N,\N,\N,\N
+332,43,1,M-58 S・マーキュリー,"27""半","27.5""","27.5""",セーラーマーキュリー新変身　（手UP+全身　コーラス入り）,Seeraa Maakyurii shin-henshin (te UP + zenshin koorasu-iri),"Sailor Mercury's new transformation (hand close-up + full body, with chorus)",SS-12-4,\N,\N,\N,M-58 S・マーキュリー,M-58 Seeraa Maakyurii,M-58 Sailor Mercury,\N,\N,\N,\N,\N,\N,\N
+333,43,2,M-58 S・ジュピター,"27""半","27.5""","27.5""",セーラージュピター新変身　（手UP+全身コーラス入り）,Seeraa Jupitaa shin-henshin (te UP + zenshin koorasu-iri),"Sailor Jupiter's new transformation (hand close-up + full body, with chorus)",SS-12-5,\N,\N,\N,M-58 S・ジュピター,M-58 Seeraa Jupitaa,M-58 Sailor Jupiter,\N,\N,\N,\N,\N,\N,\N
+334,43,3,M-58 S・ヴィーナス,"27""半","27.5""","27.5""",セーラーヴィーナス新変身　（手UP+全身　コーラス入り）,Seeraa Viinasu shin-henshin (te UP + zenshin koorasu-iri),"Sailor Venus's new transformation (hand close-up + full body, with chorus)",SS-12-6,\N,\N,\N,M-58 S・ヴィーナス,M-58 Seeraa Viinasu,M-58 Sailor Venus,\N,\N,\N,\N,\N,\N,\N
+335,43,4,M-58 S・マーズ,"27""半","27.5""","27.5""",セーラーマーズ新変身　（手UP+全身　コーラス入り）,Seeraa Maazu shin-henshin (te UP + zenshin koorasu-iri),"Sailor Mars's new transformation (hand close-up + full body, with chorus)",SS-12-7,\N,\N,\N,M-58 S・マーズ,M-58 Seeraa Maazu,M-58 Sailor Mars,\N,\N,\N,\N,\N,\N,\N
+336,43,5,M-59,"2'03""","2'03""","2'03""",4人の手UP+5人の変身　（セーラーソルジャーコーラス入り）,Yo-nin no te UP + go-nin no henshin (Seeraa Sorujaa koorasu-iri),"Four hand close-ups + five-person transformation (with ""Sailor Guardians"" chorus)",5-22-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+337,43,6,M-59 カラオケ,"1'31""半","1'31.5""","1'31.5""",M-59の手UP×4なしバージョン　（コーラスなし）,M-59 no te UP ×4 nashi baajon (koorasu nashi),Version of M-59 without the four hand close-ups (no chorus),\N,\N,\N,\N,M-59 カラオケ,M-59 karaoke,M-59 karaoke,\N,\N,\N,\N,\N,\N,\N
+338,43,7,M-60,"8""半","8.5""","8.5""",4人の変身の手UPの所のみバージョン,Yo-nin no henshin no te UP no tokoro nomi baajon,Version with only the hand close-ups from the four's transformation,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+339,44,0,M-601,"2'06""半","2'06.5""","2'06.5""",セーラームーンの愛 訴えかけるように 感動的,"Seeraa Muun no ai, uttaekakeru you ni, kandou-teki","Sailor Moon's love, pleading, moving",6-12-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+340,44,1,M-601A,"2'07""半","2'07.5""","2'07.5""",M-601　ドラムヌキ,M-601 doramu-nuki,M-601 without drums,6-12-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+341,44,2,M-602,"2'09""半","2'09.5""","2'09.5""",悲しみ　（鉄琴）,Kanashimi (tekkin),Sorrow (glockenspiel),6-10-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+342,44,3,M-603,"2'09""","2'09""","2'09""",静かに　淋しく（バイオリンソロ+ピアノ）,Shizuka ni sabishiku (baiorin soro + piano),Quiet and lonely (violin solo + piano),6-9-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+343,44,4,M-604,"1'20""","1'20""","1'20""",アップテンポに喜び（M-605よりはテンポ遅め）,Appu tenpo ni yorokobi (M-605 yori wa tenpo osome),Up-tempo joy (slower tempo than M-605),6-4-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+344,44,5,M-605,"1'12""半","1'12.5""","1'12.5""",セーラー戦士たちの活躍　華麗にはなばなしく,"Seeraa senshi-tachi no katsuyaku, karei ni hanabanashiku","The Sailor Guardians in action, glamorous and spectacular",6-11-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+345,45,0,M-606,"1'58""半","1'58.5""","1'58.5""",明るく日常的,Akaruku nichijou-teki,"Bright, everyday",6-4-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+346,45,1,M-607,"1'58""半","1'58.5""","1'58.5""",あたたかく　優しく,"Atatakaku, yasashiku",Warm and gentle,6-4-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+347,46,0,M-608,"8""","8""","8""",サブタイトル,Sabutaitoru,Subtitle,6-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+348,46,1,M-609,"10""","10""","10""",アイキャッチ（A・B共通）（スキャット入り）,Aikyatchi (A/B kyoutsuu) (sukyatto-iri),Eyecatch (shared by A and B parts) (with scat),7-9,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+349,46,2,M-610,"13""半","13.5""","13.5""",予告15秒用（オープニングアレンジ）,Yokoku 15-byou-you (oopuningu arenji),For the 15-second preview (opening arrangement),6-11-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+350,46,3,M-611,"28""半","28.5""","28.5""",予告30秒用（オープニングアレンジ）,Yokoku 30-byou-you (oopuningu arenji),For the 30-second preview (opening arrangement),6-11-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+351,47,0,M-612,"1'34""","1'34""","1'34""",ネヘレニアのテーマ　怒り　静かに,"Neherenia no teema, ikari, shizuka ni","Nehelenia's theme: anger, quiet",6-5-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+352,47,1,M-613,"1'09""半","1'09.5""","1'09.5""",ネヘレニアのテーマ　怒り　激しく,"Neherenia no teema, ikari, hageshiku","Nehelenia's theme: anger, intense",6-5-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+353,47,2,M-614,"1'43""半","1'43.5""","1'43.5""",ネヘレニアの分身　ミラーパレドリーの攻撃　（高速に動く）　単調に,"Neherenia no bunshin, Miraa Paredorii no kougeki (kousoku ni ugoku) tanchou ni","Nehelenia's doubles, the Mirror Paredri, attack (moving fast); monotonous",6-7-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+354,47,3,M-615,"1'59""半","1'59.5""","1'59.5""",王座の間　不気味な空間,"Ouza no ma, bukimi na kuukan","The throne room, an eerie space",6-8-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+355,47,4,M-616,"1'30""","1'30""","1'30""",荒廃した世界,Kouhai shita sekai,A ruined world,6-8-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+356,47,5,M-617A,"1'15""半","1'15.5""","1'15.5""",ネヘレニアの攻撃　幻惑（優しく綺麗）,"Neherenia no kougeki, genwaku (yasashiku kirei)",Nehelenia's attack: bewitchment (gentle and beautiful),6-7-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+357,47,6,M-617B,"53""","53""","53""",ネヘレニアの攻撃　幻影を作り出す　（スローに不気味）,"Neherenia no kougeki, gen'ei wo tsukuridasu (suroo ni bukimi)",Nehelenia's attack: conjuring illusions (slow and eerie),6-7-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+358,47,7,M-617C,"1'04""半","1'04.5""","1'04.5""",ネヘレニアの攻撃　攻撃を加える,"Neherenia no kougeki, kougeki wo kuwaeru",Nehelenia's attack: striking,6-7-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+359,47,8,M-618,"1'34""","1'34""","1'34""",オーロラの声　氷のイメージ、奇麗なようで怖い,"Oorora no koe, koori no imeeji, kirei na you de kowai","Aurora's voice: icy imagery, seemingly beautiful but frightening",6-5-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+360,47,9,M-619,"1'38""半","1'38.5""","1'38.5""",遥かなる過去　重く暗いが怖くない　回想的に,"Haruka naru kako, omoku kurai ga kowaku nai, kaisou-teki ni",The distant past: heavy and dark but not scary; reminiscent,6-8-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+361,47,10,M-620,"1'33""半","1'33.5""","1'33.5""",セーラー戦士同士の信頼　テンポおさえめ　リズムはっきり力強く！,"Seeraa senshi doushi no shinrai, tenpo osaeme, rizumu hakkiri chikarazuyoku!","Trust among the Sailor Guardians: restrained tempo, clear and powerful rhythm!",6-9-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+362,47,11,M-621,"1'40""","1'40""","1'40""",予言者セーラーサターン　ミステリアスに,"Yogensha Seeraa Sataan, misuteriasu ni","Sailor Saturn the prophet, mysteriously",6-6,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+363,47,12,M-622,"1'07""","1'07""","1'07""",エターナルセーラームーンのテーマ　優雅に　神々しく変身そして必殺技（簡易バージョンのみ）,"Etaanaru Seeraa Muun no teema, yuuga ni kougoushiku henshin soshite hissatsu-waza (kan'i baajon nomi)","Eternal Sailor Moon's theme: an elegant, divine transformation and then the special attack (simplified version only)",6-10-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+364,47,13,M-623,"1'48""半","1'48.5""","1'48.5""",エターナルセーラームーンのテーマ　悪を浄化　ラスト大きく　盛り上がる　最終話的,"Etaanaru Seeraa Muun no teema, aku wo jouka, rasuto ookiku moriagaru, saishuuwa-teki","Eternal Sailor Moon's theme: purifying evil, building big at the end; final-episode feel",ST1-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+365,48,0,M-624,"36""半","36.5""","36.5""",エターナルセーラームーン変身（コーラス入り）,Etaanaru Seeraa Muun henshin (koorasu-iri),Eternal Sailor Moon transformation (with chorus),7-17-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+366,48,1,M-624 CHOナシ,"36""半","36.5""","36.5""",M-624　コーラスヌキ,M-624 koorasu-nuki,M-624 without chorus,ST2-19,\N,\N,\N,M-624 CHOナシ,M-624 CHO nashi,M-624 without chorus,\N,\N,\N,\N,\N,\N,\N
+367,48,2,M-625 CHOナシ,"2'00""半","2'00.5""","2'00.5""",M-625　コーラスヌキ,M-625 koorasu-nuki,M-625 without chorus,ST2-20,\N,\N,\N,M-625 CHOナシ,M-625 CHO nashi,M-625 without chorus,\N,\N,\N,\N,\N,\N,\N
+368,48,3,M-625,"2'00""半","2'00.5""","2'00.5""",変身から続く戦い（コーラス入り）,Henshin kara tsuzuku tatakai (koorasu-iri),Battle continuing from the transformation (with chorus),7-17-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+369,48,4,M-626,"26""半","26.5""","26.5""","必殺技""スターライトハネムーンセラピーキッス""　（オモチャヌキ）","Hissatsu-waza ""Sutaaraito Hanemuun Serapii Kissu"" (omocha-nuki)","Special attack ""Star Light Honeymoon Therapy Kiss"" (without the toy sound)",7-17-5,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+370,48,5,M-627,"29""","29""","29""",エターナルムーンの決めゼリフ,Etaanaru Muun no kimezerifu,Eternal Moon's catchphrase,7-17-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+371,48,6,M-628,"38""","38""","38""",エターナルセーラームーンからセーラー　コスモスへの変貌,Etaanaru Seeraa Muun kara Seeraa Kosumosu e no henbou,Eternal Sailor Moon's transformation into Sailor Cosmos,7-22-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+372,49,0,M-629,"2'03""","2'03""","2'03""",エンディングアレンジ　感動的な大団円　しみじみからジンときて大感動（最終話用）,"Endingu arenji, kandou-teki na daidan'en, shimijimi kara jin to kite dai-kandou (saishuuwa-you)","Ending arrangement: moving grand finale, from quiet feeling to heart-stirring to overwhelming emotion (for the final episode)",7-23,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+373,49,1,M-630,"3'50""","3'50""","3'50""",スリーライツ　ライブ用　バックバンド風,"Surii Raitsu, raibu-you, bakku bando-fuu","Three Lights, for a live show; backing-band style",ST1-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+374,49,2,M-632,"1'06""半","1'06.5""","1'06.5""",スターライツ 登場パターン 指鳴し〜口笛〜メロ,"Sutaa Raitsu toujou pataan, yubi narashi ~ kuchibue ~ mero",Star Lights entrance pattern: finger snaps ~ whistling ~ melody,7-14,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+375,49,3,M-633,"1'09""","1'09""","1'09""",スターライツ　戦い　軽快に,"Sutaa Raitsu tatakai, keikai ni","Star Lights battle, light and nimble",7-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+376,49,4,M-634,"1'55""","1'55""","1'55""",スターライツ　変身（コーラス入り）,Sutaa Raitsu henshin (koorasu-iri),Star Lights transformation (with chorus),7-13,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+377,49,5,M-631A,"1'23""半","1'23.5""","1'23.5""",（SEあつかい）ギターソロ,(SE atsukai) gitaa soro,(Treated as a sound effect) guitar solo,ST2-5-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+378,49,6,M-631B,"1'06""半","1'06.5""","1'06.5""",（SEあつかい）ギターソロ,(SE atsukai) gitaa soro,(Treated as a sound effect) guitar solo,ST2-5-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+379,49,7,M-631C,"1'14""","1'14""","1'14""",（SEあつかい）ギターソロ,(SE atsukai) gitaa soro,(Treated as a sound effect) guitar solo,ST2-5-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+380,49,8,M-634 CHOナシ,"1'55""","1'55""","1'55""",M-634　コーラスヌキ,M-634 koorasu-nuki,M-634 without chorus,ST2-18,\N,\N,\N,M-634 CHOナシ,M-634 CHO nashi,M-634 without chorus,\N,\N,\N,\N,\N,\N,\N
+381,50,0,M-635,"1'06""半","1'06.5""","1'06.5""",火球王妃のテーマ　はかなく美しく,"Kakyuu Ouhi no teema, hakanaku utsukushiku","Princess Kakyu's theme, fleeting and beautiful",7-2-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+382,50,1,M-636,"1'15""","1'15""","1'15""",星野のテーマ　野性的　スポーツマン,"Seiya no teema, yasei-teki, supootsuman","Seiya's theme: wild, a sportsman",7-3-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+383,50,2,M-637,"1'08""半","1'08.5""","1'08.5""",大気のテーマ　知的でクール,"Taiki no teema, chiteki de kuuru",Taiki's theme: intellectual and cool,7-3-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+384,50,3,M-638,"1'24""","1'24""","1'24""",夜天のテーマ　自己中心的な現代っ子,"Yaten no teema, jiko chuushin-teki na gendaikko",Yaten's theme: a self-centered modern kid,7-3-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+385,50,4,M-639,"1'06""半","1'06.5""","1'06.5""",スターライツの火球王妃への想い（コーラス入り）,Sutaa Raitsu no Kakyuu Ouhi e no omoi (koorasu-iri),The Star Lights' feelings for Princess Kakyu (with chorus),7-2-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+386,50,5,M-640,"1'15""半","1'15.5""","1'15.5""",スターライツ　過去への後悔の念　静かに重く,"Sutaa Raitsu, kako e no koukai no nen, shizuka ni omoku","Star Lights: regret over the past, quiet and heavy",7-2-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+387,50,6,M-641,"1'31""","1'31""","1'31""",星野のうさぎに対する想い　恋になる前のあたたかさ,"Seiya no Usagi ni taisuru omoi, koi ni naru mae no atatakasa",Seiya's feelings for Usagi; warmth before it becomes love,7-7,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+388,50,7,M-642,"1'44""半","1'44.5""","1'44.5""",セーラーコスモス　究極の母性　安心感のあるやわらかいメロディー（心音入り）,"Seeraa Kosumosu, kyuukyoku no bosei, anshinkan no aru yawarakai merodii (shin'on-iri)","Sailor Cosmos: ultimate motherhood; a soft, reassuring melody (with heartbeat)",7-22-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+389,50,8,M-643,"1'28""半","1'28.5""","1'28.5""",ギャラクシアの野望,Gyarakushia no yabou,Galaxia's ambition,6-13-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+390,50,9,M-644,"1'02""半","1'02.5""","1'02.5""",ギャラクシアの企み,Gyarakushia no takurami,Galaxia's scheme,7-10-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+391,50,10,M-645,"1'03""","1'03""","1'03""",ターゲットの探索　シリアスに忍び寄る怖さ,"Taagetto no tansaku, shiriasu ni shinobiyoru kowasa","Searching for a target: serious, creeping fear",6-13-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+392,50,11,M-646,"1'15""半","1'15.5""","1'15.5""",ターゲットの探索　コミカルに,"Taagetto no tansaku, komikaru ni","Searching for a target, comically",7-10-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+393,50,12,M-647,"1'14""","1'14""","1'14""",敵の登場〜戦い,Teki no toujou ~ tatakai,The enemy appears ~ battle,7-12-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+394,50,13,M-648,"1'22""半","1'22.5""","1'22.5""",襲い来るファージ　アップテンポに,"Osoikuru Faaji, appu tenpo ni","The Phage attacks, up-tempo",6-13-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+395,50,14,M-649,"2'02""半","2'02.5""","2'02.5""",襲い来るファージ　押さえたテンポ,"Osoikuru Faaji, osaeta tenpo","The Phage attacks, restrained tempo",7-11-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+396,50,15,M-650,"1'11""","1'11""","1'11""",強大な敵セーラーカオスの出現　（セーラーギャラクシアの封印が解け変身）,Kyoudai na teki Seeraa Kaosu no shutsugen (Seeraa Gyarakushia no fuuin ga toke henshin),The mighty enemy Sailor Chaos appears (Sailor Galaxia's seal breaks and she transforms),7-20,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+397,50,16,M-651,"1'17""半","1'17.5""","1'17.5""",危機迫る　頭からショッキングに　（光にのまれた衛　消えた!?的）,"Kiki semaru, atama kara shokkingu ni (hikari ni nomareta Mamoru, kieta!? teki)","Danger closing in, shocking from the start (Mamoru swallowed by light: has he vanished!?)",7-12-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+398,50,17,M-652,"1'14""半","1'14.5""","1'14.5""",静かな決意　自分のやるべき事を知って　（衛が消えた事を知って悲愴感漂う決意）,"Shizuka na ketsui, jibun no yaru beki koto wo shitte (Mamoru ga kieta koto wo shitte hisoukan tadayou ketsui)","Quiet resolve, knowing what she must do (a tragic resolve after learning Mamoru has vanished)",7-21,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+399,50,18,M-653,"1'18""半","1'18.5""","1'18.5""",やる気満々！ マーチ風　美奈子アイドルへの道　爆進!!　つっぱしる美奈子への応援歌,"Yaruki manman! Maachi-fuu, Minako aidoru e no michi, bakushin!! Tsuppashiru Minako e no ouenka","Full of enthusiasm! March-like: Minako's road to idol stardom, charging ahead!! A cheer song for Minako racing forward",7-5-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+400,50,19,M-653B,"21""","21""","21""",M-653　ジャン！と終わるバージョン,M-653 Jan! to owaru baajon,"Version of M-653 that ends with a ""Ta-da!""",7-5-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+401,50,20,M-654,"18""半","18.5""","18.5""",M-653　Br.バージョン,M-653 Br. baajon,Bridge version of M-653,7-5-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+402,50,21,M-655,"25""","25""","25""",星野とうさぎの出会い　不思議な予感,"Seiya to Usagi no deai, fushigi na yokan",Seiya and Usagi meet; a strange premonition,6-12-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+403,50,22,M-655B,"25""","25""","25""",M-655　チェロヌキ,M-655 chero-nuki,M-655 without cello,6-12-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+404,50,23,M-656,"24""半","24.5""","24.5""",敵の攻撃Br.　じわじわ追い詰める,"Teki no kougeki Br., jiwajiwa oitsumeru","Bridge: enemy attack, slowly closing in",7-12-3,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+405,50,24,M-657,"18""半","18.5""","18.5""",敵の攻撃Br.　突然の攻撃 スターシードを抜き取る,"Teki no kougeki Br., totsuzen no kougeki, Sutaa Shiido wo nukitoru",Bridge: enemy attack; a sudden attack that extracts a Star Seed,7-11-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+406,50,25,M-658,"3'50""","3'50""","3'50""",第180話用 スリーライツ みちるのジョイント,"Dai-180-wa-you, Surii Raitsu, Michiru no jointo",For episode 180: Three Lights and Michiru's joint performance,6-15,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+407,50,26,M-659,"9""半","9.5""","9.5""",必殺技　オモチャ音,"Hissatsu-waza, omocha-on","Special attack, toy sound",7-17-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+408,50,27,M-660,"35""半","35.5""","35.5""",M-659+M-626　必殺技,M-659 + M-626 hissatsu-waza,M-659 + M-626 special attack,7-17-6,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+409,51,0,M-661,"39""","39""","39""","新必殺技""シルバームーン・クリスタルパワー　キッス""（コーラス入り）","Shin-hissatsu-waza ""Shirubaa Muun Kurisutaru Pawaa Kissu"" (koorasu-iri)","New special attack ""Silver Moon Crystal Power Kiss"" (with chorus)",7-18-5,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+410,51,1,M-662,"56""半","56.5""","56.5""",ちびちびのテーマ　日常　可愛らしく　テンポおさえめ　ピアノソロ,"Chibichibi no teema, nichijou, kawairashiku, tenpo osaeme, piano soro","Chibi-Chibi's theme: everyday, cute, restrained tempo, piano solo",7-18-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+411,51,2,M-662B,"1'02""半","1'02.5""","1'02.5""",ちびちびのテーマ　M-662のスローバージョン　（ピアノの部分 ハフハフしたSEに変えてます）,"Chibichibi no teema, M-662 no suroo baajon (piano no bubun hafuhafu shita SE ni kaetemasu)",Chibi-Chibi's theme: slow version of M-662 (the piano part is replaced with a puffing sound effect),7-18-2,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+412,51,3,M-663,"1'34""","1'34""","1'34""",ちびちびのテーマ　宇宙の善意の象徴,"Chibichibi no teema, uchuu no zen'i no shouchou",Chibi-Chibi's theme: symbol of the universe's goodwill,7-18-4,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+413,51,4,M663B,"1'19""半","1'19.5""","1'19.5""",ちびちびのテーマ　M-663のハンドベルのみの　バージョン（途中に長いスがあります）,"Chibichibi no teema, M-663 no handoberu nomi no baajon (tochuu ni nagai su ga arimasu)",Chibi-Chibi's theme: handbells-only version of M-663 (with a long rest partway through),7-18-3,\N,\N,\N,\N,\N,\N,M-663B,\N,Printed without the hyphen. The description calls it a version of M-663; the box-set tray card for Disc 7 lists it on track 18.,\N,\N,\N,\N
+414,52,0,—,"3'44""","3'44""","3'44""",セーラームーンクリスマス,Seeraa Muun Kurisumasu,Sailor Moon Christmas,7-19,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+415,52,1,—,"3'58""","3'58""","3'58""",ゴールデンクイーン・ギャラクシア,Gooruden Kuiin Gyarakushia,Golden Queen Galaxia,6-14,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+416,52,2,—,"3'50""","3'50""","3'50""",とどかぬ想い,Todokanu Omoi,Unreachable Feelings,7-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+417,52,3,—,"4'18""","4'18""","4'18""",銀河一身分違いな片想い,Ginga Ichi Mibun Chigai na Kataomoi,The Most Mismatched Unrequited Love in the Galaxy,6-18,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+418,52,4,—,"6'04""","6'04""","6'04""",力を合わせて,Chikara wo Awasete,Joining Forces,6-17,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+419,52,5,—,"3'32""","3'32""","3'32""",真夜中ひとり,Mayonaka Hitori,Alone at Midnight,6-16,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+420,52,6,—,"4'35""","4'35""","4'35""",イニシャル・U,Inisharu U,Initial U,8-24,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+421,52,7,—,"5'01""","5'01""","5'01""",戦士の想い,Senshi no Omoi,A Guardian's Feelings,8-25,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+422,52,8,—,"4'13""","4'13""","4'13""",バイバイって言った,Baibai tte Itta,I Said Bye-Bye,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+423,52,9,—,"4'15""","4'15""","4'15""",炎の狙撃者（FLAME SNIPER）,Honoo no Sogekisha (FLAME SNIPER),Flame Sniper,7-15,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+424,52,10,—,"3'54""","3'54""","3'54""",あしたもまた自転車,Ashita mo Mata Jitensha,Bicycle Again Tomorrow,10-33,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+425,52,11,—,"5'03""","5'03""","5'03""",We believe you,We believe you,We believe you,7-16,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+426,52,12,—,"5'09""","5'09""","5'09""",愛の女神のHow to love,Ai no Megami no How to love,The Goddess of Love's How to Love,7-6,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+427,52,13,—,"4'00""","4'00""","4'00""",愛をしんじてる,Ai wo Shinjiteru,I Believe in Love,7-24,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+428,52,14,—,"2'26""","2'26""","2'26""",ガーネット・ガーディアン,Gaanetto Gaadian,Garnet Guardian,8-26,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+429,52,15,—,"2'00""","2'00""","2'00""",再来,Sairai,Second Coming,8-27,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+430,53,0,—,\N,\N,\N,セーラームーンクリスマス,Seeraa Muun Kurisumasu,Sailor Moon Christmas,9-22,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+431,53,1,—,"2'39""","2'39""","2'39""",ゴールデンクイーン・ギャラクシア,Gooruden Kuiin Gyarakushia,Golden Queen Galaxia,6-1,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+432,53,2,—,"1'46""","1'46""","1'46""",銀河一身分違いな片想い,Ginga Ichi Mibun Chigai na Kataomoi,The Most Mismatched Unrequited Love in the Galaxy,7-8,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+433,53,3,—,"2'24""","2'24""","2'24""",力を合わせて,Chikara wo Awasete,Joining Forces,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+434,53,4,—,"2'58""","2'58""","2'58""",真夜中ひとり,Mayonaka Hitori,Alone at Midnight,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+435,53,5,—,"2'13""","2'13""","2'13""",イニシャル・U,Inisharu U,Initial U,9-23,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+436,53,6,—,"2'14""","2'14""","2'14""",戦士の想い,Senshi no Omoi,A Guardian's Feelings,9-24,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+437,53,7,—,\N,\N,\N,バイバイって言った,Baibai tte Itta,I Said Bye-Bye,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+438,53,8,—,"3'19""","3'19""","3'19""",炎の狙撃者（FLAME SNIPER）,Honoo no Sogekisha (FLAME SNIPER),Flame Sniper,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+439,53,9,—,"2'19""","2'19""","2'19""",あしたもまた自転車,Ashita mo Mata Jitensha,Bicycle Again Tomorrow,10-32,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+440,53,10,—,"4'15""","4'15""","4'15""",We believe you,We believe you,We believe you,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+441,53,11,—,"2'48""","2'48""","2'48""",愛の女神のHow to love,Ai no Megami no How to love,The Goddess of Love's How to Love,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+442,53,12,—,"2'57""","2'57""","2'57""",愛をしんじてる,Ai wo Shinjiteru,I Believe in Love,9-27,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+443,53,13,—,"2'25""","2'25""","2'25""",ガーネット・ガーディアン,Gaanetto Gaadian,Garnet Guardian,9-25,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+444,53,14,—,"1'57""","1'57""","1'57""",再来,Sairai,Second Coming,9-26,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+445,54,0,—,"5'56""","5'56""","5'56""",Mooonlight Destiny,Mooonlight Destiny,Moonlight Destiny,9-21,\N,\N,\N,\N,\N,\N,\N,\N,\N,Mooonlight,Moonlight,https://wikimoon.org/index.php/Moonlight_Destiny,"Printed with three o's; the song is ""Moonlight Destiny"" (WikiMoon)."
+446,54,1,—,"3'53""","3'53""","3'53""",セーラーチームのテーマ,Seeraa Chiimu no Teema,Sailor Team's Theme,9-20,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+447,55,0,—,"4'27""","4'27""","4'27""",Morning Moonで会いましょう,Morning Moon de Aimashou,Let's Meet at Morning Moon,10-31,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+448,55,1,—,"3'22""","3'22""","3'22""",三時の妖精,Sanji no Yousei,The Three O'Clock Fairy,10-30,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N

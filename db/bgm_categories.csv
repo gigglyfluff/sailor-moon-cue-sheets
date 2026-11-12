@@ -1,0 +1,56 @@
+id,list_id,ord,name_ja,name_ro,name_en,group_ja,group_ro,group_en,page,page_from,page_to,tt
+1,SM,0,【A】オープニングテーマ　アレンジ,[A] Oopuningu teema arenji,[A] Opening theme arrangements,\N,\N,\N,104,104,104,0
+2,SM,1,【B】エンディングテーマアレンジ,[B] Endingu teema arenji,[B] Ending theme arrangements,\N,\N,\N,104,104,104,0
+3,SM,2,【C】サブタイトル・アイキャッチ,"[C] Sabutaitoru, aikyatchi",[C] Subtitle and eyecatch,\N,\N,\N,104,104,104,0
+4,SM,3,【D】各話エンディング,[D] Kakuwa endingu,[D] Each episode's ending,\N,\N,\N,104,104,104,0
+5,SM,4,【E】感動・心理BGM,"[E] Kandou, shinri BGM",[E] Emotional and psychological BGM,\N,\N,\N,105,105,105,0
+6,SM,5,【F】情景的BGM,[F] Joukei-teki BGM,[F] Scene-setting BGM,\N,\N,\N,105,105,105,0
+7,SM,6,【G】行動BGM,[G] Koudou BGM,[G] Action BGM,\N,\N,\N,105,105,105,0
+8,SM,7,【H】パターン・アクション,"[H] Pataan, akushon",[H] Pattern: action,\N,\N,\N,105,105,105,0
+9,SM,8,【I】人物テーマ,[I] Jinbutsu teema,[I] Character themes,\N,\N,\N,106,106,106,0
+10,SM,9,【J】ブリッジタッチ,[J] Burijji tatchi,[J] Bridges and stingers,\N,\N,\N,106,106,106,0
+11,SM,10,【K】特殊BGM,[K] Tokushu BGM,[K] Special BGM,\N,\N,\N,106,106,106,0
+12,SM,11,追加分,Tsuika-bun,Additions,\N,\N,\N,106,106,106,0
+13,SM,12,インストゥルメンタルヴァージョン,Insuturumentaru vaajon,Instrumental versions,\N,\N,\N,106,106,106,1
+14,R,0,【A】オープニングテーマ　アレンジ,[A] Oopuningu teema arenji,[A] Opening theme arrangements,\N,\N,\N,107,107,107,0
+15,R,1,【B】エンディングテーマ　アレンジ,[B] Endingu teema arenji,[B] Ending theme arrangements,\N,\N,\N,107,107,107,0
+16,R,2,【C】アイキャッチ,[C] Aikyatchi,[C] Eyecatch,\N,\N,\N,107,107,107,0
+17,R,3,【D】各話　エンディング用,[D] Kakuwa endingu-you,[D] For each episode's ending,\N,\N,\N,107,107,107,0
+18,R,4,【E】パターン　アクション,[E] Pataan akushon,[E] Pattern: action,\N,\N,\N,107,107,107,0
+19,R,5,【F】その他,[F] Sono ta,[F] Other,\N,\N,\N,108,108,108,0
+20,R,6,【G】決まり物テーマ,[G] Kimari mono teema,[G] Stock themes,\N,\N,\N,108,108,108,0
+21,R,7,インストゥルメンタル・ヴァージョン,Insuturumentaru vaajon,Instrumental versions,\N,\N,\N,108,108,108,1
+22,S,0,オープニングアレンジ,Oopuningu arenji,Opening arrangements,\N,\N,\N,109,109,109,0
+23,S,1,エンディングアレンジ（タキシード・ミラージュ）,Endingu arenji (Takishiido Miraaju),"Ending arrangements (""Tuxedo Mirage"")",\N,\N,\N,109,109,109,0
+24,S,2,変身・必殺技,"Henshin, hissatsu-waza",Transformations and special attacks,\N,\N,\N,109,109,109,0
+25,S,3,テーマ,Teema,Themes,\N,\N,\N,110,110,110,0
+26,S,4,サブタイトル等　決まりモノ,"Sabutaitoru-tou, kimari mono",Subtitle etc.: stock pieces,\N,\N,\N,110,110,110,0
+27,S,5,情景的BGM,Joukei-teki BGM,Scene-setting BGM,\N,\N,\N,110,110,110,0
+28,S,6,行動的BGM,Koudou-teki BGM,Action BGM,\N,\N,\N,111,111,111,0
+29,S,7,感情的BGM,Kanjou-teki BGM,Emotional BGM,\N,\N,\N,111,111,111,0
+30,S,8,ブリッジ,Burijji,Bridge,\N,\N,\N,111,111,111,0
+31,S,9,その他,Sono ta,Other,\N,\N,\N,111,111,111,0
+32,S,10,追加分,Tsuika-bun,Additions,\N,\N,\N,111,111,111,1
+33,S,11,インストゥルメンタル・ヴァージョン,Insuturumentaru vaajon,Instrumental versions,\N,\N,\N,111,111,111,1
+34,SS,0,決まりもの,Kimari mono,Stock pieces,第一回目M撮り分38曲,Dai-ikkaime M-dori-bun 38-kyoku,First music recording session: 38 pieces,112,112,112,0
+35,SS,1,変身パターン等,Henshin pataan-tou,Transformation patterns etc.,第一回目M撮り分38曲,Dai-ikkaime M-dori-bun 38-kyoku,First music recording session: 38 pieces,112,112,112,0
+36,SS,2,テーマ,Teema,Themes,第一回目M撮り分38曲,Dai-ikkaime M-dori-bun 38-kyoku,First music recording session: 38 pieces,112,112,112,0
+37,SS,3,日常的BGM,Nichijou-teki BGM,Everyday BGM,第一回目M撮り分38曲,Dai-ikkaime M-dori-bun 38-kyoku,First music recording session: 38 pieces,113,113,113,0
+38,SS,4,戦闘的BGM,Sentou-teki BGM,Battle BGM,第一回目M撮り分38曲,Dai-ikkaime M-dori-bun 38-kyoku,First music recording session: 38 pieces,113,113,113,0
+39,SS,5,エンディングアレンジ,Endingu arenji,Ending arrangements,第2回目M撮り分34曲,Dai-2-kaime M-dori-bun 34-kyoku,Second music recording session: 34 pieces,113,113,113,0
+40,SS,6,テーマ,Teema,Themes,第2回目M撮り分34曲,Dai-2-kaime M-dori-bun 34-kyoku,Second music recording session: 34 pieces,113,113,113,0
+41,SS,7,日常的BGM,Nichijou-teki BGM,Everyday BGM,第2回目M撮り分34曲,Dai-2-kaime M-dori-bun 34-kyoku,Second music recording session: 34 pieces,113,113,113,0
+42,SS,8,戦闘的BGM,Sentou-teki BGM,Battle BGM,第2回目M撮り分34曲,Dai-2-kaime M-dori-bun 34-kyoku,Second music recording session: 34 pieces,114,114,114,0
+43,SS,9,新変身,Shin-henshin,New transformation,第2回目M撮り分34曲,Dai-2-kaime M-dori-bun 34-kyoku,Second music recording session: 34 pieces,114,114,114,0
+44,ST,0,オープニングアレンジ,Oopuningu arenji,Opening arrangements,第一回目M録音分26曲,Dai-ikkaime M rokuon-bun 26-kyoku,First music recording session: 26 pieces,115,115,115,0
+45,ST,1,エンディングアレンジ,Endingu arenji,Ending arrangements,第一回目M録音分26曲,Dai-ikkaime M rokuon-bun 26-kyoku,First music recording session: 26 pieces,115,115,115,0
+46,ST,2,サブタイトル等,Sabutaitoru-tou,"Subtitle, etc.",第一回目M録音分26曲,Dai-ikkaime M rokuon-bun 26-kyoku,First music recording session: 26 pieces,115,115,115,0
+47,ST,3,その他,Sono ta,Other,第一回目M録音分26曲,Dai-ikkaime M rokuon-bun 26-kyoku,First music recording session: 26 pieces,115,115,115,0
+48,ST,4,変身パターン等,Henshin pataan-tou,Transformation patterns etc.,第二回目M録音分44曲,Dai-nikaime M rokuon-bun 44-kyoku,Second music recording session: 44 pieces,115,115,115,0
+49,ST,5,その他,Sono ta,Other,第二回目M録音分44曲,Dai-nikaime M rokuon-bun 44-kyoku,Second music recording session: 44 pieces,115,115,115,0
+50,ST,6,その他,Sono ta,Other,第二回目M録音分44曲,Dai-nikaime M rokuon-bun 44-kyoku,Second music recording session: 44 pieces,116,116,116,0
+51,ST,7,セーラースターズ　追加曲,Seeraa Sutaazu tsuika-kyoku,Sailor Stars additional pieces,追加分5曲,Tsuika-bun 5-kyoku,Additions: 5 pieces,116,116,116,0
+52,ST,8,インストゥルメンタル・ヴァージョン,Insuturumentaru vaajon,Instrumental versions,追加分5曲,Tsuika-bun 5-kyoku,Additions: 5 pieces,117,117,117,1
+53,ST,9,オルゴール・ヴァージョン,Orugooru vaajon,Music box versions,追加分5曲,Tsuika-bun 5-kyoku,Additions: 5 pieces,117,117,117,1
+54,MOVIE,0,劇場版 美少女戦士セーラームーンS インストゥルメンタル,Gekijou-ban Bishoujo Senshi Seeraa Muun S insuturumentaru,"Pretty Guardian Sailor Moon S: The Movie, instrumentals",\N,\N,\N,117,117,117,0
+55,MOVIE,1,劇場版 美少女戦士セーラームーンSupers インストゥルメンタル,Gekijou-ban Bishoujo Senshi Seeraa Muun SuperS insuturumentaru,"Pretty Guardian Sailor Moon SuperS: The Movie, instrumentals",\N,\N,\N,117,117,117,0
