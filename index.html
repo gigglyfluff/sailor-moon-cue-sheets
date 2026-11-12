@@ -32,8 +32,8 @@
 <!-- All transcription data lives in data.js beside this page (window.MMB_DATA); the page only renders it.
      A script file, unlike fetch(), also loads when the page is opened straight from disk. -->
 <script src="data.js"></script>
-<!-- the box set's discs and track titles (window.MMB_DISCS), for the editor's CD track column; not from the booklet -->
-<script src="discs.js"></script>
+<!-- the albums the CD column cites, with the box-set discs' track titles (window.MMB_ALBUMS), for the editor's CD and Track columns; not from the booklet -->
+<script src="albums.js"></script>
 <script>
 (async () => {
 /* Browser auto-translate. The Japanese and romaji are marked translate="no", so translation can only ever change the
@@ -316,10 +316,8 @@ function usedCell(id){
   return `<td class="ed used"><span class="cnt">${n} ${tx(n === 1 ? ['回', 'kai', 'use'] : UI.uses, null, 'inl')}</span>${shown}`
     + (rest.length ? ` <details class="more"><summary>+${rest.length}</summary>${rest.map(link).join(' · ')}</details>` : '') + '</td>';
 }
-/* a BGM list or film row's CD and Track cells: where its CD position is on the box set (cover, disc, track number and
-   title, from discs.js), with any CD correction applied. Positions on the other albums in p.104's key show that album
-   (discs.js, from VGMdb) the same way. */
-const DISCS = window.MMB_DISCS || [];
+/* a BGM list or film row's CD and Track cells: the album its CD position points to (cover, disc, name) and the track
+   (number and title), from albums.js, with any CD correction applied. */
 const ALBUMS = window.MMB_ALBUMS || {};
 /* the track number, and the piece within it after a hyphen as in the booklet's own key (p.104: 1-1-1 = disc 1, track 1, first piece) */
 const trackRow = (n, piece, title) => `<div class="trow"><span class="tno" translate="no">${n}${piece ? '-' + piece : ''}</span>${title ? `<div class="tname">${stack(title)}</div>` : ''}</div>`;
@@ -329,14 +327,15 @@ const cover = (src, h) => `<img class="cover" src="${esc(src)}" alt="" loading="
 function cdCells(cd){
   const td = (a, b) => `<td class="ed">${a}</td><td class="ed">${b}</td>`;
   if (!cd) return td('', '');
-  const m = /^(\d+)-(\d+)(?:-(\d+))?$/.exec(cd), disc = m && DISCS[m[1] - 1], t = disc && disc.t[m[2] - 1];
-  if (t) return td(`<div class="trk">${cover(disc.img, 58)}<div>${discLabel(m[1])}<span class="dname">${tx(disc.n)}</span></div></div>`,
-    trackRow(m[2], m[3], t));
-  const o = /^(ST[12]|SS|EX|R|S|歌)-?(\d+)(?:-(\d+))?(?:-(\d+))?$/.exec(cd), al = o && ALBUMS[o[1]];
-  if (al) {
-    const multi = o[1] === '歌', at = al.t[multi ? o[2] + '-' + o[3] : o[2]];
-    return td(`<div class="trk">${cover(al.img, 46)}<div>${multi ? discLabel(o[2]) : ''}<span class="dname">${tx(al.n)}</span><span class="catno" translate="no">${esc(al.cat)}</span></div></div>`,
-      multi ? trackRow(o[3], o[4], at) : trackRow(o[2], o[3], at));
+  /* album code (a box-set disc number, or R, S, SS, ST1, ST2, EX, 歌), then track and piece; 歌 adds its disc first */
+  const o = /^(\d+(?=-)|ST[12]|SS|EX|R|S|歌)-?(\d+)(?:-(\d+))?(?:-(\d+))?$/.exec(cd), al = o && ALBUMS[o[1]];
+  const multi = o && o[1] === '歌', [n, piece] = o ? (multi ? [o[3], o[4]] : [o[2], o[3]]) : [],
+        at = al && al.t[multi ? o[2] + '-' + n : n];
+  // a box-set disc only when the track exists; another album even without its title
+  if (al && (at || !al.p)) {
+    const disc = al.d || (multi ? o[2] : '');
+    return td(`<div class="trk">${cover(al.img, al.p ? 58 : 46)}<div>${disc ? discLabel(disc) : ''}<span class="dname">${tx(al.n)}</span></div></div>`,
+      trackRow(n, piece, at));
   }
   return td('', `<div class="trow"><span class="tno" translate="no">${esc(cd)}</span></div>`);
 }

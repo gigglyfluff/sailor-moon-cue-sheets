@@ -148,7 +148,7 @@ td.notes p{margin:0 0 .45em;overflow-wrap:anywhere} td.notes p:last-child{margin
 .trk{display:flow-root}
 .trk .cover{float:left;width:46px;height:auto;margin:0 .55em .2em 0;border-radius:3px;box-shadow:0 1px 3px rgb(0 0 0 / .25)}
 .trk>div>span{display:block}
-.tdisc,.catno{color:var(--muted);font-size:.88em}
+.tdisc{color:var(--muted);font-size:.88em}
 .trow{display:flex;gap:.4em;align-items:baseline}
 .tno{flex:none;min-width:1.4em;font-variant-numeric:tabular-nums;color:var(--muted)}
 .tname{min-width:0}

@@ -5,9 +5,9 @@ mmb.db (SQLite) is the master copy. After editing it, run
 
     python3 tools/mmb.py export
 
-to regenerate what the site reads (data.js, discs.js) and the readable text copy (db/*.csv) that GitHub can diff.
+to regenerate what the site reads (data.js, albums.js) and the readable text copy (db/*.csv) that GitHub can diff.
 
-    python3 tools/mmb.py import    rebuild mmb.db from data.js and discs.js (overwrites mmb.db)
+    python3 tools/mmb.py import    rebuild mmb.db from data.js and albums.js (overwrites mmb.db)
     python3 tools/mmb.py restore   rebuild mmb.db from db/*.csv, if the binary is ever lost or damaged
     python3 tools/mmb.py check     export to memory and confirm it matches the files on disk, and that the
                                    booklet's Japanese still matches booklet.txt (the proofread baseline)
@@ -23,7 +23,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, 'mmb.db')
 CSV_DIR = os.path.join(ROOT, 'db')
 DATA_JS = os.path.join(ROOT, 'data.js')
-DISCS_JS = os.path.join(ROOT, 'discs.js')
+ALBUMS_JS = os.path.join(ROOT, 'albums.js')
 
 SCHEMA = """
 -- one row per series (SM, R, S, SS, ST)
@@ -110,21 +110,15 @@ CREATE TABLE notes (
   heading INTEGER NOT NULL DEFAULT 0,
   text_ja TEXT, text_ro TEXT, text_en TEXT
 );
--- the box set's ten discs and their tracks (not from the booklet)
-CREATE TABLE discs (
-  disc INTEGER PRIMARY KEY,
-  name_ja TEXT, name_en TEXT, img TEXT
-);
-CREATE TABLE disc_tracks (
-  disc INTEGER NOT NULL REFERENCES discs(disc), track INTEGER NOT NULL,
-  title_ja TEXT, title_ro TEXT, title_en TEXT,
-  PRIMARY KEY (disc, track)
-);
--- the other albums p.104's CD key cites (R, S, SS, ST1, ST2, EX, 歌) and the tracks it cites (not from the booklet)
+-- every album the booklet's CD column cites, by its code in the p.104 key (not from the booklet): the box set (MMB)
+-- and its ten discs (1-10, whose parent is MMB), and the other albums (R, S, SS, ST1, ST2, EX, 歌)
 CREATE TABLE albums (
   code TEXT PRIMARY KEY, ord INTEGER NOT NULL,
+  parent TEXT REFERENCES albums(code),         -- the box set a disc belongs to
+  disc INTEGER,                                -- its disc number in that set
   name_ja TEXT, name_en TEXT, catalog TEXT, vgmdb INTEGER, img TEXT
 );
+-- the box-set discs' full track lists; for the other albums, only the tracks the booklet cites
 CREATE TABLE album_tracks (
   album TEXT NOT NULL REFERENCES albums(code), ord INTEGER NOT NULL,
   track TEXT NOT NULL,                         -- track number (歌: disc-track)
@@ -190,7 +184,7 @@ def join3(ja, ro, en):
 def put(obj, key, value):
     if value is not None: obj[key] = value
 
-# ---------- import: data.js / discs.js -> database ----------
+# ---------- import: data.js / albums.js -> database ----------
 def read_js(path, *names):
     s = open(path, encoding='utf-8').read()
     out = []
@@ -202,7 +196,7 @@ def read_js(path, *names):
 
 def do_import(conn):
     (d,) = read_js(DATA_JS, 'MMB_DATA')
-    discs, albums = read_js(DISCS_JS, 'MMB_DISCS', 'MMB_ALBUMS')
+    (albums,) = read_js(ALBUMS_JS, 'MMB_ALBUMS')
     conn.executescript(SCHEMA)
     q = conn.execute
     def ins(table, *vals):
@@ -242,17 +236,14 @@ def do_import(conn):
                     raise ValueError(f'empty cl in {w["id"]}')
     for i, n in enumerate(d['notes']):
         ins('notes', None, (i, n.get('p'), n.get('c'), n.get('w'), n.get('s'), int(n['h']), *split3(n['x'])))
-    for i, x in enumerate(discs, 1):
-        ins('discs', (i, x['n'][0], x['n'][1], x['img']))
-        for t, tr in enumerate(x['t'], 1):
-            ins('disc_tracks', (i, t, *tr))
-    for i, (code, a) in enumerate(albums.items()):
-        ins('albums', (code, i, a['n'][0], a['n'][1], a['cat'], a['v'], a['img']))
+    # parents first, so a disc's parent exists when it is inserted
+    for i, (code, a) in sorted(enumerate(albums.items()), key=lambda x: 'p' in x[1][1]):
+        ins('albums', (code, i, a.get('p'), a.get('d'), a['n'][0], a['n'][1], a.get('cat'), a.get('v'), a.get('img')))
         for k, (track, tr) in enumerate(a['t'].items()):
             ins('album_tracks', (code, k, track, *tr))
     conn.commit()
 
-# ---------- export: database -> data.js / discs.js / CSV ----------
+# ---------- export: database -> data.js / albums.js / CSV ----------
 def rows(conn, sql, *args):
     conn.row_factory = sqlite3.Row
     return conn.execute(sql, args).fetchall()
@@ -329,33 +320,33 @@ def build_data(conn):
         d['notes'].append(no)
     return d
 
-DISCS_HEAD = ("/* The box set's discs: name [Japanese, from each disc's cover; English], cover (from sailormusic.net) and tracks as "
-              "[Japanese (VGMdb), romaji, English (the site's own)].\n   Not from the booklet. */\n")
-ALBUMS_HEAD = ("/* The other albums p.104's CD key points to (R, S, SS, ST1, ST2, EX, 歌), original CD releases, from VGMdb "
-               "(v = its album number).\n   Only the tracks the booklet cites; keyed by track (歌: disc-track). Covers from VGMdb. */\n")
+ALBUMS_HEAD = ("/* Every album the booklet's CD column cites, keyed by its code in the p.104 key (MMB, the box set, is the site's own). Not from the booklet.\n"
+               "   The box set (MMB) and its discs 1-10 (p = parent, d = disc number; disc names from each disc's cover, covers from\n"
+               "   sailormusic.net, every track); the other albums R, S, SS, ST1, ST2, EX and 歌 (original CD releases, covers from\n"
+               "   VGMdb, only the tracks the booklet cites; 歌 keyed by disc-track). n = name [Japanese, English], cat = catalog number,\n"
+               "   v = VGMdb album number, t = tracks [Japanese (VGMdb), romaji, English (the site's own)]. */\n")
 
-def build_discs(conn):
-    discs = [{'n': [x['name_ja'], x['name_en']], 'img': x['img'],
-              't': [[t['title_ja'], t['title_ro'], t['title_en']] for t in rows(conn, 'SELECT * FROM disc_tracks WHERE disc=? ORDER BY track', x['disc'])]}
-             for x in rows(conn, 'SELECT * FROM discs ORDER BY disc')]
-    albums = {a['code']: {'n': [a['name_ja'], a['name_en']], 'cat': a['catalog'], 'v': a['vgmdb'], 'img': a['img'],
-                          't': {t['track']: [t['title_ja'], t['title_ro'], t['title_en']] for t in rows(conn, 'SELECT * FROM album_tracks WHERE album=? ORDER BY ord', a['code'])}}
-              for a in rows(conn, 'SELECT * FROM albums ORDER BY ord')}
-    return discs, albums
+def build_albums(conn):
+    albums = {}
+    for a in rows(conn, 'SELECT * FROM albums ORDER BY ord'):
+        o = {'n': [a['name_ja'], a['name_en']]}
+        put(o, 'p', a['parent']); put(o, 'd', a['disc']); put(o, 'cat', a['catalog']); put(o, 'v', a['vgmdb']); put(o, 'img', a['img'])
+        o['t'] = {t['track']: [t['title_ja'], t['title_ro'], t['title_en']]
+                  for t in rows(conn, 'SELECT * FROM album_tracks WHERE album=? ORDER BY ord', a['code'])}
+        albums[a['code']] = o
+    return albums
 
 def render(conn):
     # compact, so the page loads faster; db/*.csv is the readable copy for reviewing changes
     data = 'window.MMB_DATA =\n' + json.dumps(build_data(conn), ensure_ascii=False, separators=(',', ':')) + ';\n'
-    discs, albums = build_discs(conn)
-    disc_js = (DISCS_HEAD + 'window.MMB_DISCS =\n' + json.dumps(discs, ensure_ascii=False, indent=1) + ';\n'
-               + ALBUMS_HEAD + 'window.MMB_ALBUMS =\n' + json.dumps(albums, ensure_ascii=False, indent=1) + ';\n')
-    return data, disc_js
+    albums_js = ALBUMS_HEAD + 'window.MMB_ALBUMS =\n' + json.dumps(build_albums(conn), ensure_ascii=False, indent=1) + ';\n'
+    return data, albums_js
 
 # research tables: in the database and CSVs, but never exported to the site; "import" (which rebuilds from data.js)
 # reloads them from db/*.csv so they survive
 RESEARCH = ['library_matches', 'tray_cards']
 TABLES = ['series', 'bgm_lists', 'bgm_categories', 'bgm_cues', 'works', 'parts', 'cue_rows', 'credits', 'notes',
-          'discs', 'disc_tracks', 'albums', 'album_tracks'] + RESEARCH
+          'albums', 'album_tracks'] + RESEARCH
 
 def write_csv(conn):
     os.makedirs(CSV_DIR, exist_ok=True)
@@ -467,20 +458,20 @@ def main():
             print('booklet: MISMATCH (above). If every change is a real transcription fix: booklet --accept')
             sys.exit(1)
         return
-    data, disc_js = render(conn)
+    data, albums_js = render(conn)
     _, bdiff = booklet_diff(conn)
     if cmd == 'check':
-        ok = open(DATA_JS, encoding='utf-8').read() == data and open(DISCS_JS, encoding='utf-8').read() == disc_js
-        print('check: data.js and discs.js match mmb.db' if ok else 'check: MISMATCH; run export')
+        ok = open(DATA_JS, encoding='utf-8').read() == data and open(ALBUMS_JS, encoding='utf-8').read() == albums_js
+        print('check: data.js and albums.js match mmb.db' if ok else 'check: MISMATCH; run export')
         if bdiff: sys.stdout.write(bdiff)
         print('check: booklet text matches booklet.txt' if not bdiff else
               'check: BOOKLET TEXT CHANGED (above): fix mmb.db, or if it is a real transcription fix, run booklet --accept')
         sys.exit(0 if ok and not bdiff else 1)
     if cmd != 'export': sys.exit(__doc__)
     open(DATA_JS, 'w', encoding='utf-8').write(data)
-    open(DISCS_JS, 'w', encoding='utf-8').write(disc_js)
+    open(ALBUMS_JS, 'w', encoding='utf-8').write(albums_js)
     write_csv(conn)
-    print('export: wrote data.js, discs.js, db/*.csv')
+    print('export: wrote data.js, albums.js, db/*.csv')
     if bdiff: print('export: WARNING: the booklet text no longer matches booklet.txt; run "check" to see what changed')
 
 if __name__ == '__main__':

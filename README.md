@@ -24,9 +24,9 @@ Please [open an issue](../../issues) with the episode or list, the row, and what
 | `mmb.db` | **The master copy of all the data**, as a SQLite database |
 | `db/*.csv` | A readable copy of the database, one file per table, so GitHub can show what changed |
 | `data.js` | The transcribed data the page reads, generated from `mmb.db` (written compact; review changes in `db/*.csv`) |
-| `discs.js` | The box set's disc names and track titles, and the other albums the booklet cites (not from the booklet), generated from `mmb.db` |
+| `albums.js` | The albums the booklet's CD column cites (the box set's discs with all their tracks, and the other albums with the tracks cited; not from the booklet), generated from `mmb.db` |
 | `booklet.txt` | The booklet's Japanese exactly as printed, in booklet order: the proofread baseline that `check` compares against |
-| `tools/mmb.py` | Builds `data.js`, `discs.js` and `db/*.csv` from the database |
+| `tools/mmb.py` | Builds `data.js`, `albums.js` and `db/*.csv` from the database |
 | `images/` | `logos/` (series logos), `bgm-list-illustrations/` and `album-covers/` (box-set discs as `disc-NN-…`, other albums by title) |
 
 ## Editing the data
@@ -35,7 +35,7 @@ Edit `mmb.db` (for example in [DB Browser for SQLite](https://sqlitebrowser.org/
 
     python3 tools/mmb.py export
 
-and commit `mmb.db`, `db/` and the regenerated `data.js` and `discs.js` together. The tables mirror the booklet: `bgm_lists` → `bgm_categories` → `bgm_cues` for the BGM lists, and `works` → `parts` → `cue_rows` → `credits` for the cue sheets. Japanese, romaji and English text have their own `_ja`, `_ro` and `_en` columns.
+and commit `mmb.db`, `db/` and the regenerated `data.js` and `albums.js` together. The tables mirror the booklet: `bgm_lists` → `bgm_categories` → `bgm_cues` for the BGM lists, and `works` → `parts` → `cue_rows` → `credits` for the cue sheets. `albums` → `album_tracks` holds every album the CD column cites, by its code in the booklet's key: the box set's discs are `1`–`10`, with the box set itself (`MMB`) as their `parent`. Japanese, romaji and English text have their own `_ja`, `_ro` and `_en` columns.
 
 **Research notes (not on the site).** The `library_matches` table holds library-music identifications still being checked: clips from RattleMan's library rips on sailormusic.net matched to cue-sheet rows by episode, scene and length, with a `confidence` (strong, plausible, box set, no row) and a `status` (unverified, confirmed, rejected). The `library_research` view shows them beside the cue-sheet rows. Export never writes this table to `data.js`, so nothing in it appears on the page until it is moved into the notes.
 
@@ -47,6 +47,6 @@ The `tray_cards` table transcribes the back card in each box-set disc's case: ev
 
 after each round of edits. It fails and shows a diff if any printed Japanese in `mmb.db` has changed; romaji, English, the editor's corrections and the CD track titles are ignored, so translation work never trips it. If a change is a real transcription fix (the booklet was misread), confirm it against the scan and run `python3 tools/mmb.py booklet --accept`, then commit `booklet.txt` with it so the fix shows in the history. Never accept a change you haven't checked against the scan.
 
-Other commands: `check` also confirms the generated files match the database; `restore` rebuilds `mmb.db` from `db/*.csv` if the binary is ever lost; `import` rebuilds it from `data.js` and `discs.js`.
+Other commands: `check` also confirms the generated files match the database; `restore` rebuilds `mmb.db` from `db/*.csv` if the binary is ever lost; `import` rebuilds it from `data.js` and `albums.js`.
 
 Sailor Moon © Naoko Takeuchi / PNP / Toei Animation. This is a fan reference; the booklet's content belongs to its rights holders.
