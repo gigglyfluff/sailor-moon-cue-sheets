@@ -9,7 +9,7 @@ The background music lists and TV/movie cue sheets from pages 104–195 of the *
 - Every cue code in the cue sheets links to its entry in the BGM lists.
 - English episode titles are Viz Media's official translations.
 
-Many thanks to [sailormusic.net](https://sailormusic.net/guide-to-sailor-moon-music-cues/) for providing the scans of the booklet, the disc covers and the romaji track titles, and to [VGMdb](https://vgmdb.net/album/26875) for the Japanese track titles and the other albums' tracks and covers.
+Many thanks to [sailormusic.net](https://sailormusic.net/guide-to-sailor-moon-music-cues/) for providing the scans of the booklet and the disc covers, and to [VGMdb](https://vgmdb.net/album/26875) for the scans of the box set's tray cards (the source of the box set's Japanese track titles) and the other albums' tracks and covers. Many of the romaji and English track titles are based on both sites' track lists, edited to follow this site's romaji style and Viz's English terms; the site's other romaji and English (the BGM lists, cue sheets and notes) are its own.
 
 ## Found a mistake?
 
@@ -27,7 +27,7 @@ Please [open an issue](../../issues) with the episode or list, the row, and what
 | `albums.js` | The albums the booklet's CD column cites (the box set's discs with all their tracks, and the other albums with the tracks cited; not from the booklet), generated from `mmb.db` |
 | `booklet.txt` | The booklet's Japanese exactly as printed, in booklet order: the proofread baseline that `check` compares against |
 | `tools/mmb.py` | Builds `data.js`, `albums.js` and `db/*.csv` from the database |
-| `images/` | `logos/` (series logos), `bgm-list-illustrations/` and `album-covers/` (box-set discs as `disc-NN-…`, other albums by title) |
+| `images/` | `logos/` (series logos), `bgm-list-illustrations/`, `album-covers/` (box-set discs as `disc-NN-…`, other albums by title) and `tray-cards/` (each box-set disc's tray card, from VGMdb) |
 
 ## Editing the data
 
@@ -39,7 +39,7 @@ and commit `mmb.db`, `db/` and the regenerated `data.js` and `albums.js` togethe
 
 **Research notes (not on the site).** The `library_matches` table holds library-music identifications still being checked: clips from RattleMan's library rips on sailormusic.net matched to cue-sheet rows by episode, scene and length, with a `confidence` (strong, plausible, box set, no row) and a `status` (unverified, confirmed, rejected). The `library_research` view shows them beside the cue-sheet rows. Export never writes this table to `data.js`, so nothing in it appears on the page until it is moved into the notes.
 
-The `tray_cards` table transcribes the back card in each box-set disc's case: every track with the cue codes it contains, as printed (`J11編集`, `M16ラジオトーン`, `M115+M118`), with `code` giving the booklet's form for joining and `note` for reading caveats. It is an independent check on the booklet's 収録CD column; every entry agrees with the booklet, apart from the edits (編集) and M-413's four solo versions, which the booklet doesn't list separately, and J4 on Disc 1 track 11, which the booklet places only on Disc 2. The site's CD and code corrections cite the tray cards as their source; photos are kept outside the repo. Like `library_matches`, it stays off the site.
+The `tray_cards` table transcribes the back card in each box-set disc's case, read from the flat scans on [VGMdb](https://vgmdb.net/album/26875), kept in `images/tray-cards/` in case they move (each disc's scan is its `card` in `albums`): every track with the cue codes it contains, as printed (`J11編集`, `M16ラジオトーン`, `M115+M118`), with `code` giving the booklet's form for joining and `note` for reading caveats. It is an independent check on the booklet's 収録CD column; every entry agrees with the booklet, apart from the edits (編集) and M-413's four solo versions, which the booklet doesn't list separately, and J4 on Disc 1 track 11, which the booklet places only on Disc 2. The site's CD and code corrections cite the tray cards as their source, and the page links each "box-set tray card for Disc N" in a note to that disc's scan. The box-set track titles in `album_tracks` are also as printed on the cards. Like `library_matches`, it stays off the site.
 
 **Keeping the Japanese verbatim.** `booklet.txt` holds every piece of Japanese the booklet prints (headings, BGM lists, cue sheets, notes), checked against the scans. Run
 

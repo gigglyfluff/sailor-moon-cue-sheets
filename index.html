@@ -161,7 +161,9 @@ const ED_NOTES = [
   ['原文の「半」は「と半分」の意味で、28"半は28.5秒。「日本語」ボタンをオフにすると、時間は小数で表示されます。',
    '半 in the original means "and a half": 28"半 is 28.5 seconds. When the 日本語 button is off, times are shown as decimals.'],
   ['ブックレットのスキャン画像は<a href="https://sailormusic.net/guide-to-sailor-moon-music-cues/" target="_blank" rel="noopener">sailormusic.net</a>よりご提供いただきました。ありがとうございます！同サイトには、Qシートで「ライブラリー」とクレジットされている曲の情報も掲載されています。',
-   'Many thanks to <a href="https://sailormusic.net/guide-to-sailor-moon-music-cues/" target="_blank" rel="noopener">sailormusic.net</a> for providing the scans of the booklet! The site also has information about the library tracks (ライブラリー) credited in the cue sheets.']];
+   'Many thanks to <a href="https://sailormusic.net/guide-to-sailor-moon-music-cues/" target="_blank" rel="noopener">sailormusic.net</a> for providing the scans of the booklet! The site also has information about the library tracks (ライブラリー) credited in the cue sheets.'],
+  ['CDのジャケット画像と、曲名のローマ字・英語訳の多くは<a href="https://sailormusic.net/anime/memorial-music-box/" target="_blank" rel="noopener">sailormusic.net</a>と<a href="https://vgmdb.net/album/26875" target="_blank" rel="noopener">VGMdb</a>をもとにしています（表記は本サイトの方針に合わせて修正）。ボックスのディスクの曲名はVGMdbに掲載されたトレイカードのスキャンから、ほかのアルバムの曲名とジャケットはVGMdbから引用しています。',
+   'The disc covers, and many of the romaji and English track titles, are based on <a href="https://sailormusic.net/anime/memorial-music-box/" target="_blank" rel="noopener">sailormusic.net</a> and <a href="https://vgmdb.net/album/26875" target="_blank" rel="noopener">VGMdb</a>, edited to match this site\'s style. The box set\'s Japanese track titles come from the tray-card scans on VGMdb, and the other albums\' track titles and covers from VGMdb. Thank you to both!']];
 document.getElementById('lede').innerHTML = `<p>${bi(...INTRO, 'full')}</p>`;
 const noteList = items => `<ul class="ednotes">${items.map(([j, e]) => `<li>${bi(j, e, 'full')}</li>`).join('')}</ul>`;
 /* production terms the cue sheets and lists use throughout: [term ja, explanation ja, term en, explanation en] */
@@ -226,7 +228,13 @@ const mk = (k, cls) => k ? `<sup class="mk${cls ? ' ' + cls : ''}" data-n="${k}"
 /* web addresses written in a note's text ("reddit.com/r/…") become links */
 const linkify = html => html.replace(/\b((?:https?:\/\/)?(?:[a-z0-9-]+\.)+(?:com|net|org|jp)\/[^\s<)"]*[^\s<)".,;])/gi,
   url => `<a href="${url.startsWith('http') ? url : 'https://' + url}" target="_blank" rel="noopener">${url}</a>`);
-const noteText = s => jaWords(linkify(esc(s)));
+/* "the box-set tray card for Disc 2" links to that card's scan (images/tray-cards, from VGMdb), "the box-set tray cards" to the box set's VGMdb page (albums.js) */
+const cardLinks = html => {
+  const A = window.MMB_ALBUMS || {}, a = (url, text) => `<a href="${esc(url)}" target="_blank" rel="noopener">${text}</a>`;
+  return html.replace(/box-set tray card for Disc (\d+)/g, (m, d) => A[d]?.card ? a(A[d].card, m) : m)
+    .replace(/box-set tray cards/g, m => A.MMB?.v ? a(`https://vgmdb.net/album/${A.MMB.v}`, m) : m);
+};
+const noteText = s => jaWords(cardLinks(linkify(esc(s))));
 const printedAs = p => ` <span class="was">(printed ${jaWords(esc(p))})</span>`;
 /* an editor's note is stored as "[Editor's note: …]"; in its own column the brackets and label are dropped */
 const edText = t => t.replace(/^\[Editor's note:\s*/, '').replace(/\]$/, '').replace(/^./, c => c.toUpperCase());
