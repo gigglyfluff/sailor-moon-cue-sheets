@@ -139,9 +139,9 @@ tr.flash td{background:var(--flash)!important}
 /* the editor's columns (CD, Track, Used in, Notes): not in the booklet. They share the table's colours; a line in the
    table's border grey down their left edge sets them apart from the book's own */
 col.w-notes{width:18em} col.w-used{width:14em} col.w-disc{width:16em} col.w-trk{width:15em}
-table.bk :is(td,th):not(.ed) + .ed{position:relative}
-table.bk th:not(.ed):has(+ th.ed){border-right:1px solid var(--cellborder)}  /* the column line body cells have beside it */
-table.bk :is(td,th):not(.ed) + .ed::before{content:"";position:absolute;left:0;top:-1px;bottom:-1px;width:1px;background:var(--tableborder)}  /* over the row lines, so it runs unbroken */
+/* drawn as the right border of the cell before, not a positioned ::before: Safari on iPhone draws position:relative
+   table cells at stale offsets once rows above change height (a panel built after a jump) */
+table.bk :is(td,th):not(.ed):has(+ .ed){border-right:1px solid var(--tableborder)}
 td.notes b{color:var(--muted)}
 td.notes p{margin:0 0 .45em;overflow-wrap:anywhere} td.notes p:last-child{margin-bottom:0}
 .was{color:var(--muted)}
