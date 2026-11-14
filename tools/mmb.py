@@ -126,6 +126,18 @@ CREATE TABLE album_tracks (
   title_ja TEXT, title_ro TEXT, title_en TEXT,
   PRIMARY KEY (album, track)
 );
+-- where each piece of a multi-piece box-set track starts on the CD and how long it runs there (not from the booklet):
+-- found from the audio (quiet gaps and abrupt changes, fitted to the printed TIMEs), seconds from the start of the track
+CREATE TABLE track_pieces (
+  album TEXT NOT NULL, track TEXT NOT NULL,
+  piece INTEGER NOT NULL,                      -- 1 = first piece, as in the booklet's 1-1-1
+  start REAL NOT NULL, dur REAL NOT NULL,      -- seconds; dur runs to the next piece's start (or the end of the track)
+  break TEXT,                                  -- what marks the start: silence, dip (a quiet moment), change (no gap)
+  checked INTEGER NOT NULL DEFAULT 0,          -- 1 = confirmed by ear
+  note TEXT,
+  PRIMARY KEY (album, track, piece),
+  FOREIGN KEY (album, track) REFERENCES album_tracks(album, track)
+);
 
 -- research in progress: NOT exported to data.js, so none of it appears on the site. Kept in the database and db/*.csv.
 -- Library-music identifications: a clip from a fan collection (RattleMan's rips on sailormusic.net) matched to a cue-sheet
@@ -242,6 +254,10 @@ def do_import(conn):
         ins('albums', (code, i, a.get('p'), a.get('d'), a['n'][0], a['n'][1], a.get('cat'), a.get('v'), a.get('img'), a.get('card')))
         for k, (track, tr) in enumerate(a['t'].items()):
             ins('album_tracks', (code, k, track, *tr))
+    for code, a in albums.items():
+        for track, ps in (a.get('s') or {}).items():
+            for i, pc in enumerate(ps):
+                if pc: ins('track_pieces', (code, track, i + 1, *pc, None))
     conn.commit()
 
 # ---------- export: database -> data.js / albums.js / CSV ----------
@@ -327,7 +343,8 @@ ALBUMS_HEAD = ("/* Every album the booklet's CD column cites, keyed by its code 
                "   VGMdb, only the tracks the booklet cites; 歌 keyed by disc-track). n = name [Japanese, English], cat = catalog number,\n"
                "   v = VGMdb album number, card = the disc's tray card (VGMdb's scan, kept in images/tray-cards), t = tracks [Japanese (box-set\n"
                "   discs: as printed on the tray card; other albums: VGMdb), romaji, English (many based on sailormusic.net\n"
-               "   and VGMdb's track lists, edited to the site's style)]. */\n")
+               "   and VGMdb's track lists, edited to the site's style)], s = where each piece of a multi-piece track starts on the CD\n"
+               "   [start, duration (seconds), what marks the break (silence, dip, change), 1 if checked by ear], found from the audio. */\n")
 
 def build_albums(conn):
     albums = {}
@@ -336,6 +353,12 @@ def build_albums(conn):
         put(o, 'p', a['parent']); put(o, 'd', a['disc']); put(o, 'cat', a['catalog']); put(o, 'v', a['vgmdb']); put(o, 'img', a['img']); put(o, 'card', a['card'])
         o['t'] = {t['track']: [t['title_ja'], t['title_ro'], t['title_en']]
                   for t in rows(conn, 'SELECT * FROM album_tracks WHERE album=? ORDER BY ord', a['code'])}
+        s = {}
+        for p in rows(conn, 'SELECT * FROM track_pieces WHERE album=? ORDER BY CAST(track AS INTEGER), piece', a['code']):
+            lst = s.setdefault(p['track'], [])
+            lst.extend([None] * (p['piece'] - len(lst)))     # by position: a piece with no place of its own stays null
+            lst[p['piece'] - 1] = [p['start'], p['dur'], p['break'], p['checked']]
+        if s: o['s'] = s
         albums[a['code']] = o
     return albums
 
@@ -349,7 +372,7 @@ def render(conn):
 # reloads them from db/*.csv so they survive
 RESEARCH = ['library_matches', 'tray_cards']
 TABLES = ['series', 'bgm_lists', 'bgm_categories', 'bgm_cues', 'works', 'parts', 'cue_rows', 'credits', 'notes',
-          'albums', 'album_tracks'] + RESEARCH
+          'albums', 'album_tracks', 'track_pieces'] + RESEARCH
 
 def write_csv(conn):
     os.makedirs(CSV_DIR, exist_ok=True)

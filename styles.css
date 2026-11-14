@@ -134,7 +134,20 @@ table.bk tbody tr:hover td{background:var(--rowhover)}
 .fixed.ins{white-space:normal} .fixed.ins mark{margin-left:.2em}
 /* in the two-column CD key a long correction wraps inside its own column instead of running into the next */
 .cols2 .fixed{white-space:normal}
-tr.flash td{background:var(--flash)!important}
+tr.flash td, tbody.flash td{background:var(--flash)!important}
+a.btn{text-decoration:none;display:inline-flex;align-items:center}
+
+/* the albums page: one tbody per track (its pieces share the number and title cells), so tracks, not rows, alternate */
+col.w-ttl{width:17em} col.w-piece{width:4.2em} table.bk[data-kind=album]{min-width:94em}
+table.bk[data-kind=album] tbody tr td{background:var(--row)}
+table.bk[data-kind=album] tbody:nth-of-type(even) td{background:var(--stripe)}
+table.bk[data-kind=album] tbody:hover td{background:var(--rowhover)}
+table.bk[data-kind=album] tbody{scroll-margin-top:84px}
+table.bk td.code .src{display:block;font-size:.9em;color:var(--muted)}
+.al-head{display:flex;gap:14px;align-items:flex-start;margin:8px 0 10px}
+.al-head img{width:120px;height:auto;flex:none;border-radius:4px;box-shadow:0 1px 4px rgb(0 0 0 / .2)}
+.al-name .cj{font-weight:700}
+.al-links{margin-top:6px;font-size:var(--s-1)}
 
 /* the editor's columns (CD, Track, Used in, Notes): not in the booklet. They share the table's colours; a line in the
    table's border grey down their left edge sets them apart from the book's own */
