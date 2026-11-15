@@ -57,7 +57,8 @@ CREATE TABLE bgm_cues (
   cd_fix TEXT, cd_fix_url TEXT, cd_fix_note TEXT,          -- editor's CD correction (a note alone: about a CD entry that stands)
   code_name_ja TEXT, code_name_ro TEXT, code_name_en TEXT, -- a code printed with words (M-2 コーラスヌキ)
   code_fix TEXT, code_fix_url TEXT, code_fix_note TEXT,    -- editor's code correction
-  desc_fix_printed TEXT, desc_fix_correct TEXT, desc_fix_url TEXT, desc_fix_note TEXT
+  desc_fix_printed TEXT, desc_fix_correct TEXT, desc_fix_url TEXT, desc_fix_note TEXT,
+  desc_note TEXT, desc_note_url TEXT           -- editor's note on a description that stands as printed (E-12's ※欠番)
 );
 -- a TV episode, special or film cue sheet
 CREATE TABLE works (
@@ -174,6 +175,16 @@ CREATE TABLE tray_cards (
   note TEXT,                                   -- reading or source caveats
   PRIMARY KEY (disc, track, ord)
 );
+-- How pieces relate to each other, read one way: code is a <kind> of related (E-12 is an arrangement of E-22).
+-- Gathered for a later look at the score's families of pieces; not shown on the site yet.
+CREATE TABLE piece_relations (
+  id INTEGER PRIMARY KEY,
+  code TEXT NOT NULL,                          -- the piece, in the booklet's form (E-12)
+  related TEXT NOT NULL,                       -- the piece it derives from or resembles (E-22)
+  kind TEXT NOT NULL,                          -- arrangement, edit, variant, quotes (shares a theme or motif), same
+  basis TEXT NOT NULL,                         -- how we know: booklet, tray card, by ear, audio match
+  note TEXT
+);
 
 -- convenience views (read-only)
 CREATE VIEW library_research AS
@@ -235,10 +246,10 @@ def do_import(conn):
             pp = c.get('pp') or [None, None]
             ins('bgm_categories', (c['id'], b['id'], ci, *split3(c['n']), *split3(c.get('g')), c.get('p'), pp[0], pp[1], int(c['tt'])))
             for ri, r in enumerate(c['r']):
-                dx, cx = r.get('dx') or {}, r.get('cx') or [None, None, None]
+                dx, dn, cx = r.get('dx') or {}, r.get('dn') or {}, r.get('cx') or [None, None, None]
                 ins('bgm_cues', None, (c['id'], ri, r.get('c'), *split3(r.get('t')), *split3(r.get('d')), r.get('cd'),
                    r.get('cdx'), r.get('cdu'), r.get('cdn'), *split3(r.get('cn')), *cx,
-                   dx.get('p'), dx.get('c'), dx.get('u'), dx.get('n')))
+                   dx.get('p'), dx.get('c'), dx.get('u'), dx.get('n'), dn.get('t'), dn.get('u')))
     for wi, w in enumerate(d['works']):
         hx = w.get('hx') or {}
         pp = w.get('pp') or [None, None]
@@ -307,6 +318,7 @@ def build_data(conn):
                     dx = {'p': r['desc_fix_printed'], 'c': r['desc_fix_correct']}
                     put(dx, 'u', r['desc_fix_url']); dx['n'] = r['desc_fix_note']
                     ro['dx'] = dx
+                if r['desc_note'] is not None: ro['dn'] = {'t': r['desc_note'], 'u': r['desc_note_url']}
                 co['r'].append(ro)
             co['tt'] = bool(c['tt'])
             if c['page_from'] is not None: co['pp'] = [c['page_from'], c['page_to']]
@@ -408,7 +420,7 @@ def render(conn):
 
 # research tables: in the database and CSVs, but never exported to the site; "import" (which rebuilds from data.js)
 # reloads them from db/*.csv so they survive
-RESEARCH = ['library_matches', 'tray_cards']
+RESEARCH = ['library_matches', 'tray_cards', 'piece_relations']
 TABLES = ['series', 'bgm_lists', 'bgm_categories', 'bgm_cues', 'works', 'parts', 'cue_rows', 'credits', 'notes',
           'albums', 'album_tracks', 'track_pieces', 'piece_parts'] + RESEARCH
 

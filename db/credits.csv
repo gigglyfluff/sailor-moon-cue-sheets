@@ -702,7 +702,7 @@ row_id,ord,printed,target,corrected,note
 847,0,E-11,cue-E-11,\N,\N
 848,0,G-1,cue-G-1,\N,\N
 849,0,J-12,cue-J-12,\N,\N
-850,0,E-12,cue-E-12,\N,"E-12 is listed as ※欠番 (an unused number) on p.105, so the piece played here cannot be identified from the booklet."
+850,0,E-12,cue-E-12,\N,\N
 851,0,H-1,cue-H-1,\N,\N
 851,1,2,cue-H-2,\N,\N
 852,0,G-10,cue-G-10,\N,\N
