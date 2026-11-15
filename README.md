@@ -4,6 +4,8 @@ The background music lists and TV/movie cue sheets from pages 104–195 of the *
 
 **[Open the page](index.html)** (or the GitHub Pages address in the sidebar).
 
+A second page, **[Albums](albums.html)**, lists every album the BGM lists cite, track by track: the pieces on each track (the booklet's 1-1-1 = disc 1, track 1, first piece) with their M-NO., time and description, and the episodes each is used in. Each track number in the main page's Track column links to it. For tracks with several pieces it also gives where each piece starts on the CD and how long it runs there, measured from the audio at the silent gaps between pieces and fitted to the printed TIMEs (the `track_pieces` table). Every other box-set track shows its whole length on the CD, also measured from the audio (`album_tracks.length`). The *Sailor Moon S Music Collection* (album S) is listed in full, with every track's title from its tray card (kept in `images/tray-cards/`) and its pieces measured the same way. Where the booklet places two codes on one piece (the tray card's J12B+F5B), `piece_parts` gives where each plays within it, found by ear.
+
 - Japanese is transcribed exactly as printed, typos and mistakes included. Typos, mistakes and editor's comments are marked with a numbered note. Beside the booklet's own columns, the editor's columns show: Notes (corrections and their sources), which disc and track each BGM-list piece is on (cover, disc name, track number and title), and every episode that uses each piece.
 - Every row has its own link (for example `#r-TV-98-B-19` or `#cue-M-206`), and the browser's Back button returns from a jump.
 - Every cue code in the cue sheets links to its entry in the BGM lists.
@@ -19,8 +21,10 @@ Please [open an issue](../../issues) with the episode or list, the row, and what
 
 | File | What it is |
 |---|---|
-| `index.html` | The page |
-| `styles.css` | Its styling |
+| `index.html` | The BGM lists and cue sheets |
+| `albums.html` | The albums and their tracks |
+| `app.js` | The script both pages share (each page sets which one it builds) |
+| `styles.css` | Their styling |
 | `mmb.db` | **The master copy of all the data**, as a SQLite database |
 | `db/*.csv` | A readable copy of the database, one file per table, so GitHub can show what changed |
 | `data.js` | The transcribed data the page reads, generated from `mmb.db` (written compact; review changes in `db/*.csv`) |
@@ -39,7 +43,7 @@ and commit `mmb.db`, `db/` and the regenerated `data.js` and `albums.js` togethe
 
 **Research notes (not on the site).** The `library_matches` table holds library-music identifications still being checked: clips from RattleMan's library rips on sailormusic.net matched to cue-sheet rows by episode, scene and length, with a `confidence` (strong, plausible, box set, no row) and a `status` (unverified, confirmed, rejected). The `library_research` view shows them beside the cue-sheet rows. Export never writes this table to `data.js`, so nothing in it appears on the page until it is moved into the notes.
 
-The `tray_cards` table transcribes the back card in each box-set disc's case, read from the flat scans on [VGMdb](https://vgmdb.net/album/26875), kept in `images/tray-cards/` in case they move (each disc's scan is its `card` in `albums`): every track with the cue codes it contains, as printed (`J11編集`, `M16ラジオトーン`, `M115+M118`), with `code` giving the booklet's form for joining and `note` for reading caveats. It is an independent check on the booklet's 収録CD column; every entry agrees with the booklet, apart from the edits (編集) and M-413's four solo versions, which the booklet doesn't list separately, and J4 on Disc 1 track 11, which the booklet places only on Disc 2. The site's CD and code corrections cite the tray cards as their source, and the page links each "box-set tray card for Disc N" in a note to that disc's scan. The box-set track titles in `album_tracks` are also as printed on the cards. Like `library_matches`, it stays off the site.
+The `tray_cards` table transcribes the back card in each box-set disc's case, read from the flat scans on [VGMdb](https://vgmdb.net/album/26875), kept in `images/tray-cards/` in case they move (each disc's scan is its `card` in `albums`): every track with the cue codes it contains, as printed (`J11編集`, `M16ラジオトーン`, `M115+M118`), with `code` giving the booklet's form for joining and `note` for reading caveats. It is an independent check on the booklet's 収録CD column; every entry agrees with the booklet, apart from the edits (編集) and M-413's four solo versions, which the booklet doesn't list separately, and J4 on Disc 1 track 11, which the booklet places only on Disc 2, plus the two joined long versions on Disc 2 track 30 (`C1a+C1b`, `H1+H2`). Card and booklet agree but are both wrong in one place: E11 and F10 are swapped on the CD (Disc 1 tracks 36 and 38, confirmed by ear). The site's CD and code corrections cite the tray cards as their source, and the page links each "box-set tray card for Disc N" in a note to that disc's scan. The box-set track titles in `album_tracks` are also as printed on the cards. The table itself stays off the site, but the entries the booklet never places at their track (the edits, J4, M-413's versions, the 2-30 long versions) are exported to `albums.js` (`e`), so the Albums page can fill in those rows.
 
 **Keeping the Japanese verbatim.** `booklet.txt` holds every piece of Japanese the booklet prints (headings, BGM lists, cue sheets, notes), checked against the scans. Run
 
