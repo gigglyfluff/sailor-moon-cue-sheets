@@ -33,9 +33,9 @@ disc,track,ord,printed,code,note
 1,33,1,J9,J-9,\N
 1,34,1,E4,E-4,\N
 1,35,1,I1,I-1,\N
-1,36,1,E11,E-11,\N
+1,36,1,E11,E-11,"by ear this track is F-10 (mysterious; matches episode 1 B M-12), not E-11 (track 38); the lengths agree: 1:28 here vs F-10's printed 1'29"""
 1,37,1,E21,E-21,\N
-1,38,1,F10,F-10,\N
+1,38,1,F10,F-10,"by ear this track is E-11 (sentimental; matches episode 24 B M-14), not F-10 (track 36); the lengths agree: 1:09 here vs E-11's printed 1'11.5"""
 1,39,1,E16,E-16,\N
 1,40,1,J22,J-22,\N
 1,41,1,G10,G-10,\N
@@ -97,8 +97,8 @@ disc,track,ord,printed,code,note
 2,24,2,G11B,G-11B,\N
 2,27,1,A6a,A-6a,\N
 2,27,2,A6b,A-6b,\N
-2,30,1,C1a・C1b,\N,"two pieces joined, printed with ・"
-2,30,2,H1・H2,\N,"two pieces joined, printed with ・"
+2,30,1,C1a+C1b,\N,\N
+2,30,2,H1+H2,\N,\N
 3,1,1,M101,M-101,\N
 3,1,2,M133,M-133,\N
 3,3,1,M113,M-113,\N

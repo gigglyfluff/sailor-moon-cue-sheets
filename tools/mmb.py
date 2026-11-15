@@ -17,7 +17,7 @@ to regenerate what the site reads (data.js, albums.js) and the readable text cop
 Standard library only. Text that the booklet gives in three forms has _ja, _ro and _en columns; data.js writes a
 value that reads the same in all three as a single string, so export does the same when all three columns match.
 """
-import csv, json, os, sqlite3, sys
+import csv, json, os, re, sqlite3, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB = os.path.join(ROOT, 'mmb.db')
@@ -54,7 +54,7 @@ CREATE TABLE bgm_cues (
   time_ja TEXT, time_ro TEXT, time_en TEXT,
   desc_ja TEXT, desc_ro TEXT, desc_en TEXT,
   cd TEXT,                                     -- source CD as printed (disc-track-piece)
-  cd_fix TEXT, cd_fix_url TEXT, cd_fix_note TEXT,          -- editor's CD correction
+  cd_fix TEXT, cd_fix_url TEXT, cd_fix_note TEXT,          -- editor's CD correction (a note alone: about a CD entry that stands)
   code_name_ja TEXT, code_name_ro TEXT, code_name_en TEXT, -- a code printed with words (M-2 コーラスヌキ)
   code_fix TEXT, code_fix_url TEXT, code_fix_note TEXT,    -- editor's code correction
   desc_fix_printed TEXT, desc_fix_correct TEXT, desc_fix_url TEXT, desc_fix_note TEXT
@@ -119,11 +119,12 @@ CREATE TABLE albums (
   name_ja TEXT, name_en TEXT, catalog TEXT, vgmdb INTEGER, img TEXT,
   card TEXT                                    -- a box-set disc's tray card: VGMdb's scan, kept in images/tray-cards
 );
--- the box-set discs' full track lists; for the other albums, only the tracks the booklet cites
+-- the box-set discs' and the S album's full track lists (titles from their tray cards); for the other albums, only the tracks the booklet cites
 CREATE TABLE album_tracks (
   album TEXT NOT NULL REFERENCES albums(code), ord INTEGER NOT NULL,
   track TEXT NOT NULL,                         -- track number (歌: disc-track)
   title_ja TEXT, title_ro TEXT, title_en TEXT,
+  length REAL,                                 -- the whole track's length on the CD in seconds (box-set discs and the S album), from the MP3s' encoder headers
   PRIMARY KEY (album, track)
 );
 -- where each piece of a multi-piece box-set track starts on the CD and how long it runs there (not from the booklet):
@@ -137,6 +138,16 @@ CREATE TABLE track_pieces (
   note TEXT,
   PRIMARY KEY (album, track, piece),
   FOREIGN KEY (album, track) REFERENCES album_tracks(album, track)
+);
+-- two codes the booklet places on one piece (the tray card's J12B+F5B): where each plays within it, found by ear and
+-- from the audio; approximate, since one fades into the other
+CREATE TABLE piece_parts (
+  album TEXT NOT NULL, track TEXT NOT NULL, piece INTEGER NOT NULL,
+  code TEXT NOT NULL,                          -- the booklet's code (J-12B)
+  start REAL NOT NULL, end REAL NOT NULL,      -- seconds from the start of the track
+  note TEXT,
+  PRIMARY KEY (album, track, piece, code),
+  FOREIGN KEY (album, track, piece) REFERENCES track_pieces(album, track, piece)
 );
 
 -- research in progress: NOT exported to data.js, so none of it appears on the site. Kept in the database and db/*.csv.
@@ -253,11 +264,14 @@ def do_import(conn):
     for i, (code, a) in sorted(enumerate(albums.items()), key=lambda x: 'p' in x[1][1]):
         ins('albums', (code, i, a.get('p'), a.get('d'), a['n'][0], a['n'][1], a.get('cat'), a.get('v'), a.get('img'), a.get('card')))
         for k, (track, tr) in enumerate(a['t'].items()):
-            ins('album_tracks', (code, k, track, *tr))
+            ins('album_tracks', (code, k, track, *tr, (a.get('l') or {}).get(track)))
     for code, a in albums.items():
         for track, ps in (a.get('s') or {}).items():
             for i, pc in enumerate(ps):
                 if pc: ins('track_pieces', (code, track, i + 1, *pc, None))
+        for track, parts in (a.get('x') or {}).items():
+            for c, (piece, start, end) in parts.items():
+                ins('piece_parts', (code, track, piece, c, start, end, None))
     conn.commit()
 
 # ---------- export: database -> data.js / albums.js / CSV ----------
@@ -340,25 +354,49 @@ def build_data(conn):
 ALBUMS_HEAD = ("/* Every album the booklet's CD column cites, keyed by its code in the p.104 key (MMB, the box set, is the site's own). Not from the booklet.\n"
                "   The box set (MMB) and its discs 1-10 (p = parent, d = disc number; disc names from each disc's cover, covers from\n"
                "   sailormusic.net, every track); the other albums R, S, SS, ST1, ST2, EX and 歌 (original CD releases, covers from\n"
-               "   VGMdb, only the tracks the booklet cites; 歌 keyed by disc-track). n = name [Japanese, English], cat = catalog number,\n"
+               "   VGMdb, only the tracks the booklet cites, except S: every track, from its tray card; 歌 keyed by disc-track). n = name [Japanese, English], cat = catalog number,\n"
                "   v = VGMdb album number, card = the disc's tray card (VGMdb's scan, kept in images/tray-cards), t = tracks [Japanese (box-set\n"
                "   discs: as printed on the tray card; other albums: VGMdb), romaji, English (many based on sailormusic.net\n"
-               "   and VGMdb's track lists, edited to the site's style)], s = where each piece of a multi-piece track starts on the CD\n"
-               "   [start, duration (seconds), what marks the break (silence, dip, change), 1 if checked by ear], found from the audio. */\n")
+               "   and VGMdb's track lists, edited to the site's style)], l = each track's length on the CD (seconds,\n"
+               "   from the audio), s = where each piece of a multi-piece track starts on the CD\n"
+               "   [start, duration (seconds), what marks the break (silence, dip, change), 1 if checked by ear], found from the audio,\n"
+               "   e = pieces the tray card prints that the booklet never places at that track {track: {piece: [as printed, code]}},\n"
+               "   x = two codes on one piece: where each plays within it {code: [piece, start, end]} (approximate: one fades into the other). */\n")
 
 def build_albums(conn):
     albums = {}
+    # where the booklet places pieces on the box set (BGM lists and film cue sheets, corrections applied), for e below
+    cited = set()
+    for r in rows(conn, 'SELECT coalesce(cd_fix, cd) AS c FROM bgm_cues UNION ALL SELECT coalesce(cd_fix, cd) FROM cue_rows'):
+        m = re.match(r'^(\d+)-(\d+)(?:-(\d+))?$', r['c'] or '')
+        if m: cited.add((int(m[1]), int(m[2]), int(m[3]) if m[3] else None))
     for a in rows(conn, 'SELECT * FROM albums ORDER BY ord'):
         o = {'n': [a['name_ja'], a['name_en']]}
         put(o, 'p', a['parent']); put(o, 'd', a['disc']); put(o, 'cat', a['catalog']); put(o, 'v', a['vgmdb']); put(o, 'img', a['img']); put(o, 'card', a['card'])
         o['t'] = {t['track']: [t['title_ja'], t['title_ro'], t['title_en']]
                   for t in rows(conn, 'SELECT * FROM album_tracks WHERE album=? ORDER BY ord', a['code'])}
+        lens = {t['track']: t['length'] for t in rows(conn, 'SELECT * FROM album_tracks WHERE album=? ORDER BY ord', a['code'])
+                if t['length'] is not None}
+        if lens: o['l'] = lens
         s = {}
         for p in rows(conn, 'SELECT * FROM track_pieces WHERE album=? ORDER BY CAST(track AS INTEGER), piece', a['code']):
             lst = s.setdefault(p['track'], [])
             lst.extend([None] * (p['piece'] - len(lst)))     # by position: a piece with no place of its own stays null
             lst[p['piece'] - 1] = [p['start'], p['dur'], p['break'], p['checked']]
         if s: o['s'] = s
+        x = {}
+        for p in rows(conn, 'SELECT * FROM piece_parts WHERE album=? ORDER BY CAST(track AS INTEGER), piece, start', a['code']):
+            x.setdefault(p['track'], {})[p['code']] = [p['piece'], p['start'], p['end']]
+        if x: o['x'] = x
+        if a['parent'] == 'MMB':   # tray-card pieces the booklet never places here (3-11-1, J10編集): their printed label
+            e, card = {}, {}
+            for t in rows(conn, 'SELECT * FROM tray_cards WHERE disc=? ORDER BY track, ord', a['disc']):
+                card.setdefault(t['track'], []).append(t)
+            for trk, lst in card.items():
+                for t in lst:
+                    if (a['disc'], trk, t['ord']) in cited or (len(lst) == 1 and (a['disc'], trk, None) in cited): continue
+                    e.setdefault(str(trk), {})[str(t['ord'])] = [t['printed'], t['code']]
+            if e: o['e'] = e
         albums[a['code']] = o
     return albums
 
@@ -372,7 +410,7 @@ def render(conn):
 # reloads them from db/*.csv so they survive
 RESEARCH = ['library_matches', 'tray_cards']
 TABLES = ['series', 'bgm_lists', 'bgm_categories', 'bgm_cues', 'works', 'parts', 'cue_rows', 'credits', 'notes',
-          'albums', 'album_tracks', 'track_pieces'] + RESEARCH
+          'albums', 'album_tracks', 'track_pieces', 'piece_parts'] + RESEARCH
 
 def write_csv(conn):
     os.makedirs(CSV_DIR, exist_ok=True)
