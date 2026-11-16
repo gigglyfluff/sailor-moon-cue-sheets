@@ -1,19 +1,19 @@
-<title>Sailor Moon BGM Lists &amp; Cue Sheets</title>
+<title>Sailor Moon BGM Lists &amp; Cue Sheets, Annotated</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=optional">
 <link rel="stylesheet" href="styles.css">
 
 <div class="bar" id="bar">
   <div class="bar-in">
     <div class="grp">
-      <button class="btn" id="openAll" type="button"></button>
-      <button class="btn" id="closeAll" type="button"></button>
+      <button class="btn" id="openAll" type="button"><span class="en1">Expand all</span></button>
+      <button class="btn" id="closeAll" type="button"><span class="en1">Collapse all</span></button>
     </div>
-    <button class="btn" id="notesBtn" type="button" aria-haspopup="dialog" aria-controls="notesDlg"></button>
-    <a class="btn" id="navLink" href="albums.html"></a>
+    <button class="btn" id="notesBtn" type="button" aria-haspopup="dialog" aria-controls="notesDlg"><span class="en1">Notes</span></button>
+    <a class="btn" id="navLink" href="albums.html"><span class="en1">Albums</span></a>
     <div class="langs" id="langs" role="group" aria-label="Languages shown" translate="no">
       <label class="lt"><input type="checkbox" data-l="ja"><span lang="ja">日本語</span></label>
       <label class="lt"><input type="checkbox" data-l="ro"><span>Rōmaji</span></label>
@@ -23,8 +23,8 @@
 </div>
 <div class="wrap" id="app">
   <header class="mast">
-    <div class="plate" id="mastTitle"></div>
-    <div class="lede" id="lede"></div>
+    <!-- the static text is what the script writes too, so nothing shifts while the page loads -->
+    <div class="plate" id="mastTitle"><span class="en1">Sailor Moon BGM Lists &amp; Cue Sheets, Annotated</span></div>
   </header>
 
   <!-- sections (Notes, then one per season) are built by the script -->

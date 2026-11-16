@@ -1,15 +1,16 @@
 /* Every album the booklet's CD column cites, keyed by its code in the p.104 key (MMB, the box set, is the site's own), and the
    other original BGM albums (MC, RM, SM, SSM). Not from the booklet.
    The box set (MMB) and its discs 1-10 (p = parent, d = disc number; disc names from each disc's cover, covers from
-   sailormusic.net); the original CD releases MC, R, RM, S, SM, SS, SSM, ST1, ST2, EX (covers and tray cards from VGMdb's
-   scans) and 歌 (only the tracks the booklet cites; keyed by disc-track). Every track of every album except 歌 is listed.
+   VGMdb's booklet-front scans); the original CD releases MC, R, RM, S, SM, SS, SSM, ST1, ST2, EX (covers and tray cards from VGMdb's
+   scans) and 歌 (keyed by disc-track; titles from each disc's back card, lengths from MP3s). Every track of every album
+   is listed. th = the cover shown while the album is closed, when it differs from img. dn = the discs of 歌 {disc: [name Japanese, English, booklet front]}.
    n = name [Japanese, English], cat = catalog number, v = VGMdb album number, card = the album's tray card (VGMdb's scan,
    kept in images/tray-cards), t = tracks [Japanese as printed on the tray card, romaji, English (edited to the site's
    style)], l = each track's length on the CD (seconds, from the audio), s = where each piece of a multi-piece track
    starts on the CD [start, duration (seconds), what marks the break (silence, dip, change), 1 if checked by ear], found
    from the audio, e = pieces the tray card prints that the booklet never places at that track {track: {piece: [as printed,
-   code]}}, x = two codes on one piece: where each plays within it {code: [piece, start, end]} (approximate: one fades
-   into the other), q = an original album's piece that is the same recording as a box-set piece {track: {piece: place}},
+   code]}}, x = two codes on one piece: where each plays within it {code: [piece, start, end, mix]} (mix:
+   crossfade, layered or joined), q = an original album's piece that is the same recording as a box-set piece {track: {piece: place}},
    found by matching the audio. */
 window.MMB_ALBUMS =
 {
@@ -20,6 +21,7 @@ window.MMB_ALBUMS =
   ],
   "cat": "COCC-14785~94",
   "v": 26875,
+  "img": "images/album-covers/sailor-moon-memorial-music-box.jpg",
   "t": {}
  },
  "1": {
@@ -32,6 +34,7 @@ window.MMB_ALBUMS =
   "cat": "COCC-14785",
   "img": "images/album-covers/disc-01-sailor-moon-music-collection-1.jpg",
   "card": "images/tray-cards/disc-01.jpg",
+  "th": "images/album-covers/thumbs/disc-01-sailor-moon-music-collection-1.jpg",
   "t": {
    "1": [
     "ムーンライト伝説　TVサイズ",
@@ -443,6 +446,7 @@ window.MMB_ALBUMS =
   "cat": "COCC-14786",
   "img": "images/album-covers/disc-02-sailor-moon-music-collection-2.jpg",
   "card": "images/tray-cards/disc-02.jpg",
+  "th": "images/album-covers/thumbs/disc-02-sailor-moon-music-collection-2.jpg",
   "t": {
    "1": [
     "アバンタイトル音楽",
@@ -874,6 +878,7 @@ window.MMB_ALBUMS =
   "cat": "COCC-14787",
   "img": "images/album-covers/disc-03-sailor-moon-r-music-collection.jpg",
   "card": "images/tray-cards/disc-03.jpg",
+  "th": "images/album-covers/thumbs/disc-03-sailor-moon-r-music-collection.jpg",
   "t": {
    "1": [
     "戦士の記憶",
@@ -1285,12 +1290,28 @@ window.MMB_ALBUMS =
     "J-12B": [
      3,
      106.0,
-     121.0
+     121.0,
+     "crossfade"
     ],
     "F-5B": [
      3,
      115.0,
-     172.7
+     172.7,
+     "crossfade"
+    ]
+   },
+   "12": {
+    "M-115": [
+     3,
+     122.3,
+     178.7,
+     "joined"
+    ],
+    "M-118": [
+     3,
+     178.7,
+     266.2,
+     "joined"
     ]
    }
   },
@@ -1325,6 +1346,7 @@ window.MMB_ALBUMS =
   "cat": "COCC-14788",
   "img": "images/album-covers/disc-04-sailor-moon-s-music-collection.jpg",
   "card": "images/tray-cards/disc-04.jpg",
+  "th": "images/album-covers/thumbs/disc-04-sailor-moon-s-music-collection.jpg",
   "t": {
    "1": [
     "運命の戦士",
@@ -1796,6 +1818,22 @@ window.MMB_ALBUMS =
      0
     ]
    ]
+  },
+  "x": {
+   "14": {
+    "M-337": [
+     2,
+     97.3,
+     207.1,
+     "layered"
+    ],
+    "M-366": [
+     2,
+     97.3,
+     207.1,
+     "layered"
+    ]
+   }
   }
  },
  "5": {
@@ -1808,6 +1846,7 @@ window.MMB_ALBUMS =
   "cat": "COCC-14789",
   "img": "images/album-covers/disc-05-sailor-moon-supers-music-collection.jpg",
   "card": "images/tray-cards/disc-05.jpg",
+  "th": "images/album-covers/thumbs/disc-05-sailor-moon-supers-music-collection.jpg",
   "t": {
    "1": [
     "水晶の森",
@@ -2313,6 +2352,7 @@ window.MMB_ALBUMS =
   "cat": "COCC-14790",
   "img": "images/album-covers/disc-06-sailor-moon-sailor-stars-music-collection-1.jpg",
   "card": "images/tray-cards/disc-06.jpg",
+  "th": "images/album-covers/thumbs/disc-06-sailor-moon-sailor-stars-music-collection-1.jpg",
   "t": {
    "1": [
     "「ゴールデンクイーン・ギャラクシア」～オルゴールヴァージョン～",
@@ -2624,6 +2664,7 @@ window.MMB_ALBUMS =
   "cat": "COCC-14791",
   "img": "images/album-covers/disc-07-sailor-moon-sailor-stars-music-collection-2.jpg",
   "card": "images/tray-cards/disc-07.jpg",
+  "th": "images/album-covers/thumbs/disc-07-sailor-moon-sailor-stars-music-collection-2.jpg",
   "t": {
    "1": [
     "「とどかぬ想い－my friend's love－」～インストヴァージョン～",
@@ -2983,6 +3024,7 @@ window.MMB_ALBUMS =
   "cat": "COCC-14792",
   "img": "images/album-covers/disc-08-sailor-moon-r-movie-music-collection.jpg",
   "card": "images/tray-cards/disc-08.jpg",
+  "th": "images/album-covers/thumbs/disc-08-sailor-moon-r-movie-music-collection.jpg",
   "t": {
    "1": [
     "プロローグ",
@@ -3336,6 +3378,7 @@ window.MMB_ALBUMS =
   "cat": "COCC-14793",
   "img": "images/album-covers/disc-09-sailor-moon-s-movie-music-collection.jpg",
   "card": "images/tray-cards/disc-09.jpg",
+  "th": "images/album-covers/thumbs/disc-09-sailor-moon-s-movie-music-collection.jpg",
   "t": {
    "1": [
     "雪の女王",
@@ -3791,6 +3834,7 @@ window.MMB_ALBUMS =
   "cat": "COCC-14794",
   "img": "images/album-covers/disc-10-sailor-moon-supers-movie-music-collection.jpg",
   "card": "images/tray-cards/disc-10.jpg",
+  "th": "images/album-covers/thumbs/disc-10-sailor-moon-supers-movie-music-collection.jpg",
   "t": {
    "1": [
     "笛吹き",
@@ -4377,6 +4421,717 @@ window.MMB_ALBUMS =
      "silence",
      0
     ]
+   ]
+  }
+ },
+ "歌": {
+  "n": [
+   "美少女戦士セーラームーンシリーズ メモリアル・ソング・ボックス",
+   "Sailor Moon Memorial Song Box"
+  ],
+  "cat": "COCC-14459~64",
+  "v": 23044,
+  "img": "images/album-covers/sailor-moon-memorial-song-box.jpg",
+  "t": {
+   "1-1": [
+    "ムーンライト伝説",
+    "Muunraito Densetsu",
+    "Moonlight Legend"
+   ],
+   "1-2": [
+    "HEART MOVING",
+    "HEART MOVING",
+    "HEART MOVING"
+   ],
+   "1-3": [
+    "プリンセス・ムーン",
+    "Purinsesu Muun",
+    "Princess Moon"
+   ],
+   "1-4": [
+    "乙女のポリシー",
+    "Otome no Porishii",
+    "A Maiden's Policy"
+   ],
+   "1-5": [
+    "ムーンライト伝説",
+    "Muunraito Densetsu",
+    "Moonlight Legend"
+   ],
+   "1-6": [
+    "タキシード・ミラージュ",
+    "Takishiido Miraaju",
+    "Tuxedo Mirage"
+   ],
+   "1-7": [
+    "私たちになりたくて",
+    "Watashi-tachi ni Naritakute",
+    "Wanting to Be Like Us"
+   ],
+   "1-8": [
+    "\"らしく\"いきましょ",
+    "\"Rashiku\" Ikimasho",
+    "Let's Be True to Ourselves"
+   ],
+   "1-9": [
+    "セーラースターソング",
+    "Seeraa Sutaa Songu",
+    "Sailor Star Song"
+   ],
+   "1-10": [
+    "風も空もきっと…",
+    "Kaze mo Sora mo Kitto…",
+    "The Wind and the Sky, Surely…"
+   ],
+   "1-11": [
+    "ムーンライト伝説（オリジナルカラオケ）",
+    "Muunraito Densetsu (Orijinaru Karaoke)",
+    "Moonlight Legend (Original Karaoke)"
+   ],
+   "1-12": [
+    "HEART MOVING（オリジナルカラオケ）",
+    "HEART MOVING (Orijinaru Karaoke)",
+    "HEART MOVING (Original Karaoke)"
+   ],
+   "1-13": [
+    "プリンセス・ムーン（オリジナルカラオケ）",
+    "Purinsesu Muun (Orijinaru Karaoke)",
+    "Princess Moon (Original Karaoke)"
+   ],
+   "1-14": [
+    "乙女のポリシー（オリジナルカラオケ）",
+    "Otome no Porishii (Orijinaru Karaoke)",
+    "A Maiden's Policy (Original Karaoke)"
+   ],
+   "1-15": [
+    "タキシード・ミラージュ（オリジナルカラオケ）",
+    "Takishiido Miraaju (Orijinaru Karaoke)",
+    "Tuxedo Mirage (Original Karaoke)"
+   ],
+   "1-16": [
+    "私たちになりたくて（オリジナルカラオケ）",
+    "Watashi-tachi ni Naritakute (Orijinaru Karaoke)",
+    "Wanting to Be Like Us (Original Karaoke)"
+   ],
+   "1-17": [
+    "\"らしく\"いきましょ（オリジナルカラオケ）",
+    "\"Rashiku\" Ikimasho (Orijinaru Karaoke)",
+    "Let's Be True to Ourselves (Original Karaoke)"
+   ],
+   "1-18": [
+    "セーラースターソング（オリジナルカラオケ）",
+    "Seeraa Sutaa Songu (Orijinaru Karaoke)",
+    "Sailor Star Song (Original Karaoke)"
+   ],
+   "1-19": [
+    "風も空もきっと…（オリジナルカラオケ）",
+    "Kaze mo Sora mo Kitto… (Orijinaru Karaoke)",
+    "The Wind and the Sky, Surely… (Original Karaoke)"
+   ],
+   "2-1": [
+    "合コトバはムーン・プリズム・パワー・メイクアップ！",
+    "Aikotoba wa Muun Purizumu Pawaa Meikuappu!",
+    "The Password Is Moon Prism Power Make Up!"
+   ],
+   "2-2": [
+    "プリンセス・ムーン",
+    "Purinsesu Muun",
+    "Princess Moon"
+   ],
+   "2-3": [
+    "ほっとけないよ",
+    "Hottokenai yo",
+    "I Can't Leave You Alone"
+   ],
+   "2-4": [
+    "愛のエナジーを奪え",
+    "Ai no Enajii wo Ubae",
+    "Steal the Energy of Love"
+   ],
+   "2-5": [
+    "タキシード・ナイト",
+    "Takishiido Naito",
+    "Tuxedo Knight"
+   ],
+   "2-6": [
+    "ルナ！",
+    "Runa!",
+    "Luna!"
+   ],
+   "2-7": [
+    "月にかわっておしおきよ",
+    "Tsuki ni Kawatte Oshioki yo",
+    "In the Name of the Moon, I'll Punish You"
+   ],
+   "2-8": [
+    "幻の銀水晶～シルバークリスタル",
+    "Maboroshi no Ginzuishou ~ Shirubaa Kurisutaru",
+    "The Illusionary Silver Crystal ~ Silver Crystal"
+   ],
+   "2-9": [
+    "夢見るだけじゃダメ",
+    "Yumemiru Dake ja Dame",
+    "Just Dreaming Isn't Enough"
+   ],
+   "2-10": [
+    "Someday… Somebody…",
+    "Someday… Somebody…",
+    "Someday… Somebody…"
+   ],
+   "2-11": [
+    "永遠のメロディ",
+    "Eien no Merodi",
+    "Eternal Melody"
+   ],
+   "2-12": [
+    "あなたのせいじゃない",
+    "Anata no Sei ja Nai",
+    "It's Not Your Fault"
+   ],
+   "2-13": [
+    "あなたの夢をみたわ",
+    "Anata no Yume wo Mita wa",
+    "I Dreamed of You"
+   ],
+   "2-14": [
+    "時を超えて…",
+    "Toki wo Koete…",
+    "Cross Over Time…"
+   ],
+   "2-15": [
+    "YOU'RE JUST MY LOVE",
+    "YOU'RE JUST MY LOVE",
+    "You're Just My Love"
+   ],
+   "2-16": [
+    "タキシード・ナイト（オリジナルカラオケ）",
+    "Takishiido Naito (Orijinaru Karaoke)",
+    "Tuxedo Knight (Original Karaoke)"
+   ],
+   "3-1": [
+    "好きと言って",
+    "Suki to Itte",
+    "Say You Love Me"
+   ],
+   "3-2": [
+    "I am セーラームーン",
+    "I am Seeraa Muun",
+    "I am Sailor Moon"
+   ],
+   "3-3": [
+    "同じ涙を分け合って",
+    "Onaji Namida wo Wakeatte",
+    "We Share the Same Tears"
+   ],
+   "3-4": [
+    "聖・炎・愛 ～Fire Soul Love～",
+    "Sei, Honoo, Ai ~Fire Soul Love~",
+    "Holy · Flame · Love ~Fire Soul Love~"
+   ],
+   "3-5": [
+    "抱きしめていたい",
+    "Dakishimete Itai",
+    "I Want to Hold You"
+   ],
+   "3-6": [
+    "STARLIGHTにキスして",
+    "STARLIGHT ni Kisu Shite",
+    "Kiss the Starlight"
+   ],
+   "3-7": [
+    "ルート・ヴィーナス",
+    "Ruuto Viinasu",
+    "Route Venus"
+   ],
+   "3-8": [
+    "愛の戦士",
+    "Ai no Senshi",
+    "Guardian of Love"
+   ],
+   "3-9": [
+    "Moon Revenge",
+    "Moon Revenge",
+    "Moon Revenge"
+   ],
+   "3-10": [
+    "I am セーラームーン",
+    "I am Seeraa Muun",
+    "I am Sailor Moon"
+   ],
+   "3-11": [
+    "Moonlight Destiny",
+    "Moonlight Destiny",
+    "Moonlight Destiny"
+   ],
+   "3-12": [
+    "セーラーチームのテーマ",
+    "Seeraa Chiimu no Teema",
+    "Sailor Team's Theme"
+   ],
+   "3-13": [
+    "Morning Moonで会いましょう",
+    "Morning Moon de Aimashou",
+    "Let's Meet at Morning Moon"
+   ],
+   "3-14": [
+    "三時の妖精",
+    "Sanji no Yousei",
+    "The Three O'Clock Fairy"
+   ],
+   "3-15": [
+    "好きと言って（オリジナルカラオケ）",
+    "Suki to Itte (Orijinaru Karaoke)",
+    "Say You Love Me (Original Karaoke)"
+   ],
+   "3-16": [
+    "愛の戦士（オリジナルカラオケ）",
+    "Ai no Senshi (Orijinaru Karaoke)",
+    "Guardian of Love (Original Karaoke)"
+   ],
+   "4-1": [
+    "セーラームーン・クリスマス",
+    "Seeraa Muun Kurisumasu",
+    "Sailor Moon Christmas"
+   ],
+   "4-2": [
+    "ゴールデンクイーン・ギャラクシア",
+    "Gooruden Kuiin Gyarakushia",
+    "Golden Queen Galaxia"
+   ],
+   "4-3": [
+    "流れ星へ",
+    "Nagareboshi e",
+    "To the Shooting Star"
+   ],
+   "4-4": [
+    "とどかぬ想い ―my friend's love―",
+    "Todokanu Omoi ―my friend's love―",
+    "Unreachable Feelings ―my friend's love―"
+   ],
+   "4-5": [
+    "銀河一身分違いな片想い",
+    "Ginga Ichi Mibun Chigai na Kataomoi",
+    "The Most Mismatched Unrequited Love in the Galaxy"
+   ],
+   "4-6": [
+    "力を合わせて",
+    "Chikara wo Awasete",
+    "Joining Forces"
+   ],
+   "4-7": [
+    "真夜中ひとり",
+    "Mayonaka Hitori",
+    "Alone at Midnight"
+   ],
+   "4-8": [
+    "イニシャル・U",
+    "Inisharu U",
+    "Initial U"
+   ],
+   "4-9": [
+    "戦士の想い",
+    "Senshi no Omoi",
+    "A Guardian's Feelings"
+   ],
+   "4-10": [
+    "バイバイって言った",
+    "Bai Bai tte Itta",
+    "I Said Bye-Bye"
+   ],
+   "4-11": [
+    "炎の狙撃者（FLAME SNIPER）",
+    "Honoo no Sogekisha (FLAME SNIPER)",
+    "Flame Sniper"
+   ],
+   "4-12": [
+    "あしたもまた自転車",
+    "Ashita mo Mata Jitensha",
+    "Bicycle Again Tomorrow"
+   ],
+   "4-13": [
+    "We believe you",
+    "We believe you",
+    "We believe you"
+   ],
+   "4-14": [
+    "愛の女神のHow to love",
+    "Ai no Megami no How to love",
+    "The Goddess of Love's How to Love"
+   ],
+   "4-15": [
+    "愛をしんじてる",
+    "Ai wo Shinjiteru",
+    "I Believe in Love"
+   ],
+   "4-16": [
+    "もっとすてきな朝がくるよ",
+    "Motto Suteki na Asa ga Kuru yo",
+    "A More Beautiful Morning Will Come"
+   ],
+   "5-1": [
+    "セーラームーン・クリスマス プロローグ",
+    "Seeraa Muun Kurisumasu Puroroogu",
+    "Sailor Moon Christmas Prologue"
+   ],
+   "5-2": [
+    "セーラームーンクリスマス ポエム",
+    "Seeraa Muun Kurisumasu Poemu",
+    "Sailor Moon Christmas Poem"
+   ],
+   "5-3": [
+    "セーラーギャラクシア プロローグ",
+    "Seeraa Gyarakushia Puroroogu",
+    "Sailor Galaxia Prologue"
+   ],
+   "5-4": [
+    "セーラーギャラクシア ポエム",
+    "Seeraa Gyarakushia Poemu",
+    "Sailor Galaxia Poem"
+   ],
+   "5-5": [
+    "星野光（セーラースターファイター） プロローグ",
+    "Seiya Kou (Seeraa Sutaa Faitaa) Puroroogu",
+    "Seiya Kou (Sailor Star Fighter) Prologue"
+   ],
+   "5-6": [
+    "星野光（セーラースターファイター） ポエム",
+    "Seiya Kou (Seeraa Sutaa Faitaa) Poemu",
+    "Seiya Kou (Sailor Star Fighter) Poem"
+   ],
+   "5-7": [
+    "大気光（セーラースターメイカー） プロローグ",
+    "Taiki Kou (Seeraa Sutaa Meikaa) Puroroogu",
+    "Taiki Kou (Sailor Star Maker) Prologue"
+   ],
+   "5-8": [
+    "大気光（セーラースターメイカー） ポエム",
+    "Taiki Kou (Seeraa Sutaa Meikaa) Poemu",
+    "Taiki Kou (Sailor Star Maker) Poem"
+   ],
+   "5-9": [
+    "夜天光（セーラースターヒーラー） プロローグ",
+    "Yaten Kou (Seeraa Sutaa Hiiraa) Puroroogu",
+    "Yaten Kou (Sailor Star Healer) Prologue"
+   ],
+   "5-10": [
+    "夜天光（セーラースターヒーラー） ポエム",
+    "Yaten Kou (Seeraa Sutaa Hiiraa) Poemu",
+    "Yaten Kou (Sailor Star Healer) Poem"
+   ],
+   "5-11": [
+    "セーラーネプチューン／海王みちる プロローグ",
+    "Seeraa Nepuchuun / Kaiou Michiru Puroroogu",
+    "Sailor Neptune / Michiru Kaioh Prologue"
+   ],
+   "5-12": [
+    "セーラーネプチューン／海王みちる ポエム",
+    "Seeraa Nepuchuun / Kaiou Michiru Poemu",
+    "Sailor Neptune / Michiru Kaioh Poem"
+   ],
+   "5-13": [
+    "セーラープルート／冥王せつな プロローグ",
+    "Seeraa Puruuto / Meiou Setsuna Puroroogu",
+    "Sailor Pluto / Setsuna Meioh Prologue"
+   ],
+   "5-14": [
+    "セーラープルート／冥王せつな ポエム",
+    "Seeraa Puruuto / Meiou Setsuna Poemu",
+    "Sailor Pluto / Setsuna Meioh Poem"
+   ],
+   "5-15": [
+    "セーラーサターン／土萌ほたる プロローグ",
+    "Seeraa Sataan / Tomoe Hotaru Puroroogu",
+    "Sailor Saturn / Hotaru Tomoe Prologue"
+   ],
+   "5-16": [
+    "セーラーサターン／土萌ほたる ポエム",
+    "Seeraa Sataan / Tomoe Hotaru Poemu",
+    "Sailor Saturn / Hotaru Tomoe Poem"
+   ],
+   "5-17": [
+    "セーラーちびムーン／ちびうさ プロローグ",
+    "Seeraa Chibi Muun / Chibiusa Puroroogu",
+    "Sailor Chibi Moon / Chibi-Usa Prologue"
+   ],
+   "5-18": [
+    "セーラーちびムーン／ちびうさ ポエム",
+    "Seeraa Chibi Muun / Chibiusa Poemu",
+    "Sailor Chibi Moon / Chibi-Usa Poem"
+   ],
+   "5-19": [
+    "セーラーマーズ／火野レイ プロローグ",
+    "Seeraa Maazu / Hino Rei Puroroogu",
+    "Sailor Mars / Rei Hino Prologue"
+   ],
+   "5-20": [
+    "セーラーマーズ／火野レイ ポエム",
+    "Seeraa Maazu / Hino Rei Poemu",
+    "Sailor Mars / Rei Hino Poem"
+   ],
+   "5-21": [
+    "セーラーマーキュリー／水野亜美 プロローグ",
+    "Seeraa Maakyurii / Mizuno Ami Puroroogu",
+    "Sailor Mercury / Ami Mizuno Prologue"
+   ],
+   "5-22": [
+    "セーラーマーキュリー／水野亜美 ポエム",
+    "Seeraa Maakyurii / Mizuno Ami Poemu",
+    "Sailor Mercury / Ami Mizuno Poem"
+   ],
+   "5-23": [
+    "セーラージュピター／木野まこと プロローグ",
+    "Seeraa Jupitaa / Kino Makoto Puroroogu",
+    "Sailor Jupiter / Makoto Kino Prologue"
+   ],
+   "5-24": [
+    "セーラージュピター／木野まこと ポエム",
+    "Seeraa Jupitaa / Kino Makoto Poemu",
+    "Sailor Jupiter / Makoto Kino Poem"
+   ],
+   "5-25": [
+    "セーラーヴィーナス／愛野美奈子 プロローグ",
+    "Seeraa Viinasu / Aino Minako Puroroogu",
+    "Sailor Venus / Minako Aino Prologue"
+   ],
+   "5-26": [
+    "セーラーヴィーナス／愛野美奈子 ポエム",
+    "Seeraa Viinasu / Aino Minako Poemu",
+    "Sailor Venus / Minako Aino Poem"
+   ],
+   "5-27": [
+    "エターナルセーラームーン／月野うさぎ プロローグ",
+    "Etaanaru Seeraa Muun / Tsukino Usagi Puroroogu",
+    "Eternal Sailor Moon / Usagi Tsukino Prologue"
+   ],
+   "5-28": [
+    "エターナルセーラームーン／月野うさぎ ポエム",
+    "Etaanaru Seeraa Muun / Tsukino Usagi Poemu",
+    "Eternal Sailor Moon / Usagi Tsukino Poem"
+   ],
+   "6-1": [
+    "Moon Revenge（オリジナルカラオケ）",
+    "Moon Revenge (Orijinaru Karaoke)",
+    "Moon Revenge (Original Karaoke)"
+   ],
+   "6-2": [
+    "I am セーラームーン（オリジナルカラオケ）",
+    "I am Seeraa Muun (Orijinaru Karaoke)",
+    "I am Sailor Moon (Original Karaoke)"
+   ],
+   "6-3": [
+    "Moonlight Destiny（オリジナルカラオケ）",
+    "Moonlight Destiny (Orijinaru Karaoke)",
+    "Moonlight Destiny (Original Karaoke)"
+   ],
+   "6-4": [
+    "セーラーチームのテーマ（オリジナルカラオケ）",
+    "Seeraa Chiimu no Teema (Orijinaru Karaoke)",
+    "Sailor Team's Theme (Original Karaoke)"
+   ],
+   "6-5": [
+    "Morning Moonで会いましょう（オリジナルカラオケ）",
+    "Morning Moon de Aimashou (Orijinaru Karaoke)",
+    "Let's Meet at Morning Moon (Original Karaoke)"
+   ],
+   "6-6": [
+    "三時の妖精（オリジナルカラオケ）",
+    "Sanji no Yousei (Orijinaru Karaoke)",
+    "The Three O'Clock Fairy (Original Karaoke)"
+   ],
+   "6-7": [
+    "もっとすてきな朝がくるよ（オリジナルカラオケ）",
+    "Motto Suteki na Asa ga Kuru yo (Orijinaru Karaoke)",
+    "A More Beautiful Morning Will Come (Original Karaoke)"
+   ],
+   "6-8": [
+    "合コトバはムーン・プリズム・パワー・メイクアップ！（オリジナルカラオケ）",
+    "Aikotoba wa Muun Purizumu Pawaa Meikuappu! (Orijinaru Karaoke)",
+    "The Password Is Moon Prism Power Make Up! (Original Karaoke)"
+   ],
+   "6-9": [
+    "ほっとけないよ（オリジナルカラオケ）",
+    "Hottokenai yo (Orijinaru Karaoke)",
+    "I Can't Leave You Alone (Original Karaoke)"
+   ],
+   "6-10": [
+    "月にかわっておしおきよ（オリジナルカラオケ）",
+    "Tsuki ni Kawatte Oshioki yo (Orijinaru Karaoke)",
+    "In the Name of the Moon, I'll Punish You (Original Karaoke)"
+   ],
+   "6-11": [
+    "夢見るだけじゃダメ（オリジナルカラオケ）",
+    "Yumemiru Dake ja Dame (Orijinaru Karaoke)",
+    "Just Dreaming Isn't Enough (Original Karaoke)"
+   ],
+   "6-12": [
+    "Someday… Somebody…（オリジナルカラオケ）",
+    "Someday… Somebody… (Orijinaru Karaoke)",
+    "Someday… Somebody… (Original Karaoke)"
+   ],
+   "6-13": [
+    "永遠のメロディ（オリジナルカラオケ）",
+    "Eien no Merodi (Orijinaru Karaoke)",
+    "Eternal Melody (Original Karaoke)"
+   ],
+   "6-14": [
+    "あなたのせいじゃない（オリジナルカラオケ）",
+    "Anata no Sei ja Nai (Orijinaru Karaoke)",
+    "It's Not Your Fault (Original Karaoke)"
+   ],
+   "6-15": [
+    "あなたの夢をみたわ（オリジナルカラオケ）",
+    "Anata no Yume wo Mita wa (Orijinaru Karaoke)",
+    "I Dreamed of You (Original Karaoke)"
+   ],
+   "6-16": [
+    "YOU'RE JUST MY LOVE（オリジナルカラオケ）",
+    "YOU'RE JUST MY LOVE (Orijinaru Karaoke)",
+    "You're Just My Love (Original Karaoke)"
+   ]
+  },
+  "l": {
+   "1-1": 174.968,
+   "1-2": 219.716,
+   "1-3": 244.062,
+   "1-4": 195.37,
+   "1-5": 173.976,
+   "1-6": 217.417,
+   "1-7": 322.717,
+   "1-8": 213.368,
+   "1-9": 233.3,
+   "1-10": 288.131,
+   "1-11": 176.144,
+   "1-12": 220.709,
+   "1-13": 245.394,
+   "1-14": 196.807,
+   "1-15": 218.201,
+   "1-16": 323.239,
+   "1-17": 213.76,
+   "1-18": 233.639,
+   "1-19": 286.38,
+   "2-1": 262.896,
+   "2-2": 244.14,
+   "2-3": 270.733,
+   "2-4": 285.518,
+   "2-5": 300.826,
+   "2-6": 219.768,
+   "2-7": 279.536,
+   "2-8": 270.968,
+   "2-9": 310.361,
+   "2-10": 301.505,
+   "2-11": 256.34,
+   "2-12": 272.431,
+   "2-13": 272.901,
+   "2-14": 289.489,
+   "2-15": 257.567,
+   "2-16": 299.128,
+   "3-1": 278.936,
+   "3-2": 327.915,
+   "3-3": 310.857,
+   "3-4": 246.413,
+   "3-5": 283.638,
+   "3-6": 268.983,
+   "3-7": 273.293,
+   "3-8": 218.593,
+   "3-9": 242.808,
+   "3-10": 297.77,
+   "3-11": 359.262,
+   "3-12": 237.218,
+   "3-13": 270.393,
+   "3-14": 206.315,
+   "3-15": 279.902,
+   "3-16": 217.757,
+   "4-1": 227.944,
+   "4-2": 240.849,
+   "4-3": 285.231,
+   "4-4": 232.777,
+   "4-5": 260.702,
+   "4-6": 366.08,
+   "4-7": 214.23,
+   "4-8": 275.435,
+   "4-9": 304.744,
+   "4-10": 255.242,
+   "4-11": 290.299,
+   "4-12": 235.677,
+   "4-13": 303.856,
+   "4-14": 311.876,
+   "4-15": 241.763,
+   "4-16": 253.571,
+   "5-1": 191.556,
+   "5-2": 229.094,
+   "5-3": 135.314,
+   "5-4": 168.046,
+   "5-5": 99.474,
+   "5-6": 182.439,
+   "5-7": 149.002,
+   "5-8": 148.01,
+   "5-9": 155.899,
+   "5-10": 182.073,
+   "5-11": 152.007,
+   "5-12": 138.005,
+   "5-13": 96.444,
+   "5-14": 92.186,
+   "5-15": 181.211,
+   "5-16": 122.096,
+   "5-17": 181.055,
+   "5-18": 79.909,
+   "5-19": 163.291,
+   "5-20": 202.736,
+   "5-21": 120.686,
+   "5-22": 141.296,
+   "5-23": 113.737,
+   "5-24": 251.533,
+   "5-25": 118.988,
+   "5-26": 169.691,
+   "5-27": 182.544,
+   "5-28": 178.782,
+   "6-1": 244.532,
+   "6-2": 298.031,
+   "6-3": 359.706,
+   "6-4": 237.819,
+   "6-5": 271.987,
+   "6-6": 206.89,
+   "6-7": 256.131,
+   "6-8": 263.288,
+   "6-9": 271.464,
+   "6-10": 280.738,
+   "6-11": 313.104,
+   "6-12": 302.602,
+   "6-13": 256.888,
+   "6-14": 272.588,
+   "6-15": 274.312,
+   "6-16": 252.029
+  },
+  "dn": {
+   "1": [
+    "TVシリーズ主題歌コレクション",
+    "TV Series Theme Song Collection",
+    "images/album-covers/song-box-disc-1.jpg"
+   ],
+   "2": [
+    "美少女戦士セーラームーン・ソングコレクション",
+    "Sailor Moon Song Collection",
+    "images/album-covers/song-box-disc-2.jpg"
+   ],
+   "3": [
+    "美少女戦士セーラームーンR・ソングコレクション＋劇場版主題歌コレクション",
+    "Sailor Moon R Song Collection + Movie Theme Song Collection",
+    "images/album-covers/song-box-disc-3.jpg"
+   ],
+   "4": [
+    "美少女戦士セーラームーン セーラースターズ・ソングコレクション",
+    "Sailor Moon Sailor Stars Song Collection",
+    "images/album-covers/song-box-disc-4.jpg"
+   ],
+   "5": [
+    "美少女戦士セーラームーン セーラースターズ・プロローグ＆ポエムコレクション",
+    "Sailor Moon Sailor Stars Prologue & Poem Collection",
+    "images/album-covers/song-box-disc-5.jpg"
+   ],
+   "6": [
+    "美少女戦士セーラームーンシリーズ・未発表カラオケベストコレクション",
+    "Sailor Moon Series Unreleased Karaoke Best Collection",
+    "images/album-covers/song-box-disc-6.jpg"
    ]
   }
  },
@@ -5208,6 +5963,22 @@ window.MMB_ALBUMS =
     ]
    ]
   },
+  "x": {
+   "9": {
+    "M-115": [
+     3,
+     183.2,
+     239.7,
+     "joined"
+    ],
+    "M-118": [
+     3,
+     239.7,
+     329.5,
+     "joined"
+    ]
+   }
+  },
   "q": {
    "2": {
     "1": "3-3-1",
@@ -5897,6 +6668,22 @@ window.MMB_ALBUMS =
      0
     ]
    ]
+  },
+  "x": {
+   "12": {
+    "M-337": [
+     3,
+     137.5,
+     248.7,
+     "layered"
+    ],
+    "M-366": [
+     3,
+     137.5,
+     248.7,
+     "layered"
+    ]
+   }
   },
   "q": {
    "1": {
@@ -8515,47 +9302,6 @@ window.MMB_ALBUMS =
    "26": {
     "1": "4-22"
    }
-  }
- },
- "歌": {
-  "n": [
-   "美少女戦士セーラームーンシリーズ メモリアル・ソング・ボックス",
-   "Sailor Moon Memorial Song Box"
-  ],
-  "cat": "COCC-14459~64",
-  "v": 23044,
-  "img": "images/album-covers/sailor-moon-memorial-song-box.jpg",
-  "t": {
-   "2-10": [
-    "Someday...Somebody...",
-    "Someday...Somebody...",
-    "Someday...Somebody..."
-   ],
-   "2-11": [
-    "永遠のメロディ",
-    "Eien no Merodi",
-    "Eternal Melody"
-   ],
-   "2-13": [
-    "あなたの夢をみたわ",
-    "Anata no Yume wo Mita wa",
-    "I Dreamed of You"
-   ],
-   "2-15": [
-    "YOU'RE JUST MY LOVE",
-    "YOU'RE JUST MY LOVE",
-    "You're Just My Love"
-   ],
-   "3-6": [
-    "STARLIGHTにキスして",
-    "STARLIGHT ni Kisu Shite",
-    "Kiss the Starlight"
-   ],
-   "3-9": [
-    "Moon Revenge",
-    "Moon Revenge",
-    "Moon Revenge"
-   ]
   }
  }
 };

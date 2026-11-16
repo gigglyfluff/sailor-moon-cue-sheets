@@ -1,3 +1,11 @@
-album,track,piece,code,start,end,note
-3,11,3,J-12B,106.0,121.0,\N
-3,11,3,F-5B,115.0,172.7,\N
+album,track,piece,code,start,end,note,mix
+3,11,3,J-12B,106.0,121.0,\N,crossfade
+3,11,3,F-5B,115.0,172.7,\N,crossfade
+4,14,2,M-337,97.3,207.1,"M-366 plays within M-337 (the booklet: M-337 ""with M-366""; the piece is M-337's length)",layered
+4,14,2,M-366,97.3,207.1,Plays within M-337,layered
+S,12,3,M-337,137.5,248.7,"M-366 plays within M-337 (as on the box set, 4-14-2)",layered
+S,12,3,M-366,137.5,248.7,Plays within M-337,layered
+3,12,3,M-115,122.3,178.7,"Found from the audio: a near-silent dip at 2:58.7 where M-118 begins (M-115 56.4 s, printed 57"")",joined
+3,12,3,M-118,178.7,266.2,"Starts at the dip at 2:58.7 (87.5 s, printed 1'28.5"")",joined
+R,9,3,M-115,183.2,239.7,As on the box set (3-12-3): the dip at 3:59.7,joined
+R,9,3,M-118,239.7,329.5,Starts at the dip at 3:59.7,joined
