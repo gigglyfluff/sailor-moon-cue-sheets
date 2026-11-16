@@ -48,6 +48,8 @@ body.l-ja .te{color:var(--muted);font-size:.92em}
 
 /* English in headings uses the same sans-serif as the tables; the mincho display face is for Japanese only */
 .tx>.en{font-family:var(--body)}
+/* text this site wrote (en() in app.js): English only, shown whatever languages are switched on */
+.en1{font-family:var(--body)}
 
 /* masthead */
 .mast{display:grid;gap:14px;justify-items:start;margin-bottom:20px}
