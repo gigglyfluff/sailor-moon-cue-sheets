@@ -1,14 +1,16 @@
-/* Every album the booklet's CD column cites, keyed by its code in the p.104 key (MMB, the box set, is the site's own). Not from the booklet.
+/* Every album the booklet's CD column cites, keyed by its code in the p.104 key (MMB, the box set, is the site's own), and the
+   other original BGM albums (MC, RM, SM, SSM). Not from the booklet.
    The box set (MMB) and its discs 1-10 (p = parent, d = disc number; disc names from each disc's cover, covers from
-   sailormusic.net, every track); the other albums R, S, SS, ST1, ST2, EX and 歌 (original CD releases, covers from
-   VGMdb, only the tracks the booklet cites, except S: every track, from its tray card; 歌 keyed by disc-track). n = name [Japanese, English], cat = catalog number,
-   v = VGMdb album number, card = the disc's tray card (VGMdb's scan, kept in images/tray-cards), t = tracks [Japanese (box-set
-   discs: as printed on the tray card; other albums: VGMdb), romaji, English (many based on sailormusic.net
-   and VGMdb's track lists, edited to the site's style)], l = each track's length on the CD (seconds,
-   from the audio), s = where each piece of a multi-piece track starts on the CD
-   [start, duration (seconds), what marks the break (silence, dip, change), 1 if checked by ear], found from the audio,
-   e = pieces the tray card prints that the booklet never places at that track {track: {piece: [as printed, code]}},
-   x = two codes on one piece: where each plays within it {code: [piece, start, end]} (approximate: one fades into the other). */
+   sailormusic.net); the original CD releases MC, R, RM, S, SM, SS, SSM, ST1, ST2, EX (covers and tray cards from VGMdb's
+   scans) and 歌 (only the tracks the booklet cites; keyed by disc-track). Every track of every album except 歌 is listed.
+   n = name [Japanese, English], cat = catalog number, v = VGMdb album number, card = the album's tray card (VGMdb's scan,
+   kept in images/tray-cards), t = tracks [Japanese as printed on the tray card, romaji, English (edited to the site's
+   style)], l = each track's length on the CD (seconds, from the audio), s = where each piece of a multi-piece track
+   starts on the CD [start, duration (seconds), what marks the break (silence, dip, change), 1 if checked by ear], found
+   from the audio, e = pieces the tray card prints that the booklet never places at that track {track: {piece: [as printed,
+   code]}}, x = two codes on one piece: where each plays within it {code: [piece, start, end]} (approximate: one fades
+   into the other), q = an original album's piece that is the same recording as a box-set piece {track: {piece: place}},
+   found by matching the audio. */
 window.MMB_ALBUMS =
 {
  "MMB": {
@@ -4378,6 +4380,569 @@ window.MMB_ALBUMS =
    ]
   }
  },
+ "MC": {
+  "n": [
+   "美少女戦士セーラームーン 音楽集",
+   "Sailor Moon Music Collection"
+  ],
+  "cat": "COCC-9896",
+  "v": 26833,
+  "img": "images/album-covers/sailor-moon-music-collection.jpg",
+  "card": "images/tray-cards/music-collection.jpg",
+  "t": {
+   "1": [
+    "ムーンライト伝説",
+    "Muunraito Densetsu",
+    "Moonlight Legend"
+   ],
+   "2": [
+    "あたしだって普通の女の子",
+    "Atashi Datte Futsuu no Onnanoko",
+    "I'm Just an Ordinary Girl, Too"
+   ],
+   "3": [
+    "本当に選ばれた戦士なの？",
+    "Hontou ni Erabareta Senshi na no?",
+    "Was I Really Chosen to Be a Guardian?"
+   ],
+   "4": [
+    "星空はミステリアス",
+    "Hoshizora wa Misuteriasu",
+    "The Starry Sky Is Mysterious"
+   ],
+   "5": [
+    "おっちょこちょいは生まれつき",
+    "Occhokochoi wa Umaretsuki",
+    "Scatterbrained by Nature"
+   ],
+   "6": [
+    "恋する乙女心",
+    "Koisuru Otomegokoro",
+    "A Maiden's Heart in Love"
+   ],
+   "7": [
+    "誰かが狙われている",
+    "Dareka ga Nerawarete Iru",
+    "Someone Is Being Targeted"
+   ],
+   "8": [
+    "夢見るおだんごアタマ",
+    "Yumemiru Odango Atama",
+    "Dreamy Dumpling-Head"
+   ],
+   "9": [
+    "夕暮れ時は妖魔の予感",
+    "Yuuguredoki wa Youma no Yokan",
+    "Dusk Brings a Premonition of Monsters"
+   ],
+   "10": [
+    "ムーン・プリズム・パワー・メイクアップ！",
+    "Muun Purizumu Pawaa Meikuappu!",
+    "Moon Prism Power Make Up!"
+   ],
+   "11": [
+    "HEART MOVING",
+    "HEART MOVING",
+    "HEART MOVING"
+   ]
+  },
+  "l": {
+   "1": 175.309,
+   "2": 389.617,
+   "3": 403.253,
+   "4": 368.746,
+   "5": 409.183,
+   "6": 413.284,
+   "7": 438.31,
+   "8": 448.941,
+   "9": 422.558,
+   "10": 457.405,
+   "11": 218.568
+  },
+  "s": {
+   "2": [
+    [
+     0.0,
+     14.4,
+     null,
+     0
+    ],
+    [
+     14.4,
+     64.6,
+     "change",
+     0
+    ],
+    [
+     79.0,
+     67.7,
+     "change",
+     0
+    ],
+    [
+     146.7,
+     77.9,
+     "change",
+     0
+    ],
+    [
+     224.6,
+     78.8,
+     "change",
+     0
+    ],
+    [
+     303.4,
+     10.7,
+     "change",
+     0
+    ],
+    [
+     314.1,
+     75.5,
+     "change",
+     0
+    ]
+   ],
+   "3": [
+    [
+     0.0,
+     72.8,
+     null,
+     0
+    ],
+    [
+     72.8,
+     70.3,
+     "change",
+     0
+    ],
+    [
+     143.1,
+     68.7,
+     "change",
+     0
+    ],
+    [
+     211.8,
+     14.7,
+     "change",
+     0
+    ],
+    [
+     226.5,
+     70.6,
+     "change",
+     0
+    ],
+    [
+     297.1,
+     106.2,
+     "change",
+     0
+    ]
+   ],
+   "4": [
+    [
+     0.0,
+     65.1,
+     null,
+     0
+    ],
+    [
+     65.1,
+     61.8,
+     "change",
+     0
+    ],
+    [
+     126.9,
+     70.7,
+     "change",
+     0
+    ],
+    [
+     197.6,
+     15.6,
+     "change",
+     0
+    ],
+    [
+     213.2,
+     49.2,
+     "change",
+     0
+    ],
+    [
+     262.4,
+     106.3,
+     "change",
+     0
+    ]
+   ],
+   "5": [
+    [
+     0.0,
+     15.9,
+     null,
+     0
+    ],
+    [
+     15.9,
+     68.1,
+     "change",
+     0
+    ],
+    [
+     84.0,
+     84.7,
+     "change",
+     0
+    ],
+    [
+     168.7,
+     67.3,
+     "change",
+     0
+    ],
+    [
+     236.0,
+     80.8,
+     "change",
+     0
+    ],
+    [
+     316.8,
+     14.0,
+     "change",
+     0
+    ],
+    [
+     330.8,
+     78.4,
+     "change",
+     0
+    ]
+   ],
+   "6": [
+    [
+     0.0,
+     17.7,
+     null,
+     0
+    ],
+    [
+     17.7,
+     73.1,
+     "change",
+     0
+    ],
+    [
+     90.8,
+     18.2,
+     "change",
+     0
+    ],
+    [
+     109.0,
+     76.2,
+     "change",
+     0
+    ],
+    [
+     185.2,
+     79.6,
+     "change",
+     0
+    ],
+    [
+     264.8,
+     18.8,
+     "change",
+     0
+    ],
+    [
+     283.6,
+     87.2,
+     "change",
+     0
+    ],
+    [
+     370.8,
+     42.5,
+     "change",
+     0
+    ]
+   ],
+   "7": [
+    [
+     0.0,
+     88.6,
+     null,
+     0
+    ],
+    [
+     88.6,
+     60.7,
+     "change",
+     0
+    ],
+    [
+     149.3,
+     69.2,
+     "change",
+     0
+    ],
+    [
+     218.5,
+     90.0,
+     "change",
+     0
+    ],
+    [
+     308.5,
+     12.7,
+     "silence",
+     0
+    ],
+    [
+     321.2,
+     117.1,
+     "change",
+     0
+    ]
+   ],
+   "8": [
+    [
+     0.0,
+     85.2,
+     null,
+     0
+    ],
+    [
+     85.2,
+     14.9,
+     "change",
+     0
+    ],
+    [
+     100.1,
+     82.0,
+     "change",
+     0
+    ],
+    [
+     182.1,
+     78.9,
+     "change",
+     0
+    ],
+    [
+     261.0,
+     13.9,
+     "change",
+     0
+    ],
+    [
+     274.9,
+     74.0,
+     "change",
+     0
+    ],
+    [
+     348.9,
+     100.0,
+     "change",
+     0
+    ]
+   ],
+   "9": [
+    [
+     0.0,
+     18.2,
+     null,
+     0
+    ],
+    [
+     18.2,
+     78.3,
+     "change",
+     0
+    ],
+    [
+     96.5,
+     15.6,
+     "change",
+     0
+    ],
+    [
+     112.1,
+     73.2,
+     "change",
+     0
+    ],
+    [
+     185.3,
+     63.8,
+     "change",
+     0
+    ],
+    [
+     249.1,
+     85.5,
+     "change",
+     0
+    ],
+    [
+     334.6,
+     88.0,
+     "change",
+     0
+    ]
+   ],
+   "10": [
+    [
+     0.0,
+     38.3,
+     null,
+     0
+    ],
+    [
+     38.3,
+     56.7,
+     "change",
+     0
+    ],
+    [
+     95.0,
+     93.1,
+     "change",
+     0
+    ],
+    [
+     188.1,
+     14.4,
+     "change",
+     0
+    ],
+    [
+     202.5,
+     18.4,
+     "change",
+     0
+    ],
+    [
+     220.9,
+     37.8,
+     "change",
+     0
+    ],
+    [
+     258.7,
+     40.1,
+     "change",
+     0
+    ],
+    [
+     298.8,
+     74.0,
+     "change",
+     0
+    ],
+    [
+     372.8,
+     84.6,
+     "change",
+     0
+    ]
+   ]
+  },
+  "q": {
+   "2": {
+    "1": "1-2",
+    "2": "1-3",
+    "3": "1-4",
+    "4": "1-5",
+    "5": "1-6",
+    "6": "1-7",
+    "7": "1-8"
+   },
+   "3": {
+    "1": "1-9",
+    "2": "1-10",
+    "3": "1-11",
+    "4": "1-12",
+    "5": "1-13",
+    "6": "1-14"
+   },
+   "4": {
+    "1": "1-15",
+    "2": "1-16",
+    "3": "1-17",
+    "4": "1-18",
+    "5": "1-19",
+    "6": "1-20"
+   },
+   "5": {
+    "1": "1-21",
+    "2": "1-22",
+    "3": "1-23",
+    "4": "1-24",
+    "5": "1-25",
+    "6": "1-26",
+    "7": "1-27"
+   },
+   "6": {
+    "1": "1-28",
+    "2": "1-29",
+    "3": "1-30",
+    "4": "1-31",
+    "5": "1-32",
+    "6": "1-33",
+    "7": "1-34",
+    "8": "1-35"
+   },
+   "7": {
+    "1": "1-36",
+    "2": "1-37",
+    "3": "1-38",
+    "4": "1-39",
+    "5": "1-40",
+    "6": "1-41"
+   },
+   "8": {
+    "1": "1-42",
+    "2": "1-43",
+    "3": "1-44",
+    "4": "1-45",
+    "5": "1-46",
+    "6": "1-47",
+    "7": "1-48"
+   },
+   "9": {
+    "1": "1-49",
+    "2": "1-50",
+    "3": "1-51",
+    "4": "1-52",
+    "5": "1-53",
+    "6": "1-54",
+    "7": "1-55"
+   },
+   "10": {
+    "1": "2-12-2",
+    "2": "2-12-3",
+    "3": "2-12-4",
+    "5": "2-1",
+    "6": "2-30-1",
+    "7": "2-8-1",
+    "8": "2-12-1",
+    "9": "2-14-1"
+   },
+   "11": {
+    "1": "2-28"
+   }
+  }
+ },
  "R": {
   "n": [
    "美少女戦士セーラームーンR -音楽集-",
@@ -4386,22 +4951,642 @@ window.MMB_ALBUMS =
   "cat": "COCC-10705",
   "v": 26831,
   "img": "images/album-covers/sailor-moon-r-music-collection.jpg",
+  "card": "images/tray-cards/r-music-collection.jpg",
   "t": {
+   "1": [
+    "乙女のポリシー",
+    "Otome no Porishii",
+    "A Maiden's Policy"
+   ],
+   "2": [
+    "友情、そして愛",
+    "Yuujou, Soshite Ai",
+    "Friendship, and Then Love"
+   ],
    "3": [
     "魔界樹",
     "Makaiju",
     "The Makai Tree"
+   ],
+   "4": [
+    "私が戦う",
+    "Watashi ga Tatakau",
+    "I Will Fight"
    ],
    "5": [
     "清く、明るく、△×□§...",
     "Kiyoku, Akaruku, △×□§...",
     "Pure, Bright, △×□§..."
    ],
+   "6": [
+    "新たなる敵",
+    "Aratanaru Teki",
+    "A New Enemy"
+   ],
+   "7": [
+    "追跡は冒険のはじまり",
+    "Tsuiseki wa Bouken no Hajimari",
+    "The Chase Is the Start of an Adventure"
+   ],
    "8": [
     "月は見ている",
     "Tsuki wa Mite Iru",
     "The Moon is Watching"
+   ],
+   "9": [
+    "悲しみを勇気に変えて",
+    "Kanashimi wo Yuuki ni Kaete",
+    "Turning Sorrow into Courage"
+   ],
+   "10": [
+    "好きと言って",
+    "Suki to Itte",
+    "Say You Love Me"
    ]
+  },
+  "l": {
+   "1": 194.169,
+   "2": 378.515,
+   "3": 347.612,
+   "4": 363.913,
+   "5": 407.198,
+   "6": 297.536,
+   "7": 295.916,
+   "8": 307.75,
+   "9": 329.51,
+   "10": 277.683
+  },
+  "s": {
+   "2": [
+    [
+     0.0,
+     84.8,
+     null,
+     0
+    ],
+    [
+     84.8,
+     97.3,
+     "silence",
+     0
+    ],
+    [
+     182.1,
+     86.8,
+     "silence",
+     0
+    ],
+    [
+     268.9,
+     109.6,
+     "silence",
+     0
+    ]
+   ],
+   "3": [
+    [
+     0.0,
+     88.6,
+     null,
+     0
+    ],
+    [
+     88.6,
+     106.9,
+     "silence",
+     0
+    ],
+    [
+     195.5,
+     63.5,
+     "silence",
+     0
+    ],
+    [
+     259.0,
+     88.6,
+     "silence",
+     0
+    ]
+   ],
+   "4": [
+    [
+     0.0,
+     99.5,
+     null,
+     0
+    ],
+    [
+     99.5,
+     114.2,
+     "silence",
+     0
+    ],
+    [
+     213.7,
+     23.3,
+     "change",
+     0
+    ],
+    [
+     237.0,
+     126.9,
+     "change",
+     0
+    ]
+   ],
+   "5": [
+    [
+     0.0,
+     108.3,
+     null,
+     0
+    ],
+    [
+     108.3,
+     108.7,
+     "silence",
+     0
+    ],
+    [
+     217.0,
+     96.4,
+     "silence",
+     0
+    ],
+    [
+     313.4,
+     93.8,
+     "change",
+     0
+    ]
+   ],
+   "6": [
+    [
+     0.0,
+     110.5,
+     null,
+     0
+    ],
+    [
+     110.5,
+     88.1,
+     "silence",
+     0
+    ],
+    [
+     198.6,
+     98.9,
+     "silence",
+     0
+    ]
+   ],
+   "7": [
+    [
+     0.0,
+     97.4,
+     null,
+     0
+    ],
+    [
+     97.4,
+     115.8,
+     "silence",
+     0
+    ],
+    [
+     213.2,
+     38.3,
+     "change",
+     0
+    ],
+    [
+     251.5,
+     44.4,
+     "change",
+     0
+    ]
+   ],
+   "8": [
+    [
+     0.0,
+     89.3,
+     null,
+     0
+    ],
+    [
+     89.3,
+     126.3,
+     "silence",
+     0
+    ],
+    [
+     215.6,
+     92.2,
+     "change",
+     0
+    ]
+   ],
+   "9": [
+    [
+     0.0,
+     90.7,
+     null,
+     0
+    ],
+    [
+     90.7,
+     92.5,
+     "silence",
+     0
+    ],
+    [
+     183.2,
+     146.3,
+     "silence",
+     0
+    ]
+   ]
+  },
+  "q": {
+   "2": {
+    "1": "3-3-1",
+    "2": "3-17-1",
+    "3": "3-9-1",
+    "4": "3-9-4"
+   },
+   "3": {
+    "1": "3-7-2",
+    "2": "3-7-1",
+    "4": "3-5-3"
+   },
+   "4": {
+    "1": "3-14-5",
+    "2": "3-7-3",
+    "3": "3-15-2",
+    "4": "3-16-1"
+   },
+   "5": {
+    "1": "3-17-2",
+    "2": "3-9-3",
+    "3": "3-11-2"
+   },
+   "6": {
+    "1": "3-6-1",
+    "2": "3-6-2",
+    "3": "3-14-4"
+   },
+   "7": {
+    "1": "3-14-1",
+    "2": "3-3-2",
+    "4": "3-1-2"
+   },
+   "8": {
+    "1": "3-15-3",
+    "2": "3-16-2"
+   },
+   "9": {
+    "1": "3-1-1",
+    "2": "3-12-1",
+    "3": "3-12-3"
+   },
+   "10": {
+    "1": "3-10"
+   }
+  }
+ },
+ "RM": {
+  "n": [
+   "劇場版 美少女戦士セーラームーンR 音楽集",
+   "Sailor Moon R Movie Music Collection"
+  ],
+  "cat": "FMCC-5019",
+  "v": 26829,
+  "img": "images/album-covers/sailor-moon-r-movie-music-collection.jpg",
+  "card": "images/tray-cards/r-movie-music-collection.jpg",
+  "t": {
+   "1": [
+    "プロローグ",
+    "Puroroogu",
+    "Prologue"
+   ],
+   "2": [
+    "Moon Revenge",
+    "Moon Revenge",
+    "Moon Revenge"
+   ],
+   "3": [
+    "紅い髪の少年",
+    "Akai Kami no Shounen",
+    "The Red-Haired Boy"
+   ],
+   "4": [
+    "植物園のハプニング！～侵略の予兆",
+    "Shokubutsuen no Hapuningu! ~ Shinryaku no Yochou",
+    "Happening at the Botanical Garden! ~ Signs of Invasion"
+   ],
+   "5": [
+    "妖花魔グリシナ",
+    "Youkama Gurishina",
+    "Flower Monster Glycina"
+   ],
+   "6": [
+    "メイクアップ！",
+    "Meikuappu!",
+    "Make Up!"
+   ],
+   "7": [
+    "燃える美少女戦士",
+    "Moeru Bishoujo Senshi",
+    "Pretty Guardians Ablaze"
+   ],
+   "8": [
+    "タキシード仮面登場～衛とフィオレ",
+    "Takishiido Kamen Toujou ~ Mamoru to Fiore",
+    "Tuxedo Mask Appears ~ Mamoru and Fiore"
+   ],
+   "9": [
+    "セーラー・テレポート！",
+    "Seeraa Terepooto!",
+    "Sailor Teleport!"
+   ],
+   "10": [
+    "追想のフィオレ",
+    "Tsuisou no Fiore",
+    "Fiore Remembered"
+   ],
+   "11": [
+    "花迷宮の死闘",
+    "Hana Meikyuu no Shitou",
+    "Death Match in the Flower Labyrinth"
+   ],
+   "12": [
+    "激突！セーラームーンVSフィオレ",
+    "Gekitotsu! Seeraa Muun VS Fiore",
+    "Clash! Sailor Moon vs. Fiore"
+   ],
+   "13": [
+    "生命燃やして……",
+    "Inochi Moyashite......",
+    "Burning Life......"
+   ],
+   "14": [
+    "復活のセレナーデ",
+    "Fukkatsu no Serenaade",
+    "Resurrection Serenade"
+   ],
+   "15": [
+    "I am セーラームーン",
+    "I am Seeraa Muun",
+    "I am Sailor Moon"
+   ]
+  },
+  "l": {
+   "1": 92.135,
+   "2": 242.339,
+   "3": 141.271,
+   "4": 226.012,
+   "5": 181.448,
+   "6": 194.404,
+   "7": 153.052,
+   "8": 142.891,
+   "9": 116.246,
+   "10": 212.951,
+   "11": 135.132,
+   "12": 283.874,
+   "13": 189.493,
+   "14": 93.337,
+   "15": 297.562
+  },
+  "s": {
+   "3": [
+    [
+     0.0,
+     48.6,
+     null,
+     0
+    ],
+    [
+     48.6,
+     92.7,
+     "silence",
+     0
+    ]
+   ],
+   "4": [
+    [
+     0.0,
+     73.6,
+     null,
+     0
+    ],
+    [
+     73.6,
+     152.4,
+     "silence",
+     0
+    ]
+   ],
+   "6": [
+    [
+     0.0,
+     38.2,
+     null,
+     0
+    ],
+    [
+     38.2,
+     91.0,
+     "silence",
+     0
+    ],
+    [
+     129.2,
+     65.2,
+     "silence",
+     0
+    ]
+   ],
+   "7": [
+    [
+     0.0,
+     18.5,
+     null,
+     0
+    ],
+    [
+     18.5,
+     21.1,
+     "silence",
+     0
+    ],
+    [
+     39.6,
+     37.1,
+     "silence",
+     0
+    ],
+    [
+     76.7,
+     76.4,
+     "silence",
+     0
+    ]
+   ],
+   "8": [
+    [
+     0.0,
+     41.8,
+     null,
+     0
+    ],
+    [
+     41.8,
+     37.6,
+     "silence",
+     0
+    ],
+    [
+     79.4,
+     63.5,
+     "silence",
+     0
+    ]
+   ],
+   "9": [
+    [
+     0.0,
+     39.0,
+     null,
+     0
+    ],
+    [
+     39.0,
+     77.2,
+     "silence",
+     0
+    ]
+   ],
+   "10": [
+    [
+     0.0,
+     58.0,
+     null,
+     0
+    ],
+    [
+     58.0,
+     38.8,
+     "silence",
+     0
+    ],
+    [
+     96.8,
+     116.2,
+     "silence",
+     0
+    ]
+   ],
+   "12": [
+    [
+     0.0,
+     79.0,
+     null,
+     0
+    ],
+    [
+     79.0,
+     167.2,
+     "silence",
+     0
+    ],
+    [
+     246.2,
+     37.7,
+     "silence",
+     0
+    ]
+   ],
+   "13": [
+    [
+     0.0,
+     104.1,
+     null,
+     0
+    ],
+    [
+     104.1,
+     61.8,
+     "silence",
+     0
+    ],
+    [
+     165.9,
+     23.6,
+     "silence",
+     0
+    ]
+   ]
+  },
+  "q": {
+   "1": {
+    "1": "8-1"
+   },
+   "2": {
+    "1": "8-17"
+   },
+   "3": {
+    "1": "8-3-1",
+    "2": "8-4"
+   },
+   "4": {
+    "1": "8-3-2",
+    "2": "8-5"
+   },
+   "5": {
+    "1": "8-6"
+   },
+   "6": {
+    "1": "8-8-1",
+    "2": "8-7-1",
+    "3": "8-7-2"
+   },
+   "7": {
+    "1": "8-8-2",
+    "2": "8-8-3",
+    "3": "8-8-4",
+    "4": "8-9"
+   },
+   "8": {
+    "1": "8-10-1",
+    "2": "8-10-2",
+    "3": "8-10-3"
+   },
+   "9": {
+    "1": "8-12-1",
+    "2": "8-12-2"
+   },
+   "10": {
+    "1": "8-13",
+    "2": "8-11-2",
+    "3": "8-11-1"
+   },
+   "11": {
+    "1": "8-14"
+   },
+   "12": {
+    "1": "8-15-1",
+    "2": "8-15-2",
+    "3": "8-16-1"
+   },
+   "13": {
+    "1": "8-16-2",
+    "2": "8-16-3",
+    "3": "8-16-4"
+   },
+   "14": {
+    "1": "8-18"
+   }
   }
  },
  "S": {
@@ -4712,6 +5897,460 @@ window.MMB_ALBUMS =
      0
     ]
    ]
+  },
+  "q": {
+   "1": {
+    "2": "4-18"
+   },
+   "2": {
+    "1": "4-3"
+   },
+   "3": {
+    "2": "4-4-2"
+   },
+   "4": {
+    "1": "4-6-1",
+    "2": "4-20-2"
+   },
+   "5": {
+    "1": "4-5-3",
+    "2": "4-5-2"
+   },
+   "6": {
+    "1": "4-4-1",
+    "3": "4-4-4"
+   },
+   "7": {
+    "1": "4-7-1",
+    "2": "4-9-2",
+    "3": "4-7-2"
+   },
+   "8": {
+    "1": "4-17"
+   },
+   "9": {
+    "1": "4-14-3",
+    "2": "4-8-2"
+   },
+   "11": {
+    "1": "4-8-3",
+    "2": "4-12-2",
+    "3": "4-12-1"
+   },
+   "12": {
+    "1": "4-10-1",
+    "2": "4-10-2",
+    "3": "4-14-2",
+    "4": "4-10-3"
+   },
+   "13": {
+    "1": "4-6-2",
+    "3": "4-12-3"
+   },
+   "14": {
+    "1": "4-13-2",
+    "2": "4-21-3"
+   },
+   "15": {
+    "1": "4-23-1"
+   }
+  }
+ },
+ "SM": {
+  "n": [
+   "'95正月劇場用アニメーション「美少女戦士セーラームーンS」ミュージックコレクション",
+   "Sailor Moon S Movie Music Collection"
+  ],
+  "cat": "FMCC-5050",
+  "v": 28236,
+  "img": "images/album-covers/sailor-moon-s-movie-music-collection.jpg",
+  "card": "images/tray-cards/s-movie-music-collection.jpg",
+  "t": {
+   "1": [
+    "邪悪",
+    "Jaaku",
+    "Evil"
+   ],
+   "2": [
+    "ルナ",
+    "Runa",
+    "Luna"
+   ],
+   "3": [
+    "翔",
+    "Kakeru",
+    "Kakeru"
+   ],
+   "4": [
+    "うさぎ",
+    "Usagi",
+    "Usagi"
+   ],
+   "5": [
+    "胸騒ぎ",
+    "Munasawagi",
+    "Uneasy Feeling"
+   ],
+   "6": [
+    "スノーダンサー襲来",
+    "Sunoo Dansaa Shuurai",
+    "The Snow Dancers Attack"
+   ],
+   "7": [
+    "変身",
+    "Henshin",
+    "Transformation"
+   ],
+   "8": [
+    "戦闘",
+    "Sentou",
+    "Battle"
+   ],
+   "9": [
+    "愛と友情の力",
+    "Ai to Yuujou no Chikara",
+    "The Power of Love and Friendship"
+   ],
+   "10": [
+    "愛のメッセージ",
+    "Ai no Messeeji",
+    "Message of Love"
+   ],
+   "11": [
+    "Moonlight Destiny",
+    "Moonlight Destiny",
+    "Moonlight Destiny"
+   ],
+   "12": [
+    "セーラーチームのテーマ",
+    "Seeraa Chiimu no Teema",
+    "Sailor Team's Theme"
+   ]
+  },
+  "l": {
+   "1": 131.136,
+   "2": 212.089,
+   "3": 212.377,
+   "4": 166.95,
+   "5": 221.154,
+   "6": 365.846,
+   "7": 112.615,
+   "8": 201.353,
+   "9": 162.221,
+   "10": 211.279,
+   "11": 357.461,
+   "12": 233.98
+  },
+  "s": {
+   "1": [
+    [
+     0.0,
+     49.1,
+     null,
+     0
+    ],
+    [
+     49.1,
+     82.0,
+     "silence",
+     0
+    ]
+   ],
+   "2": [
+    [
+     0.0,
+     28.3,
+     null,
+     0
+    ],
+    [
+     28.3,
+     27.7,
+     "silence",
+     0
+    ],
+    [
+     56.0,
+     18.5,
+     "silence",
+     0
+    ],
+    [
+     74.5,
+     55.5,
+     "silence",
+     0
+    ],
+    [
+     130.0,
+     40.8,
+     "silence",
+     0
+    ],
+    [
+     170.8,
+     9.1,
+     "silence",
+     0
+    ],
+    [
+     179.9,
+     32.2,
+     "silence",
+     0
+    ]
+   ],
+   "3": [
+    [
+     0.0,
+     52.4,
+     null,
+     0
+    ],
+    [
+     52.4,
+     44.2,
+     "silence",
+     0
+    ],
+    [
+     96.6,
+     42.7,
+     "silence",
+     0
+    ],
+    [
+     139.3,
+     73.1,
+     "silence",
+     0
+    ]
+   ],
+   "4": [
+    [
+     0.0,
+     44.6,
+     null,
+     0
+    ],
+    [
+     44.6,
+     33.0,
+     "silence",
+     0
+    ],
+    [
+     77.6,
+     21.4,
+     "silence",
+     0
+    ],
+    [
+     99.0,
+     67.9,
+     "silence",
+     0
+    ]
+   ],
+   "5": [
+    [
+     0.0,
+     55.2,
+     null,
+     0
+    ],
+    [
+     55.2,
+     70.6,
+     "silence",
+     0
+    ],
+    [
+     125.8,
+     46.0,
+     "silence",
+     0
+    ],
+    [
+     171.8,
+     49.4,
+     "silence",
+     0
+    ]
+   ],
+   "6": [
+    [
+     0.0,
+     55.7,
+     null,
+     0
+    ],
+    [
+     55.7,
+     38.8,
+     "silence",
+     0
+    ],
+    [
+     94.5,
+     32.0,
+     "silence",
+     0
+    ],
+    [
+     126.5,
+     20.0,
+     "silence",
+     0
+    ],
+    [
+     146.5,
+     22.2,
+     "silence",
+     0
+    ],
+    [
+     168.7,
+     31.4,
+     "silence",
+     0
+    ],
+    [
+     200.1,
+     67.4,
+     "silence",
+     0
+    ],
+    [
+     267.5,
+     53.5,
+     "silence",
+     0
+    ],
+    [
+     321.0,
+     44.8,
+     "silence",
+     0
+    ]
+   ],
+   "7": [
+    [
+     0.0,
+     89.0,
+     null,
+     0
+    ],
+    [
+     89.0,
+     23.6,
+     "silence",
+     0
+    ]
+   ],
+   "8": [
+    [
+     0.0,
+     67.0,
+     null,
+     0
+    ],
+    [
+     67.0,
+     49.8,
+     "silence",
+     0
+    ],
+    [
+     116.8,
+     39.0,
+     "silence",
+     0
+    ],
+    [
+     155.8,
+     45.6,
+     "silence",
+     0
+    ]
+   ],
+   "10": [
+    [
+     0.0,
+     152.2,
+     null,
+     0
+    ],
+    [
+     152.2,
+     59.1,
+     "silence",
+     0
+    ]
+   ]
+  },
+  "q": {
+   "1": {
+    "1": "9-1-1",
+    "2": "9-13-2"
+   },
+   "2": {
+    "1": "9-5-2",
+    "2": "9-10-2",
+    "3": "9-11-2",
+    "4": "9-12-2",
+    "5": "9-13-3",
+    "6": "9-10-1",
+    "7": "9-10-3"
+   },
+   "3": {
+    "1": "9-4-1",
+    "2": "9-5-1",
+    "3": "9-11-1",
+    "4": "9-12-1"
+   },
+   "4": {
+    "1": "9-3-1",
+    "2": "9-4-2",
+    "3": "9-8-1",
+    "4": "9-15-1"
+   },
+   "5": {
+    "1": "9-1-2",
+    "2": "9-4-3",
+    "3": "9-11-3",
+    "4": "9-3-2"
+   },
+   "6": {
+    "1": "9-6-1",
+    "2": "9-6-2",
+    "3": "9-8-3",
+    "4": "9-8-4",
+    "5": "9-7-2",
+    "6": "9-7-3",
+    "8": "9-13-1",
+    "9": "9-14-1"
+   },
+   "7": {
+    "1": "9-7-1",
+    "2": "9-8-2"
+   },
+   "8": {
+    "1": "9-14-2",
+    "2": "9-14-3",
+    "3": "9-14-4",
+    "4": "9-15-2"
+   },
+   "9": {
+    "1": "9-16"
+   },
+   "10": {
+    "1": "9-17-1",
+    "2": "9-17-2"
+   },
+   "12": {
+    "1": "9-20"
+   }
   }
  },
  "SS": {
@@ -4722,17 +6361,772 @@ window.MMB_ALBUMS =
   "cat": "COCC-12836",
   "v": 26881,
   "img": "images/album-covers/sailor-moon-supers-music-collection.jpg",
+  "card": "images/tray-cards/supers-music-collection.jpg",
   "t": {
+   "1": [
+    "オープニング「ムーンライト伝説」",
+    "Oopuningu \"Muunraito Densetsu\"",
+    "Opening: Moonlight Legend"
+   ],
+   "2": [
+    "サブタイトル",
+    "Sabutaitoru",
+    "Subtitle"
+   ],
+   "3": [
+    "夢で見た水晶の森",
+    "Yume de Mita Suishou no Mori",
+    "The Crystal Forest I Saw in a Dream"
+   ],
    "4": [
     "セーラー戦士の優雅な放課後",
     "Seeraa Senshi no Yuuga na Houkago",
     "The Sailor Guardians' Elegant After-School"
    ],
+   "5": [
+    "大人達の憂鬱",
+    "Otona-tachi no Yuuutsu",
+    "The Grown-Ups' Melancholy"
+   ],
+   "6": [
+    "怪人達のサーカス団",
+    "Kaijin-tachi no Saakasu-dan",
+    "The Monsters' Circus Troupe"
+   ],
+   "7": [
+    "アマゾンBAR",
+    "Amazon BAR",
+    "Amazon Bar"
+   ],
+   "8": [
+    "ちびうさのロマンス",
+    "Chibiusa no Romansu",
+    "Chibi-Usa's Romance"
+   ],
+   "9": [
+    "アイキャッチ",
+    "Aikyatchi",
+    "Eyecatch"
+   ],
+   "10": [
+    "アマゾントリオの罠",
+    "Amazon Torio no Wana",
+    "Amazon Trio's Trap"
+   ],
+   "11": [
+    "美しい夢の鏡",
+    "Utsukushii Yume no Kagami",
+    "The Beautiful Dream Mirror"
+   ],
    "12": [
     "セーラー戦士新たなる飛翔",
     "Seeraa Senshi Aratanaru Hishou",
     "A New Flight for the Sailor Guardians"
+   ],
+   "13": [
+    "ダブル変身！ムーン＆ちびムーン",
+    "Daburu Henshin! Muun & Chibi Muun",
+    "Double Transformation! Moon & Chibi Moon"
+   ],
+   "14": [
+    "ムーンゴージャスメディテイション！",
+    "Muun Goojasu Meditishon!",
+    "Moon Gorgeous Meditation!"
+   ],
+   "15": [
+    "いつか、そんな“私たち”になりたい",
+    "Itsuka, Sonna \"Watashi-tachi\" ni Naritai",
+    "Someday, I Want Us to Be Like That"
+   ],
+   "16": [
+    "それじゃあ、また来週ネ",
+    "Sore jaa, Mata Raishuu ne",
+    "Well Then, See You Next Week"
+   ],
+   "17": [
+    "エンディング「“らしく”いきましょ」",
+    "Endingu \"'Rashiku' Ikimasho\"",
+    "Ending: Let's Be True to Ourselves"
    ]
+  },
+  "l": {
+   "1": 174.29,
+   "2": 12.279,
+   "3": 279.642,
+   "4": 339.671,
+   "5": 253.284,
+   "6": 314.986,
+   "7": 212.272,
+   "8": 186.777,
+   "9": 14.76,
+   "10": 291.763,
+   "11": 277.578,
+   "12": 327.185,
+   "13": 144.981,
+   "14": 198.218,
+   "15": 228.677,
+   "16": 33.438,
+   "17": 212.35
+  },
+  "s": {
+   "3": [
+    [
+     0.0,
+     100.2,
+     null,
+     0
+    ],
+    [
+     100.2,
+     83.6,
+     "silence",
+     0
+    ],
+    [
+     183.8,
+     95.8,
+     "silence",
+     0
+    ]
+   ],
+   "4": [
+    [
+     0.0,
+     77.5,
+     null,
+     0
+    ],
+    [
+     77.5,
+     101.8,
+     "silence",
+     0
+    ],
+    [
+     179.3,
+     99.1,
+     "silence",
+     0
+    ],
+    [
+     278.4,
+     61.3,
+     "silence",
+     0
+    ]
+   ],
+   "5": [
+    [
+     0.0,
+     94.1,
+     null,
+     0
+    ],
+    [
+     94.1,
+     77.4,
+     "silence",
+     0
+    ],
+    [
+     171.5,
+     81.8,
+     "silence",
+     0
+    ]
+   ],
+   "6": [
+    [
+     0.0,
+     135.3,
+     null,
+     0
+    ],
+    [
+     135.3,
+     92.4,
+     "silence",
+     0
+    ],
+    [
+     227.7,
+     87.3,
+     "silence",
+     0
+    ]
+   ],
+   "7": [
+    [
+     0.0,
+     121.6,
+     null,
+     0
+    ],
+    [
+     121.6,
+     90.7,
+     "silence",
+     0
+    ]
+   ],
+   "8": [
+    [
+     0.0,
+     24.6,
+     null,
+     0
+    ],
+    [
+     24.6,
+     58.8,
+     "silence",
+     0
+    ],
+    [
+     83.4,
+     103.4,
+     "silence",
+     0
+    ]
+   ],
+   "10": [
+    [
+     0.0,
+     99.8,
+     null,
+     0
+    ],
+    [
+     99.8,
+     77.5,
+     "silence",
+     0
+    ],
+    [
+     177.3,
+     114.5,
+     "silence",
+     0
+    ]
+   ],
+   "11": [
+    [
+     0.0,
+     23.7,
+     null,
+     0
+    ],
+    [
+     23.7,
+     26.9,
+     "silence",
+     0
+    ],
+    [
+     50.6,
+     25.0,
+     "silence",
+     0
+    ],
+    [
+     75.6,
+     85.0,
+     "silence",
+     0
+    ],
+    [
+     160.6,
+     117.0,
+     "silence",
+     0
+    ]
+   ],
+   "12": [
+    [
+     0.0,
+     104.8,
+     null,
+     0
+    ],
+    [
+     104.8,
+     83.6,
+     "silence",
+     0
+    ],
+    [
+     188.4,
+     22.8,
+     "silence",
+     0
+    ],
+    [
+     211.2,
+     28.7,
+     "silence",
+     0
+    ],
+    [
+     239.9,
+     28.3,
+     "silence",
+     0
+    ],
+    [
+     268.2,
+     28.8,
+     "silence",
+     0
+    ],
+    [
+     297.0,
+     30.2,
+     "silence",
+     0
+    ]
+   ],
+   "13": [
+    [
+     0.0,
+     33.2,
+     null,
+     0
+    ],
+    [
+     33.2,
+     111.8,
+     "silence",
+     0
+    ]
+   ],
+   "14": [
+    [
+     0.0,
+     26.5,
+     null,
+     0
+    ],
+    [
+     26.5,
+     123.6,
+     "silence",
+     0
+    ],
+    [
+     150.1,
+     48.1,
+     "silence",
+     0
+    ]
+   ],
+   "15": [
+    [
+     0.0,
+     108.4,
+     null,
+     0
+    ],
+    [
+     108.4,
+     120.3,
+     "silence",
+     0
+    ]
+   ]
+  },
+  "q": {
+   "2": {
+    "1": "5-3"
+   },
+   "3": {
+    "1": "5-1-1",
+    "2": "5-1-2",
+    "3": "5-13-1"
+   },
+   "4": {
+    "1": "5-5-1",
+    "2": "5-5-2",
+    "4": "5-19-2"
+   },
+   "5": {
+    "1": "5-9-1",
+    "2": "5-21-4",
+    "3": "5-5-3"
+   },
+   "6": {
+    "1": "5-6-1",
+    "2": "5-6-2",
+    "3": "5-20-2"
+   },
+   "7": {
+    "1": "5-7-2",
+    "2": "5-20-1"
+   },
+   "8": {
+    "1": "5-9-3",
+    "2": "5-18-1",
+    "3": "5-4-1"
+   },
+   "9": {
+    "1": "5-17-1"
+   },
+   "10": {
+    "1": "5-8-1",
+    "2": "5-8-2",
+    "3": "5-8-3"
+   },
+   "11": {
+    "1": "5-21-3",
+    "2": "5-10-1",
+    "3": "5-10-2",
+    "4": "5-11-2",
+    "5": "5-11-3"
+   },
+   "12": {
+    "2": "5-21-5",
+    "3": "5-21-2"
+   },
+   "13": {
+    "1": "5-14-1",
+    "2": "5-22-2"
+   },
+   "14": {
+    "1": "5-14-2",
+    "2": "5-22-1",
+    "3": "5-14-3"
+   },
+   "15": {
+    "1": "5-15",
+    "2": "5-22-3"
+   },
+   "16": {
+    "1": "5-23-1"
+   }
+  }
+ },
+ "SSM": {
+  "n": [
+   "'96正月劇場アニメーション 美少女戦士セーラームーンSupers ミュージックコレクション",
+   "Sailor Moon SuperS Movie Music Collection"
+  ],
+  "cat": "COCC-13061",
+  "v": 28516,
+  "img": "images/album-covers/sailor-moon-supers-movie-music-collection.jpg",
+  "card": "images/tray-cards/supers-movie-music-collection.jpg",
+  "t": {
+   "1": [
+    "ムーンライト伝説",
+    "Muunraito Densetsu",
+    "Moonlight Legend"
+   ],
+   "2": [
+    "亜美ちゃんの朝",
+    "Ami-chan no Asa",
+    "Ami-chan's Morning"
+   ],
+   "3": [
+    "可愛い企み",
+    "Kawaii Takurami",
+    "Cute Scheme"
+   ],
+   "4": [
+    "恐怖、危機、マーキュリー登場",
+    "Kyoufu, Kiki, Maakyurii Toujou",
+    "Terror, Crisis, Mercury Appears"
+   ],
+   "5": [
+    "終曲",
+    "Shuukyoku",
+    "Finale"
+   ],
+   "6": [
+    "“らしく”いきましょ",
+    "\"Rashiku\" Ikimasho",
+    "Let's Be True to Ourselves"
+   ],
+   "7": [
+    "ふれあい～ペルルのテーマ～",
+    "Fureai ~Peruru no Teema~",
+    "Connection ~Perle's Theme~"
+   ],
+   "8": [
+    "ププランの笛と子供達",
+    "Pupuran no Fue to Kodomo-tachi",
+    "Poupelin's Flute and the Children"
+   ],
+   "9": [
+    "ボンボンベイビーの攻撃!!",
+    "Bonbon Beibii no Kougeki!!",
+    "The Bonbon Babies Attack!!"
+   ],
+   "10": [
+    "変身と技",
+    "Henshin to Waza",
+    "Transformations and Attacks"
+   ],
+   "11": [
+    "城",
+    "Shiro",
+    "The Castle"
+   ],
+   "12": [
+    "バディヤーヌとブラック・ドリーム・ホール",
+    "Badiyaanu to Burakku Doriimu Hooru",
+    "Badiane and the Black Dream Hole"
+   ],
+   "13": [
+    "命をかけて",
+    "Inochi wo Kakete",
+    "Risking Our Lives"
+   ],
+   "14": [
+    "愛の光",
+    "Ai no Hikari",
+    "Love's Light"
+   ],
+   "15": [
+    "家に帰ろう",
+    "Uchi ni Kaerou",
+    "Let's Go Home"
+   ],
+   "16": [
+    "Morning Moonで会いましょう",
+    "Morning Moon de Aimashou",
+    "Let's Meet at Morning Moon"
+   ]
+  },
+  "l": {
+   "1": 175.074,
+   "2": 86.728,
+   "3": 73.405,
+   "4": 285.964,
+   "5": 88.556,
+   "6": 214.545,
+   "7": 111.257,
+   "8": 145.738,
+   "9": 56.295,
+   "10": 170.137,
+   "11": 73.98,
+   "12": 168.491,
+   "13": 140.279,
+   "14": 225.96,
+   "15": 111.753,
+   "16": 269.297
+  },
+  "s": {
+   "3": [
+    [
+     0.0,
+     23.7,
+     null,
+     0
+    ],
+    [
+     23.7,
+     16.2,
+     "silence",
+     0
+    ],
+    [
+     39.9,
+     33.5,
+     "silence",
+     0
+    ]
+   ],
+   "4": [
+    [
+     0.0,
+     71.8,
+     null,
+     0
+    ],
+    [
+     71.8,
+     50.0,
+     "silence",
+     0
+    ],
+    [
+     121.8,
+     45.0,
+     "silence",
+     0
+    ],
+    [
+     166.8,
+     53.2,
+     "silence",
+     0
+    ],
+    [
+     220.0,
+     21.5,
+     "silence",
+     0
+    ],
+    [
+     241.5,
+     44.5,
+     "silence",
+     0
+    ]
+   ],
+   "5": [
+    [
+     0.0,
+     45.3,
+     null,
+     0
+    ],
+    [
+     45.3,
+     43.3,
+     "silence",
+     0
+    ]
+   ],
+   "7": [
+    [
+     0.0,
+     84.7,
+     null,
+     0
+    ],
+    [
+     84.7,
+     26.6,
+     "silence",
+     0
+    ]
+   ],
+   "10": [
+    [
+     0.0,
+     9.5,
+     null,
+     0
+    ],
+    [
+     9.5,
+     39.2,
+     "silence",
+     0
+    ],
+    [
+     48.7,
+     33.4,
+     "silence",
+     0
+    ],
+    [
+     82.1,
+     88.0,
+     "silence",
+     0
+    ]
+   ],
+   "12": [
+    [
+     0.0,
+     52.6,
+     null,
+     0
+    ],
+    [
+     52.6,
+     115.9,
+     "silence",
+     0
+    ]
+   ],
+   "14": [
+    [
+     0.0,
+     177.2,
+     null,
+     0
+    ],
+    [
+     177.2,
+     48.8,
+     "silence",
+     0
+    ]
+   ],
+   "15": [
+    [
+     0.0,
+     51.2,
+     null,
+     0
+    ],
+    [
+     51.2,
+     60.6,
+     "silence",
+     0
+    ]
+   ]
+  },
+  "q": {
+   "2": {
+    "1": "10-21"
+   },
+   "3": {
+    "1": "10-23-1",
+    "2": "10-23-2",
+    "3": "10-23-3"
+   },
+   "4": {
+    "1": "10-22-3",
+    "2": "10-24-1",
+    "3": "10-24-2",
+    "4": "10-24-3",
+    "5": "10-25-3",
+    "6": "10-26-2"
+   },
+   "5": {
+    "1": "10-27-1",
+    "2": "10-27-2"
+   },
+   "7": {
+    "1": "10-4-1",
+    "2": "10-4-3"
+   },
+   "8": {
+    "1": "10-1-1"
+   },
+   "9": {
+    "1": "10-6-2"
+   },
+   "10": {
+    "1": "10-7-1",
+    "2": "10-7-2",
+    "3": "10-7-4",
+    "4": "10-13"
+   },
+   "11": {
+    "1": "10-14-2"
+   },
+   "12": {
+    "1": "10-11",
+    "2": "10-14-3"
+   },
+   "13": {
+    "1": "10-15"
+   },
+   "14": {
+    "1": "10-18-1",
+    "2": "10-18-2"
+   },
+   "15": {
+    "1": "10-19-1",
+    "2": "10-19-2"
+   },
+   "16": {
+    "1": "10-31"
+   }
   }
  },
  "ST1": {
@@ -4743,12 +7137,340 @@ window.MMB_ALBUMS =
   "cat": "COCC-13576",
   "v": 26835,
   "img": "images/album-covers/sailor-moon-sailor-stars-music-collection-1.jpg",
+  "card": "images/tray-cards/sailor-stars-music-collection-1.jpg",
   "t": {
    "1": [
     "エターナルセーラームーン",
     "Etaanaru Seeraa Muun",
     "Eternal Sailor Moon"
+   ],
+   "2": [
+    "セーラースターソング",
+    "Seeraa Sutaa Songu",
+    "Sailor Star Song"
+   ],
+   "3": [
+    "サブタイトル",
+    "Sabutaitoru",
+    "Subtitle"
+   ],
+   "4": [
+    "5人は高校生",
+    "5-nin wa Koukousei",
+    "The Five Are High School Students"
+   ],
+   "5": [
+    "ネヘレニア復活",
+    "Neherenia Fukkatsu",
+    "Nehelenia's Resurrection"
+   ],
+   "6": [
+    "ほたるの予言",
+    "Hotaru no Yogen",
+    "Hotaru's Prophecy"
+   ],
+   "7": [
+    "アイキャッチ",
+    "Aikyatchi",
+    "Eyecatch"
+   ],
+   "8": [
+    "ミラーパレドリー",
+    "Miraa Paredorii",
+    "Mirror Paredri"
+   ],
+   "9": [
+    "とらわれのセーラー戦士",
+    "Toraware no Seeraa Senshi",
+    "Captured Sailor Guardians"
+   ],
+   "10": [
+    "プリンセスのために……",
+    "Purinsesu no Tame ni......",
+    "For the Princess......"
+   ],
+   "11": [
+    "エターナルの愛",
+    "Etaanaru no Ai",
+    "Eternal Love"
+   ],
+   "12": [
+    "スリーライツ",
+    "Surii Raitsu",
+    "Three Lights"
+   ],
+   "13": [
+    "シャドウギャラクティカ",
+    "Shadou Gyarakutika",
+    "Shadow Galactica"
+   ],
+   "14": [
+    "ムーンエターナルメイクアップ！",
+    "Muun Etaanaru Meikuappu!",
+    "Moon Eternal Make Up!"
+   ],
+   "15": [
+    "セーラースターライツ出現",
+    "Seeraa Sutaa Raitsu Shutsugen",
+    "The Sailor Star Lights Appear"
+   ],
+   "16": [
+    "風も空もきっと…",
+    "Kaze mo Sora mo Kitto...",
+    "Surely the Wind and the Sky..."
+   ],
+   "17": [
+    "月の光は愛のメッセージ",
+    "Tsuki no Hikari wa Ai no Messeeji",
+    "Moonlight Is a Message of Love"
    ]
+  },
+  "l": {
+   "1": 110.159,
+   "2": 232.177,
+   "3": 10.502,
+   "4": 319.348,
+   "5": 260.546,
+   "6": 101.931,
+   "7": 12.697,
+   "8": 298.241,
+   "9": 311.041,
+   "10": 224.602,
+   "11": 200.621,
+   "12": 232.465,
+   "13": 237.95,
+   "14": 116.742,
+   "15": 67.841,
+   "16": 284.527,
+   "17": 30.878
+  },
+  "s": {
+   "4": [
+    [
+     0.0,
+     81.6,
+     null,
+     0
+    ],
+    [
+     81.6,
+     119.2,
+     "silence",
+     0
+    ],
+    [
+     200.8,
+     118.5,
+     "silence",
+     0
+    ]
+   ],
+   "5": [
+    [
+     0.0,
+     95.4,
+     null,
+     0
+    ],
+    [
+     95.4,
+     94.7,
+     "silence",
+     0
+    ],
+    [
+     190.1,
+     70.4,
+     "silence",
+     0
+    ]
+   ],
+   "8": [
+    [
+     0.0,
+     104.9,
+     null,
+     0
+    ],
+    [
+     104.9,
+     75.9,
+     "silence",
+     0
+    ],
+    [
+     180.8,
+     52.6,
+     "silence",
+     0
+    ],
+    [
+     233.4,
+     64.8,
+     "silence",
+     0
+    ]
+   ],
+   "9": [
+    [
+     0.0,
+     120.2,
+     null,
+     0
+    ],
+    [
+     120.2,
+     91.1,
+     "silence",
+     0
+    ],
+    [
+     211.3,
+     99.7,
+     "silence",
+     0
+    ]
+   ],
+   "10": [
+    [
+     0.0,
+     129.6,
+     null,
+     0
+    ],
+    [
+     129.6,
+     95.0,
+     "silence",
+     0
+    ]
+   ],
+   "11": [
+    [
+     0.0,
+     68.2,
+     null,
+     0
+    ],
+    [
+     68.2,
+     132.4,
+     "silence",
+     0
+    ]
+   ],
+   "13": [
+    [
+     0.0,
+     90.2,
+     null,
+     0
+    ],
+    [
+     90.2,
+     63.9,
+     "silence",
+     0
+    ],
+    [
+     154.1,
+     83.8,
+     "silence",
+     0
+    ]
+   ],
+   "14": [
+    [
+     0.0,
+     38.3,
+     null,
+     0
+    ],
+    [
+     38.3,
+     29.1,
+     "silence",
+     0
+    ],
+    [
+     67.4,
+     12.5,
+     "silence",
+     0
+    ],
+    [
+     79.9,
+     28.4,
+     "silence",
+     0
+    ],
+    [
+     108.3,
+     8.4,
+     "silence",
+     0
+    ]
+   ]
+  },
+  "q": {
+   "3": {
+    "1": "6-3"
+   },
+   "4": {
+    "1": "6-4-1",
+    "2": "6-4-2",
+    "3": "6-4-3"
+   },
+   "5": {
+    "1": "6-5-1",
+    "2": "6-5-2",
+    "3": "6-5-3"
+   },
+   "6": {
+    "1": "6-6"
+   },
+   "7": {
+    "1": "7-9"
+   },
+   "8": {
+    "1": "6-7-1",
+    "2": "6-7-2",
+    "3": "6-7-3",
+    "4": "6-7-4"
+   },
+   "9": {
+    "1": "6-8-1",
+    "2": "6-8-2",
+    "3": "6-8-3"
+   },
+   "10": {
+    "1": "6-9-1",
+    "2": "6-9-2"
+   },
+   "11": {
+    "1": "6-10-1",
+    "2": "6-10-2"
+   },
+   "12": {
+    "1": "6-15"
+   },
+   "13": {
+    "1": "6-13-1",
+    "2": "6-13-2",
+    "3": "6-13-3"
+   },
+   "14": {
+    "1": "7-17-1",
+    "2": "7-17-3",
+    "3": "7-17-4",
+    "4": "7-17-5"
+   },
+   "15": {
+    "1": "7-14"
+   },
+   "17": {
+    "1": "6-11-1"
+   }
   }
  },
  "ST2": {
@@ -4759,11 +7481,92 @@ window.MMB_ALBUMS =
   "cat": "COCC-13660",
   "v": 26836,
   "img": "images/album-covers/sailor-moon-sailor-stars-music-collection-2.jpg",
+  "card": "images/tray-cards/sailor-stars-music-collection-2.jpg",
   "t": {
+   "1": [
+    "衛との別れ、そして……",
+    "Mamoru to no Wakare, Soshite......",
+    "Parting with Mamoru, and Then......"
+   ],
+   "2": [
+    "ボクたちの歌をきいて",
+    "Boku-tachi no Uta wo Kiite",
+    "Listen to Our Song"
+   ],
+   "3": [
+    "あの方はどこに……",
+    "Ano Kata wa Doko ni......",
+    "Where Is That Person......"
+   ],
+   "4": [
+    "星野、大気、夜天",
+    "Seiya, Taiki, Yaten",
+    "Seiya, Taiki, Yaten"
+   ],
    "5": [
     "ギターソロ・コレクション",
     "Gitaa Soro Korekushon",
     "Guitar Solo Collection"
+   ],
+   "6": [
+    "学園のアイドル",
+    "Gakuen no Aidoru",
+    "School Idol"
+   ],
+   "7": [
+    "美奈子の野望♡",
+    "Minako no Yabou♡",
+    "Minako's Ambition♡"
+   ],
+   "8": [
+    "銀河テレビでの策略",
+    "Ginga Terebi de no Sakuryaku",
+    "Scheme at Galaxy TV"
+   ],
+   "9": [
+    "スターシードをいただくわ",
+    "Sutaa Shiido wo Itadaku wa",
+    "I'll Take the Star Seed"
+   ],
+   "10": [
+    "襲い来るファージ",
+    "Osoikuru Faaji",
+    "The Phage Attacks"
+   ],
+   "11": [
+    "スターパワーメイクアップ！",
+    "Sutaa Pawaa Meikuappu!",
+    "Star Power Make Up!"
+   ],
+   "12": [
+    "華麗なるエターナルセーラームーン",
+    "Kareinaru Etaanaru Seeraa Muun",
+    "Magnificent Eternal Sailor Moon"
+   ],
+   "13": [
+    "究極の悪",
+    "Kyuukyoku no Aku",
+    "Ultimate Evil"
+   ],
+   "14": [
+    "決意",
+    "Ketsui",
+    "Resolve"
+   ],
+   "15": [
+    "究極の愛",
+    "Kyuukyoku no Ai",
+    "Ultimate Love"
+   ],
+   "16": [
+    "平和",
+    "Heiwa",
+    "Peace"
+   ],
+   "17": [
+    "今日からまたフツーの高校生",
+    "Kyou kara Mata Futsuu no Koukousei",
+    "Ordinary High School Students Again from Today"
    ],
    "18": [
     "スターパワーメイクアップ音楽 ～コーラスなし～",
@@ -4779,7 +7582,283 @@ window.MMB_ALBUMS =
     "エターナルセーラームーン・アクション音楽 ～コーラスなし～",
     "Etaanaru Seeraa Muun Akushon Ongaku ~Koorasu Nashi~",
     "Eternal Sailor Moon Action Music ~Without Chorus~"
+   ],
+   "21": [
+    "予告編音楽～15秒ヴァージョン～",
+    "Yokokuhen Ongaku ~15-byou Vaajon~",
+    "Preview Music ~15-Second Version~"
    ]
+  },
+  "l": {
+   "1": 248.896,
+   "2": 232.047,
+   "3": 215.015,
+   "4": 231.55,
+   "5": 229.696,
+   "6": 71.446,
+   "7": 120.504,
+   "8": 140.67,
+   "9": 144.145,
+   "10": 178.992,
+   "11": 117.97,
+   "12": 173.977,
+   "13": 74.032,
+   "14": 77.532,
+   "15": 144.981,
+   "16": 125.415,
+   "17": 76.801,
+   "18": 118.127,
+   "19": 40.412,
+   "20": 122.959,
+   "21": 17.111
+  },
+  "s": {
+   "1": [
+    [
+     0.0,
+     128.7,
+     null,
+     0
+    ],
+    [
+     128.7,
+     26.3,
+     "silence",
+     0
+    ],
+    [
+     155.0,
+     93.9,
+     "silence",
+     0
+    ]
+   ],
+   "3": [
+    [
+     0.0,
+     68.5,
+     null,
+     0
+    ],
+    [
+     68.5,
+     67.9,
+     "silence",
+     0
+    ],
+    [
+     136.4,
+     78.6,
+     "silence",
+     0
+    ]
+   ],
+   "4": [
+    [
+     0.0,
+     76.7,
+     null,
+     0
+    ],
+    [
+     76.7,
+     69.0,
+     "silence",
+     0
+    ],
+    [
+     145.7,
+     85.9,
+     "silence",
+     0
+    ]
+   ],
+   "5": [
+    [
+     0.0,
+     75.7,
+     null,
+     0
+    ],
+    [
+     75.7,
+     68.5,
+     "silence",
+     0
+    ],
+    [
+     144.2,
+     85.5,
+     "silence",
+     0
+    ]
+   ],
+   "7": [
+    [
+     0.0,
+     79.4,
+     null,
+     0
+    ],
+    [
+     79.4,
+     21.3,
+     "silence",
+     0
+    ],
+    [
+     100.7,
+     19.8,
+     "silence",
+     0
+    ]
+   ],
+   "8": [
+    [
+     0.0,
+     76.5,
+     null,
+     0
+    ],
+    [
+     76.5,
+     64.2,
+     "silence",
+     0
+    ]
+   ],
+   "9": [
+    [
+     0.0,
+     20.3,
+     null,
+     0
+    ],
+    [
+     20.3,
+     123.8,
+     "silence",
+     0
+    ]
+   ],
+   "10": [
+    [
+     0.0,
+     75.0,
+     null,
+     0
+    ],
+    [
+     75.0,
+     78.8,
+     "silence",
+     0
+    ],
+    [
+     153.8,
+     25.2,
+     "silence",
+     0
+    ]
+   ],
+   "12": [
+    [
+     0.0,
+     13.9,
+     null,
+     0
+    ],
+    [
+     13.9,
+     121.8,
+     "silence",
+     0
+    ],
+    [
+     135.7,
+     38.3,
+     "silence",
+     0
+    ]
+   ],
+   "15": [
+    [
+     0.0,
+     38.4,
+     null,
+     0
+    ],
+    [
+     38.4,
+     106.6,
+     "silence",
+     0
+    ]
+   ]
+  },
+  "q": {
+   "1": {
+    "1": "6-12-1",
+    "2": "6-12-2",
+    "3": "7-7"
+   },
+   "2": {
+    "1": "6-15"
+   },
+   "3": {
+    "1": "7-2-1",
+    "2": "7-2-2",
+    "3": "7-2-3"
+   },
+   "4": {
+    "1": "7-3-1",
+    "2": "7-3-2",
+    "3": "7-3-3"
+   },
+   "6": {
+    "1": "7-4"
+   },
+   "7": {
+    "1": "7-5-1",
+    "2": "7-5-2",
+    "3": "7-5-3"
+   },
+   "8": {
+    "1": "7-10-1",
+    "2": "7-10-2"
+   },
+   "9": {
+    "1": "7-11-1",
+    "2": "7-11-2"
+   },
+   "10": {
+    "1": "7-12-1",
+    "2": "7-12-2",
+    "3": "7-12-3"
+   },
+   "12": {
+    "2": "7-17-2",
+    "3": "7-17-6"
+   },
+   "13": {
+    "1": "7-20"
+   },
+   "14": {
+    "1": "7-21"
+   },
+   "15": {
+    "1": "7-22-1",
+    "2": "7-22-2"
+   },
+   "16": {
+    "1": "7-23"
+   },
+   "17": {
+    "1": "6-11-3"
+   },
+   "21": {
+    "1": "6-11-2"
+   }
   }
  },
  "EX": {
@@ -4790,16 +7869,82 @@ window.MMB_ALBUMS =
   "cat": "COCC-13402",
   "v": 28536,
   "img": "images/album-covers/sailor-moon-music-collection-extra-version.jpg",
+  "card": "images/tray-cards/music-collection-extra-version.jpg",
   "t": {
+   "1": [
+    "ムーンライト伝説（TVサイズ）",
+    "Muunraito Densetsu (TV Saizu)",
+    "Moonlight Legend (TV Size)"
+   ],
+   "2": [
+    "アイキャッチ（コーラスなしヴァージョン）",
+    "Aikyatchi (Koorasu Nashi Vaajon)",
+    "Eyecatch (Version without Chorus)"
+   ],
+   "3": [
+    "変身",
+    "Henshin",
+    "Transformation"
+   ],
+   "4": [
+    "感動と決意",
+    "Kandou to Ketsui",
+    "Emotion and Resolve"
+   ],
+   "5": [
+    "絶望と悪",
+    "Zetsubou to Aku",
+    "Despair and Evil"
+   ],
+   "6": [
+    "休息",
+    "Kyuusoku",
+    "Rest"
+   ],
+   "7": [
+    "ファンファーレ その他",
+    "Fanfaare Sono Ta",
+    "Fanfares and More"
+   ],
+   "8": [
+    "アイキャッチ",
+    "Aikyatchi",
+    "Eyecatch"
+   ],
    "9": [
-    "エンディングアレンジ ～明るく元気にそしてロマンティックに～",
+    "エンディング・アレンジ～明るく元気にそしてロマンティックに～",
     "Endingu Arenji ~Akaruku Genki ni Soshite Romantikku ni~",
     "Ending Arrangement ~Cheerful and Romantic~"
+   ],
+   "10": [
+    "変身と必殺技",
+    "Henshin to Hissatsuwaza",
+    "Transformations and Special Attacks"
    ],
    "11": [
     "うさぎのテーマ・葛藤・エイルのフルート",
     "Usagi no Teema, Kattou, Eiru no Furuuto",
     "Usagi's Theme · Conflict · Ail's Flute"
+   ],
+   "12": [
+    "強い敵",
+    "Tsuyoi Teki",
+    "A Strong Enemy"
+   ],
+   "13": [
+    "オープニング・アレンジ～感動的そして不安な～",
+    "Oopuningu Arenji ~Kandouteki Soshite Fuan na~",
+    "Opening Arrangement ~Moving, Then Uneasy~"
+   ],
+   "14": [
+    "エンディング・アレンジ～ノスタルジックそしてロマンティックに～",
+    "Endingu Arenji ~Nosutarujikku Soshite Romantikku ni~",
+    "Ending Arrangement ~Nostalgic, Then Romantic~"
+   ],
+   "15": [
+    "必殺技・戦士の宿命・敵の野望",
+    "Hissatsuwaza, Senshi no Shukumei, Teki no Yabou",
+    "Special Attacks · The Guardians' Fate · The Enemy's Ambition"
    ],
    "16": [
     "やさしい情景",
@@ -4811,6 +7956,26 @@ window.MMB_ALBUMS =
     "Kinchou no Joukei to Koudouteki na BGM",
     "Tense Scenes and Action BGM"
    ],
+   "18": [
+    "みちるとはるか",
+    "Michiru to Haruka",
+    "Michiru and Haruka"
+   ],
+   "19": [
+    "ブリッジと悲しみ",
+    "Burijji to Kanashimi",
+    "Bridges and Sorrow"
+   ],
+   "20": [
+    "予告",
+    "Yokoku",
+    "Preview"
+   ],
+   "21": [
+    "エンディング・アレンジ",
+    "Endingu Arenji",
+    "Ending Arrangement"
+   ],
    "22": [
     "敵とペガサスのテーマ",
     "Teki to Pegasasu no Teema",
@@ -4820,7 +7985,536 @@ window.MMB_ALBUMS =
     "日常的BGM",
     "Nichijouteki BGM",
     "Everyday BGM"
+   ],
+   "24": [
+    "戦闘的BGM",
+    "Sentouteki BGM",
+    "Battle BGM"
+   ],
+   "25": [
+    "ピンチ… そして、決意",
+    "Pinchi... Soshite, Ketsui",
+    "In a Pinch... and Then, Resolve"
+   ],
+   "26": [
+    "タキシード・ミラージュ（TVサイズ）",
+    "Takishiido Miraaju (TV Saizu)",
+    "Tuxedo Mirage (TV Size)"
    ]
+  },
+  "l": {
+   "1": 85.448,
+   "2": 14.159,
+   "3": 43.756,
+   "4": 113.817,
+   "5": 236.853,
+   "6": 62.852,
+   "7": 88.112,
+   "8": 29.049,
+   "9": 204.801,
+   "10": 125.755,
+   "11": 103.864,
+   "12": 112.354,
+   "13": 173.428,
+   "14": 241.738,
+   "15": 247.328,
+   "16": 322.613,
+   "17": 343.355,
+   "18": 139.025,
+   "19": 139.835,
+   "20": 31.4,
+   "21": 116.977,
+   "22": 195.11,
+   "23": 600.504,
+   "24": 109.95,
+   "25": 79.048,
+   "26": 93.415
+  },
+  "s": {
+   "4": [
+    [
+     0.0,
+     57.2,
+     null,
+     0
+    ],
+    [
+     57.2,
+     56.6,
+     "silence",
+     0
+    ]
+   ],
+   "5": [
+    [
+     0.0,
+     13.3,
+     null,
+     0
+    ],
+    [
+     13.3,
+     58.9,
+     "change",
+     0
+    ],
+    [
+     72.2,
+     21.8,
+     "silence",
+     0
+    ],
+    [
+     94.0,
+     62.6,
+     "change",
+     0
+    ],
+    [
+     156.6,
+     12.6,
+     "silence",
+     0
+    ],
+    [
+     169.2,
+     67.7,
+     "change",
+     0
+    ]
+   ],
+   "7": [
+    [
+     0.0,
+     17.6,
+     null,
+     0
+    ],
+    [
+     17.6,
+     16.6,
+     "silence",
+     0
+    ],
+    [
+     34.2,
+     14.9,
+     "silence",
+     0
+    ],
+    [
+     49.1,
+     10.2,
+     "silence",
+     0
+    ],
+    [
+     59.3,
+     14.8,
+     "silence",
+     0
+    ],
+    [
+     74.1,
+     14.0,
+     "silence",
+     0
+    ]
+   ],
+   "8": [
+    [
+     0.0,
+     14.4,
+     null,
+     0
+    ],
+    [
+     14.4,
+     14.6,
+     "silence",
+     0
+    ]
+   ],
+   "9": [
+    [
+     0.0,
+     92.7,
+     null,
+     0
+    ],
+    [
+     92.7,
+     112.1,
+     "silence",
+     0
+    ]
+   ],
+   "10": [
+    [
+     0.0,
+     39.9,
+     null,
+     0
+    ],
+    [
+     39.9,
+     85.9,
+     "silence",
+     0
+    ]
+   ],
+   "11": [
+    [
+     0.0,
+     79.1,
+     null,
+     0
+    ],
+    [
+     79.1,
+     24.8,
+     "silence",
+     0
+    ]
+   ],
+   "13": [
+    [
+     0.0,
+     107.9,
+     null,
+     0
+    ],
+    [
+     107.9,
+     65.5,
+     "silence",
+     0
+    ]
+   ],
+   "14": [
+    [
+     0.0,
+     124.6,
+     null,
+     0
+    ],
+    [
+     124.6,
+     117.1,
+     "silence",
+     0
+    ]
+   ],
+   "15": [
+    [
+     0.0,
+     51.6,
+     null,
+     0
+    ],
+    [
+     51.6,
+     97.0,
+     "silence",
+     0
+    ],
+    [
+     148.6,
+     98.7,
+     "silence",
+     0
+    ]
+   ],
+   "16": [
+    [
+     0.0,
+     122.2,
+     null,
+     0
+    ],
+    [
+     122.2,
+     107.0,
+     "silence",
+     0
+    ],
+    [
+     229.2,
+     93.4,
+     "silence",
+     0
+    ]
+   ],
+   "17": [
+    [
+     0.0,
+     91.7,
+     null,
+     0
+    ],
+    [
+     91.7,
+     124.6,
+     "silence",
+     0
+    ],
+    [
+     216.3,
+     127.1,
+     "silence",
+     0
+    ]
+   ],
+   "18": [
+    [
+     0.0,
+     72.5,
+     null,
+     0
+    ],
+    [
+     72.5,
+     66.5,
+     "silence",
+     0
+    ]
+   ],
+   "19": [
+    [
+     0.0,
+     14.3,
+     null,
+     0
+    ],
+    [
+     14.3,
+     22.3,
+     "silence",
+     0
+    ],
+    [
+     36.6,
+     103.2,
+     "silence",
+     0
+    ]
+   ],
+   "20": [
+    [
+     0.0,
+     14.4,
+     null,
+     0
+    ],
+    [
+     14.4,
+     17.0,
+     "silence",
+     0
+    ]
+   ],
+   "22": [
+    [
+     0.0,
+     89.7,
+     null,
+     0
+    ],
+    [
+     89.7,
+     29.1,
+     "silence",
+     0
+    ],
+    [
+     118.8,
+     76.3,
+     "silence",
+     0
+    ]
+   ],
+   "23": [
+    [
+     0.0,
+     25.4,
+     null,
+     0
+    ],
+    [
+     25.4,
+     23.1,
+     "silence",
+     0
+    ],
+    [
+     48.5,
+     83.4,
+     "silence",
+     0
+    ],
+    [
+     131.9,
+     22.7,
+     "silence",
+     0
+    ],
+    [
+     154.6,
+     26.4,
+     "silence",
+     0
+    ],
+    [
+     181.0,
+     94.0,
+     "silence",
+     0
+    ],
+    [
+     275.0,
+     85.1,
+     "silence",
+     0
+    ],
+    [
+     360.1,
+     26.5,
+     "silence",
+     0
+    ],
+    [
+     386.6,
+     116.2,
+     "silence",
+     0
+    ],
+    [
+     502.8,
+     23.9,
+     "silence",
+     0
+    ],
+    [
+     526.7,
+     20.9,
+     "silence",
+     0
+    ],
+    [
+     547.6,
+     23.5,
+     "silence",
+     0
+    ],
+    [
+     571.1,
+     29.4,
+     "silence",
+     0
+    ]
+   ]
+  },
+  "q": {
+   "1": {
+    "1": "1-1"
+   },
+   "3": {
+    "1": "2-12-2"
+   },
+   "4": {
+    "1": "2-14-2",
+    "2": "2-22-2"
+   },
+   "5": {
+    "1": "2-16",
+    "2": "2-17",
+    "3": "2-18",
+    "4": "2-19",
+    "5": "2-20",
+    "6": "2-21"
+   },
+   "6": {
+    "1": "4-19-3"
+   },
+   "7": {
+    "1": "2-4-5",
+    "2": "2-24-1",
+    "3": "2-4-1",
+    "4": "2-4-2",
+    "5": "2-4-3",
+    "6": "2-4-4"
+   },
+   "8": {
+    "1": "3-8-2",
+    "2": "3-11-4"
+   },
+   "9": {
+    "2": "3-13-1"
+   },
+   "10": {
+    "1": "3-15-1",
+    "2": "3-15-4"
+   },
+   "11": {
+    "1": "3-14-2"
+   },
+   "12": {
+    "1": "3-6-1"
+   },
+   "13": {
+    "1": "4-11-2",
+    "2": "4-11-1"
+   },
+   "14": {
+    "1": "4-15-2",
+    "2": "4-15-1"
+   },
+   "15": {
+    "1": "4-21-2",
+    "2": "4-14-1",
+    "3": "4-8-1"
+   },
+   "16": {
+    "1": "4-19-1",
+    "3": "4-19-2"
+   },
+   "17": {
+    "2": "4-1-3",
+    "3": "4-14-5"
+   },
+   "18": {
+    "1": "4-5-1",
+    "2": "4-5-4"
+   },
+   "19": {
+    "1": "4-21-1",
+    "2": "4-13-1",
+    "3": "4-20-1"
+   },
+   "20": {
+    "1": "5-17-1",
+    "2": "5-23-2"
+   },
+   "21": {
+    "1": "5-19-1"
+   },
+   "22": {
+    "1": "5-6-3",
+    "3": "5-18-3"
+   },
+   "23": {
+    "3": "5-21-1",
+    "6": "5-12-1",
+    "7": "5-11-1",
+    "9": "5-7-3",
+    "11": "5-9-2"
+   },
+   "24": {
+    "1": "5-11-4"
+   },
+   "26": {
+    "1": "4-22"
+   }
   }
  },
  "歌": {

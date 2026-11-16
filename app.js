@@ -658,12 +658,25 @@ function albumTable(code, al, pieces){
   let html = `<div class="scroll">${tableTag('album')}<thead>${headRow(ALBUM_HEAD, false)}</thead>`;
   const keys = [...new Set([...Object.keys(al.t), ...Object.keys(pieces || {})])].sort(keyOrder);
   keys.forEach(key => {
-    const cited = (pieces?.[key] || []).slice().sort((a, b) => (+a.piece || 0) - (+b.piece || 0));
+    let cited = (pieces?.[key] || []).slice().sort((a, b) => (+a.piece || 0) - (+b.piece || 0));
     // every piece the audio shows, cited or not (an uncited piece gets a row with only its place on the CD)
     const places = al.s?.[key] || [];
+    const twins = al.q?.[key] || {};   // an original album's piece that is the same recording as a box-set piece
+    // the booklet citing a whole multi-piece track (SS-4 for M-32): the one piece with no citation and no box-set twin
+    if (places.length && cited.some(x => !x.piece)) {
+      const open = places.map((_, i) => String(i + 1)).filter(p => !twins[p] && !cited.some(x => x.piece === p));
+      if (open.length === 1) cited = cited.map(x => x.piece ? x : {...x, piece: open[0]});
+    }
     // a piece the booklet names that has no audio on the CD (3-11-5, M-105B SE; its BGM-list note says so): left out
     const list = cited.filter(x => !(places.length && +x.piece > places.length));
-    places.forEach((_, i) => { if (!cited.some(x => +x.piece === i + 1)) list.push({piece: String(i + 1), blank: true}); });
+    // an uncited piece with a box-set twin: the booklet's entries for that box-set place, marked with where they come from
+    const twinRows = (p, shown) => {
+      const o = parseCd(twins[p]); if (!o) return [];
+      const at = ((albumTable.all ||= albumPieces())[o.code]?.[o.key] || []).filter(x => o.piece ? x.piece === o.piece : !x.piece);
+      return at.length ? at.map(x => ({...x, piece: shown, twin: twins[p]})) : [{piece: shown, blank: true, twin: twins[p]}];
+    };
+    places.forEach((_, i) => { const p = String(i + 1); if (!cited.some(x => +x.piece === i + 1)) list.push(...(twins[p] ? twinRows(p, p) : [{piece: p, blank: true}])); });
+    if (!places.length && !list.length && twins['1']) list.push(...twinRows('1', ''));
     const partStart = x => al.x?.[key]?.[x.r?.c]?.[1] ?? 0;   // two codes on one piece: in the order they play
     list.sort((a, b) => (+a.piece || 0) - (+b.piece || 0) || partStart(a) - partStart(b));
     const rows = list.length || 1, n = key;   // the song box: disc-track
@@ -677,6 +690,7 @@ function albumTable(code, al, pieces){
     const ex = al.e?.[key];
     if (!list.length) html += `<tr>${head}${segOf({}, '')}${extraCells(ex?.['1'])}</tr>`;
     list.forEach((x, i) => {
+      if (x.blank && x.twin) { html += `<tr>${i ? '' : head}${segOf(x, x.piece)}<td class="code">${twinTag(x.twin)}</td><td></td><td class="ed"></td></tr>`; return; }
       if (x.blank) { html += `<tr>${i ? '' : head}${segOf(x, x.piece)}${extraCells(ex?.[x.piece])}</tr>`; return; }
       const r = x.r, film = x.w && FILMS[x.w.id];
       const part = !film && al.x?.[key]?.[r.c];
@@ -686,12 +700,19 @@ function albumTable(code, al, pieces){
       const linked = x.id && ROW_PANEL[x.id] ? goLink(x.id, codeTxt, goTitle(x.id)) : esc(codeTxt);
       const self = film ? {w: x.w, rows: [{id: x.id, part: null, m: r.m}]} : null;
       html += `<tr>${i ? '' : head}${placeHere}`
-        + `<td class="code">${linked}${film ? `<span class="src">${bi(...film.short, 'inl')}</span>` : ''}</td>`
+        + `<td class="code">${linked}${film ? `<span class="src">${bi(...film.short, 'inl')}</span>` : ''}${x.twin ? twinTag(x.twin) : ''}</td>`
         + `<td>${r.d ? stack(r.d) : ''}</td>${usedCell(x.id, self)}</tr>`;
     });
     html += '</tbody>';
   });
   return html + '</table></div>';
+}
+/* an original album's piece found on the box set (albums.js q): where, linked to that track */
+function twinTag(place){
+  const o = parseCd(place), id = o && trackId(o.code, o.key);
+  const label = `<span translate="no">BOX ${esc(place)}</span>`;
+  return `<span class="src" title="${esc(`メモリアルミュージックボックスの${place}と同じ録音（音声から照合） / The same recording is on the box set at ${place} (found from the audio)`)}">`
+    + (id ? `<a class="go" href="#${esc(id)}">${label}</a>` : label) + '</span>';
 }
 function albumHead(al, noName){
   const links = [];

@@ -292,25 +292,25 @@ album,ord,track,title_ja,title_ro,title_en,length
 10,30,31,「Morning Moonで会いましょう」～インストヴァージョン～,"""Morning Moon de Aimashou"" ~Insuto Vaajon~",Let's Meet at Morning Moon ~Instrumental Version~,269.715
 10,31,32,「あしたもまた自転車」～オルゴールヴァージョン～,"""Ashita mo Mata Jitensha"" ~Orugooru Vaajon~",Bicycle Again Tomorrow ~Music Box Version~,139.417
 10,32,33,「あしたもまた自転車」～インストヴァージョン～,"""Ashita mo Mata Jitensha"" ~Insuto Vaajon~",Bicycle Again Tomorrow ~Instrumental Version~,233.692
-EX,0,9,エンディングアレンジ ～明るく元気にそしてロマンティックに～,Endingu Arenji ~Akaruku Genki ni Soshite Romantikku ni~,Ending Arrangement ~Cheerful and Romantic~,\N
-EX,1,11,うさぎのテーマ・葛藤・エイルのフルート,"Usagi no Teema, Kattou, Eiru no Furuuto",Usagi's Theme · Conflict · Ail's Flute,\N
-EX,2,16,やさしい情景,Yasashii Joukei,Gentle Scene,\N
-EX,3,17,緊張の情景と行動的なBGM,Kinchou no Joukei to Koudouteki na BGM,Tense Scenes and Action BGM,\N
-EX,4,22,敵とペガサスのテーマ,Teki to Pegasasu no Teema,Enemy and Pegasus Theme,\N
-EX,5,23,日常的BGM,Nichijouteki BGM,Everyday BGM,\N
-R,0,3,魔界樹,Makaiju,The Makai Tree,\N
-R,1,5,清く、明るく、△×□§...,"Kiyoku, Akaruku, △×□§...","Pure, Bright, △×□§...",\N
-R,2,8,月は見ている,Tsuki wa Mite Iru,The Moon is Watching,\N
+EX,8,9,エンディング・アレンジ～明るく元気にそしてロマンティックに～,Endingu Arenji ~Akaruku Genki ni Soshite Romantikku ni~,Ending Arrangement ~Cheerful and Romantic~,204.801
+EX,10,11,うさぎのテーマ・葛藤・エイルのフルート,"Usagi no Teema, Kattou, Eiru no Furuuto",Usagi's Theme · Conflict · Ail's Flute,103.864
+EX,15,16,やさしい情景,Yasashii Joukei,Gentle Scene,322.613
+EX,16,17,緊張の情景と行動的なBGM,Kinchou no Joukei to Koudouteki na BGM,Tense Scenes and Action BGM,343.355
+EX,21,22,敵とペガサスのテーマ,Teki to Pegasasu no Teema,Enemy and Pegasus Theme,195.11
+EX,22,23,日常的BGM,Nichijouteki BGM,Everyday BGM,600.504
+R,2,3,魔界樹,Makaiju,The Makai Tree,347.612
+R,4,5,清く、明るく、△×□§...,"Kiyoku, Akaruku, △×□§...","Pure, Bright, △×□§...",407.198
+R,7,8,月は見ている,Tsuki wa Mite Iru,The Moon is Watching,307.75
 S,0,1,聖杯、救世主(メシア)……神秘なる世界,"Seihai, Kyuuseishu (Meshia)...... Shinpi naru Sekai","The Holy Grail, the Messiah...... A Mysterious World",120.974
 S,2,3,朝の並木道,Asa no Namikimichi,Avenue at Morning,251.821
 S,5,6,恋する乙女はとまらない！,Koisuru Otome wa Tomaranai!,You Can't Stop a Girl in Love!,302.63
-SS,0,4,セーラー戦士の優雅な放課後,Seeraa Senshi no Yuuga na Houkago,The Sailor Guardians' Elegant After-School,\N
-SS,1,12,セーラー戦士新たなる飛翔,Seeraa Senshi Aratanaru Hishou,A New Flight for the Sailor Guardians,\N
-ST1,0,1,エターナルセーラームーン,Etaanaru Seeraa Muun,Eternal Sailor Moon,\N
-ST2,0,5,ギターソロ・コレクション,Gitaa Soro Korekushon,Guitar Solo Collection,\N
-ST2,1,18,スターパワーメイクアップ音楽 ～コーラスなし～,Sutaa Pawaa Meikuappu Ongaku ~Koorasu Nashi~,Star Power Make Up Music ~Without Chorus~,\N
-ST2,2,19,ムーンエターナルメイクアップ音楽 ～コーラスなし～,Muun Etaanaru Meikuappu Ongaku ~Koorasu Nashi~,Moon Eternal Make Up Music ~Without Chorus~,\N
-ST2,3,20,エターナルセーラームーン・アクション音楽 ～コーラスなし～,Etaanaru Seeraa Muun Akushon Ongaku ~Koorasu Nashi~,Eternal Sailor Moon Action Music ~Without Chorus~,\N
+SS,3,4,セーラー戦士の優雅な放課後,Seeraa Senshi no Yuuga na Houkago,The Sailor Guardians' Elegant After-School,339.671
+SS,11,12,セーラー戦士新たなる飛翔,Seeraa Senshi Aratanaru Hishou,A New Flight for the Sailor Guardians,327.185
+ST1,0,1,エターナルセーラームーン,Etaanaru Seeraa Muun,Eternal Sailor Moon,110.159
+ST2,4,5,ギターソロ・コレクション,Gitaa Soro Korekushon,Guitar Solo Collection,229.696
+ST2,17,18,スターパワーメイクアップ音楽 ～コーラスなし～,Sutaa Pawaa Meikuappu Ongaku ~Koorasu Nashi~,Star Power Make Up Music ~Without Chorus~,118.127
+ST2,18,19,ムーンエターナルメイクアップ音楽 ～コーラスなし～,Muun Etaanaru Meikuappu Ongaku ~Koorasu Nashi~,Moon Eternal Make Up Music ~Without Chorus~,40.412
+ST2,19,20,エターナルセーラームーン・アクション音楽 ～コーラスなし～,Etaanaru Seeraa Muun Akushon Ongaku ~Koorasu Nashi~,Eternal Sailor Moon Action Music ~Without Chorus~,122.959
 歌,0,2-10,Someday...Somebody...,Someday...Somebody...,Someday...Somebody...,\N
 歌,1,2-11,永遠のメロディ,Eien no Merodi,Eternal Melody,\N
 歌,2,2-13,あなたの夢をみたわ,Anata no Yume wo Mita wa,I Dreamed of You,\N
@@ -329,3 +329,132 @@ S,11,12,ウラヌス、そして、ネプチューン,"Uranusu, Soshite, Nepuchu
 S,12,13,The Pretty Soldiers' Big War!,The Pretty Soldiers' Big War!,The Pretty Soldiers' Big War!,263.838
 S,13,14,愛の奇跡,Ai no Kiseki,The Miracle of Love,127.139
 S,14,15,来週も見てネ！,Raishuu mo Mite ne!,See You Next Week!,32.889
+MC,0,1,ムーンライト伝説,Muunraito Densetsu,Moonlight Legend,175.309
+MC,1,2,あたしだって普通の女の子,Atashi Datte Futsuu no Onnanoko,"I'm Just an Ordinary Girl, Too",389.617
+MC,2,3,本当に選ばれた戦士なの？,Hontou ni Erabareta Senshi na no?,Was I Really Chosen to Be a Guardian?,403.253
+MC,3,4,星空はミステリアス,Hoshizora wa Misuteriasu,The Starry Sky Is Mysterious,368.746
+MC,4,5,おっちょこちょいは生まれつき,Occhokochoi wa Umaretsuki,Scatterbrained by Nature,409.183
+MC,5,6,恋する乙女心,Koisuru Otomegokoro,A Maiden's Heart in Love,413.284
+MC,6,7,誰かが狙われている,Dareka ga Nerawarete Iru,Someone Is Being Targeted,438.31
+MC,7,8,夢見るおだんごアタマ,Yumemiru Odango Atama,Dreamy Dumpling-Head,448.941
+MC,8,9,夕暮れ時は妖魔の予感,Yuuguredoki wa Youma no Yokan,Dusk Brings a Premonition of Monsters,422.558
+MC,9,10,ムーン・プリズム・パワー・メイクアップ！,Muun Purizumu Pawaa Meikuappu!,Moon Prism Power Make Up!,457.405
+MC,10,11,HEART MOVING,HEART MOVING,HEART MOVING,218.568
+R,0,1,乙女のポリシー,Otome no Porishii,A Maiden's Policy,194.169
+R,1,2,友情、そして愛,"Yuujou, Soshite Ai","Friendship, and Then Love",378.515
+R,3,4,私が戦う,Watashi ga Tatakau,I Will Fight,363.913
+R,5,6,新たなる敵,Aratanaru Teki,A New Enemy,297.536
+R,6,7,追跡は冒険のはじまり,Tsuiseki wa Bouken no Hajimari,The Chase Is the Start of an Adventure,295.916
+R,8,9,悲しみを勇気に変えて,Kanashimi wo Yuuki ni Kaete,Turning Sorrow into Courage,329.51
+R,9,10,好きと言って,Suki to Itte,Say You Love Me,277.683
+RM,0,1,プロローグ,Puroroogu,Prologue,92.135
+RM,1,2,Moon Revenge,Moon Revenge,Moon Revenge,242.339
+RM,2,3,紅い髪の少年,Akai Kami no Shounen,The Red-Haired Boy,141.271
+RM,3,4,植物園のハプニング！～侵略の予兆,Shokubutsuen no Hapuningu! ~ Shinryaku no Yochou,Happening at the Botanical Garden! ~ Signs of Invasion,226.012
+RM,4,5,妖花魔グリシナ,Youkama Gurishina,Flower Monster Glycina,181.448
+RM,5,6,メイクアップ！,Meikuappu!,Make Up!,194.404
+RM,6,7,燃える美少女戦士,Moeru Bishoujo Senshi,Pretty Guardians Ablaze,153.052
+RM,7,8,タキシード仮面登場～衛とフィオレ,Takishiido Kamen Toujou ~ Mamoru to Fiore,Tuxedo Mask Appears ~ Mamoru and Fiore,142.891
+RM,8,9,セーラー・テレポート！,Seeraa Terepooto!,Sailor Teleport!,116.246
+RM,9,10,追想のフィオレ,Tsuisou no Fiore,Fiore Remembered,212.951
+RM,10,11,花迷宮の死闘,Hana Meikyuu no Shitou,Death Match in the Flower Labyrinth,135.132
+RM,11,12,激突！セーラームーンVSフィオレ,Gekitotsu! Seeraa Muun VS Fiore,Clash! Sailor Moon vs. Fiore,283.874
+RM,12,13,生命燃やして……,Inochi Moyashite......,Burning Life......,189.493
+RM,13,14,復活のセレナーデ,Fukkatsu no Serenaade,Resurrection Serenade,93.337
+RM,14,15,I am セーラームーン,I am Seeraa Muun,I am Sailor Moon,297.562
+SM,0,1,邪悪,Jaaku,Evil,131.136
+SM,1,2,ルナ,Runa,Luna,212.089
+SM,2,3,翔,Kakeru,Kakeru,212.377
+SM,3,4,うさぎ,Usagi,Usagi,166.95
+SM,4,5,胸騒ぎ,Munasawagi,Uneasy Feeling,221.154
+SM,5,6,スノーダンサー襲来,Sunoo Dansaa Shuurai,The Snow Dancers Attack,365.846
+SM,6,7,変身,Henshin,Transformation,112.615
+SM,7,8,戦闘,Sentou,Battle,201.353
+SM,8,9,愛と友情の力,Ai to Yuujou no Chikara,The Power of Love and Friendship,162.221
+SM,9,10,愛のメッセージ,Ai no Messeeji,Message of Love,211.279
+SM,10,11,Moonlight Destiny,Moonlight Destiny,Moonlight Destiny,357.461
+SM,11,12,セーラーチームのテーマ,Seeraa Chiimu no Teema,Sailor Team's Theme,233.98
+SS,0,1,オープニング「ムーンライト伝説」,"Oopuningu ""Muunraito Densetsu""",Opening: Moonlight Legend,174.29
+SS,1,2,サブタイトル,Sabutaitoru,Subtitle,12.279
+SS,2,3,夢で見た水晶の森,Yume de Mita Suishou no Mori,The Crystal Forest I Saw in a Dream,279.642
+SS,4,5,大人達の憂鬱,Otona-tachi no Yuuutsu,The Grown-Ups' Melancholy,253.284
+SS,5,6,怪人達のサーカス団,Kaijin-tachi no Saakasu-dan,The Monsters' Circus Troupe,314.986
+SS,6,7,アマゾンBAR,Amazon BAR,Amazon Bar,212.272
+SS,7,8,ちびうさのロマンス,Chibiusa no Romansu,Chibi-Usa's Romance,186.777
+SS,8,9,アイキャッチ,Aikyatchi,Eyecatch,14.76
+SS,9,10,アマゾントリオの罠,Amazon Torio no Wana,Amazon Trio's Trap,291.763
+SS,10,11,美しい夢の鏡,Utsukushii Yume no Kagami,The Beautiful Dream Mirror,277.578
+SS,12,13,ダブル変身！ムーン＆ちびムーン,Daburu Henshin! Muun & Chibi Muun,Double Transformation! Moon & Chibi Moon,144.981
+SS,13,14,ムーンゴージャスメディテイション！,Muun Goojasu Meditishon!,Moon Gorgeous Meditation!,198.218
+SS,14,15,いつか、そんな“私たち”になりたい,"Itsuka, Sonna ""Watashi-tachi"" ni Naritai","Someday, I Want Us to Be Like That",228.677
+SS,15,16,それじゃあ、また来週ネ,"Sore jaa, Mata Raishuu ne","Well Then, See You Next Week",33.438
+SS,16,17,エンディング「“らしく”いきましょ」,"Endingu ""'Rashiku' Ikimasho""",Ending: Let's Be True to Ourselves,212.35
+SSM,0,1,ムーンライト伝説,Muunraito Densetsu,Moonlight Legend,175.074
+SSM,1,2,亜美ちゃんの朝,Ami-chan no Asa,Ami-chan's Morning,86.728
+SSM,2,3,可愛い企み,Kawaii Takurami,Cute Scheme,73.405
+SSM,3,4,恐怖、危機、マーキュリー登場,"Kyoufu, Kiki, Maakyurii Toujou","Terror, Crisis, Mercury Appears",285.964
+SSM,4,5,終曲,Shuukyoku,Finale,88.556
+SSM,5,6,“らしく”いきましょ,"""Rashiku"" Ikimasho",Let's Be True to Ourselves,214.545
+SSM,6,7,ふれあい～ペルルのテーマ～,Fureai ~Peruru no Teema~,Connection ~Perle's Theme~,111.257
+SSM,7,8,ププランの笛と子供達,Pupuran no Fue to Kodomo-tachi,Poupelin's Flute and the Children,145.738
+SSM,8,9,ボンボンベイビーの攻撃!!,Bonbon Beibii no Kougeki!!,The Bonbon Babies Attack!!,56.295
+SSM,9,10,変身と技,Henshin to Waza,Transformations and Attacks,170.137
+SSM,10,11,城,Shiro,The Castle,73.98
+SSM,11,12,バディヤーヌとブラック・ドリーム・ホール,Badiyaanu to Burakku Doriimu Hooru,Badiane and the Black Dream Hole,168.491
+SSM,12,13,命をかけて,Inochi wo Kakete,Risking Our Lives,140.279
+SSM,13,14,愛の光,Ai no Hikari,Love's Light,225.96
+SSM,14,15,家に帰ろう,Uchi ni Kaerou,Let's Go Home,111.753
+SSM,15,16,Morning Moonで会いましょう,Morning Moon de Aimashou,Let's Meet at Morning Moon,269.297
+ST1,1,2,セーラースターソング,Seeraa Sutaa Songu,Sailor Star Song,232.177
+ST1,2,3,サブタイトル,Sabutaitoru,Subtitle,10.502
+ST1,3,4,5人は高校生,5-nin wa Koukousei,The Five Are High School Students,319.348
+ST1,4,5,ネヘレニア復活,Neherenia Fukkatsu,Nehelenia's Resurrection,260.546
+ST1,5,6,ほたるの予言,Hotaru no Yogen,Hotaru's Prophecy,101.931
+ST1,6,7,アイキャッチ,Aikyatchi,Eyecatch,12.697
+ST1,7,8,ミラーパレドリー,Miraa Paredorii,Mirror Paredri,298.241
+ST1,8,9,とらわれのセーラー戦士,Toraware no Seeraa Senshi,Captured Sailor Guardians,311.041
+ST1,9,10,プリンセスのために……,Purinsesu no Tame ni......,For the Princess......,224.602
+ST1,10,11,エターナルの愛,Etaanaru no Ai,Eternal Love,200.621
+ST1,11,12,スリーライツ,Surii Raitsu,Three Lights,232.465
+ST1,12,13,シャドウギャラクティカ,Shadou Gyarakutika,Shadow Galactica,237.95
+ST1,13,14,ムーンエターナルメイクアップ！,Muun Etaanaru Meikuappu!,Moon Eternal Make Up!,116.742
+ST1,14,15,セーラースターライツ出現,Seeraa Sutaa Raitsu Shutsugen,The Sailor Star Lights Appear,67.841
+ST1,15,16,風も空もきっと…,Kaze mo Sora mo Kitto...,Surely the Wind and the Sky...,284.527
+ST1,16,17,月の光は愛のメッセージ,Tsuki no Hikari wa Ai no Messeeji,Moonlight Is a Message of Love,30.878
+ST2,0,1,衛との別れ、そして……,"Mamoru to no Wakare, Soshite......","Parting with Mamoru, and Then......",248.896
+ST2,1,2,ボクたちの歌をきいて,Boku-tachi no Uta wo Kiite,Listen to Our Song,232.047
+ST2,2,3,あの方はどこに……,Ano Kata wa Doko ni......,Where Is That Person......,215.015
+ST2,3,4,星野、大気、夜天,"Seiya, Taiki, Yaten","Seiya, Taiki, Yaten",231.55
+ST2,5,6,学園のアイドル,Gakuen no Aidoru,School Idol,71.446
+ST2,6,7,美奈子の野望♡,Minako no Yabou♡,Minako's Ambition♡,120.504
+ST2,7,8,銀河テレビでの策略,Ginga Terebi de no Sakuryaku,Scheme at Galaxy TV,140.67
+ST2,8,9,スターシードをいただくわ,Sutaa Shiido wo Itadaku wa,I'll Take the Star Seed,144.145
+ST2,9,10,襲い来るファージ,Osoikuru Faaji,The Phage Attacks,178.992
+ST2,10,11,スターパワーメイクアップ！,Sutaa Pawaa Meikuappu!,Star Power Make Up!,117.97
+ST2,11,12,華麗なるエターナルセーラームーン,Kareinaru Etaanaru Seeraa Muun,Magnificent Eternal Sailor Moon,173.977
+ST2,12,13,究極の悪,Kyuukyoku no Aku,Ultimate Evil,74.032
+ST2,13,14,決意,Ketsui,Resolve,77.532
+ST2,14,15,究極の愛,Kyuukyoku no Ai,Ultimate Love,144.981
+ST2,15,16,平和,Heiwa,Peace,125.415
+ST2,16,17,今日からまたフツーの高校生,Kyou kara Mata Futsuu no Koukousei,Ordinary High School Students Again from Today,76.801
+ST2,20,21,予告編音楽～15秒ヴァージョン～,Yokokuhen Ongaku ~15-byou Vaajon~,Preview Music ~15-Second Version~,17.111
+EX,0,1,ムーンライト伝説（TVサイズ）,Muunraito Densetsu (TV Saizu),Moonlight Legend (TV Size),85.448
+EX,1,2,アイキャッチ（コーラスなしヴァージョン）,Aikyatchi (Koorasu Nashi Vaajon),Eyecatch (Version without Chorus),14.159
+EX,2,3,変身,Henshin,Transformation,43.756
+EX,3,4,感動と決意,Kandou to Ketsui,Emotion and Resolve,113.817
+EX,4,5,絶望と悪,Zetsubou to Aku,Despair and Evil,236.853
+EX,5,6,休息,Kyuusoku,Rest,62.852
+EX,6,7,ファンファーレ その他,Fanfaare Sono Ta,Fanfares and More,88.112
+EX,7,8,アイキャッチ,Aikyatchi,Eyecatch,29.049
+EX,9,10,変身と必殺技,Henshin to Hissatsuwaza,Transformations and Special Attacks,125.755
+EX,11,12,強い敵,Tsuyoi Teki,A Strong Enemy,112.354
+EX,12,13,オープニング・アレンジ～感動的そして不安な～,Oopuningu Arenji ~Kandouteki Soshite Fuan na~,"Opening Arrangement ~Moving, Then Uneasy~",173.428
+EX,13,14,エンディング・アレンジ～ノスタルジックそしてロマンティックに～,Endingu Arenji ~Nosutarujikku Soshite Romantikku ni~,"Ending Arrangement ~Nostalgic, Then Romantic~",241.738
+EX,14,15,必殺技・戦士の宿命・敵の野望,"Hissatsuwaza, Senshi no Shukumei, Teki no Yabou",Special Attacks · The Guardians' Fate · The Enemy's Ambition,247.328
+EX,17,18,みちるとはるか,Michiru to Haruka,Michiru and Haruka,139.025
+EX,18,19,ブリッジと悲しみ,Burijji to Kanashimi,Bridges and Sorrow,139.835
+EX,19,20,予告,Yokoku,Preview,31.4
+EX,20,21,エンディング・アレンジ,Endingu Arenji,Ending Arrangement,116.977
+EX,23,24,戦闘的BGM,Sentouteki BGM,Battle BGM,109.95
+EX,24,25,ピンチ… そして、決意,"Pinchi... Soshite, Ketsui","In a Pinch... and Then, Resolve",79.048
+EX,25,26,タキシード・ミラージュ（TVサイズ）,Takishiido Miraaju (TV Saizu),Tuxedo Mirage (TV Size),93.415
