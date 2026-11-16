@@ -40,22 +40,22 @@ if (!D) {
 }
 const UI = {
   // the site's own labels are English only; the booklet's and the CDs' text keeps its Japanese (and romaji)
-  mast: 'Sailor Moon BGM Lists & Cue Sheets', back: 'Back', notes: 'Notes', close: 'Close',
+  mast: 'Sailor Moon BGM Lists & Cue Sheets, Annotated', back: 'Back', notes: 'Notes', close: 'Close',
   openAll: 'Expand all', closeAll: 'Collapse all',
   part: p => p==='TOP' ? ['TOPパート','TOP paato','Top part'] : [p+'パート',p+' paato',p+' part'],
   // the book's columns: h = header as [Japanese (as printed), romaji, English], c = the column's class
   epHead: [{h: ['M','M','M'], c: 'num'}, {h: ['曲の内容','Kyoku no naiyou','Scene / music']}, {h: ['クレジット','Kurejitto','Cue'], c: 'code'}, {h: ['秒','Byou','Sec.'], c: 'tm'}],
   bgmHead: [{h: ['M-NO.','M-NO.','M-NO.'], c: 'code'}, {h: ['TIME','TIME','Time'], c: 'tm'}, {h: ['内容','Naiyou','Description']}, {h: ['収録CD','Shuuroku CD','Source CD'], c: 'num'}],
   qHead: [{h: ['NO.','NO.','No.'], c: 'num'}, {h: ['M-NO.','M-NO.','M-NO.'], c: 'code'}, {h: ['TIME','TIME','Time'], c: 'tm'}, {h: ['内容','Naiyou','Description']}, {h: ['収録CD','Shuuroku CD','Source CD'], c: 'num'}],
-  albums: 'Albums', albumsMast: 'Sailor Moon Albums',
+  albums: 'Albums', albumsMast: 'Sailor Moon Albums, Annotated', cuesNav: 'BGM Lists & Cue Sheets',   // cuesNav: the albums page's link back
 };
 /* the editor's columns, after the book's own: not in the booklet */
 const ED_HEAD = {
   cd: {en: 'CD / Track', c: 'ed'},
-  used: {en: 'Used in', c: 'ed'},
+  used: {en: 'Uses', c: 'ed'},
   notes: {en: 'Notes', c: 'ed'},
 };
-/* the films: short name in English (for "Used in" lists), the season they sit under, their panel title, the key that finds their
+/* the films: short name in English (for Uses lists), the season they sit under, their panel title, the key that finds their
    table in the p.117 instrumentals list, and m: the table heads its first column "M" instead of "NO." */
 const FILMS = {
   'MOVIE-R':      {short: 'R movie', season: 'R', title: ['劇場版', 'Movie']},
@@ -124,21 +124,19 @@ function tm(t, f, k){
 label('mastTitle', VIEW === 'albums' ? UI.albumsMast : UI.mast);
 /* the bar's link to the other page */
 { const nav = document.getElementById('navLink');
-  if (nav) { nav.innerHTML = en(esc(VIEW === 'albums' ? UI.mast : UI.albums)); nav.href = VIEW === 'albums' ? HOME : ALBUMS_PAGE; } }
+  if (nav) { nav.innerHTML = en(esc(VIEW === 'albums' ? UI.cuesNav : UI.albums)); nav.href = VIEW === 'albums' ? HOME : ALBUMS_PAGE; } }
 /* the intro line under the title; the notes are in the Editor's Notes panel under Notes */
-const INTRO = 'Transcribed from the Sailor Moon Memorial Music Box booklet';
 const ED_NOTES = [
   'The Memorial Music Box booklet contents are transcribed as printed.',
-  'Columns that are not in the booklet have been added in some places (shaded green, under an “Added by this site” heading):<ul class="ed-sub"><li>Notes, with corrections and their sources</li><li>CD / Track, showing which disc and track each BGM-list piece is on, with any corrections applied (the cover links to the album and the track number to the track, on the Albums page)</li><li>Used in, listing every episode that uses a piece</li></ul>',
+  'Columns that are not in the booklet have been added in some places (shaded green, under an “Added by this site” heading):<ul class="ed-sub"><li>Notes, with corrections and their sources</li><li>CD / Track, showing which disc and track each BGM-list piece is on, with any corrections applied (the cover links to the album and the track number to the track, on the Albums page)</li><li>Uses, listing every episode and film that uses a piece</li></ul>',
   'Japanese episode titles are as printed in the booklet. A few differ from the official titles on <a href="https://lineup.toei-anim.co.jp/ja/tv/sailor_moon/episode/" target="_blank" rel="noopener">Toei Animation\'s site</a>, perhaps because they changed during production. These also differ from the episode list on Japanese Wikipedia:<ul class="ed-sub"><li>Episode 18: 進悟純情 (official: 進悟の純情), "Shingo\'s pure heart": the booklet leaves out the particle の, with the same meaning</li><li>Episode 20: 幽霊もよ！ (official: 幽霊もよ), "…and ghosts too": the booklet adds an exclamation mark at the end</li><li>Episode 29: 大混戦, "a big free-for-all" (official: 大混線, "a big tangle of crossed lines", a pun on the love quadrangle getting its wires crossed); both are read daikonsen</li><li>Episode 33: 最後のセーラー戦士　ヴィーナス登場 (official: 最後のセーラー戦士、ヴィーナス登場), "The last Sailor Guardian, Venus appears": a space where the official title has a comma</li><li>Episode 102: 絶対絶命 (official: 絶体絶命), "in a desperate situation": both are read zettai zetsumei, but 絶体絶命 is the correct spelling and 絶対絶命 a common misspelling</li><li>Episode 163: 捕らえられた (official: 捕えられた), "captured": two accepted spellings of the same word</li><li>Episode 179: 敵？味方！, "Enemy? Ally!" (official: 敵？味方？, "Enemy? Ally?"): the booklet answers the question the official title leaves open</li><li>Episode 194: 銀河の聖戦！ (official: 銀河の聖戦), "The holy war of the galaxy": the booklet adds an exclamation mark</li></ul>',
   'English episode titles are Viz Media\'s official translations, as listed on <a href="https://www.hulu.com/series/sailor-moon-4e1c9108-f973-48fb-8824-a69280ca0438" target="_blank" rel="noopener">Hulu</a>.',
   '半 in the original means "and a half": 28"半 is 28.5 seconds. When the 日本語 button is off, times are shown as decimals.',
   'Many thanks to <a href="https://sailormusic.net/guide-to-sailor-moon-music-cues/" target="_blank" rel="noopener">sailormusic.net</a> for providing the scans of the booklet! The site also has information about the library tracks (ライブラリー) credited in the cue sheets.',
-  'The disc covers, and many of the romaji and English track titles, are based on <a href="https://sailormusic.net/anime/memorial-music-box/" target="_blank" rel="noopener">sailormusic.net</a> and <a href="https://vgmdb.net/album/26875" target="_blank" rel="noopener">VGMdb</a>, edited to match this site\'s style. The box set\'s Japanese track titles come from the tray-card scans on VGMdb, and the other albums\' track titles and covers from VGMdb. Thank you to both!'];
-const ALBUMS_INTRO = 'The albums the BGM lists cite as source CDs, with the pieces on each track: their M-NO., where they play in the track, and the episodes they\'re used in. Not from the booklet: compiled by this site.';
-const ALBUMS_TIMES = 'Segment is where each piece runs within its track (its length in brackets), and Duration is the length of the whole track, both measured from the CD audio at the silent gaps between pieces. The original length printed in the BGM list (TIME) is on the piece\'s BGM-list row, linked from its M-NO.';
-document.getElementById('lede').innerHTML = `<p>${en(VIEW === 'albums' ? ALBUMS_INTRO : INTRO)}</p>`
-  + (VIEW === 'albums' ? `<p class="note">${en(ALBUMS_TIMES)}</p>` : '');
+  'Many of the romaji and English track titles are based on <a href="https://sailormusic.net/anime/memorial-music-box/" target="_blank" rel="noopener">sailormusic.net</a> and <a href="https://vgmdb.net/album/26875" target="_blank" rel="noopener">VGMdb</a>, edited to match this site\'s style. The box set\'s Japanese track titles come from the tray-card scans on VGMdb, and every album\'s cover and the other albums\' track titles from VGMdb. Thank you to both!'];
+const ALBUMS_ART = 'Album art from the scans on <a href="https://vgmdb.net/" target="_blank" rel="noopener">VGMdb</a>, with thanks!';
+// the main page has no line under its title; the albums page thanks VGMdb
+{ const lede = document.getElementById('lede'); if (lede && VIEW === 'albums') lede.innerHTML = `<p>${en(ALBUMS_ART)}</p>`; }   // the same as albums.html has, so nothing shifts
 const noteList = items => `<ul class="ednotes">${items.map(h => `<li>${en(h)}</li>`).join('')}</ul>`;
 /* production terms the cue sheets and lists use throughout: [term as printed, explanation ja (not shown), term en, explanation en].
    Shown in English, with the booklet's term beside each. */
@@ -184,7 +182,7 @@ const COLS = {
   tv: ['w-m', 'w-scene', 'w-credit', 'w-time', 'ed w-notes'],
   list: ['w-mno', 'w-time', 'w-desc', 'w-cd', 'ed w-cdtrk', 'ed w-used', 'ed w-notes'],
   film: ['w-no', 'w-mno', 'w-time', 'w-desc', 'w-cd', 'ed w-cdtrk', 'ed w-used', 'ed w-notes'],
-  album: ['w-no', 'w-ttl', 'w-time', 'w-pseg', 'w-mno', 'w-adesc', 'ed w-aused'],   // Used in takes the rest
+  album: ['w-no', 'w-ttl', 'w-time', 'w-pseg', 'w-auses', 'w-aref', 'w-also'],   // Same as takes the rest
 };
 const colgroup = kind => '<colgroup>' + COLS[kind].map(c => `<col class="${c}">`).join('') + '</colgroup>';
 /* a title row spans every column */
@@ -194,11 +192,21 @@ const tableTag = kind => `<table class="bk" data-kind="${kind}">${colgroup(kind)
    which this site added (those are also shaded green, styles.css) */
 function headRow(h, group = true){
   const edN = h.filter(col => /\bed\b/.test(col.c || '')).length;
+  const label = t => `<span class="grp-label">${en(t)}</span>`;
   const grp = group && edN
-    ? `<tr class="grp"><th colspan="${h.length - edN}">${en('From the booklet')}</th>`
-      + `<th colspan="${edN}" class="ed">${en('Added by this site')}</th></tr>` : '';
+    ? `<tr class="grp"><th colspan="${h.length - edN}">${label('Transcribed from the Memorial Music Box Booklet')}</th>`
+      + `<th colspan="${edN}" class="ed">${label('Added by this site')}</th></tr>` : '';
   // a column the booklet prints has its heading in each language; one this site added (col.en) is English only
-  return grp + '<tr>' + h.map(col => `<th class="${col.c || ''}">${col.en ? `<span class="cv en1">${esc(col.en)}</span>` : stack(col.h)}</th>`).join('') + '</tr>';
+  // col.t: a ? icon after the heading that shows a box explaining the column (on hover, or on focus from the keyboard)
+  // t: a string, or lines: a string, or [key, text] for a key line (its key in bold), each on a line of its own
+  const lines = t => [].concat(t).map(l => Array.isArray(l) ? `<span class="tip-line"><b>${esc(l[0])}</b> ${esc(l[1])}</span>` : `<span class="tip-line">${esc(l)}</span>`).join('');
+  const plain = t => [].concat(t).map(l => [].concat(l).join(' ')).join('. ');
+  // col.k: a second icon (a key) with its own tip, for a key to the symbols used in the column
+  const KEY_I = '<svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="5.5" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 8h6M12.5 8v2.6M14.5 8v1.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+  const tip = (t, key) => `<span class="tip${key ? ' tip-key' : ''}" tabindex="0" aria-label="${esc(plain(t))}"><span class="tip-i" aria-hidden="true">${key ? '&#8203;' + KEY_I : '?'}</span>`
+    + `<span class="tip-box" role="tooltip">${lines(t)}</span></span>`;
+  // col.sub: a small note under the heading (a cue sheet's Notes: "Added by this site")
+  return grp + '<tr>' + h.map(col => `<th class="${col.c || ''}">${col.en ? `<span class="cv en1">${esc(col.en)}</span>` : stack(col.h)}${col.sub ? label(col.sub) : ''}${col.t ? tip(col.t) : ''}${col.k ? tip(col.k, true) : ''}</th>`).join('') + '</tr>';
 }
 /* stack() line formatter for headings: a misprint (f) corrected in place in the Japanese line, an editor's note
    (n = {t, u}) after the English one. Table rows put theirs in the Notes column instead (rowNotes below). */
@@ -297,24 +305,10 @@ const USES = {};
     const list = USES[t] || (USES[t] = []);
     let e = list[list.length - 1];
     if (!e || e.w !== w) list.push(e = {w, rows: []});
-    e.rows.push({id: ROW_ID.get(r), part: w.type === 'movie' ? null : p.k[0], m: r.m});
+    e.rows.push({id: ROW_ID.get(r), part: w.type === 'movie' ? null : p.k[0], m: r.m, d: r.d});   // d: the row's description, for the albums page
   }))));
-const USED_SHOWN = 12;   // episodes listed before the rest fold into "+N more"
-function usedCell(id, self){
-  const list = [...(self ? [self] : []), ...(USES[id] || [])]; if (!list.length) return '<td class="ed"></td>';
-  const n = list.reduce((a, e) => a + e.rows.length, 0);
-  const link = e => {
-    const [first] = e.rows, film = e.w.type === 'movie';
-    const name = film ? en(esc(FILMS[e.w.id].short)) : esc(e.w.n ?? 'SP');
-    const where = e.rows.map(x => (x.part ? x.part + ' part, ' : '') + 'M ' + x.m).join('; ');
-    const title = (film ? FILMS[e.w.id].short : e.w.n ? 'Episode ' + e.w.n : 'Special') + ': ' + where;
-    return `<a class="go" href="${HOME}#${esc(first.id)}" data-go="${esc(first.id)}" title="${esc(title)}">${name}</a>${e.rows.length > 1 ? `<span class="x">×${e.rows.length}</span>` : ''}`;
-  };
-  const shown = list.slice(0, USED_SHOWN).map(link).join(' · ');
-  const rest = list.slice(USED_SHOWN);
-  return `<td class="ed used"><span class="cnt">${en(`${n} ${n === 1 ? 'use' : 'uses'}`)}</span>${shown}`
-    + (rest.length ? ` <details class="more"><summary>+${rest.length}</summary>${rest.map(link).join(' · ')}</details>` : '') + '</td>';
-}
+/* a BGM list or film row's Uses cell: the same "N uses" button and list as the albums page's Uses column */
+const usedCell = (id, self) => usesCell(id, self, 'ed du');
 /* a BGM list or film row's CD / Track cell: the album its CD position points to (cover) and the track (place and title),
    from albums.js, with any CD correction applied. */
 const ALBUMS = window.MMB_ALBUMS || {};
@@ -329,17 +323,18 @@ function parseCd(cd){
 }
 /* a track's id on the albums page (al-7-22, al-歌-2-10) */
 const trackId = (code, key) => `al-${code}-${key}`;
-const cover = (src, h) => `<img class="cover" src="${esc(src)}" alt="" loading="lazy" width="46" height="${h}">`;
+/* an album's cover as a small square thumbnail, as on the albums page (its closed-state picture, th, when it has one) */
+const cover = al => `<img class="cover" src="${esc(al.th || al.img)}" alt="" loading="lazy" width="44" height="44">`;
 /* two codes on one piece (albums.js x): each one's letter, in the order they play (3-11-3: J-12B is a, F-5B is b) */
 function partLetter(code, key, c){
   const x = ALBUMS[code]?.x?.[key];
-  if (!x || !x[c]) return '';
+  if (!x || !x[c] || x[c][3] === 'layered') return '';   // layered codes both cover the whole piece: no letters
   const same = Object.entries(x).filter(([, v]) => v[0] === x[c][0]).sort((a, b) => a[1][1] - b[1][1]);
   return 'abcdefgh'[same.findIndex(([k]) => k === c)];
 }
 /* a CD position as one cell: the cover (a link to the album on the albums page, its full name in the tooltip) beside
    the place in the booklet's form, corrected (8-3-1, R-8-3, 歌-2-10; a link to the track), and the track's title;
-   c = the row's code, for a part of a shared piece (3-11-3-a) */
+   c = the row's code, for a part of a shared piece (3-11-3a) */
 function cdCells(cd, c){
   if (!cd) return '<td class="ed"></td>';
   const o = parseCd(cd), al = o && ALBUMS[o.code], at = al && al.t[o.key];
@@ -347,9 +342,9 @@ function cdCells(cd, c){
   if (al && (at || !al.p)) {
     const name = al.n.length === 2 ? `${al.n[0]} / ${al.n[1]}` : al.n.join(' / ');
     const letter = c && o.piece ? partLetter(o.code, o.key, c) : '';
-    const place = `${o.code}-${o.key}${o.piece ? '-' + o.piece : ''}${letter ? '-' + letter : ''}`;
+    const place = `${o.code}-${o.key}${o.piece ? '-' + o.piece : ''}${letter}`;
     // the cover, and beside it the place above the title
-    return `<td class="ed"><div class="trk"><a href="${ALBUMS_PAGE}#al-${esc(o.code)}" title="${esc(name)}">${cover(al.img, al.p ? 58 : 46)}</a>`
+    return `<td class="ed"><div class="trk"><a href="${ALBUMS_PAGE}#al-${esc(o.code)}" title="${esc(name)}">${cover(al)}</a>`
       // a piece the booklet names but the CD has no audio for (3-11-5, M-105B SE) isn't on the albums page: no link
       + `<div class="tname">${o.piece && al.s?.[o.key] && +o.piece > al.s[o.key].length ? `<span class="tno" translate="no">${esc(place)}</span>`
         : `<a class="go tno" translate="no" href="${ALBUMS_PAGE}#${trackId(o.code, o.key)}" title="Show on the albums page">${esc(place)}</a>`}`
@@ -408,7 +403,9 @@ function cueTable(w, noCap){
   w.parts.forEach(p => {
     html += '<tbody>';
     if (p.seg) html += `<tr><th ${nc} class="cap">${stack(p.seg)}</th></tr>`;
-    if (!film) html += `<tr><th ${nc}>${stack(UI.part(p.k[0]))}</th></tr>` + headRow([...UI.epHead, ED_HEAD.notes]);
+    // a TV cue sheet's part: its name, then the column heads; only Notes is this site's, so it says so itself
+    if (!film) html += `<tr class="part"><th ${nc}><span class="part-name">${stack(UI.part(p.k[0]))}</span></th></tr>`
+      + headRow([...UI.epHead, {...ED_HEAD.notes, sub: 'Added by this site'}], false);
     // credit cells that the book prints merged across several M rows
     const span = {};
     p.r.forEach(r => { if (r.sh) span[r.sh] = (span[r.sh] || 1) + 1; });
@@ -439,10 +436,22 @@ function details(cls, id, summaryHtml, bodyCls){
   return d;
 }
 /* a panel inside a section; its contents are rendered the first time it opens */
+/* every table line one pixel: a cell spanning rows down to the table's outline, or to a part row (which draws its own line
+   above), drops its own bottom line (the stylesheet does this for ordinary rows) */
+function fixSpanBorders(root){
+  root.querySelectorAll('table.bk').forEach(t => {
+    const rows = [...t.rows];
+    t.querySelectorAll('td[rowspan], th[rowspan]').forEach(c => {
+      const end = rows.indexOf(c.parentElement) + c.rowSpan - 1, next = rows[end + 1];
+      if (!next || next.classList.contains('part')) c.style.borderBottom = '0';
+    });
+  });
+}
 function subDetails(id, summaryHtml, meta, render){
-  const d = details('sub', id, summaryHtml + `<span class="meta">${meta}</span>`, 'inner');
+  // a count (127 tracks) sits under the title, as on the albums page
+  const d = details('sub', id, meta ? `<span class="sum-title">${summaryHtml}<span class="sum-meta">${meta}</span></span>` : summaryHtml, 'inner');
   // tables are built the first time a panel opens; build() also lets a jump build them right away
-  d.build = () => { if (!d.dataset.done) { d.querySelector('.inner').innerHTML = render(); d.dataset.done = 1; } };
+  d.build = () => { if (!d.dataset.done) { d.querySelector('.inner').innerHTML = render(); d.dataset.done = 1; fixSpanBorders(d); measureXcols(d); setTimeout(() => measureXcols(d), 300); } };   // again once fonts and covers have settled
   d.addEventListener('toggle', () => { if (d.open) d.build(); });
   return d;
 }
@@ -542,7 +551,9 @@ function epTitle(w){
 /* a season's TV cue sheets: headed with the book's heading (…音楽ロール（Qシート）表), opening to a clickable episode list */
 function tvPanel(sid){
   const eps = D.works.filter(w => (w.type === 'tv' || w.type === 'special') && w.s === sid);
-  return subDetails('tv-' + sid, tx(['TVシリーズ　音楽ロール（Qシート）表', 'TV shiriizu ongaku rooru (Q shiito) hyou', 'TV Cue Sheets']), '', () =>
+  const tvN = eps.filter(w => w.type === 'tv').length, spN = eps.length - tvN;
+  const count = `${tvN} ${tvN === 1 ? 'episode' : 'episodes'}` + (spN ? ` and ${spN} ${spN === 1 ? 'special' : 'specials'}` : '');
+  return subDetails('tv-' + sid, tx(['TVシリーズ　音楽ロール（Qシート）表', 'TV shiriizu ongaku rooru (Q shiito) hyou', 'TV Cue Sheets']), en(count), () =>
     '<div class="eplist">' + eps.map(w =>
       headings.filter(h => h.w === w.id).map(h => `<div class="ep-head">${tx(shortHead(headPart(h.x)))}</div>`).join('') +
       `<details class="epi" id="${w.n ? 'ep' + w.n : 'sp'}" data-w="${w.id}"><summary><span class="chev">▶</span>`
@@ -585,7 +596,7 @@ function tvPanel(sid){
 /* each film belongs with the season it came out alongside (FILMS) */
 D.bgm.forEach(b => { if (b.id !== 'MOVIE') b.cats.forEach(c => c.r.forEach(r => { ROW_PANEL[cueId(r.c)] = {section: 'sec-' + b.id, panel: 'bgm-' + b.id}; })); });
 D.works.forEach(w => { if (FILMS[w.id]) w.parts.forEach(p => p.r.forEach(r => { ROW_PANEL[filmRowId(w, r)] = {section: 'sec-' + FILMS[w.id].season, panel: 'film-' + w.id}; })); });
-/* TV cue-sheet rows (for "Used in" links and the Back button) and the episodes themselves (#ep98) */
+/* TV cue-sheet rows (for Uses links and the Back button) and the episodes themselves (#ep98) */
 D.works.forEach(w => { if (w.type !== 'movie') {
   const at = {section: 'sec-' + w.s, panel: 'tv-' + w.s, ep: w.n ? 'ep' + w.n : 'sp'};
   ROW_PANEL[at.ep] = at;
@@ -596,9 +607,17 @@ D.works.forEach(w => { if (w.type !== 'movie') {
    track 1, first piece): M-NO., time and description as printed, and where each is used. A film row that reuses a cue
    from another table (its credit links there) is left out; its use shows under that cue. */
 /* the albums tables are this site's, so their headings are English only */
-const ALBUM_HEAD = [{en: 'No.', c: 'num'}, {en: 'Track title'}, {en: 'Duration', c: 'tm'}, {en: 'Piece / Segment', c: 'seg'},
-  {en: 'M-NO.', c: 'code'}, {en: 'Description'}, ED_HEAD.used];
-const ALBUM_PANEL = {};   // album code -> section id
+const ALBUM_HEAD = [
+  {en: 'No.', c: 'num'},
+  {en: 'Track title'},
+  {en: 'Time', c: 'tm'},
+  {en: 'Piece', c: 'seg', t: 'Each piece on the track and where it plays: start–end, with its length in brackets. Measured from the CD audio at the silent gaps between pieces',
+    k: [['~', 'Approximate: a change in the music with no gap'], ['×', 'Crossfade: two codes on one piece, one fading into the other'],
+      ['+', 'Layered: one code plays within the other']]},
+  {en: 'Uses', t: 'Every episode and film that uses the piece, with that cue sheet\'s description. Click the button to show them'},
+  {en: 'BGM list reference', t: 'The piece\'s M-NO. in the BGM list (or the film\'s cue sheet) and its description there, from the booklet. The link icon goes to that entry, which also has the length printed in the booklet (TIME). Long text is cut off with …: click the cell to show the whole column'},
+  {en: 'Same as', c: 'also', t: 'The same recording on another album, found from the audio: the box set\'s place for an original-album piece, or the original albums\' pieces for a box-set piece'}];
+const ALBUM_PANEL = {};   // album code -> the panel it sits in (a box-set disc: the box set's), or '' at the top level
 function albumPieces(){
   const at = {};   // album code -> track key -> [{piece, r, id, w?}]
   const add = (cd, x) => { const o = parseCd(cd); if (!o) return;
@@ -616,30 +635,40 @@ const keyOrder = (a, b) => { const x = a.split('-').map(Number), y = b.split('-'
 const mss = x => { const t = Math.floor(x + 1e-6); return `${Math.floor(t / 60)}:${String(t % 60).padStart(2, '0')}`; };   // whole seconds dropped, as CD players and VGMdb show them
 const BREAK_NOTE = {silence: 'a silent gap', dip: 'a quiet moment', change: 'a change in the music, with no gap (approximate)'};
 /* a piece's segment of the track: start–end (length) */
-const segText = (start, end, a = '') => `${a}${mss(start)}–${a}${mss(end)} <span class="seglen">(${a}${mss(end - start)})</span>`;
-/* the Piece / Segment cell: the piece number (3, 3-a) and where it runs in the track */
+/* minutes padded to two digits so the right-aligned times line up; a mark in front: ~ an approximate break, × a crossfade,
+   + layered */
+const mss2 = x => mss(x).padStart(5, '0');
+const segText = (start, end, a = '') => `${a ? `<span class="mark">${a}</span>` : ''}${mss2(start)} – ${mss2(end)} <span class="seglen">(${mss2(end - start)})</span>`;
+/* the Piece cell: the piece number (3, 3a) and where it runs in the track */
 const pnoTag = t => `<span class="pno">${esc(t || '')}</span>`;
+/* the number at the left and the times at the right, on one baseline (the times are a smaller monospace) */
+const segRow = (t, times) => `<span class="segrow">${pnoTag(t)}<span class="segt">${times}</span></span>`;
 function segCell(sp, t, end){
   if (!sp) return `<td class="seg" translate="no">${pnoTag(t)}</td>`;
   const [start, dur, brk] = sp;
   const title = brk ? `Found from the audio: ${BREAK_NOTE[brk]}` : 'Found from the audio';
-  return `<td class="seg" translate="no" title="${esc(title)}">${pnoTag(t)}${segText(start, end ?? start + dur, brk === 'change' ? '~' : '')}</td>`;
+  return `<td class="seg" translate="no" title="${esc(title)}">${segRow(t, segText(start, end ?? start + dur, brk === 'change' ? '~' : ''))}</td>`;
 }
 /* one of two codes sharing a piece (albums.js x: [piece, start, end]): where it plays within it, approximate */
-const partSeg = ([, start, end], t) => `<td class="seg" translate="no" title="Approximate: found by ear; this part fades into the other">${pnoTag(t)}${segText(start, end, '~')}</td>`;
+/* × a crossfade (one fades into the other; times approximate), + layered (one plays within the other, so both cover the
+   whole piece); joined end to end at a dip in the audio: no mark, the time is exact */
+const MIX = {crossfade: ['×', 'Crossfade: this part fades into the other. Approximate, found by ear'],
+  layered: ['+', 'Layered: one code plays within the other here, so each covers the whole piece'],
+  joined: ['', 'Joined end to end: the next code starts at a near-silent dip, found from the audio']};
+const partSeg = ([, start, end, mix], t) => { const [mark, title] = MIX[mix] || MIX.crossfade;
+  return `<td class="seg" translate="no" title="${esc(title)}">${segRow(t, segText(start, end, mark))}</td>`; };
 /* a piece the tray card prints but the booklet never places at this track (albums.js e: [as printed, code]): its code
    (linked to its BGM-list row), what the card adds (編集 = an edit, ―4種 = four versions), and a note */
 const EXTRA_WORDS = [[/編集$/, ['編集', 'henshuu', 'edit']], [/―4種$/, ['4種', 'yonshu', '4 versions']]];
-function extraCells(ex){
-  if (!ex) return '<td class="code"></td><td></td><td class="ed"></td>';
+function extraCells(ex, also = ''){
+  if (!ex) return `<td></td><td></td><td class="also">${also}</td>`;
   const [printed, code] = ex;
-  const link = c => { const id = cueId(c); return ROW_PANEL[id] ? goLink(id, c, goTitle(id)) : esc(c); };
   const fmt = p => p.replace(/^([A-Z]+)(\d)/, '$1-$2');      // J10 -> J-10
   const word = EXTRA_WORDS.find(([re]) => re.test(printed));
-  const codes = code ? link(code) : printed.split('+').map(p => link(fmt(p))).join('+');   // two joined: C1a+C1b
+  const list = code ? [code] : printed.split('+').map(fmt);   // two joined: C1a+C1b (the icon goes to the first)
   const note = 'Not placed at this track in the BGM list (the tray card prints ' + printed + ')';
-  return `<td class="code">${codes}${word ? ` <span class="src">${tx(word[1], null, 'inl')}</span>` : ''}</td>`
-    + `<td class="was">${en(esc(note))}</td><td class="ed"></td>`;
+  return '<td></td>' + refCell(cueId(list[0]), `${esc(list.join('+'))}${word ? ` <span class="src">${tx(word[1], null, 'inl')}</span>` : ''}`, en(esc(note)), 'was')
+    + `<td class="also">${also}</td>`;
 }
 function albumTable(code, al, pieces){
   let html = `<div class="scroll">${tableTag('album')}<thead>${headRow(ALBUM_HEAD, false)}</thead>`;
@@ -666,79 +695,168 @@ function albumTable(code, al, pieces){
     if (!places.length && !list.length && twins['1']) list.push(...twinRows('1', ''));
     const partStart = x => al.x?.[key]?.[x.r?.c]?.[1] ?? 0;   // two codes on one piece: in the order they play
     list.sort((a, b) => (+a.piece || 0) - (+b.piece || 0) || partStart(a) - partStart(b));
-    const rows = list.length || 1, n = key;   // the song box: disc-track
+    const rows = list.length || 1, n = al.p === 'MMB' ? `${al.d}-${key}` : key;   // disc-track (the song box's keys already are)
     html += `<tbody id="${esc(trackId(code, key))}">`;
-    // Duration: the whole track, once, beside its title; Piece / Segment: each piece and its place in the track
+    // Time: the whole track's length, once, beside its title; Piece: each piece and its place in the track
     const len = al.l?.[key];
-    const head = `<td class="num" translate="no" rowspan="${rows}">${esc(n)}</td><td rowspan="${rows}">${al.t[key] ? stack(al.t[key]) : ''}</td>`
+    const head = `<td class="num" translate="no" rowspan="${rows}">${esc(n)}</td>` + xcolCell('title', al.t[key] ? stack(al.t[key]) : '', {max: '26em', cls: 'ttl', attrs: ` rowspan="${rows}"`})
       + `<td class="tm" translate="no" rowspan="${rows}"${len ? ' title="Measured from the audio"' : ''}>${len ? mss(len) : ''}</td>`;
     // the last piece ends where the track does (its stored duration is rounded to a tenth of a second)
     const segOf = (x, t) => segCell(places.length && x.piece && places[x.piece - 1], t, len && +x.piece === places.length ? len : undefined);
     const ex = al.e?.[key];
-    if (!list.length) html += `<tr>${head}${segOf({}, '')}${extraCells(ex?.['1'])}</tr>`;
+    // Same as: an original album's piece -> its box-set place; a box-set piece -> the original albums' pieces with that recording
+    const also = x => x.twin ? twinTag(x.twin)
+      : al.p === 'MMB' ? sameAsOriginals(places.length > 1 && x.piece ? `${code}-${key}-${x.piece}` : `${code}-${key}`) : '';
+    if (!list.length) html += `<tr>${head}${segOf({}, '')}${extraCells(ex?.['1'], also({}))}</tr>`;
     list.forEach((x, i) => {
-      if (x.blank && x.twin) { html += `<tr>${i ? '' : head}${segOf(x, x.piece)}<td class="code">${twinTag(x.twin)}</td><td></td><td class="ed"></td></tr>`; return; }
-      if (x.blank) { html += `<tr>${i ? '' : head}${segOf(x, x.piece)}${extraCells(ex?.[x.piece])}</tr>`; return; }
+      if (x.blank && x.twin) { html += `<tr>${i ? '' : head}${segOf(x, x.piece)}<td></td><td></td><td class="also">${also(x)}</td></tr>`; return; }
+      if (x.blank) { html += `<tr>${i ? '' : head}${segOf(x, x.piece)}${extraCells(ex?.[x.piece], also(x))}</tr>`; return; }
       const r = x.r, film = x.w && FILMS[x.w.id];
       const part = !film && al.x?.[key]?.[r.c];
-      const pt = (x.piece || '') + (part ? '-' + partLetter(code, key, r.c) : '');
+      const pt = (x.piece || '') + (part ? partLetter(code, key, r.c) : '');
       const placeHere = part ? partSeg(part, pt) : segOf(x, pt);
       const codeTxt = r.c && r.c !== '—' ? r.c : film ? 'M ' + r.m : '';
       // a code with a variant word (M-58 S・マーキュリー) shows it in each language, as in the BGM list
       const shown = !film && r.cn ? stack(r.cn) : esc(codeTxt);
-      const linked = x.id && ROW_PANEL[x.id]
-        ? `<a class="go" href="${HOME}#${esc(x.id)}" data-go="${esc(x.id)}" title="${esc(goTitle(x.id))}">${shown}</a>` : shown;
       const self = film ? {w: x.w, rows: [{id: x.id, part: null, m: r.m}]} : null;
       html += `<tr>${i ? '' : head}${placeHere}`
-        + `<td class="code">${linked}${film ? `<span class="src">${en(esc(film.short))}</span>` : ''}${x.twin ? twinTag(x.twin) : ''}</td>`
-        + `<td>${r.d ? stack(r.d) : ''}</td>${usedCell(x.id, self)}</tr>`;
+        + usesCell(x.id, self)
+        + refCell(x.id, `${shown}${film ? ` <span class="src">${en(esc(film.short))}</span>` : ''}`, r.d ? stack(r.d) : '')
+        + `<td class="also">${also(x)}</td></tr>`;
     });
     html += '</tbody>';
   });
   return html + '</table></div>';
 }
-/* an original album's piece found on the box set (albums.js q): where, linked to that track */
+/* a piece's uses: a button ("N uses") that shows or hides every use of the piece, each with that cue-sheet row's
+   description. self = a film row, which is its own use (its description is the one beside it, so it isn't repeated).
+   Used by the albums page's Uses column and the BGM lists' and film tables' Uses column. */
+function usesCell(id, self, cls = 'du'){
+  const uses = [...(self ? [{...self, self: true}] : []), ...(USES[id] || [])].flatMap(e => e.rows.map(x => ({w: e.w, self: e.self, ...x})));
+  const n = uses.length; if (!n) return `<td class="${cls}"></td>`;
+  const count = `${n} ${n === 1 ? 'use' : 'uses'}`;
+  const toggle = `<button type="button" class="du-toggle" aria-expanded="false" title="Show or hide the uses">${en(count)}<svg class="du-chev" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`;
+  const line = u => {
+    const film = u.w.type === 'movie';
+    const name = film ? FILMS[u.w.id].short : u.w.n ? 'Ep ' + u.w.n : 'SP';
+    const where = (u.part ? u.part + ' part, ' : '') + 'M ' + u.m;
+    const title = (film ? FILMS[u.w.id].short : u.w.n ? 'Episode ' + u.w.n : 'Special') + ': ' + where;
+    // as the BGM list references: a link icon, then the episode › its cue-sheet row's description
+    const desc = u.d && !u.self ? stack(u.d) : '';
+    return `<li class="du-use"><a class="go ref-go" href="${HOME}#${esc(u.id)}" data-go="${esc(u.id)}" title="${esc(title)}" aria-label="${esc(title)}">${REF_ICON}</a>`
+      + `<span class="du-text"><span class="du-ep">${en(esc(name))}</span>${desc ? REF_SEP + `<span class="du-desc">${desc}</span>` : ''}</span></li>`;
+  };
+  return `<td class="${cls}">${toggle}<ul class="du-uses" hidden>${uses.map(line).join('')}</ul></td>`;
+}
+/* the albums page's BGM list reference: an icon linking to the piece's BGM-list (or film-table) row, then its code (and
+   film) and its description, run together: M-58 Sailor Mars › … */
+const REF_ICON = '<svg class="ref-i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="currentColor"/><path d="M10.6 13.4l2.8-2.8M9.4 11.2l-1.5 1.5a2.6 2.6 0 0 0 3.7 3.7l1.5-1.5M14.6 12.8l1.5-1.5a2.6 2.6 0 0 0-3.7-3.7l-1.5 1.5" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/></svg>';   // a chain link in a circle
+const REF_SEP = '<span class="refsep" aria-hidden="true"> › </span>';
+/* ---------- expandable columns ----------
+   A column whose text never wraps: past the column's limit (max, any CSS length) a cell is cut off with …, and an icon at
+   its right edge marks it. Clicking (or Enter on) a cut-off cell shows that whole column of its table in full, one line per
+   language, and clicking again shortens it. A table can have several; each is named by col (unique within the table).
+   xcolCell(col, html, {max, cls, before, attrs}) writes a cell (before: anything ahead of the text, like a link icon);
+   measureXcols(root) marks which cells are cut off (call it after building cells or changing what fits). */
+const xcolCell = (col, html, {max = '30em', cls = '', before = '', attrs = ''} = {}) =>
+  `<td class="xcol${cls ? ' ' + cls : ''}" data-xcol="${esc(col)}" style="--xcol-max:${max}"${attrs}><div class="xcol-row">${before}<span class="xcol-text">${html}</span></div></td>`;
+function measureXcols(root = document){
+  root.querySelectorAll('td.xcol').forEach(td => {
+    // an expanded column keeps the mark on the cells that were cut off, so they can shorten it again
+    if (!td.classList.contains('open')) {
+      const t = td.querySelector('.xcol-text'), over = e => e.scrollWidth > e.clientWidth + 1;
+      // cut off only when the text has reached its limit (a glyph poking past its line, like a slanted !, doesn't count)
+      const atMax = t && t.clientWidth >= parseFloat(getComputedStyle(t).maxWidth) - 1;
+      td.classList.toggle('cut', !!atMax && (over(t) || [...t.querySelectorAll('.cv')].some(over)));   // or one language's line
+    }
+    const cut = td.classList.contains('cut'), open = td.classList.contains('open');
+    td.tabIndex = cut ? 0 : -1;
+    if (cut) { td.title = open ? 'Click to shorten this column' : 'Click to show this column in full'; td.setAttribute('aria-expanded', open); }
+    else { td.removeAttribute('title'); td.removeAttribute('aria-expanded'); }
+  });
+}
+function toggleXcol(td){
+  const table = td.closest('table'), open = !td.classList.contains('open');
+  table.querySelectorAll(`td.xcol[data-xcol="${CSS.escape(td.dataset.xcol)}"]`).forEach(c => c.classList.toggle('open', open));
+  measureXcols(table);
+}
+document.addEventListener('click', e => { const td = e.target.closest('td.xcol.cut'); if (td && !e.target.closest('a, button')) toggleXcol(td); });
+document.addEventListener('keydown', e => {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.matches?.('td.xcol.cut')) { e.preventDefault(); toggleXcol(e.target); }
+});
+{ let t; addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => measureXcols(), 150); }); }
+const refCell = (id, code, desc, cls = '') => {
+  const go = id && ROW_PANEL[id]
+    ? `<a class="go ref-go" href="${HOME}#${esc(id)}" data-go="${esc(id)}" title="${esc(goTitle(id))}" aria-label="${esc(goTitle(id))}">${REF_ICON}</a>`
+    : '<span class="ref-go"></span>';
+  return xcolCell('ref', (code ? `<span class="refcode">${code}</span>` : '') + (code && desc ? REF_SEP : '') + (desc ? `<span class="refdesc">${desc}</span>` : ''),
+    {max: '75ch', cls: 'ref' + (cls ? ' ' + cls : ''), before: go});
+};
+/* the Same as column on a box-set disc: the original albums' pieces that are the same recording as this box-set place
+   (albums.js q, read backwards), each linked to its track: SS-12-1, or S-8 for a single-piece track */
+let ORIGINALS;
+function sameAsOriginals(place){
+  if (!ORIGINALS) {
+    ORIGINALS = {};
+    Object.entries(ALBUMS).forEach(([a, al]) => Object.entries(al.q || {}).forEach(([t, ps]) => Object.entries(ps).forEach(([p, src]) =>
+      (ORIGINALS[src] ||= []).push({a, t, label: `${a}-${t}${(al.s?.[t]?.length || 0) > 1 ? '-' + p : ''}`}))));
+  }
+  return (ORIGINALS[place] || []).map(o => {
+    const name = ALBUMS[o.a].n[ALBUMS[o.a].n.length - 1];
+    return `<span class="same" title="${esc(`The same recording is on ${name} as ${o.label} (found from the audio)`)}">`
+      + `<a class="go" href="#${esc(trackId(o.a, o.t))}" translate="no">${esc(o.label)}</a></span>`;
+  }).join('');
+}
+/* the Same as column on an original album: its piece found on the box set (albums.js q), linked to that track */
 function twinTag(place){
   const o = parseCd(place), id = o && trackId(o.code, o.key);
   const label = `<span translate="no">BOX ${esc(place)}</span>`;
-  return `<span class="src" title="${esc(`The same recording is on the box set at ${place} (found from the audio)`)}">`
+  return `<span title=""${esc(`The same recording is on the box set at ${place} (found from the audio)`)}">`
     + (id ? `<a class="go" href="#${esc(id)}">${label}</a>` : label) + '</span>';
 }
-function albumHead(al, noName){
-  const links = [];
-  if (al.v) links.push(ext(`https://vgmdb.net/album/${al.v}`, 'VGMdb', ''));
-  if (al.card) links.push(ext(al.card, en('Tray card'), ''));
-  return `<div class="al-head">${al.img ? `<img src="${esc(al.img)}" alt="" loading="lazy" width="120">` : ''}<div>`
-    + (noName ? '' : `<div class="al-name">${stack(al.n.length === 2 ? [al.n[0], '', al.n[1]] : al.n)}</div>`)
-    + (links.length ? `<div class="al-links">${links.join(' · ')}</div>` : '') + '</div></div>';
-}
+/* an album's heading: cover, name and, while it is open, its links (VGMdb, tray card) under the name; the cover grows
+   while it is open (styles.css). A link inside a summary opens the link without toggling the panel. */
+/* an album's cover: when it has a separate closed-state picture (th), that shows while closed and the cover itself while open */
+const albumSummary = (al, title, count) => (al.th ? `<img class="al-th" src="${esc(al.th)}" alt=""><img class="al-full" src="${esc(al.img)}" alt="">`
+  : al.img ? `<img src="${esc(al.img)}" alt="">` : '') + `<span class="al-title">${title}${albumSub(al, count)}</span>`;
+/* under an album's title: its track (or disc) count, and once open, its VGMdb link */
+const albumSub = (al, count) => `<span class="al-sub">${en(count)}${al.v ? `<span class="al-links"> · ${ext(`https://vgmdb.net/album/${al.v}`, 'VGMdb', '')}</span>` : ''}</span>`;
 /* an album whose every track is listed and measured (the box-set discs, the S album): not just the cited tracks */
 const albumComplete = al => !!al.l && Object.keys(al.t).every(k => al.l[k]);
+/* every album at the top level, in order. A set (the box set, the song box) shows its cover and links at the top of its
+   panel and its discs nested inside it as albums of their own; the song box's discs are cut from its one track list */
 function renderAlbums(){
   const pieces = albumPieces();
-  const panel = (code, al, sec, title) => {
-    ALBUM_PANEL[code] = sec;
+  const panel = (id, al, parent, title, code = id, pc = pieces[code]) => {
+    ALBUM_PANEL[id] = parent;
     const n = Object.keys(al.t).length;
-    return subDetails('al-' + code, (al.img ? `<img src="${esc(al.img)}" alt="">` : '') + title, en(`${n} ${n === 1 ? 'track' : 'tracks'}`),
-      () => albumHead(al) + (al.p || albumComplete(al) ? '' : `<p class="note">${en('Only the tracks the booklet cites are listed.')}</p>`)
-        + albumTable(code, al, pieces[code]));
+    return subDetails('al-' + id, albumSummary(al, title, `${n} ${n === 1 ? 'track' : 'tracks'}`), '',
+      () => (al.p || al.dn || albumComplete(al) ? '' : `<p class="note">${en('Only the tracks the booklet cites are listed.')}</p>`)
+        + albumTable(code, al, pc));
   };
-  const box = ALBUMS.MMB;
-  const discs = Object.keys(ALBUMS).filter(k => ALBUMS[k].p === 'MMB').sort((a, b) => ALBUMS[a].d - ALBUMS[b].d);
-  if (box) {
-    const body = section('sec-MMB', tx(box.n));
-    body.insertAdjacentHTML('beforeend', albumHead(box, true));   // the section heading already names it
-    discs.forEach(k => body.appendChild(panel(k, ALBUMS[k], 'sec-MMB', tx([`ディスク${ALBUMS[k].d}　${ALBUMS[k].n[0]}`, `Disc ${ALBUMS[k].d}: ${ALBUMS[k].n[1]}`]))));
-  }
-  const others = Object.keys(ALBUMS).filter(k => k !== 'MMB' && !ALBUMS[k].p);
-  const body = section('sec-other', en('Other Albums'));
-  others.forEach(k => body.appendChild(panel(k, ALBUMS[k], 'sec-other', tx(ALBUMS[k].n))));
+  const set = (code, al, discs) => {
+    ALBUM_PANEL[code] = '';
+    const d = app.appendChild(details('sub', 'al-' + code, albumSummary(al, tx(al.n), `${discs.length} discs`), 'inner discs'));
+    d.build = () => {};   // its discs are already in place; each builds its own table when opened
+    const body = d.querySelector('.inner');
+    discs.forEach(([id, dal, title, dcode, dpc]) => body.appendChild(panel(id, dal, 'al-' + code, title, dcode, dpc)));
+  };
+  const discTitle = (n, name) => tx([`ディスク${n}　${name[0]}`, `Disc ${n}: ${name[1]}`]);
+  const ofDisc = (o, n) => o && Object.fromEntries(Object.entries(o).filter(([key]) => key.split('-')[0] === n));
+  Object.keys(ALBUMS).filter(k => !ALBUMS[k].p).forEach(k => {
+    const al = ALBUMS[k];
+    if (k === 'MMB') set(k, al, Object.keys(ALBUMS).filter(c => ALBUMS[c].p === 'MMB').sort((a, b) => ALBUMS[a].d - ALBUMS[b].d)
+      .map(c => [c, ALBUMS[c], discTitle(ALBUMS[c].d, ALBUMS[c].n)]));
+    else if (al.dn) set(k, al, Object.entries(al.dn).map(([n, name]) =>
+      [`${k}-${n}`, {t: ofDisc(al.t, n), l: ofDisc(al.l, n), img: name[2], dn: al.dn}, discTitle(n, name), k, ofDisc(pieces[k], n)]));
+    else app.appendChild(panel(k, al, '', tx(al.n)));
+  });
 }
-/* an albums-page link (#al-7, #al-7-22) opens its section and panel and scrolls to it */
+/* an albums-page link (#al-7, #al-7-22) opens its album (and the box set, for a disc) and scrolls to it */
 function revealAlbum(id){
   const code = Object.keys(ALBUM_PANEL).filter(c => id === 'al-' + c || id.startsWith('al-' + c + '-')).sort((a, b) => b.length - a.length)[0];
   if (!code) return false;
-  openPanel(ALBUM_PANEL[code], 'al-' + code);
+  [ALBUM_PANEL[code], 'al-' + code].filter(Boolean).forEach(pid => { const p = document.getElementById(pid); p.open = true; p.build(); });
   const el = document.getElementById(id); if (!el) return false;
   goTo(el, id === 'al-' + code ? 'start' : 'center', id === 'al-' + code ? 0 : 1800);
   return true;
@@ -758,6 +876,7 @@ function buildEpisode(d){
   if (d.dataset.done) return;
   const w = D.works.find(x => x.id === d.dataset.w);
   d.querySelector('.epbody').innerHTML = cueTable(w, true) + noteBlock(plainNotes.filter(n => n.w === w.id)) + pageTag(w.pp[0], w.pp[1]);
+  fixSpanBorders(d);
   d.dataset.done = 1;
 }
 document.addEventListener('toggle', e => { const d = e.target; if (d.classList && d.classList.contains('epi') && d.open) buildEpisode(d); }, true);
@@ -778,7 +897,7 @@ function setLangs(on){
 langBox.addEventListener('change', e => {
   const on = langInputs.filter(i => i.checked).map(i => i.dataset.l);
   if (!on.length) { e.target.checked = true; return; }  // keep at least one language
-  setLangs(on);
+  setLangs(on); measureXcols();   // what fits changes with the languages shown
   try { localStorage.setItem('mmb-lang-choice', on.join(',')); } catch (e) {}
 });
 let saved = null; try { saved = localStorage.getItem('mmb-lang-choice'); } catch (e) {}
@@ -786,7 +905,7 @@ const savedLangs = (saved || '').split(',').filter(l => ['ja', 'ro', 'en'].inclu
 setLangs(savedLangs.length ? savedLangs : ['en']);
 
 /* a "← Back" button floats at the bottom of the screen after a jump: one within this page, or a link from the other page
-   (a Track link to the albums, a code or "Used in" link back to the BGM lists), which Back returns to */
+   (a Track link to the albums, a code or Uses link back to the BGM lists), which Back returns to */
 const backBtn = document.createElement('button');
 backBtn.className = 'btn back'; backBtn.type = 'button'; backBtn.hidden = true;
 backBtn.innerHTML = en('← ' + UI.back);
@@ -800,15 +919,78 @@ if (fromOther && !history.state?.depth) history.replaceState({...history.state, 
 if (tagged) { try { const u = new URL(location.href); u.searchParams.delete('from'); history.replaceState(history.state, '', u.href); } catch (e) {} }
 let depth = history.state?.depth || 0;   // jumps since arriving, so Back is only offered when it goes somewhere on the site
 const showBack = () => { backBtn.hidden = depth < 1; };
+/* a link to the other page: remember the row it was in (an album track, a BGM-list or cue-sheet row, or an episode), and
+   whether it was inside an open Uses list, so Back to this page returns to that row */
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href]'); if (!a || a.target === '_blank') return;
+  let u; try { u = new URL(a.href, location.href); } catch (err) { return; }
+  if (u.origin !== location.origin || pageOf(u.pathname) === pageOf(location.pathname)) return;
+  const inPop = a.closest('#uses-pop'), from = inPop && usesPop.owner || a;   // a link in the uses box: the row of its button
+  const row = from.closest('tbody[id^="al-"], tr[id], details.epi'), tr = from.closest('tr');
+  history.replaceState({...history.state, anchor: row?.id, row: row?.tBodies || !row?.rows ? -1 : [...row.rows].indexOf(tr),
+    uses: !!inPop, y: scrollY, depth}, '');
+}, true);
+// set when this page was left by such a link and is now being returned to; a refresh starts fresh instead
+const navType = performance.getEntriesByType?.('navigation')[0]?.type;
+// the browser's own scroll restore would land on an arbitrary row, since panels reopen closed: Back to a row is handled above
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+if (navType === 'reload' && history.state?.anchor) history.replaceState({...history.state, anchor: undefined, uses: false}, '');
+const backTo = navType === 'back_forward' ? history.state?.anchor : undefined;
+// Back to this page from the other one, restored from the browser's back-forward cache: the page is as it was left
+// (no reload, so nothing reopens it), so just flash the row the link was in, as a jump does
+addEventListener('pageshow', e => {
+  if (!e.persisted) return;
+  const el = history.state?.anchor && document.getElementById(history.state.anchor); if (!el) return;
+  el.classList.add('flash'); setTimeout(() => el.classList.remove('flash'), 1800);
+});
+/* a piece's uses (the Uses column on both pages): shown on demand */
+/* the top bar stays in view when the page scrolls sideways (an album table with a column shown in full can be wider than
+   the window) */
+{ const bar = document.getElementById('bar');
+  if (bar) addEventListener('scroll', () => { bar.style.transform = scrollX ? `translateX(${scrollX}px)` : ''; }, {passive: true}); }
+/* a piece's uses (the Uses column on both pages): its button opens the list in a box under it, which
+   closes on a second click, a click elsewhere or Escape */
+const usesPop = document.createElement('div');
+usesPop.id = 'uses-pop'; usesPop.className = 'uses-pop'; usesPop.hidden = true; usesPop.tabIndex = -1;
+usesPop.setAttribute('role', 'dialog');
+document.body.appendChild(usesPop);
+const closeUses = () => {
+  if (usesPop.hidden) return;
+  usesPop.hidden = true; usesPop.owner?.setAttribute('aria-expanded', 'false'); usesPop.owner = null;
+};
+const openUses = b => {
+  closeUses();
+  const list = b.closest('td').querySelector('.du-uses');
+  usesPop.innerHTML = `<ul>${list.innerHTML}</ul>`;
+  usesPop.setAttribute('aria-label', b.textContent.trim());
+  usesPop.owner = b; b.setAttribute('aria-expanded', 'true'); usesPop.hidden = false;
+  // under the button, its list lined up with the button's text; kept inside the window
+  const r = b.getBoundingClientRect(), w = usesPop.offsetWidth;
+  const left = Math.max(8, Math.min(r.left, document.documentElement.clientWidth - w - 8));
+  usesPop.style.left = left + scrollX + 'px'; usesPop.style.top = r.bottom + scrollY + 4 + 'px';
+};
+const toggleUses = b => (usesPop.owner === b ? closeUses() : openUses(b));
+addEventListener('keydown', e => { if (e.key === 'Escape' && !usesPop.hidden) { const b = usesPop.owner; closeUses(); b?.focus(); } });
+addEventListener('resize', closeUses);
+document.addEventListener('click', e => {
+  const b = e.target.closest('.du-toggle'); if (b) { toggleUses(b); return; }
+  if (!e.target.closest('#uses-pop')) closeUses();
+});
+/* back to the row a link left from: its uses list open again if the link was in it */
+const reopenUses = el => { const b = history.state?.uses && el?.querySelector('.du-toggle'); if (b) setTimeout(() => openUses(b), 800); };   // after the scroll to the row settles
 
 if (VIEW === 'albums') {
   // the box set opens by default; a link to a disc or track (#al-7-22) opens straight to it
-  document.getElementById('sec-MMB')?.setAttribute('open', '');
-  const id = decodeURIComponent(location.hash.slice(1)); if (id) revealAlbum(id);
+  document.getElementById('al-MMB')?.setAttribute('open', '');
+  // back from the other page: the track the link was in, with its uses list open again if the link was in it;
+  // otherwise a link to a disc or track (#al-7-22) opens straight to it
+  const st = history.state || {}, id = decodeURIComponent(location.hash.slice(1));
+  if (backTo && revealAlbum(backTo)) reopenUses(document.getElementById(backTo)?.rows[st.row]);
+  else if (id) revealAlbum(id);
   addEventListener('hashchange', () => revealAlbum(decodeURIComponent(location.hash.slice(1))));
   showBack();
 } else {
-/* ---------- links to a row elsewhere on the page (credit codes, "Used in", notes) ----------
+/* ---------- links to a row elsewhere on the page (credit codes, Uses, notes) ----------
    A jump opens the row's section, panel and episode, scrolls to it and flashes it. Each jump is a browser history
    entry (the address shows #row-id), so Back returns to the row the link was in, and any row can be linked to. */
 function reveal(id, flash = true){
@@ -820,6 +1002,8 @@ function reveal(id, flash = true){
   return true;
 }
 function jump(id, from){
+  if (from?.closest('#uses-pop')) from = usesPop.owner;   // a link in the uses box: it started from its button's row
+  closeUses();
   // remember where the jump started (the row the link is in, or failing that the scroll position)
   history.replaceState({...history.state, anchor: from?.closest('tr[id], details.epi')?.id, y: scrollY, depth}, '');
   depth++;
@@ -845,7 +1029,10 @@ document.addEventListener('click', e => {
 document.getElementById('sec-SM').open = true;
 /* a link to a row or episode (#r-TV-98-B-19, #cue-M-206, #ep98) opens straight to it */
 { const nid = decodeURIComponent(location.hash.slice(1)); if (nid && document.querySelector(`#notesDlg section[id="${nid}"], #notesDlg #${CSS.escape(nid)}`)) openNotes(nid); }
-{ const id = decodeURIComponent(location.hash.slice(1)); if (id && ROW_PANEL[id]) { history.replaceState({anchor: id, depth}, ''); reveal(id); } }
+// back from the albums page: the row the link was in; otherwise the row the address names
+{ const id = decodeURIComponent(location.hash.slice(1));
+  if (backTo && ROW_PANEL[backTo]) { reveal(backTo, true); reopenUses(document.getElementById(backTo)); }
+  else if (id && ROW_PANEL[id]) { history.replaceState({anchor: id, depth}, ''); reveal(id); } }
 showBack();
 }
 })();

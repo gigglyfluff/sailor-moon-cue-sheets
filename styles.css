@@ -7,17 +7,19 @@
   --accent:#c2185b; --accent-ink:#ffffff; --hover:#f6f2fa; --fixbg:#fbe3ec; --flash:#dcf3e6;  /* the jumped-to row: a light green, the complement of the pink accent */
   /* tables: a solid title band, soft column-head and part rows, alternating rows on a light grey grid */
   --band:#2f7fb0; --band-ink:#ffffff; --colhead:#d7e8f4; --part:#eef5fb;  /* blue from the Sailor Moon logo (#3a8abb), deepened slightly so white text reads clearly */
-  --row:#f9fafc; --stripe:#ecf0f4; --rowhover:#eaf4ff; --cellborder:#d3dae1; --guide:#e1e6eb; --tableborder:#bdbdbd;
+  --row:#f9fafc; --stripe:#ecf0f4; --rowhover:#eaf4ff; --cellborder:#d3dae1; --guide:#e1e6eb; --tableborder:#bdbdbd; --trackborder:#9ea6ae; --albumcell:#e3e8ed; --albumvline:#eef1f4;
   /* the columns this site added: soft sage greens in their head rows, matching the blues' steps (the data rows stripe as usual) */
   --edgrp:#d3eadb; --edhead:#ebf6ee; --edink:#2d6a43;
   --display:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
   --body:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,sans-serif;
+  --thumbline:color-mix(in srgb, var(--band) 60%, #fff);   /* album thumbnails' border: the tables' outer blue, lightened */
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;   /* the system's own monospace: no extra download */
   --s-1:.8125rem; --s0:.9375rem; --s1:1.125rem; --s2:1.5rem; --s3:2.1rem;
 }
 
 *{box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:var(--s0);line-height:1.55;
-  padding-inline:16px;padding-block:0 64px}
+  margin:0;padding-inline:16px;padding-block:0 64px}   /* no default margin: the top bar runs edge to edge */
 .wrap{max-width:1760px;margin-inline:auto;display:grid;gap:4px;padding-top:24px}
 /* grid children may shrink below their content, so a wide table scrolls inside its own box instead of widening the page */
 .wrap>*, .sec-body>*, .inner>*, .cats>*, .eplist>*, .epbody>*{min-width:0}
@@ -78,10 +80,16 @@ details.sub{border-radius:10px;background:var(--paper)}
 details.sub>summary, .ep-head{font-family:var(--display);font-weight:600;font-size:1rem;color:var(--head)}
 details.sub>summary{display:flex;gap:12px;align-items:center;padding:6px 14px 6px 4px}
 details.sub>summary img{height:44px;width:auto}
+details.sub>summary .sum-title{display:flex;flex-direction:column}
+details.sub>summary .sum-meta{margin-top:.15em;font-family:var(--body);font-size:var(--s-1);font-weight:400;color:var(--muted);font-variant-numeric:tabular-nums}   /* 127 tracks, under the title */
 details.sub>summary .meta{margin-left:auto;font-family:var(--body);font-size:var(--s-1);color:var(--muted);font-weight:400;
   font-variant-numeric:tabular-nums;white-space:nowrap}
 .inner{padding:4px clamp(12px,4vw,40px) 18px;display:grid;gap:18px}  /* room either side of the tables */
 details.sub>.inner{margin-left:10px;padding-left:10px}   /* the same gap as between guide lines */
+/* the box set's panel: its cover and links, then its discs, nested as album panels of their own */
+/* an album's contents: no guide line, and its table starts under the cover's left edge (summary padding 4px + chevron + 12px gap) */
+details.sub[id^="al-"]>.inner{border-left:0;margin-left:0;padding-left:29px;padding-right:12px}
+details.sub>.inner.discs{gap:2px;padding-right:0;padding-left:0;border-left:0;margin-left:25px}   /* no guide line; a disc's chevron lines up with the box art's left edge (the box chevron's width + the 12px gap) */
 @media (prefers-reduced-motion: reduce){details>summary .chev{transition:none}}
 
 /* BGM list layout */
@@ -97,6 +105,7 @@ details.sub>.inner{margin-left:10px;padding-left:10px}   /* the same gap as betw
 
 /* tables: a coloured header band, a soft column-head row, then alternating rows divided by thin white lines */
 .scroll{overflow-x:auto;max-width:100%}
+.scroll:has(>table.bk[data-kind=album]){overflow:visible;max-width:none}   /* an album table wider than the window (a column shown in full) widens the page, which scrolls, instead of scrolling itself */
 table.bk{border-collapse:separate;border-spacing:0;width:100%;font-size:var(--s-1);background:var(--row);
   border:1px solid var(--tableborder);border-radius:10px;overflow:hidden}
 table.bk th,table.bk td{padding:.5em .75em;vertical-align:top;text-align:left;border:0}  /* no dividers between header cells */
@@ -110,18 +119,29 @@ table.bk .cap .cv.cr, table.bk .cap .cv.ce{color:rgb(255 255 255 / .88);font-wei
 table.bk .cap .fixed s{color:rgb(255 255 255 / .75)}
 table.bk .cap a{color:var(--band-ink)}
 /* column-head rows */
-table.bk th:not(.cap){background:var(--part);font-weight:700;color:var(--band);border-top:1px solid var(--cellborder);border-bottom:1px solid var(--cellborder)}
-table.bk th:not(.cap) .cv.cr, table.bk th:not(.cap) .cv.ce{font-weight:500}
+table.bk th:not(.cap){background:var(--part);font-weight:700;color:var(--band);border-bottom:1px solid var(--cellborder)}
+/* a heading's romaji and English lines are lighter only under another language's line; alone, they're as bold as the rest */
+body.l-ja table.bk th:not(.cap) .cv:is(.cr, .ce), body.l-ro table.bk th:not(.cap) .cv.ce{font-weight:500}
 /* part rows inside a cue sheet (A part, B part…) */
-table.bk tbody th[colspan]:not(.cap){background:var(--colhead);color:var(--ink);border-top:1px solid var(--band);border-bottom:1px solid var(--band);letter-spacing:.03em}
+/* a cue sheet's part row (A part…): it divides the parts with a blue line above */
+table.bk tr.part > th{background:var(--colhead);color:var(--ink);padding:.35em .75em;border-top:1px solid var(--band);border-bottom:0}
+table.bk tr.part .part-name{letter-spacing:.03em}
+/* (a part's heading block then matches a BGM list's: the part row, the booklet / added row and the column heads, with one
+   line under the column heads; the line above the part row divides it from the part before) */
+/* every line one pixel: rows only draw the line below them, so a part row's line above replaces the line of the row before
+   it, and nothing draws a line against the table's own outline */
+table.bk tr:has(+ tr.part) > :is(td,th),
+table.bk tbody:has(+ tbody > tr.part:first-child) > tr:last-child > :is(td,th),
+table.bk thead:has(+ tbody > tr.part:first-child) > tr:last-child > :is(td,th){border-bottom:0}
+table.bk > :is(thead,tbody):first-of-type > tr:first-child > :is(td,th){border-top:0}
 table.bk .num,table.bk .tm{font-variant-numeric:tabular-nums;white-space:nowrap}
 /* column headings may wrap */
 table.bk th.num,table.bk th.tm{white-space:normal}
-table.bk .tm{text-align:right}
+table.bk .tm{text-align:right} table.bk[data-kind=album] th.tm{text-align:left}   /* the albums' headings all sit left */
 table.bk .code{word-break:keep-all;overflow-wrap:break-word}
-/* links to another row (credit codes, "Used in"): same colour as the text, a quiet pink underline */
-table.bk td:is(.code,.ed) a.go{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
-table.bk td:is(.code,.ed) a.go:hover{color:var(--accent)}
+/* links to another row (credit codes, Uses): same colour as the text, a quiet pink underline */
+table.bk td:is(.code,.ed,.ref) a.go{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+table.bk td:is(.code,.ed,.ref) a.go:hover{color:var(--accent)}
 /* the same column widths in every table of a kind; the booklet's columns are fixed and the editor's Notes column takes
    the rest, so a wider window gives the notes the room */
 table.bk{table-layout:fixed;min-width:64em} table.bk[data-kind=list]{min-width:108em} table.bk[data-kind=film]{min-width:112em}
@@ -139,26 +159,67 @@ table.bk tbody tr:hover td{background:var(--rowhover)}
 .fixed.ins{white-space:normal} .fixed.ins mark{margin-left:.2em}
 /* in the two-column CD key a long correction wraps inside its own column instead of running into the next */
 .cols2 .fixed{white-space:normal}
-tr.flash td, tbody.flash td{background:var(--flash)!important}
+tr.flash td, tbody.flash td, details.epi.flash>summary{background:var(--flash)!important}
 a.btn{text-decoration:none;display:inline-flex;align-items:center}
 
-/* the albums page: one tbody per track (its pieces share the number and title cells), so tracks, not rows, alternate */
-col.w-ttl{width:25.5em} col.w-pseg{width:12.6em} col.w-adesc{width:44em} table.bk[data-kind=album]{min-width:112.5em}   /* Used in: the rest */
-table.bk td.seg{white-space:nowrap;font-variant-numeric:tabular-nums} table.bk .seglen{color:var(--muted)}   /* 2  0:09–1:46 (1:36) */
-table.bk .pno{display:inline-block;min-width:2.4em}   /* the piece number, before its segment */
+/* the albums page: one tbody per track (its pieces share the number and title cells), each set off by a line above it */
+/* album tables: no text wraps; every column is as wide as its contents (long titles and references are cut off with …
+   until their button shows them in full), and the table as wide as its columns */
+table.bk[data-kind=album]{table-layout:auto;width:auto;min-width:0}
+table.bk[data-kind=album] col{width:auto}
+table.bk[data-kind=album] :is(td,th){white-space:nowrap}
+/* while a uses list is open, its table's Uses column widens (and Description gives way) */
+/* Uses: the count, a button that shows the piece's uses, each with its cue-sheet description */
+td.du .du-uses{display:none}   /* the list's source; it shows in the box below */
+/* a piece's uses, in a box under its button: the links line up with the button's text */
+.uses-pop{position:absolute;z-index:40;min-width:18em;max-width:min(34em, calc(100vw - 16px));max-height:min(60vh, 32em);overflow:auto;
+  padding:.45em .9em .45em .54em;background:var(--paper);border:1px solid var(--band);border-radius:6px;
+  box-shadow:0 6px 18px rgb(0 0 0 / .18);font-size:var(--s-1);line-height:1.45;outline:none}
+.uses-pop ul{list-style:none;margin:0;padding:0}
+.uses-pop .du-use{display:flex;gap:.45em;align-items:baseline;padding:.2em 0}
+.uses-pop .ref-go{flex:none;width:1.1em;color:var(--band);text-decoration:none}
+.uses-pop .ref-go:hover{color:var(--accent)}
+.uses-pop .ref-i{display:block;width:1.1em;height:1.1em;transform:translateY(.18em)}
+.uses-pop .du-ep{white-space:nowrap}
+.uses-pop .refsep{color:var(--muted)}
+td.du .du-toggle{display:inline-flex;align-items:center;gap:.35em;padding:.1em .55em .1em .6em;border:1px solid var(--cellborder);border-radius:999px;background:var(--paper);color:var(--ink);font:inherit;font-size:.9em;cursor:pointer;white-space:nowrap}
+td.du .du-toggle:hover{border-color:var(--accent);color:var(--accent)}
+td.du .du-chev{width:.75em;height:.45em;color:var(--accent);transition:transform .15s}
+td.du .du-toggle[aria-expanded=true] .du-chev{transform:rotate(180deg)}
+table.bk td.seg{white-space:nowrap}
+table.bk td.seg .segrow{display:flex;justify-content:space-between;align-items:baseline;gap:.4em}
+table.bk td.seg .segt{font-family:var(--mono);font-size:.76em;font-weight:300;letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--muted)}   /* 2  00:09 – 01:46 (01:36), all in the muted grey */
+table.bk .pno, table.bk td.seg .mark{color:color-mix(in srgb, var(--muted) 70%, #fff)}   /* the piece number and a segment's mark (~ × +): lighter than the times */
+table.bk .pno{display:inline-block;min-width:1.2em;font-size:.85em}   /* the piece number, before its segment: smaller and lighter than the times */
 table.bk[data-kind=album] tbody tr td{background:var(--row)}
-table.bk[data-kind=album] tbody:nth-of-type(even) td{background:var(--stripe)}
+/* no striping: the line under each track's last row (and under its number, title and duration cells) is darker */
+table.bk[data-kind=album] td{border-color:var(--albumcell);border-right-color:var(--albumvline)}   /* lighter lines inside a track; the column lines lighter still */
+table.bk[data-kind=album] tbody>tr:last-child>td, table.bk[data-kind=album] tbody>tr>td[rowspan]{border-bottom-color:var(--trackborder)}
+/* the table's own edge is the outside line, 1px in the header's blue, as is the line under the header; the last track and
+   last column draw no second line inside it */
+table.bk[data-kind=album]{border-color:var(--band)}
+table.bk[data-kind=album] thead th{border-top:0;border-bottom-color:var(--band)}
+table.bk[data-kind=album] tbody:last-of-type>tr:last-child>td, table.bk[data-kind=album] tbody:last-of-type>tr>td[rowspan]{border-bottom:0}
+table.bk[data-kind=album] td:last-child{border-right:0}
 table.bk[data-kind=album] tbody:hover td{background:var(--rowhover)}
 table.bk[data-kind=album] tbody{scroll-margin-top:84px}
 table.bk td.code .src{display:block;font-size:.9em;color:var(--muted)}
-.al-head{display:flex;gap:14px;align-items:flex-start;margin:8px 0 10px}
-.al-head img{width:120px;height:auto;flex:none;border-radius:4px;box-shadow:0 1px 4px rgb(0 0 0 / .2)}
-.al-name .cj{font-weight:700}
-.al-links{margin-top:6px;font-size:var(--s-1)}
+table.bk td.also{white-space:nowrap} table.bk td.also .same + .same::before{content:" · ";color:var(--muted)}   /* several on one line */   /* Same as: BOX 10-23-1 */
+/* an album's cover in its heading grows while the album is open; its links sit just under the heading */
+details.sub[id^="al-"]>summary{font-weight:400}   /* album titles: not bold */
+/* closed: every cover the same square, cropped to fill it; open: the whole cover, larger */
+details.sub[id^="al-"]>summary img{width:44px;height:44px;object-fit:cover;border-radius:3px;transition:height .15s}
+details.sub[id^="al-"][open]>summary img{width:auto;height:120px;object-fit:contain;box-shadow:0 1px 4px rgb(0 0 0 / .2)}
+details.sub[id^="al-"]:not([open])>summary img{box-sizing:border-box;border:1px solid var(--thumbline)}
+details.sub[id^="al-"]:not([open])>summary img.al-full, details.sub[id^="al-"][open]>summary img.al-th{display:none}
+.al-sub{display:block;margin-top:.15em;font-family:var(--body);font-size:var(--s-1);font-weight:400;color:var(--muted)}   /* 59 tracks · VGMdb */
+.al-links{display:none}
+details.sub[id^="al-"][open]>summary .al-links{display:inline}
 
-/* the editor's columns (CD, Track, Used in, Notes): not in the booklet. They share the table's colours; a line in the
+/* the editor's columns (CD, Track, Uses, Notes): not in the booklet. They share the table's colours; a line in the
    table's border grey down their left edge sets them apart from the book's own */
-col.w-used{width:14em} col.w-cdtrk{width:28em}   /* Notes (w-notes): the rest */
+col.w-used{width:7.2em} col.w-cdtrk{width:28em}   /* Notes (w-notes): the rest */
+/* Uses: just the uses button (its list opens in a box) */
 /* drawn as the right border of the cell before, not a positioned ::before: Safari on iPhone draws position:relative
    table cells at stale offsets once rows above change height (a panel built after a jump) */
 table.bk:not([data-kind=album]) :is(td,th):not(.ed):has(+ .ed){border-right:1px solid var(--tableborder)}   /* not on the albums page, which is all this site's */
@@ -168,16 +229,11 @@ td.notes p{margin:0 0 .45em;overflow-wrap:anywhere} td.notes p:last-child{margin
 .sl{display:inline-block;transform:skewX(-14deg)}   /* a half-width ! in Japanese text, slanted as the booklet prints it */
 .trk{display:flex;gap:.55em;align-items:flex-start}   /* the cover, and beside it the place above the title */
 .trk>a{flex:none}
-.trk .cover{display:block;width:46px;height:auto;border-radius:3px;box-shadow:0 1px 3px rgb(0 0 0 / .25)}
+.trk .cover{display:block;width:44px;height:44px;object-fit:cover;box-sizing:border-box;border:1px solid var(--thumbline);border-radius:3px}   /* as the albums page's thumbnails */
 .trk .tno{display:block;min-width:0;white-space:nowrap;margin-bottom:.15em}
 .trow{display:flex;gap:.4em;align-items:baseline}
 .tno{flex:none;min-width:1.4em;font-variant-numeric:tabular-nums;color:var(--muted)}
 .tname{min-width:0}
-td.used .cnt{display:block;color:var(--muted);font-size:.92em}
-td.used .x{color:var(--muted);font-size:.85em;margin-left:.1em}
-details.more{display:inline}
-details.more>summary{display:inline;color:var(--accent);font-weight:700}
-details.more[open]>summary{margin-right:.3em}
 /* Editor's notes boxes (under the p.104 legend) */
 .ed-box{margin:16px 0 0;max-width:46em;border:1px solid var(--tableborder);border-radius:10px;background:var(--row);overflow:hidden;font-size:.95em}
 .ed-box-h{padding:.45em .9em;background:var(--part);color:var(--band);font-weight:700;border-bottom:1px solid var(--tableborder)}
@@ -214,8 +270,12 @@ details.epi[open]>summary{background:var(--band);color:var(--band-ink)}
 details.epi[open]>summary .chev, details.epi[open]>summary .epn{color:var(--band-ink)}
 details.epi[open]>summary .tx>.en, body.l-ja.l-en details.epi[open]>summary .tx>.ja+.en{color:rgb(255 255 255 / .9)}
 .epn{font-weight:700;color:var(--band);font-variant-numeric:tabular-nums;text-align:right}
-.epbody{padding:10px 0 18px}
-.epbody table.bk{border-radius:0}  /* episode cue sheets: square corners */
+/* an open episode: its title bar becomes the top row of its cue sheet, like a BGM list's title band, inside the same outline */
+details.epi[open]>summary{border:1px solid var(--tableborder);border-bottom:0;border-radius:10px 10px 0 0;padding:.7em .9em;
+  font-size:var(--s0);font-weight:700}
+details.epi[open]>summary .tx>.en, details.epi[open]>summary .tx>.ja{font-weight:700}
+.epbody{padding:0 0 18px}
+.epbody table.bk{border-top:0;border-radius:0 0 10px 10px}
 .ep-head{text-wrap:balance;margin:14px 0 4px}
 .page{font-size:var(--s-1);color:var(--muted);font-variant-numeric:tabular-nums}
 /* notes: small muted text, the same size in every language */
@@ -266,6 +326,47 @@ details.epi[open]>summary .tx>.en, body.l-ja.l-en details.epi[open]>summary .tx>
 .dlg-body h3{margin:0 0 10px;font-size:var(--s0)}
 
 /* the editor's columns: a soft green, in their head cells and (lightly) their data cells, under a labelled group row */
-table.bk tr.grp th{font-size:.82em;font-weight:700;letter-spacing:.03em;padding:.3em .75em;background:var(--colhead);color:var(--band);border-bottom:0}
+table.bk tr.grp th{font-weight:700;padding:.3em .75em;background:var(--colhead);color:var(--band);border-bottom:0;vertical-align:bottom}
+/* the booklet / added-by labels: small, light and italic, all alike; they sit on the row's bottom line */
+table.bk .grp-label{display:block;font-size:.82em;line-height:1.35;font-weight:400;font-style:italic;letter-spacing:.02em}
 table.bk:not([data-kind=album]) th.ed{background:var(--edhead);color:var(--edink)}   /* the albums page is all this site's */
 table.bk tr.grp th.ed{background:var(--edgrp);color:var(--edink)}
+/* a table heading's ? icon and the box explaining its column, shown at once on hover or keyboard focus */
+th:has(>.tip)>.cv{display:inline}   /* the icon sits on the heading line */
+th .tip{position:relative;display:inline-block;margin-left:.35em;vertical-align:.08em;cursor:help;outline:none;white-space:nowrap}
+th .tip-i{display:inline-flex;align-items:center;justify-content:center;width:1.25em;height:1.25em;border:1px solid currentColor;
+  border-radius:50%;font-family:var(--body);font-size:.72em;font-weight:700;line-height:1;opacity:.75}
+th .tip:hover .tip-i, th .tip:focus-visible .tip-i{opacity:1;background:var(--band);border-color:var(--band);color:#fff}
+th .tip-box{display:none;position:absolute;z-index:30;top:calc(100% + 6px);left:-.6em;width:17em;padding:.55em .7em;
+  border-radius:6px;background:var(--ink);color:var(--paper);box-shadow:0 3px 10px rgb(0 0 0 / .25);
+  font-family:var(--body);font-size:.82rem;font-weight:400;line-height:1.4;text-align:left;white-space:normal;text-transform:none;letter-spacing:0}
+th .tip:hover .tip-box, th .tip:focus .tip-box{display:block}
+th .tip-key{margin-left:.25em} th .tip-key .tip-i svg{width:1.1em;height:1.1em}   /* a key icon in the same circle as the ? */
+th .tip-key .tip-box{width:auto;white-space:nowrap}
+th .tip-box .tip-line{display:block} th .tip-box .tip-line+.tip-line{margin-top:.3em}
+th .tip-box .tip-line:has(>b){padding-left:1.3em;text-indent:-1.3em} th .tip-box b{font-weight:700;display:inline-block;min-width:1.3em;text-indent:0}   /* a key line: its text hangs after the bold symbol */
+th:nth-last-child(-n+2) .tip-box{left:auto;right:-.6em}   /* the last columns: open leftward, so the box stays on screen */
+/* the albums' BGM list reference: a link icon, then the code (with any variant word or film) and the description as one
+   run of text; with one language showing it's one paragraph, with several each language gets its own line */
+/* expandable columns (xcolCell in app.js): no wrapping; cut off with … past --xcol-max until the column is opened */
+td.xcol{position:relative}
+td.xcol .xcol-row{display:flex;gap:.45em;align-items:baseline}
+td.xcol .xcol-text{min-width:0;max-width:var(--xcol-max, 30em);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+td.xcol .xcol-text .cv{overflow:hidden;text-overflow:ellipsis}   /* each language's line, when several show */
+td.xcol.open .xcol-text{max-width:none}
+/* a cut-off cell: clickable, with an expand icon at its right edge (a collapse icon once its column is open) */
+td.xcol.cut{cursor:pointer;padding-right:1.7em}
+td.xcol.cut::after{content:'';position:absolute;right:.45em;top:50%;width:.85em;height:.85em;margin-top:-.42em;background:var(--band);opacity:.45;
+  -webkit-mask:var(--xcol-icon) center/contain no-repeat;mask:var(--xcol-icon) center/contain no-repeat;transition:opacity .15s;
+  --xcol-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1.5 8h13M4.5 5 1.5 8l3 3M11.5 5l3 3-3 3'/%3E%3C/svg%3E")}
+td.xcol.cut.open::after{--xcol-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1.5 8h4.5M14.5 8H10M3.5 5 6.5 8l-3 3M12.5 5l-3 3 3 3'/%3E%3C/svg%3E")}
+td.xcol.cut:hover::after, td.xcol.cut:focus-visible::after{opacity:1}
+td.xcol.cut:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+table.bk td.ref .ref-go, table.bk td.ref a.go.ref-go{flex:none;width:1.1em;color:var(--band);text-decoration:none}
+table.bk td.ref a.go.ref-go:hover{color:var(--accent)}
+table.bk td.ref .ref-i{display:block;width:1.1em;height:1.1em;transform:translateY(.18em)}
+table.bk td.ref .refcode{white-space:nowrap}
+table.bk td.ref .refsep{color:var(--muted)}
+table.bk td.ref .refcode .src{display:inline;color:var(--muted)}
+body.l-en:not(.l-ja):not(.l-ro) :is(td.ref, .uses-pop) .cv:is(.ce, .cj.or-en, .cr.or-en), body.l-ja:not(.l-en):not(.l-ro) :is(td.ref, .uses-pop) .cv.cj,
+  body.l-ro:not(.l-en):not(.l-ja) :is(td.ref, .uses-pop) .cv:is(.cr, .cj.or-ro){display:inline}   /* only the lines already showing */
