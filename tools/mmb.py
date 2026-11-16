@@ -151,6 +151,16 @@ CREATE TABLE piece_parts (
   FOREIGN KEY (album, track, piece) REFERENCES track_pieces(album, track, piece)
 );
 
+-- a piece of an original album that is the same recording as a box-set piece, found by matching the audio (a single-piece
+-- track is piece 1); the Albums page shows the booklet's entry for that box-set place on an album piece the booklet doesn't cite
+CREATE TABLE piece_sources (
+  album TEXT NOT NULL, track TEXT NOT NULL, piece INTEGER NOT NULL,
+  src TEXT NOT NULL,                           -- the box-set place, as the booklet writes one: disc-track (1-18) or disc-track-piece (5-1-2)
+  note TEXT,                                   -- how the two differ, if they do (a longer intro on the album)
+  PRIMARY KEY (album, track, piece),
+  FOREIGN KEY (album, track) REFERENCES album_tracks(album, track)
+);
+
 -- research in progress: NOT exported to data.js, so none of it appears on the site. Kept in the database and db/*.csv.
 -- Library-music identifications: a clip from a fan collection (RattleMan's rips on sailormusic.net) matched to a cue-sheet
 -- row by episode, scene and length. The row is named by work_id + part + ord (its position in the part), with m for reading;
@@ -283,6 +293,9 @@ def do_import(conn):
         for track, parts in (a.get('x') or {}).items():
             for c, (piece, start, end) in parts.items():
                 ins('piece_parts', (code, track, piece, c, start, end, None))
+        for track, srcs in (a.get('q') or {}).items():
+            for piece, src in srcs.items():
+                ins('piece_sources', (code, track, int(piece), src, None))
     conn.commit()
 
 # ---------- export: database -> data.js / albums.js / CSV ----------
@@ -363,17 +376,19 @@ def build_data(conn):
         d['notes'].append(no)
     return d
 
-ALBUMS_HEAD = ("/* Every album the booklet's CD column cites, keyed by its code in the p.104 key (MMB, the box set, is the site's own). Not from the booklet.\n"
+ALBUMS_HEAD = ("/* Every album the booklet's CD column cites, keyed by its code in the p.104 key (MMB, the box set, is the site's own), and the\n"
+               "   other original BGM albums (MC, RM, SM, SSM). Not from the booklet.\n"
                "   The box set (MMB) and its discs 1-10 (p = parent, d = disc number; disc names from each disc's cover, covers from\n"
-               "   sailormusic.net, every track); the other albums R, S, SS, ST1, ST2, EX and 歌 (original CD releases, covers from\n"
-               "   VGMdb, only the tracks the booklet cites, except S: every track, from its tray card; 歌 keyed by disc-track). n = name [Japanese, English], cat = catalog number,\n"
-               "   v = VGMdb album number, card = the disc's tray card (VGMdb's scan, kept in images/tray-cards), t = tracks [Japanese (box-set\n"
-               "   discs: as printed on the tray card; other albums: VGMdb), romaji, English (many based on sailormusic.net\n"
-               "   and VGMdb's track lists, edited to the site's style)], l = each track's length on the CD (seconds,\n"
-               "   from the audio), s = where each piece of a multi-piece track starts on the CD\n"
-               "   [start, duration (seconds), what marks the break (silence, dip, change), 1 if checked by ear], found from the audio,\n"
-               "   e = pieces the tray card prints that the booklet never places at that track {track: {piece: [as printed, code]}},\n"
-               "   x = two codes on one piece: where each plays within it {code: [piece, start, end]} (approximate: one fades into the other). */\n")
+               "   sailormusic.net); the original CD releases MC, R, RM, S, SM, SS, SSM, ST1, ST2, EX (covers and tray cards from VGMdb's\n"
+               "   scans) and 歌 (only the tracks the booklet cites; keyed by disc-track). Every track of every album except 歌 is listed.\n"
+               "   n = name [Japanese, English], cat = catalog number, v = VGMdb album number, card = the album's tray card (VGMdb's scan,\n"
+               "   kept in images/tray-cards), t = tracks [Japanese as printed on the tray card, romaji, English (edited to the site's\n"
+               "   style)], l = each track's length on the CD (seconds, from the audio), s = where each piece of a multi-piece track\n"
+               "   starts on the CD [start, duration (seconds), what marks the break (silence, dip, change), 1 if checked by ear], found\n"
+               "   from the audio, e = pieces the tray card prints that the booklet never places at that track {track: {piece: [as printed,\n"
+               "   code]}}, x = two codes on one piece: where each plays within it {code: [piece, start, end]} (approximate: one fades\n"
+               "   into the other), q = an original album's piece that is the same recording as a box-set piece {track: {piece: place}},\n"
+               "   found by matching the audio. */\n")
 
 def build_albums(conn):
     albums = {}
@@ -400,6 +415,10 @@ def build_albums(conn):
         for p in rows(conn, 'SELECT * FROM piece_parts WHERE album=? ORDER BY CAST(track AS INTEGER), piece, start', a['code']):
             x.setdefault(p['track'], {})[p['code']] = [p['piece'], p['start'], p['end']]
         if x: o['x'] = x
+        q = {}
+        for p in rows(conn, 'SELECT * FROM piece_sources WHERE album=? ORDER BY CAST(track AS INTEGER), piece', a['code']):
+            q.setdefault(p['track'], {})[str(p['piece'])] = p['src']
+        if q: o['q'] = q
         if a['parent'] == 'MMB':   # tray-card pieces the booklet never places here (3-11-1, J10編集): their printed label
             e, card = {}, {}
             for t in rows(conn, 'SELECT * FROM tray_cards WHERE disc=? ORDER BY track, ord', a['disc']):
@@ -422,7 +441,7 @@ def render(conn):
 # reloads them from db/*.csv so they survive
 RESEARCH = ['library_matches', 'tray_cards', 'piece_relations']
 TABLES = ['series', 'bgm_lists', 'bgm_categories', 'bgm_cues', 'works', 'parts', 'cue_rows', 'credits', 'notes',
-          'albums', 'album_tracks', 'track_pieces', 'piece_parts'] + RESEARCH
+          'albums', 'album_tracks', 'track_pieces', 'piece_parts', 'piece_sources'] + RESEARCH
 
 def write_csv(conn):
     os.makedirs(CSV_DIR, exist_ok=True)
