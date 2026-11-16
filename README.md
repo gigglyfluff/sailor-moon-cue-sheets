@@ -1,6 +1,6 @@
 # Sailor Moon BGM Lists & Cue Sheets
 
-The background music lists and TV/movie cue sheets from pages 104–195 of the *Sailor Moon Memorial Music Box* booklet, transcribed in Japanese with romaji and English.
+The background music lists and TV/movie cue sheets from pages 104–195 of the *Sailor Moon Memorial Music Box* booklet, transcribed in Japanese with romaji and English. Only the booklet's and the CDs' own text has Japanese and romaji; everything the site adds (labels, notes, the albums tables) is in English. The page opens in English, and a language choice is remembered for later visits.
 
 **[Open the page](index.html)** (or the GitHub Pages address in the sidebar).
 
