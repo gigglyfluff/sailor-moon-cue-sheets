@@ -206,7 +206,7 @@ function headRow(h, group = true){
   const tip = (t, key) => `<span class="tip${key ? ' tip-key' : ''}" tabindex="0" aria-label="${esc(plain(t))}"><span class="tip-i" aria-hidden="true">${key ? '&#8203;' + KEY_I : '?'}</span>`
     + `<span class="tip-box" role="tooltip">${lines(t)}</span></span>`;
   // col.sub: a small note under the heading (a cue sheet's Notes: "Added by this site")
-  return grp + '<tr>' + h.map(col => `<th class="${col.c || ''}">${col.en ? `<span class="cv en1">${esc(col.en)}</span>` : stack(col.h)}${col.sub ? label(col.sub) : ''}${col.t ? tip(col.t) : ''}${col.k ? tip(col.k, true) : ''}</th>`).join('') + '</tr>';
+  return grp + '<tr class="cols">' + h.map(col => `<th class="${col.c || ''}">${col.en ? `<span class="cv en1">${esc(col.en)}</span>` : stack(col.h)}${col.sub ? label(col.sub) : ''}${col.t ? tip(col.t) : ''}${col.k ? tip(col.k, true) : ''}</th>`).join('') + '</tr>';
 }
 /* stack() line formatter for headings: a misprint (f) corrected in place in the Japanese line, an editor's note
    (n = {t, u}) after the English one. Table rows put theirs in the Notes column instead (rowNotes below). */
@@ -743,8 +743,8 @@ function usesCell(id, self, cls = 'du'){
     const title = (film ? FILMS[u.w.id].short : u.w.n ? 'Episode ' + u.w.n : 'Special') + ': ' + where;
     // as the BGM list references: a link icon, then the episode › its cue-sheet row's description
     const desc = u.d && !u.self ? stack(u.d) : '';
-    return `<li class="du-use"><a class="go ref-go" href="${HOME}#${esc(u.id)}" data-go="${esc(u.id)}" title="${esc(title)}" aria-label="${esc(title)}">${REF_ICON}</a>`
-      + `<span class="du-text"><span class="du-ep">${en(esc(name))}</span>${desc ? REF_SEP + `<span class="du-desc">${desc}</span>` : ''}</span></li>`;
+    return `<li class="du-use">${refLink(u.id, title,
+      `<span class="du-text"><span class="du-ep">${en(esc(name))}</span>${desc ? REF_SEP + `<span class="du-desc">${desc}</span>` : ''}</span>`)}</li>`;
   };
   return `<td class="${cls}">${toggle}<ul class="du-uses" hidden>${uses.map(line).join('')}</ul></td>`;
 }
@@ -752,14 +752,21 @@ function usesCell(id, self, cls = 'du'){
    film) and its description, run together: M-58 Sailor Mars › … */
 const REF_ICON = '<svg class="ref-i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="currentColor"/><path d="M10.6 13.4l2.8-2.8M9.4 11.2l-1.5 1.5a2.6 2.6 0 0 0 3.7 3.7l1.5-1.5M14.6 12.8l1.5-1.5a2.6 2.6 0 0 0-3.7-3.7l-1.5 1.5" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/></svg>';   // a chain link in a circle
 const REF_SEP = '<span class="refsep" aria-hidden="true"> › </span>';
+// a reference link: the icon and its text together, one link (cls: more classes for the link itself)
+const refLink = (id, title, body, cls = '') =>
+  `<a class="go ref-link${cls ? ' ' + cls : ''}" href="${HOME}#${esc(id)}" data-go="${esc(id)}" title="${esc(title)}"><span class="ref-go">${REF_ICON}</span>${body}</a>`;
 /* ---------- expandable columns ----------
    A column whose text never wraps: past the column's limit (max, any CSS length) a cell is cut off with …, and an icon at
    its right edge marks it. Clicking (or Enter on) a cut-off cell shows that whole column of its table in full, one line per
    language, and clicking again shortens it. A table can have several; each is named by col (unique within the table).
-   xcolCell(col, html, {max, cls, before, attrs}) writes a cell (before: anything ahead of the text, like a link icon);
+   xcolCell(col, html, {max, cls, before, attrs, link}) writes a cell (before: anything ahead of the text, like a link icon;
+   link(inner, cls): wraps the cell's row in a link instead of a plain div);
    measureXcols(root) marks which cells are cut off (call it after building cells or changing what fits). */
-const xcolCell = (col, html, {max = '30em', cls = '', before = '', attrs = ''} = {}) =>
-  `<td class="xcol${cls ? ' ' + cls : ''}" data-xcol="${esc(col)}" style="--xcol-max:${max}"${attrs}><div class="xcol-row">${before}<span class="xcol-text">${html}</span></div></td>`;
+const xcolCell = (col, html, {max = '30em', cls = '', before = '', attrs = '', link = null} = {}) => {
+  const inner = before + `<span class="xcol-text">${html}</span>`;
+  return `<td class="xcol${cls ? ' ' + cls : ''}" data-xcol="${esc(col)}" style="--xcol-max:${max}"${attrs}>`
+    + (link ? link(inner, 'xcol-row') : `<div class="xcol-row">${inner}</div>`) + '</td>';
+};
 function measureXcols(root = document){
   root.querySelectorAll('td.xcol').forEach(td => {
     // an expanded column keeps the mark on the cells that were cut off, so they can shorten it again
@@ -785,12 +792,104 @@ document.addEventListener('keydown', e => {
   if ((e.key === 'Enter' || e.key === ' ') && e.target.matches?.('td.xcol.cut')) { e.preventDefault(); toggleXcol(e.target); }
 });
 { let t; addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => measureXcols(), 150); }); }
+/* ---------- where you are ----------
+   A line under the top bar naming the sections scrolled into: season › panel › episode › table heading › part, or album ›
+   disc. A level shows once its heading has gone under the bar; clicking one scrolls back to that heading.
+   Under it, once a table's column heads scroll under, a small one-line copy of them, lined up with the columns. (A copy, not
+   the heads themselves pinned: shrinking the real row would pull the rows below it up and make the table jump.) */
+{
+  const bar = document.getElementById('bar'), crumbs = document.createElement('nav'), pin = document.createElement('div');
+  crumbs.className = 'crumbs'; crumbs.hidden = true; crumbs.setAttribute('aria-label', 'Where you are');
+  pin.className = 'pinhead'; pin.hidden = true; pin.setAttribute('aria-hidden', 'true');
+  bar.append(crumbs, pin);
+  // the first line showing of a heading, in the languages switched on
+  const shown = el => (el?.innerText || '').split('\n').map(s => s.trim()).find(Boolean) || '';
+  const label = sum => {
+    const t = shown(sum.querySelector('.ept, .tx') || sum), n = sum.querySelector('.epn')?.textContent;
+    return n ? (/^\d+$/.test(n) ? 'Ep ' + n : n) + ': ' + t : t;
+  };
+  // a season's logo, or an album's thumbnail (which gets the albums' thin blue frame)
+  const picture = sum => { const i = sum.querySelector('img.al-th, img:not(.al-full)');
+    return i ? `<img src="${esc(i.getAttribute('src'))}" alt=""${sum.querySelector('.al-title') ? ' class="cover"' : ''}>` : ''; };
+  const TO_TOP = '<button type="button" class="to-top" data-top title="Back to the top" aria-label="Back to the top">'
+    + '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 1 1 9.4 3.5a7 7 0 0 0 11.1 11.1z" fill="currentColor"/>'
+    + '<path d="M18.2 3.2l.5 1.3 1.3.5-1.3.5-.5 1.3-.5-1.3-1.3-.5 1.3-.5z" fill="currentColor"/></svg></button><span aria-hidden="true">›</span>';   // a crescent and a twinkle
+  /* the bar's own buttons shrink while this line shows. A bottom margin makes up the height it loses, so the page under it
+     doesn't move (moving it would shift where the headings are, and flick the line off and on again) */
+  const compact = on => {
+    bar.classList.remove('compact'); bar.style.marginBottom = '';
+    if (!on) return;
+    const full = bar.offsetHeight;
+    bar.classList.add('compact'); bar.style.marginBottom = full - bar.offsetHeight + 'px';
+  };
+  let marks = [], key = '', pinned = null, pinLang = '';
+  function update(){
+    // the bar at full size, and this line's own height below it
+    const line = bar.getBoundingClientRect().bottom + (parseFloat(bar.style.marginBottom) || 0) + 30;
+    const items = [];   // [label, element to go back to]
+    let inner = null;
+    document.querySelectorAll('details[open]').forEach(d => {
+      const s = d.firstElementChild, r = d.getBoundingClientRect();
+      if (s.getBoundingClientRect().bottom < line && r.bottom > line) { items.push([label(s), d, picture(s)]); inner = d; }
+    });
+    // inside a table: its heading, then the last heading row (a film segment, a cue sheet part) gone under the bar
+    const table = inner && [...inner.querySelectorAll('table.bk')].find(t => { const r = t.getBoundingClientRect(); return r.top < line && r.bottom > line; });
+    if (table) {
+      let last = null;
+      table.querySelectorAll('th.cap, tr.part > th').forEach(th => { if (th.getBoundingClientRect().bottom < line) last = th; });
+      const head = table.tHead?.querySelector('th.cap');
+      if (head && head !== last && head.getBoundingClientRect().bottom < line) items.push([shown(head), head]);
+      if (last) items.push([shown(last), last]);
+    }
+    const list = items.filter(([t], i) => t && t !== items[i - 1]?.[0]), k = list.map(([t]) => t).join('\u0000');
+    if (k !== key) {
+      key = k; marks = list.map(([, el]) => el);
+      crumbs.hidden = !list.length;
+      if (bar.classList.contains('compact') === crumbs.hidden) compact(!crumbs.hidden);
+      crumbs.innerHTML = TO_TOP + list.map(([t, , img], i) => `<button type="button" data-i="${i}" title="Back to ${esc(t)}">${img}<span>${esc(t)}</span></button>`).join('<span aria-hidden="true">›</span>');
+    }
+    pinHeads(table);
+  }
+  function pinHeads(table){
+    const b = bar.getBoundingClientRect(), top = crumbs.hidden ? b.bottom : crumbs.getBoundingClientRect().bottom;
+    // the table's last column-head row to reach the line (a cue sheet has one per part)
+    let row = null;
+    if (table) table.querySelectorAll('tr.cols').forEach(tr => { if (tr.getBoundingClientRect().top < top) row = tr; });
+    if (row && table.getBoundingClientRect().bottom < top + pin.offsetHeight + 8) row = null;   // the table is nearly gone
+    pin.hidden = !row;
+    if (!row) { pinned = null; return; }
+    const cells = [...row.cells];
+    if (row !== pinned || pinLang !== document.body.className) {
+      pinned = row; pinLang = document.body.className;
+      // each head's text (not its ? tips), with its own alignment and colours (this site's columns are green)
+      const text = th => [...th.children].filter(c => !c.matches('.tip')).map(shown).find(Boolean) || '';
+      pin.innerHTML = '<div class="ph-row">' + cells.map(th => { const c = getComputedStyle(th);
+        return `<span style="text-align:${c.textAlign};background:${c.backgroundColor};color:${c.color}">${esc(text(th))}</span>`; }).join('') + '</div>';
+    }
+    // line up with the columns, cut to what shows of the table (its own scroll box, the window)
+    const box = table.parentElement, r = table.getBoundingClientRect(), scrolls = getComputedStyle(box).overflowX !== 'visible';
+    const br = box.getBoundingClientRect();
+    const left = Math.max(r.left, scrolls ? br.left : r.left, 0), right = Math.min(r.right, scrolls ? br.right : r.right, document.documentElement.clientWidth);
+    Object.assign(pin.style, {top: top - b.top + 'px', left: left - b.left + 'px', width: Math.max(0, right - left) + 'px'});
+    const rowEl = pin.firstChild;
+    rowEl.style.transform = `translateX(${cells[0].getBoundingClientRect().left - left}px)`;
+    cells.forEach((th, i) => { rowEl.children[i].style.width = th.getBoundingClientRect().width + 'px'; });
+  }
+  crumbs.addEventListener('click', e => {
+    if (e.target.closest('[data-top]')) { scrollTo(0, 0); return; }
+    const el = marks[e.target.closest('button')?.dataset.i]; if (!el) return;
+    scrollBy(0, el.getBoundingClientRect().top - bar.getBoundingClientRect().bottom - 4);
+  });
+  // scroll events already come once a frame; update() only touches the page when the line's text changes
+  // (caught on the way down, so a table scrolled sideways in its own box moves its heads' copy too)
+  document.addEventListener('scroll', update, {passive: true, capture: true}); addEventListener('resize', () => { compact(!crumbs.hidden); update(); });   // the bar may wrap differently
+  document.addEventListener('toggle', update, true); document.addEventListener('change', () => { key = ''; update(); });
+}
 const refCell = (id, code, desc, cls = '') => {
-  const go = id && ROW_PANEL[id]
-    ? `<a class="go ref-go" href="${HOME}#${esc(id)}" data-go="${esc(id)}" title="${esc(goTitle(id))}" aria-label="${esc(goTitle(id))}">${REF_ICON}</a>`
-    : '<span class="ref-go"></span>';
+  const linked = id && ROW_PANEL[id];   // unlinked: an empty icon space keeps the text in line
   return xcolCell('ref', (code ? `<span class="refcode">${code}</span>` : '') + (code && desc ? REF_SEP : '') + (desc ? `<span class="refdesc">${desc}</span>` : ''),
-    {max: '75ch', cls: 'ref' + (cls ? ' ' + cls : ''), before: go});
+    {max: '75ch', cls: 'ref' + (cls ? ' ' + cls : ''), before: linked ? '' : '<span class="ref-go"></span>',
+     link: linked ? (inner, c) => refLink(id, goTitle(id), inner, c) : null});
 };
 /* the Same as column on a box-set disc: the original albums' pieces that are the same recording as this box-set place
    (albums.js q, read backwards), each linked to its track: SS-12-1, or S-8 for a single-piece track */
@@ -944,8 +1043,7 @@ addEventListener('pageshow', e => {
   el.classList.add('flash'); setTimeout(() => el.classList.remove('flash'), 1800);
 });
 /* a piece's uses (the Uses column on both pages): shown on demand */
-/* the top bar stays in view when the page scrolls sideways (an album table with a column shown in full can be wider than
-   the window) */
+/* the top bar stays in view when the page scrolls sideways (a table can be wider than the window) */
 { const bar = document.getElementById('bar');
   if (bar) addEventListener('scroll', () => { bar.style.transform = scrollX ? `translateX(${scrollX}px)` : ''; }, {passive: true}); }
 /* a piece's uses (the Uses column on both pages): its button opens the list in a box under it, which
