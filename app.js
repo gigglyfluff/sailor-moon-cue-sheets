@@ -45,8 +45,8 @@ const UI = {
   part: p => p==='TOP' ? ['TOPパート','TOP paato','Top part'] : [p+'パート',p+' paato',p+' part'],
   // the book's columns: h = header as [Japanese (as printed), romaji, English], c = the column's class
   epHead: [{h: ['M','M','M'], c: 'num'}, {h: ['曲の内容','Kyoku no naiyou','Scene / music']}, {h: ['クレジット','Kurejitto','Cue'], c: 'code'}, {h: ['秒','Byou','Sec.'], c: 'tm'}],
-  bgmHead: [{h: ['M-NO.','M-NO.','M-NO.'], c: 'code'}, {h: ['TIME','TIME','Time'], c: 'tm'}, {h: ['内容','Naiyou','Description']}, {h: ['収録CD','Shuuroku CD','Source CD'], c: 'num'}],
-  qHead: [{h: ['NO.','NO.','No.'], c: 'num'}, {h: ['M-NO.','M-NO.','M-NO.'], c: 'code'}, {h: ['TIME','TIME','Time'], c: 'tm'}, {h: ['内容','Naiyou','Description']}, {h: ['収録CD','Shuuroku CD','Source CD'], c: 'num'}],
+  bgmHead: [{h: ['M-NO.','M-NO.','M-NO.'], c: 'code'}, {h: ['TIME','TIME','Time'], c: 'tm'}, {h: ['内容','Naiyou','Description']}, {h: ['収録CD','Shuuroku CD','CD'], c: 'num'}],
+  qHead: [{h: ['NO.','NO.','No.'], c: 'num'}, {h: ['M-NO.','M-NO.','M-NO.'], c: 'code'}, {h: ['TIME','TIME','Time'], c: 'tm'}, {h: ['内容','Naiyou','Description']}, {h: ['収録CD','Shuuroku CD','CD'], c: 'num'}],
   albums: 'Albums', albumsMast: 'Sailor Moon Albums, Annotated', cuesNav: 'BGM Lists & Cue Sheets',   // cuesNav: the albums page's link back
 };
 /* the editor's columns, after the book's own: not in the booklet */
@@ -802,8 +802,8 @@ document.addEventListener('keydown', e => {
   crumbs.className = 'crumbs'; crumbs.hidden = true; crumbs.setAttribute('aria-label', 'Where you are');
   pin.className = 'pinhead'; pin.hidden = true; pin.setAttribute('aria-hidden', 'true');
   bar.append(crumbs, pin);
-  // the first line showing of a heading, in the languages switched on
-  const shown = el => (el?.innerText || '').split('\n').map(s => s.trim()).find(Boolean) || '';
+  // the first line showing of a heading, in the languages switched on (a hidden element's innerText is all its text, so skip it)
+  const shown = el => (el?.getClientRects().length ? el.innerText : '').split('\n').map(s => s.trim()).find(Boolean) || '';
   const label = sum => {
     const t = shown(sum.querySelector('.ept, .tx') || sum), n = sum.querySelector('.epn')?.textContent;
     return n ? (/^\d+$/.test(n) ? 'Ep ' + n : n) + ': ' + t : t;
@@ -836,9 +836,11 @@ document.addEventListener('keydown', e => {
     const table = inner && [...inner.querySelectorAll('table.bk')].find(t => { const r = t.getBoundingClientRect(); return r.top < line && r.bottom > line; });
     if (table) {
       let last = null;
-      table.querySelectorAll('th.cap, tr.part > th').forEach(th => { if (th.getBoundingClientRect().bottom < line) last = th; });
-      const head = table.tHead?.querySelector('th.cap');
-      if (head && head !== last && head.getBoundingClientRect().bottom < line) items.push([shown(head), head]);
+      table.querySelectorAll('tbody th.cap, tr.part > th').forEach(th => { if (th.getBoundingClientRect().bottom < line) last = th; });
+      // a table's title band, unless it repeats its section's name (a film's "…: cue sheet and BGM list" under its
+      // "Movie: Cue Sheet & BGM List" panel): the same words after the last colon (in Japanese, the last wide space)
+      const head = table.tHead?.querySelector('th.cap'), tail = t => t.split(/: |\u3000/).pop().toLowerCase().replace(/&/g, 'and');
+      if (head && head.getBoundingClientRect().bottom < line && tail(shown(head)) !== tail(items.at(-1)[0])) items.push([shown(head), head]);
       if (last) items.push([shown(last), last]);
     }
     const list = items.filter(([t], i) => t && t !== items[i - 1]?.[0]), k = list.map(([t]) => t).join('\u0000');
@@ -846,7 +848,8 @@ document.addEventListener('keydown', e => {
       key = k; marks = list.map(([, el]) => el);
       crumbs.hidden = !list.length;
       if (bar.classList.contains('compact') === crumbs.hidden) compact(!crumbs.hidden);
-      crumbs.innerHTML = TO_TOP + list.map(([t, , img], i) => `<button type="button" data-i="${i}" title="Back to ${esc(t)}">${img}<span>${esc(t)}</span></button>`).join('<span aria-hidden="true">›</span>');
+      crumbs.innerHTML = TO_TOP + list.map(([t, , img = ''], i) =>   // table headings have no picture
+         `<button type="button" data-i="${i}" title="Back to ${esc(t)}">${img}<span>${esc(t)}</span></button>`).join('<span aria-hidden="true">›</span>');
     }
     pinHeads(table);
   }
