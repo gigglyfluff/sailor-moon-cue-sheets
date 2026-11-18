@@ -443,7 +443,7 @@ def build_albums(conn):
             for trk, lst in card.items():
                 for t in lst:
                     if (a['disc'], trk, t['ord']) in cited or (len(lst) == 1 and (a['disc'], trk, None) in cited): continue
-                    e.setdefault(str(trk), {})[str(t['ord'])] = [t['printed'], t['code']]
+                    e.setdefault(str(trk), {})[str(t['ord'])] = [t['printed'], t['code']] + ([t['note']] if t['note'] else [])
             if e: o['e'] = e
         albums[a['code']] = o
     return albums

@@ -426,14 +426,6 @@ window.MMB_ALBUMS =
      0
     ]
    ]
-  },
-  "e": {
-   "11": {
-    "1": [
-     "J4",
-     "J-4"
-    ]
-   }
   }
  },
  "2": {
@@ -1175,7 +1167,7 @@ window.MMB_ALBUMS =
      122.3,
      143.9,
      "silence",
-     0
+     1
     ]
    ],
    "13": [
@@ -1319,19 +1311,22 @@ window.MMB_ALBUMS =
    "8": {
     "1": [
      "J11編集",
-     "J-11"
+     "J-11",
+     "an edit (編集) of J-11; the booklet places J-11 itself at 1-28"
     ]
    },
    "11": {
     "1": [
      "J10編集",
-     "J-10"
+     "J-10",
+     "an edit (編集) of J-10; the booklet places J-10 itself at 1-2"
     ]
    },
    "19": {
     "1": [
      "M110編集",
-     "M-110"
+     "M-110",
+     "an edit (編集) of M-110, with the chorus: its first 20 seconds or so (3-15, 1:06 to 1:26), then its last few bars (2:27 to 2:31); the booklet places M-110 itself at 3-15-3. Found from the audio and confirmed by ear"
     ]
    }
   }
@@ -1703,7 +1698,7 @@ window.MMB_ALBUMS =
      97.3,
      109.8,
      "silence",
-     0
+     1
     ],
     [
      207.1,
@@ -1824,14 +1819,14 @@ window.MMB_ALBUMS =
     "M-337": [
      2,
      97.3,
-     207.1,
-     "layered"
+     165.6,
+     "joined"
     ],
     "M-366": [
      2,
-     97.3,
+     165.6,
      207.1,
-     "layered"
+     "joined"
     ]
    }
   }
@@ -1966,7 +1961,7 @@ window.MMB_ALBUMS =
    "24": [
     "「\"らしく\"いきましょ」～マーチヴァージョン～",
     "\"'Rashiku' Ikimasho\" ~Maachi Vaajon~",
-    "Let's Be True to Ourselves ~March Version~"
+    "I'll Go As Myself ~March Version~"
    ]
   },
   "l": {
@@ -3357,7 +3352,7 @@ window.MMB_ALBUMS =
      0.0,
      84.4,
      null,
-     0
+     1
     ],
     [
      84.4,
@@ -3819,7 +3814,8 @@ window.MMB_ALBUMS =
    "19": {
     "1": [
      "M413―4種",
-     "M-413"
+     "M-413",
+     "the four solo make-up versions of M-413; the booklet mentions them only in its p.121 note (※M-413―4種)"
     ]
    }
   }
@@ -3974,7 +3970,7 @@ window.MMB_ALBUMS =
    "28": [
     "「\"らしく\"いきましょ」TVサイズ",
     "\"'Rashiku' Ikimasho\" TV Saizu",
-    "Let's Be True to Ourselves (TV Size)"
+    "I'll Go As Myself (TV Size)"
    ],
    "29": [
     "第1回録音未収録劇伴集",
@@ -4135,14 +4131,14 @@ window.MMB_ALBUMS =
     ],
     [
      88.1,
-     27.6,
+     26.9,
      "silence",
      0
     ],
     [
-     115.7,
-     3.8,
-     "dip",
+     115.0,
+     4.5,
+     "silence",
      0
     ]
    ],
@@ -4209,9 +4205,15 @@ window.MMB_ALBUMS =
    "13": [
     [
      0.0,
-     102.3,
+     86.5,
      null,
      0
+    ],
+    [
+     86.5,
+     15.8,
+     "silence",
+     1
     ]
    ],
    "14": [
@@ -4471,7 +4473,7 @@ window.MMB_ALBUMS =
    "1-8": [
     "\"らしく\"いきましょ",
     "\"Rashiku\" Ikimasho",
-    "Let's Be True to Ourselves"
+    "I'll Go As Myself"
    ],
    "1-9": [
     "セーラースターソング",
@@ -4516,7 +4518,7 @@ window.MMB_ALBUMS =
    "1-17": [
     "\"らしく\"いきましょ（オリジナルカラオケ）",
     "\"Rashiku\" Ikimasho (Orijinaru Karaoke)",
-    "Let's Be True to Ourselves (Original Karaoke)"
+    "I'll Go As Myself (Original Karaoke)"
    ],
    "1-18": [
     "セーラースターソング（オリジナルカラオケ）",
@@ -5905,14 +5907,14 @@ window.MMB_ALBUMS =
     ],
     [
      97.4,
-     115.8,
+     114.7,
      "silence",
      0
     ],
     [
-     213.2,
-     38.3,
-     "change",
+     212.1,
+     39.4,
+     "silence",
      0
     ],
     [
@@ -6010,6 +6012,7 @@ window.MMB_ALBUMS =
    "7": {
     "1": "3-14-1",
     "2": "3-3-2",
+    "3": "3-1-2",
     "4": "3-1-2"
    },
    "8": {
@@ -6674,14 +6677,14 @@ window.MMB_ALBUMS =
     "M-337": [
      3,
      137.5,
-     248.7,
-     "layered"
+     205.8,
+     "joined"
     ],
     "M-366": [
      3,
-     137.5,
+     205.8,
      248.7,
-     "layered"
+     "joined"
     ]
    }
   },
@@ -7233,7 +7236,7 @@ window.MMB_ALBUMS =
    "17": [
     "エンディング「“らしく”いきましょ」",
     "Endingu \"'Rashiku' Ikimasho\"",
-    "Ending: Let's Be True to Ourselves"
+    "Ending: I'll Go As Myself"
    ]
   },
   "l": {
@@ -7629,7 +7632,7 @@ window.MMB_ALBUMS =
    "6": [
     "“らしく”いきましょ",
     "\"Rashiku\" Ikimasho",
-    "Let's Be True to Ourselves"
+    "I'll Go As Myself"
    ],
    "7": [
     "ふれあい～ペルルのテーマ～",
@@ -7891,7 +7894,7 @@ window.MMB_ALBUMS =
     "1": "10-7-1",
     "2": "10-7-2",
     "3": "10-7-4",
-    "4": "10-13"
+    "4": "10-13-1"
    },
    "11": {
     "1": "10-14-2"
