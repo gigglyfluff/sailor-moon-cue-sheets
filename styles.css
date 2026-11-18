@@ -15,6 +15,7 @@
   --thumbline:color-mix(in srgb, var(--band) 60%, #fff);   /* album thumbnails' border: the tables' outer blue, lightened */
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;   /* the system's own monospace: no extra download */
   --moon:#d4950a;   /* the crescent's gold */
+  --lavender:#d6b1d2;   /* the top bar: the lavender of Usagi's bedspread */
   --page:1760px;   /* the page's widest: the content, the bar's buttons and the where-you-are line all line up within it */
   --s-1:.8125rem; --s0:.9375rem; --s1:1.125rem; --s2:1.5rem; --s3:2.1rem;
 }
@@ -22,9 +23,10 @@
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}   /* stop iOS Safari enlarging long-text cells on wide pages: every size comes from the cascade */
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:var(--s0);line-height:1.55;
-  margin:0;padding-inline:16px;padding-block:0 64px}   /* no default margin: the top bar runs edge to edge */
+  margin:0;padding-inline:16px;padding-block:var(--barh, 52px) 64px}   /* no default margin; room at the top for the fixed bar (--barh: its height, set by the script) */
 .wrap{max-width:var(--page);margin-inline:auto;display:grid;gap:4px;padding-top:24px}
-/* grid children may shrink below their content, so a wide table scrolls inside its own box instead of widening the page */
+/* grid children may shrink below their content: a wide table overflows its box and widens the page, which scrolls sideways
+   as a whole (the top bar stays put), rather than each table scrolling inside its own box */
 .wrap>*, .sec-body>*, .inner>*, .cats>*, .eplist>*, .epbody>*{min-width:0}
 a{color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -107,8 +109,6 @@ details.sub>.inner.discs{gap:2px;padding-right:0;padding-left:0;border-left:0;ma
 .session .cv.cr, .session .cv.ce{font-weight:400}
 
 /* tables: a coloured header band, a soft column-head row, then alternating rows divided by thin white lines */
-.scroll{overflow-x:auto;max-width:100%}
-.scroll:has(>table.bk[data-kind=album]){overflow:visible;max-width:none}   /* an album table wider than the window (a column shown in full) widens the page, which scrolls, instead of scrolling itself */
 table.bk{border-collapse:separate;border-spacing:0;width:100%;font-size:var(--s-1);background:var(--row);
   border:1px solid var(--tableborder);border-radius:10px;overflow:hidden}
 table.bk th,table.bk td{padding:.5em .75em;vertical-align:top;text-align:left;border:0}  /* no dividers between header cells */
@@ -293,8 +293,13 @@ details.epi[open]>summary{background:var(--band);color:var(--band-ink);border:1p
 .notes-top b{color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}
 
 /* frozen control bar */
-.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;margin-inline:-16px;padding:10px 16px;
-  background:var(--guide);box-shadow:0 2px 8px rgb(60 20 40 / .10)}
+.bar{position:fixed;top:0;left:0;right:0;z-index:20;padding:10px 16px;   /* fixed, so it holds still however the page scrolls */
+  /* liquid glass: a gloss highlight fading down the top half over a slightly see-through lavender that blurs the page behind,
+     with a bright rim along the top edge and a faint shade along the bottom */
+  background:linear-gradient(rgb(255 255 255 / .55), rgb(255 255 255 / .12) 50%, rgb(255 255 255 / 0) 51%, rgb(90 40 90 / .08)),
+    color-mix(in srgb, var(--lavender) 80%, transparent);
+  -webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6);
+  box-shadow:inset 0 1px 0 rgb(255 255 255 / .8), inset 0 -1px 0 rgb(110 60 110 / .18), 0 2px 8px rgb(60 20 40 / .10)}
 .bar-in{max-width:var(--page);margin-inline:auto;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
 .bar .grp{display:flex;gap:6px;align-items:center}
 /* compact while the where-you-are line shows: smaller buttons (their padding is in em, so it shrinks with them), less padding */

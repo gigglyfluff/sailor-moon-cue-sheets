@@ -246,11 +246,13 @@ function rowNotes(r){
   }
   if (r.dn) mark.dn = add(noteText(edText(r.dn.t)) + (r.dn.u ? ` ${ext(r.dn.u, '(source)', '')}` : ''));
   if (r.tx) mark.tx = add(`<b>${jaWords(esc(r.tx.c))}</b>${printedAs(r.tx.p)}. ${noteText(r.tx.n)}`);
-  // CD notes open with "Book prints 1-18;", which the "(printed …)" already says; a box-set place in one (3-11-1) links to
-  // that track on the albums page
-  const cdRefs = h => h.replace(/(^|[\s(])(\d{1,2})-(\d{1,2})(-\d)?(?=[\s).,;:]|$)/g, (m, pre, d, t, p) =>
-    ALBUMS[d]?.p === 'MMB' && ALBUMS[d].t[t] ? `${pre}<a class="go" href="${ALBUMS_PAGE}#${trackId(d, t)}" title="Show on the albums page">${d}-${t}${p || ''}</a>` : m);
-  if (r.cdx) mark.cd = add(`<b>${extOr(r.cdu, 'CD ' + esc(r.cdx), '')}</b>${r.cd ? printedAs(r.cd) : ' <span class="was">(no CD printed)</span>'}. `
+  // CD notes open with "Book prints 1-18;", which the "(printed …)" already says; a CD place in one (3-11-1, R-7-3,
+  // 歌-5-8) links to that track on the albums page
+  const cdRefs = h => h.replace(/(^|[\s(])((?:ST[12]|SS|EX|R|S|歌|\d{1,2})-\d{1,2}(?:-\d{1,2})?(?:-\d)?)(?=[\s).,;:]|$)/g, (m, pre, place) => {
+    const o = parseCd(place);
+    return o && ALBUMS[o.code]?.t[o.key] ? `${pre}<a class="go" href="${ALBUMS_PAGE}#${trackId(o.code, o.key)}" title="Show on the albums page">${place}</a>` : m;
+  });
+  if (r.cdx) mark.cd = add(`<b>${extOr(r.cdu, r.cdx === NO_CD ? 'Not on the CD' : 'CD ' + esc(r.cdx), '')}</b>${r.cd ? printedAs(r.cd) : ' <span class="was">(no CD printed)</span>'}. `
     + cdRefs(noteText(r.cdn.replace(/^Book prints [^;]+;\s*/, '').replace(/^./, c => c.toUpperCase()))));
   else if (r.cdn) mark.cd = add(cdRefs(noteText(r.cdn)));   // a note on a CD entry that stands as printed
   return {items, mark};
@@ -307,11 +309,19 @@ const USES = {};
     if (!e || e.w !== w) list.push(e = {w, rows: []});
     e.rows.push({id: ROW_ID.get(r), part: w.type === 'movie' ? null : p.k[0], m: r.m, d: r.d});   // d: the row's description, for the albums page
   }))));
+/* a film row that plays its own piece is one of that piece's uses (a film table is the film's cue sheet and its music
+   list at once): by row id, the use it adds to its own Uses list, and to the list of any row elsewhere reusing it */
+const OWN_USE = {};
+D.works.filter(w => w.type === 'movie').forEach(w => w.parts.forEach(p => p.r.forEach(r => {
+  if (!(r.cl || []).some(c => c[1])) { const id = ROW_ID.get(r); OWN_USE[id] = {w, rows: [{id, part: null, m: r.m}]}; }
+})));
 /* a BGM list or film row's Uses cell: the same "N uses" button and list as the albums page's Uses column */
 const usedCell = (id, self) => usesCell(id, self, 'ed du');
 /* a BGM list or film row's CD / Track cell: the album its CD position points to (cover) and the track (place and title),
    from albums.js, with any CD correction applied. */
 const ALBUMS = window.MMB_ALBUMS || {};
+/* a CD correction of — : the booklet prints a CD place, but the piece isn't on any CD (M-110B: 8-21-1 is really M-111B) */
+const NO_CD = '—';
 /* the track number, and the piece within it after a hyphen as in the booklet's own key (p.104: 1-1-1 = disc 1, track 1, first piece) */
 /* a CD position: album code (a box-set disc number, or R, S, SS, ST1, ST2, EX, 歌), then track and piece; 歌 adds its
    disc first. key = the track's key in albums.js (歌: disc-track). */
@@ -336,18 +346,20 @@ function partLetter(code, key, c){
    the place in the booklet's form, corrected (8-3-1, R-8-3, 歌-2-10; a link to the track), and the track's title;
    c = the row's code, for a part of a shared piece (3-11-3a) */
 function cdCells(cd, c){
-  if (!cd) return '<td class="ed"></td>';
+  if (!cd || cd === NO_CD) return '<td class="ed"></td>';
   const o = parseCd(cd), al = o && ALBUMS[o.code], at = al && al.t[o.key];
   // a box-set disc only when the track exists; another album even without its title
+  // a piece the booklet names but the CD has no audio for (3-11-5, M-105B SE; its note says so): nothing to show
+  if (al && o.piece && al.s?.[o.key] && +o.piece > al.s[o.key].length) return '<td class="ed"></td>';
   if (al && (at || !al.p)) {
-    const name = al.n.length === 2 ? `${al.n[0]} / ${al.n[1]}` : al.n.join(' / ');
+    // a disc of a set listed by disc (the song box): that disc's own cover, title and section
+    const disc = o.disc && al.dn?.[o.disc];
+    const name = disc ? `Disc ${o.disc}: ${disc[1]}` : al.n.length === 2 ? `${al.n[0]} / ${al.n[1]}` : al.n.join(' / ');
     const letter = c && o.piece ? partLetter(o.code, o.key, c) : '';
     const place = `${o.code}-${o.key}${o.piece ? '-' + o.piece : ''}${letter}`;
     // the cover, and beside it the place above the title
-    return `<td class="ed"><div class="trk"><a href="${ALBUMS_PAGE}#al-${esc(o.code)}" title="${esc(name)}">${cover(al)}</a>`
-      // a piece the booklet names but the CD has no audio for (3-11-5, M-105B SE) isn't on the albums page: no link
-      + `<div class="tname">${o.piece && al.s?.[o.key] && +o.piece > al.s[o.key].length ? `<span class="tno" translate="no">${esc(place)}</span>`
-        : `<a class="go tno" translate="no" href="${ALBUMS_PAGE}#${trackId(o.code, o.key)}" title="Show on the albums page">${esc(place)}</a>`}`
+    return `<td class="ed"><div class="trk"><a href="${ALBUMS_PAGE}#al-${esc(o.code)}${disc ? '-' + esc(o.disc) : ''}" title="${esc(name)}">${cover(disc ? {img: disc[2]} : al)}</a>`
+      + `<div class="tname"><a class="go tno" translate="no" href="${ALBUMS_PAGE}#${trackId(o.code, o.key)}" title="Show on the albums page">${esc(place)}</a>`
       + `${at ? stack(at) : ''}</div></div></td>`;
   }
   return `<td class="ed"><div class="trow"><span class="tno" translate="no">${esc(cd)}</span></div></td>`;
@@ -373,7 +385,7 @@ function catHtml(c, heart = true){
   c.r.forEach(r => {
     const id = r.c !== '—' ? cueId(r.c) : '', n = rowNotes(r);
     html += `<tr${id ? ` id="${esc(id)}"` : ''}><td class="code">${codeCell(r, n.mark.code)}</td><td class="tm" translate="no">${tm(r.t)}</td>`
-      + `${pieceLinks(dcells(r.d, r.dx, n.mark.dx, n.mark.dn), r.c)}<td class="num" translate="no">${r.cd ? cdCell(r, n.mark.cd) : '<span class="blank"></span>'}</td>${cdCells(r.cdx || r.cd, r.c)}`
+      + `${pieceLinks(dcells(r.d, r.dx, n.mark.dx, n.mark.dn), r.c)}<td class="num" translate="no">${r.cd ? cdCell(r, n.mark.cd) : '<span class="blank"></span>' + mk(n.mark.cd)}</td>${cdCells(r.cdx || r.cd, r.c)}`
       + `${id ? usedCell(id) : '<td class="ed"></td>'}${notesCell(n)}</tr>`;
   });
   return html + `</tbody></table></div>${noteBlock(bookNotes.filter(n => n.c === c.id))}${pageTag(c.pp[0] ?? c.p, c.pp[1])}${heart ? '<div class="heart" aria-hidden="true">❤</div>' : ''}</div>`;
@@ -419,7 +431,10 @@ function cueTable(w, noCap){
       const ct = r.sh ? '' : `<td class="code"${rs}>${creditCell(r, n.mark)}</td><td class="tm" translate="no"${rs}>${tm(r.t, r.tx, n.mark.tx)}</td>`;
       const m = r.cont ? '' : `<td class="num" translate="no"${mrs}>${esc(r.m)}</td>`;
       const d = r.cont ? '' : dcells(r.d, r.dx, n.mark.dx, n.mark.dn).replace('<td', '<td' + mrs);
-      html += film ? `<tr id="${esc(id)}">${m}${ct}${d}<td class="num" translate="no">${cdCell(r, n.mark.cd)}</td>${cdCells(r.cdx || r.cd)}${usedCell(id)}${notesCell(n)}</tr>`
+      // a row that reuses a cue from another table (its credit links there) shows that cue's uses, its own among them
+      const reused = film && (r.cl || []).find(c => c[1])?.[1];
+      const used = film ? (reused ? usedCell(reused, OWN_USE[reused]) : usedCell(id, OWN_USE[id])) : '';
+      html += film ? `<tr id="${esc(id)}">${m}${ct}${d}<td class="num" translate="no">${cdCell(r, n.mark.cd)}</td>${cdCells(r.cdx || r.cd)}${used}${notesCell(n)}</tr>`
                    : `<tr id="${esc(id)}">${m}${d}${ct}${notesCell(n)}</tr>`;
     });
     html += '</tbody>';
@@ -612,8 +627,7 @@ const ALBUM_HEAD = [
   {en: 'Track title'},
   {en: 'Time', c: 'tm'},
   {en: 'Piece', c: 'seg', t: 'Each piece on the track and where it plays: start–end, with its length in brackets. Measured from the CD audio at the silent gaps between pieces',
-    k: [['~', 'Approximate: a change in the music with no gap'], ['×', 'Crossfade: two codes on one piece, one fading into the other'],
-      ['+', 'Layered: one code plays within the other']]},
+    k: [['~', 'Approximate: a change in the music with no gap'], ['×', 'Crossfade: two codes on one piece, one fading into the other']]},
   {en: 'Uses', t: 'Every episode and film that uses the piece, with that cue sheet\'s description. Click the button to show them'},
   {en: 'BGM list reference', t: 'The piece\'s M-NO. in the BGM list (or the film\'s cue sheet) and its description there, from the booklet. The link icon goes to that entry, which also has the length printed in the booklet (TIME). Long text is cut off with …: click the cell to show the whole column'},
   {en: 'Same as', c: 'also', t: 'The same recording on another album, found from the audio: the box set\'s place for an original-album piece, or the original albums\' pieces for a box-set piece'}];
@@ -651,10 +665,10 @@ function segCell(sp, t, end){
 }
 /* one of two codes sharing a piece (albums.js x: [piece, start, end]): where it plays within it, approximate */
 /* × a crossfade (one fades into the other; times approximate), + layered (one plays within the other, so both cover the
-   whole piece); joined end to end at a dip in the audio: no mark, the time is exact */
+   whole piece); joined end to end at a dip or a clear change in the audio: no mark, the time is exact */
 const MIX = {crossfade: ['×', 'Crossfade: this part fades into the other. Approximate, found by ear'],
   layered: ['+', 'Layered: one code plays within the other here, so each covers the whole piece'],
-  joined: ['', 'Joined end to end: the next code starts at a near-silent dip, found from the audio']};
+  joined: ['', 'Joined end to end: the next code starts straight after, at a near-silent dip or a clear change in the music, found from the audio']};
 const partSeg = ([, start, end, mix], t) => { const [mark, title] = MIX[mix] || MIX.crossfade;
   return `<td class="seg" translate="no" title="${esc(title)}">${segRow(t, segText(start, end, mark))}</td>`; };
 /* a piece the tray card prints but the booklet never places at this track (albums.js e: [as printed, code]): its code
@@ -662,11 +676,12 @@ const partSeg = ([, start, end, mix], t) => { const [mark, title] = MIX[mix] || 
 const EXTRA_WORDS = [[/編集$/, ['編集', 'henshuu', 'edit']], [/―4種$/, ['4種', 'yonshu', '4 versions']]];
 function extraCells(ex, also = ''){
   if (!ex) return `<td></td><td></td><td class="also">${also}</td>`;
-  const [printed, code] = ex;
+  const [printed, code, cardNote] = ex;
   const fmt = p => p.replace(/^([A-Z]+)(\d)/, '$1-$2');      // J10 -> J-10
   const word = EXTRA_WORDS.find(([re]) => re.test(printed));
   const list = code ? [code] : printed.split('+').map(fmt);   // two joined: C1a+C1b (the icon goes to the first)
-  const note = 'Not placed at this track in the BGM list (the tray card prints ' + printed + ')';
+  // what the card's label means, when the site has worked it out (J11編集: an edit of J-11, and which parts)
+  const note = 'Not on BGM list (the tray card prints ' + printed + ')' + (cardNote ? ': ' + cardNote : '');
   return '<td></td>' + refCell(cueId(list[0]), `${esc(list.join('+'))}${word ? ` <span class="src">${tx(word[1], null, 'inl')}</span>` : ''}`, en(esc(note)), 'was')
     + `<td class="also">${also}</td>`;
 }
@@ -708,6 +723,12 @@ function albumTable(code, al, pieces){
     const also = x => x.twin ? twinTag(x.twin)
       : al.p === 'MMB' ? sameAsOriginals(places.length > 1 && x.piece ? `${code}-${key}-${x.piece}` : `${code}-${key}`) : '';
     if (!list.length) html += `<tr>${head}${segOf({}, '')}${extraCells(ex?.['1'], also({}))}</tr>`;
+    // several codes on one whole piece (M-330 and its edit M-330A on 4-20-2): one Piece cell spanning their rows. A code
+    // with its own part of a piece (a, b) keeps its own cell.
+    const pieceKey = x => x.blank || (!(x.w && FILMS[x.w.id]) && al.x?.[key]?.[x.r.c]) ? null : 'p' + (x.piece || '');
+    const span = list.map((x, i) => { const k = pieceKey(x); if (!k) return 1; if (i && pieceKey(list[i - 1]) === k) return 0;
+      let n = 1; while (i + n < list.length && pieceKey(list[i + n]) === k) n++; return n; });
+    const spanned = (cell, i) => !span[i] ? '' : span[i] > 1 ? cell.replace('<td class="seg"', `<td class="seg" rowspan="${span[i]}"`) : cell;
     list.forEach((x, i) => {
       if (x.blank && x.twin) { html += `<tr>${i ? '' : head}${segOf(x, x.piece)}<td></td><td></td><td class="also">${also(x)}</td></tr>`; return; }
       if (x.blank) { html += `<tr>${i ? '' : head}${segOf(x, x.piece)}${extraCells(ex?.[x.piece], also(x))}</tr>`; return; }
@@ -716,10 +737,11 @@ function albumTable(code, al, pieces){
       const pt = (x.piece || '') + (part ? partLetter(code, key, r.c) : '');
       const placeHere = part ? partSeg(part, pt) : segOf(x, pt);
       const codeTxt = r.c && r.c !== '—' ? r.c : film ? 'M ' + r.m : '';
-      // a code with a variant word (M-58 S・マーキュリー) shows it in each language, as in the BGM list
-      const shown = !film && r.cn ? stack(r.cn) : esc(codeTxt);
+      // a code with a variant word (M-58 S・マーキュリー), or a film credit printed with words ((M-520別)), shows it in each
+      // language, as in the BGM list
+      const shown = !film && r.cn ? stack(r.cn) : Array.isArray(codeTxt) ? stack(codeTxt) : esc(codeTxt);
       const self = film ? {w: x.w, rows: [{id: x.id, part: null, m: r.m}]} : null;
-      html += `<tr>${i ? '' : head}${placeHere}`
+      html += `<tr>${i ? '' : head}${spanned(placeHere, i)}`
         + usesCell(x.id, self)
         + refCell(x.id, `${shown}${film ? ` <span class="src">${en(esc(film.short))}</span>` : ''}`, r.d ? stack(r.d) : '')
         + `<td class="also">${also(x)}</td></tr>`;
@@ -793,7 +815,7 @@ document.addEventListener('keydown', e => {
 });
 { let t; addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => measureXcols(), 150); }); }
 /* ---------- where you are ----------
-   A line under the top bar naming the sections scrolled into: season › panel › episode › table heading › part, or album ›
+   A line under the top bar naming the sections scrolled into: season › panel › episode › table heading › film segment, or album ›
    disc. A level shows once its heading has gone under the bar; clicking one scrolls back to that heading.
    Under it, once a table's column heads scroll under, a small one-line copy of them, lined up with the columns. (A copy, not
    the heads themselves pinned: shrinking the real row would pull the rows below it up and make the table jump.) */
@@ -814,29 +836,31 @@ document.addEventListener('keydown', e => {
   const TO_TOP = '<button type="button" class="to-top" data-top title="Back to the top" aria-label="Back to the top">'
     + '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 1 1 9.4 3.5a7 7 0 0 0 11.1 11.1z" fill="currentColor"/>'
     + '<path d="M18.2 3.2l.5 1.3 1.3.5-1.3.5-.5 1.3-.5-1.3-1.3-.5 1.3-.5z" fill="currentColor"/></svg></button><span aria-hidden="true">›</span>';   // a crescent and a twinkle
-  /* the bar's own buttons shrink while this line shows. A bottom margin makes up the height it loses, so the page under it
-     doesn't move (moving it would shift where the headings are, and flick the line off and on again) */
+  /* the bar is fixed to the window, so it takes no room in the page: the page starts below the bar's full height (--barh),
+     and the bar's buttons can shrink while this line shows without moving anything under it */
+  let full = 0;
   const compact = on => {
-    bar.classList.remove('compact'); bar.style.marginBottom = '';
-    if (!on) return;
-    const full = bar.offsetHeight;
-    bar.classList.add('compact'); bar.style.marginBottom = full - bar.offsetHeight + 'px';
+    bar.classList.remove('compact');
+    full = bar.offsetHeight; document.documentElement.style.setProperty('--barh', full + 'px');
+    if (on) bar.classList.add('compact');
   };
+  compact(false);
   let marks = [], key = '', pinned = null, pinLang = '';
   function update(){
     // the bar at full size, and this line's own height below it
-    const line = bar.getBoundingClientRect().bottom + (parseFloat(bar.style.marginBottom) || 0) + 30;
+    const line = bar.getBoundingClientRect().top + full + 30;
     const items = [];   // [label, element to go back to]
     let inner = null;
     document.querySelectorAll('details[open]').forEach(d => {
       const s = d.firstElementChild, r = d.getBoundingClientRect();
       if (s.getBoundingClientRect().bottom < line && r.bottom > line) { items.push([label(s), d, picture(s)]); inner = d; }
     });
-    // inside a table: its heading, then the last heading row (a film segment, a cue sheet part) gone under the bar
+    // inside a table: its heading, then the last film-segment heading gone under the bar (cue sheet parts, A part / B part,
+    // aren't a level: the episode is enough)
     const table = inner && [...inner.querySelectorAll('table.bk')].find(t => { const r = t.getBoundingClientRect(); return r.top < line && r.bottom > line; });
     if (table) {
       let last = null;
-      table.querySelectorAll('tbody th.cap, tr.part > th').forEach(th => { if (th.getBoundingClientRect().bottom < line) last = th; });
+      table.querySelectorAll('tbody th.cap').forEach(th => { if (th.getBoundingClientRect().bottom < line) last = th; });
       // a table's title band, unless it repeats its section's name (a film's "…: cue sheet and BGM list" under its
       // "Movie: Cue Sheet & BGM List" panel): the same words after the last colon (in Japanese, the last wide space)
       const head = table.tHead?.querySelector('th.cap'), tail = t => t.split(/: |\u3000/).pop().toLowerCase().replace(/&/g, 'and');
@@ -1045,10 +1069,6 @@ addEventListener('pageshow', e => {
   const el = history.state?.anchor && document.getElementById(history.state.anchor); if (!el) return;
   el.classList.add('flash'); setTimeout(() => el.classList.remove('flash'), 1800);
 });
-/* a piece's uses (the Uses column on both pages): shown on demand */
-/* the top bar stays in view when the page scrolls sideways (a table can be wider than the window) */
-{ const bar = document.getElementById('bar');
-  if (bar) addEventListener('scroll', () => { bar.style.transform = scrollX ? `translateX(${scrollX}px)` : ''; }, {passive: true}); }
 /* a piece's uses (the Uses column on both pages): its button opens the list in a box under it, which
    closes on a second click, a click elsewhere or Escape */
 const usesPop = document.createElement('div');

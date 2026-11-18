@@ -154,7 +154,7 @@ album,ord,track,title_ja,title_ro,title_en,length
 5,20,21,死の月、総攻撃,"Shi no Tsuki, Soukougeki","Dead Moon, All-Out Attack",290.927
 5,21,22,クリスタルパワーメイクアップ,Kurisutaru Pawaa Meikuappu,Crystal Power Make Up,327.759
 5,22,23,スーパーズ予告編音楽,Suupaazu Yokokuhen Ongaku,SuperS Preview Music,48.092
-5,23,24,"「""らしく""いきましょ」～マーチヴァージョン～","""'Rashiku' Ikimasho"" ~Maachi Vaajon~",Let's Be True to Ourselves ~March Version~,216.817
+5,23,24,"「""らしく""いきましょ」～マーチヴァージョン～","""'Rashiku' Ikimasho"" ~Maachi Vaajon~",I'll Go As Myself ~March Version~,216.817
 6,0,1,「ゴールデンクイーン・ギャラクシア」～オルゴールヴァージョン～,"""Gooruden Kuiin Gyarakushia"" ~Orugooru Vaajon~",Golden Queen Galaxia ~Music Box Version~,161.438
 6,1,2,「セーラースターソング」TVサイズ、SE入り,"""Seeraa Sutaa Songu"" TV Saizu, SE-iri",Sailor Star Song (TV Size with Sound Effects),96.55
 6,2,3,セーラースターズサブタイトル音楽,Seeraa Sutaazu Sabutaitoru Ongaku,Sailor Stars Subtitle Music,10.476
@@ -286,7 +286,7 @@ album,ord,track,title_ja,title_ro,title_en,length
 10,24,25,セーラーマーキュリー,Seeraa Maakyurii,Sailor Mercury,51.018
 10,25,26,マーキュリーアクアミラージュ,Maakyurii Akua Miraaju,Mercury Aqua Mirage,52.742
 10,26,27,終曲,Shuukyoku,Finale,86.466
-10,27,28,"「""らしく""いきましょ」TVサイズ","""'Rashiku' Ikimasho"" TV Saizu",Let's Be True to Ourselves (TV Size),94.643
+10,27,28,"「""らしく""いきましょ」TVサイズ","""'Rashiku' Ikimasho"" TV Saizu",I'll Go As Myself (TV Size),94.643
 10,28,29,第1回録音未収録劇伴集,Dai 1-kai Rokuon Mishuuroku Gekiban-shuu,Unreleased Score from the 1st Recording Session,272.092
 10,29,30,「三時の妖精」～インストヴァージョン～,"""Sanji no Yousei"" ~Insuto Vaajon~",The Three O'Clock Fairy ~Instrumental Version~,204.148
 10,30,31,「Morning Moonで会いましょう」～インストヴァージョン～,"""Morning Moon de Aimashou"" ~Insuto Vaajon~",Let's Meet at Morning Moon ~Instrumental Version~,269.715
@@ -382,13 +382,13 @@ SS,12,13,ダブル変身！ムーン＆ちびムーン,Daburu Henshin! Muun & Ch
 SS,13,14,ムーンゴージャスメディテイション！,Muun Goojasu Meditishon!,Moon Gorgeous Meditation!,198.218
 SS,14,15,いつか、そんな“私たち”になりたい,"Itsuka, Sonna ""Watashi-tachi"" ni Naritai","Someday, I Want Us to Be Like That",228.677
 SS,15,16,それじゃあ、また来週ネ,"Sore jaa, Mata Raishuu ne","Well Then, See You Next Week",33.438
-SS,16,17,エンディング「“らしく”いきましょ」,"Endingu ""'Rashiku' Ikimasho""",Ending: Let's Be True to Ourselves,212.35
+SS,16,17,エンディング「“らしく”いきましょ」,"Endingu ""'Rashiku' Ikimasho""",Ending: I'll Go As Myself,212.35
 SSM,0,1,ムーンライト伝説,Muunraito Densetsu,Moonlight Legend,175.074
 SSM,1,2,亜美ちゃんの朝,Ami-chan no Asa,Ami-chan's Morning,86.728
 SSM,2,3,可愛い企み,Kawaii Takurami,Cute Scheme,73.405
 SSM,3,4,恐怖、危機、マーキュリー登場,"Kyoufu, Kiki, Maakyurii Toujou","Terror, Crisis, Mercury Appears",285.964
 SSM,4,5,終曲,Shuukyoku,Finale,88.556
-SSM,5,6,“らしく”いきましょ,"""Rashiku"" Ikimasho",Let's Be True to Ourselves,214.545
+SSM,5,6,“らしく”いきましょ,"""Rashiku"" Ikimasho",I'll Go As Myself,214.545
 SSM,6,7,ふれあい～ペルルのテーマ～,Fureai ~Peruru no Teema~,Connection ~Perle's Theme~,111.257
 SSM,7,8,ププランの笛と子供達,Pupuran no Fue to Kodomo-tachi,Poupelin's Flute and the Children,145.738
 SSM,8,9,ボンボンベイビーの攻撃!!,Bonbon Beibii no Kougeki!!,The Bonbon Babies Attack!!,56.295
@@ -459,7 +459,7 @@ EX,25,26,タキシード・ミラージュ（TVサイズ）,Takishiido Miraaju (
 歌,4,1-5,ムーンライト伝説,Muunraito Densetsu,Moonlight Legend,173.976
 歌,5,1-6,タキシード・ミラージュ,Takishiido Miraaju,Tuxedo Mirage,217.417
 歌,6,1-7,私たちになりたくて,Watashi-tachi ni Naritakute,Wanting to Be Like Us,322.717
-歌,7,1-8,"""らしく""いきましょ","""Rashiku"" Ikimasho",Let's Be True to Ourselves,213.368
+歌,7,1-8,"""らしく""いきましょ","""Rashiku"" Ikimasho",I'll Go As Myself,213.368
 歌,8,1-9,セーラースターソング,Seeraa Sutaa Songu,Sailor Star Song,233.3
 歌,9,1-10,風も空もきっと…,Kaze mo Sora mo Kitto…,"The Wind and the Sky, Surely…",288.131
 歌,10,1-11,ムーンライト伝説（オリジナルカラオケ）,Muunraito Densetsu (Orijinaru Karaoke),Moonlight Legend (Original Karaoke),176.144
@@ -468,7 +468,7 @@ EX,25,26,タキシード・ミラージュ（TVサイズ）,Takishiido Miraaju (
 歌,13,1-14,乙女のポリシー（オリジナルカラオケ）,Otome no Porishii (Orijinaru Karaoke),A Maiden's Policy (Original Karaoke),196.807
 歌,14,1-15,タキシード・ミラージュ（オリジナルカラオケ）,Takishiido Miraaju (Orijinaru Karaoke),Tuxedo Mirage (Original Karaoke),218.201
 歌,15,1-16,私たちになりたくて（オリジナルカラオケ）,Watashi-tachi ni Naritakute (Orijinaru Karaoke),Wanting to Be Like Us (Original Karaoke),323.239
-歌,16,1-17,"""らしく""いきましょ（オリジナルカラオケ）","""Rashiku"" Ikimasho (Orijinaru Karaoke)",Let's Be True to Ourselves (Original Karaoke),213.76
+歌,16,1-17,"""らしく""いきましょ（オリジナルカラオケ）","""Rashiku"" Ikimasho (Orijinaru Karaoke)",I'll Go As Myself (Original Karaoke),213.76
 歌,17,1-18,セーラースターソング（オリジナルカラオケ）,Seeraa Sutaa Songu (Orijinaru Karaoke),Sailor Star Song (Original Karaoke),233.639
 歌,18,1-19,風も空もきっと…（オリジナルカラオケ）,Kaze mo Sora mo Kitto… (Orijinaru Karaoke),"The Wind and the Sky, Surely… (Original Karaoke)",286.38
 歌,19,2-1,合コトバはムーン・プリズム・パワー・メイクアップ！,Aikotoba wa Muun Purizumu Pawaa Meikuappu!,The Password Is Moon Prism Power Make Up!,262.896

@@ -62,7 +62,7 @@ album,track,piece,start,dur,break,checked,note
 3,11,4,172.7,13.5,silence,0,\N
 3,12,1,0.0,93.3,\N,0,\N
 3,12,2,93.3,29.1,silence,0,\N
-3,12,3,122.3,143.9,silence,0,\N
+3,12,3,122.3,143.9,silence,1,\N
 3,13,1,0.0,111.2,\N,0,\N
 3,13,2,111.2,110.6,silence,0,\N
 3,13,3,221.8,76.9,silence,0,\N
@@ -110,7 +110,7 @@ album,track,piece,start,dur,break,checked,note
 4,13,1,0.0,21.9,\N,0,\N
 4,13,2,21.9,33.0,silence,0,\N
 4,14,1,0.0,97.3,\N,0,\N
-4,14,2,97.3,109.8,silence,0,\N
+4,14,2,97.3,109.8,silence,1,\N
 4,14,3,207.1,98.6,silence,0,\N
 4,14,4,305.7,99.1,silence,0,\N
 4,14,5,404.8,126.0,silence,0,\N
@@ -256,7 +256,7 @@ album,track,piece,start,dur,break,checked,note
 8,16,2,36.9,105.0,silence,0,\N
 8,16,3,142.0,62.5,silence,0,\N
 8,16,4,204.4,22.9,silence,0,\N
-8,21,1,0.0,84.4,\N,0,\N
+8,21,1,0.0,84.4,\N,1,\N
 8,21,2,84.4,42.3,silence,0,\N
 9,1,1,0.0,50.0,\N,0,\N
 9,1,2,50.0,52.8,silence,0,\N
@@ -309,8 +309,8 @@ album,track,piece,start,dur,break,checked,note
 10,7,3,48.8,13.8,silence,0,\N
 10,7,4,62.6,34.3,silence,0,\N
 10,8,1,0.0,88.1,\N,0,\N
-10,8,2,88.1,27.6,silence,0,\N
-10,8,3,115.7,3.8,dip,0,\N
+10,8,2,88.1,26.9,silence,0,\N
+10,8,3,115.0,4.5,silence,0,\N
 10,9,1,0.0,5.2,\N,0,\N
 10,9,2,5.2,83.6,silence,0,\N
 10,10,1,0.0,40.5,\N,0,\N
@@ -320,7 +320,7 @@ album,track,piece,start,dur,break,checked,note
 10,12,2,110.5,9.7,silence,0,\N
 10,12,3,120.1,45.5,silence,0,\N
 10,12,4,165.7,7.2,silence,0,\N
-10,13,1,0.0,102.3,\N,0,\N
+10,13,1,0.0,86.5,\N,0,\N
 10,14,1,0.0,7.4,\N,0,\N
 10,14,2,7.4,70.2,silence,0,\N
 10,14,3,77.6,115.0,silence,0,\N
@@ -465,8 +465,8 @@ R,6,1,0.0,110.5,\N,0,\N
 R,6,2,110.5,88.1,silence,0,\N
 R,6,3,198.6,98.9,silence,0,\N
 R,7,1,0.0,97.4,\N,0,\N
-R,7,2,97.4,115.8,silence,0,\N
-R,7,3,213.2,38.3,change,0,\N
+R,7,2,97.4,114.7,silence,0,\N
+R,7,3,212.1,39.4,silence,0,\N
 R,7,4,251.5,44.4,change,0,\N
 R,8,1,0.0,89.3,\N,0,\N
 R,8,2,89.3,126.3,silence,0,\N
@@ -710,3 +710,4 @@ EX,23,10,502.8,23.9,silence,0,\N
 EX,23,11,526.7,20.9,silence,0,\N
 EX,23,12,547.6,23.5,silence,0,\N
 EX,23,13,571.1,29.4,silence,0,\N
+10,13,2,86.5,15.8,silence,1,"Poupelin's flute: a solo melody (clarinet-like) of about 13 s after a silence, ending on a held note; the SuperS film uses about 2 s of it (M 35). Found from the audio and confirmed by ear"
