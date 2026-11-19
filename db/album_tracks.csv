@@ -1,565 +1,565 @@
-album,ord,track,title_ja,title_ro,title_en,length
-1,0,1,ムーンライト伝説　TVサイズ,Muunraito Densetsu TV Saizu,Moonlight Legend (TV Size),86.492
-1,1,2,あたしだって普通の女の子1,Atashi Datte Futsuu no Onnanoko 1,"I'm Just an Ordinary Girl, Too 1",14.551
-1,2,3,あたしだって普通の女の子2,Atashi Datte Futsuu no Onnanoko 2,"I'm Just an Ordinary Girl, Too 2",64.602
-1,3,4,あたしだって普通の女の子3,Atashi Datte Futsuu no Onnanoko 3,"I'm Just an Ordinary Girl, Too 3",67.737
-1,4,5,あたしだって普通の女の子4,Atashi Datte Futsuu no Onnanoko 4,"I'm Just an Ordinary Girl, Too 4",77.872
-1,5,6,あたしだって普通の女の子5,Atashi Datte Futsuu no Onnanoko 5,"I'm Just an Ordinary Girl, Too 5",78.917
-1,6,7,あたしだって普通の女の子6,Atashi Datte Futsuu no Onnanoko 6,"I'm Just an Ordinary Girl, Too 6",10.607
-1,7,8,あたしだって普通の女の子7,Atashi Datte Futsuu no Onnanoko 7,"I'm Just an Ordinary Girl, Too 7",75.417
-1,8,9,本当に選ばれた戦士なの？1,Hontou ni Erabareta Senshi na no? 1,Was I Really Chosen to Be a Guardian? 1,72.987
-1,9,10,本当に選ばれた戦士なの？2,Hontou ni Erabareta Senshi na no? 2,Was I Really Chosen to Be a Guardian? 2,70.27
-1,10,11,本当に選ばれた戦士なの？3,Hontou ni Erabareta Senshi na no? 3,Was I Really Chosen to Be a Guardian? 3,68.703
-1,11,12,本当に選ばれた戦士なの？4,Hontou ni Erabareta Senshi na no? 4,Was I Really Chosen to Be a Guardian? 4,14.812
-1,12,13,本当に選ばれた戦士なの？5,Hontou ni Erabareta Senshi na no? 5,Was I Really Chosen to Be a Guardian? 5,70.584
-1,13,14,本当に選ばれた戦士なの？6,Hontou ni Erabareta Senshi na no? 6,Was I Really Chosen to Be a Guardian? 6,106.006
-1,14,15,星空はミステリアス1,Hoshizora wa Misuteriasu 1,The Starry Sky Is Mysterious 1,65.229
-1,15,16,星空はミステリアス2,Hoshizora wa Misuteriasu 2,The Starry Sky Is Mysterious 2,61.807
-1,16,17,星空はミステリアス3,Hoshizora wa Misuteriasu 3,The Starry Sky Is Mysterious 3,70.715
-1,17,18,星空はミステリアス4,Hoshizora wa Misuteriasu 4,The Starry Sky Is Mysterious 4,15.622
-1,18,19,星空はミステリアス5,Hoshizora wa Misuteriasu 5,The Starry Sky Is Mysterious 5,49.242
-1,19,20,星空はミステリアス6,Hoshizora wa Misuteriasu 6,The Starry Sky Is Mysterious 6,106.241
-1,20,21,おっちょこちょいは生まれつき1,Occhokochoi wa Umaretsuki 1,Scatterbrained by Nature 1,16.092
-1,21,22,おっちょこちょいは生まれつき2,Occhokochoi wa Umaretsuki 2,Scatterbrained by Nature 2,68.05
-1,22,23,おっちょこちょいは生まれつき3,Occhokochoi wa Umaretsuki 3,Scatterbrained by Nature 3,84.716
-1,23,24,おっちょこちょいは生まれつき4,Occhokochoi wa Umaretsuki 4,Scatterbrained by Nature 4,67.371
-1,24,25,おっちょこちょいは生まれつき5,Occhokochoi wa Umaretsuki 5,Scatterbrained by Nature 5,80.824
-1,25,26,おっちょこちょいは生まれつき6,Occhokochoi wa Umaretsuki 6,Scatterbrained by Nature 6,14.003
-1,26,27,おっちょこちょいは生まれつき7,Occhokochoi wa Umaretsuki 7,Scatterbrained by Nature 7,78.682
-1,27,28,恋する乙女心1,Koisuru Otomegokoro 1,A Maiden's Heart in Love 1,17.843
-1,28,29,恋する乙女心2,Koisuru Otomegokoro 2,A Maiden's Heart in Love 2,73.118
-1,29,30,恋する乙女心3,Koisuru Otomegokoro 3,A Maiden's Heart in Love 3,18.208
-1,30,31,恋する乙女心4,Koisuru Otomegokoro 4,A Maiden's Heart in Love 4,76.331
-1,31,32,恋する乙女心5,Koisuru Otomegokoro 5,A Maiden's Heart in Love 5,79.57
-1,32,33,恋する乙女心6,Koisuru Otomegokoro 6,A Maiden's Heart in Love 6,18.861
-1,33,34,恋する乙女心7,Koisuru Otomegokoro 7,A Maiden's Heart in Love 7,87.224
-1,34,35,恋する乙女心8,Koisuru Otomegokoro 8,A Maiden's Heart in Love 8,42.502
-1,35,36,誰かが狙われている1,Dareka ga Nerawarete Iru 1,Someone Is Being Targeted 1,88.608
-1,36,37,誰かが狙われている2,Dareka ga Nerawarete Iru 2,Someone Is Being Targeted 2,60.71
-1,37,38,誰かが狙われている3,Dareka ga Nerawarete Iru 3,Someone Is Being Targeted 3,69.252
-1,38,39,誰かが狙われている4,Dareka ga Nerawarete Iru 4,Someone Is Being Targeted 4,90.045
-1,39,40,誰かが狙われている5,Dareka ga Nerawarete Iru 5,Someone Is Being Targeted 5,12.67
-1,40,41,誰かが狙われている6,Dareka ga Nerawarete Iru 6,Someone Is Being Targeted 6,117.186
-1,41,42,夢見るおだんごアタマ1,Yumemiru Odango Atama 1,Dreamy Dumpling-Head 1,85.212
-1,42,43,夢見るおだんごアタマ2,Yumemiru Odango Atama 2,Dreamy Dumpling-Head 2,14.995
-1,43,44,夢見るおだんごアタマ3,Yumemiru Odango Atama 3,Dreamy Dumpling-Head 3,82.052
-1,44,45,夢見るおだんごアタマ4,Yumemiru Odango Atama 4,Dreamy Dumpling-Head 4,78.891
-1,45,46,夢見るおだんごアタマ5,Yumemiru Odango Atama 5,Dreamy Dumpling-Head 5,13.872
-1,46,47,夢見るおだんごアタマ6,Yumemiru Odango Atama 6,Dreamy Dumpling-Head 6,74.006
-1,47,48,夢見るおだんごアタマ7,Yumemiru Odango Atama 7,Dreamy Dumpling-Head 7,100.128
-1,48,49,夕暮れ時は妖魔の予感1,Yuuguredoki wa Youma no Yokan 1,Dusk Brings a Premonition of Monsters 1,18.313
-1,49,50,夕暮れ時は妖魔の予感2,Yuuguredoki wa Youma no Yokan 2,Dusk Brings a Premonition of Monsters 2,78.212
-1,50,51,夕暮れ時は妖魔の予感3,Yuuguredoki wa Youma no Yokan 3,Dusk Brings a Premonition of Monsters 3,15.648
-1,51,52,夕暮れ時は妖魔の予感4,Yuuguredoki wa Youma no Yokan 4,Dusk Brings a Premonition of Monsters 4,73.275
-1,52,53,夕暮れ時は妖魔の予感5,Yuuguredoki wa Youma no Yokan 5,Dusk Brings a Premonition of Monsters 5,63.766
-1,53,54,夕暮れ時は妖魔の予感6,Yuuguredoki wa Youma no Yokan 6,Dusk Brings a Premonition of Monsters 6,85.526
-1,54,55,夕暮れ時は妖魔の予感7,Yuuguredoki wa Youma no Yokan 7,Dusk Brings a Premonition of Monsters 7,88.582
-1,55,56,HEART MOVING　TVサイズ,HEART MOVING TV Saizu,HEART MOVING (TV Size),96.941
-1,56,57,ミラクルロマンス,Mirakuru Romansu,Miracle Romance,422.088
-1,57,58,「ムーンライト伝説」～ピアノファンタジアヴァージョン～,"""Muunraito Densetsu"" ~Piano Fantajia Vaajon~",Moonlight Legend ~Piano Fantasia Version~,193.124
-1,58,59,「ムーンライト伝説」～マーチヴァージョン～,"""Muunraito Densetsu"" ~Maachi Vaajon~",Moonlight Legend ~March Version~,224.497
-2,0,1,アバンタイトル音楽,Aban Taitoru Ongaku,Avant-title Music,21.082
-2,1,2,「ムーンライト伝説」TVサイズ、SE入り,"""Muunraito Densetsu"" TV Saizu, SE-iri",Moonlight Legend (TV Size with Sound Effects),92.318
-2,2,3,セーラームーンサブタイトル音楽,Seeraa Muun Sabutaitoru Ongaku,Sailor Moon Subtitle Music,43.417
-2,3,4,うさぎ－ブリッジコレクション－,Usagi - Burijji Korekushon -,Usagi - Bridge Collection -,66.352
-2,4,5,乙女心,Otomegokoro,A Maiden's Heart,160.941
-2,5,6,「夢見るだけじゃダメ」～インストヴァージョン～,"""Yumemiru Dake ja Dame"" ~Insuto Vaajon~",Just Dreaming Isn't Enough ~Instrumental Version~,305.111
-2,6,7,セーラームーンアイキャッチ音楽,Seeraa Muun Aikyatchi Ongaku,Sailor Moon Eyecatch Music,12.54
-2,7,8,クインベリル,Kuin Beriru,Queen Beryl,130.404
-2,8,9,「愛のエナジーを奪え」～インストヴァージョン～,"""Ai no Enajii wo Ubae"" ~Insuto Vaajon~",Steal the Energy of Love ~Instrumental Version~,283.142
-2,9,10,ムーンパワーで変装,Muun Pawaa de Hensou,Disguise with Moon Power,39.812
-2,10,11,「合コトバはムーン・プリズム・パワー・メイクアップ！」～インストヴァージョン～,"""Aikotoba wa Muun Purizumu Pawaa Meikuappu!"" ~Insuto Vaajon~",The Password Is Moon Prism Power Make Up! ~Instrumental Version~,260.651
-2,11,12,華麗なるムーンプリズムパワーメイクアップ,Kareinaru Muun Purizumu Pawaa Meikuappu,Magnificent Moon Prism Power Make Up,263.55
-2,12,13,「月にかわっておしおきよ」～インストヴァージョン～,"""Tsuki ni Kawatte Oshioki yo"" ~Insuto Vaajon~","In the Name of the Moon, I'll Punish You ~Instrumental Version~",278.519
-2,13,14,ムーンティアラアクション,Muun Tiara Akushon,Moon Tiara Action,139.025
-2,14,15,「幻の銀水晶～シルバークリスタル」～インストヴァージョン～,"""Maboroshi no Ginzuishou ~ Shirubaa Kurisutaru"" ~Insuto Vaajon~",The Illusionary Silver Crystal ~ Silver Crystal ~Instrumental Version~,270.604
-2,15,16,絶望と悪1,Zetsubou to Aku 1,Despair and Evil 1,13.036
-2,16,17,絶望と悪2,Zetsubou to Aku 2,Despair and Evil 2,58.881
-2,17,18,絶望と悪3,Zetsubou to Aku 3,Despair and Evil 3,21.813
-2,18,19,絶望と悪4,Zetsubou to Aku 4,Despair and Evil 4,62.643
-2,19,20,絶望と悪5,Zetsubou to Aku 5,Despair and Evil 5,12.566
-2,20,21,絶望と悪6,Zetsubou to Aku 6,Despair and Evil 6,67.188
-2,21,22,セーラー戦士集結,Seeraa Senshi Shuuketsu,The Sailor Guardians Assemble,156.684
-2,22,23,星たちに守られて,Hoshi-tachi ni Mamorarete,Protected by the Stars,564.847
-2,23,24,リベンジ！セーラー戦士,Ribenji! Seeraa Senshi,Revenge! Sailor Guardians,87.59
-2,24,25,「ムーンライト伝説」～インストヴァージョン～,"""Muunraito Densetsu"" ~Insuto Vaajon~",Moonlight Legend ~Instrumental Version~,173.872
-2,25,26,「プリンセス・ムーン」TVサイズ,"""Purinsesu Muun"" TV Saizu",Princess Moon (TV Size),92.161
-2,26,27,セーラームーン予告編音楽,Seeraa Muun Yokokuhen Ongaku,Sailor Moon Preview Music,49.111
-2,27,28,「HEART MOVING」～インストヴァージョン～,"""HEART MOVING"" ~Insuto Vaajon~",HEART MOVING ~Instrumental Version~,218.045
-2,28,29,「プリンセス・ムーン」～インストヴァージョン～,"""Purinsesu Muun"" ~Insuto Vaajon~",Princess Moon ~Instrumental Version~,242.731
-2,29,30,サブタイトル音楽、メイクアップのテーマ　ロングヴァージョン,"Sabutaitoru Ongaku, Meikuappu no Teema Rongu Vaajon","Subtitle Music, Make Up Theme (Long Version)",138.816
-3,0,1,戦士の記憶,Senshi no Kioku,Memories of a Guardian,133.539
-3,1,2,「乙女のポリシー」～インストヴァージョン～,"""Otome no Porishii"" ~Insuto Vaajon~",A Maiden's Policy ~Instrumental Version~,193.412
-3,2,3,うさぎ,Usagi,Usagi,202.476
-3,3,4,「ほっとけないよ」～インストヴァージョン～,"""Hottokenai yo"" ~Insuto Vaajon~",I Can't Leave You Alone ~Instrumental Version~,269.115
-3,4,5,エイルとアン,Eiru to An,Ail and An,163.528
-3,5,6,魔界樹,Makaiju,The Makai Tree,199.211
-3,6,7,ブラックムーン,Burakku Muun,Black Moon,411.769
-3,7,8,Rアイキャッチ音楽,R Aikyatchi Ongaku,R Eyecatch Music,24.608
-3,8,9,うさぎと衛,Usagi to Mamoru,Usagi and Mamoru,381.389
-3,9,10,「好きと言って」～インストヴァージョン～,"""Suki to Itte"" ~Insuto Vaajon~",Say You Love Me ~Instrumental Version~,277.813
-3,10,11,ちびうさ,Chibiusa,Chibi-Usa,186.228
-3,11,12,さびしさを越えて,Sabishisa wo Koete,Beyond Loneliness,266.215
-3,12,13,セーラープルート,Seeraa Puruuto,Sailor Pluto,298.659
-3,13,14,黒い月、総攻撃,"Kuroi Tsuki, Soukougeki","Black Moon, All-Out Attack",467.097
-3,14,15,ムーンクリスタルパワーメイクアップ,Muun Kurisutaru Pawaa Meikuappu,Moon Crystal Power Make Up,239.544
-3,15,16,愛,Ai,Love,249.993
-3,16,17,夕陽,Yuuhi,Setting Sun,208.301
-3,17,18,「乙女のポリシー」TVサイズ,"""Otome no Porishii"" TV Saizu",A Maiden's Policy (TV Size),90.254
-3,18,19,R予告編音楽,R Yokokuhen Ongaku,R Preview Music,32.628
-3,19,20,「乙女のポリシー」～マーチヴァージョン～,"""Otome no Porishii"" ~Maachi Vaajon~",A Maiden's Policy ~March Version~,210.783
-4,0,1,運命の戦士,Unmei no Senshi,Guardians of Destiny,212.089
-4,1,2,「ムーンライト伝説」TVサイズSE入り,"""Muunraito Densetsu"" TV Saizu SE-iri",Moonlight Legend (TV Size with Sound Effects),92.892
-4,2,3,Sサブタイトル音楽,S Sabutaitoru Ongaku,S Subtitle Music,10.476
-4,3,4,ピュアな心,Pyua na Kokoro,Pure Heart,382.434
-4,4,5,はるかとみちる,Haruka to Michiru,Haruka and Michiru,277.552
-4,5,6,デスバスターズ,Desu Basutaazu,Death Busters,189.99
-4,6,7,ダイモーン出現,Daimoon Shutsugen,A Daimon Appears,163.71
-4,7,8,ダイモーン,Daimoon,Daimon,288.941
-4,8,9,追跡,Tsuiseki,Pursuit,227.266
-4,9,10,セーラーウラヌス＆ネプチューン,Seeraa Uranusu & Nepuchuun,Sailor Uranus & Neptune,223.27
-4,10,11,スパイラルハートムーンロッド,Supairaru Haato Muun Roddo,Spiral Heart Moon Rod,171.495
-4,11,12,ムーンコズミックパワーメイクアップ,Muun Kozumikku Pawaa Meikuappu,Moon Cosmic Power Make Up,211.854
-4,12,13,ピュアな心の結晶は無事,Pyua na Kokoro no Kesshou wa Buji,The Pure Heart Crystal Is Safe,54.884
-4,13,14,セーラー戦士同士の対立,Seeraa Senshi Doushi no Tairitsu,Sailor Guardians in Conflict,530.809
-4,14,15,マントは虹色,Manto wa Nijiiro,The Cape Is Rainbow-Colored,240.51
-4,15,16,「タキシード・ミラージュ」～インストヴァージョン～,"""Takishiido Miraaju"" ~Insuto Vaajon~",Tuxedo Mirage ~Instrumental Version~,215.668
-4,16,17,Sアイキャッチ音楽,S Aikyatchi Ongaku,S Eyecatch Music,11.887
-4,17,18,聖杯,Seihai,The Holy Grail,112.615
-4,18,19,帰ってきたちびうさ,Kaette Kita Chibiusa,Return of Chibi-Usa,333.193
-4,19,20,セーラーサターン,Seeraa Sataan,Sailor Saturn,200.517
-4,20,21,スーパーセーラームーン,Suupaa Seeraa Muun,Super Sailor Moon,154.986
-4,21,22,「タキシード・ミラージュ」TVサイズ,"""Takishiido Miraaju"" TV Saizu",Tuxedo Mirage (TV Size),91.586
-4,22,23,S予告編音楽,S Yokokuhen Ongaku,S Preview Music,79.596
-5,0,1,水晶の森,Suishou no Mori,Crystal Forest,184.844
-5,1,2,「ムーンライト伝説」TVサイズ SE入り,"""Muunraito Densetsu"" TV Saizu SE-iri",Moonlight Legend (TV Size with Sound Effects),92.84
-5,2,3,スーパーズサブタイトル音楽,Suupaazu Sabutaitoru Ongaku,SuperS Subtitle Music,10.424
-5,3,4,ちびうさの想い,Chibiusa no Omoi,Chibi-Usa's Feelings,156.945
-5,4,5,うさぎとちびうさ,Usagi to Chibiusa,Usagi and Chibi-Usa,258.587
-5,5,6,デッドムーン,Deddo Muun,Dead Moon,314.672
-5,6,7,アマゾントリオ,Amazon Torio,Amazon Trio,359.341
-5,7,8,アマゾントリオの罠,Amazon Torio no Wana,Amazon Trio's Trap,289.359
-5,8,9,ゆれる心,Yureru Kokoro,A Wavering Heart,139.626
-5,9,10,心の中のぞく,Kokoro no Naka Nozoku,Peeking Into Hearts,52.429
-5,10,11,レムレス,Remuresu,Lemures,392.177
-5,11,12,絶体絶命,Zettai Zetsumei,Desperate Situation,187.952
-5,12,13,ペガサス,Pegasasu,Pegasus,201.301
-5,13,14,ムーンクライシスメイクアップ,Muun Kuraishisu Meikuappu,Moon Crisis Make Up,105.196
-5,14,15,恋はLonely heart,Koi wa Lonely heart,Love Is a Lonely Heart,108.853
-5,15,16,「私たちになりたくて」TVサイズ,"""Watashi-tachi ni Naritakute"" TV Saizu",Wanting to Be Like Us (TV Size),97.15
-5,16,17,スーパーズアイキャッチ音楽,Suupaazu Aikyatchi Ongaku,SuperS Eyecatch Music,25.288
-5,17,18,ペガサスとちびうさ,Pegasasu to Chibiusa,Pegasus and Chibi-Usa,184.217
-5,18,19,ちびうさ、ペガサスを信じて,"Chibiusa, Pegasasu wo Shinjite","Chibi-Usa, Believe in Pegasus",174.551
-5,19,20,アマゾネスカルテット,Amazonesu Karutetto,Amazoness Quartet,173.611
-5,20,21,死の月、総攻撃,"Shi no Tsuki, Soukougeki","Dead Moon, All-Out Attack",290.927
-5,21,22,クリスタルパワーメイクアップ,Kurisutaru Pawaa Meikuappu,Crystal Power Make Up,327.759
-5,22,23,スーパーズ予告編音楽,Suupaazu Yokokuhen Ongaku,SuperS Preview Music,48.092
-5,23,24,"「""らしく""いきましょ」～マーチヴァージョン～","""'Rashiku' Ikimasho"" ~Maachi Vaajon~",I'll Go As Myself ~March Version~,216.817
-6,0,1,「ゴールデンクイーン・ギャラクシア」～オルゴールヴァージョン～,"""Gooruden Kuiin Gyarakushia"" ~Orugooru Vaajon~",Golden Queen Galaxia ~Music Box Version~,161.438
-6,1,2,「セーラースターソング」TVサイズ、SE入り,"""Seeraa Sutaa Songu"" TV Saizu, SE-iri",Sailor Star Song (TV Size with Sound Effects),96.55
-6,2,3,セーラースターズサブタイトル音楽,Seeraa Sutaazu Sabutaitoru Ongaku,Sailor Stars Subtitle Music,10.476
-6,3,4,5人は高校生,5-nin wa Koukousei,The Five Are High School Students,319.426
-6,4,5,ネヘレニア復活,Neherenia Fukkatsu,Nehelenia's Resurrection,260.546
-6,5,6,ほたるの予言,Hotaru no Yogen,Hotaru's Prophecy,102.244
-6,6,7,ミラーパレドリー,Miraa Paredorii,Mirror Paredri,298.372
-6,7,8,とらわれのセーラー戦士,Toraware no Seeraa Senshi,Captured Sailor Guardians,311.146
-6,8,9,プリンセスのために……,Purinsesu no Tame ni......,For the Princess......,224.524
-6,9,10,エターナルの愛,Etaanaru no Ai,Eternal Love,199.916
-6,10,11,セーラースターズ予告編音楽,Seeraa Sutaazu Yokokuhen Ongaku,Sailor Stars Preview Music,120.452
-6,11,12,衛との別れ,Mamoru to no Wakare,Parting with Mamoru,310.545
-6,12,13,シャドウギャラクティカ,Shadou Gyarakutika,Shadow Galactica,237.559
-6,13,14,「ゴールデンクイーン・ギャラクシア」～インストヴァージョン～,"""Gooruden Kuiin Gyarakushia"" ~Insuto Vaajon~",Golden Queen Galaxia ~Instrumental Version~,239.936
-6,14,15,ボクたちの歌をきいて,Boku-tachi no Uta wo Kiite,Listen to Our Song,231.812
-6,15,16,「真夜中ひとり」～インストヴァージョン～,"""Mayonaka Hitori"" ~Insuto Vaajon~",Alone at Midnight ~Instrumental Version~,213.944
-6,16,17,「力を合わせて」～インストヴァージョン～,"""Chikara wo Awasete"" ~Insuto Vaajon~",Joining Forces ~Instrumental Version~,366.682
-6,17,18,「銀河一身分違いな片想い」～インストヴァージョン～,"""Ginga Ichi Mibun Chigai na Kataomoi"" ~Insuto Vaajon~",The Most Mismatched Unrequited Love in the Galaxy ~Instrumental Version~,259.919
-6,18,19,「流れ星へ」コーラスなしカラオケ,"""Nagareboshi e"" Koorasu Nashi Karaoke",To the Shooting Star (Karaoke without Chorus),284.71
-7,0,1,「とどかぬ想い－my friend's love－」～インストヴァージョン～,"""Todokanu Omoi - my friend's love -"" ~Insuto Vaajon~",Unreachable Feelings - my friend's love - ~Instrumental Version~,232.412
-7,1,2,あの方はどこに……,Ano Kata wa Doko ni......,Where Is That Person......,215.119
-7,2,3,星野、大気、夜天,"Seiya, Taiki, Yaten","Seiya, Taiki, Yaten",231.942
-7,3,4,学園のアイドル,Gakuen no Aidoru,School Idol,71.211
-7,4,5,美奈子の野望❤,Minako no Yabou❤,Minako's Ambition,120.426
-7,5,6,「愛の女神のHow to love」～インストヴァージョン～,"""Ai no Megami no How to love"" ~Insuto Vaajon~",The Goddess of Love's How to Love ~Instrumental Version~,310.963
-7,6,7,星野の想い,Seiya no Omoi,Seiya's Feelings,93.023
-7,7,8,「銀河一身分違いな片想い」～オルゴールヴァージョン～,"""Ginga Ichi Mibun Chigai na Kataomoi"" ~Orugooru Vaajon~",The Most Mismatched Unrequited Love in the Galaxy ~Music Box Version~,107.861
-7,8,9,セーラースターズアイキャッチ音楽,Seeraa Sutaazu Aikyatchi Ongaku,Sailor Stars Eyecatch Music,12.488
-7,9,10,銀河テレビでの策略,Ginga Terebi de no Sakuryaku,Scheme at Galaxy TV,140.618
-7,10,11,スターシードをいただくわ,Sutaa Shiido wo Itadaku wa,I'll Take the Star Seed,144.223
-7,11,12,襲い来るファージ,Osoikuru Faaji,The Phage Attacks,178.966
-7,12,13,スターパワーメイクアップ！,Sutaa Pawaa Meikuappu!,Star Power Make Up!,116.324
-7,13,14,セーラースターライツ出現,Seeraa Sutaa Raitsu Shutsugen,The Sailor Star Lights Appear,68.05
-7,14,15,「炎の狙撃者（FLAME SNIPER）」～インストヴァージョン～,"""Honoo no Sogekisha (FLAME SNIPER)"" ~Insuto Vaajon~",Flame Sniper ~Instrumental Version~,256.759
-7,15,16,「We believe you」～インストヴァージョン～,"""We believe you"" ~Insuto Vaajon~",We believe you ~Instrumental Version~,304.589
-7,16,17,華麗なるムーンエターナルメイクアップ,Kareinaru Muun Etaanaru Meikuappu,Magnificent Moon Eternal Make Up,268.096
-7,17,18,ちびちび,Chibichibi,Chibi-Chibi,324.86
-7,18,19,「セーラームーン・クリスマス」～インストヴァージョン～,"""Seeraa Muun Kurisumasu"" ~Insuto Vaajon~",Sailor Moon Christmas ~Instrumental Version~,226.77
-7,19,20,究極の悪,Kyuukyoku no Aku,Ultimate Evil,74.006
-7,20,21,決意,Ketsui,Resolve,77.95
-7,21,22,究極の愛,Kyuukyoku no Ai,Ultimate Love,145.059
-7,22,23,平和,Heiwa,Peace,124.84
-7,23,24,「愛をしんじてる」～インストヴァージョン～,"""Ai wo Shinjiteru"" ~Insuto Vaajon~",I Believe in Love ~Instrumental Version~,241.947
-7,24,25,「セーラースターソング」～マーチヴァージョン～,"""Seeraa Sutaa Songu"" ~Maachi Vaajon~",Sailor Star Song ~March Version~,211.384
-8,0,1,プロローグ,Puroroogu,Prologue,91.273
-8,1,2,「ムーンライト伝説」TVサイズ カラオケ,"""Muunraito Densetsu"" TV Saizu Karaoke",Moonlight Legend (TV Size Karaoke),84.22
-8,2,3,衛の回想,Mamoru no Kaisou,Mamoru's Reminiscence,123.586
-8,3,4,フィオレ出現,Fiore Shutsugen,Fiore Appears,90.881
-8,4,5,うさぎの心配,Usagi no Shinpai,Usagi's Worry,149.866
-8,5,6,妖花魔グリシナ,Youkama Gurishina,Flower Monster Glycina,180.115
-8,6,7,セーラー4戦士、スターパワーメイクアップ,"Seeraa 4 Senshi, Sutaa Pawaa Meikuappu","Four Sailor Guardians, Star Power Make Up",156.422
-8,7,8,セーラームーンVSグリシア,Seeraa Muun VS Gurishia,Sailor Moon vs. Glycina,120.582
-8,8,9,キセニアン,Kisenian,Xenian,74.737
-8,9,10,タキシード仮面登場 ～衛とフィオレ,Takishiido Kamen Toujou ~ Mamoru to Fiore,Tuxedo Mask Appears ~ Mamoru and Fiore,143.831
-8,10,11,フィオレの回想,Fiore no Kaisou,Fiore's Reminiscence,155.926
-8,11,12,セーラー・テレポート！,Seeraa Terepooto!,Sailor Teleport!,115.488
-8,12,13,地球侵略計画,Chikyuu Shinryaku Keikaku,Earth Invasion Plan,58.359
-8,13,14,花迷宮の死闘,Hana Meikyuu no Shitou,Death Match in the Flower Labyrinth,134.009
-8,14,15,セーラームーンVSフィオレ,Seeraa Muun VS Fiore,Sailor Moon vs. Fiore,248.713
-8,15,16,生還,Seikan,Coming Back Alive,227.319
-8,16,17,「Moon Revenge」コーラスなしカラオケ,"""Moon Revenge"" Koorasu Nashi Karaoke",Moon Revenge (Karaoke without Chorus),241.843
-8,17,18,復活のセレナーデ,Fukkatsu no Serenaade,Resurrection Serenade,92.135
-8,18,19,「Moon Revenge」劇場版サイズ,"""Moon Revenge"" Gekijou-ban Saizu",Moon Revenge (Movie Size),145.216
-8,19,20,「I am セーラームーン」劇場版サイズ,"""I am Seeraa Muun"" Gekijou-ban Saizu",I am Sailor Moon (Movie Size),94.381
-8,20,21,第2回録音未収録劇伴集,Dai 2-kai Rokuon Mishuuroku Gekiban-shuu,Unreleased Score from the 2nd Recording Session,126.695
-8,21,22,「タキシード・ナイト」～インストヴァージョン～,"""Takishiido Naito"" ~Insuto Vaajon~",Tuxedo Knight ~Instrumental Version~,181.996
-8,22,23,「ルナ！」～インストヴァージョン～,"""Runa!"" ~Insuto Vaajon~",Luna! ~Instrumental Version~,117.578
-8,23,24,「イニシャル・U」～インストヴァージョン～,"""Inisharu U"" ~Insuto Vaajon~",Initial U ~Instrumental Version~,275.985
-8,24,25,「戦士の想い」～インストヴァージョン～,"""Senshi no Omoi"" ~Insuto Vaajon~",A Guardian's Feelings ~Instrumental Version~,303.675
-8,25,26,「ガーネット・ガーディアン」～インストヴァージョン～,"""Gaanetto Gaadian"" ~Insuto Vaajon~",Garnet Guardian ~Instrumental Version~,146.705
-8,26,27,「再来」～インストヴァージョン～,"""Sairai"" ~Insuto Vaajon~",Second Coming ~Instrumental Version~,180.847
-8,27,28,SE集「ムーンライト伝説」アレンジ,"SE-shuu ""Muunraito Densetsu"" Arenji","Sound Effects: ""Moonlight Legend"" Arrangement",107.443
-8,28,29,SE集 セーラームーン①,SE-shuu Seeraa Muun 1,Sound Effects: Sailor Moon 1,113.059
-8,29,30,SE集 セーラームーン②,SE-shuu Seeraa Muun 2,Sound Effects: Sailor Moon 2,118.179
-9,0,1,雪の女王,Yuki no Joou,Snow Queen,102.845
-9,1,2,「ムーンライト伝説」オリジナルカラオケ,"""Muunraito Densetsu"" Orijinaru Karaoke",Moonlight Legend (Original Karaoke),173.115
-9,2,3,のんきなうさぎ,Nonki na Usagi,Carefree Usagi,90.907
-9,3,4,翔のやさしさ,Kakeru no Yasashisa,Kakeru's Kindness,155.064
-9,4,5,翔の夢やさしく,Kakeru no Yume Yasashiku,Kakeru's Gentle Dreams,72.648
-9,5,6,侵略作戦開始,Shinryaku Sakusen Kaishi,The Invasion Operation Begins,92.083
-9,6,7,セーラー4戦士VSスノーダンサー,Seeraa 4 Senshi VS Sunoo Dansaa,Four Sailor Guardians vs. Snow Dancers,142.604
-9,7,8,セーラーちびムーンにメイクアップ,Seeraa Chibi Muun ni Meikuappu,Make Up into Sailor Chibi Moon,93.807
-9,8,9,野望,Yabou,Ambition,66.718
-9,9,10,ドキドキ,Dokidoki,Heart Pounding,67.763
-9,10,11,翔の想い,Kakeru no Omoi,Kakeru's Feelings,105.954
-9,11,12,つらい別れ,Tsurai Wakare,Painful Farewell,127.348
-9,12,13,スノーカグヤ出現,Sunoo Kaguya Shutsugen,Snow Kaguya Appears,175.622
-9,13,14,最終決戦,Saishuu Kessen,The Final Battle,198.558
-9,14,15,恋する心,Koisuru Kokoro,Hearts in Love,110.786
-9,15,16,愛と友情の力,Ai to Yuujou no Chikara,The Power of Love and Friendship,161.072
-9,16,17,愛のメッセージ,Ai no Messeeji,Message of Love,209.712
-9,17,18,「Moonlight Destiny」劇場版サイズ,"""Moonlight Destiny"" Gekijou-ban Saizu",Moonlight Destiny (Movie Size),136.073
-9,18,19,セーラー4戦士、メイクアップテーマ　ソロヴァージョン,"Seeraa 4 Senshi, Meikuappu Teema Soro Vaajon","Four Sailor Guardians, Make Up Theme (Solo Version)",96.079
-9,19,20,「セーラーチームのテーマ」～インストヴァージョン～,"""Seeraa Chiimu no Teema"" ~Insuto Vaajon~",Sailor Team's Theme ~Instrumental Version~,234.842
-9,20,21,「Moonlight Destiny」～インストヴァージョン～,"""Moonlight Destiny"" ~Insuto Vaajon~",Moonlight Destiny ~Instrumental Version~,357.513
-9,21,22,「セーラームーン・クリスマス」～オルゴールヴァージョン～,"""Seeraa Muun Kurisumasu"" ~Orugooru Vaajon~",Sailor Moon Christmas ~Music Box Version~,121.941
-9,22,23,「イニシャル・U」～オルゴールヴァージョン～,"""Inisharu U"" ~Orugooru Vaajon~",Initial U ~Music Box Version~,134.688
-9,23,24,「戦士の想い」～オルゴールヴァージョン～,"""Senshi no Omoi"" ~Orugooru Vaajon~",A Guardian's Feelings ~Music Box Version~,135.289
-9,24,25,「ガーネット・ガーディアン」～オルゴールヴァージョン～,"""Gaanetto Gaadian"" ~Orugooru Vaajon~",Garnet Guardian ~Music Box Version~,90.646
-9,25,26,「再来」～オルゴールヴァージョン～,"""Sairai"" ~Orugooru Vaajon~",Second Coming ~Music Box Version~,63.505
-9,26,27,「愛をしんじてる」～オルゴールヴァージョン～,"""Ai wo Shinjiteru"" ~Orugooru Vaajon~",I Believe in Love ~Music Box Version~,177.843
-9,27,28,SE集 セーラームーン③,SE-shuu Seeraa Muun 3,Sound Effects: Sailor Moon 3,183.433
-9,28,29,SE集 セーラームーン④,SE-shuu Seeraa Muun 4,Sound Effects: Sailor Moon 4,219.064
-9,29,30,SE集 赤いバラ、他,"SE-shuu Akai Bara, Hoka","Sound Effects: Red Rose, etc.",176.824
-10,0,1,笛吹き,Fuefuki,Flute Player,157.441
-10,1,2,「ムーンライト伝説」TVサイズ,"""Muunraito Densetsu"" TV Saizu",Moonlight Legend (TV Size),83.724
-10,2,3,クッキー教室,Kukkii Kyoushitsu,Cookie Lesson,135.315
-10,3,4,ペルル,Peruru,Perle,122.071
-10,4,5,ププラン,Pupuran,Poupelin,186.777
-10,5,6,ボンボンベイビー,Bonbon Beibii,Bonbon Baby,60.292
-10,6,7,セーラー4戦士、クリスタルパワーメイクアップ,"Seeraa 4 Senshi, Kurisutaru Pawaa Meikuappu","Four Sailor Guardians, Crystal Power Make Up",96.941
-10,7,8,タキシード仮面,Takishiido Kamen,Tuxedo Mask,119.564
-10,8,9,ペルルの反抗,Peruru no Hankou,Perle's Rebellion,88.844
-10,9,10,戦闘再開,Sentou Saikai,Resuming Combat,146.182
-10,10,11,女王バディヤーヌ,Joou Badiyaanu,Queen Badiane,53.082
-10,11,12,マジパンヌ・キャッスル,Majipannu Kyassuru,Marzipan Castle,172.879
-10,12,13,外部太陽系3戦士,Gaibu Taiyoukei 3 Senshi,The Three Outer Solar System Guardians,102.323
-10,13,14,ブラックドリームホール,Burakku Doriimu Hooru,Black Dream Hole,203.965
-10,14,15,命をかけて,Inochi wo Kakete,Risking Our Lives,138.528
-10,15,16,勇気100倍クッキー,Yuuki 100-bai Kukkii,100-Times Courage Cookie,37.408
-10,16,17,夢の棺,Yume no Hitsugi,Dream Coffin,159.74
-10,17,18,愛の光,Ai no Hikari,Love's Light,224.941
-10,18,19,家に帰ろう,Uchi ni Kaerou,Let's Go Home,109.95
-10,19,20,「Morning Moonで会いましょう」劇場版サイズ,"""Morning Moon de Aimashou"" Gekijou-ban Saizu",Let's Meet at Morning Moon (Movie Size),107.678
-10,20,21,亜美ちゃんの朝,Ami-chan no Asa,Ami-chan's Morning,84.481
-10,21,22,水野亜美,Mizuno Ami,Ami Mizuno,170.607
-10,22,23,可愛い企み,Kawaii Takurami,Cute Scheme,71.237
-10,23,24,地霊ボンノーン,Chirei Bonnoon,Earth Spirit Bonnon,149.291
-10,24,25,セーラーマーキュリー,Seeraa Maakyurii,Sailor Mercury,51.018
-10,25,26,マーキュリーアクアミラージュ,Maakyurii Akua Miraaju,Mercury Aqua Mirage,52.742
-10,26,27,終曲,Shuukyoku,Finale,86.466
-10,27,28,"「""らしく""いきましょ」TVサイズ","""'Rashiku' Ikimasho"" TV Saizu",I'll Go As Myself (TV Size),94.643
-10,28,29,第1回録音未収録劇伴集,Dai 1-kai Rokuon Mishuuroku Gekiban-shuu,Unreleased Score from the 1st Recording Session,272.092
-10,29,30,「三時の妖精」～インストヴァージョン～,"""Sanji no Yousei"" ~Insuto Vaajon~",The Three O'Clock Fairy ~Instrumental Version~,204.148
-10,30,31,「Morning Moonで会いましょう」～インストヴァージョン～,"""Morning Moon de Aimashou"" ~Insuto Vaajon~",Let's Meet at Morning Moon ~Instrumental Version~,269.715
-10,31,32,「あしたもまた自転車」～オルゴールヴァージョン～,"""Ashita mo Mata Jitensha"" ~Orugooru Vaajon~",Bicycle Again Tomorrow ~Music Box Version~,139.417
-10,32,33,「あしたもまた自転車」～インストヴァージョン～,"""Ashita mo Mata Jitensha"" ~Insuto Vaajon~",Bicycle Again Tomorrow ~Instrumental Version~,233.692
-EX,8,9,エンディング・アレンジ～明るく元気にそしてロマンティックに～,Endingu Arenji ~Akaruku Genki ni Soshite Romantikku ni~,Ending Arrangement ~Cheerful and Romantic~,204.801
-EX,10,11,うさぎのテーマ・葛藤・エイルのフルート,"Usagi no Teema, Kattou, Eiru no Furuuto",Usagi's Theme · Conflict · Ail's Flute,103.864
-EX,15,16,やさしい情景,Yasashii Joukei,Gentle Scene,322.613
-EX,16,17,緊張の情景と行動的なBGM,Kinchou no Joukei to Koudouteki na BGM,Tense Scenes and Action BGM,343.355
-EX,21,22,敵とペガサスのテーマ,Teki to Pegasasu no Teema,Enemy and Pegasus Theme,195.11
-EX,22,23,日常的BGM,Nichijouteki BGM,Everyday BGM,600.504
-R,2,3,魔界樹,Makaiju,The Makai Tree,347.612
-R,4,5,清く、明るく、△×□§...,"Kiyoku, Akaruku, △×□§...","Pure, Bright, △×□§...",407.198
-R,7,8,月は見ている,Tsuki wa Mite Iru,The Moon is Watching,307.75
-S,0,1,聖杯、救世主(メシア)……神秘なる世界,"Seihai, Kyuuseishu (Meshia)...... Shinpi naru Sekai","The Holy Grail, the Messiah...... A Mysterious World",120.974
-S,2,3,朝の並木道,Asa no Namikimichi,Avenue at Morning,251.821
-S,5,6,恋する乙女はとまらない！,Koisuru Otome wa Tomaranai!,You Can't Stop a Girl in Love!,302.63
-SS,3,4,セーラー戦士の優雅な放課後,Seeraa Senshi no Yuuga na Houkago,The Sailor Guardians' Elegant After-School,339.671
-SS,11,12,セーラー戦士新たなる飛翔,Seeraa Senshi Aratanaru Hishou,A New Flight for the Sailor Guardians,327.185
-ST1,0,1,エターナルセーラームーン,Etaanaru Seeraa Muun,Eternal Sailor Moon,110.159
-ST2,4,5,ギターソロ・コレクション,Gitaa Soro Korekushon,Guitar Solo Collection,229.696
-ST2,17,18,スターパワーメイクアップ音楽 ～コーラスなし～,Sutaa Pawaa Meikuappu Ongaku ~Koorasu Nashi~,Star Power Make Up Music ~Without Chorus~,118.127
-ST2,18,19,ムーンエターナルメイクアップ音楽 ～コーラスなし～,Muun Etaanaru Meikuappu Ongaku ~Koorasu Nashi~,Moon Eternal Make Up Music ~Without Chorus~,40.412
-ST2,19,20,エターナルセーラームーン・アクション音楽 ～コーラスなし～,Etaanaru Seeraa Muun Akushon Ongaku ~Koorasu Nashi~,Eternal Sailor Moon Action Music ~Without Chorus~,122.959
-S,1,2,サブタイトル,Sabutaitoru,Subtitle,13.01
-S,3,4,デスバスターズの野望,Desu Basutaazu no Yabou,The Death Busters' Ambition,196.99
-S,4,5,天王はるかと海王みちる,Ten'ou Haruka to Kaiou Michiru,Haruka Tenoh and Michiru Kaioh,146.208
-S,6,7,ダイモーン出現,Daimoon Shutsugen,A Daimon Appears,281.052
-S,7,8,アイキャッチ,Aikyatchi,Eyecatch,15.152
-S,8,9,奪われた純粋(ピュア)な心の結晶,Ubawareta Junsui (Pyua) na Kokoro no Kesshou,The Stolen Pure Heart Crystal,192.576
-S,9,10,戦士の宿命……,Senshi no Shukumei......,The Guardians' Fate......,282.62
-S,10,11,変身(メイクアップ)！セーラー戦士,Henshin (Meikuappu)! Seeraa Senshi,Make Up! Sailor Guardians,271.387
-S,11,12,ウラヌス、そして、ネプチューン,"Uranusu, Soshite, Nepuchuun","Uranus, and Then, Neptune",341.813
-S,12,13,The Pretty Soldiers' Big War!,The Pretty Soldiers' Big War!,The Pretty Soldiers' Big War!,263.838
-S,13,14,愛の奇跡,Ai no Kiseki,The Miracle of Love,127.139
-S,14,15,来週も見てネ！,Raishuu mo Mite ne!,See You Next Week!,32.889
-MC,0,1,ムーンライト伝説,Muunraito Densetsu,Moonlight Legend,175.309
-MC,1,2,あたしだって普通の女の子,Atashi Datte Futsuu no Onnanoko,"I'm Just an Ordinary Girl, Too",389.617
-MC,2,3,本当に選ばれた戦士なの？,Hontou ni Erabareta Senshi na no?,Was I Really Chosen to Be a Guardian?,403.253
-MC,3,4,星空はミステリアス,Hoshizora wa Misuteriasu,The Starry Sky Is Mysterious,368.746
-MC,4,5,おっちょこちょいは生まれつき,Occhokochoi wa Umaretsuki,Scatterbrained by Nature,409.183
-MC,5,6,恋する乙女心,Koisuru Otomegokoro,A Maiden's Heart in Love,413.284
-MC,6,7,誰かが狙われている,Dareka ga Nerawarete Iru,Someone Is Being Targeted,438.31
-MC,7,8,夢見るおだんごアタマ,Yumemiru Odango Atama,Dreamy Dumpling-Head,448.941
-MC,8,9,夕暮れ時は妖魔の予感,Yuuguredoki wa Youma no Yokan,Dusk Brings a Premonition of Monsters,422.558
-MC,9,10,ムーン・プリズム・パワー・メイクアップ！,Muun Purizumu Pawaa Meikuappu!,Moon Prism Power Make Up!,457.405
-MC,10,11,HEART MOVING,HEART MOVING,HEART MOVING,218.568
-R,0,1,乙女のポリシー,Otome no Porishii,A Maiden's Policy,194.169
-R,1,2,友情、そして愛,"Yuujou, Soshite Ai","Friendship, and Then Love",378.515
-R,3,4,私が戦う,Watashi ga Tatakau,I Will Fight,363.913
-R,5,6,新たなる敵,Aratanaru Teki,A New Enemy,297.536
-R,6,7,追跡は冒険のはじまり,Tsuiseki wa Bouken no Hajimari,The Chase Is the Start of an Adventure,295.916
-R,8,9,悲しみを勇気に変えて,Kanashimi wo Yuuki ni Kaete,Turning Sorrow into Courage,329.51
-R,9,10,好きと言って,Suki to Itte,Say You Love Me,277.683
-RM,0,1,プロローグ,Puroroogu,Prologue,92.135
-RM,1,2,Moon Revenge,Moon Revenge,Moon Revenge,242.339
-RM,2,3,紅い髪の少年,Akai Kami no Shounen,The Red-Haired Boy,141.271
-RM,3,4,植物園のハプニング！～侵略の予兆,Shokubutsuen no Hapuningu! ~ Shinryaku no Yochou,Happening at the Botanical Garden! ~ Signs of Invasion,226.012
-RM,4,5,妖花魔グリシナ,Youkama Gurishina,Flower Monster Glycina,181.448
-RM,5,6,メイクアップ！,Meikuappu!,Make Up!,194.404
-RM,6,7,燃える美少女戦士,Moeru Bishoujo Senshi,Pretty Guardians Ablaze,153.052
-RM,7,8,タキシード仮面登場～衛とフィオレ,Takishiido Kamen Toujou ~ Mamoru to Fiore,Tuxedo Mask Appears ~ Mamoru and Fiore,142.891
-RM,8,9,セーラー・テレポート！,Seeraa Terepooto!,Sailor Teleport!,116.246
-RM,9,10,追想のフィオレ,Tsuisou no Fiore,Fiore Remembered,212.951
-RM,10,11,花迷宮の死闘,Hana Meikyuu no Shitou,Death Match in the Flower Labyrinth,135.132
-RM,11,12,激突！セーラームーンVSフィオレ,Gekitotsu! Seeraa Muun VS Fiore,Clash! Sailor Moon vs. Fiore,283.874
-RM,12,13,生命燃やして……,Inochi Moyashite......,Burning Life......,189.493
-RM,13,14,復活のセレナーデ,Fukkatsu no Serenaade,Resurrection Serenade,93.337
-RM,14,15,I am セーラームーン,I am Seeraa Muun,I am Sailor Moon,297.562
-SM,0,1,邪悪,Jaaku,Evil,131.136
-SM,1,2,ルナ,Runa,Luna,212.089
-SM,2,3,翔,Kakeru,Kakeru,212.377
-SM,3,4,うさぎ,Usagi,Usagi,166.95
-SM,4,5,胸騒ぎ,Munasawagi,Uneasy Feeling,221.154
-SM,5,6,スノーダンサー襲来,Sunoo Dansaa Shuurai,The Snow Dancers Attack,365.846
-SM,6,7,変身,Henshin,Transformation,112.615
-SM,7,8,戦闘,Sentou,Battle,201.353
-SM,8,9,愛と友情の力,Ai to Yuujou no Chikara,The Power of Love and Friendship,162.221
-SM,9,10,愛のメッセージ,Ai no Messeeji,Message of Love,211.279
-SM,10,11,Moonlight Destiny,Moonlight Destiny,Moonlight Destiny,357.461
-SM,11,12,セーラーチームのテーマ,Seeraa Chiimu no Teema,Sailor Team's Theme,233.98
-SS,0,1,オープニング「ムーンライト伝説」,"Oopuningu ""Muunraito Densetsu""",Opening: Moonlight Legend,174.29
-SS,1,2,サブタイトル,Sabutaitoru,Subtitle,12.279
-SS,2,3,夢で見た水晶の森,Yume de Mita Suishou no Mori,The Crystal Forest I Saw in a Dream,279.642
-SS,4,5,大人達の憂鬱,Otona-tachi no Yuuutsu,The Grown-Ups' Melancholy,253.284
-SS,5,6,怪人達のサーカス団,Kaijin-tachi no Saakasu-dan,The Monsters' Circus Troupe,314.986
-SS,6,7,アマゾンBAR,Amazon BAR,Amazon Bar,212.272
-SS,7,8,ちびうさのロマンス,Chibiusa no Romansu,Chibi-Usa's Romance,186.777
-SS,8,9,アイキャッチ,Aikyatchi,Eyecatch,14.76
-SS,9,10,アマゾントリオの罠,Amazon Torio no Wana,Amazon Trio's Trap,291.763
-SS,10,11,美しい夢の鏡,Utsukushii Yume no Kagami,The Beautiful Dream Mirror,277.578
-SS,12,13,ダブル変身！ムーン＆ちびムーン,Daburu Henshin! Muun & Chibi Muun,Double Transformation! Moon & Chibi Moon,144.981
-SS,13,14,ムーンゴージャスメディテイション！,Muun Goojasu Meditishon!,Moon Gorgeous Meditation!,198.218
-SS,14,15,いつか、そんな“私たち”になりたい,"Itsuka, Sonna ""Watashi-tachi"" ni Naritai","Someday, I Want Us to Be Like That",228.677
-SS,15,16,それじゃあ、また来週ネ,"Sore jaa, Mata Raishuu ne","Well Then, See You Next Week",33.438
-SS,16,17,エンディング「“らしく”いきましょ」,"Endingu ""'Rashiku' Ikimasho""",Ending: I'll Go As Myself,212.35
-SSM,0,1,ムーンライト伝説,Muunraito Densetsu,Moonlight Legend,175.074
-SSM,1,2,亜美ちゃんの朝,Ami-chan no Asa,Ami-chan's Morning,86.728
-SSM,2,3,可愛い企み,Kawaii Takurami,Cute Scheme,73.405
-SSM,3,4,恐怖、危機、マーキュリー登場,"Kyoufu, Kiki, Maakyurii Toujou","Terror, Crisis, Mercury Appears",285.964
-SSM,4,5,終曲,Shuukyoku,Finale,88.556
-SSM,5,6,“らしく”いきましょ,"""Rashiku"" Ikimasho",I'll Go As Myself,214.545
-SSM,6,7,ふれあい～ペルルのテーマ～,Fureai ~Peruru no Teema~,Connection ~Perle's Theme~,111.257
-SSM,7,8,ププランの笛と子供達,Pupuran no Fue to Kodomo-tachi,Poupelin's Flute and the Children,145.738
-SSM,8,9,ボンボンベイビーの攻撃!!,Bonbon Beibii no Kougeki!!,The Bonbon Babies Attack!!,56.295
-SSM,9,10,変身と技,Henshin to Waza,Transformations and Attacks,170.137
-SSM,10,11,城,Shiro,The Castle,73.98
-SSM,11,12,バディヤーヌとブラック・ドリーム・ホール,Badiyaanu to Burakku Doriimu Hooru,Badiane and the Black Dream Hole,168.491
-SSM,12,13,命をかけて,Inochi wo Kakete,Risking Our Lives,140.279
-SSM,13,14,愛の光,Ai no Hikari,Love's Light,225.96
-SSM,14,15,家に帰ろう,Uchi ni Kaerou,Let's Go Home,111.753
-SSM,15,16,Morning Moonで会いましょう,Morning Moon de Aimashou,Let's Meet at Morning Moon,269.297
-ST1,1,2,セーラースターソング,Seeraa Sutaa Songu,Sailor Star Song,232.177
-ST1,2,3,サブタイトル,Sabutaitoru,Subtitle,10.502
-ST1,3,4,5人は高校生,5-nin wa Koukousei,The Five Are High School Students,319.348
-ST1,4,5,ネヘレニア復活,Neherenia Fukkatsu,Nehelenia's Resurrection,260.546
-ST1,5,6,ほたるの予言,Hotaru no Yogen,Hotaru's Prophecy,101.931
-ST1,6,7,アイキャッチ,Aikyatchi,Eyecatch,12.697
-ST1,7,8,ミラーパレドリー,Miraa Paredorii,Mirror Paredri,298.241
-ST1,8,9,とらわれのセーラー戦士,Toraware no Seeraa Senshi,Captured Sailor Guardians,311.041
-ST1,9,10,プリンセスのために……,Purinsesu no Tame ni......,For the Princess......,224.602
-ST1,10,11,エターナルの愛,Etaanaru no Ai,Eternal Love,200.621
-ST1,11,12,スリーライツ,Surii Raitsu,Three Lights,232.465
-ST1,12,13,シャドウギャラクティカ,Shadou Gyarakutika,Shadow Galactica,237.95
-ST1,13,14,ムーンエターナルメイクアップ！,Muun Etaanaru Meikuappu!,Moon Eternal Make Up!,116.742
-ST1,14,15,セーラースターライツ出現,Seeraa Sutaa Raitsu Shutsugen,The Sailor Star Lights Appear,67.841
-ST1,15,16,風も空もきっと…,Kaze mo Sora mo Kitto...,Surely the Wind and the Sky...,284.527
-ST1,16,17,月の光は愛のメッセージ,Tsuki no Hikari wa Ai no Messeeji,Moonlight Is a Message of Love,30.878
-ST2,0,1,衛との別れ、そして……,"Mamoru to no Wakare, Soshite......","Parting with Mamoru, and Then......",248.896
-ST2,1,2,ボクたちの歌をきいて,Boku-tachi no Uta wo Kiite,Listen to Our Song,232.047
-ST2,2,3,あの方はどこに……,Ano Kata wa Doko ni......,Where Is That Person......,215.015
-ST2,3,4,星野、大気、夜天,"Seiya, Taiki, Yaten","Seiya, Taiki, Yaten",231.55
-ST2,5,6,学園のアイドル,Gakuen no Aidoru,School Idol,71.446
-ST2,6,7,美奈子の野望♡,Minako no Yabou♡,Minako's Ambition♡,120.504
-ST2,7,8,銀河テレビでの策略,Ginga Terebi de no Sakuryaku,Scheme at Galaxy TV,140.67
-ST2,8,9,スターシードをいただくわ,Sutaa Shiido wo Itadaku wa,I'll Take the Star Seed,144.145
-ST2,9,10,襲い来るファージ,Osoikuru Faaji,The Phage Attacks,178.992
-ST2,10,11,スターパワーメイクアップ！,Sutaa Pawaa Meikuappu!,Star Power Make Up!,117.97
-ST2,11,12,華麗なるエターナルセーラームーン,Kareinaru Etaanaru Seeraa Muun,Magnificent Eternal Sailor Moon,173.977
-ST2,12,13,究極の悪,Kyuukyoku no Aku,Ultimate Evil,74.032
-ST2,13,14,決意,Ketsui,Resolve,77.532
-ST2,14,15,究極の愛,Kyuukyoku no Ai,Ultimate Love,144.981
-ST2,15,16,平和,Heiwa,Peace,125.415
-ST2,16,17,今日からまたフツーの高校生,Kyou kara Mata Futsuu no Koukousei,Ordinary High School Students Again from Today,76.801
-ST2,20,21,予告編音楽～15秒ヴァージョン～,Yokokuhen Ongaku ~15-byou Vaajon~,Preview Music ~15-Second Version~,17.111
-EX,0,1,ムーンライト伝説（TVサイズ）,Muunraito Densetsu (TV Saizu),Moonlight Legend (TV Size),85.448
-EX,1,2,アイキャッチ（コーラスなしヴァージョン）,Aikyatchi (Koorasu Nashi Vaajon),Eyecatch (Version without Chorus),14.159
-EX,2,3,変身,Henshin,Transformation,43.756
-EX,3,4,感動と決意,Kandou to Ketsui,Emotion and Resolve,113.817
-EX,4,5,絶望と悪,Zetsubou to Aku,Despair and Evil,236.853
-EX,5,6,休息,Kyuusoku,Rest,62.852
-EX,6,7,ファンファーレ その他,Fanfaare Sono Ta,Fanfares and More,88.112
-EX,7,8,アイキャッチ,Aikyatchi,Eyecatch,29.049
-EX,9,10,変身と必殺技,Henshin to Hissatsuwaza,Transformations and Special Attacks,125.755
-EX,11,12,強い敵,Tsuyoi Teki,A Strong Enemy,112.354
-EX,12,13,オープニング・アレンジ～感動的そして不安な～,Oopuningu Arenji ~Kandouteki Soshite Fuan na~,"Opening Arrangement ~Moving, Then Uneasy~",173.428
-EX,13,14,エンディング・アレンジ～ノスタルジックそしてロマンティックに～,Endingu Arenji ~Nosutarujikku Soshite Romantikku ni~,"Ending Arrangement ~Nostalgic, Then Romantic~",241.738
-EX,14,15,必殺技・戦士の宿命・敵の野望,"Hissatsuwaza, Senshi no Shukumei, Teki no Yabou",Special Attacks · The Guardians' Fate · The Enemy's Ambition,247.328
-EX,17,18,みちるとはるか,Michiru to Haruka,Michiru and Haruka,139.025
-EX,18,19,ブリッジと悲しみ,Burijji to Kanashimi,Bridges and Sorrow,139.835
-EX,19,20,予告,Yokoku,Preview,31.4
-EX,20,21,エンディング・アレンジ,Endingu Arenji,Ending Arrangement,116.977
-EX,23,24,戦闘的BGM,Sentouteki BGM,Battle BGM,109.95
-EX,24,25,ピンチ… そして、決意,"Pinchi... Soshite, Ketsui","In a Pinch... and Then, Resolve",79.048
-EX,25,26,タキシード・ミラージュ（TVサイズ）,Takishiido Miraaju (TV Saizu),Tuxedo Mirage (TV Size),93.415
-歌,0,1-1,ムーンライト伝説,Muunraito Densetsu,Moonlight Legend,174.968
-歌,1,1-2,HEART MOVING,HEART MOVING,HEART MOVING,219.716
-歌,2,1-3,プリンセス・ムーン,Purinsesu Muun,Princess Moon,244.062
-歌,3,1-4,乙女のポリシー,Otome no Porishii,A Maiden's Policy,195.37
-歌,4,1-5,ムーンライト伝説,Muunraito Densetsu,Moonlight Legend,173.976
-歌,5,1-6,タキシード・ミラージュ,Takishiido Miraaju,Tuxedo Mirage,217.417
-歌,6,1-7,私たちになりたくて,Watashi-tachi ni Naritakute,Wanting to Be Like Us,322.717
-歌,7,1-8,"""らしく""いきましょ","""Rashiku"" Ikimasho",I'll Go As Myself,213.368
-歌,8,1-9,セーラースターソング,Seeraa Sutaa Songu,Sailor Star Song,233.3
-歌,9,1-10,風も空もきっと…,Kaze mo Sora mo Kitto…,"The Wind and the Sky, Surely…",288.131
-歌,10,1-11,ムーンライト伝説（オリジナルカラオケ）,Muunraito Densetsu (Orijinaru Karaoke),Moonlight Legend (Original Karaoke),176.144
-歌,11,1-12,HEART MOVING（オリジナルカラオケ）,HEART MOVING (Orijinaru Karaoke),HEART MOVING (Original Karaoke),220.709
-歌,12,1-13,プリンセス・ムーン（オリジナルカラオケ）,Purinsesu Muun (Orijinaru Karaoke),Princess Moon (Original Karaoke),245.394
-歌,13,1-14,乙女のポリシー（オリジナルカラオケ）,Otome no Porishii (Orijinaru Karaoke),A Maiden's Policy (Original Karaoke),196.807
-歌,14,1-15,タキシード・ミラージュ（オリジナルカラオケ）,Takishiido Miraaju (Orijinaru Karaoke),Tuxedo Mirage (Original Karaoke),218.201
-歌,15,1-16,私たちになりたくて（オリジナルカラオケ）,Watashi-tachi ni Naritakute (Orijinaru Karaoke),Wanting to Be Like Us (Original Karaoke),323.239
-歌,16,1-17,"""らしく""いきましょ（オリジナルカラオケ）","""Rashiku"" Ikimasho (Orijinaru Karaoke)",I'll Go As Myself (Original Karaoke),213.76
-歌,17,1-18,セーラースターソング（オリジナルカラオケ）,Seeraa Sutaa Songu (Orijinaru Karaoke),Sailor Star Song (Original Karaoke),233.639
-歌,18,1-19,風も空もきっと…（オリジナルカラオケ）,Kaze mo Sora mo Kitto… (Orijinaru Karaoke),"The Wind and the Sky, Surely… (Original Karaoke)",286.38
-歌,19,2-1,合コトバはムーン・プリズム・パワー・メイクアップ！,Aikotoba wa Muun Purizumu Pawaa Meikuappu!,The Password Is Moon Prism Power Make Up!,262.896
-歌,20,2-2,プリンセス・ムーン,Purinsesu Muun,Princess Moon,244.14
-歌,21,2-3,ほっとけないよ,Hottokenai yo,I Can't Leave You Alone,270.733
-歌,22,2-4,愛のエナジーを奪え,Ai no Enajii wo Ubae,Steal the Energy of Love,285.518
-歌,23,2-5,タキシード・ナイト,Takishiido Naito,Tuxedo Knight,300.826
-歌,24,2-6,ルナ！,Runa!,Luna!,219.768
-歌,25,2-7,月にかわっておしおきよ,Tsuki ni Kawatte Oshioki yo,"In the Name of the Moon, I'll Punish You",279.536
-歌,26,2-8,幻の銀水晶～シルバークリスタル,Maboroshi no Ginzuishou ~ Shirubaa Kurisutaru,The Illusionary Silver Crystal ~ Silver Crystal,270.968
-歌,27,2-9,夢見るだけじゃダメ,Yumemiru Dake ja Dame,Just Dreaming Isn't Enough,310.361
-歌,28,2-10,Someday… Somebody…,Someday… Somebody…,Someday… Somebody…,301.505
-歌,29,2-11,永遠のメロディ,Eien no Merodi,Eternal Melody,256.34
-歌,30,2-12,あなたのせいじゃない,Anata no Sei ja Nai,It's Not Your Fault,272.431
-歌,31,2-13,あなたの夢をみたわ,Anata no Yume wo Mita wa,I Dreamed of You,272.901
-歌,32,2-14,時を超えて…,Toki wo Koete…,Cross Over Time…,289.489
-歌,33,2-15,YOU'RE JUST MY LOVE,YOU'RE JUST MY LOVE,You're Just My Love,257.567
-歌,34,2-16,タキシード・ナイト（オリジナルカラオケ）,Takishiido Naito (Orijinaru Karaoke),Tuxedo Knight (Original Karaoke),299.128
-歌,35,3-1,好きと言って,Suki to Itte,Say You Love Me,278.936
-歌,36,3-2,I am セーラームーン,I am Seeraa Muun,I am Sailor Moon,327.915
-歌,37,3-3,同じ涙を分け合って,Onaji Namida wo Wakeatte,We Share the Same Tears,310.857
-歌,38,3-4,聖・炎・愛 ～Fire Soul Love～,"Sei, Honoo, Ai ~Fire Soul Love~",Holy · Flame · Love ~Fire Soul Love~,246.413
-歌,39,3-5,抱きしめていたい,Dakishimete Itai,I Want to Hold You,283.638
-歌,40,3-6,STARLIGHTにキスして,STARLIGHT ni Kisu Shite,Kiss the Starlight,268.983
-歌,41,3-7,ルート・ヴィーナス,Ruuto Viinasu,Route Venus,273.293
-歌,42,3-8,愛の戦士,Ai no Senshi,Guardian of Love,218.593
-歌,43,3-9,Moon Revenge,Moon Revenge,Moon Revenge,242.808
-歌,44,3-10,I am セーラームーン,I am Seeraa Muun,I am Sailor Moon,297.77
-歌,45,3-11,Moonlight Destiny,Moonlight Destiny,Moonlight Destiny,359.262
-歌,46,3-12,セーラーチームのテーマ,Seeraa Chiimu no Teema,Sailor Team's Theme,237.218
-歌,47,3-13,Morning Moonで会いましょう,Morning Moon de Aimashou,Let's Meet at Morning Moon,270.393
-歌,48,3-14,三時の妖精,Sanji no Yousei,The Three O'Clock Fairy,206.315
-歌,49,3-15,好きと言って（オリジナルカラオケ）,Suki to Itte (Orijinaru Karaoke),Say You Love Me (Original Karaoke),279.902
-歌,50,3-16,愛の戦士（オリジナルカラオケ）,Ai no Senshi (Orijinaru Karaoke),Guardian of Love (Original Karaoke),217.757
-歌,51,4-1,セーラームーン・クリスマス,Seeraa Muun Kurisumasu,Sailor Moon Christmas,227.944
-歌,52,4-2,ゴールデンクイーン・ギャラクシア,Gooruden Kuiin Gyarakushia,Golden Queen Galaxia,240.849
-歌,53,4-3,流れ星へ,Nagareboshi e,To the Shooting Star,285.231
-歌,54,4-4,とどかぬ想い ―my friend's love―,Todokanu Omoi ―my friend's love―,Unreachable Feelings ―my friend's love―,232.777
-歌,55,4-5,銀河一身分違いな片想い,Ginga Ichi Mibun Chigai na Kataomoi,The Most Mismatched Unrequited Love in the Galaxy,260.702
-歌,56,4-6,力を合わせて,Chikara wo Awasete,Joining Forces,366.08
-歌,57,4-7,真夜中ひとり,Mayonaka Hitori,Alone at Midnight,214.23
-歌,58,4-8,イニシャル・U,Inisharu U,Initial U,275.435
-歌,59,4-9,戦士の想い,Senshi no Omoi,A Guardian's Feelings,304.744
-歌,60,4-10,バイバイって言った,Bai Bai tte Itta,I Said Bye-Bye,255.242
-歌,61,4-11,炎の狙撃者（FLAME SNIPER）,Honoo no Sogekisha (FLAME SNIPER),Flame Sniper,290.299
-歌,62,4-12,あしたもまた自転車,Ashita mo Mata Jitensha,Bicycle Again Tomorrow,235.677
-歌,63,4-13,We believe you,We believe you,We believe you,303.856
-歌,64,4-14,愛の女神のHow to love,Ai no Megami no How to love,The Goddess of Love's How to Love,311.876
-歌,65,4-15,愛をしんじてる,Ai wo Shinjiteru,I Believe in Love,241.763
-歌,66,4-16,もっとすてきな朝がくるよ,Motto Suteki na Asa ga Kuru yo,A More Beautiful Morning Will Come,253.571
-歌,67,5-1,セーラームーン・クリスマス プロローグ,Seeraa Muun Kurisumasu Puroroogu,Sailor Moon Christmas Prologue,191.556
-歌,68,5-2,セーラームーンクリスマス ポエム,Seeraa Muun Kurisumasu Poemu,Sailor Moon Christmas Poem,229.094
-歌,69,5-3,セーラーギャラクシア プロローグ,Seeraa Gyarakushia Puroroogu,Sailor Galaxia Prologue,135.314
-歌,70,5-4,セーラーギャラクシア ポエム,Seeraa Gyarakushia Poemu,Sailor Galaxia Poem,168.046
-歌,71,5-5,星野光（セーラースターファイター） プロローグ,Seiya Kou (Seeraa Sutaa Faitaa) Puroroogu,Seiya Kou (Sailor Star Fighter) Prologue,99.474
-歌,72,5-6,星野光（セーラースターファイター） ポエム,Seiya Kou (Seeraa Sutaa Faitaa) Poemu,Seiya Kou (Sailor Star Fighter) Poem,182.439
-歌,73,5-7,大気光（セーラースターメイカー） プロローグ,Taiki Kou (Seeraa Sutaa Meikaa) Puroroogu,Taiki Kou (Sailor Star Maker) Prologue,149.002
-歌,74,5-8,大気光（セーラースターメイカー） ポエム,Taiki Kou (Seeraa Sutaa Meikaa) Poemu,Taiki Kou (Sailor Star Maker) Poem,148.01
-歌,75,5-9,夜天光（セーラースターヒーラー） プロローグ,Yaten Kou (Seeraa Sutaa Hiiraa) Puroroogu,Yaten Kou (Sailor Star Healer) Prologue,155.899
-歌,76,5-10,夜天光（セーラースターヒーラー） ポエム,Yaten Kou (Seeraa Sutaa Hiiraa) Poemu,Yaten Kou (Sailor Star Healer) Poem,182.073
-歌,77,5-11,セーラーネプチューン／海王みちる プロローグ,Seeraa Nepuchuun / Kaiou Michiru Puroroogu,Sailor Neptune / Michiru Kaioh Prologue,152.007
-歌,78,5-12,セーラーネプチューン／海王みちる ポエム,Seeraa Nepuchuun / Kaiou Michiru Poemu,Sailor Neptune / Michiru Kaioh Poem,138.005
-歌,79,5-13,セーラープルート／冥王せつな プロローグ,Seeraa Puruuto / Meiou Setsuna Puroroogu,Sailor Pluto / Setsuna Meioh Prologue,96.444
-歌,80,5-14,セーラープルート／冥王せつな ポエム,Seeraa Puruuto / Meiou Setsuna Poemu,Sailor Pluto / Setsuna Meioh Poem,92.186
-歌,81,5-15,セーラーサターン／土萌ほたる プロローグ,Seeraa Sataan / Tomoe Hotaru Puroroogu,Sailor Saturn / Hotaru Tomoe Prologue,181.211
-歌,82,5-16,セーラーサターン／土萌ほたる ポエム,Seeraa Sataan / Tomoe Hotaru Poemu,Sailor Saturn / Hotaru Tomoe Poem,122.096
-歌,83,5-17,セーラーちびムーン／ちびうさ プロローグ,Seeraa Chibi Muun / Chibiusa Puroroogu,Sailor Chibi Moon / Chibi-Usa Prologue,181.055
-歌,84,5-18,セーラーちびムーン／ちびうさ ポエム,Seeraa Chibi Muun / Chibiusa Poemu,Sailor Chibi Moon / Chibi-Usa Poem,79.909
-歌,85,5-19,セーラーマーズ／火野レイ プロローグ,Seeraa Maazu / Hino Rei Puroroogu,Sailor Mars / Rei Hino Prologue,163.291
-歌,86,5-20,セーラーマーズ／火野レイ ポエム,Seeraa Maazu / Hino Rei Poemu,Sailor Mars / Rei Hino Poem,202.736
-歌,87,5-21,セーラーマーキュリー／水野亜美 プロローグ,Seeraa Maakyurii / Mizuno Ami Puroroogu,Sailor Mercury / Ami Mizuno Prologue,120.686
-歌,88,5-22,セーラーマーキュリー／水野亜美 ポエム,Seeraa Maakyurii / Mizuno Ami Poemu,Sailor Mercury / Ami Mizuno Poem,141.296
-歌,89,5-23,セーラージュピター／木野まこと プロローグ,Seeraa Jupitaa / Kino Makoto Puroroogu,Sailor Jupiter / Makoto Kino Prologue,113.737
-歌,90,5-24,セーラージュピター／木野まこと ポエム,Seeraa Jupitaa / Kino Makoto Poemu,Sailor Jupiter / Makoto Kino Poem,251.533
-歌,91,5-25,セーラーヴィーナス／愛野美奈子 プロローグ,Seeraa Viinasu / Aino Minako Puroroogu,Sailor Venus / Minako Aino Prologue,118.988
-歌,92,5-26,セーラーヴィーナス／愛野美奈子 ポエム,Seeraa Viinasu / Aino Minako Poemu,Sailor Venus / Minako Aino Poem,169.691
-歌,93,5-27,エターナルセーラームーン／月野うさぎ プロローグ,Etaanaru Seeraa Muun / Tsukino Usagi Puroroogu,Eternal Sailor Moon / Usagi Tsukino Prologue,182.544
-歌,94,5-28,エターナルセーラームーン／月野うさぎ ポエム,Etaanaru Seeraa Muun / Tsukino Usagi Poemu,Eternal Sailor Moon / Usagi Tsukino Poem,178.782
-歌,95,6-1,Moon Revenge（オリジナルカラオケ）,Moon Revenge (Orijinaru Karaoke),Moon Revenge (Original Karaoke),244.532
-歌,96,6-2,I am セーラームーン（オリジナルカラオケ）,I am Seeraa Muun (Orijinaru Karaoke),I am Sailor Moon (Original Karaoke),298.031
-歌,97,6-3,Moonlight Destiny（オリジナルカラオケ）,Moonlight Destiny (Orijinaru Karaoke),Moonlight Destiny (Original Karaoke),359.706
-歌,98,6-4,セーラーチームのテーマ（オリジナルカラオケ）,Seeraa Chiimu no Teema (Orijinaru Karaoke),Sailor Team's Theme (Original Karaoke),237.819
-歌,99,6-5,Morning Moonで会いましょう（オリジナルカラオケ）,Morning Moon de Aimashou (Orijinaru Karaoke),Let's Meet at Morning Moon (Original Karaoke),271.987
-歌,100,6-6,三時の妖精（オリジナルカラオケ）,Sanji no Yousei (Orijinaru Karaoke),The Three O'Clock Fairy (Original Karaoke),206.89
-歌,101,6-7,もっとすてきな朝がくるよ（オリジナルカラオケ）,Motto Suteki na Asa ga Kuru yo (Orijinaru Karaoke),A More Beautiful Morning Will Come (Original Karaoke),256.131
-歌,102,6-8,合コトバはムーン・プリズム・パワー・メイクアップ！（オリジナルカラオケ）,Aikotoba wa Muun Purizumu Pawaa Meikuappu! (Orijinaru Karaoke),The Password Is Moon Prism Power Make Up! (Original Karaoke),263.288
-歌,103,6-9,ほっとけないよ（オリジナルカラオケ）,Hottokenai yo (Orijinaru Karaoke),I Can't Leave You Alone (Original Karaoke),271.464
-歌,104,6-10,月にかわっておしおきよ（オリジナルカラオケ）,Tsuki ni Kawatte Oshioki yo (Orijinaru Karaoke),"In the Name of the Moon, I'll Punish You (Original Karaoke)",280.738
-歌,105,6-11,夢見るだけじゃダメ（オリジナルカラオケ）,Yumemiru Dake ja Dame (Orijinaru Karaoke),Just Dreaming Isn't Enough (Original Karaoke),313.104
-歌,106,6-12,Someday… Somebody…（オリジナルカラオケ）,Someday… Somebody… (Orijinaru Karaoke),Someday… Somebody… (Original Karaoke),302.602
-歌,107,6-13,永遠のメロディ（オリジナルカラオケ）,Eien no Merodi (Orijinaru Karaoke),Eternal Melody (Original Karaoke),256.888
-歌,108,6-14,あなたのせいじゃない（オリジナルカラオケ）,Anata no Sei ja Nai (Orijinaru Karaoke),It's Not Your Fault (Original Karaoke),272.588
-歌,109,6-15,あなたの夢をみたわ（オリジナルカラオケ）,Anata no Yume wo Mita wa (Orijinaru Karaoke),I Dreamed of You (Original Karaoke),274.312
-歌,110,6-16,YOU'RE JUST MY LOVE（オリジナルカラオケ）,YOU'RE JUST MY LOVE (Orijinaru Karaoke),You're Just My Love (Original Karaoke),252.029
+album,ord,track,title_ja,title_ro,title_en,length,artist_ja,artist_ro,artist_en
+1,0,1,ムーンライト伝説　TVサイズ,Muunraito Densetsu TV Saizu,Moonlight Legend (TV Size),86.492,歌／DALI,Uta: DALI,Vocals: DALI
+1,1,2,あたしだって普通の女の子1,Atashi Datte Futsuu no Onnanoko 1,"I'm Just an Ordinary Girl, Too 1",14.551,\N,\N,\N
+1,2,3,あたしだって普通の女の子2,Atashi Datte Futsuu no Onnanoko 2,"I'm Just an Ordinary Girl, Too 2",64.602,\N,\N,\N
+1,3,4,あたしだって普通の女の子3,Atashi Datte Futsuu no Onnanoko 3,"I'm Just an Ordinary Girl, Too 3",67.737,\N,\N,\N
+1,4,5,あたしだって普通の女の子4,Atashi Datte Futsuu no Onnanoko 4,"I'm Just an Ordinary Girl, Too 4",77.872,\N,\N,\N
+1,5,6,あたしだって普通の女の子5,Atashi Datte Futsuu no Onnanoko 5,"I'm Just an Ordinary Girl, Too 5",78.917,\N,\N,\N
+1,6,7,あたしだって普通の女の子6,Atashi Datte Futsuu no Onnanoko 6,"I'm Just an Ordinary Girl, Too 6",10.607,\N,\N,\N
+1,7,8,あたしだって普通の女の子7,Atashi Datte Futsuu no Onnanoko 7,"I'm Just an Ordinary Girl, Too 7",75.417,\N,\N,\N
+1,8,9,本当に選ばれた戦士なの？1,Hontou ni Erabareta Senshi na no? 1,Was I Really Chosen to Be a Guardian? 1,72.987,\N,\N,\N
+1,9,10,本当に選ばれた戦士なの？2,Hontou ni Erabareta Senshi na no? 2,Was I Really Chosen to Be a Guardian? 2,70.27,\N,\N,\N
+1,10,11,本当に選ばれた戦士なの？3,Hontou ni Erabareta Senshi na no? 3,Was I Really Chosen to Be a Guardian? 3,68.703,\N,\N,\N
+1,11,12,本当に選ばれた戦士なの？4,Hontou ni Erabareta Senshi na no? 4,Was I Really Chosen to Be a Guardian? 4,14.812,\N,\N,\N
+1,12,13,本当に選ばれた戦士なの？5,Hontou ni Erabareta Senshi na no? 5,Was I Really Chosen to Be a Guardian? 5,70.584,\N,\N,\N
+1,13,14,本当に選ばれた戦士なの？6,Hontou ni Erabareta Senshi na no? 6,Was I Really Chosen to Be a Guardian? 6,106.006,\N,\N,\N
+1,14,15,星空はミステリアス1,Hoshizora wa Misuteriasu 1,The Starry Sky Is Mysterious 1,65.229,\N,\N,\N
+1,15,16,星空はミステリアス2,Hoshizora wa Misuteriasu 2,The Starry Sky Is Mysterious 2,61.807,\N,\N,\N
+1,16,17,星空はミステリアス3,Hoshizora wa Misuteriasu 3,The Starry Sky Is Mysterious 3,70.715,\N,\N,\N
+1,17,18,星空はミステリアス4,Hoshizora wa Misuteriasu 4,The Starry Sky Is Mysterious 4,15.622,\N,\N,\N
+1,18,19,星空はミステリアス5,Hoshizora wa Misuteriasu 5,The Starry Sky Is Mysterious 5,49.242,\N,\N,\N
+1,19,20,星空はミステリアス6,Hoshizora wa Misuteriasu 6,The Starry Sky Is Mysterious 6,106.241,\N,\N,\N
+1,20,21,おっちょこちょいは生まれつき1,Occhokochoi wa Umaretsuki 1,Scatterbrained by Nature 1,16.092,\N,\N,\N
+1,21,22,おっちょこちょいは生まれつき2,Occhokochoi wa Umaretsuki 2,Scatterbrained by Nature 2,68.05,\N,\N,\N
+1,22,23,おっちょこちょいは生まれつき3,Occhokochoi wa Umaretsuki 3,Scatterbrained by Nature 3,84.716,\N,\N,\N
+1,23,24,おっちょこちょいは生まれつき4,Occhokochoi wa Umaretsuki 4,Scatterbrained by Nature 4,67.371,\N,\N,\N
+1,24,25,おっちょこちょいは生まれつき5,Occhokochoi wa Umaretsuki 5,Scatterbrained by Nature 5,80.824,\N,\N,\N
+1,25,26,おっちょこちょいは生まれつき6,Occhokochoi wa Umaretsuki 6,Scatterbrained by Nature 6,14.003,\N,\N,\N
+1,26,27,おっちょこちょいは生まれつき7,Occhokochoi wa Umaretsuki 7,Scatterbrained by Nature 7,78.682,\N,\N,\N
+1,27,28,恋する乙女心1,Koisuru Otomegokoro 1,A Maiden's Heart in Love 1,17.843,\N,\N,\N
+1,28,29,恋する乙女心2,Koisuru Otomegokoro 2,A Maiden's Heart in Love 2,73.118,\N,\N,\N
+1,29,30,恋する乙女心3,Koisuru Otomegokoro 3,A Maiden's Heart in Love 3,18.208,\N,\N,\N
+1,30,31,恋する乙女心4,Koisuru Otomegokoro 4,A Maiden's Heart in Love 4,76.331,\N,\N,\N
+1,31,32,恋する乙女心5,Koisuru Otomegokoro 5,A Maiden's Heart in Love 5,79.57,\N,\N,\N
+1,32,33,恋する乙女心6,Koisuru Otomegokoro 6,A Maiden's Heart in Love 6,18.861,\N,\N,\N
+1,33,34,恋する乙女心7,Koisuru Otomegokoro 7,A Maiden's Heart in Love 7,87.224,\N,\N,\N
+1,34,35,恋する乙女心8,Koisuru Otomegokoro 8,A Maiden's Heart in Love 8,42.502,\N,\N,\N
+1,35,36,誰かが狙われている1,Dareka ga Nerawarete Iru 1,Someone Is Being Targeted 1,88.608,\N,\N,\N
+1,36,37,誰かが狙われている2,Dareka ga Nerawarete Iru 2,Someone Is Being Targeted 2,60.71,\N,\N,\N
+1,37,38,誰かが狙われている3,Dareka ga Nerawarete Iru 3,Someone Is Being Targeted 3,69.252,\N,\N,\N
+1,38,39,誰かが狙われている4,Dareka ga Nerawarete Iru 4,Someone Is Being Targeted 4,90.045,\N,\N,\N
+1,39,40,誰かが狙われている5,Dareka ga Nerawarete Iru 5,Someone Is Being Targeted 5,12.67,\N,\N,\N
+1,40,41,誰かが狙われている6,Dareka ga Nerawarete Iru 6,Someone Is Being Targeted 6,117.186,\N,\N,\N
+1,41,42,夢見るおだんごアタマ1,Yumemiru Odango Atama 1,Dreamy Dumpling-Head 1,85.212,\N,\N,\N
+1,42,43,夢見るおだんごアタマ2,Yumemiru Odango Atama 2,Dreamy Dumpling-Head 2,14.995,\N,\N,\N
+1,43,44,夢見るおだんごアタマ3,Yumemiru Odango Atama 3,Dreamy Dumpling-Head 3,82.052,\N,\N,\N
+1,44,45,夢見るおだんごアタマ4,Yumemiru Odango Atama 4,Dreamy Dumpling-Head 4,78.891,\N,\N,\N
+1,45,46,夢見るおだんごアタマ5,Yumemiru Odango Atama 5,Dreamy Dumpling-Head 5,13.872,\N,\N,\N
+1,46,47,夢見るおだんごアタマ6,Yumemiru Odango Atama 6,Dreamy Dumpling-Head 6,74.006,\N,\N,\N
+1,47,48,夢見るおだんごアタマ7,Yumemiru Odango Atama 7,Dreamy Dumpling-Head 7,100.128,\N,\N,\N
+1,48,49,夕暮れ時は妖魔の予感1,Yuuguredoki wa Youma no Yokan 1,Dusk Brings a Premonition of Monsters 1,18.313,\N,\N,\N
+1,49,50,夕暮れ時は妖魔の予感2,Yuuguredoki wa Youma no Yokan 2,Dusk Brings a Premonition of Monsters 2,78.212,\N,\N,\N
+1,50,51,夕暮れ時は妖魔の予感3,Yuuguredoki wa Youma no Yokan 3,Dusk Brings a Premonition of Monsters 3,15.648,\N,\N,\N
+1,51,52,夕暮れ時は妖魔の予感4,Yuuguredoki wa Youma no Yokan 4,Dusk Brings a Premonition of Monsters 4,73.275,\N,\N,\N
+1,52,53,夕暮れ時は妖魔の予感5,Yuuguredoki wa Youma no Yokan 5,Dusk Brings a Premonition of Monsters 5,63.766,\N,\N,\N
+1,53,54,夕暮れ時は妖魔の予感6,Yuuguredoki wa Youma no Yokan 6,Dusk Brings a Premonition of Monsters 6,85.526,\N,\N,\N
+1,54,55,夕暮れ時は妖魔の予感7,Yuuguredoki wa Youma no Yokan 7,Dusk Brings a Premonition of Monsters 7,88.582,\N,\N,\N
+1,55,56,HEART MOVING　TVサイズ,HEART MOVING TV Saizu,HEART MOVING (TV Size),96.941,歌／高松美砂絵（さくらさくら）,Uta: Takamatsu Misae (Sakura Sakura),Vocals: Misae Takamatsu (Sakura Sakura)
+1,56,57,ミラクルロマンス,Mirakuru Romansu,Miracle Romance,422.088,\N,\N,\N
+1,57,58,「ムーンライト伝説」～ピアノファンタジアヴァージョン～,"""Muunraito Densetsu"" ~Piano Fantajia Vaajon~",Moonlight Legend ~Piano Fantasia Version~,193.124,\N,\N,\N
+1,58,59,「ムーンライト伝説」～マーチヴァージョン～,"""Muunraito Densetsu"" ~Maachi Vaajon~",Moonlight Legend ~March Version~,224.497,\N,\N,\N
+2,0,1,アバンタイトル音楽,Aban Taitoru Ongaku,Avant-title Music,21.082,\N,\N,\N
+2,1,2,「ムーンライト伝説」TVサイズ、SE入り,"""Muunraito Densetsu"" TV Saizu, SE-iri",Moonlight Legend (TV Size with Sound Effects),92.318,歌／DALI,Uta: DALI,Vocals: DALI
+2,2,3,セーラームーンサブタイトル音楽,Seeraa Muun Sabutaitoru Ongaku,Sailor Moon Subtitle Music,43.417,\N,\N,\N
+2,3,4,うさぎ－ブリッジコレクション－,Usagi - Burijji Korekushon -,Usagi - Bridge Collection -,66.352,\N,\N,\N
+2,4,5,乙女心,Otomegokoro,A Maiden's Heart,160.941,\N,\N,\N
+2,5,6,「夢見るだけじゃダメ」～インストヴァージョン～,"""Yumemiru Dake ja Dame"" ~Insuto Vaajon~",Just Dreaming Isn't Enough ~Instrumental Version~,305.111,\N,\N,\N
+2,6,7,セーラームーンアイキャッチ音楽,Seeraa Muun Aikyatchi Ongaku,Sailor Moon Eyecatch Music,12.54,\N,\N,\N
+2,7,8,クインベリル,Kuin Beriru,Queen Beryl,130.404,\N,\N,\N
+2,8,9,「愛のエナジーを奪え」～インストヴァージョン～,"""Ai no Enajii wo Ubae"" ~Insuto Vaajon~",Steal the Energy of Love ~Instrumental Version~,283.142,\N,\N,\N
+2,9,10,ムーンパワーで変装,Muun Pawaa de Hensou,Disguise with Moon Power,39.812,\N,\N,\N
+2,10,11,「合コトバはムーン・プリズム・パワー・メイクアップ！」～インストヴァージョン～,"""Aikotoba wa Muun Purizumu Pawaa Meikuappu!"" ~Insuto Vaajon~",The Password Is Moon Prism Power Make Up! ~Instrumental Version~,260.651,\N,\N,\N
+2,11,12,華麗なるムーンプリズムパワーメイクアップ,Kareinaru Muun Purizumu Pawaa Meikuappu,Magnificent Moon Prism Power Make Up,263.55,\N,\N,\N
+2,12,13,「月にかわっておしおきよ」～インストヴァージョン～,"""Tsuki ni Kawatte Oshioki yo"" ~Insuto Vaajon~","In the Name of the Moon, I'll Punish You ~Instrumental Version~",278.519,\N,\N,\N
+2,13,14,ムーンティアラアクション,Muun Tiara Akushon,Moon Tiara Action,139.025,\N,\N,\N
+2,14,15,「幻の銀水晶～シルバークリスタル」～インストヴァージョン～,"""Maboroshi no Ginzuishou ~ Shirubaa Kurisutaru"" ~Insuto Vaajon~",The Illusionary Silver Crystal ~ Silver Crystal ~Instrumental Version~,270.604,\N,\N,\N
+2,15,16,絶望と悪1,Zetsubou to Aku 1,Despair and Evil 1,13.036,\N,\N,\N
+2,16,17,絶望と悪2,Zetsubou to Aku 2,Despair and Evil 2,58.881,\N,\N,\N
+2,17,18,絶望と悪3,Zetsubou to Aku 3,Despair and Evil 3,21.813,\N,\N,\N
+2,18,19,絶望と悪4,Zetsubou to Aku 4,Despair and Evil 4,62.643,\N,\N,\N
+2,19,20,絶望と悪5,Zetsubou to Aku 5,Despair and Evil 5,12.566,\N,\N,\N
+2,20,21,絶望と悪6,Zetsubou to Aku 6,Despair and Evil 6,67.188,\N,\N,\N
+2,21,22,セーラー戦士集結,Seeraa Senshi Shuuketsu,The Sailor Guardians Assemble,156.684,\N,\N,\N
+2,22,23,星たちに守られて,Hoshi-tachi ni Mamorarete,Protected by the Stars,564.847,\N,\N,\N
+2,23,24,リベンジ！セーラー戦士,Ribenji! Seeraa Senshi,Revenge! Sailor Guardians,87.59,\N,\N,\N
+2,24,25,「ムーンライト伝説」～インストヴァージョン～,"""Muunraito Densetsu"" ~Insuto Vaajon~",Moonlight Legend ~Instrumental Version~,173.872,\N,\N,\N
+2,25,26,「プリンセス・ムーン」TVサイズ,"""Purinsesu Muun"" TV Saizu",Princess Moon (TV Size),92.161,歌／橋本潮　コーラス／アップルパイ,Uta: Hashimoto Ushio; Koorasu: Appuru Pai,Vocals: Ushio Hashimoto; Chorus: Apple Pie
+2,26,27,セーラームーン予告編音楽,Seeraa Muun Yokokuhen Ongaku,Sailor Moon Preview Music,49.111,\N,\N,\N
+2,27,28,「HEART MOVING」～インストヴァージョン～,"""HEART MOVING"" ~Insuto Vaajon~",HEART MOVING ~Instrumental Version~,218.045,\N,\N,\N
+2,28,29,「プリンセス・ムーン」～インストヴァージョン～,"""Purinsesu Muun"" ~Insuto Vaajon~",Princess Moon ~Instrumental Version~,242.731,\N,\N,\N
+2,29,30,サブタイトル音楽、メイクアップのテーマ　ロングヴァージョン,"Sabutaitoru Ongaku, Meikuappu no Teema Rongu Vaajon","Subtitle Music, Make Up Theme (Long Version)",138.816,\N,\N,\N
+3,0,1,戦士の記憶,Senshi no Kioku,Memories of a Guardian,133.539,\N,\N,\N
+3,1,2,「乙女のポリシー」～インストヴァージョン～,"""Otome no Porishii"" ~Insuto Vaajon~",A Maiden's Policy ~Instrumental Version~,193.412,\N,\N,\N
+3,2,3,うさぎ,Usagi,Usagi,202.476,\N,\N,\N
+3,3,4,「ほっとけないよ」～インストヴァージョン～,"""Hottokenai yo"" ~Insuto Vaajon~",I Can't Leave You Alone ~Instrumental Version~,269.115,\N,\N,\N
+3,4,5,エイルとアン,Eiru to An,Ail and An,163.528,\N,\N,\N
+3,5,6,魔界樹,Makaiju,The Makai Tree,199.211,\N,\N,\N
+3,6,7,ブラックムーン,Burakku Muun,Black Moon,411.769,\N,\N,\N
+3,7,8,Rアイキャッチ音楽,R Aikyatchi Ongaku,R Eyecatch Music,24.608,\N,\N,\N
+3,8,9,うさぎと衛,Usagi to Mamoru,Usagi and Mamoru,381.389,\N,\N,\N
+3,9,10,「好きと言って」～インストヴァージョン～,"""Suki to Itte"" ~Insuto Vaajon~",Say You Love Me ~Instrumental Version~,277.813,\N,\N,\N
+3,10,11,ちびうさ,Chibiusa,Chibi-Usa,186.228,\N,\N,\N
+3,11,12,さびしさを越えて,Sabishisa wo Koete,Beyond Loneliness,266.215,\N,\N,\N
+3,12,13,セーラープルート,Seeraa Puruuto,Sailor Pluto,298.659,\N,\N,\N
+3,13,14,黒い月、総攻撃,"Kuroi Tsuki, Soukougeki","Black Moon, All-Out Attack",467.097,\N,\N,\N
+3,14,15,ムーンクリスタルパワーメイクアップ,Muun Kurisutaru Pawaa Meikuappu,Moon Crystal Power Make Up,239.544,\N,\N,\N
+3,15,16,愛,Ai,Love,249.993,\N,\N,\N
+3,16,17,夕陽,Yuuhi,Setting Sun,208.301,\N,\N,\N
+3,17,18,「乙女のポリシー」TVサイズ,"""Otome no Porishii"" TV Saizu",A Maiden's Policy (TV Size),90.254,歌／石田よう子,Uta: Ishida Youko,Vocals: Yoko Ishida
+3,18,19,R予告編音楽,R Yokokuhen Ongaku,R Preview Music,32.628,\N,\N,\N
+3,19,20,「乙女のポリシー」～マーチヴァージョン～,"""Otome no Porishii"" ~Maachi Vaajon~",A Maiden's Policy ~March Version~,210.783,\N,\N,\N
+4,0,1,運命の戦士,Unmei no Senshi,Guardians of Destiny,212.089,\N,\N,\N
+4,1,2,「ムーンライト伝説」TVサイズSE入り,"""Muunraito Densetsu"" TV Saizu SE-iri",Moonlight Legend (TV Size with Sound Effects),92.892,歌／ムーンリップス,Uta: Muun Rippusu,Vocals: Moon Lips
+4,2,3,Sサブタイトル音楽,S Sabutaitoru Ongaku,S Subtitle Music,10.476,\N,\N,\N
+4,3,4,ピュアな心,Pyua na Kokoro,Pure Heart,382.434,\N,\N,\N
+4,4,5,はるかとみちる,Haruka to Michiru,Haruka and Michiru,277.552,\N,\N,\N
+4,5,6,デスバスターズ,Desu Basutaazu,Death Busters,189.99,\N,\N,\N
+4,6,7,ダイモーン出現,Daimoon Shutsugen,A Daimon Appears,163.71,\N,\N,\N
+4,7,8,ダイモーン,Daimoon,Daimon,288.941,\N,\N,\N
+4,8,9,追跡,Tsuiseki,Pursuit,227.266,\N,\N,\N
+4,9,10,セーラーウラヌス＆ネプチューン,Seeraa Uranusu & Nepuchuun,Sailor Uranus & Neptune,223.27,\N,\N,\N
+4,10,11,スパイラルハートムーンロッド,Supairaru Haato Muun Roddo,Spiral Heart Moon Rod,171.495,\N,\N,\N
+4,11,12,ムーンコズミックパワーメイクアップ,Muun Kozumikku Pawaa Meikuappu,Moon Cosmic Power Make Up,211.854,\N,\N,\N
+4,12,13,ピュアな心の結晶は無事,Pyua na Kokoro no Kesshou wa Buji,The Pure Heart Crystal Is Safe,54.884,\N,\N,\N
+4,13,14,セーラー戦士同士の対立,Seeraa Senshi Doushi no Tairitsu,Sailor Guardians in Conflict,530.809,\N,\N,\N
+4,14,15,マントは虹色,Manto wa Nijiiro,The Cape Is Rainbow-Colored,240.51,\N,\N,\N
+4,15,16,「タキシード・ミラージュ」～インストヴァージョン～,"""Takishiido Miraaju"" ~Insuto Vaajon~",Tuxedo Mirage ~Instrumental Version~,215.668,\N,\N,\N
+4,16,17,Sアイキャッチ音楽,S Aikyatchi Ongaku,S Eyecatch Music,11.887,\N,\N,\N
+4,17,18,聖杯,Seihai,The Holy Grail,112.615,\N,\N,\N
+4,18,19,帰ってきたちびうさ,Kaette Kita Chibiusa,Return of Chibi-Usa,333.193,\N,\N,\N
+4,19,20,セーラーサターン,Seeraa Sataan,Sailor Saturn,200.517,\N,\N,\N
+4,20,21,スーパーセーラームーン,Suupaa Seeraa Muun,Super Sailor Moon,154.986,\N,\N,\N
+4,21,22,「タキシード・ミラージュ」TVサイズ,"""Takishiido Miraaju"" TV Saizu",Tuxedo Mirage (TV Size),91.586,歌／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加,"Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika","Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+4,22,23,S予告編音楽,S Yokokuhen Ongaku,S Preview Music,79.596,\N,\N,\N
+5,0,1,水晶の森,Suishou no Mori,Crystal Forest,184.844,\N,\N,\N
+5,1,2,「ムーンライト伝説」TVサイズ SE入り,"""Muunraito Densetsu"" TV Saizu SE-iri",Moonlight Legend (TV Size with Sound Effects),92.84,歌／ムーンリップス,Uta: Muun Rippusu,Vocals: Moon Lips
+5,2,3,スーパーズサブタイトル音楽,Suupaazu Sabutaitoru Ongaku,SuperS Subtitle Music,10.424,\N,\N,\N
+5,3,4,ちびうさの想い,Chibiusa no Omoi,Chibi-Usa's Feelings,156.945,\N,\N,\N
+5,4,5,うさぎとちびうさ,Usagi to Chibiusa,Usagi and Chibi-Usa,258.587,\N,\N,\N
+5,5,6,デッドムーン,Deddo Muun,Dead Moon,314.672,\N,\N,\N
+5,6,7,アマゾントリオ,Amazon Torio,Amazon Trio,359.341,\N,\N,\N
+5,7,8,アマゾントリオの罠,Amazon Torio no Wana,Amazon Trio's Trap,289.359,\N,\N,\N
+5,8,9,ゆれる心,Yureru Kokoro,A Wavering Heart,139.626,\N,\N,\N
+5,9,10,心の中のぞく,Kokoro no Naka Nozoku,Peeking Into Hearts,52.429,\N,\N,\N
+5,10,11,レムレス,Remuresu,Lemures,392.177,\N,\N,\N
+5,11,12,絶体絶命,Zettai Zetsumei,Desperate Situation,187.952,\N,\N,\N
+5,12,13,ペガサス,Pegasasu,Pegasus,201.301,\N,\N,\N
+5,13,14,ムーンクライシスメイクアップ,Muun Kuraishisu Meikuappu,Moon Crisis Make Up,105.196,\N,\N,\N
+5,14,15,恋はLonely heart,Koi wa Lonely heart,Love Is a Lonely Heart,108.853,\N,\N,\N
+5,15,16,「私たちになりたくて」TVサイズ,"""Watashi-tachi ni Naritakute"" TV Saizu",Wanting to Be Like Us (TV Size),97.15,歌／藤谷美和子,Uta: Fujitani Miwako,Vocals: Miwako Fujitani
+5,16,17,スーパーズアイキャッチ音楽,Suupaazu Aikyatchi Ongaku,SuperS Eyecatch Music,25.288,\N,\N,\N
+5,17,18,ペガサスとちびうさ,Pegasasu to Chibiusa,Pegasus and Chibi-Usa,184.217,\N,\N,\N
+5,18,19,ちびうさ、ペガサスを信じて,"Chibiusa, Pegasasu wo Shinjite","Chibi-Usa, Believe in Pegasus",174.551,\N,\N,\N
+5,19,20,アマゾネスカルテット,Amazonesu Karutetto,Amazoness Quartet,173.611,\N,\N,\N
+5,20,21,死の月、総攻撃,"Shi no Tsuki, Soukougeki","Dead Moon, All-Out Attack",290.927,\N,\N,\N
+5,21,22,クリスタルパワーメイクアップ,Kurisutaru Pawaa Meikuappu,Crystal Power Make Up,327.759,\N,\N,\N
+5,22,23,スーパーズ予告編音楽,Suupaazu Yokokuhen Ongaku,SuperS Preview Music,48.092,\N,\N,\N
+5,23,24,"「""らしく""いきましょ」～マーチヴァージョン～","""'Rashiku' Ikimasho"" ~Maachi Vaajon~",I'll Go As Myself ~March Version~,216.817,\N,\N,\N
+6,0,1,「ゴールデンクイーン・ギャラクシア」～オルゴールヴァージョン～,"""Gooruden Kuiin Gyarakushia"" ~Orugooru Vaajon~",Golden Queen Galaxia ~Music Box Version~,161.438,\N,\N,\N
+6,1,2,「セーラースターソング」TVサイズ、SE入り,"""Seeraa Sutaa Songu"" TV Saizu, SE-iri",Sailor Star Song (TV Size with Sound Effects),96.55,歌／花沢加絵,Uta: Hanazawa Kae,Vocals: Kae Hanazawa
+6,2,3,セーラースターズサブタイトル音楽,Seeraa Sutaazu Sabutaitoru Ongaku,Sailor Stars Subtitle Music,10.476,\N,\N,\N
+6,3,4,5人は高校生,5-nin wa Koukousei,The Five Are High School Students,319.426,\N,\N,\N
+6,4,5,ネヘレニア復活,Neherenia Fukkatsu,Nehelenia's Resurrection,260.546,\N,\N,\N
+6,5,6,ほたるの予言,Hotaru no Yogen,Hotaru's Prophecy,102.244,\N,\N,\N
+6,6,7,ミラーパレドリー,Miraa Paredorii,Mirror Paredri,298.372,\N,\N,\N
+6,7,8,とらわれのセーラー戦士,Toraware no Seeraa Senshi,Captured Sailor Guardians,311.146,\N,\N,\N
+6,8,9,プリンセスのために……,Purinsesu no Tame ni......,For the Princess......,224.524,\N,\N,\N
+6,9,10,エターナルの愛,Etaanaru no Ai,Eternal Love,199.916,\N,\N,\N
+6,10,11,セーラースターズ予告編音楽,Seeraa Sutaazu Yokokuhen Ongaku,Sailor Stars Preview Music,120.452,\N,\N,\N
+6,11,12,衛との別れ,Mamoru to no Wakare,Parting with Mamoru,310.545,\N,\N,\N
+6,12,13,シャドウギャラクティカ,Shadou Gyarakutika,Shadow Galactica,237.559,\N,\N,\N
+6,13,14,「ゴールデンクイーン・ギャラクシア」～インストヴァージョン～,"""Gooruden Kuiin Gyarakushia"" ~Insuto Vaajon~",Golden Queen Galaxia ~Instrumental Version~,239.936,\N,\N,\N
+6,14,15,ボクたちの歌をきいて,Boku-tachi no Uta wo Kiite,Listen to Our Song,231.812,\N,\N,\N
+6,15,16,「真夜中ひとり」～インストヴァージョン～,"""Mayonaka Hitori"" ~Insuto Vaajon~",Alone at Midnight ~Instrumental Version~,213.944,\N,\N,\N
+6,16,17,「力を合わせて」～インストヴァージョン～,"""Chikara wo Awasete"" ~Insuto Vaajon~",Joining Forces ~Instrumental Version~,366.682,\N,\N,\N
+6,17,18,「銀河一身分違いな片想い」～インストヴァージョン～,"""Ginga Ichi Mibun Chigai na Kataomoi"" ~Insuto Vaajon~",The Most Mismatched Unrequited Love in the Galaxy ~Instrumental Version~,259.919,\N,\N,\N
+6,18,19,「流れ星へ」コーラスなしカラオケ,"""Nagareboshi e"" Koorasu Nashi Karaoke",To the Shooting Star (Karaoke without Chorus),284.71,\N,\N,\N
+7,0,1,「とどかぬ想い－my friend's love－」～インストヴァージョン～,"""Todokanu Omoi - my friend's love -"" ~Insuto Vaajon~",Unreachable Feelings - my friend's love - ~Instrumental Version~,232.412,\N,\N,\N
+7,1,2,あの方はどこに……,Ano Kata wa Doko ni......,Where Is That Person......,215.119,\N,\N,\N
+7,2,3,星野、大気、夜天,"Seiya, Taiki, Yaten","Seiya, Taiki, Yaten",231.942,\N,\N,\N
+7,3,4,学園のアイドル,Gakuen no Aidoru,School Idol,71.211,\N,\N,\N
+7,4,5,美奈子の野望❤,Minako no Yabou❤,Minako's Ambition,120.426,\N,\N,\N
+7,5,6,「愛の女神のHow to love」～インストヴァージョン～,"""Ai no Megami no How to love"" ~Insuto Vaajon~",The Goddess of Love's How to Love ~Instrumental Version~,310.963,\N,\N,\N
+7,6,7,星野の想い,Seiya no Omoi,Seiya's Feelings,93.023,\N,\N,\N
+7,7,8,「銀河一身分違いな片想い」～オルゴールヴァージョン～,"""Ginga Ichi Mibun Chigai na Kataomoi"" ~Orugooru Vaajon~",The Most Mismatched Unrequited Love in the Galaxy ~Music Box Version~,107.861,\N,\N,\N
+7,8,9,セーラースターズアイキャッチ音楽,Seeraa Sutaazu Aikyatchi Ongaku,Sailor Stars Eyecatch Music,12.488,\N,\N,\N
+7,9,10,銀河テレビでの策略,Ginga Terebi de no Sakuryaku,Scheme at Galaxy TV,140.618,\N,\N,\N
+7,10,11,スターシードをいただくわ,Sutaa Shiido wo Itadaku wa,I'll Take the Star Seed,144.223,\N,\N,\N
+7,11,12,襲い来るファージ,Osoikuru Faaji,The Phage Attacks,178.966,\N,\N,\N
+7,12,13,スターパワーメイクアップ！,Sutaa Pawaa Meikuappu!,Star Power Make Up!,116.324,\N,\N,\N
+7,13,14,セーラースターライツ出現,Seeraa Sutaa Raitsu Shutsugen,The Sailor Star Lights Appear,68.05,\N,\N,\N
+7,14,15,「炎の狙撃者（FLAME SNIPER）」～インストヴァージョン～,"""Honoo no Sogekisha (FLAME SNIPER)"" ~Insuto Vaajon~",Flame Sniper ~Instrumental Version~,256.759,\N,\N,\N
+7,15,16,「We believe you」～インストヴァージョン～,"""We believe you"" ~Insuto Vaajon~",We believe you ~Instrumental Version~,304.589,\N,\N,\N
+7,16,17,華麗なるムーンエターナルメイクアップ,Kareinaru Muun Etaanaru Meikuappu,Magnificent Moon Eternal Make Up,268.096,\N,\N,\N
+7,17,18,ちびちび,Chibichibi,Chibi-Chibi,324.86,\N,\N,\N
+7,18,19,「セーラームーン・クリスマス」～インストヴァージョン～,"""Seeraa Muun Kurisumasu"" ~Insuto Vaajon~",Sailor Moon Christmas ~Instrumental Version~,226.77,\N,\N,\N
+7,19,20,究極の悪,Kyuukyoku no Aku,Ultimate Evil,74.006,\N,\N,\N
+7,20,21,決意,Ketsui,Resolve,77.95,\N,\N,\N
+7,21,22,究極の愛,Kyuukyoku no Ai,Ultimate Love,145.059,\N,\N,\N
+7,22,23,平和,Heiwa,Peace,124.84,\N,\N,\N
+7,23,24,「愛をしんじてる」～インストヴァージョン～,"""Ai wo Shinjiteru"" ~Insuto Vaajon~",I Believe in Love ~Instrumental Version~,241.947,\N,\N,\N
+7,24,25,「セーラースターソング」～マーチヴァージョン～,"""Seeraa Sutaa Songu"" ~Maachi Vaajon~",Sailor Star Song ~March Version~,211.384,\N,\N,\N
+8,0,1,プロローグ,Puroroogu,Prologue,91.273,\N,\N,\N
+8,1,2,「ムーンライト伝説」TVサイズ カラオケ,"""Muunraito Densetsu"" TV Saizu Karaoke",Moonlight Legend (TV Size Karaoke),84.22,\N,\N,\N
+8,2,3,衛の回想,Mamoru no Kaisou,Mamoru's Reminiscence,123.586,\N,\N,\N
+8,3,4,フィオレ出現,Fiore Shutsugen,Fiore Appears,90.881,\N,\N,\N
+8,4,5,うさぎの心配,Usagi no Shinpai,Usagi's Worry,149.866,\N,\N,\N
+8,5,6,妖花魔グリシナ,Youkama Gurishina,Flower Monster Glycina,180.115,\N,\N,\N
+8,6,7,セーラー4戦士、スターパワーメイクアップ,"Seeraa 4 Senshi, Sutaa Pawaa Meikuappu","Four Sailor Guardians, Star Power Make Up",156.422,\N,\N,\N
+8,7,8,セーラームーンVSグリシア,Seeraa Muun VS Gurishia,Sailor Moon vs. Glycina,120.582,\N,\N,\N
+8,8,9,キセニアン,Kisenian,Xenian,74.737,\N,\N,\N
+8,9,10,タキシード仮面登場 ～衛とフィオレ,Takishiido Kamen Toujou ~ Mamoru to Fiore,Tuxedo Mask Appears ~ Mamoru and Fiore,143.831,\N,\N,\N
+8,10,11,フィオレの回想,Fiore no Kaisou,Fiore's Reminiscence,155.926,\N,\N,\N
+8,11,12,セーラー・テレポート！,Seeraa Terepooto!,Sailor Teleport!,115.488,\N,\N,\N
+8,12,13,地球侵略計画,Chikyuu Shinryaku Keikaku,Earth Invasion Plan,58.359,\N,\N,\N
+8,13,14,花迷宮の死闘,Hana Meikyuu no Shitou,Death Match in the Flower Labyrinth,134.009,\N,\N,\N
+8,14,15,セーラームーンVSフィオレ,Seeraa Muun VS Fiore,Sailor Moon vs. Fiore,248.713,\N,\N,\N
+8,15,16,生還,Seikan,Coming Back Alive,227.319,\N,\N,\N
+8,16,17,「Moon Revenge」コーラスなしカラオケ,"""Moon Revenge"" Koorasu Nashi Karaoke",Moon Revenge (Karaoke without Chorus),241.843,\N,\N,\N
+8,17,18,復活のセレナーデ,Fukkatsu no Serenaade,Resurrection Serenade,92.135,\N,\N,\N
+8,18,19,「Moon Revenge」劇場版サイズ,"""Moon Revenge"" Gekijou-ban Saizu",Moon Revenge (Movie Size),145.216,歌／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加,"Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika","Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+8,19,20,「I am セーラームーン」劇場版サイズ,"""I am Seeraa Muun"" Gekijou-ban Saizu",I am Sailor Moon (Movie Size),94.381,歌／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加,"Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika","Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+8,20,21,第2回録音未収録劇伴集,Dai 2-kai Rokuon Mishuuroku Gekiban-shuu,Unreleased Score from the 2nd Recording Session,126.695,\N,\N,\N
+8,21,22,「タキシード・ナイト」～インストヴァージョン～,"""Takishiido Naito"" ~Insuto Vaajon~",Tuxedo Knight ~Instrumental Version~,181.996,\N,\N,\N
+8,22,23,「ルナ！」～インストヴァージョン～,"""Runa!"" ~Insuto Vaajon~",Luna! ~Instrumental Version~,117.578,\N,\N,\N
+8,23,24,「イニシャル・U」～インストヴァージョン～,"""Inisharu U"" ~Insuto Vaajon~",Initial U ~Instrumental Version~,275.985,\N,\N,\N
+8,24,25,「戦士の想い」～インストヴァージョン～,"""Senshi no Omoi"" ~Insuto Vaajon~",A Guardian's Feelings ~Instrumental Version~,303.675,\N,\N,\N
+8,25,26,「ガーネット・ガーディアン」～インストヴァージョン～,"""Gaanetto Gaadian"" ~Insuto Vaajon~",Garnet Guardian ~Instrumental Version~,146.705,\N,\N,\N
+8,26,27,「再来」～インストヴァージョン～,"""Sairai"" ~Insuto Vaajon~",Second Coming ~Instrumental Version~,180.847,\N,\N,\N
+8,27,28,SE集「ムーンライト伝説」アレンジ,"SE-shuu ""Muunraito Densetsu"" Arenji","Sound Effects: ""Moonlight Legend"" Arrangement",107.443,\N,\N,\N
+8,28,29,SE集 セーラームーン①,SE-shuu Seeraa Muun 1,Sound Effects: Sailor Moon 1,113.059,\N,\N,\N
+8,29,30,SE集 セーラームーン②,SE-shuu Seeraa Muun 2,Sound Effects: Sailor Moon 2,118.179,\N,\N,\N
+9,0,1,雪の女王,Yuki no Joou,Snow Queen,102.845,\N,\N,\N
+9,1,2,「ムーンライト伝説」オリジナルカラオケ,"""Muunraito Densetsu"" Orijinaru Karaoke",Moonlight Legend (Original Karaoke),173.115,\N,\N,\N
+9,2,3,のんきなうさぎ,Nonki na Usagi,Carefree Usagi,90.907,\N,\N,\N
+9,3,4,翔のやさしさ,Kakeru no Yasashisa,Kakeru's Kindness,155.064,\N,\N,\N
+9,4,5,翔の夢やさしく,Kakeru no Yume Yasashiku,Kakeru's Gentle Dreams,72.648,\N,\N,\N
+9,5,6,侵略作戦開始,Shinryaku Sakusen Kaishi,The Invasion Operation Begins,92.083,\N,\N,\N
+9,6,7,セーラー4戦士VSスノーダンサー,Seeraa 4 Senshi VS Sunoo Dansaa,Four Sailor Guardians vs. Snow Dancers,142.604,\N,\N,\N
+9,7,8,セーラーちびムーンにメイクアップ,Seeraa Chibi Muun ni Meikuappu,Make Up into Sailor Chibi Moon,93.807,\N,\N,\N
+9,8,9,野望,Yabou,Ambition,66.718,\N,\N,\N
+9,9,10,ドキドキ,Dokidoki,Heart Pounding,67.763,\N,\N,\N
+9,10,11,翔の想い,Kakeru no Omoi,Kakeru's Feelings,105.954,\N,\N,\N
+9,11,12,つらい別れ,Tsurai Wakare,Painful Farewell,127.348,\N,\N,\N
+9,12,13,スノーカグヤ出現,Sunoo Kaguya Shutsugen,Snow Kaguya Appears,175.622,\N,\N,\N
+9,13,14,最終決戦,Saishuu Kessen,The Final Battle,198.558,\N,\N,\N
+9,14,15,恋する心,Koisuru Kokoro,Hearts in Love,110.786,\N,\N,\N
+9,15,16,愛と友情の力,Ai to Yuujou no Chikara,The Power of Love and Friendship,161.072,\N,\N,\N
+9,16,17,愛のメッセージ,Ai no Messeeji,Message of Love,209.712,\N,\N,\N
+9,17,18,「Moonlight Destiny」劇場版サイズ,"""Moonlight Destiny"" Gekijou-ban Saizu",Moonlight Destiny (Movie Size),136.073,歌／朝川ひろこ,Uta: Asakawa Hiroko,Vocals: Hiroko Asakawa
+9,18,19,セーラー4戦士、メイクアップテーマ　ソロヴァージョン,"Seeraa 4 Senshi, Meikuappu Teema Soro Vaajon","Four Sailor Guardians, Make Up Theme (Solo Version)",96.079,\N,\N,\N
+9,19,20,「セーラーチームのテーマ」～インストヴァージョン～,"""Seeraa Chiimu no Teema"" ~Insuto Vaajon~",Sailor Team's Theme ~Instrumental Version~,234.842,\N,\N,\N
+9,20,21,「Moonlight Destiny」～インストヴァージョン～,"""Moonlight Destiny"" ~Insuto Vaajon~",Moonlight Destiny ~Instrumental Version~,357.513,\N,\N,\N
+9,21,22,「セーラームーン・クリスマス」～オルゴールヴァージョン～,"""Seeraa Muun Kurisumasu"" ~Orugooru Vaajon~",Sailor Moon Christmas ~Music Box Version~,121.941,\N,\N,\N
+9,22,23,「イニシャル・U」～オルゴールヴァージョン～,"""Inisharu U"" ~Orugooru Vaajon~",Initial U ~Music Box Version~,134.688,\N,\N,\N
+9,23,24,「戦士の想い」～オルゴールヴァージョン～,"""Senshi no Omoi"" ~Orugooru Vaajon~",A Guardian's Feelings ~Music Box Version~,135.289,\N,\N,\N
+9,24,25,「ガーネット・ガーディアン」～オルゴールヴァージョン～,"""Gaanetto Gaadian"" ~Orugooru Vaajon~",Garnet Guardian ~Music Box Version~,90.646,\N,\N,\N
+9,25,26,「再来」～オルゴールヴァージョン～,"""Sairai"" ~Orugooru Vaajon~",Second Coming ~Music Box Version~,63.505,\N,\N,\N
+9,26,27,「愛をしんじてる」～オルゴールヴァージョン～,"""Ai wo Shinjiteru"" ~Orugooru Vaajon~",I Believe in Love ~Music Box Version~,177.843,\N,\N,\N
+9,27,28,SE集 セーラームーン③,SE-shuu Seeraa Muun 3,Sound Effects: Sailor Moon 3,183.433,\N,\N,\N
+9,28,29,SE集 セーラームーン④,SE-shuu Seeraa Muun 4,Sound Effects: Sailor Moon 4,219.064,\N,\N,\N
+9,29,30,SE集 赤いバラ、他,"SE-shuu Akai Bara, Hoka","Sound Effects: Red Rose, etc.",176.824,\N,\N,\N
+10,0,1,笛吹き,Fuefuki,Flute Player,157.441,合唱／森の木児童合唱団とそのお友達,Gasshou: Mori no Ki Jidou Gasshoudan to Sono Otomodachi,Chorus: Mori no Ki Children's Choir and friends
+10,1,2,「ムーンライト伝説」TVサイズ,"""Muunraito Densetsu"" TV Saizu",Moonlight Legend (TV Size),83.724,歌／ムーンリップス,Uta: Muun Rippusu,Vocals: Moon Lips
+10,2,3,クッキー教室,Kukkii Kyoushitsu,Cookie Lesson,135.315,\N,\N,\N
+10,3,4,ペルル,Peruru,Perle,122.071,\N,\N,\N
+10,4,5,ププラン,Pupuran,Poupelin,186.777,合唱／森の木児童合唱団とそのお友達,Gasshou: Mori no Ki Jidou Gasshoudan to Sono Otomodachi,Chorus: Mori no Ki Children's Choir and friends
+10,5,6,ボンボンベイビー,Bonbon Beibii,Bonbon Baby,60.292,\N,\N,\N
+10,6,7,セーラー4戦士、クリスタルパワーメイクアップ,"Seeraa 4 Senshi, Kurisutaru Pawaa Meikuappu","Four Sailor Guardians, Crystal Power Make Up",96.941,\N,\N,\N
+10,7,8,タキシード仮面,Takishiido Kamen,Tuxedo Mask,119.564,\N,\N,\N
+10,8,9,ペルルの反抗,Peruru no Hankou,Perle's Rebellion,88.844,\N,\N,\N
+10,9,10,戦闘再開,Sentou Saikai,Resuming Combat,146.182,合唱／森の木児童合唱団とそのお友達,Gasshou: Mori no Ki Jidou Gasshoudan to Sono Otomodachi,Chorus: Mori no Ki Children's Choir and friends
+10,10,11,女王バディヤーヌ,Joou Badiyaanu,Queen Badiane,53.082,\N,\N,\N
+10,11,12,マジパンヌ・キャッスル,Majipannu Kyassuru,Marzipan Castle,172.879,\N,\N,\N
+10,12,13,外部太陽系3戦士,Gaibu Taiyoukei 3 Senshi,The Three Outer Solar System Guardians,102.323,\N,\N,\N
+10,13,14,ブラックドリームホール,Burakku Doriimu Hooru,Black Dream Hole,203.965,\N,\N,\N
+10,14,15,命をかけて,Inochi wo Kakete,Risking Our Lives,138.528,\N,\N,\N
+10,15,16,勇気100倍クッキー,Yuuki 100-bai Kukkii,100-Times Courage Cookie,37.408,\N,\N,\N
+10,16,17,夢の棺,Yume no Hitsugi,Dream Coffin,159.74,\N,\N,\N
+10,17,18,愛の光,Ai no Hikari,Love's Light,224.941,\N,\N,\N
+10,18,19,家に帰ろう,Uchi ni Kaerou,Let's Go Home,109.95,\N,\N,\N
+10,19,20,「Morning Moonで会いましょう」劇場版サイズ,"""Morning Moon de Aimashou"" Gekijou-ban Saizu",Let's Meet at Morning Moon (Movie Size),107.678,歌／プリティキャスト,Uta: Puriti Kyasuto,Vocals: Pretty Cast
+10,20,21,亜美ちゃんの朝,Ami-chan no Asa,Ami-chan's Morning,84.481,\N,\N,\N
+10,21,22,水野亜美,Mizuno Ami,Ami Mizuno,170.607,\N,\N,\N
+10,22,23,可愛い企み,Kawaii Takurami,Cute Scheme,71.237,\N,\N,\N
+10,23,24,地霊ボンノーン,Chirei Bonnoon,Earth Spirit Bonnon,149.291,\N,\N,\N
+10,24,25,セーラーマーキュリー,Seeraa Maakyurii,Sailor Mercury,51.018,\N,\N,\N
+10,25,26,マーキュリーアクアミラージュ,Maakyurii Akua Miraaju,Mercury Aqua Mirage,52.742,\N,\N,\N
+10,26,27,終曲,Shuukyoku,Finale,86.466,\N,\N,\N
+10,27,28,"「""らしく""いきましょ」TVサイズ","""'Rashiku' Ikimasho"" TV Saizu",I'll Go As Myself (TV Size),94.643,歌／Meu,Uta: Meu,Vocals: Meu
+10,28,29,第1回録音未収録劇伴集,Dai 1-kai Rokuon Mishuuroku Gekiban-shuu,Unreleased Score from the 1st Recording Session,272.092,\N,\N,\N
+10,29,30,「三時の妖精」～インストヴァージョン～,"""Sanji no Yousei"" ~Insuto Vaajon~",The Three O'Clock Fairy ~Instrumental Version~,204.148,\N,\N,\N
+10,30,31,「Morning Moonで会いましょう」～インストヴァージョン～,"""Morning Moon de Aimashou"" ~Insuto Vaajon~",Let's Meet at Morning Moon ~Instrumental Version~,269.715,\N,\N,\N
+10,31,32,「あしたもまた自転車」～オルゴールヴァージョン～,"""Ashita mo Mata Jitensha"" ~Orugooru Vaajon~",Bicycle Again Tomorrow ~Music Box Version~,139.417,\N,\N,\N
+10,32,33,「あしたもまた自転車」～インストヴァージョン～,"""Ashita mo Mata Jitensha"" ~Insuto Vaajon~",Bicycle Again Tomorrow ~Instrumental Version~,233.692,\N,\N,\N
+EX,8,9,エンディング・アレンジ～明るく元気にそしてロマンティックに～,Endingu Arenji ~Akaruku Genki ni Soshite Romantikku ni~,Ending Arrangement ~Cheerful and Romantic~,204.801,\N,\N,\N
+EX,10,11,うさぎのテーマ・葛藤・エイルのフルート,"Usagi no Teema, Kattou, Eiru no Furuuto",Usagi's Theme · Conflict · Ail's Flute,103.864,\N,\N,\N
+EX,15,16,やさしい情景,Yasashii Joukei,Gentle Scene,322.613,\N,\N,\N
+EX,16,17,緊張の情景と行動的なBGM,Kinchou no Joukei to Koudouteki na BGM,Tense Scenes and Action BGM,343.355,\N,\N,\N
+EX,21,22,敵とペガサスのテーマ,Teki to Pegasasu no Teema,Enemy and Pegasus Theme,195.11,\N,\N,\N
+EX,22,23,日常的BGM,Nichijouteki BGM,Everyday BGM,600.504,\N,\N,\N
+R,2,3,魔界樹,Makaiju,The Makai Tree,347.612,\N,\N,\N
+R,4,5,清く、明るく、△×□§...,"Kiyoku, Akaruku, △×□§...","Pure, Bright, △×□§...",407.198,\N,\N,\N
+R,7,8,月は見ている,Tsuki wa Mite Iru,The Moon is Watching,307.75,\N,\N,\N
+S,0,1,聖杯、救世主(メシア)……神秘なる世界,"Seihai, Kyuuseishu (Meshia)...... Shinpi naru Sekai","The Holy Grail, the Messiah...... A Mysterious World",120.974,\N,\N,\N
+S,2,3,朝の並木道,Asa no Namikimichi,Avenue at Morning,251.821,\N,\N,\N
+S,5,6,恋する乙女はとまらない！,Koisuru Otome wa Tomaranai!,You Can't Stop a Girl in Love!,302.63,\N,\N,\N
+SS,3,4,セーラー戦士の優雅な放課後,Seeraa Senshi no Yuuga na Houkago,The Sailor Guardians' Elegant After-School,339.671,\N,\N,\N
+SS,11,12,セーラー戦士新たなる飛翔,Seeraa Senshi Aratanaru Hishou,A New Flight for the Sailor Guardians,327.185,\N,\N,\N
+ST1,0,1,エターナルセーラームーン,Etaanaru Seeraa Muun,Eternal Sailor Moon,110.159,\N,\N,\N
+ST2,4,5,ギターソロ・コレクション,Gitaa Soro Korekushon,Guitar Solo Collection,229.696,\N,\N,\N
+ST2,17,18,スターパワーメイクアップ音楽 ～コーラスなし～,Sutaa Pawaa Meikuappu Ongaku ~Koorasu Nashi~,Star Power Make Up Music ~Without Chorus~,118.127,\N,\N,\N
+ST2,18,19,ムーンエターナルメイクアップ音楽 ～コーラスなし～,Muun Etaanaru Meikuappu Ongaku ~Koorasu Nashi~,Moon Eternal Make Up Music ~Without Chorus~,40.412,\N,\N,\N
+ST2,19,20,エターナルセーラームーン・アクション音楽 ～コーラスなし～,Etaanaru Seeraa Muun Akushon Ongaku ~Koorasu Nashi~,Eternal Sailor Moon Action Music ~Without Chorus~,122.959,\N,\N,\N
+S,1,2,サブタイトル,Sabutaitoru,Subtitle,13.01,\N,\N,\N
+S,3,4,デスバスターズの野望,Desu Basutaazu no Yabou,The Death Busters' Ambition,196.99,\N,\N,\N
+S,4,5,天王はるかと海王みちる,Ten'ou Haruka to Kaiou Michiru,Haruka Tenoh and Michiru Kaioh,146.208,\N,\N,\N
+S,6,7,ダイモーン出現,Daimoon Shutsugen,A Daimon Appears,281.052,\N,\N,\N
+S,7,8,アイキャッチ,Aikyatchi,Eyecatch,15.152,\N,\N,\N
+S,8,9,奪われた純粋(ピュア)な心の結晶,Ubawareta Junsui (Pyua) na Kokoro no Kesshou,The Stolen Pure Heart Crystal,192.576,\N,\N,\N
+S,9,10,戦士の宿命……,Senshi no Shukumei......,The Guardians' Fate......,282.62,\N,\N,\N
+S,10,11,変身(メイクアップ)！セーラー戦士,Henshin (Meikuappu)! Seeraa Senshi,Make Up! Sailor Guardians,271.387,\N,\N,\N
+S,11,12,ウラヌス、そして、ネプチューン,"Uranusu, Soshite, Nepuchuun","Uranus, and Then, Neptune",341.813,\N,\N,\N
+S,12,13,The Pretty Soldiers' Big War!,The Pretty Soldiers' Big War!,The Pretty Soldiers' Big War!,263.838,\N,\N,\N
+S,13,14,愛の奇跡,Ai no Kiseki,The Miracle of Love,127.139,\N,\N,\N
+S,14,15,来週も見てネ！,Raishuu mo Mite ne!,See You Next Week!,32.889,\N,\N,\N
+MC,0,1,ムーンライト伝説,Muunraito Densetsu,Moonlight Legend,175.309,うた／DALI,Uta: DALI,Vocals: DALI
+MC,1,2,あたしだって普通の女の子,Atashi Datte Futsuu no Onnanoko,"I'm Just an Ordinary Girl, Too",389.617,\N,\N,\N
+MC,2,3,本当に選ばれた戦士なの？,Hontou ni Erabareta Senshi na no?,Was I Really Chosen to Be a Guardian?,403.253,\N,\N,\N
+MC,3,4,星空はミステリアス,Hoshizora wa Misuteriasu,The Starry Sky Is Mysterious,368.746,\N,\N,\N
+MC,4,5,おっちょこちょいは生まれつき,Occhokochoi wa Umaretsuki,Scatterbrained by Nature,409.183,\N,\N,\N
+MC,5,6,恋する乙女心,Koisuru Otomegokoro,A Maiden's Heart in Love,413.284,\N,\N,\N
+MC,6,7,誰かが狙われている,Dareka ga Nerawarete Iru,Someone Is Being Targeted,438.31,\N,\N,\N
+MC,7,8,夢見るおだんごアタマ,Yumemiru Odango Atama,Dreamy Dumpling-Head,448.941,\N,\N,\N
+MC,8,9,夕暮れ時は妖魔の予感,Yuuguredoki wa Youma no Yokan,Dusk Brings a Premonition of Monsters,422.558,\N,\N,\N
+MC,9,10,ムーン・プリズム・パワー・メイクアップ！,Muun Purizumu Pawaa Meikuappu!,Moon Prism Power Make Up!,457.405,\N,\N,\N
+MC,10,11,HEART MOVING,HEART MOVING,HEART MOVING,218.568,うた／高松美砂絵（さくらさくら）,Uta: Takamatsu Misae (Sakura Sakura),Vocals: Misae Takamatsu (Sakura Sakura)
+R,0,1,乙女のポリシー,Otome no Porishii,A Maiden's Policy,194.169,歌／石田よう子,Uta: Ishida Youko,Vocals: Yoko Ishida
+R,1,2,友情、そして愛,"Yuujou, Soshite Ai","Friendship, and Then Love",378.515,\N,\N,\N
+R,3,4,私が戦う,Watashi ga Tatakau,I Will Fight,363.913,\N,\N,\N
+R,5,6,新たなる敵,Aratanaru Teki,A New Enemy,297.536,\N,\N,\N
+R,6,7,追跡は冒険のはじまり,Tsuiseki wa Bouken no Hajimari,The Chase Is the Start of an Adventure,295.916,\N,\N,\N
+R,8,9,悲しみを勇気に変えて,Kanashimi wo Yuuki ni Kaete,Turning Sorrow into Courage,329.51,\N,\N,\N
+R,9,10,好きと言って,Suki to Itte,Say You Love Me,277.683,歌／石田よう子,Uta: Ishida Youko,Vocals: Yoko Ishida
+RM,0,1,プロローグ,Puroroogu,Prologue,92.135,\N,\N,\N
+RM,1,2,Moon Revenge,Moon Revenge,Moon Revenge,242.339,歌／セーラー戦士：三石琴乃（セーラームーン）、久川綾（セーラーマーキュリー）、富沢美智恵（セーラーマーズ）、篠原恵美（セーラージュピター）、深見梨加（セーラーヴィーナス）,"Uta: Seeraa Senshi: Mitsuishi Kotono (Seeraa Muun), Hisakawa Aya (Seeraa Maakyurii), Tomizawa Michie (Seeraa Maazu), Shinohara Emi (Seeraa Jupitaa), Fukami Rika (Seeraa Viinasu)","Vocals: the Sailor Guardians: Kotono Mitsuishi (Sailor Moon), Aya Hisakawa (Sailor Mercury), Michie Tomizawa (Sailor Mars), Emi Shinohara (Sailor Jupiter), Rica Fukami (Sailor Venus)"
+RM,2,3,紅い髪の少年,Akai Kami no Shounen,The Red-Haired Boy,141.271,\N,\N,\N
+RM,3,4,植物園のハプニング！～侵略の予兆,Shokubutsuen no Hapuningu! ~ Shinryaku no Yochou,Happening at the Botanical Garden! ~ Signs of Invasion,226.012,\N,\N,\N
+RM,4,5,妖花魔グリシナ,Youkama Gurishina,Flower Monster Glycina,181.448,\N,\N,\N
+RM,5,6,メイクアップ！,Meikuappu!,Make Up!,194.404,\N,\N,\N
+RM,6,7,燃える美少女戦士,Moeru Bishoujo Senshi,Pretty Guardians Ablaze,153.052,\N,\N,\N
+RM,7,8,タキシード仮面登場～衛とフィオレ,Takishiido Kamen Toujou ~ Mamoru to Fiore,Tuxedo Mask Appears ~ Mamoru and Fiore,142.891,\N,\N,\N
+RM,8,9,セーラー・テレポート！,Seeraa Terepooto!,Sailor Teleport!,116.246,\N,\N,\N
+RM,9,10,追想のフィオレ,Tsuisou no Fiore,Fiore Remembered,212.951,\N,\N,\N
+RM,10,11,花迷宮の死闘,Hana Meikyuu no Shitou,Death Match in the Flower Labyrinth,135.132,\N,\N,\N
+RM,11,12,激突！セーラームーンVSフィオレ,Gekitotsu! Seeraa Muun VS Fiore,Clash! Sailor Moon vs. Fiore,283.874,\N,\N,\N
+RM,12,13,生命燃やして……,Inochi Moyashite......,Burning Life......,189.493,\N,\N,\N
+RM,13,14,復活のセレナーデ,Fukkatsu no Serenaade,Resurrection Serenade,93.337,\N,\N,\N
+RM,14,15,I am セーラームーン,I am Seeraa Muun,I am Sailor Moon,297.562,歌／三石琴乃（セーラームーン）＆セーラー戦士：久川綾（セーラーマーキュリー）、富沢美智恵（セーラーマーズ）、篠原恵美（セーラージュピター）、深見梨加（セーラーヴィーナス）,"Uta: Mitsuishi Kotono (Seeraa Muun) & Seeraa Senshi: Hisakawa Aya (Seeraa Maakyurii), Tomizawa Michie (Seeraa Maazu), Shinohara Emi (Seeraa Jupitaa), Fukami Rika (Seeraa Viinasu)","Vocals: Kotono Mitsuishi (Sailor Moon) & the Sailor Guardians: Aya Hisakawa (Sailor Mercury), Michie Tomizawa (Sailor Mars), Emi Shinohara (Sailor Jupiter), Rica Fukami (Sailor Venus)"
+SM,0,1,邪悪,Jaaku,Evil,131.136,\N,\N,\N
+SM,1,2,ルナ,Runa,Luna,212.089,\N,\N,\N
+SM,2,3,翔,Kakeru,Kakeru,212.377,\N,\N,\N
+SM,3,4,うさぎ,Usagi,Usagi,166.95,\N,\N,\N
+SM,4,5,胸騒ぎ,Munasawagi,Uneasy Feeling,221.154,\N,\N,\N
+SM,5,6,スノーダンサー襲来,Sunoo Dansaa Shuurai,The Snow Dancers Attack,365.846,\N,\N,\N
+SM,6,7,変身,Henshin,Transformation,112.615,\N,\N,\N
+SM,7,8,戦闘,Sentou,Battle,201.353,\N,\N,\N
+SM,8,9,愛と友情の力,Ai to Yuujou no Chikara,The Power of Love and Friendship,162.221,\N,\N,\N
+SM,9,10,愛のメッセージ,Ai no Messeeji,Message of Love,211.279,\N,\N,\N
+SM,10,11,Moonlight Destiny,Moonlight Destiny,Moonlight Destiny,357.461,歌／朝川ひろこ,Uta: Asakawa Hiroko,Vocals: Hiroko Asakawa
+SM,11,12,セーラーチームのテーマ,Seeraa Chiimu no Teema,Sailor Team's Theme,233.98,歌／朝川ひろこ,Uta: Asakawa Hiroko,Vocals: Hiroko Asakawa
+SS,0,1,オープニング「ムーンライト伝説」,"Oopuningu ""Muunraito Densetsu""",Opening: Moonlight Legend,174.29,歌／ムーンリップス,Uta: Muun Rippusu,Vocals: Moon Lips
+SS,1,2,サブタイトル,Sabutaitoru,Subtitle,12.279,\N,\N,\N
+SS,2,3,夢で見た水晶の森,Yume de Mita Suishou no Mori,The Crystal Forest I Saw in a Dream,279.642,\N,\N,\N
+SS,4,5,大人達の憂鬱,Otona-tachi no Yuuutsu,The Grown-Ups' Melancholy,253.284,\N,\N,\N
+SS,5,6,怪人達のサーカス団,Kaijin-tachi no Saakasu-dan,The Monsters' Circus Troupe,314.986,\N,\N,\N
+SS,6,7,アマゾンBAR,Amazon BAR,Amazon Bar,212.272,\N,\N,\N
+SS,7,8,ちびうさのロマンス,Chibiusa no Romansu,Chibi-Usa's Romance,186.777,\N,\N,\N
+SS,8,9,アイキャッチ,Aikyatchi,Eyecatch,14.76,\N,\N,\N
+SS,9,10,アマゾントリオの罠,Amazon Torio no Wana,Amazon Trio's Trap,291.763,\N,\N,\N
+SS,10,11,美しい夢の鏡,Utsukushii Yume no Kagami,The Beautiful Dream Mirror,277.578,\N,\N,\N
+SS,12,13,ダブル変身！ムーン＆ちびムーン,Daburu Henshin! Muun & Chibi Muun,Double Transformation! Moon & Chibi Moon,144.981,\N,\N,\N
+SS,13,14,ムーンゴージャスメディテイション！,Muun Goojasu Meditishon!,Moon Gorgeous Meditation!,198.218,\N,\N,\N
+SS,14,15,いつか、そんな“私たち”になりたい,"Itsuka, Sonna ""Watashi-tachi"" ni Naritai","Someday, I Want Us to Be Like That",228.677,\N,\N,\N
+SS,15,16,それじゃあ、また来週ネ,"Sore jaa, Mata Raishuu ne","Well Then, See You Next Week",33.438,\N,\N,\N
+SS,16,17,エンディング「“らしく”いきましょ」,"Endingu ""'Rashiku' Ikimasho""",Ending: I'll Go As Myself,212.35,歌／Meu,Uta: Meu,Vocals: Meu
+SSM,0,1,ムーンライト伝説,Muunraito Densetsu,Moonlight Legend,175.074,歌／ムーンリップス,Uta: Muun Rippusu,Vocals: Moon Lips
+SSM,1,2,亜美ちゃんの朝,Ami-chan no Asa,Ami-chan's Morning,86.728,\N,\N,\N
+SSM,2,3,可愛い企み,Kawaii Takurami,Cute Scheme,73.405,\N,\N,\N
+SSM,3,4,恐怖、危機、マーキュリー登場,"Kyoufu, Kiki, Maakyurii Toujou","Terror, Crisis, Mercury Appears",285.964,\N,\N,\N
+SSM,4,5,終曲,Shuukyoku,Finale,88.556,\N,\N,\N
+SSM,5,6,“らしく”いきましょ,"""Rashiku"" Ikimasho",I'll Go As Myself,214.545,歌／Meu,Uta: Meu,Vocals: Meu
+SSM,6,7,ふれあい～ペルルのテーマ～,Fureai ~Peruru no Teema~,Connection ~Perle's Theme~,111.257,\N,\N,\N
+SSM,7,8,ププランの笛と子供達,Pupuran no Fue to Kodomo-tachi,Poupelin's Flute and the Children,145.738,歌／森の木児童合唱団とそのお友達,Uta: Mori no Ki Jidou Gasshoudan to Sono Otomodachi,Vocals: Mori no Ki Children's Choir and friends
+SSM,8,9,ボンボンベイビーの攻撃!!,Bonbon Beibii no Kougeki!!,The Bonbon Babies Attack!!,56.295,\N,\N,\N
+SSM,9,10,変身と技,Henshin to Waza,Transformations and Attacks,170.137,\N,\N,\N
+SSM,10,11,城,Shiro,The Castle,73.98,\N,\N,\N
+SSM,11,12,バディヤーヌとブラック・ドリーム・ホール,Badiyaanu to Burakku Doriimu Hooru,Badiane and the Black Dream Hole,168.491,\N,\N,\N
+SSM,12,13,命をかけて,Inochi wo Kakete,Risking Our Lives,140.279,\N,\N,\N
+SSM,13,14,愛の光,Ai no Hikari,Love's Light,225.96,\N,\N,\N
+SSM,14,15,家に帰ろう,Uchi ni Kaerou,Let's Go Home,111.753,\N,\N,\N
+SSM,15,16,Morning Moonで会いましょう,Morning Moon de Aimashou,Let's Meet at Morning Moon,269.297,歌／プリティキャスト,Uta: Puriti Kyasuto,Vocals: Pretty Cast
+ST1,1,2,セーラースターソング,Seeraa Sutaa Songu,Sailor Star Song,232.177,歌／花沢加絵,Uta: Hanazawa Kae,Vocals: Kae Hanazawa
+ST1,2,3,サブタイトル,Sabutaitoru,Subtitle,10.502,\N,\N,\N
+ST1,3,4,5人は高校生,5-nin wa Koukousei,The Five Are High School Students,319.348,\N,\N,\N
+ST1,4,5,ネヘレニア復活,Neherenia Fukkatsu,Nehelenia's Resurrection,260.546,\N,\N,\N
+ST1,5,6,ほたるの予言,Hotaru no Yogen,Hotaru's Prophecy,101.931,\N,\N,\N
+ST1,6,7,アイキャッチ,Aikyatchi,Eyecatch,12.697,\N,\N,\N
+ST1,7,8,ミラーパレドリー,Miraa Paredorii,Mirror Paredri,298.241,\N,\N,\N
+ST1,8,9,とらわれのセーラー戦士,Toraware no Seeraa Senshi,Captured Sailor Guardians,311.041,\N,\N,\N
+ST1,9,10,プリンセスのために……,Purinsesu no Tame ni......,For the Princess......,224.602,\N,\N,\N
+ST1,10,11,エターナルの愛,Etaanaru no Ai,Eternal Love,200.621,\N,\N,\N
+ST1,11,12,スリーライツ,Surii Raitsu,Three Lights,232.465,\N,\N,\N
+ST1,12,13,シャドウギャラクティカ,Shadou Gyarakutika,Shadow Galactica,237.95,\N,\N,\N
+ST1,13,14,ムーンエターナルメイクアップ！,Muun Etaanaru Meikuappu!,Moon Eternal Make Up!,116.742,\N,\N,\N
+ST1,14,15,セーラースターライツ出現,Seeraa Sutaa Raitsu Shutsugen,The Sailor Star Lights Appear,67.841,\N,\N,\N
+ST1,15,16,風も空もきっと…,Kaze mo Sora mo Kitto...,Surely the Wind and the Sky...,284.527,歌／観月ありさ,Uta: Mizuki Arisa,Vocals: Arisa Mizuki
+ST1,16,17,月の光は愛のメッセージ,Tsuki no Hikari wa Ai no Messeeji,Moonlight Is a Message of Love,30.878,\N,\N,\N
+ST2,0,1,衛との別れ、そして……,"Mamoru to no Wakare, Soshite......","Parting with Mamoru, and Then......",248.896,\N,\N,\N
+ST2,1,2,ボクたちの歌をきいて,Boku-tachi no Uta wo Kiite,Listen to Our Song,232.047,\N,\N,\N
+ST2,2,3,あの方はどこに……,Ano Kata wa Doko ni......,Where Is That Person......,215.015,\N,\N,\N
+ST2,3,4,星野、大気、夜天,"Seiya, Taiki, Yaten","Seiya, Taiki, Yaten",231.55,\N,\N,\N
+ST2,5,6,学園のアイドル,Gakuen no Aidoru,School Idol,71.446,\N,\N,\N
+ST2,6,7,美奈子の野望♡,Minako no Yabou♡,Minako's Ambition♡,120.504,\N,\N,\N
+ST2,7,8,銀河テレビでの策略,Ginga Terebi de no Sakuryaku,Scheme at Galaxy TV,140.67,\N,\N,\N
+ST2,8,9,スターシードをいただくわ,Sutaa Shiido wo Itadaku wa,I'll Take the Star Seed,144.145,\N,\N,\N
+ST2,9,10,襲い来るファージ,Osoikuru Faaji,The Phage Attacks,178.992,\N,\N,\N
+ST2,10,11,スターパワーメイクアップ！,Sutaa Pawaa Meikuappu!,Star Power Make Up!,117.97,\N,\N,\N
+ST2,11,12,華麗なるエターナルセーラームーン,Kareinaru Etaanaru Seeraa Muun,Magnificent Eternal Sailor Moon,173.977,\N,\N,\N
+ST2,12,13,究極の悪,Kyuukyoku no Aku,Ultimate Evil,74.032,\N,\N,\N
+ST2,13,14,決意,Ketsui,Resolve,77.532,\N,\N,\N
+ST2,14,15,究極の愛,Kyuukyoku no Ai,Ultimate Love,144.981,\N,\N,\N
+ST2,15,16,平和,Heiwa,Peace,125.415,\N,\N,\N
+ST2,16,17,今日からまたフツーの高校生,Kyou kara Mata Futsuu no Koukousei,Ordinary High School Students Again from Today,76.801,\N,\N,\N
+ST2,20,21,予告編音楽～15秒ヴァージョン～,Yokokuhen Ongaku ~15-byou Vaajon~,Preview Music ~15-Second Version~,17.111,\N,\N,\N
+EX,0,1,ムーンライト伝説（TVサイズ）,Muunraito Densetsu (TV Saizu),Moonlight Legend (TV Size),85.448,DALI,DALI,Vocals: DALI
+EX,1,2,アイキャッチ（コーラスなしヴァージョン）,Aikyatchi (Koorasu Nashi Vaajon),Eyecatch (Version without Chorus),14.159,\N,\N,\N
+EX,2,3,変身,Henshin,Transformation,43.756,\N,\N,\N
+EX,3,4,感動と決意,Kandou to Ketsui,Emotion and Resolve,113.817,\N,\N,\N
+EX,4,5,絶望と悪,Zetsubou to Aku,Despair and Evil,236.853,\N,\N,\N
+EX,5,6,休息,Kyuusoku,Rest,62.852,\N,\N,\N
+EX,6,7,ファンファーレ その他,Fanfaare Sono Ta,Fanfares and More,88.112,\N,\N,\N
+EX,7,8,アイキャッチ,Aikyatchi,Eyecatch,29.049,\N,\N,\N
+EX,9,10,変身と必殺技,Henshin to Hissatsuwaza,Transformations and Special Attacks,125.755,\N,\N,\N
+EX,11,12,強い敵,Tsuyoi Teki,A Strong Enemy,112.354,\N,\N,\N
+EX,12,13,オープニング・アレンジ～感動的そして不安な～,Oopuningu Arenji ~Kandouteki Soshite Fuan na~,"Opening Arrangement ~Moving, Then Uneasy~",173.428,\N,\N,\N
+EX,13,14,エンディング・アレンジ～ノスタルジックそしてロマンティックに～,Endingu Arenji ~Nosutarujikku Soshite Romantikku ni~,"Ending Arrangement ~Nostalgic, Then Romantic~",241.738,\N,\N,\N
+EX,14,15,必殺技・戦士の宿命・敵の野望,"Hissatsuwaza, Senshi no Shukumei, Teki no Yabou",Special Attacks · The Guardians' Fate · The Enemy's Ambition,247.328,\N,\N,\N
+EX,17,18,みちるとはるか,Michiru to Haruka,Michiru and Haruka,139.025,\N,\N,\N
+EX,18,19,ブリッジと悲しみ,Burijji to Kanashimi,Bridges and Sorrow,139.835,\N,\N,\N
+EX,19,20,予告,Yokoku,Preview,31.4,\N,\N,\N
+EX,20,21,エンディング・アレンジ,Endingu Arenji,Ending Arrangement,116.977,\N,\N,\N
+EX,23,24,戦闘的BGM,Sentouteki BGM,Battle BGM,109.95,\N,\N,\N
+EX,24,25,ピンチ… そして、決意,"Pinchi... Soshite, Ketsui","In a Pinch... and Then, Resolve",79.048,\N,\N,\N
+EX,25,26,タキシード・ミラージュ（TVサイズ）,Takishiido Miraaju (TV Saizu),Tuxedo Mirage (TV Size),93.415,三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加,"Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika","Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+歌,0,1-1,ムーンライト伝説,Muunraito Densetsu,Moonlight Legend,174.968,歌／DALI,Uta: DALI,Vocals: DALI
+歌,1,1-2,HEART MOVING,HEART MOVING,HEART MOVING,219.716,歌／高松美砂絵［さくらさくら］,Uta: Takamatsu Misae [Sakura Sakura],Vocals: Misae Takamatsu [Sakura Sakura]
+歌,2,1-3,プリンセス・ムーン,Purinsesu Muun,Princess Moon,244.062,歌／橋本潮、アップルパイ,"Uta: Hashimoto Ushio, Appuru Pai","Vocals: Ushio Hashimoto, Apple Pie"
+歌,3,1-4,乙女のポリシー,Otome no Porishii,A Maiden's Policy,195.37,歌／石田よう子,Uta: Ishida Youko,Vocals: Yoko Ishida
+歌,4,1-5,ムーンライト伝説,Muunraito Densetsu,Moonlight Legend,173.976,歌／ムーンリップス,Uta: Muun Rippusu,Vocals: Moon Lips
+歌,5,1-6,タキシード・ミラージュ,Takishiido Miraaju,Tuxedo Mirage,217.417,歌／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加,"Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika","Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+歌,6,1-7,私たちになりたくて,Watashi-tachi ni Naritakute,Wanting to Be Like Us,322.717,歌／藤谷美和子,Uta: Fujitani Miwako,Vocals: Miwako Fujitani
+歌,7,1-8,"""らしく""いきましょ","""Rashiku"" Ikimasho",I'll Go As Myself,213.368,歌／Meu,Uta: Meu,Vocals: Meu
+歌,8,1-9,セーラースターソング,Seeraa Sutaa Songu,Sailor Star Song,233.3,歌／花沢加絵,Uta: Hanazawa Kae,Vocals: Kae Hanazawa
+歌,9,1-10,風も空もきっと…,Kaze mo Sora mo Kitto…,"The Wind and the Sky, Surely…",288.131,歌／観月ありさ,Uta: Mizuki Arisa,Vocals: Arisa Mizuki
+歌,10,1-11,ムーンライト伝説（オリジナルカラオケ）,Muunraito Densetsu (Orijinaru Karaoke),Moonlight Legend (Original Karaoke),176.144,\N,\N,\N
+歌,11,1-12,HEART MOVING（オリジナルカラオケ）,HEART MOVING (Orijinaru Karaoke),HEART MOVING (Original Karaoke),220.709,\N,\N,\N
+歌,12,1-13,プリンセス・ムーン（オリジナルカラオケ）,Purinsesu Muun (Orijinaru Karaoke),Princess Moon (Original Karaoke),245.394,\N,\N,\N
+歌,13,1-14,乙女のポリシー（オリジナルカラオケ）,Otome no Porishii (Orijinaru Karaoke),A Maiden's Policy (Original Karaoke),196.807,\N,\N,\N
+歌,14,1-15,タキシード・ミラージュ（オリジナルカラオケ）,Takishiido Miraaju (Orijinaru Karaoke),Tuxedo Mirage (Original Karaoke),218.201,\N,\N,\N
+歌,15,1-16,私たちになりたくて（オリジナルカラオケ）,Watashi-tachi ni Naritakute (Orijinaru Karaoke),Wanting to Be Like Us (Original Karaoke),323.239,\N,\N,\N
+歌,16,1-17,"""らしく""いきましょ（オリジナルカラオケ）","""Rashiku"" Ikimasho (Orijinaru Karaoke)",I'll Go As Myself (Original Karaoke),213.76,\N,\N,\N
+歌,17,1-18,セーラースターソング（オリジナルカラオケ）,Seeraa Sutaa Songu (Orijinaru Karaoke),Sailor Star Song (Original Karaoke),233.639,\N,\N,\N
+歌,18,1-19,風も空もきっと…（オリジナルカラオケ）,Kaze mo Sora mo Kitto… (Orijinaru Karaoke),"The Wind and the Sky, Surely… (Original Karaoke)",286.38,\N,\N,\N
+歌,19,2-1,合コトバはムーン・プリズム・パワー・メイクアップ！,Aikotoba wa Muun Purizumu Pawaa Meikuappu!,The Password Is Moon Prism Power Make Up!,262.896,歌／三石琴乃,Uta: Mitsuishi Kotono,Vocals: Kotono Mitsuishi
+歌,20,2-2,プリンセス・ムーン,Purinsesu Muun,Princess Moon,244.14,歌／アップルパイ,Uta: Appuru Pai,Vocals: Apple Pie
+歌,21,2-3,ほっとけないよ,Hottokenai yo,I Can't Leave You Alone,270.733,歌／富沢美智恵、久川綾,"Uta: Tomizawa Michie, Hisakawa Aya","Vocals: Michie Tomizawa, Aya Hisakawa"
+歌,22,2-4,愛のエナジーを奪え,Ai no Enajii wo Ubae,Steal the Energy of Love,285.518,歌／アップルパイ,Uta: Appuru Pai,Vocals: Apple Pie
+歌,23,2-5,タキシード・ナイト,Takishiido Naito,Tuxedo Knight,300.826,歌／アップルパイ,Uta: Appuru Pai,Vocals: Apple Pie
+歌,24,2-6,ルナ！,Runa!,Luna!,219.768,歌／アップルパイ,Uta: Appuru Pai,Vocals: Apple Pie
+歌,25,2-7,月にかわっておしおきよ,Tsuki ni Kawatte Oshioki yo,"In the Name of the Moon, I'll Punish You",279.536,歌／三石琴乃、富沢美智恵、久川綾,"Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya","Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa"
+歌,26,2-8,幻の銀水晶～シルバークリスタル,Maboroshi no Ginzuishou ~ Shirubaa Kurisutaru,The Illusionary Silver Crystal ~ Silver Crystal,270.968,歌／アップルパイ,Uta: Appuru Pai,Vocals: Apple Pie
+歌,27,2-9,夢見るだけじゃダメ,Yumemiru Dake ja Dame,Just Dreaming Isn't Enough,310.361,歌／三石琴乃,Uta: Mitsuishi Kotono,Vocals: Kotono Mitsuishi
+歌,28,2-10,Someday… Somebody…,Someday… Somebody…,Someday… Somebody…,301.505,歌／久川綾,Uta: Hisakawa Aya,Vocals: Aya Hisakawa
+歌,29,2-11,永遠のメロディ,Eien no Merodi,Eternal Melody,256.34,歌／富沢美智恵,Uta: Tomizawa Michie,Vocals: Michie Tomizawa
+歌,30,2-12,あなたのせいじゃない,Anata no Sei ja Nai,It's Not Your Fault,272.431,歌／篠原恵美,Uta: Shinohara Emi,Vocals: Emi Shinohara
+歌,31,2-13,あなたの夢をみたわ,Anata no Yume wo Mita wa,I Dreamed of You,272.901,歌／深見梨加,Uta: Fukami Rika,Vocals: Rica Fukami
+歌,32,2-14,時を超えて…,Toki wo Koete…,Cross Over Time…,289.489,歌／古谷徹,Uta: Furuya Tooru,Vocals: Toru Furuya
+歌,33,2-15,YOU'RE JUST MY LOVE,YOU'RE JUST MY LOVE,You're Just My Love,257.567,歌／三石琴乃、古谷徹,"Uta: Mitsuishi Kotono, Furuya Tooru","Vocals: Kotono Mitsuishi, Toru Furuya"
+歌,34,2-16,タキシード・ナイト（オリジナルカラオケ）,Takishiido Naito (Orijinaru Karaoke),Tuxedo Knight (Original Karaoke),299.128,\N,\N,\N
+歌,35,3-1,好きと言って,Suki to Itte,Say You Love Me,278.936,歌／石田よう子,Uta: Ishida Youko,Vocals: Yoko Ishida
+歌,36,3-2,I am セーラームーン,I am Seeraa Muun,I am Sailor Moon,327.915,歌／三石琴乃,Uta: Mitsuishi Kotono,Vocals: Kotono Mitsuishi
+歌,37,3-3,同じ涙を分け合って,Onaji Namida wo Wakeatte,We Share the Same Tears,310.857,歌／久川綾,Uta: Hisakawa Aya,Vocals: Aya Hisakawa
+歌,38,3-4,聖・炎・愛 ～Fire Soul Love～,"Sei, Honoo, Ai ~Fire Soul Love~",Holy · Flame · Love ~Fire Soul Love~,246.413,歌／富沢美智恵,Uta: Tomizawa Michie,Vocals: Michie Tomizawa
+歌,39,3-5,抱きしめていたい,Dakishimete Itai,I Want to Hold You,283.638,歌／古谷徹,Uta: Furuya Tooru,Vocals: Toru Furuya
+歌,40,3-6,STARLIGHTにキスして,STARLIGHT ni Kisu Shite,Kiss the Starlight,268.983,歌／篠原恵美,Uta: Shinohara Emi,Vocals: Emi Shinohara
+歌,41,3-7,ルート・ヴィーナス,Ruuto Viinasu,Route Venus,273.293,歌／深見梨加,Uta: Fukami Rika,Vocals: Rica Fukami
+歌,42,3-8,愛の戦士,Ai no Senshi,Guardian of Love,218.593,歌／石田よう子,Uta: Ishida Youko,Vocals: Yoko Ishida
+歌,43,3-9,Moon Revenge,Moon Revenge,Moon Revenge,242.808,歌／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加,"Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika","Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+歌,44,3-10,I am セーラームーン,I am Seeraa Muun,I am Sailor Moon,297.77,歌／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加,"Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika","Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+歌,45,3-11,Moonlight Destiny,Moonlight Destiny,Moonlight Destiny,359.262,歌／朝川ひろこ,Uta: Asakawa Hiroko,Vocals: Hiroko Asakawa
+歌,46,3-12,セーラーチームのテーマ,Seeraa Chiimu no Teema,Sailor Team's Theme,237.218,歌／朝川ひろこ,Uta: Asakawa Hiroko,Vocals: Hiroko Asakawa
+歌,47,3-13,Morning Moonで会いましょう,Morning Moon de Aimashou,Let's Meet at Morning Moon,270.393,歌／プリティキャスト,Uta: Puriti Kyasuto,Vocals: Pretty Cast
+歌,48,3-14,三時の妖精,Sanji no Yousei,The Three O'Clock Fairy,206.315,歌／プリティキャスト、森の木児童合唱団,"Uta: Puriti Kyasuto, Mori no Ki Jidou Gasshoudan","Vocals: Pretty Cast, Mori no Ki Children's Choir"
+歌,49,3-15,好きと言って（オリジナルカラオケ）,Suki to Itte (Orijinaru Karaoke),Say You Love Me (Original Karaoke),279.902,\N,\N,\N
+歌,50,3-16,愛の戦士（オリジナルカラオケ）,Ai no Senshi (Orijinaru Karaoke),Guardian of Love (Original Karaoke),217.757,\N,\N,\N
+歌,51,4-1,セーラームーン・クリスマス,Seeraa Muun Kurisumasu,Sailor Moon Christmas,227.944,歌／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加,"Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika","Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+歌,52,4-2,ゴールデンクイーン・ギャラクシア,Gooruden Kuiin Gyarakushia,Golden Queen Galaxia,240.849,歌／堀江美都子,Uta: Horie Mitsuko,Vocals: Mitsuko Horie
+歌,53,4-3,流れ星へ,Nagareboshi e,To the Shooting Star,285.231,歌／新山志保、津野田なるみ、坂本千夏,"Uta: Niiyama Shiho, Tsunoda Narumi, Sakamoto Chika","Vocals: Shiho Niiyama, Narumi Tsunoda, Chika Sakamoto"
+歌,54,4-4,とどかぬ想い ―my friend's love―,Todokanu Omoi ―my friend's love―,Unreachable Feelings ―my friend's love―,232.777,歌／新山志保、津野田なるみ、坂本千夏,"Uta: Niiyama Shiho, Tsunoda Narumi, Sakamoto Chika","Vocals: Shiho Niiyama, Narumi Tsunoda, Chika Sakamoto"
+歌,55,4-5,銀河一身分違いな片想い,Ginga Ichi Mibun Chigai na Kataomoi,The Most Mismatched Unrequited Love in the Galaxy,260.702,歌／新山志保,Uta: Niiyama Shiho,Vocals: Shiho Niiyama
+歌,56,4-6,力を合わせて,Chikara wo Awasete,Joining Forces,366.08,歌／津野田なるみ,Uta: Tsunoda Narumi,Vocals: Narumi Tsunoda
+歌,57,4-7,真夜中ひとり,Mayonaka Hitori,Alone at Midnight,214.23,歌／坂本千夏,Uta: Sakamoto Chika,Vocals: Chika Sakamoto
+歌,58,4-8,イニシャル・U,Inisharu U,Initial U,275.435,歌／大木理紗,Uta: Ooki Risa,Vocals: Risa Ohki
+歌,59,4-9,戦士の想い,Senshi no Omoi,A Guardian's Feelings,304.744,歌／勝生真沙子,Uta: Katsuki Masako,Vocals: Masako Katsuki
+歌,60,4-10,バイバイって言った,Bai Bai tte Itta,I Said Bye-Bye,255.242,歌／荒木香恵,Uta: Araki Kae,Vocals: Kae Araki
+歌,61,4-11,炎の狙撃者（FLAME SNIPER）,Honoo no Sogekisha (FLAME SNIPER),Flame Sniper,290.299,歌／富沢美智恵,Uta: Tomizawa Michie,Vocals: Michie Tomizawa
+歌,62,4-12,あしたもまた自転車,Ashita mo Mata Jitensha,Bicycle Again Tomorrow,235.677,歌／久川綾,Uta: Hisakawa Aya,Vocals: Aya Hisakawa
+歌,63,4-13,We believe you,We believe you,We believe you,303.856,歌／篠原恵美,Uta: Shinohara Emi,Vocals: Emi Shinohara
+歌,64,4-14,愛の女神のHow to love,Ai no Megami no How to love,The Goddess of Love's How to Love,311.876,歌／深見梨加,Uta: Fukami Rika,Vocals: Rica Fukami
+歌,65,4-15,愛をしんじてる,Ai wo Shinjiteru,I Believe in Love,241.763,歌／三石琴乃,Uta: Mitsuishi Kotono,Vocals: Kotono Mitsuishi
+歌,66,4-16,もっとすてきな朝がくるよ,Motto Suteki na Asa ga Kuru yo,A More Beautiful Morning Will Come,253.571,歌／花沢加絵,Uta: Hanazawa Kae,Vocals: Kae Hanazawa
+歌,67,5-1,セーラームーン・クリスマス プロローグ,Seeraa Muun Kurisumasu Puroroogu,Sailor Moon Christmas Prologue,191.556,声の出演／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加,"Koe no shutsuen: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika","Voices: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+歌,68,5-2,セーラームーンクリスマス ポエム,Seeraa Muun Kurisumasu Poemu,Sailor Moon Christmas Poem,229.094,声の出演／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加,"Koe no shutsuen: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika","Voices: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+歌,69,5-3,セーラーギャラクシア プロローグ,Seeraa Gyarakushia Puroroogu,Sailor Galaxia Prologue,135.314,声の出演／堀江美都子,Koe no shutsuen: Horie Mitsuko,Voices: Mitsuko Horie
+歌,70,5-4,セーラーギャラクシア ポエム,Seeraa Gyarakushia Poemu,Sailor Galaxia Poem,168.046,声の出演／堀江美都子,Koe no shutsuen: Horie Mitsuko,Voices: Mitsuko Horie
+歌,71,5-5,星野光（セーラースターファイター） プロローグ,Seiya Kou (Seeraa Sutaa Faitaa) Puroroogu,Seiya Kou (Sailor Star Fighter) Prologue,99.474,声の出演／新山志保,Koe no shutsuen: Niiyama Shiho,Voices: Shiho Niiyama
+歌,72,5-6,星野光（セーラースターファイター） ポエム,Seiya Kou (Seeraa Sutaa Faitaa) Poemu,Seiya Kou (Sailor Star Fighter) Poem,182.439,声の出演／新山志保,Koe no shutsuen: Niiyama Shiho,Voices: Shiho Niiyama
+歌,73,5-7,大気光（セーラースターメイカー） プロローグ,Taiki Kou (Seeraa Sutaa Meikaa) Puroroogu,Taiki Kou (Sailor Star Maker) Prologue,149.002,声の出演／津野田なるみ,Koe no shutsuen: Tsunoda Narumi,Voices: Narumi Tsunoda
+歌,74,5-8,大気光（セーラースターメイカー） ポエム,Taiki Kou (Seeraa Sutaa Meikaa) Poemu,Taiki Kou (Sailor Star Maker) Poem,148.01,声の出演／津野田なるみ,Koe no shutsuen: Tsunoda Narumi,Voices: Narumi Tsunoda
+歌,75,5-9,夜天光（セーラースターヒーラー） プロローグ,Yaten Kou (Seeraa Sutaa Hiiraa) Puroroogu,Yaten Kou (Sailor Star Healer) Prologue,155.899,声の出演／坂本千夏,Koe no shutsuen: Sakamoto Chika,Voices: Chika Sakamoto
+歌,76,5-10,夜天光（セーラースターヒーラー） ポエム,Yaten Kou (Seeraa Sutaa Hiiraa) Poemu,Yaten Kou (Sailor Star Healer) Poem,182.073,声の出演／坂本千夏,Koe no shutsuen: Sakamoto Chika,Voices: Chika Sakamoto
+歌,77,5-11,セーラーネプチューン／海王みちる プロローグ,Seeraa Nepuchuun / Kaiou Michiru Puroroogu,Sailor Neptune / Michiru Kaioh Prologue,152.007,声の出演／勝生真沙子,Koe no shutsuen: Katsuki Masako,Voices: Masako Katsuki
+歌,78,5-12,セーラーネプチューン／海王みちる ポエム,Seeraa Nepuchuun / Kaiou Michiru Poemu,Sailor Neptune / Michiru Kaioh Poem,138.005,声の出演／勝生真沙子,Koe no shutsuen: Katsuki Masako,Voices: Masako Katsuki
+歌,79,5-13,セーラープルート／冥王せつな プロローグ,Seeraa Puruuto / Meiou Setsuna Puroroogu,Sailor Pluto / Setsuna Meioh Prologue,96.444,声の出演／川島千代子,Koe no shutsuen: Kawashima Chiyoko,Voices: Chiyoko Kawashima
+歌,80,5-14,セーラープルート／冥王せつな ポエム,Seeraa Puruuto / Meiou Setsuna Poemu,Sailor Pluto / Setsuna Meioh Poem,92.186,声の出演／川島千代子,Koe no shutsuen: Kawashima Chiyoko,Voices: Chiyoko Kawashima
+歌,81,5-15,セーラーサターン／土萌ほたる プロローグ,Seeraa Sataan / Tomoe Hotaru Puroroogu,Sailor Saturn / Hotaru Tomoe Prologue,181.211,声の出演／皆口裕子,Koe no shutsuen: Minaguchi Yuuko,Voices: Yuko Minaguchi
+歌,82,5-16,セーラーサターン／土萌ほたる ポエム,Seeraa Sataan / Tomoe Hotaru Poemu,Sailor Saturn / Hotaru Tomoe Poem,122.096,声の出演／皆口裕子,Koe no shutsuen: Minaguchi Yuuko,Voices: Yuko Minaguchi
+歌,83,5-17,セーラーちびムーン／ちびうさ プロローグ,Seeraa Chibi Muun / Chibiusa Puroroogu,Sailor Chibi Moon / Chibi-Usa Prologue,181.055,声の出演／荒木香恵,Koe no shutsuen: Araki Kae,Voices: Kae Araki
+歌,84,5-18,セーラーちびムーン／ちびうさ ポエム,Seeraa Chibi Muun / Chibiusa Poemu,Sailor Chibi Moon / Chibi-Usa Poem,79.909,声の出演／荒木香恵,Koe no shutsuen: Araki Kae,Voices: Kae Araki
+歌,85,5-19,セーラーマーズ／火野レイ プロローグ,Seeraa Maazu / Hino Rei Puroroogu,Sailor Mars / Rei Hino Prologue,163.291,声の出演／富沢美智恵,Koe no shutsuen: Tomizawa Michie,Voices: Michie Tomizawa
+歌,86,5-20,セーラーマーズ／火野レイ ポエム,Seeraa Maazu / Hino Rei Poemu,Sailor Mars / Rei Hino Poem,202.736,声の出演／富沢美智恵,Koe no shutsuen: Tomizawa Michie,Voices: Michie Tomizawa
+歌,87,5-21,セーラーマーキュリー／水野亜美 プロローグ,Seeraa Maakyurii / Mizuno Ami Puroroogu,Sailor Mercury / Ami Mizuno Prologue,120.686,声の出演／久川綾,Koe no shutsuen: Hisakawa Aya,Voices: Aya Hisakawa
+歌,88,5-22,セーラーマーキュリー／水野亜美 ポエム,Seeraa Maakyurii / Mizuno Ami Poemu,Sailor Mercury / Ami Mizuno Poem,141.296,声の出演／久川綾,Koe no shutsuen: Hisakawa Aya,Voices: Aya Hisakawa
+歌,89,5-23,セーラージュピター／木野まこと プロローグ,Seeraa Jupitaa / Kino Makoto Puroroogu,Sailor Jupiter / Makoto Kino Prologue,113.737,声の出演／篠原恵美,Koe no shutsuen: Shinohara Emi,Voices: Emi Shinohara
+歌,90,5-24,セーラージュピター／木野まこと ポエム,Seeraa Jupitaa / Kino Makoto Poemu,Sailor Jupiter / Makoto Kino Poem,251.533,声の出演／篠原恵美,Koe no shutsuen: Shinohara Emi,Voices: Emi Shinohara
+歌,91,5-25,セーラーヴィーナス／愛野美奈子 プロローグ,Seeraa Viinasu / Aino Minako Puroroogu,Sailor Venus / Minako Aino Prologue,118.988,声の出演／深見梨加,Koe no shutsuen: Fukami Rika,Voices: Rica Fukami
+歌,92,5-26,セーラーヴィーナス／愛野美奈子 ポエム,Seeraa Viinasu / Aino Minako Poemu,Sailor Venus / Minako Aino Poem,169.691,声の出演／深見梨加,Koe no shutsuen: Fukami Rika,Voices: Rica Fukami
+歌,93,5-27,エターナルセーラームーン／月野うさぎ プロローグ,Etaanaru Seeraa Muun / Tsukino Usagi Puroroogu,Eternal Sailor Moon / Usagi Tsukino Prologue,182.544,声の出演／三石琴乃,Koe no shutsuen: Mitsuishi Kotono,Voices: Kotono Mitsuishi
+歌,94,5-28,エターナルセーラームーン／月野うさぎ ポエム,Etaanaru Seeraa Muun / Tsukino Usagi Poemu,Eternal Sailor Moon / Usagi Tsukino Poem,178.782,声の出演／三石琴乃,Koe no shutsuen: Mitsuishi Kotono,Voices: Kotono Mitsuishi
+歌,95,6-1,Moon Revenge（オリジナルカラオケ）,Moon Revenge (Orijinaru Karaoke),Moon Revenge (Original Karaoke),244.532,\N,\N,\N
+歌,96,6-2,I am セーラームーン（オリジナルカラオケ）,I am Seeraa Muun (Orijinaru Karaoke),I am Sailor Moon (Original Karaoke),298.031,\N,\N,\N
+歌,97,6-3,Moonlight Destiny（オリジナルカラオケ）,Moonlight Destiny (Orijinaru Karaoke),Moonlight Destiny (Original Karaoke),359.706,\N,\N,\N
+歌,98,6-4,セーラーチームのテーマ（オリジナルカラオケ）,Seeraa Chiimu no Teema (Orijinaru Karaoke),Sailor Team's Theme (Original Karaoke),237.819,\N,\N,\N
+歌,99,6-5,Morning Moonで会いましょう（オリジナルカラオケ）,Morning Moon de Aimashou (Orijinaru Karaoke),Let's Meet at Morning Moon (Original Karaoke),271.987,\N,\N,\N
+歌,100,6-6,三時の妖精（オリジナルカラオケ）,Sanji no Yousei (Orijinaru Karaoke),The Three O'Clock Fairy (Original Karaoke),206.89,\N,\N,\N
+歌,101,6-7,もっとすてきな朝がくるよ（オリジナルカラオケ）,Motto Suteki na Asa ga Kuru yo (Orijinaru Karaoke),A More Beautiful Morning Will Come (Original Karaoke),256.131,\N,\N,\N
+歌,102,6-8,合コトバはムーン・プリズム・パワー・メイクアップ！（オリジナルカラオケ）,Aikotoba wa Muun Purizumu Pawaa Meikuappu! (Orijinaru Karaoke),The Password Is Moon Prism Power Make Up! (Original Karaoke),263.288,\N,\N,\N
+歌,103,6-9,ほっとけないよ（オリジナルカラオケ）,Hottokenai yo (Orijinaru Karaoke),I Can't Leave You Alone (Original Karaoke),271.464,\N,\N,\N
+歌,104,6-10,月にかわっておしおきよ（オリジナルカラオケ）,Tsuki ni Kawatte Oshioki yo (Orijinaru Karaoke),"In the Name of the Moon, I'll Punish You (Original Karaoke)",280.738,\N,\N,\N
+歌,105,6-11,夢見るだけじゃダメ（オリジナルカラオケ）,Yumemiru Dake ja Dame (Orijinaru Karaoke),Just Dreaming Isn't Enough (Original Karaoke),313.104,\N,\N,\N
+歌,106,6-12,Someday… Somebody…（オリジナルカラオケ）,Someday… Somebody… (Orijinaru Karaoke),Someday… Somebody… (Original Karaoke),302.602,\N,\N,\N
+歌,107,6-13,永遠のメロディ（オリジナルカラオケ）,Eien no Merodi (Orijinaru Karaoke),Eternal Melody (Original Karaoke),256.888,\N,\N,\N
+歌,108,6-14,あなたのせいじゃない（オリジナルカラオケ）,Anata no Sei ja Nai (Orijinaru Karaoke),It's Not Your Fault (Original Karaoke),272.588,\N,\N,\N
+歌,109,6-15,あなたの夢をみたわ（オリジナルカラオケ）,Anata no Yume wo Mita wa (Orijinaru Karaoke),I Dreamed of You (Original Karaoke),274.312,\N,\N,\N
+歌,110,6-16,YOU'RE JUST MY LOVE（オリジナルカラオケ）,YOU'RE JUST MY LOVE (Orijinaru Karaoke),You're Just My Love (Original Karaoke),252.029,\N,\N,\N
