@@ -4398,7 +4398,7 @@ row_id,ord,printed,target,corrected,note
 4647,0,M-634,cue-M-634,\N,\N
 4648,0,M-623,cue-M-623,\N,\N
 4650,0,M-663,cue-M-663,\N,\N
-4652,0,M-628,cue-M663B,M663B,"Probably M-663B, the hand-bell version of Chibi-Chibi's theme (p.116; episode 187 B-21 describes it as ""M-663B ハンドベルのみ""). M-628 is Eternal Sailor Moon's change into Sailor Cosmos. The box-set tray card for Disc 7 lists M663B on track 18."
+4652,0,M-628,cue-M663B,M663B,"Probably M-663B, the hand-bell version of Chibi-Chibi's theme (p.116; episode 187 B-21 describes it as ""M-663B ハンドベルのみ"" (""M-663B, handbells only"")). M-628 is Eternal Sailor Moon's change into Sailor Cosmos. The box-set tray card for Disc 7 lists M663B on track 18."
 4653,0,M-608,cue-M-608,\N,\N
 4654,0,M-642,cue-M-642,\N,\N
 4655,0,M-617C,cue-M-617C,\N,\N
@@ -4422,3 +4422,5 @@ row_id,ord,printed,target,corrected,note
 7,0,M-207,\N,\N,"The TV cue sheets number reused R-movie music differently: their M-207 is a different piece, this list's M-208B."
 24,0,M-221,\N,\N,"The TV cue sheets number reused R-movie music differently: their M-221 is a different piece, this list's M-206."
 26,0,M-223,\N,\N,"The TV cue sheets number reused R-movie music differently: their M-223 is a different piece, this list's M-214."
+4649,1,ゴールデンクイーン・ギャラクシア,cue-cd-6-1,\N,\N
+4651,1,ゴールデンクイーン・ギャラクシア（オルゴール）,cue-cd-6-1,\N,\N

@@ -53,6 +53,7 @@ const UI = {
 const ED_HEAD = {
   cd: {en: 'CD / Track', c: 'ed'},
   used: {en: 'Uses', c: 'ed'},
+  rel: {en: 'Related', c: 'ed'},
   notes: {en: 'Notes', c: 'ed'},
 };
 /* the films: short name in English (for Uses lists), the season they sit under, their panel title, the key that finds their
@@ -180,9 +181,9 @@ function stack(a, fmt = s => esc(s)){
    columns come last */
 const COLS = {
   tv: ['w-m', 'w-scene', 'w-credit', 'w-time', 'ed w-notes'],
-  list: ['w-mno', 'w-time', 'w-desc', 'w-cd', 'ed w-cdtrk', 'ed w-used', 'ed w-notes'],
-  film: ['w-no', 'w-mno', 'w-time', 'w-desc', 'w-cd', 'ed w-cdtrk', 'ed w-used', 'ed w-notes'],
-  album: ['w-no', 'w-ttl', 'w-time', 'w-pseg', 'w-auses', 'w-aref', 'w-also'],   // Same as takes the rest
+  list: ['w-mno', 'w-time', 'w-desc', 'w-cd', 'ed w-cdtrk', 'ed w-used', 'ed w-rel', 'ed w-notes'],
+  film: ['w-no', 'w-mno', 'w-time', 'w-desc', 'w-cd', 'ed w-cdtrk', 'ed w-used', 'ed w-rel', 'ed w-notes'],
+  album: ['w-no', 'w-ttl', 'w-time', 'w-pseg', 'w-auses', 'w-arel', 'w-aref', 'w-also'],   // Same as takes the rest
 };
 const colgroup = kind => '<colgroup>' + COLS[kind].map(c => `<col class="${c}">`).join('') + '</colgroup>';
 /* a title row spans every column */
@@ -292,6 +293,90 @@ function creditCell(r, mark){
 }
 
 /* ---------- related info: what each code points to, and where each cue is used ---------- */
+/* how pieces relate (data.js rel: [piece, related, kind, what, basis, note], each read "piece is a <kind> of related"),
+   indexed both ways by piece: its code (M-601A) or, for a piece with none, its CD place (9-20, 歌-6-3, 3-8-1) */
+const REL = {};
+(D.rel || []).forEach(([a, b, kind, what, basis, note]) => {
+  (REL[a] ||= []).push({other: b, kind, what, basis, note, back: false});
+  (REL[b] ||= []).push({other: a, kind, what, basis, note, back: true});
+});
+/* each kind as the other piece's role, seen from this row: [the other piece is what this one derives from, the other piece
+   derives from this one]; {W} = the detail */
+const REL_ROLE = {
+  without: ['the full version (this is without {W})', 'without {W}'], only: ['the full version (this is {W} only)', '{W} only'],
+  solo: ['the full piece (this is its {W} solo)', '{W} solo'], excerpt: ['the whole piece (this is {W})', 'part of this ({W})'],
+  edit: ['the unedited piece', 'an edit ({W})'], processed: ['the unprocessed piece', 'processed {W}'],
+  tempo: ['the original tempo', '{W} version'], bridge: ['the full piece (this is its bridge version)', 'bridge version'],
+  version: ['the original (this is the {W} version)', '{W} version'], karaoke: ['the vocal version', 'karaoke ({W})'],
+  instrumental: ['the vocal version', 'instrumental ({W})'], 'music box': ['the song', 'music box version ({W})'],
+  contains: ['included in this ({W})', 'includes this ({W})'], continues: ['continues into this', 'continues from this'],
+  arrangement: ['the original (this arranges it)', 'an arrangement'], variant: ['the original', 'a variant'],
+  quotes: ['quoted in this', 'quotes this'], same: ['the same recording', 'the same recording'],
+  recording: ['another recording of the song', 'another recording of the song'],
+  size: ['the full-length song (this is the {W})', '{W}'],
+  uses: ['the song this uses', 'uses this song']};
+const BASIS = {booklet: 'from the booklet', 'tray card': 'from the tray card', 'track titles': 'from the track titles',
+  'by ear': 'found by ear', 'audio match': 'found from the audio'};
+/* a BGM-list code's place on the CD (corrections applied), for linking a related piece to its album track */
+let CODE_PLACE;   // built on first use (NO_CD is defined further down)
+const codePlace = code => {
+  if (!CODE_PLACE) { CODE_PLACE = {}; D.bgm.forEach(b => b.cats.forEach(c => c.r.forEach(r => { const pl = r.cdx && r.cdx !== NO_CD ? r.cdx : r.cd;
+    if (r.c && r.c !== '—' && pl) CODE_PLACE[r.c] = pl; }))); }
+  return CODE_PLACE[code];
+};
+/* a BGM-list code printed with a word (M-40 ストリングスヌキ), in each language (r.cn: M-40 without strings) */
+let CODE_NAME;
+const codeName = code => {
+  if (!CODE_NAME) { CODE_NAME = {}; D.bgm.forEach(b => b.cats.forEach(c => c.r.forEach(r => { if (r.cn) CODE_NAME[r.c] = r.cn; }))); }
+  return CODE_NAME[code];
+};
+/* a related piece's link: on the albums page its album track (in the page), else its BGM-list row, else its album track
+   on the albums page; and its label (a CD place adds the track's title) */
+/* a CD place in this site's own columns: as the booklet writes it (5-21-2, 歌-3-10) while English is off; with English on,
+   the two box sets are named, MUSIC 5-21-2 and SONG 3-10 (styles.css shows one or the other). The original albums'
+   places (SS-12) read the same either way. */
+function placeLabel(place){
+  const o = parseCd(place.replace(/[a-z]$/, ''));   // a part of a piece keeps its letter (3-11-3a)
+  const enForm = !o ? '' : o.code === '歌' ? `SONG ${place.slice(2)}` : /^\d+$/.test(o.code) ? `MUSIC ${place}` : '';
+  return enForm ? `<span class="pl-ja">${esc(place)}</span><span class="pl-en">${esc(enForm)}</span>` : esc(place);
+}
+function relTarget(key){
+  const code = !parseCd(key), place = code ? codePlace(key) : key, o = parseCd(place);
+  const track = o && ALBUMS[o.code]?.t[o.key], tname = track ? track[track.length - 1] : '';
+  const who = o && ALBUMS[o.code]?.ar?.[o.key]?.[2]?.replace(/^[A-Za-z ]+: /, '');   // the singer(s), in English
+  const label = code ? key : `${key}${tname ? ' ' + tname : ''}${who ? ` (${who})` : ''}`;   // plain text, for the tooltip
+  const html = code ? (codeName(key) ? stack(codeName(key)) : esc(key)) : `${placeLabel(key)}${tname ? ' ' + esc(tname) : ''}${who ? ` (${esc(who)})` : ''}`;
+  const id = code ? cueId(key) : 'cue-cd-' + key;
+  if (VIEW === 'albums' && track) return {label, html, href: '#' + trackId(o.code, o.key)};
+  if (ROW_PANEL[id]) return {label, html, href: HOME + '#' + id, go: id};
+  if (track) return {label, html, href: ALBUMS_PAGE + '#' + trackId(o.code, o.key)};
+  return {label, html};
+}
+/* a BGM-list row's relation keys: its code (or, with none, its CD place), and the whole track its piece is on */
+const relKeys = r => { const pl = r.cdx && r.cdx !== NO_CD ? r.cdx : r.cd, o = parseCd(pl);
+  return [r.c !== '—' ? r.c : pl, o ? `${o.code}-${o.key}` : '']; };
+/* the Related cell: a piece's relations (keys: its code, its CD place), as the Uses cell: a button, then a list of the
+   other pieces, each with its role (Without drums, Karaoke, The full version...) */
+function relCell(keys, cls = 'du'){
+  keys = [...new Set(keys.filter(Boolean))];
+  const seen = new Set();
+  const list = keys.flatMap(k => REL[k] || []).filter(x => x.kind !== 'same').filter(x => {   // same recordings: the Same as column
+    const id = x.kind + '|' + x.other + '|' + x.back; if (seen.has(id) || keys.includes(x.other)) return false; seen.add(id); return true; });
+  if (!list.length) return `<td class="${cls}"></td>`;
+  const n = list.length, count = `${n} related`;
+  const toggle = `<button type="button" class="du-toggle" aria-expanded="false" title="Show or hide the related pieces">${en(count)}<svg class="du-chev" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`;
+  const line = x => {
+    let t = REL_ROLE[x.kind]?.[x.back ? 1 : 0] || x.kind;
+    t = t.replace(' ({W})', x.what ? ' (' + x.what + ')' : '').replace('{W}', x.what || '');
+    t = t[0].toUpperCase() + t.slice(1);
+    const src = (BASIS[x.basis] || x.basis) + (x.note ? ': ' + x.note : '');
+    const tg = relTarget(x.other), title = `${tg.label}: ${t}. ${src[0].toUpperCase() + src.slice(1)}`;
+    const body = `<span class="ref-go">${tg.href ? REF_ICON : ''}</span><span class="du-text"><span class="du-ep" translate="no">${tg.html}</span>${REF_SEP}<span class="du-desc">${en(esc(t))}</span></span>`;
+    return `<li class="du-use">${tg.href ? `<a class="go ref-link" href="${esc(tg.href)}"${tg.go ? ` data-go="${esc(tg.go)}"` : ''} title="${esc(title)}">${body}</a>`
+      : `<span class="ref-link" title="${esc(title)}">${body}</span>`}</li>`;
+  };
+  return `<td class="${cls}">${toggle}<ul class="du-uses" hidden>${list.map(line).join('')}</ul></td>`;
+}
 /* the id of a cue-sheet row: TV rows r-TV-98-B-19, film rows q-MOVIE-R-6 (the film tables double as music lists).
    A few episodes repeat an M number in another part, and three print one twice in a part: the second gets -2. */
 const ROW_ID = new Map();
@@ -322,10 +407,13 @@ const usedCell = (id, self) => usesCell(id, self, 'ed du');
 const ALBUMS = window.MMB_ALBUMS || {};
 /* a CD correction of — : the booklet prints a CD place, but the piece isn't on any CD (M-110B: 8-21-1 is really M-111B) */
 const NO_CD = '—';
+/* a BGM list row's id: cue-M-206 by its code; a row the booklet gives no code (an instrumental or music-box version, M-NO. —)
+   goes by its CD place instead, cue-cd-9-20, so album rows and cue-sheet credits can still link to it */
+const bgmRowId = r => r.c !== '—' ? cueId(r.c) : (r.cdx && r.cdx !== NO_CD ? r.cdx : r.cd) ? 'cue-cd-' + (r.cdx && r.cdx !== NO_CD ? r.cdx : r.cd) : '';
 /* the track number, and the piece within it after a hyphen as in the booklet's own key (p.104: 1-1-1 = disc 1, track 1, first piece) */
 /* a CD position: album code (a box-set disc number, or R, S, SS, ST1, ST2, EX, 歌), then track and piece; 歌 adds its
    disc first. key = the track's key in albums.js (歌: disc-track). */
-const CD_RE = /^(\d+(?=-)|ST[12]|SS|EX|R|S|歌)-?(\d+)(?:-(\d+))?(?:-(\d+))?$/;
+const CD_RE = /^(\d+(?=-)|ST[12]|SSM|SS|SM|RM|MC|EX|R|S|歌)-?(\d+)(?:-(\d+))?(?:-(\d+))?$/;
 function parseCd(cd){
   const o = CD_RE.exec(cd || ''); if (!o) return null;
   const multi = o[1] === '歌';
@@ -359,7 +447,7 @@ function cdCells(cd, c){
     const place = `${o.code}-${o.key}${o.piece ? '-' + o.piece : ''}${letter}`;
     // the cover, and beside it the place above the title
     return `<td class="ed"><div class="trk"><a href="${ALBUMS_PAGE}#al-${esc(o.code)}${disc ? '-' + esc(o.disc) : ''}" title="${esc(name)}">${cover(disc ? {img: disc[2]} : al)}</a>`
-      + `<div class="tname"><a class="go tno" translate="no" href="${ALBUMS_PAGE}#${trackId(o.code, o.key)}" title="Show on the albums page">${esc(place)}</a>`
+      + `<div class="tname"><a class="go tno" translate="no" href="${ALBUMS_PAGE}#${trackId(o.code, o.key)}" title="Show on the albums page">${placeLabel(place)}</a>`
       + `${at ? stack(at) : ''}</div></div></td>`;
   }
   return `<td class="ed"><div class="trow"><span class="tno" translate="no">${esc(cd)}</span></div></td>`;
@@ -381,12 +469,12 @@ const bookNotes = D.notes.filter(n => n.x[0].includes('※')).map(n => {
 function catHtml(c, heart = true){
   const head = c.tt ? UI.bgmHead.map(col => col.h[0] === '内容' ? {h: ['曲タイトル', 'Kyoku taitoru', 'Song title']} : col) : UI.bgmHead;
   let html = `<div class="cat"><div class="scroll">${tableTag('list')}<thead>
-      <tr><th ${spanAttr('list')} class="cap">${stack(c.n)}</th></tr>${headRow([...head, ED_HEAD.cd, ED_HEAD.used, ED_HEAD.notes])}</thead><tbody>`;
+      <tr><th ${spanAttr('list')} class="cap">${stack(c.n)}</th></tr>${headRow([...head, ED_HEAD.cd, ED_HEAD.used, ED_HEAD.rel, ED_HEAD.notes])}</thead><tbody>`;
   c.r.forEach(r => {
-    const id = r.c !== '—' ? cueId(r.c) : '', n = rowNotes(r);
+    const id = bgmRowId(r), n = rowNotes(r);
     html += `<tr${id ? ` id="${esc(id)}"` : ''}><td class="code">${codeCell(r, n.mark.code)}</td><td class="tm" translate="no">${tm(r.t)}</td>`
       + `${pieceLinks(dcells(r.d, r.dx, n.mark.dx, n.mark.dn), r.c)}<td class="num" translate="no">${r.cd ? cdCell(r, n.mark.cd) : '<span class="blank"></span>' + mk(n.mark.cd)}</td>${cdCells(r.cdx || r.cd, r.c)}`
-      + `${id ? usedCell(id) : '<td class="ed"></td>'}${notesCell(n)}</tr>`;
+      + `${id ? usedCell(id) : '<td class="ed"></td>'}${relCell(relKeys(r), 'ed du')}${notesCell(n)}</tr>`;
   });
   return html + `</tbody></table></div>${noteBlock(bookNotes.filter(n => n.c === c.id))}${pageTag(c.pp[0] ?? c.p, c.pp[1])}${heart ? '<div class="heart" aria-hidden="true">❤</div>' : ''}</div>`;
 }
@@ -410,7 +498,7 @@ function cueTable(w, noCap){
   let html = `<div class="scroll">${tableTag(kind)}<thead>`
     + (noCap ? '' : `<tr><th ${nc} class="cap">${stack(w.h, lineFmt(w.hx))}</th></tr>`);
   // the Make Up!, SuperS and Ami film tables head their first column "M" instead of "NO."
-  if (film) html += headRow([...(FILMS[w.id].m ? [{h: ['M','M','M'], c: 'num'}, ...UI.qHead.slice(1)] : UI.qHead), ED_HEAD.cd, ED_HEAD.used, ED_HEAD.notes]);
+  if (film) html += headRow([...(FILMS[w.id].m ? [{h: ['M','M','M'], c: 'num'}, ...UI.qHead.slice(1)] : UI.qHead), ED_HEAD.cd, ED_HEAD.used, ED_HEAD.rel, ED_HEAD.notes]);
   html += '</thead>';
   w.parts.forEach(p => {
     html += '<tbody>';
@@ -434,7 +522,7 @@ function cueTable(w, noCap){
       // a row that reuses a cue from another table (its credit links there) shows that cue's uses, its own among them
       const reused = film && (r.cl || []).find(c => c[1])?.[1];
       const used = film ? (reused ? usedCell(reused, OWN_USE[reused]) : usedCell(id, OWN_USE[id])) : '';
-      html += film ? `<tr id="${esc(id)}">${m}${ct}${d}<td class="num" translate="no">${cdCell(r, n.mark.cd)}</td>${cdCells(r.cdx || r.cd)}${used}${notesCell(n)}</tr>`
+      html += film ? `<tr id="${esc(id)}">${m}${ct}${d}<td class="num" translate="no">${cdCell(r, n.mark.cd)}</td>${cdCells(r.cdx || r.cd)}${used}${relCell([r.cdx && r.cdx !== NO_CD ? r.cdx : r.cd], 'ed du')}${notesCell(n)}</tr>`
                    : `<tr id="${esc(id)}">${m}${d}${ct}${notesCell(n)}</tr>`;
     });
     html += '</tbody>';
@@ -609,7 +697,9 @@ function tvPanel(sid){
   });
 }
 /* each film belongs with the season it came out alongside (FILMS) */
-D.bgm.forEach(b => { if (b.id !== 'MOVIE') b.cats.forEach(c => c.r.forEach(r => { ROW_PANEL[cueId(r.c)] = {section: 'sec-' + b.id, panel: 'bgm-' + b.id}; })); });
+D.bgm.forEach(b => { if (b.id !== 'MOVIE') b.cats.forEach(c => c.r.forEach(r => { const id = bgmRowId(r); if (id) ROW_PANEL[id] = {section: 'sec-' + b.id, panel: 'bgm-' + b.id}; })); });
+/* the film instrumentals list sits inside each film's panel */
+D.works.forEach(w => { if (FILMS[w.id]) filmInstrumentals(w).forEach(c => c.r.forEach(r => { const id = bgmRowId(r); if (id) ROW_PANEL[id] = {section: 'sec-' + FILMS[w.id].season, panel: 'film-' + w.id}; })); });
 D.works.forEach(w => { if (FILMS[w.id]) w.parts.forEach(p => p.r.forEach(r => { ROW_PANEL[filmRowId(w, r)] = {section: 'sec-' + FILMS[w.id].season, panel: 'film-' + w.id}; })); });
 /* TV cue-sheet rows (for Uses links and the Back button) and the episodes themselves (#ep98) */
 D.works.forEach(w => { if (w.type !== 'movie') {
@@ -629,14 +719,15 @@ const ALBUM_HEAD = [
   {en: 'Piece', c: 'seg', t: 'Each piece on the track and where it plays: start–end, with its length in brackets. Measured from the CD audio at the silent gaps between pieces',
     k: [['~', 'Approximate: a change in the music with no gap'], ['×', 'Crossfade: two codes on one piece, one fading into the other']]},
   {en: 'Uses', t: 'Every episode and film that uses the piece, with that cue sheet\'s description. Click the button to show them'},
+  {en: 'Related', t: 'Other pieces this one is a version of, or that are versions of it: without drums, karaoke, an edit, a bridge version... Click the button to show them'},
   {en: 'BGM list reference', t: 'The piece\'s M-NO. in the BGM list (or the film\'s cue sheet) and its description there, from the booklet. The link icon goes to that entry, which also has the length printed in the booklet (TIME). Long text is cut off with …: click the cell to show the whole column'},
-  {en: 'Same as', c: 'also', t: 'The same recording on another album, found from the audio: the box set\'s place for an original-album piece, or the original albums\' pieces for a box-set piece'}];
+  {en: 'Same as', c: 'also', t: 'The same recording on another album, found from the audio: the box set\'s place for an original-album piece, the original albums\' pieces for a box-set piece, and a song\'s place on the Memorial Song Box'}];
 const ALBUM_PANEL = {};   // album code -> the panel it sits in (a box-set disc: the box set's), or '' at the top level
 function albumPieces(){
   const at = {};   // album code -> track key -> [{piece, r, id, w?}]
   const add = (cd, x) => { const o = parseCd(cd); if (!o) return;
     ((at[o.code] ||= {})[o.key] ||= []).push({piece: o.piece, ...x}); };
-  D.bgm.forEach(b => b.cats.forEach(c => c.r.forEach(r => add(r.cdx || r.cd, {r, id: r.c !== '—' ? cueId(r.c) : ''}))));
+  D.bgm.forEach(b => b.cats.forEach(c => c.r.forEach(r => add(r.cdx || r.cd, {r, id: bgmRowId(r)}))));
   D.works.filter(w => w.type === 'movie').forEach(w => w.parts.forEach(p => p.r.forEach(r => {
     if (!(r.cl || []).some(c => c[1])) add(r.cdx || r.cd, {r, w, id: filmRowId(w, r)});
   })));
@@ -674,17 +765,21 @@ const partSeg = ([, start, end, mix], t) => { const [mark, title] = MIX[mix] || 
 /* a piece the tray card prints but the booklet never places at this track (albums.js e: [as printed, code]): its code
    (linked to its BGM-list row), what the card adds (編集 = an edit, ―4種 = four versions), and a note */
 const EXTRA_WORDS = [[/編集$/, ['編集', 'henshuu', 'edit']], [/―4種$/, ['4種', 'yonshu', '4 versions']]];
-function extraCells(ex, also = ''){
-  if (!ex) return `<td></td><td></td><td class="also">${also}</td>`;
+function extraCells(ex, also = '', rel = '<td></td>'){
+  if (!ex) return `<td></td>${rel}<td></td><td class="also">${also}</td>`;
   const [printed, code, cardNote] = ex;
   const fmt = p => p.replace(/^([A-Z]+)(\d)/, '$1-$2');      // J10 -> J-10
   const word = EXTRA_WORDS.find(([re]) => re.test(printed));
   const list = code ? [code] : printed.split('+').map(fmt);   // two joined: C1a+C1b (the icon goes to the first)
   // what the card's label means, when the site has worked it out (J11編集: an edit of J-11, and which parts)
   const note = 'Not on BGM list (the tray card prints ' + printed + ')' + (cardNote ? ': ' + cardNote : '');
-  return '<td></td>' + refCell(cueId(list[0]), `${esc(list.join('+'))}${word ? ` <span class="src">${tx(word[1], null, 'inl')}</span>` : ''}`, en(esc(note)), 'was')
+  return '<td></td>' + rel + refCell(cueId(list[0]), `${esc(list.join('+'))}${word ? ` <span class="src">${tx(word[1], null, 'inl')}</span>` : ''}`, en(esc(note)), 'was')
     + `<td class="also">${also}</td>`;
 }
+/* a track title, then (on its own line in each language) who sings or speaks on it, as the card credits them (albums.js
+   ar: [歌／三石琴乃, Uta: Mitsuishi Kotono, Vocals: Kotono Mitsuishi]); its own language lines, so a title that reads the
+   same in every language (HEART MOVING) still shows the credit in each */
+const titleWithArtist = (t, ar) => ar ? `${stack(t)} <span class="artist" translate="no">${stack(ar)}</span>` : stack(t);
 function albumTable(code, al, pieces){
   let html = `<div class="scroll">${tableTag('album')}<thead>${headRow(ALBUM_HEAD, false)}</thead>`;
   const keys = [...new Set([...Object.keys(al.t), ...Object.keys(pieces || {})])].sort(keyOrder);
@@ -714,15 +809,19 @@ function albumTable(code, al, pieces){
     html += `<tbody id="${esc(trackId(code, key))}">`;
     // Time: the whole track's length, once, beside its title; Piece: each piece and its place in the track
     const len = al.l?.[key];
-    const head = `<td class="num" translate="no" rowspan="${rows}">${esc(n)}</td>` + xcolCell('title', al.t[key] ? stack(al.t[key]) : '', {max: '26em', cls: 'ttl', attrs: ` rowspan="${rows}"`})
+    const head = `<td class="num" translate="no" rowspan="${rows}">${esc(n)}</td>` + xcolCell('title', al.t[key] ? titleWithArtist(al.t[key], al.ar?.[key]) : '', {max: '26em', cls: 'ttl', attrs: ` rowspan="${rows}"`})
       + `<td class="tm" translate="no" rowspan="${rows}"${len ? ' title="Measured from the audio"' : ''}>${len ? mss(len) : ''}</td>`;
     // the last piece ends where the track does (its stored duration is rounded to a tenth of a second)
     const segOf = (x, t) => segCell(places.length && x.piece && places[x.piece - 1], t, len && +x.piece === places.length ? len : undefined);
     const ex = al.e?.[key];
     // Same as: an original album's piece -> its box-set place; a box-set piece -> the original albums' pieces with that recording
-    const also = x => x.twin ? twinTag(x.twin)
-      : al.p === 'MMB' ? sameAsOriginals(places.length > 1 && x.piece ? `${code}-${key}-${x.piece}` : `${code}-${key}`) : '';
-    if (!list.length) html += `<tr>${head}${segOf({}, '')}${extraCells(ex?.['1'], also({}))}</tr>`;
+    const here = x => `${code}-${key}${places.length > 1 && x.piece ? '-' + x.piece : ''}`;   // this piece's CD place (9-20, 3-8-1, 歌-6-3)
+    const also = x => (x.twin ? twinTag(x.twin)
+      : al.p === 'MMB' ? sameAsOriginals(places.length > 1 && x.piece ? `${code}-${key}-${x.piece}` : `${code}-${key}`) : '')
+      + sameRecordings(here(x));
+    // Related: by the piece's code (not a film's own M number) and by its CD place
+    const rel = x => relCell([x.r && x.r.c !== '—' && !(x.w && FILMS[x.w.id]) ? x.r.c : '', here(x), `${code}-${key}`]);   // and the whole track's
+    if (!list.length) html += `<tr>${head}${segOf({}, '')}${extraCells(ex?.['1'], also({}), rel({}))}</tr>`;
     // several codes on one whole piece (M-330 and its edit M-330A on 4-20-2): one Piece cell spanning their rows. A code
     // with its own part of a piece (a, b) keeps its own cell.
     const pieceKey = x => x.blank || (!(x.w && FILMS[x.w.id]) && al.x?.[key]?.[x.r.c]) ? null : 'p' + (x.piece || '');
@@ -730,8 +829,8 @@ function albumTable(code, al, pieces){
       let n = 1; while (i + n < list.length && pieceKey(list[i + n]) === k) n++; return n; });
     const spanned = (cell, i) => !span[i] ? '' : span[i] > 1 ? cell.replace('<td class="seg"', `<td class="seg" rowspan="${span[i]}"`) : cell;
     list.forEach((x, i) => {
-      if (x.blank && x.twin) { html += `<tr>${i ? '' : head}${segOf(x, x.piece)}<td></td><td></td><td class="also">${also(x)}</td></tr>`; return; }
-      if (x.blank) { html += `<tr>${i ? '' : head}${segOf(x, x.piece)}${extraCells(ex?.[x.piece], also(x))}</tr>`; return; }
+      if (x.blank && x.twin) { html += `<tr>${i ? '' : head}${segOf(x, x.piece)}<td></td>${rel(x)}<td></td><td class="also">${also(x)}</td></tr>`; return; }
+      if (x.blank) { html += `<tr>${i ? '' : head}${segOf(x, x.piece)}${extraCells(ex?.[x.piece], also(x), rel(x))}</tr>`; return; }
       const r = x.r, film = x.w && FILMS[x.w.id];
       const part = !film && al.x?.[key]?.[r.c];
       const pt = (x.piece || '') + (part ? partLetter(code, key, r.c) : '');
@@ -742,7 +841,7 @@ function albumTable(code, al, pieces){
       const shown = !film && r.cn ? stack(r.cn) : Array.isArray(codeTxt) ? stack(codeTxt) : esc(codeTxt);
       const self = film ? {w: x.w, rows: [{id: x.id, part: null, m: r.m}]} : null;
       html += `<tr>${i ? '' : head}${spanned(placeHere, i)}`
-        + usesCell(x.id, self)
+        + usesCell(x.id, self) + rel(x)
         + refCell(x.id, `${shown}${film ? ` <span class="src">${en(esc(film.short))}</span>` : ''}`, r.d ? stack(r.d) : '')
         + `<td class="also">${also(x)}</td></tr>`;
     });
@@ -936,9 +1035,20 @@ function sameAsOriginals(place){
 /* the Same as column on an original album: its piece found on the box set (albums.js q), linked to that track */
 function twinTag(place){
   const o = parseCd(place), id = o && trackId(o.code, o.key);
-  const label = `<span translate="no">BOX ${esc(place)}</span>`;
-  return `<span title=""${esc(`The same recording is on the box set at ${place} (found from the audio)`)}">`
+  const label = `<span translate="no">${placeLabel(place)}</span>`;
+  return `<span class="same" title="${esc(`The same recording is on the box set at ${place} (found from the audio)`)}">`
     + (id ? `<a class="go" href="#${esc(id)}">${label}</a>` : label) + '</span>';
+}
+/* the Same as column's other entries: pieces found to be the same recording on another album (data.js rel, kind
+   same, read both ways), each linked to its track: 歌-3-10 for RM-15 */
+function sameRecordings(place){
+  return (REL[place] || []).filter(x => x.kind === 'same').map(x => {
+    const o = parseCd(x.other), al = o && ALBUMS[o.code], id = o && al?.t[o.key] && trackId(o.code, o.key);
+    const name = al ? al.n[al.n.length - 1] : '';
+    const label = `<span translate="no">${placeLabel(x.other)}</span>`;
+    return `<span class="same" title="${esc(`The same recording is on ${name} as ${x.other}${x.note ? ': ' + x.note : ''}`)}">`
+      + (id ? `<a class="go" href="#${esc(id)}">${label}</a>` : label) + '</span>';
+  }).join('');
 }
 /* an album's heading: cover, name and, while it is open, its links (VGMdb, tray card) under the name; the cover grows
    while it is open (styles.css). A link inside a summary opens the link without toggling the panel. */
@@ -974,7 +1084,7 @@ function renderAlbums(){
     if (k === 'MMB') set(k, al, Object.keys(ALBUMS).filter(c => ALBUMS[c].p === 'MMB').sort((a, b) => ALBUMS[a].d - ALBUMS[b].d)
       .map(c => [c, ALBUMS[c], discTitle(ALBUMS[c].d, ALBUMS[c].n)]));
     else if (al.dn) set(k, al, Object.entries(al.dn).map(([n, name]) =>
-      [`${k}-${n}`, {t: ofDisc(al.t, n), l: ofDisc(al.l, n), img: name[2], dn: al.dn}, discTitle(n, name), k, ofDisc(pieces[k], n)]));
+      [`${k}-${n}`, {t: ofDisc(al.t, n), l: ofDisc(al.l, n), ar: ofDisc(al.ar, n), img: name[2], dn: al.dn}, discTitle(n, name), k, ofDisc(pieces[k], n)]));
     else app.appendChild(panel(k, al, '', tx(al.n)));
   });
 }

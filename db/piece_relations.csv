@@ -1,3 +1,226 @@
-id,code,related,kind,basis,note
-1,E-12,E-22,arrangement,by ear,"Episode 29 B M-20 (credited E-12, ※欠番 on p.105), compared with a recording of the scene 2026-11-15: the first ~13 s play like E-22 (Disc 1 track 54 from about 0:10), then a held flute note and a timpani hit end it. Neither the opening nor the ending matched anything on the box set's 10 discs or 10 other BGM albums; dialogue over the music made the audio match inconclusive. Re-measured 2026-11-18: about +0.5 semitone and about 5% slower than E-22 (the preceding cue, 1-18, in the same recording is within 0.2 semitone and at speed), so not E-22 run off-speed; the episode also has a muted (""wah-wah"") trumpet the CD lacks (by ear); it ends with its timpani hit before the point where a reed instrument (maybe a clarinet) enters on the CD."
-2,M-56,M-55,variant,audio match,"SuperS Music Collection track 12, piece 1 (the tray card's M-56, the booklet's SS-12-1, 1:45): its last 75 s are the same recording as M-55 (box set 5-11-4, matched at 0.978); its first 29 s are different music. Found 2026-11-15 while matching the original albums to the box set."
+id,code,related,kind,what,basis,note
+1,E-12,E-22,arrangement,\N,by ear,"Episode 29 B M-20 (credited E-12, ※欠番, ""unused number"", on p.105), compared with a recording of the scene 2026-11-15: the first ~13 s play like E-22 (Disc 1 track 54 from about 0:10), then a held flute note and a timpani hit end it. Neither the opening nor the ending matched anything on the box set's 10 discs or 10 other BGM albums; dialogue over the music made the audio match inconclusive. Re-measured 2026-11-18: about +0.5 semitone and about 5% slower than E-22 (the preceding cue, 1-18, in the same recording is within 0.2 semitone and at speed), so not E-22 run off-speed; the episode also has a muted (""wah-wah"") trumpet the CD lacks (by ear); it ends with its timpani hit before the point where a reed instrument (maybe a clarinet) enters on the CD."
+2,M-56,M-55,variant,\N,audio match,"SuperS Music Collection track 12, piece 1 (the tray card's M-56, the booklet's SS-12-1, 1:45): its last 75 s are the same recording as M-55 (box set 5-11-4, matched at 0.978); its first 29 s are different music. Found 2026-11-15 while matching the original albums to the box set."
+3,B-3B,B-3,without,rhythm,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+4,D-1B,D-1,without,rhythm,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+5,D-4B,D-4,without,brass,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+6,E-8B,E-8,without,harmonica,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+7,E-19B,E-19,without,rhythm,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+8,F-4B',F-4,without,"rhythm, throughout",booklet,\N
+9,F-5B,F-5,without,piano,booklet,\N
+10,F-8B,F-8,without,shakuhachi,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+11,F-11B,F-11,without,rhythm,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+12,G-11B,G-11,without,rhythm,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+13,J-12B,J-12,without,piano,booklet,\N
+14,M-109B,M-109,without,chorus,booklet,\N
+15,M-110B,M-110,without,chorus,booklet,\N
+16,M-111B,M-111,without,chorus,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+17,M-117B,M-117,without,rhythmic pulse (a violin solo),booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+18,M-122B,M-122,without,chorus,booklet,\N
+19,M-303A,M-303,without,bass,booklet,\N
+20,M-303B,M-303,without,bass and drums,booklet,\N
+21,M-304A,M-304,without,drums,booklet,\N
+22,M-305A,M-305,without,chorus,booklet,\N
+23,M-320A,M-320,without,chorus,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+24,M-327A,M-327,without,sax,booklet,\N
+25,M-331A,M-331,without,programmed drums,booklet,\N
+26,M-342A,M-342,without,brass and handclaps,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+27,M-344A,M-344,without,sax,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+28,M-2 コーラスヌキ,M-2,without,chorus,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+29,M-9 コーラスヌキ,M-9,without,chorus,booklet,\N
+30,M-40 ストリングスヌキ,M-40,without,strings,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+31,M-601A,M-601,without,drums,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+32,M-624 CHOナシ,M-624,without,chorus,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+33,M-625 CHOナシ,M-625,without,chorus,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+34,M-634 CHOナシ,M-634,without,chorus,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+35,M-655B,M-655,without,cello,booklet,"the two line up as the same music, and the full version has the extra sound (checked from the audio 2026-11-19)"
+36,M-103B,M-103,only,synth and electric guitar,booklet,\N
+37,M-133B,M-133,only,melody line,booklet,\N
+38,M-134B,M-134,only,organ,booklet,\N
+39,M-331B,M-331,only,"strings, woodwinds and harpsichord",booklet,\N
+40,M663B,M-663,only,handbells,booklet,\N
+41,M-303C,M-303,solo,piano,booklet,\N
+42,M-371,M-31,solo,violin,booklet,\N
+43,M-372,M-32,solo,violin,booklet,\N
+44,M-129C,M-129,solo,flute,booklet,\N
+45,M-114B,M-114,excerpt,the opening piano solo,booklet,\N
+46,M-330A,M-330,excerpt,the first half,booklet,\N
+47,M-330B,M-330,excerpt,"the second half, slowed",booklet,\N
+48,M-33 別バージョン,M-33,excerpt,the opening,booklet,\N
+49,M-60,M-59,excerpt,the four hand close-ups,booklet,\N
+50,M-366,M-377,excerpt,the opening,booklet,\N
+51,F-4B,F-4,excerpt,"from the repeat, with rhythm",booklet,\N
+52,H-5b,H-5,edit,the ending cut,booklet,\N
+53,G-7B,G-7,edit,the climactic coda cut,booklet,\N
+54,M-653B,M-653,edit,"ends with a ""Ta-da!""",booklet,\N
+55,3-8-1,J-11,edit,\N,tray card,printed J11編集 (an edit) on the tray card
+56,3-11-1,J-10,edit,\N,tray card,printed J10編集 (an edit) on the tray card
+57,3-19,M-110,edit,"its first 20 seconds or so, then its last few bars",tray card,printed M110編集 (an edit) on the tray card; the parts found from the audio and confirmed by ear
+58,M-128D,M-128C,processed,with a fade,booklet,\N
+59,M-129D,M-129,processed,with a fade,booklet,\N
+60,M-16 ラジオトーン,M-16,processed,to sound like a radio,booklet,\N
+61,K-2b,K-2,tempo,up-tempo,booklet,\N
+62,M-131B,M-131,tempo,much slower,booklet,\N
+63,M-662B,M-662,tempo,"slower, with a puffing sound effect for the piano",booklet,\N
+64,M-25,M-24,bridge,\N,booklet,\N
+65,M-31,M-30,bridge,\N,booklet,\N
+66,M-34,M-33,bridge,\N,booklet,\N
+67,M-42,M-41,bridge,\N,booklet,\N
+68,M-44,M-43,bridge,\N,booklet,\N
+69,M-654,M-653,bridge,\N,booklet,\N
+70,M-23 グロッケンバージョン,M-23,version,glockenspiel,booklet,\N
+71,M-309,M-308,version,upgraded,booklet,\N
+72,9-19,M-413,version,solo make-up,tray card,"printed M413―4種 on the tray card: four versions, one for each Guardian"
+73,10-13-2,M-520,version,alternate,tray card,"printed M520別 (別, ""another version"") on the tray card"
+74,M-59 カラオケ,M-59,karaoke,without the four hand close-ups,booklet,\N
+75,E-13,J-18,contains,at the start,booklet,\N
+76,F-14,J-19,contains,at the start,booklet,\N
+77,F-15,J-17,contains,at the start,booklet,\N
+78,M-329A,M-329,contains,\N,booklet,\N
+79,M-329A,M-362,contains,at the start,booklet,\N
+80,M-337,M-366,contains,at the end,booklet,\N
+81,M-311A,M-311,contains,\N,booklet,\N
+82,M-311A,M-310,contains,\N,booklet,\N
+83,M-660,M-659,contains,\N,booklet,\N
+84,M-660,M-626,contains,\N,booklet,\N
+85,H-2,H-1,continues,\N,booklet,\N
+86,M-110,M-109,continues,\N,booklet,\N
+87,M-306,M-305,continues,\N,booklet,\N
+88,2-11,歌-2-1,instrumental,\N,booklet,\N
+89,3-4,歌-2-3,instrumental,\N,booklet,\N
+90,2-9,歌-2-4,instrumental,\N,booklet,\N
+91,8-22,歌-2-5,instrumental,\N,booklet,\N
+92,8-23,歌-2-6,instrumental,\N,booklet,\N
+93,2-13,歌-2-7,instrumental,\N,booklet,\N
+94,2-15,歌-2-8,instrumental,\N,booklet,\N
+95,2-28,歌-1-2,instrumental,\N,booklet,\N
+96,2-6,歌-2-9,instrumental,\N,booklet,\N
+97,3-2,歌-1-4,instrumental,\N,booklet,\N
+98,3-10,歌-3-1,instrumental,\N,booklet,\N
+99,4-16,歌-1-6,instrumental,\N,booklet,\N
+100,7-19,歌-4-1,instrumental,\N,booklet,\N
+101,6-14,歌-4-2,instrumental,\N,booklet,\N
+102,7-1,歌-4-4,instrumental,\N,booklet,\N
+103,6-18,歌-4-5,instrumental,\N,booklet,\N
+104,6-17,歌-4-6,instrumental,\N,booklet,\N
+105,6-16,歌-4-7,instrumental,\N,booklet,\N
+106,8-24,歌-4-8,instrumental,\N,booklet,\N
+107,8-25,歌-4-9,instrumental,\N,booklet,\N
+108,歌-5-17,歌-4-10,instrumental,under the narration,booklet,\N
+109,7-15,歌-4-11,instrumental,\N,booklet,\N
+110,10-33,歌-4-12,instrumental,\N,booklet,\N
+111,7-16,歌-4-13,instrumental,\N,booklet,\N
+112,7-6,歌-4-14,instrumental,\N,booklet,\N
+113,7-24,歌-4-15,instrumental,\N,booklet,\N
+114,9-22,歌-4-1,music box,\N,booklet,\N
+115,6-1,歌-4-2,music box,\N,booklet,\N
+116,7-8,歌-4-5,music box,\N,booklet,\N
+117,歌-5-8,歌-4-6,music box,under the narration,booklet,\N
+118,歌-5-10,歌-4-7,music box,under the narration,booklet,\N
+119,9-23,歌-4-8,music box,\N,booklet,\N
+120,9-24,歌-4-9,music box,\N,booklet,\N
+121,歌-5-18,歌-4-10,music box,under the narration,booklet,\N
+122,歌-5-20,歌-4-11,music box,under the narration,booklet,\N
+123,10-32,歌-4-12,music box,\N,booklet,\N
+124,歌-5-24,歌-4-13,music box,under the narration,booklet,\N
+125,歌-5-26,歌-4-14,music box,under the narration,booklet,\N
+126,9-27,歌-4-15,music box,\N,booklet,\N
+127,9-21,歌-3-11,instrumental,\N,booklet,\N
+128,9-20,歌-3-12,instrumental,\N,booklet,\N
+129,10-31,歌-3-13,instrumental,\N,booklet,\N
+130,10-30,歌-3-14,instrumental,\N,booklet,\N
+131,歌-1-11,歌-1-1,karaoke,\N,track titles,\N
+132,歌-1-12,歌-1-2,karaoke,\N,track titles,\N
+133,歌-1-13,歌-1-3,karaoke,\N,audio match,the disc 1 karaoke tracks follow its songs in order; its backing is a little closer to SONG 1-3 than to SONG 2-2 (bass-band correlation 0.83 against 0.79); confirmed by ear 2026-11-19
+134,歌-1-14,歌-1-4,karaoke,\N,track titles,\N
+135,歌-1-15,歌-1-6,karaoke,\N,track titles,\N
+136,歌-1-16,歌-1-7,karaoke,\N,track titles,\N
+137,歌-1-17,歌-1-8,karaoke,\N,track titles,\N
+138,歌-1-18,歌-1-9,karaoke,\N,track titles,\N
+139,歌-1-19,歌-1-10,karaoke,\N,track titles,\N
+140,歌-2-16,歌-2-5,karaoke,\N,track titles,\N
+141,歌-3-15,歌-3-1,karaoke,\N,track titles,\N
+142,歌-3-16,歌-3-8,karaoke,\N,track titles,\N
+143,歌-6-1,歌-3-9,karaoke,\N,track titles,\N
+144,歌-6-10,歌-2-7,karaoke,\N,track titles,\N
+145,歌-6-11,歌-2-9,karaoke,\N,track titles,\N
+146,歌-6-12,歌-2-10,karaoke,\N,track titles,\N
+147,歌-6-13,歌-2-11,karaoke,\N,track titles,\N
+148,歌-6-14,歌-2-12,karaoke,\N,track titles,\N
+149,歌-6-15,歌-2-13,karaoke,\N,track titles,\N
+150,歌-6-16,歌-2-15,karaoke,\N,track titles,\N
+151,歌-6-3,歌-3-11,karaoke,\N,track titles,\N
+152,歌-6-4,歌-3-12,karaoke,\N,track titles,\N
+153,歌-6-5,歌-3-13,karaoke,\N,track titles,\N
+154,歌-6-6,歌-3-14,karaoke,\N,track titles,\N
+155,歌-6-7,歌-4-16,karaoke,\N,track titles,\N
+156,歌-6-8,歌-2-1,karaoke,\N,track titles,\N
+157,歌-6-9,歌-2-3,karaoke,\N,track titles,\N
+158,2-25,歌-1-1,instrumental,\N,audio match,"the booklet lists it as an instrumental of ""Moonlight Legend"" (ムーンライト伝説); the song box has two recordings, and its backing matches the DALI one (SONG 1-1, bass-band correlation 0.96, against 0.60 for the Moon Lips one, SONG 1-5); confirmed by ear 2026-11-19"
+159,2-29,歌-2-2,instrumental,\N,audio match,"the booklet lists it as an instrumental of ""Princess Moon"" (プリンセス・ムーン); the song box has two recordings, and its backing is closer to SONG 2-2 (bass-band correlation 0.94, against 0.82 for SONG 1-3); confirmed by ear 2026-11-19"
+160,歌-6-2,歌-3-10,karaoke,\N,audio match,"the song box has two recordings of ""I am Sailor Moon""; its backing matches SONG 3-10 (bass-band correlation 0.95, against 0.48 for SONG 3-2), and the karaoke's MP3 file name calls it the Peach Hips version; confirmed by ear 2026-11-19"
+161,歌-1-5,歌-1-1,recording,\N,track titles,the same song recorded by other singers (the back card credits each)
+162,歌-2-2,歌-1-3,recording,\N,track titles,the same song recorded by other singers (the back card credits each)
+163,歌-3-10,歌-3-2,recording,\N,track titles,the same song recorded by other singers (the back card credits each)
+164,MC-1,歌-1-1,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.999 (checked from the audio 2026-11-19)"
+165,MC-11,歌-1-2,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.998 (checked from the audio 2026-11-19)"
+166,R-1,歌-1-4,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.993 (checked from the audio 2026-11-19)"
+167,R-10,歌-3-1,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.986 (checked from the audio 2026-11-19)"
+168,RM-2,歌-3-9,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.991 (checked from the audio 2026-11-19)"
+169,RM-15,歌-3-10,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.987 (checked from the audio 2026-11-19)"
+170,SM-11,歌-3-11,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.996 (checked from the audio 2026-11-19)"
+171,SM-12,歌-3-12,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.995 (checked from the audio 2026-11-19)"
+172,SS-1,歌-1-5,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.999 (checked from the audio 2026-11-19)"
+173,SS-17,歌-1-8,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.977 (checked from the audio 2026-11-19)"
+174,SSM-1,歌-1-5,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.992 (checked from the audio 2026-11-19)"
+175,SSM-6,歌-1-8,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.987 (checked from the audio 2026-11-19)"
+176,SSM-16,歌-3-13,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.992 (checked from the audio 2026-11-19)"
+177,ST1-2,歌-1-9,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.990 (checked from the audio 2026-11-19)"
+178,ST1-16,歌-1-10,same,\N,audio match,"the same recording: lined up in 10-second windows, they match at a median correlation of 0.993 (checked from the audio 2026-11-19)"
+179,1-1,歌-1-1,size,TV size,track titles,the track title and the credited singer and arranger
+180,2-2,歌-1-1,size,"TV size, with sound effects",track titles,the track title and the credited singer and arranger
+181,EX-1,歌-1-1,size,TV size,track titles,the track title and the credited singer and arranger
+182,4-2,歌-1-5,size,"TV size, with sound effects",track titles,the track title and the credited singer and arranger
+183,5-2,歌-1-5,size,"TV size, with sound effects",track titles,the track title and the credited singer and arranger
+184,10-2,歌-1-5,size,TV size,track titles,the track title and the credited singer and arranger
+185,1-56,歌-1-2,size,TV size,track titles,the track title and the credited singer and arranger
+186,2-26,歌-1-3,size,TV size,track titles,the track title and the credited singer and arranger
+187,3-18,歌-1-4,size,TV size,track titles,the track title and the credited singer and arranger
+188,4-22,歌-1-6,size,TV size,track titles,the track title and the credited singer and arranger
+189,EX-26,歌-1-6,size,TV size,track titles,the track title and the credited singer and arranger
+190,5-16,歌-1-7,size,TV size,track titles,the track title and the credited singer and arranger
+191,6-2,歌-1-9,size,"TV size, with sound effects",track titles,the track title and the credited singer and arranger
+192,10-28,歌-1-8,size,TV size,track titles,the track title and the credited singer and arranger
+193,8-19,歌-3-9,size,movie size,track titles,the track title and the credited singer and arranger
+194,8-20,歌-3-10,size,movie size,track titles,the track title and the credited singer and arranger
+195,9-18,歌-3-11,size,movie size,track titles,the track title and the credited singer and arranger
+196,10-20,歌-3-13,size,movie size,track titles,the track title and the credited singer and arranger
+197,8-2,1-1,karaoke,TV size,track titles,"its title, and the arranger it credits (Daisuke Ikeda, 池田大介, as on the DALI recording)"
+198,9-2,歌-1-5,karaoke,\N,audio match,"its backing matches the Moon Lips recording (SONG 1-5) at a median 0.86 in 10-second windows, against 0.65 for the DALI one; the tray card credits Moon Lips's arranger Yuzo Hayashi (林有三) (checked from the audio 2026-11-19)"
+199,8-17,歌-6-1,without,chorus,audio match,the same karaoke without its chorus: they match at a median 0.969 in 10-second windows (checked from the audio 2026-11-19)
+200,6-19,歌-4-3,karaoke,without the chorus,track titles,"its title; its backing lines up with the vocal recording (median 0.84 in 10-second windows, as a karaoke against its vocal version does)"
+201,EX-2,2-7,without,chorus,audio match,"its title (アイキャッチ（コーラスなしヴァージョン）, ""Eyecatch (Version without Chorus)""); three quarters of its 5-second windows match the eyecatch C-2 (2-7) at 0.95 or more, the rest being where the chorus sings (checked from the audio 2026-11-19)"
+202,1-57,歌-1-1,uses,\N,tray card,the tray card prints 使用楽曲「ムーンライト伝説」 (song used) for the track
+203,2-23,歌-1-2,uses,\N,tray card,the tray card prints 使用楽曲「HEART MOVING」 (song used) for the track
+204,2-27,歌-1-1,uses,\N,tray card,the tray card prints 使用楽曲「ムーンライト伝説」 (song used) for the track
+205,3-1,歌-1-1,uses,\N,tray card,the tray card prints 使用楽曲「ムーンライト伝説」 (song used) for the track
+206,3-13,歌-1-4,uses,\N,tray card,the tray card prints 使用楽曲「乙女のポリシー」 (song used) for the track
+207,4-11-1,歌-1-1,uses,\N,tray card,"the tray card prints 使用楽曲「ムーンライト伝説」 (song used) for the track; it is in M-302 (4-11-1), confirmed by ear 2026-11-19"
+208,4-15,歌-1-6,uses,\N,tray card,the tray card prints 使用楽曲「タキシード・ミラージュ」 (song used) for the track
+209,5-15,歌-1-7,uses,\N,tray card,the tray card prints 使用楽曲「私たちになりたくて」 (song used) for the track
+210,5-19,歌-1-7,uses,\N,tray card,the tray card prints 使用楽曲「私たちになりたくて」 (song used) for the track
+211,5-22,歌-1-7,uses,\N,tray card,the tray card prints 使用楽曲「私たちになりたくて」 (song used) for the track
+212,6-4,歌-1-9,uses,\N,tray card,the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track
+213,6-4,歌-1-10,uses,\N,tray card,the tray card prints 使用楽曲「風も空もきっと…」 (song used) for the track
+214,6-9,歌-1-9,uses,\N,tray card,the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track
+215,6-10,歌-1-9,uses,\N,tray card,the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track
+216,6-11,歌-1-9,uses,\N,tray card,the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track
+217,6-12,歌-1-9,uses,\N,tray card,the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track
+218,7-23,歌-1-10,uses,\N,tray card,the tray card prints 使用楽曲「風も空もきっと…」 (song used) for the track
+219,8-18,歌-3-9,uses,\N,tray card,the tray card prints 使用楽曲「Moon Revenge」 (song used) for the track
+220,10-1,歌-3-14,uses,\N,tray card,the tray card prints 使用楽曲「三時の妖精」 (song used) for the track
+221,10-5,歌-3-14,uses,\N,tray card,the tray card prints 使用楽曲「三時の妖精」 (song used) for the track
+222,10-10,歌-3-14,uses,\N,tray card,the tray card prints 使用楽曲「三時の妖精」 (song used) for the track
+223,10-27,歌-1-8,uses,\N,tray card,"the tray card prints 使用楽曲「""らしく""いきましょ」 (song used) for the track"
+224,M-39,M-40,excerpt,its last 26 seconds,audio match,"EX-23-5 is the same recording as the end of M-40 (5-12-1, from 1:07.6), at a correlation of 0.995; found from the audio and confirmed by ear 2026-11-19"
+225,M-38,M-40,edit,"0:10 to 0:26, then its ending",audio match,EX-23-4's first 16 seconds are M-40 (5-12-1) from 0:10 to 0:26 (0.97) and its last 6 seconds are M-40's ending (1:28 to 1:34); found from the audio and confirmed by ear 2026-11-19

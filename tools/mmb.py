@@ -99,7 +99,7 @@ CREATE TABLE cue_rows (
 CREATE TABLE credits (
   row_id INTEGER NOT NULL REFERENCES cue_rows(id), ord INTEGER NOT NULL,
   printed TEXT NOT NULL,                       -- the code as printed
-  target TEXT,                                 -- the page anchor it links to (cue-M-206, q-MOVIE-R-6)
+  target TEXT,                                 -- the page anchor it links to (cue-M-206; cue-cd-6-1 for a BGM row with no code; q-MOVIE-R-6)
   corrected TEXT,                              -- editor's correction, if any
   note TEXT,                                   -- editor's note
   PRIMARY KEY (row_id, ord)
@@ -128,6 +128,9 @@ CREATE TABLE album_tracks (
   track TEXT NOT NULL,                         -- track number (歌: disc-track)
   title_ja TEXT, title_ro TEXT, title_en TEXT,
   length REAL,                                 -- the whole track's length on the CD in seconds (box-set discs and the S album), from the MP3s' encoder headers
+  -- who sings or speaks, as the tray card or back card prints it, role words included (歌／DALI, 歌／橋本潮　コーラス／アップルパイ,
+  -- 声の出演／…; 、 between names); romaji in Japanese order; English with the names as credited abroad (Vocals: DALI)
+  artist_ja TEXT, artist_ro TEXT, artist_en TEXT,
   PRIMARY KEY (album, track)
 );
 -- the discs of a set kept as one album (歌, whose tracks are keyed disc-track): each disc's name, from its back card, and its
@@ -137,12 +140,12 @@ CREATE TABLE album_discs (
   name_ja TEXT, name_en TEXT, img TEXT,
   PRIMARY KEY (album, disc)
 );
--- where each piece of a multi-piece box-set track starts on the CD and how long it runs there (not from the booklet):
+-- where each piece of a multi-piece track starts on the CD (not from the booklet); how long it runs is worked out (piece_spans):
 -- found from the audio (quiet gaps and abrupt changes, fitted to the printed TIMEs), seconds from the start of the track
 CREATE TABLE track_pieces (
   album TEXT NOT NULL, track TEXT NOT NULL,
   piece INTEGER NOT NULL,                      -- 1 = first piece, as in the booklet's 1-1-1
-  start REAL NOT NULL, dur REAL NOT NULL,      -- seconds; dur runs to the next piece's start (or the end of the track)
+  start REAL NOT NULL,                         -- seconds from the start of the track
   break TEXT,                                  -- what marks the start: silence, dip (a quiet moment), change (no gap)
   checked INTEGER NOT NULL DEFAULT 0,          -- 1 = confirmed by ear
   note TEXT,
@@ -172,7 +175,7 @@ CREATE TABLE piece_sources (
   FOREIGN KEY (album, track) REFERENCES album_tracks(album, track)
 );
 
--- research in progress: NOT exported to data.js, so none of it appears on the site. Kept in the database and db/*.csv.
+-- research tables (see RESEARCH below): library_matches stays off the site; tray_cards and piece_relations are exported.
 -- Library-music identifications: a clip from a fan collection (RattleMan's rips on sailormusic.net) matched to a cue-sheet
 -- row by episode, scene and length. The row is named by work_id + part + ord (its position in the part), with m for reading;
 -- all three are NULL for a clip that matches no row.
@@ -196,14 +199,20 @@ CREATE TABLE tray_cards (
   note TEXT,                                   -- reading or source caveats
   PRIMARY KEY (disc, track, ord)
 );
--- How pieces relate to each other, read one way: code is a <kind> of related (E-12 is an arrangement of E-22).
--- Gathered for a later look at the score's families of pieces; not shown on the site yet.
+-- How pieces relate to each other, read one way: code is a <kind> of related (M-601A is M-601 without drums). Exported
+-- (data.js rel) and shown both ways: in the BGM lists' Notes column and the albums page's Related column. A piece is named
+-- by its code in the booklet's form (M-601A) or, when it has none, by its CD place (9-20, 歌-6-3, 3-8-1).
 CREATE TABLE piece_relations (
   id INTEGER PRIMARY KEY,
-  code TEXT NOT NULL,                          -- the piece, in the booklet's form (E-12)
-  related TEXT NOT NULL,                       -- the piece it derives from or resembles (E-22)
-  kind TEXT NOT NULL,                          -- arrangement, edit, variant, quotes (shares a theme or motif), same
-  basis TEXT NOT NULL,                         -- how we know: booklet, tray card, by ear, audio match
+  code TEXT NOT NULL,                          -- the piece (M-601A, or a CD place)
+  related TEXT NOT NULL,                       -- the piece it is a version of, or contains, or resembles (M-601)
+  kind TEXT NOT NULL,                          -- without, only, solo, excerpt, edit, processed, tempo, bridge, version,
+                                               -- karaoke, instrumental, music box, size (TV size, movie size),
+                                               -- recording (the song by other singers), uses (the tray card's 使用楽曲),
+                                               -- contains, continues, arrangement,
+                                               -- variant, quotes (shares a theme or motif), same
+  what TEXT,                                   -- the detail, in English: what is left out (drums), kept (organ), cut...
+  basis TEXT NOT NULL,                         -- how we know: booklet, tray card, track titles, by ear, audio match
   note TEXT
 );
 
@@ -219,6 +228,11 @@ CREATE VIEW cue_sheet AS
          r.credit_ja AS credit, r.time_ja AS time, r.desc_ja AS desc_ja, r.desc_en AS desc_en, r.cd, r.id AS row_id
   FROM cue_rows r JOIN parts p ON p.id = r.part_id JOIN works w ON w.id = p.work_id
   ORDER BY w.ord, p.ord, r.ord;
+CREATE VIEW piece_spans AS                     -- each piece runs to the next piece's start, or the end of the track
+  SELECT tp.album, tp.track, tp.piece, tp.start,
+         coalesce(lead(tp.start) OVER (PARTITION BY tp.album, tp.track ORDER BY tp.piece), t.length) AS end,
+         round(coalesce(lead(tp.start) OVER (PARTITION BY tp.album, tp.track ORDER BY tp.piece), t.length) - tp.start, 2) AS dur
+  FROM track_pieces tp JOIN album_tracks t USING (album, track);
 CREATE VIEW uses AS
   SELECT COALESCE(c.corrected, c.printed) AS code, c.printed, w.id AS work_id, w.episode, p.kind AS part, r.m
   FROM credits c JOIN cue_rows r ON r.id = c.row_id JOIN parts p ON p.id = r.part_id JOIN works w ON w.id = p.work_id;
@@ -296,13 +310,14 @@ def do_import(conn):
     for i, (code, a) in sorted(enumerate(albums.items()), key=lambda x: 'p' in x[1][1]):
         ins('albums', (code, i, a.get('p'), a.get('d'), a['n'][0], a['n'][1], a.get('cat'), a.get('v'), a.get('img'), a.get('card'), a.get('th')))
         for k, (track, tr) in enumerate(a['t'].items()):
-            ins('album_tracks', (code, k, track, *tr, (a.get('l') or {}).get(track)))
+            ar = (a.get('ar') or {}).get(track)
+            ins('album_tracks', (code, k, track, *tr, (a.get('l') or {}).get(track), *(ar if ar else [None] * 3)))
         for disc, (nj, ne, img) in (a.get('dn') or {}).items():
             ins('album_discs', (code, int(disc), nj, ne, img))
     for code, a in albums.items():
         for track, ps in (a.get('s') or {}).items():
             for i, pc in enumerate(ps):
-                if pc: ins('track_pieces', (code, track, i + 1, *pc, None))
+                if pc: ins('track_pieces', (code, track, i + 1, pc[0], *pc[2:], None))   # pc[1], the duration, is worked out
         for track, parts in (a.get('x') or {}).items():
             for c, (piece, start, end, *mix) in parts.items():
                 ins('piece_parts', (code, track, piece, c, start, end, None, mix[0] if mix else None))
@@ -318,6 +333,9 @@ def rows(conn, sql, *args):
 
 def build_data(conn):
     d = {'bgm': [], 'works': [], 'notes': [], 'logos': {}, 'logoAlt': {}, 'ser': {}}
+    # how pieces relate: [piece, related, kind, what, basis, note], each read "piece is a <kind> of related"
+    d['rel'] = [[r['code'], r['related'], r['kind'], r['what'], r['basis'], r['note']]
+                for r in rows(conn, 'SELECT * FROM piece_relations ORDER BY id')]
     for s in rows(conn, 'SELECT * FROM series ORDER BY ord'):
         d['ser'][s['id']] = join3(s['name_ja'], s['name_ro'], s['name_en'])
         d['logos'][s['id']] = s['logo']
@@ -397,8 +415,9 @@ ALBUMS_HEAD = ("/* Every album the booklet's CD column cites, keyed by its code 
                "   is listed. th = the cover shown while the album is closed, when it differs from img. dn = the discs of 歌 {disc: [name Japanese, English, booklet front]}.\n"
                "   n = name [Japanese, English], cat = catalog number, v = VGMdb album number, card = the album's tray card (VGMdb's scan,\n"
                "   kept in images/tray-cards), t = tracks [Japanese as printed on the tray card, romaji, English (edited to the site's\n"
-               "   style)], l = each track's length on the CD (seconds, from the audio), s = where each piece of a multi-piece track\n"
-               "   starts on the CD [start, duration (seconds), what marks the break (silence, dip, change), 1 if checked by ear], found\n"
+               "   style)], ar = who sings or speaks on a track, as the card prints it [Japanese, romaji,\n"
+               "   English], from the tray cards and back cards, l = each track's length on the CD (seconds, from the audio), s = where each piece of a multi-piece track\n"
+               "   starts on the CD [start, duration (seconds; to the next piece's start or the track's end), what marks the break (silence, dip, change), 1 if checked by ear], found\n"
                "   from the audio, e = pieces the tray card prints that the booklet never places at that track {track: {piece: [as printed,\n"
                "   code]}}, x = two codes on one piece: where each plays within it {code: [piece, start, end, mix]} (mix:\n"
                "   crossfade, layered or joined), q = an original album's piece that is the same recording as a box-set piece {track: {piece: place}},\n"
@@ -419,11 +438,15 @@ def build_albums(conn):
         lens = {t['track']: t['length'] for t in rows(conn, 'SELECT * FROM album_tracks WHERE album=? ORDER BY ord', a['code'])
                 if t['length'] is not None}
         if lens: o['l'] = lens
+        ar = {t['track']: [t['artist_ja'], t['artist_ro'], t['artist_en']]
+              for t in rows(conn, 'SELECT * FROM album_tracks WHERE album=? ORDER BY ord', a['code']) if t['artist_ja']}
+        if ar: o['ar'] = ar
         dn = {str(d['disc']): [d['name_ja'], d['name_en'], d['img']]
               for d in rows(conn, 'SELECT * FROM album_discs WHERE album=? ORDER BY disc', a['code'])}
         if dn: o['dn'] = dn
         s = {}
-        for p in rows(conn, 'SELECT * FROM track_pieces WHERE album=? ORDER BY CAST(track AS INTEGER), piece', a['code']):
+        for p in rows(conn, 'SELECT tp.*, ps.dur FROM track_pieces tp JOIN piece_spans ps USING (album, track, piece) '
+                            'WHERE tp.album=? ORDER BY CAST(tp.track AS INTEGER), tp.piece', a['code']):
             lst = s.setdefault(p['track'], [])
             lst.extend([None] * (p['piece'] - len(lst)))     # by position: a piece with no place of its own stays null
             lst[p['piece'] - 1] = [p['start'], p['dur'], p['break'], p['checked']]
@@ -454,7 +477,7 @@ def render(conn):
     albums_js = ALBUMS_HEAD + 'window.MMB_ALBUMS =\n' + json.dumps(build_albums(conn), ensure_ascii=False, indent=1) + ';\n'
     return data, albums_js
 
-# research tables: in the database and CSVs, but never exported to the site; "import" (which rebuilds from data.js)
+# research tables: kept in db/*.csv as the source of truth (library_matches never reaches the site); "import" (which rebuilds from data.js)
 # reloads them from db/*.csv so they survive
 RESEARCH = ['library_matches', 'tray_cards', 'piece_relations']
 TABLES = ['series', 'bgm_lists', 'bgm_categories', 'bgm_cues', 'works', 'parts', 'cue_rows', 'credits', 'notes',

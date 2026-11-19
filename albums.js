@@ -6,8 +6,9 @@
    is listed. th = the cover shown while the album is closed, when it differs from img. dn = the discs of 歌 {disc: [name Japanese, English, booklet front]}.
    n = name [Japanese, English], cat = catalog number, v = VGMdb album number, card = the album's tray card (VGMdb's scan,
    kept in images/tray-cards), t = tracks [Japanese as printed on the tray card, romaji, English (edited to the site's
-   style)], l = each track's length on the CD (seconds, from the audio), s = where each piece of a multi-piece track
-   starts on the CD [start, duration (seconds), what marks the break (silence, dip, change), 1 if checked by ear], found
+   style)], ar = who sings or speaks on a track, as the card prints it [Japanese, romaji,
+   English], from the tray cards and back cards, l = each track's length on the CD (seconds, from the audio), s = where each piece of a multi-piece track
+   starts on the CD [start, duration (seconds; to the next piece's start or the track's end), what marks the break (silence, dip, change), 1 if checked by ear], found
    from the audio, e = pieces the tray card prints that the booklet never places at that track {track: {piece: [as printed,
    code]}}, x = two codes on one piece: where each plays within it {code: [piece, start, end, mix]} (mix:
    crossfade, layered or joined), q = an original album's piece that is the same recording as a box-set piece {track: {piece: place}},
@@ -393,6 +394,18 @@ window.MMB_ALBUMS =
    "58": 193.124,
    "59": 224.497
   },
+  "ar": {
+   "1": [
+    "歌／DALI",
+    "Uta: DALI",
+    "Vocals: DALI"
+   ],
+   "56": [
+    "歌／高松美砂絵（さくらさくら）",
+    "Uta: Takamatsu Misae (Sakura Sakura)",
+    "Vocals: Misae Takamatsu (Sakura Sakura)"
+   ]
+  },
   "s": {
    "57": [
     [
@@ -403,7 +416,7 @@ window.MMB_ALBUMS =
     ],
     [
      86.1,
-     90.3,
+     90.4,
      "silence",
      0
     ],
@@ -421,7 +434,7 @@ window.MMB_ALBUMS =
     ],
     [
      362.9,
-     59.2,
+     59.19,
      "silence",
      0
     ]
@@ -623,6 +636,18 @@ window.MMB_ALBUMS =
    "29": 242.731,
    "30": 138.816
   },
+  "ar": {
+   "2": [
+    "歌／DALI",
+    "Uta: DALI",
+    "Vocals: DALI"
+   ],
+   "26": [
+    "歌／橋本潮　コーラス／アップルパイ",
+    "Uta: Hashimoto Ushio; Koorasu: Appuru Pai",
+    "Vocals: Ushio Hashimoto; Chorus: Apple Pie"
+   ]
+  },
   "s": {
    "3": [
     [
@@ -633,7 +658,7 @@ window.MMB_ALBUMS =
     ],
     [
      31.3,
-     12.1,
+     12.12,
      "silence",
      0
     ]
@@ -659,13 +684,13 @@ window.MMB_ALBUMS =
     ],
     [
      38.1,
-     11.0,
+     10.9,
      "silence",
      0
     ],
     [
      49.0,
-     17.3,
+     17.35,
      "silence",
      0
     ]
@@ -679,7 +704,7 @@ window.MMB_ALBUMS =
     ],
     [
      80.8,
-     80.2,
+     80.14,
      "silence",
      0
     ]
@@ -707,7 +732,7 @@ window.MMB_ALBUMS =
     ],
     [
      21.4,
-     18.4,
+     18.41,
      "silence",
      0
     ]
@@ -733,7 +758,7 @@ window.MMB_ALBUMS =
     ],
     [
      170.5,
-     93.1,
+     93.05,
      "silence",
      0
     ]
@@ -747,7 +772,7 @@ window.MMB_ALBUMS =
     ],
     [
      81.5,
-     57.6,
+     57.53,
      "silence",
      0
     ]
@@ -761,13 +786,13 @@ window.MMB_ALBUMS =
     ],
     [
      24.6,
-     55.1,
+     55.2,
      "silence",
      0
     ],
     [
      79.8,
-     76.9,
+     76.88,
      "silence",
      0
     ]
@@ -799,7 +824,7 @@ window.MMB_ALBUMS =
     ],
     [
      459.2,
-     105.6,
+     105.65,
      "silence",
      0
     ]
@@ -813,7 +838,7 @@ window.MMB_ALBUMS =
     ],
     [
      16.3,
-     71.3,
+     71.29,
      "silence",
      0
     ]
@@ -827,7 +852,7 @@ window.MMB_ALBUMS =
     ],
     [
      30.6,
-     18.5,
+     18.51,
      "silence",
      0
     ]
@@ -841,7 +866,7 @@ window.MMB_ALBUMS =
     ],
     [
      40.6,
-     98.3,
+     98.22,
      "silence",
      0
     ]
@@ -995,6 +1020,13 @@ window.MMB_ALBUMS =
    "19": 32.628,
    "20": 210.783
   },
+  "ar": {
+   "18": [
+    "歌／石田よう子",
+    "Uta: Ishida Youko",
+    "Vocals: Yoko Ishida"
+   ]
+  },
   "s": {
    "1": [
     [
@@ -1005,7 +1037,7 @@ window.MMB_ALBUMS =
     ],
     [
      91.9,
-     41.7,
+     41.64,
      "silence",
      0
     ]
@@ -1019,7 +1051,7 @@ window.MMB_ALBUMS =
     ],
     [
      86.7,
-     115.8,
+     115.78,
      "silence",
      0
     ]
@@ -1039,7 +1071,7 @@ window.MMB_ALBUMS =
     ],
     [
      77.3,
-     86.2,
+     86.23,
      "silence",
      0
     ]
@@ -1053,7 +1085,7 @@ window.MMB_ALBUMS =
     ],
     [
      110.1,
-     89.1,
+     89.11,
      "silence",
      0
     ]
@@ -1067,7 +1099,7 @@ window.MMB_ALBUMS =
     ],
     [
      106.9,
-     89.3,
+     89.2,
      "silence",
      0
     ],
@@ -1079,7 +1111,7 @@ window.MMB_ALBUMS =
     ],
     [
      312.9,
-     98.8,
+     98.87,
      "silence",
      0
     ]
@@ -1093,7 +1125,7 @@ window.MMB_ALBUMS =
     ],
     [
      10.7,
-     13.9,
+     13.91,
      "silence",
      0
     ]
@@ -1119,7 +1151,7 @@ window.MMB_ALBUMS =
     ],
     [
      274.7,
-     106.7,
+     106.69,
      "silence",
      0
     ]
@@ -1139,13 +1171,13 @@ window.MMB_ALBUMS =
     ],
     [
      106.0,
-     66.8,
+     66.7,
      "silence",
      0
     ],
     [
      172.7,
-     13.5,
+     13.53,
      "silence",
      0
     ]
@@ -1159,13 +1191,13 @@ window.MMB_ALBUMS =
     ],
     [
      93.3,
-     29.1,
+     29.0,
      "silence",
      0
     ],
     [
      122.3,
-     143.9,
+     143.92,
      "silence",
      1
     ]
@@ -1185,7 +1217,7 @@ window.MMB_ALBUMS =
     ],
     [
      221.8,
-     76.9,
+     76.86,
      "silence",
      0
     ]
@@ -1231,19 +1263,19 @@ window.MMB_ALBUMS =
     ],
     [
      38.7,
-     28.0,
+     28.1,
      "silence",
      0
     ],
     [
      66.8,
-     88.2,
+     88.1,
      "silence",
      0
     ],
     [
      154.9,
-     84.6,
+     84.64,
      "silence",
      0
     ]
@@ -1257,7 +1289,7 @@ window.MMB_ALBUMS =
     ],
     [
      123.6,
-     126.3,
+     126.39,
      "silence",
      0
     ]
@@ -1484,6 +1516,18 @@ window.MMB_ALBUMS =
    "22": 91.586,
    "23": 79.596
   },
+  "ar": {
+   "2": [
+    "歌／ムーンリップス",
+    "Uta: Muun Rippusu",
+    "Vocals: Moon Lips"
+   ],
+   "22": [
+    "歌／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加",
+    "Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika",
+    "Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+   ]
+  },
   "s": {
    "1": [
     [
@@ -1500,7 +1544,7 @@ window.MMB_ALBUMS =
     ],
     [
      87.8,
-     124.3,
+     124.29,
      "silence",
      0
     ]
@@ -1526,7 +1570,7 @@ window.MMB_ALBUMS =
     ],
     [
      288.2,
-     94.2,
+     94.23,
      "silence",
      0
     ]
@@ -1552,7 +1596,7 @@ window.MMB_ALBUMS =
     ],
     [
      212.2,
-     65.4,
+     65.35,
      "silence",
      0
     ]
@@ -1566,7 +1610,7 @@ window.MMB_ALBUMS =
     ],
     [
      92.6,
-     97.4,
+     97.39,
      "silence",
      0
     ]
@@ -1580,7 +1624,7 @@ window.MMB_ALBUMS =
     ],
     [
      49.2,
-     114.5,
+     114.51,
      "silence",
      0
     ]
@@ -1600,7 +1644,7 @@ window.MMB_ALBUMS =
     ],
     [
      185.2,
-     103.7,
+     103.74,
      "silence",
      0
     ]
@@ -1614,7 +1658,7 @@ window.MMB_ALBUMS =
     ],
     [
      113.7,
-     113.6,
+     113.57,
      "silence",
      0
     ]
@@ -1634,7 +1678,7 @@ window.MMB_ALBUMS =
     ],
     [
      133.2,
-     90.1,
+     90.07,
      "silence",
      0
     ]
@@ -1668,7 +1712,7 @@ window.MMB_ALBUMS =
     ],
     [
      161.1,
-     50.7,
+     50.75,
      "silence",
      0
     ]
@@ -1682,7 +1726,7 @@ window.MMB_ALBUMS =
     ],
     [
      21.9,
-     33.0,
+     32.98,
      "silence",
      0
     ]
@@ -1714,7 +1758,7 @@ window.MMB_ALBUMS =
     ],
     [
      404.8,
-     126.0,
+     126.01,
      "silence",
      0
     ]
@@ -1728,7 +1772,7 @@ window.MMB_ALBUMS =
     ],
     [
      115.9,
-     124.6,
+     124.61,
      "silence",
      0
     ]
@@ -1754,7 +1798,7 @@ window.MMB_ALBUMS =
     ],
     [
      273.4,
-     59.8,
+     59.79,
      "silence",
      0
     ]
@@ -1768,7 +1812,7 @@ window.MMB_ALBUMS =
     ],
     [
      100.6,
-     99.9,
+     99.92,
      "silence",
      0
     ]
@@ -1788,7 +1832,7 @@ window.MMB_ALBUMS =
     ],
     [
      64.1,
-     90.9,
+     90.89,
      "silence",
      0
     ]
@@ -1990,6 +2034,18 @@ window.MMB_ALBUMS =
    "23": 48.092,
    "24": 216.817
   },
+  "ar": {
+   "2": [
+    "歌／ムーンリップス",
+    "Uta: Muun Rippusu",
+    "Vocals: Moon Lips"
+   ],
+   "16": [
+    "歌／藤谷美和子",
+    "Uta: Fujitani Miwako",
+    "Vocals: Miwako Fujitani"
+   ]
+  },
   "s": {
    "1": [
     [
@@ -2000,7 +2056,7 @@ window.MMB_ALBUMS =
     ],
     [
      100.8,
-     84.1,
+     84.04,
      "silence",
      0
     ]
@@ -2014,7 +2070,7 @@ window.MMB_ALBUMS =
     ],
     [
      101.1,
-     55.9,
+     55.85,
      "silence",
      0
     ]
@@ -2034,7 +2090,7 @@ window.MMB_ALBUMS =
     ],
     [
      178.5,
-     80.1,
+     80.09,
      "silence",
      0
     ]
@@ -2054,7 +2110,7 @@ window.MMB_ALBUMS =
     ],
     [
      225.8,
-     88.9,
+     88.87,
      "silence",
      0
     ]
@@ -2074,7 +2130,7 @@ window.MMB_ALBUMS =
     ],
     [
      243.2,
-     116.2,
+     116.14,
      "silence",
      0
     ]
@@ -2094,7 +2150,7 @@ window.MMB_ALBUMS =
     ],
     [
      175.6,
-     113.8,
+     113.76,
      "silence",
      0
     ]
@@ -2114,7 +2170,7 @@ window.MMB_ALBUMS =
     ],
     [
      115.2,
-     24.4,
+     24.43,
      "silence",
      0
     ]
@@ -2128,7 +2184,7 @@ window.MMB_ALBUMS =
     ],
     [
      27.0,
-     25.4,
+     25.43,
      "silence",
      0
     ]
@@ -2154,7 +2210,7 @@ window.MMB_ALBUMS =
     ],
     [
      285.2,
-     107.0,
+     106.98,
      "silence",
      0
     ]
@@ -2168,7 +2224,7 @@ window.MMB_ALBUMS =
     ],
     [
      94.4,
-     93.5,
+     93.55,
      "silence",
      0
     ]
@@ -2216,7 +2272,7 @@ window.MMB_ALBUMS =
     ],
     [
      12.7,
-     12.6,
+     12.59,
      "silence",
      0
     ]
@@ -2236,7 +2292,7 @@ window.MMB_ALBUMS =
     ],
     [
      109.6,
-     74.7,
+     74.62,
      "silence",
      0
     ]
@@ -2250,7 +2306,7 @@ window.MMB_ALBUMS =
     ],
     [
      115.8,
-     58.7,
+     58.75,
      "silence",
      0
     ]
@@ -2264,7 +2320,7 @@ window.MMB_ALBUMS =
     ],
     [
      88.8,
-     84.8,
+     84.81,
      "silence",
      0
     ]
@@ -2296,7 +2352,7 @@ window.MMB_ALBUMS =
     ],
     [
      207.0,
-     84.0,
+     83.93,
      "silence",
      0
     ]
@@ -2316,7 +2372,7 @@ window.MMB_ALBUMS =
     ],
     [
      209.9,
-     117.8,
+     117.86,
      "silence",
      0
     ]
@@ -2330,7 +2386,7 @@ window.MMB_ALBUMS =
     ],
     [
      30.8,
-     17.3,
+     17.29,
      "silence",
      0
     ]
@@ -2466,6 +2522,13 @@ window.MMB_ALBUMS =
    "18": 259.919,
    "19": 284.71
   },
+  "ar": {
+   "2": [
+    "歌／花沢加絵",
+    "Uta: Hanazawa Kae",
+    "Vocals: Kae Hanazawa"
+   ]
+  },
   "s": {
    "4": [
     [
@@ -2482,7 +2545,7 @@ window.MMB_ALBUMS =
     ],
     [
      200.9,
-     118.6,
+     118.53,
      "silence",
      0
     ]
@@ -2502,7 +2565,7 @@ window.MMB_ALBUMS =
     ],
     [
      190.1,
-     70.4,
+     70.45,
      "silence",
      0
     ]
@@ -2528,7 +2591,7 @@ window.MMB_ALBUMS =
     ],
     [
      233.6,
-     64.8,
+     64.77,
      "silence",
      0
     ]
@@ -2542,13 +2605,13 @@ window.MMB_ALBUMS =
     ],
     [
      120.3,
-     91.2,
+     91.1,
      "silence",
      0
     ],
     [
      211.4,
-     99.7,
+     99.75,
      "silence",
      0
     ]
@@ -2562,7 +2625,7 @@ window.MMB_ALBUMS =
     ],
     [
      129.6,
-     94.9,
+     94.92,
      "silence",
      0
     ]
@@ -2576,7 +2639,7 @@ window.MMB_ALBUMS =
     ],
     [
      68.2,
-     131.7,
+     131.72,
      "silence",
      0
     ]
@@ -2596,7 +2659,7 @@ window.MMB_ALBUMS =
     ],
     [
      45.8,
-     74.7,
+     74.65,
      "silence",
      0
     ]
@@ -2616,13 +2679,13 @@ window.MMB_ALBUMS =
     ],
     [
      154.9,
-     128.9,
+     129.0,
      "silence",
      0
     ],
     [
      283.9,
-     26.7,
+     26.65,
      "silence",
      0
     ]
@@ -2642,7 +2705,7 @@ window.MMB_ALBUMS =
     ],
     [
      154.2,
-     83.3,
+     83.36,
      "silence",
      0
     ]
@@ -2824,13 +2887,13 @@ window.MMB_ALBUMS =
     ],
     [
      68.7,
-     68.0,
+     67.9,
      "silence",
      0
     ],
     [
      136.6,
-     78.5,
+     78.52,
      "silence",
      0
     ]
@@ -2850,7 +2913,7 @@ window.MMB_ALBUMS =
     ],
     [
      145.8,
-     86.2,
+     86.14,
      "silence",
      0
     ]
@@ -2870,7 +2933,7 @@ window.MMB_ALBUMS =
     ],
     [
      100.9,
-     19.5,
+     19.53,
      "silence",
      0
     ]
@@ -2884,7 +2947,7 @@ window.MMB_ALBUMS =
     ],
     [
      76.4,
-     64.2,
+     64.22,
      "silence",
      0
     ]
@@ -2898,7 +2961,7 @@ window.MMB_ALBUMS =
     ],
     [
      20.3,
-     123.9,
+     123.92,
      "silence",
      0
     ]
@@ -2918,7 +2981,7 @@ window.MMB_ALBUMS =
     ],
     [
      153.7,
-     25.3,
+     25.27,
      "silence",
      0
     ]
@@ -2988,7 +3051,7 @@ window.MMB_ALBUMS =
     ],
     [
      283.8,
-     41.1,
+     41.06,
      "silence",
      0
     ]
@@ -3002,7 +3065,7 @@ window.MMB_ALBUMS =
     ],
     [
      38.4,
-     106.6,
+     106.66,
      "silence",
      0
     ]
@@ -3204,6 +3267,18 @@ window.MMB_ALBUMS =
    "29": 113.059,
    "30": 118.179
   },
+  "ar": {
+   "19": [
+    "歌／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加",
+    "Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika",
+    "Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+   ],
+   "20": [
+    "歌／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加",
+    "Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika",
+    "Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+   ]
+  },
   "s": {
    "3": [
     [
@@ -3214,7 +3289,7 @@ window.MMB_ALBUMS =
     ],
     [
      49.6,
-     74.0,
+     73.99,
      "silence",
      0
     ]
@@ -3228,7 +3303,7 @@ window.MMB_ALBUMS =
     ],
     [
      92.6,
-     63.8,
+     63.82,
      "silence",
      0
     ]
@@ -3242,7 +3317,7 @@ window.MMB_ALBUMS =
     ],
     [
      39.9,
-     19.5,
+     19.4,
      "silence",
      0
     ],
@@ -3254,7 +3329,7 @@ window.MMB_ALBUMS =
     ],
     [
      82.0,
-     38.6,
+     38.58,
      "silence",
      0
     ]
@@ -3274,7 +3349,7 @@ window.MMB_ALBUMS =
     ],
     [
      81.7,
-     62.2,
+     62.13,
      "silence",
      0
     ]
@@ -3288,7 +3363,7 @@ window.MMB_ALBUMS =
     ],
     [
      115.8,
-     40.1,
+     40.13,
      "silence",
      0
     ]
@@ -3302,7 +3377,7 @@ window.MMB_ALBUMS =
     ],
     [
      40.3,
-     75.2,
+     75.19,
      "silence",
      0
     ]
@@ -3316,7 +3391,7 @@ window.MMB_ALBUMS =
     ],
     [
      80.5,
-     168.2,
+     168.21,
      "silence",
      0
     ]
@@ -3330,19 +3405,19 @@ window.MMB_ALBUMS =
     ],
     [
      36.9,
-     105.0,
+     105.1,
      "silence",
      0
     ],
     [
      142.0,
-     62.5,
+     62.4,
      "silence",
      0
     ],
     [
      204.4,
-     22.9,
+     22.92,
      "silence",
      0
     ]
@@ -3558,6 +3633,13 @@ window.MMB_ALBUMS =
    "29": 219.064,
    "30": 176.824
   },
+  "ar": {
+   "18": [
+    "歌／朝川ひろこ",
+    "Uta: Asakawa Hiroko",
+    "Vocals: Hiroko Asakawa"
+   ]
+  },
   "s": {
    "1": [
     [
@@ -3568,7 +3650,7 @@ window.MMB_ALBUMS =
     ],
     [
      50.0,
-     52.8,
+     52.85,
      "silence",
      0
     ]
@@ -3582,7 +3664,7 @@ window.MMB_ALBUMS =
     ],
     [
      44.0,
-     46.9,
+     46.91,
      "silence",
      0
     ]
@@ -3596,13 +3678,13 @@ window.MMB_ALBUMS =
     ],
     [
      53.0,
-     32.1,
+     32.2,
      "silence",
      0
     ],
     [
      85.2,
-     69.9,
+     69.86,
      "silence",
      0
     ]
@@ -3616,7 +3698,7 @@ window.MMB_ALBUMS =
     ],
     [
      44.8,
-     27.9,
+     27.85,
      "silence",
      0
     ]
@@ -3630,7 +3712,7 @@ window.MMB_ALBUMS =
     ],
     [
      54.9,
-     37.2,
+     37.18,
      "silence",
      0
     ]
@@ -3644,7 +3726,7 @@ window.MMB_ALBUMS =
     ],
     [
      89.3,
-     22.0,
+     21.9,
      "silence",
      0
     ],
@@ -3664,7 +3746,7 @@ window.MMB_ALBUMS =
     ],
     [
      21.6,
-     22.4,
+     22.3,
      "silence",
      0
     ],
@@ -3676,7 +3758,7 @@ window.MMB_ALBUMS =
     ],
     [
      75.0,
-     18.8,
+     18.81,
      "silence",
      0
     ]
@@ -3696,7 +3778,7 @@ window.MMB_ALBUMS =
     ],
     [
      37.3,
-     30.5,
+     30.46,
      "silence",
      0
     ]
@@ -3710,13 +3792,13 @@ window.MMB_ALBUMS =
     ],
     [
      42.8,
-     18.4,
+     18.5,
      "silence",
      0
     ],
     [
      61.3,
-     44.7,
+     44.65,
      "silence",
      0
     ]
@@ -3730,7 +3812,7 @@ window.MMB_ALBUMS =
     ],
     [
      72.2,
-     55.1,
+     55.15,
      "silence",
      0
     ]
@@ -3750,7 +3832,7 @@ window.MMB_ALBUMS =
     ],
     [
      135.2,
-     40.4,
+     40.42,
      "silence",
      0
     ]
@@ -3776,7 +3858,7 @@ window.MMB_ALBUMS =
     ],
     [
      159.5,
-     39.0,
+     39.06,
      "silence",
      0
     ]
@@ -3790,7 +3872,7 @@ window.MMB_ALBUMS =
     ],
     [
      67.0,
-     43.8,
+     43.79,
      "silence",
      0
     ]
@@ -3804,7 +3886,7 @@ window.MMB_ALBUMS =
     ],
     [
      152.6,
-     57.1,
+     57.11,
      "silence",
      0
     ]
@@ -4033,6 +4115,38 @@ window.MMB_ALBUMS =
    "32": 139.417,
    "33": 233.692
   },
+  "ar": {
+   "1": [
+    "合唱／森の木児童合唱団とそのお友達",
+    "Gasshou: Mori no Ki Jidou Gasshoudan to Sono Otomodachi",
+    "Chorus: Mori no Ki Children's Choir and friends"
+   ],
+   "2": [
+    "歌／ムーンリップス",
+    "Uta: Muun Rippusu",
+    "Vocals: Moon Lips"
+   ],
+   "5": [
+    "合唱／森の木児童合唱団とそのお友達",
+    "Gasshou: Mori no Ki Jidou Gasshoudan to Sono Otomodachi",
+    "Chorus: Mori no Ki Children's Choir and friends"
+   ],
+   "10": [
+    "合唱／森の木児童合唱団とそのお友達",
+    "Gasshou: Mori no Ki Jidou Gasshoudan to Sono Otomodachi",
+    "Chorus: Mori no Ki Children's Choir and friends"
+   ],
+   "20": [
+    "歌／プリティキャスト",
+    "Uta: Puriti Kyasuto",
+    "Vocals: Pretty Cast"
+   ],
+   "28": [
+    "歌／Meu",
+    "Uta: Meu",
+    "Vocals: Meu"
+   ]
+  },
   "s": {
    "1": [
     [
@@ -4043,7 +4157,7 @@ window.MMB_ALBUMS =
     ],
     [
      143.8,
-     13.7,
+     13.64,
      "silence",
      0
     ]
@@ -4057,7 +4171,7 @@ window.MMB_ALBUMS =
     ],
     [
      100.6,
-     34.7,
+     34.72,
      "silence",
      0
     ]
@@ -4071,13 +4185,13 @@ window.MMB_ALBUMS =
     ],
     [
      84.6,
-     12.7,
+     12.8,
      "silence",
      0
     ],
     [
      97.4,
-     24.7,
+     24.67,
      "silence",
      0
     ]
@@ -4091,7 +4205,7 @@ window.MMB_ALBUMS =
     ],
     [
      7.0,
-     53.3,
+     53.29,
      "silence",
      0
     ]
@@ -4105,7 +4219,7 @@ window.MMB_ALBUMS =
     ],
     [
      10.0,
-     38.9,
+     38.8,
      "silence",
      0
     ],
@@ -4117,7 +4231,7 @@ window.MMB_ALBUMS =
     ],
     [
      62.6,
-     34.3,
+     34.34,
      "silence",
      0
     ]
@@ -4137,7 +4251,7 @@ window.MMB_ALBUMS =
     ],
     [
      115.0,
-     4.5,
+     4.56,
      "silence",
      0
     ]
@@ -4151,7 +4265,7 @@ window.MMB_ALBUMS =
     ],
     [
      5.2,
-     83.6,
+     83.64,
      "silence",
      0
     ]
@@ -4171,7 +4285,7 @@ window.MMB_ALBUMS =
     ],
     [
      89.0,
-     57.2,
+     57.18,
      "silence",
      0
     ]
@@ -4185,19 +4299,19 @@ window.MMB_ALBUMS =
     ],
     [
      110.5,
-     9.7,
+     9.6,
      "silence",
      0
     ],
     [
      120.1,
-     45.5,
+     45.6,
      "silence",
      0
     ],
     [
      165.7,
-     7.2,
+     7.18,
      "silence",
      0
     ]
@@ -4211,7 +4325,7 @@ window.MMB_ALBUMS =
     ],
     [
      86.5,
-     15.8,
+     15.82,
      "silence",
      1
     ]
@@ -4237,7 +4351,7 @@ window.MMB_ALBUMS =
     ],
     [
      192.6,
-     11.4,
+     11.37,
      "silence",
      0
     ]
@@ -4251,7 +4365,7 @@ window.MMB_ALBUMS =
     ],
     [
      12.4,
-     25.0,
+     25.01,
      "silence",
      0
     ]
@@ -4265,7 +4379,7 @@ window.MMB_ALBUMS =
     ],
     [
      177.7,
-     47.3,
+     47.24,
      "silence",
      0
     ]
@@ -4279,7 +4393,7 @@ window.MMB_ALBUMS =
     ],
     [
      51.3,
-     58.7,
+     58.65,
      "silence",
      0
     ]
@@ -4299,7 +4413,7 @@ window.MMB_ALBUMS =
     ],
     [
      98.3,
-     72.3,
+     72.31,
      "silence",
      0
     ]
@@ -4319,7 +4433,7 @@ window.MMB_ALBUMS =
     ],
     [
      39.7,
-     31.6,
+     31.54,
      "silence",
      0
     ]
@@ -4339,7 +4453,7 @@ window.MMB_ALBUMS =
     ],
     [
      96.0,
-     53.3,
+     53.29,
      "silence",
      0
     ]
@@ -4359,7 +4473,7 @@ window.MMB_ALBUMS =
     ],
     [
      28.9,
-     22.2,
+     22.12,
      "silence",
      0
     ]
@@ -4373,7 +4487,7 @@ window.MMB_ALBUMS =
     ],
     [
      9.7,
-     43.0,
+     43.04,
      "silence",
      0
     ]
@@ -4387,7 +4501,7 @@ window.MMB_ALBUMS =
     ],
     [
      44.8,
-     41.7,
+     41.67,
      "dip",
      0
     ]
@@ -4419,7 +4533,7 @@ window.MMB_ALBUMS =
     ],
     [
      169.8,
-     102.3,
+     102.29,
      "silence",
      0
     ]
@@ -5104,6 +5218,423 @@ window.MMB_ALBUMS =
    "6-15": 274.312,
    "6-16": 252.029
   },
+  "ar": {
+   "1-1": [
+    "歌／DALI",
+    "Uta: DALI",
+    "Vocals: DALI"
+   ],
+   "1-2": [
+    "歌／高松美砂絵［さくらさくら］",
+    "Uta: Takamatsu Misae [Sakura Sakura]",
+    "Vocals: Misae Takamatsu [Sakura Sakura]"
+   ],
+   "1-3": [
+    "歌／橋本潮、アップルパイ",
+    "Uta: Hashimoto Ushio, Appuru Pai",
+    "Vocals: Ushio Hashimoto, Apple Pie"
+   ],
+   "1-4": [
+    "歌／石田よう子",
+    "Uta: Ishida Youko",
+    "Vocals: Yoko Ishida"
+   ],
+   "1-5": [
+    "歌／ムーンリップス",
+    "Uta: Muun Rippusu",
+    "Vocals: Moon Lips"
+   ],
+   "1-6": [
+    "歌／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加",
+    "Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika",
+    "Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+   ],
+   "1-7": [
+    "歌／藤谷美和子",
+    "Uta: Fujitani Miwako",
+    "Vocals: Miwako Fujitani"
+   ],
+   "1-8": [
+    "歌／Meu",
+    "Uta: Meu",
+    "Vocals: Meu"
+   ],
+   "1-9": [
+    "歌／花沢加絵",
+    "Uta: Hanazawa Kae",
+    "Vocals: Kae Hanazawa"
+   ],
+   "1-10": [
+    "歌／観月ありさ",
+    "Uta: Mizuki Arisa",
+    "Vocals: Arisa Mizuki"
+   ],
+   "2-1": [
+    "歌／三石琴乃",
+    "Uta: Mitsuishi Kotono",
+    "Vocals: Kotono Mitsuishi"
+   ],
+   "2-2": [
+    "歌／アップルパイ",
+    "Uta: Appuru Pai",
+    "Vocals: Apple Pie"
+   ],
+   "2-3": [
+    "歌／富沢美智恵、久川綾",
+    "Uta: Tomizawa Michie, Hisakawa Aya",
+    "Vocals: Michie Tomizawa, Aya Hisakawa"
+   ],
+   "2-4": [
+    "歌／アップルパイ",
+    "Uta: Appuru Pai",
+    "Vocals: Apple Pie"
+   ],
+   "2-5": [
+    "歌／アップルパイ",
+    "Uta: Appuru Pai",
+    "Vocals: Apple Pie"
+   ],
+   "2-6": [
+    "歌／アップルパイ",
+    "Uta: Appuru Pai",
+    "Vocals: Apple Pie"
+   ],
+   "2-7": [
+    "歌／三石琴乃、富沢美智恵、久川綾",
+    "Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya",
+    "Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa"
+   ],
+   "2-8": [
+    "歌／アップルパイ",
+    "Uta: Appuru Pai",
+    "Vocals: Apple Pie"
+   ],
+   "2-9": [
+    "歌／三石琴乃",
+    "Uta: Mitsuishi Kotono",
+    "Vocals: Kotono Mitsuishi"
+   ],
+   "2-10": [
+    "歌／久川綾",
+    "Uta: Hisakawa Aya",
+    "Vocals: Aya Hisakawa"
+   ],
+   "2-11": [
+    "歌／富沢美智恵",
+    "Uta: Tomizawa Michie",
+    "Vocals: Michie Tomizawa"
+   ],
+   "2-12": [
+    "歌／篠原恵美",
+    "Uta: Shinohara Emi",
+    "Vocals: Emi Shinohara"
+   ],
+   "2-13": [
+    "歌／深見梨加",
+    "Uta: Fukami Rika",
+    "Vocals: Rica Fukami"
+   ],
+   "2-14": [
+    "歌／古谷徹",
+    "Uta: Furuya Tooru",
+    "Vocals: Toru Furuya"
+   ],
+   "2-15": [
+    "歌／三石琴乃、古谷徹",
+    "Uta: Mitsuishi Kotono, Furuya Tooru",
+    "Vocals: Kotono Mitsuishi, Toru Furuya"
+   ],
+   "3-1": [
+    "歌／石田よう子",
+    "Uta: Ishida Youko",
+    "Vocals: Yoko Ishida"
+   ],
+   "3-2": [
+    "歌／三石琴乃",
+    "Uta: Mitsuishi Kotono",
+    "Vocals: Kotono Mitsuishi"
+   ],
+   "3-3": [
+    "歌／久川綾",
+    "Uta: Hisakawa Aya",
+    "Vocals: Aya Hisakawa"
+   ],
+   "3-4": [
+    "歌／富沢美智恵",
+    "Uta: Tomizawa Michie",
+    "Vocals: Michie Tomizawa"
+   ],
+   "3-5": [
+    "歌／古谷徹",
+    "Uta: Furuya Tooru",
+    "Vocals: Toru Furuya"
+   ],
+   "3-6": [
+    "歌／篠原恵美",
+    "Uta: Shinohara Emi",
+    "Vocals: Emi Shinohara"
+   ],
+   "3-7": [
+    "歌／深見梨加",
+    "Uta: Fukami Rika",
+    "Vocals: Rica Fukami"
+   ],
+   "3-8": [
+    "歌／石田よう子",
+    "Uta: Ishida Youko",
+    "Vocals: Yoko Ishida"
+   ],
+   "3-9": [
+    "歌／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加",
+    "Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika",
+    "Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+   ],
+   "3-10": [
+    "歌／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加",
+    "Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika",
+    "Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+   ],
+   "3-11": [
+    "歌／朝川ひろこ",
+    "Uta: Asakawa Hiroko",
+    "Vocals: Hiroko Asakawa"
+   ],
+   "3-12": [
+    "歌／朝川ひろこ",
+    "Uta: Asakawa Hiroko",
+    "Vocals: Hiroko Asakawa"
+   ],
+   "3-13": [
+    "歌／プリティキャスト",
+    "Uta: Puriti Kyasuto",
+    "Vocals: Pretty Cast"
+   ],
+   "3-14": [
+    "歌／プリティキャスト、森の木児童合唱団",
+    "Uta: Puriti Kyasuto, Mori no Ki Jidou Gasshoudan",
+    "Vocals: Pretty Cast, Mori no Ki Children's Choir"
+   ],
+   "4-1": [
+    "歌／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加",
+    "Uta: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika",
+    "Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+   ],
+   "4-2": [
+    "歌／堀江美都子",
+    "Uta: Horie Mitsuko",
+    "Vocals: Mitsuko Horie"
+   ],
+   "4-3": [
+    "歌／新山志保、津野田なるみ、坂本千夏",
+    "Uta: Niiyama Shiho, Tsunoda Narumi, Sakamoto Chika",
+    "Vocals: Shiho Niiyama, Narumi Tsunoda, Chika Sakamoto"
+   ],
+   "4-4": [
+    "歌／新山志保、津野田なるみ、坂本千夏",
+    "Uta: Niiyama Shiho, Tsunoda Narumi, Sakamoto Chika",
+    "Vocals: Shiho Niiyama, Narumi Tsunoda, Chika Sakamoto"
+   ],
+   "4-5": [
+    "歌／新山志保",
+    "Uta: Niiyama Shiho",
+    "Vocals: Shiho Niiyama"
+   ],
+   "4-6": [
+    "歌／津野田なるみ",
+    "Uta: Tsunoda Narumi",
+    "Vocals: Narumi Tsunoda"
+   ],
+   "4-7": [
+    "歌／坂本千夏",
+    "Uta: Sakamoto Chika",
+    "Vocals: Chika Sakamoto"
+   ],
+   "4-8": [
+    "歌／大木理紗",
+    "Uta: Ooki Risa",
+    "Vocals: Risa Ohki"
+   ],
+   "4-9": [
+    "歌／勝生真沙子",
+    "Uta: Katsuki Masako",
+    "Vocals: Masako Katsuki"
+   ],
+   "4-10": [
+    "歌／荒木香恵",
+    "Uta: Araki Kae",
+    "Vocals: Kae Araki"
+   ],
+   "4-11": [
+    "歌／富沢美智恵",
+    "Uta: Tomizawa Michie",
+    "Vocals: Michie Tomizawa"
+   ],
+   "4-12": [
+    "歌／久川綾",
+    "Uta: Hisakawa Aya",
+    "Vocals: Aya Hisakawa"
+   ],
+   "4-13": [
+    "歌／篠原恵美",
+    "Uta: Shinohara Emi",
+    "Vocals: Emi Shinohara"
+   ],
+   "4-14": [
+    "歌／深見梨加",
+    "Uta: Fukami Rika",
+    "Vocals: Rica Fukami"
+   ],
+   "4-15": [
+    "歌／三石琴乃",
+    "Uta: Mitsuishi Kotono",
+    "Vocals: Kotono Mitsuishi"
+   ],
+   "4-16": [
+    "歌／花沢加絵",
+    "Uta: Hanazawa Kae",
+    "Vocals: Kae Hanazawa"
+   ],
+   "5-1": [
+    "声の出演／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加",
+    "Koe no shutsuen: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika",
+    "Voices: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+   ],
+   "5-2": [
+    "声の出演／三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加",
+    "Koe no shutsuen: Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika",
+    "Voices: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+   ],
+   "5-3": [
+    "声の出演／堀江美都子",
+    "Koe no shutsuen: Horie Mitsuko",
+    "Voices: Mitsuko Horie"
+   ],
+   "5-4": [
+    "声の出演／堀江美都子",
+    "Koe no shutsuen: Horie Mitsuko",
+    "Voices: Mitsuko Horie"
+   ],
+   "5-5": [
+    "声の出演／新山志保",
+    "Koe no shutsuen: Niiyama Shiho",
+    "Voices: Shiho Niiyama"
+   ],
+   "5-6": [
+    "声の出演／新山志保",
+    "Koe no shutsuen: Niiyama Shiho",
+    "Voices: Shiho Niiyama"
+   ],
+   "5-7": [
+    "声の出演／津野田なるみ",
+    "Koe no shutsuen: Tsunoda Narumi",
+    "Voices: Narumi Tsunoda"
+   ],
+   "5-8": [
+    "声の出演／津野田なるみ",
+    "Koe no shutsuen: Tsunoda Narumi",
+    "Voices: Narumi Tsunoda"
+   ],
+   "5-9": [
+    "声の出演／坂本千夏",
+    "Koe no shutsuen: Sakamoto Chika",
+    "Voices: Chika Sakamoto"
+   ],
+   "5-10": [
+    "声の出演／坂本千夏",
+    "Koe no shutsuen: Sakamoto Chika",
+    "Voices: Chika Sakamoto"
+   ],
+   "5-11": [
+    "声の出演／勝生真沙子",
+    "Koe no shutsuen: Katsuki Masako",
+    "Voices: Masako Katsuki"
+   ],
+   "5-12": [
+    "声の出演／勝生真沙子",
+    "Koe no shutsuen: Katsuki Masako",
+    "Voices: Masako Katsuki"
+   ],
+   "5-13": [
+    "声の出演／川島千代子",
+    "Koe no shutsuen: Kawashima Chiyoko",
+    "Voices: Chiyoko Kawashima"
+   ],
+   "5-14": [
+    "声の出演／川島千代子",
+    "Koe no shutsuen: Kawashima Chiyoko",
+    "Voices: Chiyoko Kawashima"
+   ],
+   "5-15": [
+    "声の出演／皆口裕子",
+    "Koe no shutsuen: Minaguchi Yuuko",
+    "Voices: Yuko Minaguchi"
+   ],
+   "5-16": [
+    "声の出演／皆口裕子",
+    "Koe no shutsuen: Minaguchi Yuuko",
+    "Voices: Yuko Minaguchi"
+   ],
+   "5-17": [
+    "声の出演／荒木香恵",
+    "Koe no shutsuen: Araki Kae",
+    "Voices: Kae Araki"
+   ],
+   "5-18": [
+    "声の出演／荒木香恵",
+    "Koe no shutsuen: Araki Kae",
+    "Voices: Kae Araki"
+   ],
+   "5-19": [
+    "声の出演／富沢美智恵",
+    "Koe no shutsuen: Tomizawa Michie",
+    "Voices: Michie Tomizawa"
+   ],
+   "5-20": [
+    "声の出演／富沢美智恵",
+    "Koe no shutsuen: Tomizawa Michie",
+    "Voices: Michie Tomizawa"
+   ],
+   "5-21": [
+    "声の出演／久川綾",
+    "Koe no shutsuen: Hisakawa Aya",
+    "Voices: Aya Hisakawa"
+   ],
+   "5-22": [
+    "声の出演／久川綾",
+    "Koe no shutsuen: Hisakawa Aya",
+    "Voices: Aya Hisakawa"
+   ],
+   "5-23": [
+    "声の出演／篠原恵美",
+    "Koe no shutsuen: Shinohara Emi",
+    "Voices: Emi Shinohara"
+   ],
+   "5-24": [
+    "声の出演／篠原恵美",
+    "Koe no shutsuen: Shinohara Emi",
+    "Voices: Emi Shinohara"
+   ],
+   "5-25": [
+    "声の出演／深見梨加",
+    "Koe no shutsuen: Fukami Rika",
+    "Voices: Rica Fukami"
+   ],
+   "5-26": [
+    "声の出演／深見梨加",
+    "Koe no shutsuen: Fukami Rika",
+    "Voices: Rica Fukami"
+   ],
+   "5-27": [
+    "声の出演／三石琴乃",
+    "Koe no shutsuen: Mitsuishi Kotono",
+    "Voices: Kotono Mitsuishi"
+   ],
+   "5-28": [
+    "声の出演／三石琴乃",
+    "Koe no shutsuen: Mitsuishi Kotono",
+    "Voices: Kotono Mitsuishi"
+   ]
+  },
   "dn": {
    "1": [
     "TVシリーズ主題歌コレクション",
@@ -5216,6 +5747,18 @@ window.MMB_ALBUMS =
    "10": 457.405,
    "11": 218.568
   },
+  "ar": {
+   "1": [
+    "うた／DALI",
+    "Uta: DALI",
+    "Vocals: DALI"
+   ],
+   "11": [
+    "うた／高松美砂絵（さくらさくら）",
+    "Uta: Takamatsu Misae (Sakura Sakura)",
+    "Vocals: Misae Takamatsu (Sakura Sakura)"
+   ]
+  },
   "s": {
    "2": [
     [
@@ -5256,7 +5799,7 @@ window.MMB_ALBUMS =
     ],
     [
      314.1,
-     75.5,
+     75.52,
      "change",
      0
     ]
@@ -5294,7 +5837,7 @@ window.MMB_ALBUMS =
     ],
     [
      297.1,
-     106.2,
+     106.15,
      "change",
      0
     ]
@@ -5332,7 +5875,7 @@ window.MMB_ALBUMS =
     ],
     [
      262.4,
-     106.3,
+     106.35,
      "change",
      0
     ]
@@ -5376,7 +5919,7 @@ window.MMB_ALBUMS =
     ],
     [
      330.8,
-     78.4,
+     78.38,
      "change",
      0
     ]
@@ -5426,7 +5969,7 @@ window.MMB_ALBUMS =
     ],
     [
      370.8,
-     42.5,
+     42.48,
      "change",
      0
     ]
@@ -5464,7 +6007,7 @@ window.MMB_ALBUMS =
     ],
     [
      321.2,
-     117.1,
+     117.11,
      "change",
      0
     ]
@@ -5508,7 +6051,7 @@ window.MMB_ALBUMS =
     ],
     [
      348.9,
-     100.0,
+     100.04,
      "change",
      0
     ]
@@ -5552,7 +6095,7 @@ window.MMB_ALBUMS =
     ],
     [
      334.6,
-     88.0,
+     87.96,
      "change",
      0
     ]
@@ -5694,9 +6237,6 @@ window.MMB_ALBUMS =
     "7": "2-8-1",
     "8": "2-12-1",
     "9": "2-14-1"
-   },
-   "11": {
-    "1": "2-28"
    }
   }
  },
@@ -5773,6 +6313,18 @@ window.MMB_ALBUMS =
    "9": 329.51,
    "10": 277.683
   },
+  "ar": {
+   "1": [
+    "歌／石田よう子",
+    "Uta: Ishida Youko",
+    "Vocals: Yoko Ishida"
+   ],
+   "10": [
+    "歌／石田よう子",
+    "Uta: Ishida Youko",
+    "Vocals: Yoko Ishida"
+   ]
+  },
   "s": {
    "2": [
     [
@@ -5795,7 +6347,7 @@ window.MMB_ALBUMS =
     ],
     [
      268.9,
-     109.6,
+     109.62,
      "silence",
      0
     ]
@@ -5821,7 +6373,7 @@ window.MMB_ALBUMS =
     ],
     [
      259.0,
-     88.6,
+     88.61,
      "silence",
      0
     ]
@@ -5847,7 +6399,7 @@ window.MMB_ALBUMS =
     ],
     [
      237.0,
-     126.9,
+     126.91,
      "change",
      0
     ]
@@ -5867,14 +6419,14 @@ window.MMB_ALBUMS =
     ],
     [
      217.0,
-     96.4,
+     95.6,
      "silence",
      0
     ],
     [
-     313.4,
-     93.8,
-     "change",
+     312.6,
+     94.6,
+     "silence",
      0
     ]
    ],
@@ -5893,7 +6445,7 @@ window.MMB_ALBUMS =
     ],
     [
      198.6,
-     98.9,
+     98.94,
      "silence",
      0
     ]
@@ -5919,7 +6471,7 @@ window.MMB_ALBUMS =
     ],
     [
      251.5,
-     44.4,
+     44.42,
      "change",
      0
     ]
@@ -5933,14 +6485,14 @@ window.MMB_ALBUMS =
     ],
     [
      89.3,
-     126.3,
+     125.2,
      "silence",
      0
     ],
     [
-     215.6,
-     92.2,
-     "change",
+     214.5,
+     93.25,
+     "silence",
      0
     ]
    ],
@@ -5959,7 +6511,7 @@ window.MMB_ALBUMS =
     ],
     [
      183.2,
-     146.3,
+     146.31,
      "silence",
      0
     ]
@@ -6023,9 +6575,6 @@ window.MMB_ALBUMS =
     "1": "3-1-1",
     "2": "3-12-1",
     "3": "3-12-3"
-   },
-   "10": {
-    "1": "3-10"
    }
   }
  },
@@ -6132,6 +6681,18 @@ window.MMB_ALBUMS =
    "14": 93.337,
    "15": 297.562
   },
+  "ar": {
+   "2": [
+    "歌／セーラー戦士：三石琴乃（セーラームーン）、久川綾（セーラーマーキュリー）、富沢美智恵（セーラーマーズ）、篠原恵美（セーラージュピター）、深見梨加（セーラーヴィーナス）",
+    "Uta: Seeraa Senshi: Mitsuishi Kotono (Seeraa Muun), Hisakawa Aya (Seeraa Maakyurii), Tomizawa Michie (Seeraa Maazu), Shinohara Emi (Seeraa Jupitaa), Fukami Rika (Seeraa Viinasu)",
+    "Vocals: the Sailor Guardians: Kotono Mitsuishi (Sailor Moon), Aya Hisakawa (Sailor Mercury), Michie Tomizawa (Sailor Mars), Emi Shinohara (Sailor Jupiter), Rica Fukami (Sailor Venus)"
+   ],
+   "15": [
+    "歌／三石琴乃（セーラームーン）＆セーラー戦士：久川綾（セーラーマーキュリー）、富沢美智恵（セーラーマーズ）、篠原恵美（セーラージュピター）、深見梨加（セーラーヴィーナス）",
+    "Uta: Mitsuishi Kotono (Seeraa Muun) & Seeraa Senshi: Hisakawa Aya (Seeraa Maakyurii), Tomizawa Michie (Seeraa Maazu), Shinohara Emi (Seeraa Jupitaa), Fukami Rika (Seeraa Viinasu)",
+    "Vocals: Kotono Mitsuishi (Sailor Moon) & the Sailor Guardians: Aya Hisakawa (Sailor Mercury), Michie Tomizawa (Sailor Mars), Emi Shinohara (Sailor Jupiter), Rica Fukami (Sailor Venus)"
+   ]
+  },
   "s": {
    "3": [
     [
@@ -6142,7 +6703,7 @@ window.MMB_ALBUMS =
     ],
     [
      48.6,
-     92.7,
+     92.67,
      "silence",
      0
     ]
@@ -6156,7 +6717,7 @@ window.MMB_ALBUMS =
     ],
     [
      73.6,
-     152.4,
+     152.41,
      "silence",
      0
     ]
@@ -6202,7 +6763,7 @@ window.MMB_ALBUMS =
     ],
     [
      76.7,
-     76.4,
+     76.35,
      "silence",
      0
     ]
@@ -6222,7 +6783,7 @@ window.MMB_ALBUMS =
     ],
     [
      79.4,
-     63.5,
+     63.49,
      "silence",
      0
     ]
@@ -6236,7 +6797,7 @@ window.MMB_ALBUMS =
     ],
     [
      39.0,
-     77.2,
+     77.25,
      "silence",
      0
     ]
@@ -6256,7 +6817,7 @@ window.MMB_ALBUMS =
     ],
     [
      96.8,
-     116.2,
+     116.15,
      "silence",
      0
     ]
@@ -6276,7 +6837,7 @@ window.MMB_ALBUMS =
     ],
     [
      246.2,
-     37.7,
+     37.67,
      "silence",
      0
     ]
@@ -6296,7 +6857,7 @@ window.MMB_ALBUMS =
     ],
     [
      165.9,
-     23.6,
+     23.59,
      "silence",
      0
     ]
@@ -6305,9 +6866,6 @@ window.MMB_ALBUMS =
   "q": {
    "1": {
     "1": "8-1"
-   },
-   "2": {
-    "1": "8-17"
    },
    "3": {
     "1": "8-3-1",
@@ -6476,7 +7034,7 @@ window.MMB_ALBUMS =
     ],
     [
      78.7,
-     42.3,
+     42.27,
      "silence",
      0
     ]
@@ -6490,7 +7048,7 @@ window.MMB_ALBUMS =
     ],
     [
      137.9,
-     113.9,
+     113.92,
      "silence",
      0
     ]
@@ -6504,7 +7062,7 @@ window.MMB_ALBUMS =
     ],
     [
      93.7,
-     103.3,
+     103.29,
      "silence",
      0
     ]
@@ -6518,7 +7076,7 @@ window.MMB_ALBUMS =
     ],
     [
      89.8,
-     56.4,
+     56.41,
      "silence",
      0
     ]
@@ -6538,7 +7096,7 @@ window.MMB_ALBUMS =
     ],
     [
      206.0,
-     96.6,
+     96.63,
      "silence",
      0
     ]
@@ -6558,7 +7116,7 @@ window.MMB_ALBUMS =
     ],
     [
      164.0,
-     117.1,
+     117.05,
      "silence",
      0
     ]
@@ -6572,7 +7130,7 @@ window.MMB_ALBUMS =
     ],
     [
      101.3,
-     91.3,
+     91.28,
      "silence",
      0
     ]
@@ -6586,7 +7144,7 @@ window.MMB_ALBUMS =
     ],
     [
      180.0,
-     102.6,
+     102.62,
      "silence",
      0
     ]
@@ -6606,7 +7164,7 @@ window.MMB_ALBUMS =
     ],
     [
      234.4,
-     37.0,
+     36.99,
      "silence",
      0
     ]
@@ -6632,7 +7190,7 @@ window.MMB_ALBUMS =
     ],
     [
      248.7,
-     93.2,
+     93.11,
      "silence",
      0
     ]
@@ -6652,7 +7210,7 @@ window.MMB_ALBUMS =
     ],
     [
      208.8,
-     55.0,
+     55.04,
      "silence",
      0
     ]
@@ -6666,7 +7224,7 @@ window.MMB_ALBUMS =
     ],
     [
      35.0,
-     92.1,
+     92.14,
      "silence",
      0
     ]
@@ -6831,6 +7389,18 @@ window.MMB_ALBUMS =
    "11": 357.461,
    "12": 233.98
   },
+  "ar": {
+   "11": [
+    "歌／朝川ひろこ",
+    "Uta: Asakawa Hiroko",
+    "Vocals: Hiroko Asakawa"
+   ],
+   "12": [
+    "歌／朝川ひろこ",
+    "Uta: Asakawa Hiroko",
+    "Vocals: Hiroko Asakawa"
+   ]
+  },
   "s": {
    "1": [
     [
@@ -6841,7 +7411,7 @@ window.MMB_ALBUMS =
     ],
     [
      49.1,
-     82.0,
+     82.04,
      "silence",
      0
     ]
@@ -6885,7 +7455,7 @@ window.MMB_ALBUMS =
     ],
     [
      179.9,
-     32.2,
+     32.19,
      "silence",
      0
     ]
@@ -6911,7 +7481,7 @@ window.MMB_ALBUMS =
     ],
     [
      139.3,
-     73.1,
+     73.08,
      "silence",
      0
     ]
@@ -6937,7 +7507,7 @@ window.MMB_ALBUMS =
     ],
     [
      99.0,
-     67.9,
+     67.95,
      "silence",
      0
     ]
@@ -6963,7 +7533,7 @@ window.MMB_ALBUMS =
     ],
     [
      171.8,
-     49.4,
+     49.35,
      "silence",
      0
     ]
@@ -7019,7 +7589,7 @@ window.MMB_ALBUMS =
     ],
     [
      321.0,
-     44.8,
+     44.85,
      "silence",
      0
     ]
@@ -7033,7 +7603,7 @@ window.MMB_ALBUMS =
     ],
     [
      89.0,
-     23.6,
+     23.62,
      "silence",
      0
     ]
@@ -7059,7 +7629,7 @@ window.MMB_ALBUMS =
     ],
     [
      155.8,
-     45.6,
+     45.55,
      "silence",
      0
     ]
@@ -7073,7 +7643,7 @@ window.MMB_ALBUMS =
     ],
     [
      152.2,
-     59.1,
+     59.08,
      "silence",
      0
     ]
@@ -7118,6 +7688,7 @@ window.MMB_ALBUMS =
     "4": "9-8-4",
     "5": "9-7-2",
     "6": "9-7-3",
+    "7": "9-9",
     "8": "9-13-1",
     "9": "9-14-1"
    },
@@ -7137,9 +7708,6 @@ window.MMB_ALBUMS =
    "10": {
     "1": "9-17-1",
     "2": "9-17-2"
-   },
-   "12": {
-    "1": "9-20"
    }
   }
  },
@@ -7258,6 +7826,18 @@ window.MMB_ALBUMS =
    "16": 33.438,
    "17": 212.35
   },
+  "ar": {
+   "1": [
+    "歌／ムーンリップス",
+    "Uta: Muun Rippusu",
+    "Vocals: Moon Lips"
+   ],
+   "17": [
+    "歌／Meu",
+    "Uta: Meu",
+    "Vocals: Meu"
+   ]
+  },
   "s": {
    "3": [
     [
@@ -7274,7 +7854,7 @@ window.MMB_ALBUMS =
     ],
     [
      183.8,
-     95.8,
+     95.84,
      "silence",
      0
     ]
@@ -7300,7 +7880,7 @@ window.MMB_ALBUMS =
     ],
     [
      278.4,
-     61.3,
+     61.27,
      "silence",
      0
     ]
@@ -7320,7 +7900,7 @@ window.MMB_ALBUMS =
     ],
     [
      171.5,
-     81.8,
+     81.78,
      "silence",
      0
     ]
@@ -7340,7 +7920,7 @@ window.MMB_ALBUMS =
     ],
     [
      227.7,
-     87.3,
+     87.29,
      "silence",
      0
     ]
@@ -7354,7 +7934,7 @@ window.MMB_ALBUMS =
     ],
     [
      121.6,
-     90.7,
+     90.67,
      "silence",
      0
     ]
@@ -7374,7 +7954,7 @@ window.MMB_ALBUMS =
     ],
     [
      83.4,
-     103.4,
+     103.38,
      "silence",
      0
     ]
@@ -7394,7 +7974,7 @@ window.MMB_ALBUMS =
     ],
     [
      177.3,
-     114.5,
+     114.46,
      "silence",
      0
     ]
@@ -7426,7 +8006,7 @@ window.MMB_ALBUMS =
     ],
     [
      160.6,
-     117.0,
+     116.98,
      "silence",
      0
     ]
@@ -7470,7 +8050,7 @@ window.MMB_ALBUMS =
     ],
     [
      297.0,
-     30.2,
+     30.19,
      "silence",
      0
     ]
@@ -7484,7 +8064,7 @@ window.MMB_ALBUMS =
     ],
     [
      33.2,
-     111.8,
+     111.78,
      "silence",
      0
     ]
@@ -7504,7 +8084,7 @@ window.MMB_ALBUMS =
     ],
     [
      150.1,
-     48.1,
+     48.12,
      "silence",
      0
     ]
@@ -7518,7 +8098,7 @@ window.MMB_ALBUMS =
     ],
     [
      108.4,
-     120.3,
+     120.28,
      "silence",
      0
     ]
@@ -7703,6 +8283,28 @@ window.MMB_ALBUMS =
    "15": 111.753,
    "16": 269.297
   },
+  "ar": {
+   "1": [
+    "歌／ムーンリップス",
+    "Uta: Muun Rippusu",
+    "Vocals: Moon Lips"
+   ],
+   "6": [
+    "歌／Meu",
+    "Uta: Meu",
+    "Vocals: Meu"
+   ],
+   "8": [
+    "歌／森の木児童合唱団とそのお友達",
+    "Uta: Mori no Ki Jidou Gasshoudan to Sono Otomodachi",
+    "Vocals: Mori no Ki Children's Choir and friends"
+   ],
+   "16": [
+    "歌／プリティキャスト",
+    "Uta: Puriti Kyasuto",
+    "Vocals: Pretty Cast"
+   ]
+  },
   "s": {
    "3": [
     [
@@ -7719,7 +8321,7 @@ window.MMB_ALBUMS =
     ],
     [
      39.9,
-     33.5,
+     33.51,
      "silence",
      0
     ]
@@ -7757,7 +8359,7 @@ window.MMB_ALBUMS =
     ],
     [
      241.5,
-     44.5,
+     44.46,
      "silence",
      0
     ]
@@ -7771,7 +8373,7 @@ window.MMB_ALBUMS =
     ],
     [
      45.3,
-     43.3,
+     43.26,
      "silence",
      0
     ]
@@ -7785,7 +8387,7 @@ window.MMB_ALBUMS =
     ],
     [
      84.7,
-     26.6,
+     26.56,
      "silence",
      0
     ]
@@ -7811,7 +8413,7 @@ window.MMB_ALBUMS =
     ],
     [
      82.1,
-     88.0,
+     88.04,
      "silence",
      0
     ]
@@ -7825,7 +8427,7 @@ window.MMB_ALBUMS =
     ],
     [
      52.6,
-     115.9,
+     115.89,
      "silence",
      0
     ]
@@ -7839,7 +8441,7 @@ window.MMB_ALBUMS =
     ],
     [
      177.2,
-     48.8,
+     48.76,
      "silence",
      0
     ]
@@ -7853,7 +8455,7 @@ window.MMB_ALBUMS =
     ],
     [
      51.2,
-     60.6,
+     60.55,
      "silence",
      0
     ]
@@ -7913,9 +8515,6 @@ window.MMB_ALBUMS =
    "15": {
     "1": "10-19-1",
     "2": "10-19-2"
-   },
-   "16": {
-    "1": "10-31"
    }
   }
  },
@@ -8034,6 +8633,18 @@ window.MMB_ALBUMS =
    "16": 284.527,
    "17": 30.878
   },
+  "ar": {
+   "2": [
+    "歌／花沢加絵",
+    "Uta: Hanazawa Kae",
+    "Vocals: Kae Hanazawa"
+   ],
+   "16": [
+    "歌／観月ありさ",
+    "Uta: Mizuki Arisa",
+    "Vocals: Arisa Mizuki"
+   ]
+  },
   "s": {
    "4": [
     [
@@ -8050,7 +8661,7 @@ window.MMB_ALBUMS =
     ],
     [
      200.8,
-     118.5,
+     118.55,
      "silence",
      0
     ]
@@ -8070,7 +8681,7 @@ window.MMB_ALBUMS =
     ],
     [
      190.1,
-     70.4,
+     70.45,
      "silence",
      0
     ]
@@ -8096,7 +8707,7 @@ window.MMB_ALBUMS =
     ],
     [
      233.4,
-     64.8,
+     64.84,
      "silence",
      0
     ]
@@ -8116,7 +8727,7 @@ window.MMB_ALBUMS =
     ],
     [
      211.3,
-     99.7,
+     99.74,
      "silence",
      0
     ]
@@ -8144,7 +8755,7 @@ window.MMB_ALBUMS =
     ],
     [
      68.2,
-     132.4,
+     132.42,
      "silence",
      0
     ]
@@ -8164,7 +8775,7 @@ window.MMB_ALBUMS =
     ],
     [
      154.1,
-     83.8,
+     83.85,
      "silence",
      0
     ]
@@ -8196,7 +8807,7 @@ window.MMB_ALBUMS =
     ],
     [
      108.3,
-     8.4,
+     8.44,
      "silence",
      0
     ]
@@ -8438,7 +9049,7 @@ window.MMB_ALBUMS =
     ],
     [
      136.4,
-     78.6,
+     78.62,
      "silence",
      0
     ]
@@ -8458,7 +9069,7 @@ window.MMB_ALBUMS =
     ],
     [
      145.7,
-     85.9,
+     85.85,
      "silence",
      0
     ]
@@ -8512,7 +9123,7 @@ window.MMB_ALBUMS =
     ],
     [
      76.5,
-     64.2,
+     64.17,
      "silence",
      0
     ]
@@ -8526,7 +9137,7 @@ window.MMB_ALBUMS =
     ],
     [
      20.3,
-     123.8,
+     123.85,
      "silence",
      0
     ]
@@ -8546,7 +9157,7 @@ window.MMB_ALBUMS =
     ],
     [
      153.8,
-     25.2,
+     25.19,
      "silence",
      0
     ]
@@ -8566,7 +9177,7 @@ window.MMB_ALBUMS =
     ],
     [
      135.7,
-     38.3,
+     38.28,
      "silence",
      0
     ]
@@ -8580,7 +9191,7 @@ window.MMB_ALBUMS =
     ],
     [
      38.4,
-     106.6,
+     106.58,
      "silence",
      0
     ]
@@ -8820,6 +9431,18 @@ window.MMB_ALBUMS =
    "25": 79.048,
    "26": 93.415
   },
+  "ar": {
+   "1": [
+    "DALI",
+    "DALI",
+    "Vocals: DALI"
+   ],
+   "26": [
+    "三石琴乃、富沢美智恵、久川綾、篠原恵美、深見梨加",
+    "Mitsuishi Kotono, Tomizawa Michie, Hisakawa Aya, Shinohara Emi, Fukami Rika",
+    "Vocals: Kotono Mitsuishi, Michie Tomizawa, Aya Hisakawa, Emi Shinohara, Rica Fukami"
+   ]
+  },
   "s": {
    "4": [
     [
@@ -8830,7 +9453,7 @@ window.MMB_ALBUMS =
     ],
     [
      57.2,
-     56.6,
+     56.62,
      "silence",
      0
     ]
@@ -8868,7 +9491,7 @@ window.MMB_ALBUMS =
     ],
     [
      169.2,
-     67.7,
+     67.65,
      "change",
      0
     ]
@@ -8906,7 +9529,7 @@ window.MMB_ALBUMS =
     ],
     [
      74.1,
-     14.0,
+     14.01,
      "silence",
      0
     ]
@@ -8920,7 +9543,7 @@ window.MMB_ALBUMS =
     ],
     [
      14.4,
-     14.6,
+     14.65,
      "silence",
      0
     ]
@@ -8948,7 +9571,7 @@ window.MMB_ALBUMS =
     ],
     [
      39.9,
-     85.9,
+     85.86,
      "silence",
      0
     ]
@@ -8956,13 +9579,13 @@ window.MMB_ALBUMS =
    "11": [
     [
      0.0,
-     79.1,
+     80.1,
      null,
      0
     ],
     [
-     79.1,
-     24.8,
+     80.1,
+     23.76,
      "silence",
      0
     ]
@@ -8976,7 +9599,7 @@ window.MMB_ALBUMS =
     ],
     [
      107.9,
-     65.5,
+     65.53,
      "silence",
      0
     ]
@@ -8990,7 +9613,7 @@ window.MMB_ALBUMS =
     ],
     [
      124.6,
-     117.1,
+     117.14,
      "silence",
      0
     ]
@@ -9010,7 +9633,7 @@ window.MMB_ALBUMS =
     ],
     [
      148.6,
-     98.7,
+     98.73,
      "silence",
      0
     ]
@@ -9030,7 +9653,7 @@ window.MMB_ALBUMS =
     ],
     [
      229.2,
-     93.4,
+     93.41,
      "silence",
      0
     ]
@@ -9050,7 +9673,7 @@ window.MMB_ALBUMS =
     ],
     [
      216.3,
-     127.1,
+     127.06,
      "silence",
      0
     ]
@@ -9064,7 +9687,7 @@ window.MMB_ALBUMS =
     ],
     [
      72.5,
-     66.5,
+     66.53,
      "silence",
      0
     ]
@@ -9084,7 +9707,7 @@ window.MMB_ALBUMS =
     ],
     [
      36.6,
-     103.2,
+     103.24,
      "silence",
      0
     ]
@@ -9118,7 +9741,7 @@ window.MMB_ALBUMS =
     ],
     [
      118.8,
-     76.3,
+     76.31,
      "silence",
      0
     ]
