@@ -200,27 +200,31 @@ id,code,related,kind,what,basis,note
 199,8-17,歌-6-1,without,chorus,audio match,the same karaoke without its chorus: they match at a median 0.969 in 10-second windows (checked from the audio 2026-11-19)
 200,6-19,歌-4-3,karaoke,without the chorus,track titles,"its title; its backing lines up with the vocal recording (median 0.84 in 10-second windows, as a karaoke against its vocal version does)"
 201,EX-2,2-7,without,chorus,audio match,"its title (アイキャッチ（コーラスなしヴァージョン）, ""Eyecatch (Version without Chorus)""); three quarters of its 5-second windows match the eyecatch C-2 (2-7) at 0.95 or more, the rest being where the chorus sings (checked from the audio 2026-11-19)"
-202,1-57,歌-1-1,uses,\N,tray card,the tray card prints 使用楽曲「ムーンライト伝説」 (song used) for the track
-203,2-23,歌-1-2,uses,\N,tray card,the tray card prints 使用楽曲「HEART MOVING」 (song used) for the track
-204,2-27,歌-1-1,uses,\N,tray card,the tray card prints 使用楽曲「ムーンライト伝説」 (song used) for the track
-205,3-1,歌-1-1,uses,\N,tray card,the tray card prints 使用楽曲「ムーンライト伝説」 (song used) for the track
-206,3-13,歌-1-4,uses,\N,tray card,the tray card prints 使用楽曲「乙女のポリシー」 (song used) for the track
-207,4-11-1,歌-1-1,uses,\N,tray card,"the tray card prints 使用楽曲「ムーンライト伝説」 (song used) for the track; it is in M-302 (4-11-1), confirmed by ear 2026-11-19"
-208,4-15,歌-1-6,uses,\N,tray card,the tray card prints 使用楽曲「タキシード・ミラージュ」 (song used) for the track
-209,5-15,歌-1-7,uses,\N,tray card,the tray card prints 使用楽曲「私たちになりたくて」 (song used) for the track
-210,5-19,歌-1-7,uses,\N,tray card,the tray card prints 使用楽曲「私たちになりたくて」 (song used) for the track
-211,5-22,歌-1-7,uses,\N,tray card,the tray card prints 使用楽曲「私たちになりたくて」 (song used) for the track
-212,6-4,歌-1-9,uses,\N,tray card,the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track
-213,6-4,歌-1-10,uses,\N,tray card,the tray card prints 使用楽曲「風も空もきっと…」 (song used) for the track
-214,6-9,歌-1-9,uses,\N,tray card,the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track
-215,6-10,歌-1-9,uses,\N,tray card,the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track
-216,6-11,歌-1-9,uses,\N,tray card,the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track
-217,6-12,歌-1-9,uses,\N,tray card,the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track
-218,7-23,歌-1-10,uses,\N,tray card,the tray card prints 使用楽曲「風も空もきっと…」 (song used) for the track
-219,8-18,歌-3-9,uses,\N,tray card,the tray card prints 使用楽曲「Moon Revenge」 (song used) for the track
-220,10-1,歌-3-14,uses,\N,tray card,the tray card prints 使用楽曲「三時の妖精」 (song used) for the track
-221,10-5,歌-3-14,uses,\N,tray card,the tray card prints 使用楽曲「三時の妖精」 (song used) for the track
-222,10-10,歌-3-14,uses,\N,tray card,the tray card prints 使用楽曲「三時の妖精」 (song used) for the track
-223,10-27,歌-1-8,uses,\N,tray card,"the tray card prints 使用楽曲「""らしく""いきましょ」 (song used) for the track"
+202,1-57,歌-1-1,uses,\N,tray card,"the tray card prints 使用楽曲「ムーンライト伝説」 (song used) for the track; it is in all five pieces (A1–A5), confirmed by ear 2026-11-23"
+203,2-23,歌-1-2,uses,\N,tray card,"the tray card prints 使用楽曲「HEART MOVING」 (song used) for the track; it is in all five pieces (B4, B3B, B3, B2, B1), confirmed by ear 2026-11-23"
+204,2-27,歌-1-1,uses,\N,tray card,"the tray card prints 使用楽曲「ムーンライト伝説」 (song used) for the track; it is in both pieces (A6a, A6b), confirmed by ear 2026-11-23"
+205,3-1-1,歌-1-1,uses,\N,tray card,"the tray card prints 使用楽曲「ムーンライト伝説」 (song used) for the track; it is in M101 (3-1-1), not M133, confirmed by ear 2026-11-23"
+206,3-13-1,歌-1-4,uses,\N,tray card,"the tray card prints 使用楽曲「乙女のポリシー」 (song used) for the track; it is in M103 (3-13-1) and M103B (3-13-2), not K1, confirmed by ear 2026-11-23"
+207,4-11,歌-1-1,uses,\N,tray card,"the tray card prints 使用楽曲「ムーンライト伝説」 (song used) for the track; it is in both pieces (M302, M301), confirmed by ear 2026-11-23"
+208,4-15,歌-1-6,uses,\N,tray card,"the tray card prints 使用楽曲「タキシード・ミラージュ」 (song used) for the track; it is in both pieces (M304, M303), confirmed by ear 2026-11-23"
+209,5-15,歌-1-7,uses,\N,tray card,the tray card prints 使用楽曲「私たちになりたくて」 (song used) for the track; confirmed by ear 2026-11-23
+210,5-19,歌-1-7,uses,\N,tray card,"the tray card prints 使用楽曲「私たちになりたくて」 (song used) for the track; it is in both pieces (M6, M8), confirmed by ear 2026-11-23"
+211,5-22-3,歌-1-7,uses,\N,tray card,"the tray card prints 使用楽曲「私たちになりたくて」 (song used) for the track; it is in M7 (5-22-3), not M59 or M10, confirmed by ear 2026-11-23"
+212,6-4-1,歌-1-9,uses,\N,tray card,"the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track; it is in M604 (6-4-1), not M606 or M607, confirmed by ear 2026-11-23"
+213,6-4-2,歌-1-10,uses,\N,tray card,"the tray card prints 使用楽曲「風も空もきっと…」 (song used) for the track; it is in M606 (6-4-2) and M607 (6-4-3), not M604, confirmed by ear 2026-11-23"
+214,6-9-1,歌-1-9,uses,\N,tray card,"the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track; it is in M603 (6-9-1), not M620, confirmed by ear 2026-11-23"
+215,6-10-2,歌-1-9,uses,\N,tray card,"the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track; it is in M602 (6-10-2), not M622, confirmed by ear 2026-11-23"
+216,6-11,歌-1-9,uses,\N,tray card,"the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track; it is in all three pieces (M611, M610, M605), confirmed by ear 2026-11-23"
+217,6-12-1,歌-1-9,uses,\N,tray card,"the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track; it is in M601 (6-12-1) and M601A (6-12-3), not M655 or M655B, confirmed by ear 2026-11-23"
+218,7-23,歌-1-10,uses,\N,tray card,the tray card prints 使用楽曲「風も空もきっと…」 (song used) for the track; confirmed by ear 2026-11-23
+219,8-18,歌-3-9,uses,\N,tray card,the tray card prints 使用楽曲「Moon Revenge」 (song used) for the track; confirmed by ear 2026-11-23
+220,10-1-1,歌-3-14,uses,\N,tray card,"the tray card prints 使用楽曲「三時の妖精」 (song used) for the track; it is in M512 (10-1-1), not M513, confirmed by ear 2026-11-23"
+221,10-5,歌-3-14,uses,\N,tray card,the tray card prints 使用楽曲「三時の妖精」 (song used) for the track; confirmed by ear 2026-11-23
+222,10-10-2,歌-3-14,uses,\N,tray card,"the tray card prints 使用楽曲「三時の妖精」 (song used) for the track; it is in M532 (10-10-2) and M532B (10-10-3), not M531, confirmed by ear 2026-11-23"
+223,10-27,歌-1-8,uses,\N,tray card,"the tray card prints 使用楽曲「""らしく""いきましょ」 (song used) for the track; it is in both pieces (M511A, M511B), confirmed by ear 2026-11-23"
 224,M-39,M-40,excerpt,its last 26 seconds,audio match,"EX-23-5 is the same recording as the end of M-40 (5-12-1, from 1:07.6), at a correlation of 0.995; found from the audio and confirmed by ear 2026-11-19"
 225,M-38,M-40,edit,"0:10 to 0:26, then its ending",audio match,EX-23-4's first 16 seconds are M-40 (5-12-1) from 0:10 to 0:26 (0.97) and its last 6 seconds are M-40's ending (1:28 to 1:34); found from the audio and confirmed by ear 2026-11-19
+226,3-13-2,歌-1-4,uses,\N,tray card,"the tray card prints 使用楽曲「乙女のポリシー」 (song used) for the track; it is in M103 (3-13-1) and M103B (3-13-2), not K1, confirmed by ear 2026-11-23"
+227,6-4-3,歌-1-10,uses,\N,tray card,"the tray card prints 使用楽曲「風も空もきっと…」 (song used) for the track; it is in M606 (6-4-2) and M607 (6-4-3), not M604, confirmed by ear 2026-11-23"
+228,6-12-3,歌-1-9,uses,\N,tray card,"the tray card prints 使用楽曲「セーラースターソング」 (song used) for the track; it is in M601 (6-12-1) and M601A (6-12-3), not M655 or M655B, confirmed by ear 2026-11-23"
+229,10-10-3,歌-3-14,uses,\N,tray card,"the tray card prints 使用楽曲「三時の妖精」 (song used) for the track; it is in M532 (10-10-2) and M532B (10-10-3), not M531, confirmed by ear 2026-11-23"

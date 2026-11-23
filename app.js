@@ -52,6 +52,8 @@ const UI = {
 /* the editor's columns, after the book's own: not in the booklet */
 const ED_HEAD = {
   cd: {en: 'CD / Track', c: 'ed'},
+  tvno: {en: 'Outside M-NO.', c: 'ed', t: ['The code the other cue sheets give this piece when they reuse it.',
+    'The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 outside this list is actually M-210A here, not this list\'s M-203.']},
   used: {en: 'Uses', c: 'ed'},
   rel: {en: 'Related', c: 'ed'},
   notes: {en: 'Notes', c: 'ed'},
@@ -183,12 +185,13 @@ const COLS = {
   tv: ['w-m', 'w-scene', 'w-credit', 'w-time', 'ed w-notes'],
   list: ['w-mno', 'w-time', 'w-desc', 'w-cd', 'ed w-cdtrk', 'ed w-used', 'ed w-rel', 'ed w-notes'],
   film: ['w-no', 'w-mno', 'w-time', 'w-desc', 'w-cd', 'ed w-cdtrk', 'ed w-used', 'ed w-rel', 'ed w-notes'],
+  filmR: ['w-no', 'w-mno', 'w-time', 'w-desc', 'w-cd', 'ed w-cdtrk', 'ed w-tvno', 'ed w-used', 'ed w-rel', 'ed w-notes'],   // + Outside M-NO.
   album: ['w-no', 'w-ttl', 'w-time', 'w-pseg', 'w-auses', 'w-arel', 'w-aref', 'w-also'],   // Same as takes the rest
 };
 const colgroup = kind => '<colgroup>' + COLS[kind].map(c => `<col class="${c}">`).join('') + '</colgroup>';
 /* a title row spans every column */
 const spanAttr = kind => `colspan="${COLS[kind].length}"`;
-const tableTag = kind => `<table class="bk" data-kind="${kind}">${colgroup(kind)}`;
+const tableTag = (kind, cols = kind) => `<table class="bk" data-kind="${kind}"${cols !== kind ? ` data-cols="${cols}"` : ''}>${colgroup(cols)}`;
 /* a column-head row; when the table has editor's columns, a thin row above it labels which columns are the booklet's and
    which this site added (those are also shaded green, styles.css) */
 function headRow(h, group = true){
@@ -237,7 +240,9 @@ function rowNotes(r){
   const items = [], mark = {cl: []};
   const add = html => items.push(html);
   (r.cl || []).forEach(([p, t, fix, note], i) => {
-    if (fix) mark.cl[i] = add(`<b>${t ? goLink(t, fix, goTitle(t)) : esc(fix)}</b>${printedAs(p)}.${note ? ' ' + noteText(note) : ''}`);
+    // the R movie renumbering notes already say what the cue sheet prints ("M-203 here is actually M-210A")
+    const saysPrinted = note && /^The R Movie cue sheet numbering is different/.test(note);
+    if (fix) mark.cl[i] = add(`<b>${t ? goLink(t, fix, goTitle(t)) : esc(fix)}</b>${saysPrinted ? '' : printedAs(p)}.${note ? ' ' + noteText(note) : ''}`);
     else if (note) mark.cl[i] = add(noteText(note));   // a note on a credit that stands as printed
   });
   if (r.cx) mark.code = add(`<b>${extOr(r.cx[1], esc(r.cx[0]), '')}</b>${printedAs(r.c)}. ${noteText(r.cx[2])}`);
@@ -309,12 +314,12 @@ const REL_ROLE = {
   tempo: ['the original tempo', '{W} version'], bridge: ['the full piece (this is its bridge version)', 'bridge version'],
   version: ['the original (this is the {W} version)', '{W} version'], karaoke: ['the vocal version', 'karaoke ({W})'],
   instrumental: ['the vocal version', 'instrumental ({W})'], 'music box': ['the song', 'music box version ({W})'],
-  contains: ['included in this ({W})', 'includes this ({W})'], continues: ['continues into this', 'continues from this'],
+  contains: ['part of this ({W})', 'the longer piece (this is {W})'], continues: ['continues into this', 'continues from this'],
   arrangement: ['the original (this arranges it)', 'an arrangement'], variant: ['the original', 'a variant'],
   quotes: ['quoted in this', 'quotes this'], same: ['the same recording', 'the same recording'],
   recording: ['another recording of the song', 'another recording of the song'],
   size: ['the full-length song (this is the {W})', '{W}'],
-  uses: ['the song this uses', 'uses this song']};
+  uses: ['source of the melody', "uses this song's melody"]};
 const BASIS = {booklet: 'from the booklet', 'tray card': 'from the tray card', 'track titles': 'from the track titles',
   'by ear': 'found by ear', 'audio match': 'found from the audio'};
 /* a BGM-list code's place on the CD (corrections applied), for linking a related piece to its album track */
@@ -324,6 +329,12 @@ const codePlace = code => {
     if (r.c && r.c !== '—' && pl) CODE_PLACE[r.c] = pl; }))); }
   return CODE_PLACE[code];
 };
+/* the BGM-list code at a CD place (2-23-1 → B-4), the reverse of codePlace */
+let PLACE_CODE;
+const placeCode = place => {
+  if (!PLACE_CODE) { codePlace(''); PLACE_CODE = {}; Object.entries(CODE_PLACE).forEach(([c, pl]) => { PLACE_CODE[pl] ??= c; }); }
+  return PLACE_CODE[place];
+};
 /* a BGM-list code printed with a word (M-40 ストリングスヌキ), in each language (r.cn: M-40 without strings) */
 let CODE_NAME;
 const codeName = code => {
@@ -332,12 +343,19 @@ const codeName = code => {
 };
 /* a related piece's link: on the albums page its album track (in the page), else its BGM-list row, else its album track
    on the albums page; and its label (a CD place adds the track's title) */
-/* a CD place in this site's own columns: as the booklet writes it (5-21-2, 歌-3-10) while English is off; with English on,
-   the two box sets are named, MUSIC 5-21-2 and SONG 3-10 (styles.css shows one or the other). The original albums'
-   places (SS-12) read the same either way. */
+/* a CD place in this site's own columns: as the booklet writes it (5-21-2, 歌-3-10, SS-12) while English is off; with
+   English on, the album is named: Music Box · 5-21-2, Song Box · 3-10, SuperS · 12, Sailor Stars 1 · 1 (styles.css shows one or the other) */
+const ALBUM_EN = {'歌': 'Song Box', MC: 'Sailor Moon', R: 'R', RM: 'R Movie', S: 'S', SM: 'S Movie', SS: 'SuperS',
+  SSM: 'SuperS Movie', ST1: 'Sailor Stars 1', ST2: 'Sailor Stars 2', EX: 'Sailor Moon EX'};
+/* the album a CD place is on, in English: Music Box, Song Box, SuperS, Sailor Moon EX... */
+function albumName(place){
+  const o = parseCd(String(place).replace(/[a-z]$/, ''));
+  return !o ? '' : /^\d+$/.test(o.code) ? 'Music Box' : ALBUM_EN[o.code] || '';
+}
 function placeLabel(place){
   const o = parseCd(place.replace(/[a-z]$/, ''));   // a part of a piece keeps its letter (3-11-3a)
-  const enForm = !o ? '' : o.code === '歌' ? `SONG ${place.slice(2)}` : /^\d+$/.test(o.code) ? `MUSIC ${place}` : '';
+  const enForm = !o ? '' : /^\d+$/.test(o.code) ? `Music Box · ${place}`
+    : ALBUM_EN[o.code] ? `${ALBUM_EN[o.code]} · ${place.slice(o.code.length + 1)}` : '';
   return enForm ? `<span class="pl-ja">${esc(place)}</span><span class="pl-en">${esc(enForm)}</span>` : esc(place);
 }
 function relTarget(key){
@@ -345,7 +363,8 @@ function relTarget(key){
   const track = o && ALBUMS[o.code]?.t[o.key], tname = track ? track[track.length - 1] : '';
   const who = o && ALBUMS[o.code]?.ar?.[o.key]?.[2]?.replace(/^[A-Za-z ]+: /, '');   // the singer(s), in English
   const label = code ? key : `${key}${tname ? ' ' + tname : ''}${who ? ` (${who})` : ''}`;   // plain text, for the tooltip
-  const html = code ? (codeName(key) ? stack(codeName(key)) : esc(key)) : `${placeLabel(key)}${tname ? ' ' + esc(tname) : ''}${who ? ` (${esc(who)})` : ''}`;
+  // shown: just the title (and singer); the album and track stay in the tooltip
+  const html = code ? (codeName(key) ? stack(codeName(key)) : esc(key)) : `${tname ? esc(tname) : placeLabel(key)}${who ? ` (${esc(who)})` : ''}`;
   const id = code ? cueId(key) : 'cue-cd-' + key;
   if (VIEW === 'albums' && track) return {label, html, href: '#' + trackId(o.code, o.key)};
   if (ROW_PANEL[id]) return {label, html, href: HOME + '#' + id, go: id};
@@ -365,17 +384,34 @@ function relCell(keys, cls = 'du'){
   if (!list.length) return `<td class="${cls}"></td>`;
   const n = list.length, count = `${n} related`;
   const toggle = `<button type="button" class="du-toggle" aria-expanded="false" title="Show or hide the related pieces">${en(count)}<svg class="du-chev" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`;
-  const line = x => {
+  const phrase = x => {
     let t = REL_ROLE[x.kind]?.[x.back ? 1 : 0] || x.kind;
     t = t.replace(' ({W})', x.what ? ' (' + x.what + ')' : '').replace('{W}', x.what || '');
-    t = t[0].toUpperCase() + t.slice(1);
+    return t[0].toUpperCase() + t.slice(1);
+  };
+  // two related pieces with the same title: name the album; two from the same album (pieces of one track): their codes
+  const tag = new Map(), dupOf = keyOf => { const ks = list.map(keyOf); return new Set(ks.filter((k, i) => ks.indexOf(k) !== i)); };
+  const dupTitle = dupOf(x => relTarget(x.other).html), dupAlbum = dupOf(x => relTarget(x.other).html + '|' + albumName(x.other));
+  list.forEach(x => { const h = relTarget(x.other).html; if (!dupTitle.has(h)) return;
+    tag.set(x, dupAlbum.has(h + '|' + albumName(x.other)) ? placeCode(x.other) || x.other : albumName(x.other)); });
+  // one related piece; in a group (bare) its phrase is the group's heading, so the line shows only the piece
+  const line = (x, t, bare) => {
     const src = (BASIS[x.basis] || x.basis) + (x.note ? ': ' + x.note : '');
     const tg = relTarget(x.other), title = `${tg.label}: ${t}. ${src[0].toUpperCase() + src.slice(1)}`;
-    const body = `<span class="ref-go">${tg.href ? REF_ICON : ''}</span><span class="du-text"><span class="du-ep" translate="no">${tg.html}</span>${REF_SEP}<span class="du-desc">${en(esc(t))}</span></span>`;
+    const alb = tag.get(x);
+    // the relationship first ("Karaoke: ..."), as a group's heading comes before its pieces
+    const body = `<span class="ref-go">${tg.href ? REF_ICON : ''}</span><span class="du-text">`
+      + (bare ? '' : `<span class="du-desc">${en(esc(t))}:</span> `)
+      + `<span class="du-ep" translate="no">${tg.html}${alb ? ` <span class="du-alb">· ${esc(alb)}</span>` : ''}</span></span>`;
     return `<li class="du-use">${tg.href ? `<a class="go ref-link" href="${esc(tg.href)}"${tg.go ? ` data-go="${esc(tg.go)}"` : ''} title="${esc(title)}">${body}</a>`
       : `<span class="ref-link" title="${esc(title)}">${body}</span>`}</li>`;
   };
-  return `<td class="${cls}">${toggle}<ul class="du-uses" hidden>${list.map(line).join('')}</ul></td>`;
+  // pieces that share a phrase (several tracks that use this song's melody) go under one heading, in first-seen order
+  const groups = new Map();
+  list.forEach(x => { const t = phrase(x); groups.set(t, [...(groups.get(t) || []), x]); });
+  const html = [...groups].map(([t, xs]) => xs.length === 1 ? line(xs[0], t)
+    : `<li class="du-group"><span class="du-gh">${en(esc(t))}:</span><ul>${xs.map(x => line(x, t, true)).join('')}</ul></li>`).join('');
+  return `<td class="${cls}">${toggle}<ul class="du-uses" hidden>${html}</ul></td>`;
 }
 /* the id of a cue-sheet row: TV rows r-TV-98-B-19, film rows q-MOVIE-R-6 (the film tables double as music lists).
    A few episodes repeat an M number in another part, and three print one twice in a part: the second gets -2. */
@@ -492,13 +528,21 @@ function renderBgm(s){
   return html;
 }
 
+/* the R movie table's Outside M-NO. column: the code the other cue sheets print for this row's piece (their credits link here) */
+let TV_CODE;
+function tvNoCell(id){
+  if (!TV_CODE) { TV_CODE = {}; D.works.filter(w => w.type === 'tv' || w.type === 'special').forEach(w => w.parts.forEach(p => p.r.forEach(r =>
+    (r.cl || []).forEach(([printed, target]) => { if (target?.startsWith('q-MOVIE-R-')) TV_CODE[target] ??= printed; })))); }
+  const c = TV_CODE[id];
+  return `<td class="code ed" translate="no">${c ? esc(c) : ''}</td>`;
+}
 function cueTable(w, noCap){
   const film = w.type === 'movie';
-  const kind = film ? 'film' : 'tv', nc = spanAttr(kind);   // title rows span every column
-  let html = `<div class="scroll">${tableTag(kind)}<thead>`
+  const kind = film ? 'film' : 'tv', tvno = w.id === 'MOVIE-R', cols = tvno ? 'filmR' : kind, nc = spanAttr(cols);   // title rows span every column
+  let html = `<div class="scroll">${tableTag(kind, cols)}<thead>`
     + (noCap ? '' : `<tr><th ${nc} class="cap">${stack(w.h, lineFmt(w.hx))}</th></tr>`);
   // the Make Up!, SuperS and Ami film tables head their first column "M" instead of "NO."
-  if (film) html += headRow([...(FILMS[w.id].m ? [{h: ['M','M','M'], c: 'num'}, ...UI.qHead.slice(1)] : UI.qHead), ED_HEAD.cd, ED_HEAD.used, ED_HEAD.rel, ED_HEAD.notes]);
+  if (film) html += headRow([...(FILMS[w.id].m ? [{h: ['M','M','M'], c: 'num'}, ...UI.qHead.slice(1)] : UI.qHead), ED_HEAD.cd, ...(tvno ? [ED_HEAD.tvno] : []), ED_HEAD.used, ED_HEAD.rel, ED_HEAD.notes]);
   html += '</thead>';
   w.parts.forEach(p => {
     html += '<tbody>';
@@ -522,7 +566,7 @@ function cueTable(w, noCap){
       // a row that reuses a cue from another table (its credit links there) shows that cue's uses, its own among them
       const reused = film && (r.cl || []).find(c => c[1])?.[1];
       const used = film ? (reused ? usedCell(reused, OWN_USE[reused]) : usedCell(id, OWN_USE[id])) : '';
-      html += film ? `<tr id="${esc(id)}">${m}${ct}${d}<td class="num" translate="no">${cdCell(r, n.mark.cd)}</td>${cdCells(r.cdx || r.cd)}${used}${relCell([r.cdx && r.cdx !== NO_CD ? r.cdx : r.cd], 'ed du')}${notesCell(n)}</tr>`
+      html += film ? `<tr id="${esc(id)}">${m}${ct}${d}<td class="num" translate="no">${cdCell(r, n.mark.cd)}</td>${cdCells(r.cdx || r.cd)}${tvno ? tvNoCell(id) : ''}${used}${relCell([r.cdx && r.cdx !== NO_CD ? r.cdx : r.cd], 'ed du')}${notesCell(n)}</tr>`
                    : `<tr id="${esc(id)}">${m}${d}${ct}${notesCell(n)}</tr>`;
     });
     html += '</tbody>';
@@ -1029,7 +1073,7 @@ function sameAsOriginals(place){
   return (ORIGINALS[place] || []).map(o => {
     const name = ALBUMS[o.a].n[ALBUMS[o.a].n.length - 1];
     return `<span class="same" title="${esc(`The same recording is on ${name} as ${o.label} (found from the audio)`)}">`
-      + `<a class="go" href="#${esc(trackId(o.a, o.t))}" translate="no">${esc(o.label)}</a></span>`;
+      + `<a class="go" href="#${esc(trackId(o.a, o.t))}" translate="no">${placeLabel(o.label)}</a></span>`;
   }).join('');
 }
 /* the Same as column on an original album: its piece found on the box set (albums.js q), linked to that track */
@@ -1218,7 +1262,31 @@ if (VIEW === 'albums') {
   const st = history.state || {}, id = decodeURIComponent(location.hash.slice(1));
   if (backTo && revealAlbum(backTo)) reopenUses(document.getElementById(backTo)?.rows[st.row]);
   else if (id) revealAlbum(id);
-  addEventListener('hashchange', () => revealAlbum(decodeURIComponent(location.hash.slice(1))));
+  // Back/Forward already went to its track: the hashchange that follows (when the address changed) needn't
+  let popped = false, lastHash = location.hash;
+  addEventListener('hashchange', () => { lastHash = location.hash; if (popped) { popped = false; return; } revealAlbum(decodeURIComponent(location.hash.slice(1))); });
+  /* a link to another track on this page (Related, Same as): a jump, as on the BGM-list page, so Back returns to the
+     track the link was in. Each jump is a history entry (the address shows #al-...). */
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#al-"]'); if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    const href = a.getAttribute('href'), id = decodeURIComponent(href.slice(1));
+    let from = a.closest('#uses-pop') ? usesPop.owner : a;   // a link in the uses box: it started from its button's row
+    closeUses();
+    history.replaceState({...history.state, anchor: from?.closest('tbody[id^="al-"]')?.id, y: scrollY, depth}, '');
+    depth++;
+    history.pushState({anchor: id, depth}, '', href); lastHash = location.hash;
+    revealAlbum(id); showBack();
+  });
+  addEventListener('popstate', e => {
+    const s = e.state || {};
+    depth = s.depth || 0;
+    // the track the link was in (or the address's track); failing both, where the page was
+    const id = s.anchor || decodeURIComponent(location.hash.slice(1));
+    popped = location.hash !== lastHash;
+    if (!(id && revealAlbum(id)) && s.y != null) scrollTo(0, s.y);
+    showBack();
+  });
   showBack();
 } else {
 /* ---------- links to a row elsewhere on the page (credit codes, Uses, notes) ----------

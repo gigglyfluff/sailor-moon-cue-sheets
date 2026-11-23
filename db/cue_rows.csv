@@ -29,7 +29,7 @@ id,part_id,ord,m,credit_ja,credit_ro,credit_en,time_ja,time_ro,time_en,desc_ja,d
 28,1,27,24B,M-224B,M-224B,M-224B,"15""半","15.5""","15.5""",スキャット（フィオレ・死）,"Sukyatto (Fiore, shi)","Scat (Fiore, death)",8-16-4,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 29,1,28,24C,M-224C,M-224C,M-224C,"59""","59""","59""",回想シーンスキャット,Kaisou shiin sukyatto,Flashback scene scat,8-16-3,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 30,1,29,25,M-225,M-225,M-225,"4'00""","4'00""","4'00""",※主題歌「Moon Revenge」,"※Shudaika ""Moon Revenge""","※Theme song ""Moon Revenge""",歌-3-9,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-31,1,30,26,M-226,M-226,M-226,"1'19""","1'19""","1'19""",ピアノ曲（主題歌のアレンジ）〜シンフォニー入る〜コーラス入る,Piano kyoku (shudaika no arenji) ~ shinfonii hairu ~ koorasu hairu,Piano piece (arrangement of the theme song) ~ symphony enters ~ chorus enters,8-18,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+31,1,30,26,M-226,M-226,M-226,"1'19""","1'19""","1'19""",ピアノ曲（主題歌のアレンジ）〜シンフォニー入る〜コーラス入る,Piano kyoku (shudaika no arenji) ~ shinfonii hairu ~ koorasu hairu,Piano piece (arrangement of the theme song) ~ symphony enters ~ chorus enters,8-18,\N,0,\N,\N,\N,\N,\N,"[Editor's note: ""the theme song"" here is the film's theme song, Moon Revenge, not the TV series' Moonlight Legend]",\N,\N,\N,\N,\N,\N
 32,1,31,27,M-227,M-227,M-227,\N,\N,\N,※エンディング曲「Moon Revenge」,"※Endingu kyoku ""Moon Revenge""","※Ending song ""Moon Revenge""",8-19,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 33,2,0,1,J-5,J-5,J-5,"9""","9""","9""",タイトル（サブタイトルの曲じゃなく）,Taitoru (sabutaitoru no kyoku ja naku),Title (not the subtitle music),1-7,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 34,2,1,2,M-136,M-136,M-136,"23""半","23.5""","23.5""",格好良く,Kakkoyoku,Cool,3-15-2,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -66,7 +66,7 @@ id,part_id,ord,m,credit_ja,credit_ro,credit_en,time_ja,time_ro,time_en,desc_ja,d
 65,3,17,17,M-417,M-417,M-417,"18""半","18.5""","18.5""",逃げろや逃げろ！（コミカルUPテンポ）,Nigero ya nigero! (komikaru UP tenpo),"Run, run! (comical, up-tempo)",9-8-1,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 66,3,18,18,M-418,M-418,M-418,"18""半","18.5""","18.5""",セーラーちびムーンの変身,Seeraa Chibi Muun no henshin,Sailor Chibi Moon's transformation,9-8-2,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 67,3,19,19,M-305,M-305,M-305,"30""","30""","30""",セーラームーン変身（TVシリーズ劇伴曲使用）,Seeraa Muun henshin (TV shiriizu gekiban-kyoku shiyou),Sailor Moon transformation (TV series score cue used),4-12-1,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-68,3,20,20,M-203,M-203,M-203,"25""","25""","25""",セーラームーン登場（劇場版「R」劇伴曲流用）,"Seeraa Muun toujou (gekijou-ban ""R"" gekiban-kyoku ryuuyou)","Sailor Moon appears (score cue reused from the movie ""R"")",8-3-1,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,8-8-2,"Book prints 8-3-1; CD 8-3 is 衛の回想 (Mamoru's reminiscence; M203 and M204 on the box-set tray card for Disc 8), not a Sailor Moon entrance. The booklet looked M-203 up in the R movie list, but this is the TV cue sheets' numbering: the piece is M-210A, on 8-8-2."
+68,3,20,20,M-203,M-203,M-203,"25""","25""","25""",セーラームーン登場（劇場版「R」劇伴曲流用）,"Seeraa Muun toujou (gekijou-ban ""R"" gekiban-kyoku ryuuyou)","Sailor Moon appears (score cue reused from the movie ""R"")",8-3-1,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,8-8-2,"Book prints 8-3-1; CD 8-3 is 衛の回想 (Mamoru's reminiscence; M203 and M204 on the box-set tray card for Disc 8), not a Sailor Moon entrance. The booklet looked M-203 up on the R Movie cue sheet, but M-203 here is actually M-210A on the R Movie cue sheet, on 8-8-2."
 69,3,21,21,M-421,M-421,M-421,"27""半","27.5""","27.5""",幻惑,Genwaku,Bewitchment,9-8-3,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 70,3,22,22,M-422,M-422,M-422,"16""","16""","16""",大ピーンチ!!,Dai-piinchi!!,Big pi-inch!!,9-8-4,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 71,3,23,23,\N,\N,\N,"18""半","18.5""","18.5""",ジングルベル（コロムビアのライブラリー）,Jinguru Beru (Koromubia no raiburarii),Jingle Bells (Columbia library),—,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -287,7 +287,7 @@ id,part_id,ord,m,credit_ja,credit_ro,credit_en,time_ja,time_ro,time_en,desc_ja,d
 286,16,0,1,C-3,C-3,C-3,"18""半","18.5""","18.5""",アバン（M）,Aban (M),Avant-title (M),\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 287,16,1,2,C-1a,C-1a,C-1a,"29""","29""","29""",プロローグ（M）,Puroroogu (M),Prologue (M),\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 288,16,2,3,C-1b,C-1b,C-1b,"10""","10""","10""",サブタイトル（M）,Sabutaitoru (M),Subtitle (M),\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-289,16,3,4,K-1,K-1,K-1,"1'14""","1'14""","1'14""",カセット音楽,Kasetto ongaku,Cassette music,\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+289,16,3,4,K-1,K-1,K-1,"1'14""","1'14""","1'14""",カセット音楽,Kasetto ongaku,Cassette music,\N,\N,0,\N,\N,\N,\N,\N,[Editor's note: Warning: contains subliminal ultrasonic waves. May cause energy loss.],\N,\N,\N,\N,\N,\N
 290,16,4,5,ライブラリー,Raiburarii,Library,"1'00""","1'00""","1'00""",CD音楽,CD ongaku,CD music,\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 291,16,5,6,J-17,J-17,J-17,"17""","17""","17""",アキコに迫る危険,Akiko ni semaru kiken,Danger closing in on Akiko,\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 292,16,6,7,J-22,J-22,J-22,"25""","25""","25""",潜むキュレネ,Hisomu Kyurene,Kyurene lurking,\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -2264,7 +2264,7 @@ id,part_id,ord,m,credit_ja,credit_ro,credit_en,time_ja,time_ro,time_en,desc_ja,d
 2263,191,8,21,I-1,I-1,I-1,"13""","13""","13""",タキシード仮面のテーマ,Takishiido Kamen no teema,Tuxedo Mask's theme,\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 2264,191,9,22,M-129A,M-129A,M-129A,"23""","23""","23""",焦り…,Aseri…,Impatience…,\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 2265,191,10,23,M-315,M-315,M-315,"26""","26""","26""",ウラヌス、ネプチューンのテーマ,"Uranusu, Nepuchuun no teema",Uranus and Neptune's theme,\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-2266,191,11,24,J-18,J-18,J-18,"7""","7""","7""",Br. 危機一発,Br. kiki ippatsu,Bridge: a close call,\N,\N,0,\N,\N,\N,\N,\N,"[Editor's note: 危機一発 is a pun on the idiom 危機一髪, ""by a hair's breadth"", made famous by the Japanese title of the James Bond film From Russia with Love]",https://en.wikipedia.org/wiki/From_Russia_with_Love_(film),\N,\N,\N,\N,\N
+2266,191,11,24,J-18,J-18,J-18,"7""","7""","7""",Br. 危機一発,Br. kiki ippatsu,Bridge: a close call,\N,\N,0,\N,\N,\N,\N,\N,"[Editor's note: 危機一発 is a pun on the idiom 危機一髪, ""by a hair's breadth"", made famous by the Japanese title of the James Bond film From Russia with Love]",https://ja.wikipedia.org/wiki/007/%E5%8D%B1%E6%A9%9F%E4%B8%80%E7%99%BA,\N,\N,\N,\N,\N
 2267,191,12,25,M-308,M-308,M-308,"31""","31""","31""",反撃開始!（格好良く）,Hangeki kaishi! (kakkoyoku),The counterattack begins! (cool),\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 2268,191,13,26,M-106,M-106,M-106,"33""半","33.5""","33.5""",やっぱりの一天気なうさぎ（ハッピーエンド）,Yappari no-ichi-tenki na Usagi (happii endo),"Usagi, carefree as ever (happy ending)",\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 2269,192,0,1,C-3,C-3,C-3,"19""","19""","19""",アバン（M）,Aban (M),Avant-title (M),\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N

@@ -147,7 +147,7 @@ table.bk td:is(.code,.ed,.ref) a.go:not(.ref-link){color:inherit;text-decoration
 table.bk td:is(.code,.ed,.ref) a.go:not(.ref-link):hover{color:var(--accent)}
 /* the same column widths in every table of a kind; the booklet's columns are fixed and the editor's Notes column takes
    the rest, so a wider window gives the notes the room */
-table.bk{table-layout:fixed;min-width:64em} table.bk[data-kind=list]{min-width:108em} table.bk[data-kind=film]{min-width:112em}
+table.bk{table-layout:fixed;min-width:64em} table.bk[data-kind=list]{min-width:108em} table.bk[data-kind=film]{min-width:112em} table.bk[data-cols=filmR]{min-width:123.6em}
 col.w-m{width:3.2em} col.w-no{width:3.6em} col.w-mno{width:7.5em} col.w-credit{width:9em}
 col.w-time{width:5.2em} col.w-cd{width:5.5em} col.w-desc{width:30em} col.w-scene{width:28em}
 /* alternating rows (header rows inside a cue sheet's tbody come in pairs, so the pattern stays even) */
@@ -181,6 +181,9 @@ td.du .du-uses{display:none}   /* the list's source; it shows in the box below *
 .uses-pop ul{list-style:none;margin:0;padding:0}
 .uses-pop .du-use{padding:.2em 0}
 .uses-pop .du-ep{white-space:nowrap}
+.uses-pop .du-group{padding:.2em 0}   /* related pieces that share a phrase: the phrase, then the pieces indented under it */
+.uses-pop .du-gh{color:var(--muted)}
+.uses-pop .du-group ul{padding-left:.6em}
 td.du .du-toggle{display:inline-flex;align-items:center;gap:.35em;padding:.1em .55em .1em .6em;border:1px solid var(--cellborder);border-radius:999px;background:var(--paper);color:var(--ink);font:inherit;font-size:.9em;cursor:pointer;white-space:nowrap}
 td.du .du-toggle:hover{border-color:var(--accent);color:var(--accent)}
 td.du .du-chev{width:.75em;height:.45em;color:var(--accent);transition:transform .15s}
@@ -217,9 +220,9 @@ details.sub[id^="al-"][open]>summary .al-links{display:inline}
 
 /* the editor's columns (CD, Track, Uses, Notes): not in the booklet. They share the table's colours; a line in the
    table's border grey down their left edge sets them apart from the book's own */
-.pl-en{display:none} body.l-en .pl-en{display:inline} body.l-en .pl-ja{display:none}   /* a box-set place: MUSIC 5-21-2, SONG 3-10 with English on */
+.pl-en{display:none} body.l-en .pl-en{display:inline} body.l-en .pl-ja{display:none}   /* a CD place: Music Box · 5-21-2, Song Box · 3-10, SuperS · 12 with English on */
 .artist{color:var(--muted);font-size:.88em;margin-left:.35em}   /* who sings, after a song title */
-col.w-used{width:7.2em} col.w-rel{width:8.4em} col.w-cdtrk{width:28em}   /* Notes (w-notes): the rest */
+col.w-used{width:7.2em} col.w-rel{width:8.4em} col.w-cdtrk{width:28em} col.w-tvno{width:11.6em}   /* Notes (w-notes): the rest */
 /* Uses: just the uses button (its list opens in a box) */
 /* drawn as the right border of the cell before, not a positioned ::before: Safari on iPhone draws position:relative
    table cells at stale offsets once rows above change height (a panel built after a jump) */
@@ -399,3 +402,4 @@ table.bk td.ref .refcode{white-space:nowrap}
 table.bk td.ref .refcode .src{display:inline;color:var(--muted)}
 body.l-en:not(.l-ja):not(.l-ro) :is(td.ref, .uses-pop) .cv:is(.ce, .cj.or-en, .cr.or-en), body.l-ja:not(.l-en):not(.l-ro) :is(td.ref, .uses-pop) .cv.cj,
   body.l-ro:not(.l-en):not(.l-ja) :is(td.ref, .uses-pop) .cv:is(.cr, .cj.or-ro){display:inline}   /* only the lines already showing */
+.uses-pop .du-alb{color:var(--muted)}   /* the album, shown only when two related pieces have the same title */
