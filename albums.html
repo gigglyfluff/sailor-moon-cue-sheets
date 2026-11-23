@@ -13,7 +13,10 @@
       <button class="btn" id="closeAll" type="button"><span class="en1">Collapse all</span></button>
     </div>
     <button class="btn" id="notesBtn" type="button" aria-haspopup="dialog" aria-controls="notesDlg"><span class="en1">Notes</span></button>
-    <a class="btn" id="navLink" href="index.html"><span class="en1">BGM Lists &amp; Cue Sheets</span></a>
+    <a class="btn" data-nav="cues" href="index.html"><span class="en1">TV BGM Lists</span></a>
+    <a class="btn" data-nav="tv" href="tv.html"><span class="en1">TV Cue Sheets</span></a>
+    <a class="btn" data-nav="films" href="movies.html"><span class="en1">Movie Cue Sheets &amp; BGM Lists</span></a>
+    <a class="btn current" data-nav="albums" href="albums.html" aria-current="page"><span class="en1">Albums</span></a>
     <div class="langs" id="langs" role="group" aria-label="Languages shown" translate="no">
       <label class="lt"><input type="checkbox" data-l="ja"><span lang="ja">日本語</span></label>
       <label class="lt"><input type="checkbox" data-l="ro"><span>Rōmaji</span></label>
@@ -25,7 +28,6 @@
   <header class="mast">
     <!-- the static text is what the script writes too, so nothing shifts while the page loads -->
     <div class="plate" id="mastTitle"><span class="en1">Sailor Moon Albums, Annotated</span></div>
-    <div class="lede" id="lede"><p><span class="en1">Album art from the scans on <a href="https://vgmdb.net/" target="_blank" rel="noopener">VGMdb</a>, with thanks!</span></p></div>
   </header>
 
   <!-- sections (the box set, then the other albums) are built by the script -->

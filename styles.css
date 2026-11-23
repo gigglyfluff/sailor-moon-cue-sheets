@@ -7,7 +7,7 @@
   --accent:#c2185b; --accent-ink:#ffffff; --hover:#f6f2fa; --fixbg:#fbe3ec; --flash:#dcf3e6;  /* the jumped-to row: a light green, the complement of the pink accent */
   /* tables: a solid title band, soft column-head and part rows, alternating rows on a light grey grid */
   --band:#2f7fb0; --band-ink:#ffffff; --colhead:#d7e8f4; --part:#eef5fb;  /* blue from the Sailor Moon logo (#3a8abb), deepened slightly so white text reads clearly */
-  --row:#f9fafc; --stripe:#ecf0f4; --rowhover:#eaf4ff; --cellborder:#d3dae1; --guide:#e1e6eb; --tableborder:#bdbdbd; --trackborder:#9ea6ae; --albumcell:#e3e8ed; --albumvline:#eef1f4;
+  --row:#f9fafc; --stripe:#ecf0f4; --rowhover:#eaf4ff; --cellborder:#d3dae1; --tableborder:#bdbdbd; --trackborder:#9ea6ae; --albumcell:#e3e8ed; --albumvline:#eef1f4;
   /* the columns this site added: soft sage greens in their head rows, matching the blues' steps (the data rows stripe as usual) */
   --edgrp:#d3eadb; --edhead:#ebf6ee; --edink:#2d6a43;
   --display:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
@@ -62,8 +62,6 @@ body.l-ja .te{color:var(--muted);font-size:.92em}
 .mast{display:grid;gap:14px;justify-items:start;margin-bottom:20px}
 .plate{font-family:var(--display);font-weight:800;font-size:var(--s3);line-height:1.25;text-wrap:balance;
   padding:.2em 0;text-align:left}
-.lede{color:var(--muted)}
-.lede p{margin:0}
 .btn, .lt span{font:inherit;font-size:var(--s-1);border:1px solid var(--tableborder);background:var(--paper);color:var(--ink);
   border-radius:999px;padding:.35em .9em;cursor:pointer}
 .btn:hover, .lt span:hover{background:var(--hover)}
@@ -76,25 +74,25 @@ details.sec>summary{display:flex;gap:12px;align-items:center;padding-block:8px;
   font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--head);text-wrap:balance}
 details.sec>summary img{height:44px;width:auto;flex:none}
 .sec-body{display:grid;gap:2px;padding-bottom:10px}
-/* tree levels: each level's contents are indented and hang from a guide line that starts under its chevron */
-.sec-body, details.sub>.inner{border-left:1px solid var(--guide)}
 .sec-body{margin-left:.35em;padding-left:0}
 details>summary .chev{font-family:var(--body);font-size:var(--s-1);color:var(--accent);transition:transform .15s;display:inline-block;flex:none}
 details[open]>summary .chev{transform:rotate(90deg)}
 details.sub{border-radius:10px;background:var(--paper)}
 details.sub>summary, .ep-head{font-family:var(--display);font-weight:600;font-size:1rem;color:var(--head)}
 details.sub>summary{display:flex;gap:12px;align-items:center;padding:6px 14px 6px 4px}
+details.sub[id^="film-"]{margin-left:.985rem}
+.sec-body>.flat, .flat~.page-pointer{margin-left:calc(.985rem + 4px)}   /* the BGM lists page: a season's list starts at the left edge of its logo */   /* the movies page: each film's chevron lines up with the left edge of the season's logo */
 details.sub>summary img{height:44px;width:auto}
 details.sub>summary .sum-title{display:flex;flex-direction:column}
 details.sub>summary .sum-meta{margin-top:.15em;font-family:var(--body);font-size:var(--s-1);font-weight:400;color:var(--muted);font-variant-numeric:tabular-nums}   /* 127 tracks, under the title */
 details.sub>summary .meta{margin-left:auto;font-family:var(--body);font-size:var(--s-1);color:var(--muted);font-weight:400;
   font-variant-numeric:tabular-nums;white-space:nowrap}
 .inner{padding:4px clamp(12px,4vw,40px) 18px;display:grid;gap:18px}  /* room either side of the tables */
-details.sub>.inner{margin-left:10px;padding-left:10px}   /* the same gap as between guide lines */
+details.sub>.inner{margin-left:10px;padding-left:10px}
 /* the box set's panel: its cover and links, then its discs, nested as album panels of their own */
-/* an album's contents: no guide line, and its table starts under the cover's left edge (summary padding 4px + chevron + 12px gap) */
+/* an album's contents: its table starts under the cover's left edge (summary padding 4px + chevron + 12px gap) */
 details.sub[id^="al-"]>.inner{border-left:0;margin-left:0;padding-left:29px;padding-right:12px}
-details.sub>.inner.discs{gap:2px;padding-right:0;padding-left:0;border-left:0;margin-left:25px}   /* no guide line; a disc's chevron lines up with the box art's left edge (the box chevron's width + the 12px gap) */
+details.sub>.inner.discs{gap:2px;padding-right:0;padding-left:0;margin-left:25px}   /* a disc's chevron lines up with the box art's left edge (the box chevron's width + the 12px gap) */
 @media (prefers-reduced-motion: reduce){details>summary .chev{transition:none}}
 
 /* BGM list layout */
@@ -257,6 +255,7 @@ body.l-ja .mk.noja{display:none!important}
 body.l-ja .te .mk{display:none}
 
 /* the Back button that appears after a jump */
+.btn.current{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}   /* the bar's button for the page you're on */
 .btn.back{position:fixed;right:16px;bottom:16px;z-index:25;background:var(--accent);color:var(--accent-ink);border-color:var(--accent);
   font-weight:700;box-shadow:0 4px 14px rgb(60 20 40 / .25)}
 .btn.back:hover{background:var(--accent);filter:brightness(1.1)}
@@ -264,6 +263,7 @@ body.l-ja .te .mk{display:none}
 .blank{color:var(--muted)}
 
 /* TV episodes: a clickable list; each entry opens its cue sheet in place */
+.eplist, .eplist+.page-pointer{margin-left:calc(.42rem + 1px)}   /* each episode's chevron lines up with the left edge of the season's logo; the line after the list (the movies are on the Movies page) starts at the same edge */
 .eplist{display:grid;gap:3px;padding-top:4px}
 details.epi{border-radius:8px;scroll-margin-top:84px}
 details.epi>summary{display:grid;grid-template-columns:1em 2.6em minmax(0,1fr);gap:10px;
@@ -298,7 +298,7 @@ details.epi[open]>summary{background:var(--band);color:var(--band-ink);border:1p
 .notes-top b{color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}
 
 /* frozen control bar */
-.bar{position:fixed;top:0;left:0;right:0;z-index:20;padding:10px 16px;   /* fixed, so it holds still however the page scrolls */
+.bar{position:fixed;top:0;left:0;right:0;max-width:100vw;z-index:20;padding:10px 16px;   /* fixed, so it holds still however the page scrolls */
   /* liquid glass: a gloss highlight fading down the top half over a slightly see-through lavender that blurs the page behind,
      with a bright rim along the top edge and a faint shade along the bottom */
   background:linear-gradient(rgb(255 255 255 / .55), rgb(255 255 255 / .12) 50%, rgb(255 255 255 / 0) 51%, rgb(90 40 90 / .08)),
@@ -403,3 +403,10 @@ table.bk td.ref .refcode .src{display:inline;color:var(--muted)}
 body.l-en:not(.l-ja):not(.l-ro) :is(td.ref, .uses-pop) .cv:is(.ce, .cj.or-en, .cr.or-en), body.l-ja:not(.l-en):not(.l-ro) :is(td.ref, .uses-pop) .cv.cj,
   body.l-ro:not(.l-en):not(.l-ja) :is(td.ref, .uses-pop) .cv:is(.cr, .cj.or-ro){display:inline}   /* only the lines already showing */
 .uses-pop .du-alb{color:var(--muted)}   /* the album, shown only when two related pieces have the same title */
+
+/* printing: no top bar (with its where-you-are line and column-head copy), Back button or open uses box, and no room
+   kept at the top for the bar */
+@media print{
+  .bar, .btn.back, #uses-pop{display:none !important}
+  body{padding-top:0}
+}

@@ -1,0 +1,42 @@
+<title>Sailor Moon Movie Cue Sheets &amp; BGM Lists, Annotated</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=optional">
+<link rel="stylesheet" href="styles.css">
+
+<div class="bar" id="bar">
+  <div class="bar-in">
+    <div class="grp">
+      <button class="btn" id="openAll" type="button"><span class="en1">Expand all</span></button>
+      <button class="btn" id="closeAll" type="button"><span class="en1">Collapse all</span></button>
+    </div>
+    <button class="btn" id="notesBtn" type="button" aria-haspopup="dialog" aria-controls="notesDlg"><span class="en1">Notes</span></button>
+    <a class="btn" data-nav="cues" href="index.html"><span class="en1">TV BGM Lists</span></a>
+    <a class="btn" data-nav="tv" href="tv.html"><span class="en1">TV Cue Sheets</span></a>
+    <a class="btn current" data-nav="films" href="movies.html" aria-current="page"><span class="en1">Movie Cue Sheets &amp; BGM Lists</span></a>
+    <a class="btn" data-nav="albums" href="albums.html"><span class="en1">Albums</span></a>
+    <div class="langs" id="langs" role="group" aria-label="Languages shown" translate="no">
+      <label class="lt"><input type="checkbox" data-l="ja"><span lang="ja">日本語</span></label>
+      <label class="lt"><input type="checkbox" data-l="ro"><span>Rōmaji</span></label>
+      <label class="lt"><input type="checkbox" data-l="en"><span>English</span></label>
+    </div>
+  </div>
+</div>
+<div class="wrap" id="app">
+  <header class="mast">
+    <!-- the static text is what the script writes too, so nothing shifts while the page loads -->
+    <div class="plate" id="mastTitle"><span class="en1">Sailor Moon Movie Cue Sheets &amp; BGM Lists, Annotated</span></div>
+  </header>
+
+  <!-- sections (one per season with films: its films' cue sheets) are built by the script -->
+</div>
+
+<!-- All transcription data lives in data.js beside this page (window.MMB_DATA); the page only renders it.
+     A script file, unlike fetch(), also loads when the page is opened straight from disk. -->
+<script src="data.js"></script>
+<!-- the albums the CD column cites, with the box-set discs' track titles (window.MMB_ALBUMS), for the editor's CD and Track columns; not from the booklet -->
+<script src="albums.js"></script>
+<script>window.MMB_VIEW = 'films';</script>
+<script src="app.js"></script>
