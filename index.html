@@ -1,4 +1,4 @@
-<title>Sailor Moon BGM Lists &amp; Cue Sheets, Annotated</title>
+<title>Sailor Moon TV BGM Lists, Annotated</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,10 @@
       <button class="btn" id="closeAll" type="button"><span class="en1">Collapse all</span></button>
     </div>
     <button class="btn" id="notesBtn" type="button" aria-haspopup="dialog" aria-controls="notesDlg"><span class="en1">Notes</span></button>
-    <a class="btn" id="navLink" href="albums.html"><span class="en1">Albums</span></a>
+    <a class="btn current" data-nav="cues" href="index.html" aria-current="page"><span class="en1">TV BGM Lists</span></a>
+    <a class="btn" data-nav="tv" href="tv.html"><span class="en1">TV Cue Sheets</span></a>
+    <a class="btn" data-nav="films" href="movies.html"><span class="en1">Movie Cue Sheets &amp; BGM Lists</span></a>
+    <a class="btn" data-nav="albums" href="albums.html"><span class="en1">Albums</span></a>
     <div class="langs" id="langs" role="group" aria-label="Languages shown" translate="no">
       <label class="lt"><input type="checkbox" data-l="ja"><span lang="ja">日本語</span></label>
       <label class="lt"><input type="checkbox" data-l="ro"><span>Rōmaji</span></label>
@@ -24,10 +27,10 @@
 <div class="wrap" id="app">
   <header class="mast">
     <!-- the static text is what the script writes too, so nothing shifts while the page loads -->
-    <div class="plate" id="mastTitle"><span class="en1">Sailor Moon BGM Lists &amp; Cue Sheets, Annotated</span></div>
+    <div class="plate" id="mastTitle"><span class="en1">Sailor Moon TV BGM Lists, Annotated</span></div>
   </header>
 
-  <!-- sections (Notes, then one per season) are built by the script -->
+  <!-- sections (one per season: its BGM list) are built by the script -->
 </div>
 
 <!-- All transcription data lives in data.js beside this page (window.MMB_DATA); the page only renders it.

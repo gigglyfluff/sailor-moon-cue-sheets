@@ -1,11 +1,18 @@
 /* The page script for index.html (BGM lists and cue sheets) and albums.html (the albums and their tracks).
    The pages set window.MMB_VIEW before loading it; everything above the view-specific part is shared. */
 (async () => {
-/* which page this is: 'cues' (index.html) or 'albums' (albums.html). Row links on the albums page go to index.html.
-   A link to the other page carries ?from=, so the page it opens offers "← Back" (see backBtn); the browser's referrer
-   would do, but it is empty for pages opened from a file. */
-const VIEW = window.MMB_VIEW === 'albums' ? 'albums' : 'cues', HOME = VIEW === 'cues' ? '' : 'index.html?from=albums';
-const ALBUMS_PAGE = 'albums.html?from=bgm';
+/* which page this is: 'cues' (index.html: the TV series' BGM lists), 'tv' (tv.html: the TV cue sheets), 'films'
+   (movies.html: the movies' cue sheets, which double as their BGM lists) or 'albums' (albums.html). A link to another page
+   carries ?from=, so the page it opens offers "← Back" (see backBtn); the browser's referrer would do, but it is empty for
+   pages opened from a file. */
+const VIEW = ['albums', 'tv', 'films'].includes(window.MMB_VIEW) ? window.MMB_VIEW : 'cues';
+const PAGE = {cues: 'index.html', tv: 'tv.html', films: 'movies.html', albums: 'albums.html'};
+const pageHref = v => v === VIEW ? '' : `${PAGE[v]}?from=${VIEW}`;
+const HOME = pageHref('cues'), ALBUMS_PAGE = pageHref('albums');
+/* the page a row lives on: TV cue-sheet rows (r-TV-98-B-19) and episodes (ep98, sp) on tv.html; film rows (q-MOVIE-R-6)
+   and the films' instrumentals lists (ROW_PANEL marks them) on movies.html; the BGM lists on index.html */
+const pageOfRow = id => /^(r-|ep\d+$|sp$)/.test(id) ? 'tv' : /^q-/.test(id) || ROW_PANEL[id]?.film ? 'films' : 'cues';
+const rowHref = id => pageHref(pageOfRow(id)) + '#' + id;
 /* Browser auto-translate. The Japanese and romaji are marked translate="no", so translation can only ever change the
    English. A reader whose browser already reads English gets no offer to translate (Chrome otherwise sees the hidden
    Japanese lines and offers to translate the page into English); everyone else can still translate the English. */
@@ -40,14 +47,14 @@ if (!D) {
 }
 const UI = {
   // the site's own labels are English only; the booklet's and the CDs' text keeps its Japanese (and romaji)
-  mast: 'Sailor Moon BGM Lists & Cue Sheets, Annotated', back: 'Back', notes: 'Notes', close: 'Close',
+  mast: 'Sailor Moon TV BGM Lists, Annotated', tvMast: 'Sailor Moon TV Cue Sheets, Annotated', filmsMast: 'Sailor Moon Movie Cue Sheets & BGM Lists, Annotated', back: 'Back', notes: 'Notes', close: 'Close',
   openAll: 'Expand all', closeAll: 'Collapse all',
   part: p => p==='TOP' ? ['TOPパート','TOP paato','Top part'] : [p+'パート',p+' paato',p+' part'],
   // the book's columns: h = header as [Japanese (as printed), romaji, English], c = the column's class
-  epHead: [{h: ['M','M','M'], c: 'num'}, {h: ['曲の内容','Kyoku no naiyou','Scene / music']}, {h: ['クレジット','Kurejitto','Cue'], c: 'code'}, {h: ['秒','Byou','Sec.'], c: 'tm'}],
+  epHead: [{h: ['M','M','M'], c: 'num'}, {h: ['曲の内容','Kyoku no naiyou','Scene / music']}, {h: ['クレジット','Kurejitto','Credit'], c: 'code'}, {h: ['秒','Byou','Sec.'], c: 'tm'}],
   bgmHead: [{h: ['M-NO.','M-NO.','M-NO.'], c: 'code'}, {h: ['TIME','TIME','Time'], c: 'tm'}, {h: ['内容','Naiyou','Description']}, {h: ['収録CD','Shuuroku CD','CD'], c: 'num'}],
   qHead: [{h: ['NO.','NO.','No.'], c: 'num'}, {h: ['M-NO.','M-NO.','M-NO.'], c: 'code'}, {h: ['TIME','TIME','Time'], c: 'tm'}, {h: ['内容','Naiyou','Description']}, {h: ['収録CD','Shuuroku CD','CD'], c: 'num'}],
-  albums: 'Albums', albumsMast: 'Sailor Moon Albums, Annotated', cuesNav: 'BGM Lists & Cue Sheets',   // cuesNav: the albums page's link back
+  albums: 'Albums', albumsMast: 'Sailor Moon Albums, Annotated', cuesNav: 'TV BGM Lists', tvNav: 'TV Cue Sheets', filmsNav: 'Movie Cue Sheets & BGM Lists',   // the bar's links to the pages
 };
 /* the editor's columns, after the book's own: not in the booklet */
 const ED_HEAD = {
@@ -94,7 +101,7 @@ const fixSpan = (printed, mark) => `<span class="fixed"><s>${printed}</s><mark>$
 /* a misprint inside Japanese text: f = {p: printed, c: corrected, n: note, u: url | g: in-page target} */
 /* a link to a row elsewhere on the page, by the row's id (cue-M-58 in a BGM list, q-MOVIE-S-12 in a film cue sheet);
    the click handler at the end opens the row's panel first */
-const goLink = (id, text, note) => `<a class="go" href="${HOME}#${esc(id)}" data-go="${esc(id)}" title="${esc(note)}">${esc(text)}</a>`;
+const goLink = (id, text, note) => `<a class="go" href="${esc(rowHref(id))}" data-go="${esc(id)}" title="${esc(note)}">${esc(text)}</a>`;
 /* which panel holds each linkable row: {panel, section} */
 const ROW_PANEL = {};
 function fixLink(f){
@@ -124,22 +131,23 @@ function tm(t, f, k){
 }
 
 /* ---------- static labels ---------- */
-label('mastTitle', VIEW === 'albums' ? UI.albumsMast : UI.mast);
-/* the bar's link to the other page */
-{ const nav = document.getElementById('navLink');
-  if (nav) { nav.innerHTML = en(esc(VIEW === 'albums' ? UI.cuesNav : UI.albums)); nav.href = VIEW === 'albums' ? HOME : ALBUMS_PAGE; } }
+label('mastTitle', {albums: UI.albumsMast, tv: UI.tvMast, films: UI.filmsMast, cues: UI.mast}[VIEW]);
+/* the bar's links to the four pages, in page order: TV BGM Lists, TV Cue Sheets, Movie Cue Sheets & BGM Lists, Albums; this
+   page's own button is marked (styles.css colours it) */
+{ const NAV = {cues: UI.cuesNav, tv: UI.tvNav, films: UI.filmsNav, albums: UI.albums};
+  document.querySelectorAll('#bar [data-nav]').forEach(a => { const v = a.dataset.nav, here = v === VIEW;
+    a.innerHTML = en(esc(NAV[v])); a.href = here ? PAGE[v] : pageHref(v); a.classList.toggle('current', here);
+    if (here) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); }); }
 /* the intro line under the title; the notes are in the Editor's Notes panel under Notes */
 const ED_NOTES = [
-  'The Memorial Music Box booklet contents are transcribed as printed.',
-  'Columns that are not in the booklet have been added in some places (shaded green, under an “Added by this site” heading):<ul class="ed-sub"><li>Notes, with corrections and their sources</li><li>CD / Track, showing which disc and track each BGM-list piece is on, with any corrections applied (the cover links to the album and the track number to the track, on the Albums page)</li><li>Uses, listing every episode and film that uses a piece</li></ul>',
-  'Japanese episode titles are as printed in the booklet. A few differ from the official titles on <a href="https://lineup.toei-anim.co.jp/ja/tv/sailor_moon/episode/" target="_blank" rel="noopener">Toei Animation\'s site</a>, perhaps because they changed during production. These also differ from the episode list on Japanese Wikipedia:<ul class="ed-sub"><li>Episode 18: 進悟純情 (official: 進悟の純情), "Shingo\'s pure heart": the booklet leaves out the particle の, with the same meaning</li><li>Episode 20: 幽霊もよ！ (official: 幽霊もよ), "…and ghosts too": the booklet adds an exclamation mark at the end</li><li>Episode 29: 大混戦, "a big free-for-all" (official: 大混線, "a big tangle of crossed lines", a pun on the love quadrangle getting its wires crossed); both are read daikonsen</li><li>Episode 33: 最後のセーラー戦士　ヴィーナス登場 (official: 最後のセーラー戦士、ヴィーナス登場), "The last Sailor Guardian, Venus appears": a space where the official title has a comma</li><li>Episode 102: 絶対絶命 (official: 絶体絶命), "in a desperate situation": both are read zettai zetsumei, but 絶体絶命 is the correct spelling and 絶対絶命 a common misspelling</li><li>Episode 163: 捕らえられた (official: 捕えられた), "captured": two accepted spellings of the same word</li><li>Episode 179: 敵？味方！, "Enemy? Ally!" (official: 敵？味方？, "Enemy? Ally?"): the booklet answers the question the official title leaves open</li><li>Episode 194: 銀河の聖戦！ (official: 銀河の聖戦), "The holy war of the galaxy": the booklet adds an exclamation mark</li></ul>',
+  'The BGM Lists and Cue Sheets are transcribed as printed in the Sailor Moon Memorial Music Box booklet. Many thanks to <a href="https://sailormusic.net/guide-to-sailor-moon-music-cues/" target="_blank" rel="noopener">sailormusic.net</a> for providing the scans of the booklet!<ul class="ed-sub"><li>Columns that are not in the booklet have been added in some places (shaded green, under an “Added by this site” heading):<ul class="ed-sub"><li>Notes, with corrections and their sources</li><li>CD / Track, showing which disc and track each piece is on, with any corrections applied (the cover links to the album and the track number to the track, on the Albums page)</li><li>Uses, listing every episode and film that uses a piece</li><li>Related, linking each piece to its other versions (full, karaoke and instrumental versions, edits, other recordings) and to the songs whose melodies it uses</li></ul></li><li>半 in the original means "and a half": 28"半 is 28.5 seconds. When the 日本語 button is off, times are shown as decimals.</li></ul>',
+  'If you spot an error, please <a href="https://github.com/gigglyfluff/sailor-moon-cue-sheets/issues/new" target="_blank" rel="noopener">open an issue on GitHub</a> to report it (you\'ll need a free GitHub account).',
+  'Thanks to <a href="https://vgmdb.net/" target="_blank" rel="noopener">VGMdb</a> for providing high-quality scans of the album covers, booklets, and tray cards. Our Japanese album and track names are transcribed directly from those scans.',
+  'Some of the English and romaji track titles reference the ones on <a href="https://sailormusic.net/anime/memorial-music-box/" target="_blank" rel="noopener">sailormusic.net</a> and <a href="https://vgmdb.net/album/26875" target="_blank" rel="noopener">VGMdb</a>, edited to match this site\'s style.'];
+/* the TV cue sheets page's own Notes section: how the episode titles are given */
+const EP_TITLE_NOTES = [
   'English episode titles are Viz Media\'s official translations, as listed on <a href="https://www.hulu.com/series/sailor-moon-4e1c9108-f973-48fb-8824-a69280ca0438" target="_blank" rel="noopener">Hulu</a>.',
-  '半 in the original means "and a half": 28"半 is 28.5 seconds. When the 日本語 button is off, times are shown as decimals.',
-  'Many thanks to <a href="https://sailormusic.net/guide-to-sailor-moon-music-cues/" target="_blank" rel="noopener">sailormusic.net</a> for providing the scans of the booklet! The site also has information about the library tracks (ライブラリー) credited in the cue sheets.',
-  'Many of the romaji and English track titles are based on <a href="https://sailormusic.net/anime/memorial-music-box/" target="_blank" rel="noopener">sailormusic.net</a> and <a href="https://vgmdb.net/album/26875" target="_blank" rel="noopener">VGMdb</a>, edited to match this site\'s style. The box set\'s Japanese track titles come from the tray-card scans on VGMdb, and every album\'s cover and the other albums\' track titles from VGMdb. Thank you to both!'];
-const ALBUMS_ART = 'Album art from the scans on <a href="https://vgmdb.net/" target="_blank" rel="noopener">VGMdb</a>, with thanks!';
-// the main page has no line under its title; the albums page thanks VGMdb
-{ const lede = document.getElementById('lede'); if (lede && VIEW === 'albums') lede.innerHTML = `<p>${en(ALBUMS_ART)}</p>`; }   // the same as albums.html has, so nothing shifts
+  'Japanese episode titles are as printed in the booklet. A few differ from the official titles on <a href="https://lineup.toei-anim.co.jp/ja/tv/sailor_moon/episode/" target="_blank" rel="noopener">Toei Animation\'s site</a>, perhaps because they changed during production. These also differ from the episode list on Japanese Wikipedia:<ul class="ed-sub"><li>Episode 18: 進悟純情 (official: 進悟の純情), "Shingo\'s pure heart": the booklet leaves out the particle の, with the same meaning</li><li>Episode 20: 幽霊もよ！ (official: 幽霊もよ), "…and ghosts too": the booklet adds an exclamation mark at the end</li><li>Episode 29: 大混戦, "a big free-for-all" (official: 大混線, "a big tangle of crossed lines", a pun on the love quadrangle getting its wires crossed); both are read daikonsen</li><li>Episode 33: 最後のセーラー戦士　ヴィーナス登場 (official: 最後のセーラー戦士、ヴィーナス登場), "The last Sailor Guardian, Venus appears": a space where the official title has a comma</li><li>Episode 102: 絶対絶命 (official: 絶体絶命), "in a desperate situation": both are read zettai zetsumei, but 絶体絶命 is the correct spelling and 絶対絶命 a common misspelling</li><li>Episode 163: 捕らえられた (official: 捕えられた), "captured": two accepted spellings of the same word</li><li>Episode 179: 敵？味方！, "Enemy? Ally!" (official: 敵？味方？, "Enemy? Ally?"): the booklet answers the question the official title leaves open</li><li>Episode 194: 銀河の聖戦！ (official: 銀河の聖戦), "The holy war of the galaxy": the booklet adds an exclamation mark</li></ul>'];
 const noteList = items => `<ul class="ednotes">${items.map(h => `<li>${en(h)}</li>`).join('')}</ul>`;
 /* production terms the cue sheets and lists use throughout: [term as printed, explanation ja (not shown), term en, explanation en].
    Shown in English, with the booklet's term beside each. */
@@ -258,8 +266,13 @@ function rowNotes(r){
     const o = parseCd(place);
     return o && ALBUMS[o.code]?.t[o.key] ? `${pre}<a class="go" href="${ALBUMS_PAGE}#${trackId(o.code, o.key)}" title="Show on the albums page">${place}</a>` : m;
   });
-  if (r.cdx) mark.cd = add(`<b>${extOr(r.cdu, r.cdx === NO_CD ? 'Not on the CD' : 'CD ' + esc(r.cdx), '')}</b>${r.cd ? printedAs(r.cd) : ' <span class="was">(no CD printed)</span>'}. `
-    + cdRefs(noteText(r.cdn.replace(/^Book prints [^;]+;\s*/, '').replace(/^./, c => c.toUpperCase()))));
+  // the corrected place links to its track on the albums page; a source address (cdu) goes on the catalog number the
+  // note names (CODC-1087), or failing one, on the corrected place
+  const at = r.cdx && r.cdx !== NO_CD && parseCd(r.cdx), track = at && ALBUMS[at.code]?.t[at.key];
+  const cat = h => r.cdu ? h.replace(/\b([A-Z]{2,5}-\d{3,5})\b/, m => ext(r.cdu, m, '')) : h;
+  const place = r.cdx === NO_CD ? 'Not on the CD' : 'CD ' + esc(r.cdx);
+  if (r.cdx) mark.cd = add(`<b>${track ? `<a class="go" href="${ALBUMS_PAGE}#${trackId(at.code, at.key)}" title="Show on the albums page">${place}</a>` : extOr(r.cdu, place, '')}</b>${r.cd ? printedAs(r.cd) : ' <span class="was">(no CD printed)</span>'}. `
+    + cat(cdRefs(noteText(r.cdn.replace(/^Book prints [^;]+;\s*/, '').replace(/^./, c => c.toUpperCase())))));
   else if (r.cdn) mark.cd = add(cdRefs(noteText(r.cdn)));   // a note on a CD entry that stands as printed
   return {items, mark};
 }
@@ -271,10 +284,6 @@ const notesCell = n => `<td class="ed notes">${n.items.map((h, i) => `<p>${mk(i 
 const dcells = (a, f, kf, kn) => `<td>${stack(a, (s, l) =>
   (l === 'ja' && f ? esc(s).replace(esc(f.p), esc(f.p) + mk(kf)) : esc(s)) + (l !== 'ja' ? mk(kf, 'end noja') : '') + mk(kn, 'end'))}</td>`;
 const cdCell = (r, k) => esc(r.cd) + mk(k);
-/* a BGM-list description that names another piece (M-344 SAXヌキ, "continues from H-1") links it to that piece's row;
-   only in the BGM lists, where a code always means a BGM-list piece (in a cue sheet, M-9 is that sheet's own cue 9) */
-const pieceLinks = (html, self) => html.replace(/(?<![\w-])((?:M|[A-J])-\d+[A-Za-z]?\d*'?)(?![\w])(?![^<]*>)/g,
-  (m, code) => code !== self && ROW_PANEL[cueId(code)] ? goLink(cueId(code), code, goTitle(cueId(code))) : m);
 /* a BGM-list code: as printed, or with its variant word in each language (r.cn: M-16 ラジオトーン / M-16 radio tone) */
 function codeCell(r, k){
   return (r.cn ? stack(r.cn) : esc(r.c)) + mk(k);
@@ -367,7 +376,7 @@ function relTarget(key){
   const html = code ? (codeName(key) ? stack(codeName(key)) : esc(key)) : `${tname ? esc(tname) : placeLabel(key)}${who ? ` (${esc(who)})` : ''}`;
   const id = code ? cueId(key) : 'cue-cd-' + key;
   if (VIEW === 'albums' && track) return {label, html, href: '#' + trackId(o.code, o.key)};
-  if (ROW_PANEL[id]) return {label, html, href: HOME + '#' + id, go: id};
+  if (ROW_PANEL[id]) return {label, html, href: rowHref(id), go: id};
   if (track) return {label, html, href: ALBUMS_PAGE + '#' + trackId(o.code, o.key)};
   return {label, html};
 }
@@ -509,7 +518,7 @@ function catHtml(c, heart = true){
   c.r.forEach(r => {
     const id = bgmRowId(r), n = rowNotes(r);
     html += `<tr${id ? ` id="${esc(id)}"` : ''}><td class="code">${codeCell(r, n.mark.code)}</td><td class="tm" translate="no">${tm(r.t)}</td>`
-      + `${pieceLinks(dcells(r.d, r.dx, n.mark.dx, n.mark.dn), r.c)}<td class="num" translate="no">${r.cd ? cdCell(r, n.mark.cd) : '<span class="blank"></span>' + mk(n.mark.cd)}</td>${cdCells(r.cdx || r.cd, r.c)}`
+      + `${dcells(r.d, r.dx, n.mark.dx, n.mark.dn)}<td class="num" translate="no">${r.cd ? cdCell(r, n.mark.cd) : '<span class="blank"></span>' + mk(n.mark.cd)}</td>${cdCells(r.cdx || r.cd, r.c)}`
       + `${id ? usedCell(id) : '<td class="ed"></td>'}${relCell(relKeys(r), 'ed du')}${notesCell(n)}</tr>`;
   });
   return html + `</tbody></table></div>${noteBlock(bookNotes.filter(n => n.c === c.id))}${pageTag(c.pp[0] ?? c.p, c.pp[1])}${heart ? '<div class="heart" aria-hidden="true">❤</div>' : ''}</div>`;
@@ -605,7 +614,7 @@ function subDetails(id, summaryHtml, meta, render){
 /* open a section and one of its panels, building the panel's tables immediately */
 function openPanel(secId, panelId){
   document.getElementById(secId).open = true;
-  const p = document.getElementById(panelId); p.open = true; p.build();
+  const p = panelId && document.getElementById(panelId); if (p) { p.open = true; p.build(); }
 }
 /* jump to an element: instantly, then again once the layout has settled (opened panels and late-loading
    images can shift it), and flash it so the eye finds it */
@@ -667,11 +676,14 @@ const legendHtml = () => `<ul class="kome">${LEGEND104.map(legendGroup).join('')
 
 /* "127 tracks": the number of rows across a list's sections or a film's parts */
 const trackCount = groups => { const n = groups.reduce((a, g) => a + g.r.length, 0); return en(`${n} ${n === 1 ? 'track' : 'tracks'}`); };
-/* a BGM list panel, headed with the list's own title from the book (e.g. …セーラースターズ　BGM追加曲リスト) */
-function bgmPanel(s){
-  // inside a season section the English heading drops the show's name (the section heading carries it)
-  const head = s.id === 'SM' ? ['BGMリスト', 'BGM risuto', 'BGM List'] : ['BGM追加曲リスト', 'BGM tsuika-kyoku risuto', 'Additional BGM List'];
-  return subDetails('bgm-' + s.id, tx(head), trackCount(s.cats), () => renderBgm(s));
+/* the BGM Lists page: a season's list straight under its heading, with no panel of its own; it is built the first time
+   the season opens (build() also lets a jump build it right away, as for a panel) */
+function bgmFlat(s, sec){
+  const d = document.createElement('div');
+  d.className = 'flat'; d.id = 'bgm-' + s.id;
+  d.build = () => { if (!d.dataset.done) { d.innerHTML = renderBgm(s); d.dataset.done = 1; fixSpanBorders(d); measureXcols(d); setTimeout(() => measureXcols(d), 300); } };
+  sec.addEventListener('toggle', () => { if (sec.open) d.build(); });
+  return d;
 }
 
 /* a film's combined cue sheet and music list */
@@ -695,16 +707,13 @@ function epTitle(w){
   const [j, r, e] = w.h;
   return tx([j.replace(/^第\d+話\s*/, ''), r.replace(/^Dai \d+-wa:\s*/, ''), e.replace(/^Episode \d+:\s*/, '')], w.hx);
 }
-/* a season's TV cue sheets: headed with the book's heading (…音楽ロール（Qシート）表), opening to a clickable episode list */
-function tvPanel(sid){
+/* a season's TV cue sheets (tv.html): its clickable episode list, straight under the season's heading */
+function tvList(sid){
   const eps = D.works.filter(w => (w.type === 'tv' || w.type === 'special') && w.s === sid);
-  const tvN = eps.filter(w => w.type === 'tv').length, spN = eps.length - tvN;
-  const count = `${tvN} ${tvN === 1 ? 'episode' : 'episodes'}` + (spN ? ` and ${spN} ${spN === 1 ? 'special' : 'specials'}` : '');
-  return subDetails('tv-' + sid, tx(['TVシリーズ　音楽ロール（Qシート）表', 'TV shiriizu ongaku rooru (Q shiito) hyou', 'TV Cue Sheets']), en(count), () =>
-    '<div class="eplist">' + eps.map(w =>
+  return '<div class="eplist">' + eps.map(w =>
       headings.filter(h => h.w === w.id).map(h => `<div class="ep-head">${tx(shortHead(headPart(h.x)))}</div>`).join('') +
       `<details class="epi" id="${w.n ? 'ep' + w.n : 'sp'}" data-w="${w.id}"><summary><span class="chev">▶</span>`
-      + `<span class="epn" translate="no">${w.n ?? 'SP'}</span><span class="ept">${epTitle(w)}</span></summary><div class="epbody"></div></details>`).join('') + '</div>');
+      + `<span class="epn" translate="no">${w.n ?? 'SP'}</span><span class="ept">${epTitle(w)}</span></summary><div class="epbody"></div></details>`).join('') + '</div>';
 }
 
 /* Notes: the book's notes that apply across seasons */
@@ -715,13 +724,16 @@ function tvPanel(sid){
   const parts = [];
   const noteSec = (id, title, render) => parts.push({id, title, html: render()});
   noteSec('ed-notes', en('About This Site'), () => noteList(ED_NOTES));
+  if (VIEW === 'tv') noteSec('ep-title-notes', en('Episode Title Notes'), () => noteList(EP_TITLE_NOTES));
   noteSec('glossary', en('Glossary'), glossary);
-  noteSec('bgm-notes', en('BGM List Notes'), () => `<div class="notes-top">${legendHtml()}</div>`);
+  if (VIEW === 'cues' || VIEW === 'films') noteSec('bgm-notes', en('BGM List Notes'), () => `<div class="notes-top">${legendHtml()}</div>`);   // the p.104 legend: the BGM lists, and the movie tables that double as them
+  // p.124's note on where the TV cue sheets come from heads the TV cue sheets page instead
   const tvNote = bookNotes.find(n => n.p === 124);
-  if (tvNote) noteSec('tv-notes', en('TV Cue Sheet Notes'), () => `<div class="notes-top">${noteBullets([tvNote])}</div>`);
+  if (tvNote && VIEW === 'tv') document.querySelector('.mast').insertAdjacentHTML('beforeend', `<div class="page-note">${noteBlock([tvNote])}</div>`);
   // p.118: the note on how the film tables work applies to every film
   const filmNotes = plainNotes.filter(n => n.s === 'MOVIE' && !n.w && !n.c);
-  if (filmNotes.length) noteSec('film-notes', en('Movie Notes'), () => `<div class="notes-top">${noteBullets(filmNotes)}</div>`);
+  // p.118's note on how the film tables work heads the movies page instead
+  if (filmNotes.length && VIEW === 'films') document.querySelector('.mast').insertAdjacentHTML('beforeend', `<div class="page-note">${noteBlock(filmNotes)}</div>`);
   dlg.innerHTML = `<div class="dlg-head"><h2 id="notesDlgH">${en(UI.notes)}</h2>`
     + `<nav class="dlg-toc">${parts.map(p => `<a href="#${p.id}" data-note="${p.id}">${p.title}</a>`).join('')}</nav>`
     + `<button class="btn dlg-x" type="button">${en(UI.close)}</button></div>`
@@ -743,14 +755,17 @@ function tvPanel(sid){
 /* each film belongs with the season it came out alongside (FILMS) */
 D.bgm.forEach(b => { if (b.id !== 'MOVIE') b.cats.forEach(c => c.r.forEach(r => { const id = bgmRowId(r); if (id) ROW_PANEL[id] = {section: 'sec-' + b.id, panel: 'bgm-' + b.id}; })); });
 /* the film instrumentals list sits inside each film's panel */
-D.works.forEach(w => { if (FILMS[w.id]) filmInstrumentals(w).forEach(c => c.r.forEach(r => { const id = bgmRowId(r); if (id) ROW_PANEL[id] = {section: 'sec-' + FILMS[w.id].season, panel: 'film-' + w.id}; })); });
+D.works.forEach(w => { if (FILMS[w.id]) filmInstrumentals(w).forEach(c => c.r.forEach(r => { const id = bgmRowId(r); if (id) ROW_PANEL[id] = {section: 'sec-' + FILMS[w.id].season, panel: 'film-' + w.id, film: true}; })); });
 D.works.forEach(w => { if (FILMS[w.id]) w.parts.forEach(p => p.r.forEach(r => { ROW_PANEL[filmRowId(w, r)] = {section: 'sec-' + FILMS[w.id].season, panel: 'film-' + w.id}; })); });
 /* TV cue-sheet rows (for Uses links and the Back button) and the episodes themselves (#ep98) */
 D.works.forEach(w => { if (w.type !== 'movie') {
-  const at = {section: 'sec-' + w.s, panel: 'tv-' + w.s, ep: w.n ? 'ep' + w.n : 'sp'};
+  const at = {section: 'sec-' + w.s, ep: w.n ? 'ep' + w.n : 'sp'};   // no panel: the episode list sits right under the season
   ROW_PANEL[at.ep] = at;
   w.parts.forEach(p => p.r.forEach(r => { ROW_PANEL[ROW_ID.get(r)] = at; }));
 } });
+/* the TV and film cue sheets used to be on index.html: an old link to one of their rows goes on to its page */
+{ const page = pageOfRow(decodeURIComponent(location.hash.slice(1)));
+  if (VIEW === 'cues' && location.hash && page !== 'cues') { location.replace(PAGE[page] + (location.search || '?moved') + location.hash); return; } }   // ?moved: not a visit from another page
 /* ---------- the albums page ----------
    Every album in albums.js, each track with the pieces the BGM lists and film tables place on it (1-1-1 = disc 1,
    track 1, first piece): M-NO., time and description as printed, and where each is used. A film row that reuses a cue
@@ -919,7 +934,7 @@ const REF_ICON = '<svg class="ref-i" viewBox="0 0 24 24" aria-hidden="true"><cir
 const REF_SEP = '<span class="refsep" aria-hidden="true"> › </span>';
 // a reference link: the icon and its text together, one link (cls: more classes for the link itself)
 const refLink = (id, title, body, cls = '') =>
-  `<a class="go ref-link${cls ? ' ' + cls : ''}" href="${HOME}#${esc(id)}" data-go="${esc(id)}" title="${esc(title)}"><span class="ref-go">${REF_ICON}</span>${body}</a>`;
+  `<a class="go ref-link${cls ? ' ' + cls : ''}" href="${esc(rowHref(id))}" data-go="${esc(id)}" title="${esc(title)}"><span class="ref-go">${REF_ICON}</span>${body}</a>`;
 /* ---------- expandable columns ----------
    A column whose text never wraps: past the column's limit (max, any CSS length) a cell is cut off with …, and an icon at
    its right edge marks it. Clicking (or Enter on) a cut-off cell shows that whole column of its table in full, one line per
@@ -988,6 +1003,11 @@ document.addEventListener('keydown', e => {
     if (on) bar.classList.add('compact');
   };
   compact(false);
+  /* on a phone, an open table makes the page wider than the screen and you pan across it: the bar is held to the screen's
+     width (styles.css) and here follows the part of the page in view, so its buttons stay on screen */
+  const vv = window.visualViewport;
+  if (vv) { const follow = () => { bar.style.transform = vv.offsetLeft ? `translateX(${vv.offsetLeft}px)` : ''; };
+    vv.addEventListener('scroll', follow); vv.addEventListener('resize', follow); }
   let marks = [], key = '', pinned = null, pinLang = '';
   function update(){
     // the bar at full size, and this line's own height below it
@@ -1142,14 +1162,23 @@ function revealAlbum(id){
   return true;
 }
 
-/* one section per season: its BGM list, its TV cue sheets, then its films */
+/* one section per season: on index.html its BGM list; on tv.html its TV cue sheets; on movies.html its films */
+const pointer = (html, id) => { const p = document.createElement('p'); p.className = 'note page-pointer'; p.id = id; p.innerHTML = en(html); return p; };   // id: so Back from the page it links to returns here
 if (VIEW === 'albums') renderAlbums();
 else ['SM','R','S','SS','ST'].forEach(sid => {
+  const films = D.works.filter(w => w.type === 'movie' && FILMS[w.id]?.season === sid);
+  if (VIEW === 'films' && !films.length) return;   // the movies page has only the seasons with films
   const logo = `<img src="${D.logos[sid]}" alt="${esc(D.logoAlt[sid])}">`;
   const box = section('sec-' + sid, logo + tx(D.ser[sid]));
-  const list = D.bgm.find(b => b.id === sid); if (list) box.appendChild(bgmPanel(list));
-  box.appendChild(tvPanel(sid));
-  D.works.filter(w => w.type === 'movie' && FILMS[w.id]?.season === sid).forEach(w => box.appendChild(filmPanel(w)));
+  if (VIEW === 'films') films.forEach(w => box.appendChild(filmPanel(w)));
+  else if (VIEW === 'tv') {
+    box.insertAdjacentHTML('beforeend', tvList(sid));
+    if (films.length) box.appendChild(pointer(`The ${films.length > 1 ? 'movies\' cue sheets are' : 'movie\'s cue sheet is'} on the <a href="${pageHref('films')}#sec-${sid}">Movie Cue Sheets &amp; BGM Lists</a> page.`, 'to-films-' + sid));
+  } else {
+    const list = D.bgm.find(b => b.id === sid); if (list) box.appendChild(bgmFlat(list, box.parentNode));
+    box.appendChild(pointer(`The TV cue sheets are on the <a href="${pageHref('tv')}#sec-${sid}">TV Cue Sheets</a> page.`, 'to-tv-' + sid));
+    if (films.length) box.appendChild(pointer(`The ${films.length > 1 ? 'movies\' BGM lists are' : 'movie\'s BGM list is'} on the <a href="${pageHref('films')}#sec-${sid}">Movie Cue Sheets &amp; BGM Lists</a> page.`, 'to-films-' + sid));
+  }
 });
 /* an episode's cue sheet is built the first time it is opened */
 function buildEpisode(d){
@@ -1193,10 +1222,11 @@ backBtn.onclick = () => history.back();
 document.body.appendChild(backBtn);
 const pageOf = path => path.replace(/index\.html$/, '');
 const tagged = new URLSearchParams(location.search).has('from') && history.length > 1;
-const fromOther = tagged || (() => { try { const r = new URL(document.referrer); return r.origin === location.origin && pageOf(r.pathname) !== pageOf(location.pathname); } catch (e) { return false; } })();
+const moved = new URLSearchParams(location.search).has('moved');
+const fromOther = tagged || !moved && (() => { try { const r = new URL(document.referrer); return r.origin === location.origin && pageOf(r.pathname) !== pageOf(location.pathname); } catch (e) { return false; } })();
 if (fromOther && !history.state?.depth) history.replaceState({...history.state, depth: 1}, '');
 // tidy the address (a copied link shouldn't carry the tag); some browsers refuse this for files, which is harmless
-if (tagged) { try { const u = new URL(location.href); u.searchParams.delete('from'); history.replaceState(history.state, '', u.href); } catch (e) {} }
+if (tagged || moved) { try { const u = new URL(location.href); u.searchParams.delete('from'); u.searchParams.delete('moved'); history.replaceState(history.state, '', u.href); } catch (e) {} }
 let depth = history.state?.depth || 0;   // jumps since arriving, so Back is only offered when it goes somewhere on the site
 const showBack = () => { backBtn.hidden = depth < 1; };
 /* a link to the other page: remember the row it was in (an album track, a BGM-list or cue-sheet row, or an episode), and
@@ -1206,7 +1236,7 @@ document.addEventListener('click', e => {
   let u; try { u = new URL(a.href, location.href); } catch (err) { return; }
   if (u.origin !== location.origin || pageOf(u.pathname) === pageOf(location.pathname)) return;
   const inPop = a.closest('#uses-pop'), from = inPop && usesPop.owner || a;   // a link in the uses box: the row of its button
-  const row = from.closest('tbody[id^="al-"], tr[id], details.epi'), tr = from.closest('tr');
+  const row = from.closest('tbody[id^="al-"], tr[id], details.epi, .page-pointer'), tr = from.closest('tr');
   history.replaceState({...history.state, anchor: row?.id, row: row?.tBodies || !row?.rows ? -1 : [...row.rows].indexOf(tr),
     uses: !!inPop, y: scrollY, depth}, '');
 }, true);
@@ -1293,7 +1323,7 @@ if (VIEW === 'albums') {
    A jump opens the row's section, panel and episode, scrolls to it and flashes it. Each jump is a browser history
    entry (the address shows #row-id), so Back returns to the row the link was in, and any row can be linked to. */
 function reveal(id, flash = true){
-  const p = ROW_PANEL[id]; if (!p) return false;
+  const p = ROW_PANEL[id]; if (!p || pageOfRow(id) !== VIEW) return false;   // a row on the other page
   openPanel(p.section, p.panel);
   if (p.ep) { const d = document.getElementById(p.ep); if (d) { d.open = true; buildEpisode(d); } }
   const el = document.getElementById(id); if (!el) return false;
@@ -1319,19 +1349,25 @@ addEventListener('popstate', e => {
   showBack();
 });
 document.addEventListener('click', e => {
-  const a = e.target.closest('a[data-go]'); if (!a) return;
+  const a = e.target.closest('a[data-go]'); if (!a || pageOfRow(a.dataset.go) !== VIEW) return;   // a row on another page: its link goes there
   e.preventDefault();
   if (ROW_PANEL[a.dataset.go]) jump(a.dataset.go, a);
 });
 
 /* open the first season so the page doesn't start as a wall of closed headings */
-document.getElementById('sec-SM').open = true;
+document.querySelector('details.sec').open = true;   // the movies page starts at R
 /* a link to a row or episode (#r-TV-98-B-19, #cue-M-206, #ep98) opens straight to it */
 { const nid = decodeURIComponent(location.hash.slice(1)); if (nid && document.querySelector(`#notesDlg section[id="${nid}"], #notesDlg #${CSS.escape(nid)}`)) openNotes(nid); }
 // back from the albums page: the row the link was in; otherwise the row the address names
 { const id = decodeURIComponent(location.hash.slice(1));
+  const ptr = backTo && document.getElementById(backTo);
   if (backTo && ROW_PANEL[backTo]) { reveal(backTo, true); reopenUses(document.getElementById(backTo)); }
-  else if (id && ROW_PANEL[id]) { history.replaceState({anchor: id, depth}, ''); reveal(id); } }
+  else if (ptr?.classList.contains('page-pointer')) {   // back from a season's link to another page: that link line again
+    const sec = ptr.closest('details.sec'); sec.open = true; sec.querySelector('.flat')?.build();
+    goTo(ptr, 'center', 1800);
+  }
+  else if (id && ROW_PANEL[id]) { history.replaceState({anchor: id, depth}, ''); reveal(id); }
+  else if (/^sec-/.test(id)) { const sec = document.getElementById(id); if (sec) { sec.open = true; goTo(sec, 'start', 0); } } }   // a season (from the other page's pointer)
 showBack();
 }
 })();
