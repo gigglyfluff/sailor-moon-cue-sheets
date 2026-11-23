@@ -29,7 +29,7 @@ id,part_id,ord,m,credit_ja,credit_ro,credit_en,time_ja,time_ro,time_en,desc_ja,d
 28,1,27,24B,M-224B,M-224B,M-224B,"15""半","15.5""","15.5""",スキャット（フィオレ・死）,"Sukyatto (Fiore, shi)","Scat (Fiore, death)",8-16-4,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 29,1,28,24C,M-224C,M-224C,M-224C,"59""","59""","59""",回想シーンスキャット,Kaisou shiin sukyatto,Flashback scene scat,8-16-3,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 30,1,29,25,M-225,M-225,M-225,"4'00""","4'00""","4'00""",※主題歌「Moon Revenge」,"※Shudaika ""Moon Revenge""","※Theme song ""Moon Revenge""",歌-3-9,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-31,1,30,26,M-226,M-226,M-226,"1'19""","1'19""","1'19""",ピアノ曲（主題歌のアレンジ）〜シンフォニー入る〜コーラス入る,Piano kyoku (shudaika no arenji) ~ shinfonii hairu ~ koorasu hairu,Piano piece (arrangement of the theme song) ~ symphony enters ~ chorus enters,8-18,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+31,1,30,26,M-226,M-226,M-226,"1'19""","1'19""","1'19""",ピアノ曲（主題歌のアレンジ）〜シンフォニー入る〜コーラス入る,Piano kyoku (shudaika no arenji) ~ shinfonii hairu ~ koorasu hairu,Piano piece (arrangement of the theme song) ~ symphony enters ~ chorus enters,8-18,\N,0,\N,\N,\N,\N,\N,"[Editor's note: ""the theme song"" here is the film's theme song, Moon Revenge, not the TV series' Moonlight Legend]",\N,\N,\N,\N,\N,\N
 32,1,31,27,M-227,M-227,M-227,\N,\N,\N,※エンディング曲「Moon Revenge」,"※Endingu kyoku ""Moon Revenge""","※Ending song ""Moon Revenge""",8-19,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 33,2,0,1,J-5,J-5,J-5,"9""","9""","9""",タイトル（サブタイトルの曲じゃなく）,Taitoru (sabutaitoru no kyoku ja naku),Title (not the subtitle music),1-7,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 34,2,1,2,M-136,M-136,M-136,"23""半","23.5""","23.5""",格好良く,Kakkoyoku,Cool,3-15-2,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -287,7 +287,7 @@ id,part_id,ord,m,credit_ja,credit_ro,credit_en,time_ja,time_ro,time_en,desc_ja,d
 286,16,0,1,C-3,C-3,C-3,"18""半","18.5""","18.5""",アバン（M）,Aban (M),Avant-title (M),\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 287,16,1,2,C-1a,C-1a,C-1a,"29""","29""","29""",プロローグ（M）,Puroroogu (M),Prologue (M),\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 288,16,2,3,C-1b,C-1b,C-1b,"10""","10""","10""",サブタイトル（M）,Sabutaitoru (M),Subtitle (M),\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-289,16,3,4,K-1,K-1,K-1,"1'14""","1'14""","1'14""",カセット音楽,Kasetto ongaku,Cassette music,\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+289,16,3,4,K-1,K-1,K-1,"1'14""","1'14""","1'14""",カセット音楽,Kasetto ongaku,Cassette music,\N,\N,0,\N,\N,\N,\N,\N,[Editor's note: Warning: contains subliminal ultrasonic waves. May cause energy loss.],\N,\N,\N,\N,\N,\N
 290,16,4,5,ライブラリー,Raiburarii,Library,"1'00""","1'00""","1'00""",CD音楽,CD ongaku,CD music,\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 291,16,5,6,J-17,J-17,J-17,"17""","17""","17""",アキコに迫る危険,Akiko ni semaru kiken,Danger closing in on Akiko,\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 292,16,6,7,J-22,J-22,J-22,"25""","25""","25""",潜むキュレネ,Hisomu Kyurene,Kyurene lurking,\N,\N,0,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
