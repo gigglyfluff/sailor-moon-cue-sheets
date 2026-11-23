@@ -266,6 +266,7 @@ body.l-ja .te .mk{display:none}
 .eplist, .eplist+.page-pointer{margin-left:calc(.42rem + 1px)}   /* each episode's chevron lines up with the left edge of the season's logo; the line after the list (the movies are on the Movies page) starts at the same edge */
 .eplist{display:grid;gap:3px;padding-top:4px}
 details.epi{border-radius:8px;scroll-margin-top:84px}
+details.epi[open]{min-width:min-content}   /* an open episode is as wide as its table (on a narrow screen the table is wider than the list), so its heading band spans the whole table */
 details.epi>summary{display:grid;grid-template-columns:1em 2.6em minmax(0,1fr);gap:10px;
   align-items:baseline;padding:.5em .8em;border-radius:8px;background:var(--row)}
 details.epi:nth-of-type(even)>summary{background:var(--stripe)}
@@ -298,7 +299,13 @@ details.epi[open]>summary{background:var(--band);color:var(--band-ink);border:1p
 .notes-top b{color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}
 
 /* frozen control bar */
-.bar{position:fixed;top:0;left:0;right:0;z-index:20;padding:10px max(16px, env(safe-area-inset-right)) 10px max(16px, env(safe-area-inset-left));   /* fixed, so it holds still however the page scrolls */
+.bar{position:fixed;top:0;z-index:20;   /* fixed, so it holds still however the page scrolls */
+  /* on an iPhone held sideways Safari can hold fixed things inside the strips beside the notch: the bar reaches out over
+     them (a negative inset of the strip's width), and its padding adds that width back so the buttons clear the notch
+     either way; elsewhere the insets are 0 */
+  --sl:env(safe-area-inset-left, 0px); --sr:env(safe-area-inset-right, 0px);
+  left:calc(0px - var(--sl));right:calc(0px - var(--sr));
+  padding:10px calc(max(16px, var(--sr)) + var(--sr)) 10px calc(max(16px, var(--sl)) + var(--sl));
   /* liquid glass: a gloss highlight fading down the top half over a slightly see-through lavender that blurs the page behind,
      with a bright rim along the top edge and a faint shade along the bottom */
   background:linear-gradient(rgb(255 255 255 / .55), rgb(255 255 255 / .12) 50%, rgb(255 255 255 / 0) 51%, rgb(90 40 90 / .08)),
@@ -312,7 +319,7 @@ details.epi[open]>summary{background:var(--band);color:var(--band-ink);border:1p
 .bar.compact .bar-in{gap:4px 10px}
 .bar.compact :is(.btn, .lt span){font-size:.6875rem}
 /* where you are: hangs under the bar (out of its flow, so the bar keeps its height); one line, the outer levels shortening first */
-.crumbs{position:absolute;top:100%;left:0;right:0;display:flex;gap:.4em;align-items:center;padding:.3em max(16px, env(safe-area-inset-right), (100% - var(--page)) / 2) .3em max(16px, env(safe-area-inset-left), (100% - var(--page)) / 2);
+.crumbs{position:absolute;top:100%;left:0;right:0;display:flex;gap:.4em;align-items:center;padding:.3em calc(max(16px, var(--sr), (100% - var(--page)) / 2) + var(--sr)) .3em calc(max(16px, var(--sl), (100% - var(--page)) / 2) + var(--sl));
   background:var(--paper);border-bottom:1px solid var(--tableborder);box-shadow:0 2px 8px rgb(60 20 40 / .10);
   font-size:var(--s-1);line-height:1.5;color:var(--muted);white-space:nowrap}
 .crumbs[hidden]{display:none}
