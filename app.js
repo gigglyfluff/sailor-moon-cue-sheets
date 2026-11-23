@@ -1003,6 +1003,17 @@ document.addEventListener('keydown', e => {
     if (on) bar.classList.add('compact');
   };
   compact(false);
+  /* Safari on a phone zooms out to fit a wide table, and then shows more than the width it gives fixed things: the bar
+     is stretched over all of what shows (the visual viewport), so it reaches both edges of the screen */
+  const vv = window.visualViewport;
+  const inView = () => ({left: vv ? vv.offsetLeft : 0, right: Math.max(document.documentElement.clientWidth, vv ? vv.offsetLeft + vv.width : 0)});
+  const fitBar = () => {
+    const wider = vv && vv.width > document.documentElement.clientWidth + 1;
+    Object.assign(bar.style, wider ? {left: `calc(${vv.offsetLeft}px - var(--sl))`, width: `calc(${vv.width}px + var(--sl) + var(--sr))`, right: 'auto'}
+      : {left: '', width: '', right: ''});
+  };
+  if (vv) { const refit = () => { fitBar(); compact(!crumbs.hidden); update(); }; vv.addEventListener('resize', refit); vv.addEventListener('scroll', fitBar); }
+  fitBar();
   let marks = [], key = '', pinned = null, pinLang = '';
   function update(){
     // the bar at full size, and this line's own height below it
@@ -1054,7 +1065,7 @@ document.addEventListener('keydown', e => {
     // line up with the columns, cut to what shows of the table (its own scroll box, the window)
     const box = table.parentElement, r = table.getBoundingClientRect(), scrolls = getComputedStyle(box).overflowX !== 'visible';
     const br = box.getBoundingClientRect();
-    const left = Math.max(r.left, scrolls ? br.left : r.left, 0), right = Math.min(r.right, scrolls ? br.right : r.right, document.documentElement.clientWidth);
+    const view = inView(), left = Math.max(r.left, scrolls ? br.left : r.left, view.left), right = Math.min(r.right, scrolls ? br.right : r.right, view.right);   // what shows of the page (all of it when zoomed out)
     Object.assign(pin.style, {top: top - b.top + 'px', left: left - b.left + 'px', width: Math.max(0, right - left) + 'px'});
     const rowEl = pin.firstChild;
     rowEl.style.transform = `translateX(${cells[0].getBoundingClientRect().left - left}px)`;
