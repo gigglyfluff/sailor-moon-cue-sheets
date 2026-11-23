@@ -1003,11 +1003,6 @@ document.addEventListener('keydown', e => {
     if (on) bar.classList.add('compact');
   };
   compact(false);
-  /* on a phone, an open table makes the page wider than the screen and you pan across it: the bar is held to the screen's
-     width (styles.css) and here follows the part of the page in view, so its buttons stay on screen */
-  const vv = window.visualViewport;
-  if (vv) { const follow = () => { bar.style.transform = vv.offsetLeft ? `translateX(${vv.offsetLeft}px)` : ''; };
-    vv.addEventListener('scroll', follow); vv.addEventListener('resize', follow); }
   let marks = [], key = '', pinned = null, pinLang = '';
   function update(){
     // the bar at full size, and this line's own height below it
