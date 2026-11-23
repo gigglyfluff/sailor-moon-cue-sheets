@@ -23,7 +23,7 @@
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}   /* stop iOS Safari enlarging long-text cells on wide pages: every size comes from the cascade */
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:var(--s0);line-height:1.55;
-  margin:0;padding-inline:16px;padding-block:var(--barh, 52px) 64px}   /* no default margin; room at the top for the fixed bar (--barh: its height, set by the script) */
+  margin:0;padding-inline:max(16px, env(safe-area-inset-left)) max(16px, env(safe-area-inset-right));padding-block:var(--barh, 52px) 64px}   /* no default margin; room at the top for the fixed bar (--barh: its height, set by the script); on a phone held sideways, clear of the notch (the page reaches the screen's edges: viewport-fit=cover) */
 .wrap{max-width:var(--page);margin-inline:auto;display:grid;gap:4px;padding-top:24px}
 /* grid children may shrink below their content: a wide table overflows its box and widens the page, which scrolls sideways
    as a whole (the top bar stays put), rather than each table scrolling inside its own box */
@@ -298,7 +298,7 @@ details.epi[open]>summary{background:var(--band);color:var(--band-ink);border:1p
 .notes-top b{color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}
 
 /* frozen control bar */
-.bar{position:fixed;top:0;left:0;right:0;z-index:20;padding:10px 16px;   /* fixed, so it holds still however the page scrolls */
+.bar{position:fixed;top:0;left:0;right:0;z-index:20;padding:10px max(16px, env(safe-area-inset-right)) 10px max(16px, env(safe-area-inset-left));   /* fixed, so it holds still however the page scrolls */
   /* liquid glass: a gloss highlight fading down the top half over a slightly see-through lavender that blurs the page behind,
      with a bright rim along the top edge and a faint shade along the bottom */
   background:linear-gradient(rgb(255 255 255 / .55), rgb(255 255 255 / .12) 50%, rgb(255 255 255 / 0) 51%, rgb(90 40 90 / .08)),
@@ -312,7 +312,7 @@ details.epi[open]>summary{background:var(--band);color:var(--band-ink);border:1p
 .bar.compact .bar-in{gap:4px 10px}
 .bar.compact :is(.btn, .lt span){font-size:.6875rem}
 /* where you are: hangs under the bar (out of its flow, so the bar keeps its height); one line, the outer levels shortening first */
-.crumbs{position:absolute;top:100%;left:0;right:0;display:flex;gap:.4em;align-items:center;padding:.3em max(16px, (100% - var(--page)) / 2);
+.crumbs{position:absolute;top:100%;left:0;right:0;display:flex;gap:.4em;align-items:center;padding:.3em max(16px, env(safe-area-inset-right), (100% - var(--page)) / 2) .3em max(16px, env(safe-area-inset-left), (100% - var(--page)) / 2);
   background:var(--paper);border-bottom:1px solid var(--tableborder);box-shadow:0 2px 8px rgb(60 20 40 / .10);
   font-size:var(--s-1);line-height:1.5;color:var(--muted);white-space:nowrap}
 .crumbs[hidden]{display:none}
