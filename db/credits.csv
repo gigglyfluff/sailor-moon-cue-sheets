@@ -10,7 +10,7 @@ row_id,ord,printed,target,corrected,note
 46,0,D-2,cue-D-2,\N,\N
 62,0,M-307,cue-M-307,\N,\N
 67,0,M-305,cue-M-305,\N,\N
-68,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: this M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the R movie list's M-203 (CD 8-3-1), as recordings of TV episodes 99 and 100 confirm for the same code."
+68,0,M-203,q-MOVIE-R-10A,M-210A,"The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Recordings of TV episodes 99 and 100, which use the same code, confirm it."
 72,0,I-1,cue-I-1,\N,\N
 73,0,M-308,cue-M-308,\N,\N
 87,0,M-315,cue-M-315,\N,\N
@@ -2035,7 +2035,7 @@ row_id,ord,printed,target,corrected,note
 2212,0,G-10,cue-G-10,\N,\N
 2213,0,M-301,cue-M-301,\N,\N
 2214,0,M-305,cue-M-305,\N,\N
-2215,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2215,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2216,0,M-308,cue-M-308,\N,\N
 2217,0,M-106,cue-M-106,\N,\N
 2218,0,C-3,cue-C-3,\N,\N
@@ -2053,10 +2053,10 @@ row_id,ord,printed,target,corrected,note
 2231,0,M-326,cue-M-326,\N,\N
 2232,0,M-336,cue-M-336,\N,\N
 2233,0,M-341,cue-M-341,\N,\N
-2234,0,M-206,q-MOVIE-R-8A,M-208A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-206 is the movie's M-208A, the Venus ~ Jupiter transformations (CD 8-7-1), not the movie list's M-206 (CD 8-5). Confirmed against a recording of episode 100."
+2234,0,M-206,q-MOVIE-R-8A,M-208A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-206 here is actually M-208A on the R Movie cue sheet. Confirmed against a recording of episode 100.
 2235,0,M-305,cue-M-305,\N,\N
 2236,0,M-123,cue-M-123,\N,\N
-2237,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2237,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2238,0,M-315,cue-M-315,\N,\N
 2239,0,M-316,cue-M-316,\N,\N
 2240,0,M-308,cue-M-308,\N,\N
@@ -2079,7 +2079,7 @@ row_id,ord,printed,target,corrected,note
 2258,0,M-374,cue-M-374,\N,\N
 2259,0,M-345,cue-M-345,\N,\N
 2260,0,M-306,cue-M-306,\N,\N
-2261,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2261,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2262,0,G-10,cue-G-10,\N,\N
 2263,0,I-1,cue-I-1,\N,\N
 2264,0,M-129A,cue-M-129A,\N,\N
@@ -2106,7 +2106,7 @@ row_id,ord,printed,target,corrected,note
 2285,0,M-114,cue-M-114,\N,\N
 2286,0,M-342A,cue-M-342A,\N,\N
 2287,0,M-305,cue-M-305,\N,\N
-2288,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2288,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2289,0,E-16,cue-E-16,\N,\N
 2290,0,E-16,cue-E-16,\N,\N
 2291,0,I-1,cue-I-1,\N,\N
@@ -2132,7 +2132,7 @@ row_id,ord,printed,target,corrected,note
 2312,0,M-345,cue-M-345,\N,\N
 2313,0,M-305,cue-M-305,\N,\N
 2313,1,M-306,cue-M-306,\N,\N
-2314,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2314,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2315,0,J-18,cue-J-18,\N,\N
 2316,0,M-315,cue-M-315,\N,\N
 2317,0,M-316,cue-M-316,\N,\N
@@ -2146,15 +2146,15 @@ row_id,ord,printed,target,corrected,note
 2326,0,M-333,cue-M-333,\N,\N
 2327,0,J-18,cue-J-18,\N,\N
 2328,0,M-305,cue-M-305,\N,\N
-2329,0,M-207,q-MOVIE-R-8B,M-208B,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-207 is the movie's M-208B, the Mars ~ Mercury transformations (CD 8-7-2), not the movie list's M-207 (CD 8-6). Confirmed against recordings of episodes 99 and 100."
+2329,0,M-207,q-MOVIE-R-8B,M-208B,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-207 here is actually M-208B on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2330,0,M-318,cue-M-318,\N,\N
 2331,0,M-318,cue-M-318,\N,\N
 2332,0,M-113,cue-M-113,\N,\N
 2333,0,M-326,cue-M-326,\N,\N
 2334,0,M-345,cue-M-345,\N,\N
 2335,0,G-11,cue-G-11,\N,\N
-2336,0,M-206,q-MOVIE-R-8A,M-208A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-206 is the movie's M-208A, the Venus ~ Jupiter transformations (CD 8-7-1), not the movie list's M-206 (CD 8-5). Confirmed against a recording of episode 100."
-2336,1,M-207,q-MOVIE-R-8B,M-208B,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-207 is the movie's M-208B, the Mars ~ Mercury transformations (CD 8-7-2), not the movie list's M-207 (CD 8-6). Confirmed against recordings of episodes 99 and 100."
+2336,0,M-206,q-MOVIE-R-8A,M-208A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-206 here is actually M-208A on the R Movie cue sheet. Confirmed against a recording of episode 100.
+2336,1,M-207,q-MOVIE-R-8B,M-208B,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-207 here is actually M-208B on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2337,0,M-308,cue-M-308,\N,\N
 2338,0,M-344A,cue-M-344A,\N,\N
 2339,0,M-115,cue-M-115,\N,\N
@@ -2179,7 +2179,7 @@ row_id,ord,printed,target,corrected,note
 2358,0,M-333,cue-M-333,\N,\N
 2358,1,M-336,cue-M-336,\N,\N
 2359,0,M-305,cue-M-305,\N,\N
-2360,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2360,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2361,0,M-101,cue-M-101,\N,\N
 2362,0,I-1,cue-I-1,\N,\N
 2363,0,E-15,cue-E-15,\N,\N
@@ -2200,11 +2200,11 @@ row_id,ord,printed,target,corrected,note
 2378,0,M-318,cue-M-318,\N,\N
 2379,0,J-19,cue-J-19,\N,\N
 2380,0,M-305,cue-M-305,\N,\N
-2381,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2381,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2382,0,G-10,cue-G-10,\N,\N
 2383,0,E-19,cue-E-19,\N,\N
 2384,0,M-312,cue-M-312,\N,\N
-2385,0,M-221,q-MOVIE-R-6,M-206,"The episode plays M-206, ""Usagi's Worry"" from the R movie (CD 8-5), not the R movie list's M-221 (CD 8-15-1). The TV cue sheets seem to number reused R-movie music differently from the movie's own list (compare p.120, S movie No. 20). Identified on r/sailormoon (reddit.com/r/sailormoon/comments/1xkkn9p) and confirmed against recordings of the episode."
+2385,0,M-221,q-MOVIE-R-6,M-206,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-221 here is actually M-206 on the R Movie cue sheet. Identified on r/sailormoon (reddit.com/r/sailormoon/comments/1xkkn9p) and confirmed against recordings of the episode.
 2386,0,E-15,cue-E-15,\N,\N
 2387,0,M-308,cue-M-308,\N,\N
 2388,0,D-1,cue-D-1,\N,\N
@@ -2225,8 +2225,8 @@ row_id,ord,printed,target,corrected,note
 2403,0,G-7,cue-G-7,\N,\N
 2404,0,E-13,cue-E-13,\N,\N
 2406,0,M-345,cue-M-345,\N,\N
-2407,0,M-207,q-MOVIE-R-8B,M-208B,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-207 is the movie's M-208B, the Mars ~ Mercury transformations (CD 8-7-2), not the movie list's M-207 (CD 8-6). Confirmed against recordings of episodes 99 and 100."
-2408,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2407,0,M-207,q-MOVIE-R-8B,M-208B,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-207 here is actually M-208B on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
+2408,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2409,0,J-18,cue-J-18,\N,\N
 2410,0,J-3b,cue-J-3b,\N,\N
 2411,0,M-341,cue-M-341,\N,\N
@@ -2247,14 +2247,14 @@ row_id,ord,printed,target,corrected,note
 2426,0,F-4,cue-F-4,\N,\N
 2427,0,E-5,cue-E-5,\N,\N
 2428,0,M-345,cue-M-345,\N,\N
-2429,0,M-206,q-MOVIE-R-8A,M-208A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-206 is the movie's M-208A, the Venus ~ Jupiter transformations (CD 8-7-1), not the movie list's M-206 (CD 8-5). Confirmed against a recording of episode 100."
+2429,0,M-206,q-MOVIE-R-8A,M-208A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-206 here is actually M-208A on the R Movie cue sheet. Confirmed against a recording of episode 100.
 2430,0,G-11,cue-G-11,\N,\N
 2431,0,M-341,cue-M-341,\N,\N
 2432,0,M-305,cue-M-305,\N,\N
 2433,0,J-19,cue-J-19,\N,\N
-2434,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
-2435,0,M-205,q-MOVIE-R-10B,M-210B,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-205 is the movie's M-210B (CD 8-8-3), not the movie list's M-205 (CD 8-4). This bridge plays a moment of M-210B, then the end of M-208B. Confirmed against a recording of the episode."
-2435,1,M-207,q-MOVIE-R-8B,M-208B,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-207 is the movie's M-208B, the Mars ~ Mercury transformations (CD 8-7-2), not the movie list's M-207 (CD 8-6). Confirmed against recordings of episodes 99 and 100."
+2434,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
+2435,0,M-205,q-MOVIE-R-10B,M-210B,"The R Movie cue sheet numbering is different from the rest of the cue sheets. M-205 here is actually M-210B on the R Movie cue sheet. This bridge plays a moment of M-210B, then the end of M-208B. Confirmed against a recording of the episode."
+2435,1,M-207,q-MOVIE-R-8B,M-208B,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-207 here is actually M-208B on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2436,0,E-20,cue-E-20,\N,\N
 2437,0,M-308,cue-M-308,\N,\N
 2438,0,O-1,cue-D-1,D-1,"No O codes exist in any list or on the box-set tray cards; D-1 is Disc 1, track 45."
@@ -2288,14 +2288,14 @@ row_id,ord,printed,target,corrected,note
 2467,0,J-16,cue-J-16,\N,\N
 2468,0,M-315,cue-M-315,\N,\N
 2469,0,M-363,cue-M-363,\N,\N
-2470,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2470,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2471,0,M-318,cue-M-318,\N,\N
 2472,0,M-318,cue-M-318,\N,\N
 2473,0,M-334,cue-M-334,\N,\N
 2474,0,M-123,cue-M-123,\N,\N
 2475,0,M-123,cue-M-123,\N,\N
 2476,0,M-305,cue-M-305,\N,\N
-2477,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2477,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2478,0,M-308,cue-M-308,\N,\N
 2479,0,J-8,cue-J-8,\N,\N
 2480,0,J-5,cue-J-5,\N,\N
@@ -2319,8 +2319,8 @@ row_id,ord,printed,target,corrected,note
 2499,0,M-336,cue-M-336,\N,\N
 2500,0,M-336,cue-M-336,\N,\N
 2501,0,M-305,cue-M-305,\N,\N
-2502,0,M-207,q-MOVIE-R-8B,M-208B,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-207 is the movie's M-208B, the Mars ~ Mercury transformations (CD 8-7-2), not the movie list's M-207 (CD 8-6). Confirmed against recordings of episodes 99 and 100."
-2503,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2502,0,M-207,q-MOVIE-R-8B,M-208B,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-207 here is actually M-208B on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
+2503,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2504,0,J-18,cue-J-18,\N,\N
 2505,0,M-315,cue-M-315,\N,\N
 2506,0,M-341,cue-M-341,\N,\N
@@ -2354,7 +2354,7 @@ row_id,ord,printed,target,corrected,note
 2534,0,J-18,cue-J-18,\N,\N
 2535,0,M-316,cue-M-316,\N,\N
 2536,0,M-305,cue-M-305,\N,\N
-2537,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2537,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2538,0,M-345,cue-M-345,\N,\N
 2539,0,M-345,cue-M-345,\N,\N
 2540,0,M-345,cue-M-345,\N,\N
@@ -2372,17 +2372,17 @@ row_id,ord,printed,target,corrected,note
 2552,0,J-8,cue-J-8,\N,\N
 2553,0,E-5,cue-E-5,\N,\N
 2554,0,E-14,cue-E-14,\N,\N
-2555,0,M-221,q-MOVIE-R-6,M-206,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-221 is the movie's M-206, ""Usagi's Worry"" (CD 8-5), not the movie list's M-221 (CD 8-15-1). Confirmed against a recording of episode 98."
+2555,0,M-221,q-MOVIE-R-6,M-206,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-221 here is actually M-206 on the R Movie cue sheet. Confirmed against a recording of episode 98.
 2556,0,M-318,cue-M-318,\N,\N
 2557,0,M-318,cue-M-318,\N,\N
 2558,0,M-107,cue-M-107,\N,\N
 2559,0,M-362,cue-M-362,\N,\N
 2560,0,F-12,cue-F-12,\N,\N
 2561,0,M-336,cue-M-336,\N,\N
-2562,0,M-206,q-MOVIE-R-8A,M-208A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-206 is the movie's M-208A, the Venus ~ Jupiter transformations (CD 8-7-1), not the movie list's M-206 (CD 8-5). Confirmed against a recording of episode 100."
+2562,0,M-206,q-MOVIE-R-8A,M-208A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-206 here is actually M-208A on the R Movie cue sheet. Confirmed against a recording of episode 100.
 2563,0,M-305,cue-M-305,\N,\N
 2564,0,M-345,cue-M-345,\N,\N
-2565,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2565,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2566,0,J-19,cue-J-19,\N,\N
 2567,0,M-341,cue-M-341,\N,\N
 2568,0,E-15,cue-E-15,\N,\N
@@ -2396,7 +2396,7 @@ row_id,ord,printed,target,corrected,note
 2576,0,M-326,cue-M-326,\N,\N
 2577,0,J-19,cue-J-19,\N,\N
 2578,0,J-18,cue-J-18,\N,\N
-2579,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2579,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2580,0,M-345,cue-M-345,\N,\N
 2581,0,M-345,cue-M-345,\N,\N
 2582,0,M-330B,cue-M-330B,\N,\N
@@ -2430,7 +2430,7 @@ row_id,ord,printed,target,corrected,note
 2610,0,M-345,cue-M-345,\N,\N
 2611,0,M-305,cue-M-305,\N,\N
 2612,0,M-341,cue-M-341,\N,\N
-2613,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2613,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2614,0,M-123,cue-M-123,\N,\N
 2615,0,M-308,cue-M-308,\N,\N
 2616,0,D-1,cue-D-1,\N,\N
@@ -2451,7 +2451,7 @@ row_id,ord,printed,target,corrected,note
 2637,0,M-336,cue-M-336,\N,\N
 2638,0,M-307,cue-M-307,\N,\N
 2639,0,J-18,cue-J-18,\N,\N
-2640,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2640,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2641,0,M-345,cue-M-345,\N,\N
 2642,0,I-1,cue-I-1,\N,\N
 2643,0,M-308,cue-M-308,\N,\N
@@ -2475,13 +2475,13 @@ row_id,ord,printed,target,corrected,note
 2662,0,M-342A,cue-M-342A,\N,\N
 2663,0,M-341,cue-M-341,\N,\N
 2664,0,M-305,cue-M-305,\N,\N
-2665,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2665,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2666,0,M-345,cue-M-345,\N,\N
 2667,0,M-307,cue-M-307,\N,\N
 2668,0,M-123,cue-M-123,\N,\N
 2669,0,M-308,cue-M-308,\N,\N
-2670,0,M-206,q-MOVIE-R-8A,M-208A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-206 is the movie's M-208A, the Venus ~ Jupiter transformations (CD 8-7-1), not the movie list's M-206 (CD 8-5). Confirmed against a recording of episode 100."
-2671,0,M-207,q-MOVIE-R-8B,M-208B,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-207 is the movie's M-208B, the Mars ~ Mercury transformations (CD 8-7-2), not the movie list's M-207 (CD 8-6). Confirmed against recordings of episodes 99 and 100."
+2670,0,M-206,q-MOVIE-R-8A,M-208A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-206 here is actually M-208A on the R Movie cue sheet. Confirmed against a recording of episode 100.
+2671,0,M-207,q-MOVIE-R-8B,M-208B,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-207 here is actually M-208B on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2672,0,M-302,cue-M-302,\N,\N
 2673,0,C-3,cue-C-3,\N,\N
 2674,0,M-317,cue-M-317,\N,\N
@@ -2499,7 +2499,7 @@ row_id,ord,printed,target,corrected,note
 2688,0,M-305,cue-M-305,\N,\N
 2689,0,E-22,cue-E-22,\N,\N
 2690,0,M-340,cue-M-340,\N,\N
-2691,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2691,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2692,0,M-314,cue-M-314,\N,\N
 2693,0,M-318,cue-M-318,\N,\N
 2694,0,M-318,cue-M-318,\N,\N
@@ -2524,13 +2524,13 @@ row_id,ord,printed,target,corrected,note
 2713,0,M-318,cue-M-318,\N,\N
 2714,0,M-318,cue-M-318,\N,\N
 2715,0,M-342,cue-M-342,\N,\N
-2716,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2716,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2717,0,M-123,cue-M-123,\N,\N
 2718,0,J-18,cue-J-18,\N,\N
 2719,0,M-315,cue-M-315,\N,\N
 2720,0,M-341,cue-M-341,\N,\N
 2721,0,M-309,cue-M-309,\N,\N
-2722,0,M-221,q-MOVIE-R-6,M-206,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-221 is the movie's M-206, ""Usagi's Worry"" (CD 8-5), not the movie list's M-221 (CD 8-15-1). Confirmed against a recording of episode 98."
+2722,0,M-221,q-MOVIE-R-6,M-206,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-221 here is actually M-206 on the R Movie cue sheet. Confirmed against a recording of episode 98.
 2723,0,M-325,cue-M-325,\N,\N
 2724,0,M-314,cue-M-314,\N,\N
 2725,0,C-3,cue-C-3,\N,\N
@@ -2548,7 +2548,7 @@ row_id,ord,printed,target,corrected,note
 2737,0,F-5,cue-F-5,\N,\N
 2738,0,M-345,cue-M-345,\N,\N
 2739,0,M-305,cue-M-305,\N,\N
-2740,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2740,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2741,0,M-341,cue-M-341,\N,\N
 2742,0,M-123,cue-M-123,\N,\N
 2743,0,G-11,cue-G-11,\N,\N
@@ -2573,11 +2573,11 @@ row_id,ord,printed,target,corrected,note
 2765,0,E-6,cue-E-6,\N,\N
 2766,0,G-11,cue-G-11,\N,\N
 2767,0,M-341,cue-M-341,\N,\N
-2768,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
-2769,0,M-206,q-MOVIE-R-8A,M-208A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-206 is the movie's M-208A, the Venus ~ Jupiter transformations (CD 8-7-1), not the movie list's M-206 (CD 8-5). Confirmed against a recording of episode 100."
-2769,1,M-207,q-MOVIE-R-8B,M-208B,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-207 is the movie's M-208B, the Mars ~ Mercury transformations (CD 8-7-2), not the movie list's M-207 (CD 8-6). Confirmed against recordings of episodes 99 and 100."
-2770,0,M-206,q-MOVIE-R-8A,M-208A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-206 is the movie's M-208A, the Venus ~ Jupiter transformations (CD 8-7-1), not the movie list's M-206 (CD 8-5). Confirmed against a recording of episode 100."
-2770,1,M-207,q-MOVIE-R-8B,M-208B,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-207 is the movie's M-208B, the Mars ~ Mercury transformations (CD 8-7-2), not the movie list's M-207 (CD 8-6). Confirmed against recordings of episodes 99 and 100."
+2768,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
+2769,0,M-206,q-MOVIE-R-8A,M-208A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-206 here is actually M-208A on the R Movie cue sheet. Confirmed against a recording of episode 100.
+2769,1,M-207,q-MOVIE-R-8B,M-208B,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-207 here is actually M-208B on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
+2770,0,M-206,q-MOVIE-R-8A,M-208A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-206 here is actually M-208A on the R Movie cue sheet. Confirmed against a recording of episode 100.
+2770,1,M-207,q-MOVIE-R-8B,M-208B,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-207 here is actually M-208B on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2771,0,M-309,cue-M-309,\N,\N
 2772,0,M-314,cue-M-314,\N,\N
 2773,0,C-3,cue-C-3,\N,\N
@@ -2585,7 +2585,7 @@ row_id,ord,printed,target,corrected,note
 2775,0,E-5,cue-E-5,\N,\N
 2776,0,M-312,cue-M-312,\N,\N
 2778,0,M-129A,cue-M-129A,\N,\N
-2779,0,M-221,q-MOVIE-R-6,M-206,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-221 is the movie's M-206, ""Usagi's Worry"" (CD 8-5), not the movie list's M-221 (CD 8-15-1). Confirmed against a recording of episode 98."
+2779,0,M-221,q-MOVIE-R-6,M-206,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-221 here is actually M-206 on the R Movie cue sheet. Confirmed against a recording of episode 98.
 2780,0,M-115,cue-M-115,\N,\N
 2781,0,M-130,cue-M-130,\N,\N
 2782,0,M-318,cue-M-318,\N,\N
@@ -2595,7 +2595,7 @@ row_id,ord,printed,target,corrected,note
 2787,0,M-315,cue-M-315,\N,\N
 2788,0,M-136,cue-M-136,\N,\N
 2789,0,M-341,cue-M-341,\N,\N
-2790,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2790,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2791,0,M-311,cue-M-311,\N,\N
 2792,0,M-309,cue-M-309,\N,\N
 2793,0,E-13,cue-E-13,\N,\N
@@ -2615,7 +2615,7 @@ row_id,ord,printed,target,corrected,note
 2808,0,M-336,cue-M-336,\N,\N
 2809,0,M-136,cue-M-136,\N,\N
 2810,0,I-1,cue-I-1,\N,\N
-2811,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2811,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2812,0,M-123,cue-M-123,\N,\N
 2813,0,M-126,cue-M-126,\N,\N
 2814,0,M-309,cue-M-309,\N,\N
@@ -2632,7 +2632,7 @@ row_id,ord,printed,target,corrected,note
 2826,0,M-336,cue-M-336,\N,\N
 2827,0,M-341,cue-M-341,\N,\N
 2828,0,M-305,cue-M-305,\N,\N
-2829,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2829,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2830,0,M-345,cue-M-345,\N,\N
 2831,0,M-309,cue-M-309,\N,\N
 2832,0,M-304A,cue-M-304A,\N,\N
@@ -2641,14 +2641,14 @@ row_id,ord,printed,target,corrected,note
 2835,0,M-317,cue-M-317,\N,\N
 2836,0,M-340,cue-M-340,\N,\N
 2837,0,E-17,cue-E-17,\N,\N
-2838,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2838,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2839,0,E-10,cue-E-10,\N,\N
 2840,0,F-10,cue-F-10,\N,\N
 2841,0,J-18,cue-J-18,\N,\N
 2842,0,M-318,cue-M-318,\N,\N
 2843,0,M-318,cue-M-318,\N,\N
 2844,0,M-129A,cue-M-129A,\N,\N
-2845,0,M-221,q-MOVIE-R-6,M-206,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-221 is the movie's M-206, ""Usagi's Worry"" (CD 8-5), not the movie list's M-221 (CD 8-15-1). Confirmed against a recording of episode 98."
+2845,0,M-221,q-MOVIE-R-6,M-206,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-221 here is actually M-206 on the R Movie cue sheet. Confirmed against a recording of episode 98.
 2846,0,E-22,cue-E-22,\N,\N
 2847,0,M-334,cue-M-334,\N,\N
 2848,0,J-19,cue-J-19,\N,\N
@@ -2671,7 +2671,7 @@ row_id,ord,printed,target,corrected,note
 2866,0,J-16,cue-J-16,\N,\N
 2867,0,M-330B,cue-M-330B,\N,\N
 2868,0,M-345,cue-M-345,\N,\N
-2869,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2869,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2870,0,M-341,cue-M-341,\N,\N
 2871,0,I-1,cue-I-1,\N,\N
 2872,0,M-311,cue-M-311,\N,\N
@@ -2710,7 +2710,7 @@ row_id,ord,printed,target,corrected,note
 2905,0,M-336,cue-M-336,\N,\N
 2906,0,M-306,cue-M-306,\N,\N
 2906,1,M-305A,cue-M-305A,\N,\N
-2907,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2907,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2908,0,M-341,cue-M-341,\N,\N
 2909,0,I-1,cue-I-1,\N,\N
 2910,0,M-309,cue-M-309,\N,\N
@@ -2730,8 +2730,8 @@ row_id,ord,printed,target,corrected,note
 2924,0,M-318,cue-M-318,\N,\N
 2925,0,M-129A,cue-M-129A,\N,\N
 2926,0,M-341,cue-M-341,\N,\N
-2927,0,M-207,q-MOVIE-R-8B,M-208B,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-207 is the movie's M-208B, the Mars ~ Mercury transformations (CD 8-7-2), not the movie list's M-207 (CD 8-6). Confirmed against recordings of episodes 99 and 100."
-2928,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+2927,0,M-207,q-MOVIE-R-8B,M-208B,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-207 here is actually M-208B on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
+2928,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 2929,0,M-307,cue-M-307,\N,\N
 2930,0,M-309,cue-M-309,\N,\N
 2931,0,E-19,cue-E-19,\N,\N
@@ -2784,7 +2784,7 @@ row_id,ord,printed,target,corrected,note
 2978,0,M-318,cue-M-318,\N,\N
 2979,0,M-318,cue-M-318,\N,\N
 2980,0,J-16,cue-J-16,\N,\N
-2981,0,M-221,q-MOVIE-R-6,M-206,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-221 is the movie's M-206, ""Usagi's Worry"" (CD 8-5), not the movie list's M-221 (CD 8-15-1). Confirmed against a recording of episode 98."
+2981,0,M-221,q-MOVIE-R-6,M-206,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-221 here is actually M-206 on the R Movie cue sheet. Confirmed against a recording of episode 98.
 2982,0,M-361,cue-M-361,\N,\N
 2983,0,M-348,cue-M-348,\N,\N
 2984,0,M-357,cue-M-357,\N,\N
@@ -2826,7 +2826,7 @@ row_id,ord,printed,target,corrected,note
 3020,0,F-4,cue-F-4,\N,\N
 3021,0,M-101,cue-M-101,\N,\N
 3022,0,E-16,cue-E-16,\N,\N
-3023,0,M-203,q-MOVIE-R-10A,M-210A,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-203 is the movie's M-210A, Sailor Moon's entrance (CD 8-8-2), not the movie list's M-203 (CD 8-3-1). Confirmed against recordings of episodes 99 and 100."
+3023,0,M-203,q-MOVIE-R-10A,M-210A,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 here is actually M-210A on the R Movie cue sheet. Confirmed against recordings of episodes 99 and 100.
 3024,0,M-345,cue-M-345,\N,\N
 3025,0,J-13,cue-J-13,\N,\N
 3026,0,M-341,cue-M-341,\N,\N
@@ -3329,7 +3329,7 @@ row_id,ord,printed,target,corrected,note
 3538,0,M-2,cue-M-2,\N,\N
 3539,0,M-52,cue-M-52,\N,\N
 3540,0,M-351,cue-M-351,\N,\N
-3541,0,M-221,q-MOVIE-R-6,M-206,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-221 is the movie's M-206, ""Usagi's Worry"" (CD 8-5), not the movie list's M-221 (CD 8-15-1). Confirmed against a recording of episode 98."
+3541,0,M-221,q-MOVIE-R-6,M-206,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-221 here is actually M-206 on the R Movie cue sheet. Confirmed against a recording of episode 98.
 3542,0,E-16,cue-E-16,\N,\N
 3543,0,M-57,cue-M-57,\N,\N
 3544,0,M-57,cue-M-57,\N,\N
@@ -3522,7 +3522,7 @@ row_id,ord,printed,target,corrected,note
 3735,0,M-53,cue-M-53,\N,\N
 3736,0,M-347,cue-M-347,\N,\N
 3737,0,M-45,cue-M-45,\N,\N
-3738,0,M-221,q-MOVIE-R-6,M-206,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-221 is the movie's M-206, ""Usagi's Worry"" (CD 8-5), not the movie list's M-221 (CD 8-15-1). Confirmed against a recording of episode 98."
+3738,0,M-221,q-MOVIE-R-6,M-206,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-221 here is actually M-206 on the R Movie cue sheet. Confirmed against a recording of episode 98.
 3739,0,M-11,cue-M-11,\N,\N
 3740,0,M-23,cue-M-23,\N,\N
 3741,0,D-3,cue-D-3,\N,\N
@@ -3683,7 +3683,7 @@ row_id,ord,printed,target,corrected,note
 3904,0,M-2,cue-M-2,\N,\N
 3905,0,M-2,cue-M-2,\N,\N
 3906,0,M-348,cue-M-348,\N,\N
-3907,0,M-221,q-MOVIE-R-6,M-206,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-221 is the movie's M-206, ""Usagi's Worry"" (CD 8-5), not the movie list's M-221 (CD 8-15-1). Confirmed against a recording of episode 98."
+3907,0,M-221,q-MOVIE-R-6,M-206,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-221 here is actually M-206 on the R Movie cue sheet. Confirmed against a recording of episode 98.
 3908,0,M-24,cue-M-24,\N,\N
 3909,0,E-20,cue-E-20,\N,\N
 3910,0,E-19,cue-E-19,\N,\N
@@ -4042,7 +4042,7 @@ row_id,ord,printed,target,corrected,note
 4272,0,M-641,cue-M-641,\N,\N
 4273,0,M-404,q-MOVIE-S-4,\N,\N
 4274,0,J-13,cue-J-13,\N,\N
-4275,0,M-221,q-MOVIE-R-6,M-206,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-221 is the movie's M-206, ""Usagi's Worry"" (CD 8-5), not the movie list's M-221 (CD 8-15-1). Confirmed against a recording of episode 98."
+4275,0,M-221,q-MOVIE-R-6,M-206,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-221 here is actually M-206 on the R Movie cue sheet. Confirmed against a recording of episode 98.
 4276,0,M-608,cue-M-608,\N,\N
 4277,0,M-644,cue-M-644,\N,\N
 4278,0,M-37,cue-M-37,\N,\N
@@ -4355,7 +4355,7 @@ row_id,ord,printed,target,corrected,note
 4605,0,E-19,cue-E-19,\N,\N
 4606,0,M-644,cue-M-644,\N,\N
 4607,0,M-536,q-MOVIE-SS-31,\N,\N
-4608,0,M-223,q-MOVIE-R-14,M-214,"The TV cue sheets number reused R-movie music differently from the movie's own list: their M-223 is the movie's M-214, ""Stinger ~ sorrow"" (CD 8-10-3), not the movie list's M-223 (CD 8-16-1). Confirmed against a recording of the episode."
+4608,0,M-223,q-MOVIE-R-14,M-214,The R Movie cue sheet numbering is different from the rest of the cue sheets. M-223 here is actually M-214 on the R Movie cue sheet. Confirmed against a recording of the episode.
 4609,0,M-524,q-MOVIE-SS-14,\N,\N
 4610,0,M-651,cue-M-651,\N,\N
 4611,0,M-537,q-MOVIE-SS-34,\N,\N
@@ -4411,16 +4411,16 @@ row_id,ord,printed,target,corrected,note
 4663,0,M-629,cue-M-629,\N,\N
 4664,0,M-641,cue-M-641,\N,\N
 4665,0,M-601A,cue-M-601A,\N,\N
-11,0,M-210A,\N,\N,The TV cue sheets number reused R-movie music differently and call this piece M-203.
-12,0,M-210B,\N,\N,The TV cue sheets number reused R-movie music differently and call this piece M-205.
-8,0,M-208A,\N,\N,The TV cue sheets number reused R-movie music differently and call this piece M-206.
-9,0,M-208B,\N,\N,The TV cue sheets number reused R-movie music differently and call this piece M-207.
-6,0,M-206,\N,\N,The TV cue sheets number reused R-movie music differently and call this piece M-221; their M-206 is this list's M-208A.
-17,0,M-214,\N,\N,The TV cue sheets number reused R-movie music differently and call this piece M-223.
-3,0,M-203,\N,\N,"The TV cue sheets number reused R-movie music differently: their M-203 is a different piece, this list's M-210A."
-5,0,M-205,\N,\N,"The TV cue sheets number reused R-movie music differently: their M-205 is a different piece, this list's M-210B."
-7,0,M-207,\N,\N,"The TV cue sheets number reused R-movie music differently: their M-207 is a different piece, this list's M-208B."
-24,0,M-221,\N,\N,"The TV cue sheets number reused R-movie music differently: their M-221 is a different piece, this list's M-206."
-26,0,M-223,\N,\N,"The TV cue sheets number reused R-movie music differently: their M-223 is a different piece, this list's M-214."
+11,0,M-210A,\N,\N,\N
+12,0,M-210B,\N,\N,\N
+8,0,M-208A,\N,\N,\N
+9,0,M-208B,\N,\N,\N
+6,0,M-206,\N,\N,\N
+17,0,M-214,\N,\N,\N
+3,0,M-203,\N,\N,\N
+5,0,M-205,\N,\N,\N
+7,0,M-207,\N,\N,\N
+24,0,M-221,\N,\N,\N
+26,0,M-223,\N,\N,\N
 4649,1,ゴールデンクイーン・ギャラクシア,cue-cd-6-1,\N,\N
 4651,1,ゴールデンクイーン・ギャラクシア（オルゴール）,cue-cd-6-1,\N,\N

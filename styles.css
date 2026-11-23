@@ -147,7 +147,7 @@ table.bk td:is(.code,.ed,.ref) a.go:not(.ref-link){color:inherit;text-decoration
 table.bk td:is(.code,.ed,.ref) a.go:not(.ref-link):hover{color:var(--accent)}
 /* the same column widths in every table of a kind; the booklet's columns are fixed and the editor's Notes column takes
    the rest, so a wider window gives the notes the room */
-table.bk{table-layout:fixed;min-width:64em} table.bk[data-kind=list]{min-width:108em} table.bk[data-kind=film]{min-width:112em}
+table.bk{table-layout:fixed;min-width:64em} table.bk[data-kind=list]{min-width:108em} table.bk[data-kind=film]{min-width:112em} table.bk[data-cols=filmR]{min-width:123.6em}
 col.w-m{width:3.2em} col.w-no{width:3.6em} col.w-mno{width:7.5em} col.w-credit{width:9em}
 col.w-time{width:5.2em} col.w-cd{width:5.5em} col.w-desc{width:30em} col.w-scene{width:28em}
 /* alternating rows (header rows inside a cue sheet's tbody come in pairs, so the pattern stays even) */
@@ -222,7 +222,7 @@ details.sub[id^="al-"][open]>summary .al-links{display:inline}
    table's border grey down their left edge sets them apart from the book's own */
 .pl-en{display:none} body.l-en .pl-en{display:inline} body.l-en .pl-ja{display:none}   /* a CD place: Music Box · 5-21-2, Song Box · 3-10, SuperS · 12 with English on */
 .artist{color:var(--muted);font-size:.88em;margin-left:.35em}   /* who sings, after a song title */
-col.w-used{width:7.2em} col.w-rel{width:8.4em} col.w-cdtrk{width:28em}   /* Notes (w-notes): the rest */
+col.w-used{width:7.2em} col.w-rel{width:8.4em} col.w-cdtrk{width:28em} col.w-tvno{width:11.6em}   /* Notes (w-notes): the rest */
 /* Uses: just the uses button (its list opens in a box) */
 /* drawn as the right border of the cell before, not a positioned ::before: Safari on iPhone draws position:relative
    table cells at stale offsets once rows above change height (a panel built after a jump) */

@@ -52,6 +52,8 @@ const UI = {
 /* the editor's columns, after the book's own: not in the booklet */
 const ED_HEAD = {
   cd: {en: 'CD / Track', c: 'ed'},
+  tvno: {en: 'Outside M-NO.', c: 'ed', t: ['The code the other cue sheets give this piece when they reuse it.',
+    'The R Movie cue sheet numbering is different from the rest of the cue sheets. M-203 outside this list is actually M-210A here, not this list\'s M-203.']},
   used: {en: 'Uses', c: 'ed'},
   rel: {en: 'Related', c: 'ed'},
   notes: {en: 'Notes', c: 'ed'},
@@ -183,12 +185,13 @@ const COLS = {
   tv: ['w-m', 'w-scene', 'w-credit', 'w-time', 'ed w-notes'],
   list: ['w-mno', 'w-time', 'w-desc', 'w-cd', 'ed w-cdtrk', 'ed w-used', 'ed w-rel', 'ed w-notes'],
   film: ['w-no', 'w-mno', 'w-time', 'w-desc', 'w-cd', 'ed w-cdtrk', 'ed w-used', 'ed w-rel', 'ed w-notes'],
+  filmR: ['w-no', 'w-mno', 'w-time', 'w-desc', 'w-cd', 'ed w-cdtrk', 'ed w-tvno', 'ed w-used', 'ed w-rel', 'ed w-notes'],   // + Outside M-NO.
   album: ['w-no', 'w-ttl', 'w-time', 'w-pseg', 'w-auses', 'w-arel', 'w-aref', 'w-also'],   // Same as takes the rest
 };
 const colgroup = kind => '<colgroup>' + COLS[kind].map(c => `<col class="${c}">`).join('') + '</colgroup>';
 /* a title row spans every column */
 const spanAttr = kind => `colspan="${COLS[kind].length}"`;
-const tableTag = kind => `<table class="bk" data-kind="${kind}">${colgroup(kind)}`;
+const tableTag = (kind, cols = kind) => `<table class="bk" data-kind="${kind}"${cols !== kind ? ` data-cols="${cols}"` : ''}>${colgroup(cols)}`;
 /* a column-head row; when the table has editor's columns, a thin row above it labels which columns are the booklet's and
    which this site added (those are also shaded green, styles.css) */
 function headRow(h, group = true){
@@ -237,7 +240,9 @@ function rowNotes(r){
   const items = [], mark = {cl: []};
   const add = html => items.push(html);
   (r.cl || []).forEach(([p, t, fix, note], i) => {
-    if (fix) mark.cl[i] = add(`<b>${t ? goLink(t, fix, goTitle(t)) : esc(fix)}</b>${printedAs(p)}.${note ? ' ' + noteText(note) : ''}`);
+    // the R movie renumbering notes already say what the cue sheet prints ("M-203 here is actually M-210A")
+    const saysPrinted = note && /^The R Movie cue sheet numbering is different/.test(note);
+    if (fix) mark.cl[i] = add(`<b>${t ? goLink(t, fix, goTitle(t)) : esc(fix)}</b>${saysPrinted ? '' : printedAs(p)}.${note ? ' ' + noteText(note) : ''}`);
     else if (note) mark.cl[i] = add(noteText(note));   // a note on a credit that stands as printed
   });
   if (r.cx) mark.code = add(`<b>${extOr(r.cx[1], esc(r.cx[0]), '')}</b>${printedAs(r.c)}. ${noteText(r.cx[2])}`);
@@ -523,13 +528,21 @@ function renderBgm(s){
   return html;
 }
 
+/* the R movie table's Outside M-NO. column: the code the other cue sheets print for this row's piece (their credits link here) */
+let TV_CODE;
+function tvNoCell(id){
+  if (!TV_CODE) { TV_CODE = {}; D.works.filter(w => w.type === 'tv' || w.type === 'special').forEach(w => w.parts.forEach(p => p.r.forEach(r =>
+    (r.cl || []).forEach(([printed, target]) => { if (target?.startsWith('q-MOVIE-R-')) TV_CODE[target] ??= printed; })))); }
+  const c = TV_CODE[id];
+  return `<td class="code ed" translate="no">${c ? esc(c) : ''}</td>`;
+}
 function cueTable(w, noCap){
   const film = w.type === 'movie';
-  const kind = film ? 'film' : 'tv', nc = spanAttr(kind);   // title rows span every column
-  let html = `<div class="scroll">${tableTag(kind)}<thead>`
+  const kind = film ? 'film' : 'tv', tvno = w.id === 'MOVIE-R', cols = tvno ? 'filmR' : kind, nc = spanAttr(cols);   // title rows span every column
+  let html = `<div class="scroll">${tableTag(kind, cols)}<thead>`
     + (noCap ? '' : `<tr><th ${nc} class="cap">${stack(w.h, lineFmt(w.hx))}</th></tr>`);
   // the Make Up!, SuperS and Ami film tables head their first column "M" instead of "NO."
-  if (film) html += headRow([...(FILMS[w.id].m ? [{h: ['M','M','M'], c: 'num'}, ...UI.qHead.slice(1)] : UI.qHead), ED_HEAD.cd, ED_HEAD.used, ED_HEAD.rel, ED_HEAD.notes]);
+  if (film) html += headRow([...(FILMS[w.id].m ? [{h: ['M','M','M'], c: 'num'}, ...UI.qHead.slice(1)] : UI.qHead), ED_HEAD.cd, ...(tvno ? [ED_HEAD.tvno] : []), ED_HEAD.used, ED_HEAD.rel, ED_HEAD.notes]);
   html += '</thead>';
   w.parts.forEach(p => {
     html += '<tbody>';
@@ -553,7 +566,7 @@ function cueTable(w, noCap){
       // a row that reuses a cue from another table (its credit links there) shows that cue's uses, its own among them
       const reused = film && (r.cl || []).find(c => c[1])?.[1];
       const used = film ? (reused ? usedCell(reused, OWN_USE[reused]) : usedCell(id, OWN_USE[id])) : '';
-      html += film ? `<tr id="${esc(id)}">${m}${ct}${d}<td class="num" translate="no">${cdCell(r, n.mark.cd)}</td>${cdCells(r.cdx || r.cd)}${used}${relCell([r.cdx && r.cdx !== NO_CD ? r.cdx : r.cd], 'ed du')}${notesCell(n)}</tr>`
+      html += film ? `<tr id="${esc(id)}">${m}${ct}${d}<td class="num" translate="no">${cdCell(r, n.mark.cd)}</td>${cdCells(r.cdx || r.cd)}${tvno ? tvNoCell(id) : ''}${used}${relCell([r.cdx && r.cdx !== NO_CD ? r.cdx : r.cd], 'ed du')}${notesCell(n)}</tr>`
                    : `<tr id="${esc(id)}">${m}${d}${ct}${notesCell(n)}</tr>`;
     });
     html += '</tbody>';
