@@ -73,6 +73,8 @@ details>summary::-webkit-details-marker{display:none}
 details.sec>summary{display:flex;gap:12px;align-items:center;padding-block:8px;
   font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--head);text-wrap:balance}
 details.sec>summary img{height:44px;width:auto;flex:none}
+.sec-name{display:grid}
+.sec-eps{font-family:var(--body);font-weight:400;font-size:var(--s-1);color:var(--muted)}
 .sec-body{display:grid;gap:2px;padding-bottom:10px}
 .sec-body{margin-left:.35em;padding-left:0}
 details>summary .chev{font-family:var(--body);font-size:var(--s-1);color:var(--accent);transition:transform .15s;display:inline-block;flex:none}
@@ -147,7 +149,7 @@ table.bk td:is(.code,.ed,.ref) a.go:not(.ref-link):hover{color:var(--accent)}
    the rest, so a wider window gives the notes the room */
 table.bk{table-layout:fixed;min-width:64em} table.bk[data-kind=list]{min-width:108em} table.bk[data-kind=film]{min-width:112em} table.bk[data-cols=filmR]{min-width:123.6em}
 col.w-m{width:3.2em} col.w-no{width:3.6em} col.w-mno{width:7.5em} col.w-credit{width:9em}
-col.w-time{width:5.2em} col.w-cd{width:5.5em} col.w-desc{width:30em} col.w-scene{width:28em}
+col.w-time{width:6.5em} col.w-cd{width:10.5em} col.w-desc{width:30em} col.w-scene{width:28em}
 /* alternating rows (header rows inside a cue sheet's tbody come in pairs, so the pattern stays even) */
 table.bk tbody tr:nth-child(even) td{background:var(--stripe)}
 table.bk tbody tr:hover td{background:var(--rowhover)}
@@ -159,7 +161,6 @@ table.bk tbody tr:hover td{background:var(--rowhover)}
 .fixed mark a{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:2px}
 .fixed.ins{white-space:normal} .fixed.ins mark{margin-left:.2em}
 /* in the two-column CD key a long correction wraps inside its own column instead of running into the next */
-.cols2 .fixed{white-space:normal}
 tr.flash td, tbody.flash td, details.epi.flash>summary{background:var(--flash)!important}
 a.btn{text-decoration:none;display:inline-flex;align-items:center}
 
@@ -167,6 +168,7 @@ a.btn{text-decoration:none;display:inline-flex;align-items:center}
 /* album tables: no text wraps; every column is as wide as its contents (long titles and references are cut off with …
    until their button shows them in full), and the table as wide as its columns */
 table.bk[data-kind=album]{table-layout:auto;width:auto;min-width:0}
+table.bk[data-kind=album] tr.cols th{white-space:nowrap}   /* its columns size to their contents, so a heading and its ? stay on one line */
 table.bk[data-kind=album] col{width:auto}
 table.bk[data-kind=album] :is(td,th){white-space:nowrap}
 /* while a uses list is open, its table's Uses column widens (and Description gives way) */
@@ -218,9 +220,10 @@ details.sub[id^="al-"][open]>summary .al-links{display:inline}
 
 /* the editor's columns (CD, Track, Uses, Notes): not in the booklet. They share the table's colours; a line in the
    table's border grey down their left edge sets them apart from the book's own */
-.pl-en{display:none} body.l-en .pl-en{display:inline} body.l-en .pl-ja{display:none}   /* a CD place: Music Box · 5-21-2, Song Box · 3-10, SuperS · 12 with English on */
 .artist{color:var(--muted);font-size:.88em;margin-left:.35em}   /* who sings, after a song title */
 col.w-used{width:7.2em} col.w-rel{width:8.4em} col.w-cdtrk{width:28em} col.w-tvno{width:11.6em}   /* Notes (w-notes): the rest */
+table.bk[data-kind=cdkey] col.w-mno{width:5em} col.w-key{width:17em} col.w-site{width:7em}   /* the key to the CD references */
+table.bk[data-kind=cdkey] td.ed a.go{text-decoration:none}   /* its album links: no underline, the accent color on hover */
 /* Uses: just the uses button (its list opens in a box) */
 /* drawn as the right border of the cell before, not a positioned ::before: Safari on iPhone draws position:relative
    table cells at stale offsets once rows above change height (a panel built after a jump) */
@@ -236,7 +239,7 @@ td.notes p{margin:0 0 .45em;overflow-wrap:anywhere} td.notes p:last-child{margin
 .trow{display:flex;gap:.4em;align-items:baseline}
 .tno{flex:none;min-width:1.4em;font-variant-numeric:tabular-nums;color:var(--muted)}
 .tname{min-width:0}
-/* Editor's notes boxes (under the p.104 legend) */
+/* Editor's notes boxes (an episode's site note on its title, under its cue sheet) */
 .ed-box{margin:16px 0 0;max-width:46em;border:1px solid var(--tableborder);border-radius:10px;background:var(--row);overflow:hidden;font-size:.95em}
 .ed-box-h{padding:.45em .9em;background:var(--part);color:var(--band);font-weight:700;border-bottom:1px solid var(--tableborder)}
 .ed-foot{margin:0;padding:.7em .9em .3em 2.4em}
@@ -266,6 +269,7 @@ body.l-ja .te .mk{display:none}
 .eplist, .eplist+.page-pointer{margin-left:calc(.42rem + 1px)}   /* each episode's chevron lines up with the left edge of the season's logo; the line after the list (the movies are on the Movies page) starts at the same edge */
 .eplist{display:grid;gap:3px;padding-top:4px}
 details.epi{border-radius:8px;scroll-margin-top:84px}
+details[id^="al-"], details.sec{scroll-margin-top:84px}   /* an album or season jumped to: its heading clear of the fixed bar */
 details.epi[open]{min-width:min-content}   /* an open episode is as wide as its table (on a narrow screen the table is wider than the list), so its heading band spans the whole table */
 details.epi>summary{display:grid;grid-template-columns:1em 2.6em minmax(0,1fr);gap:10px;
   align-items:baseline;padding:.5em .8em;border-radius:8px;background:var(--row)}
@@ -282,30 +286,16 @@ details.epi[open]>summary{background:var(--band);color:var(--band-ink);border:1p
 .ep-head{text-wrap:balance;margin:14px 0 4px}
 .page{font-size:var(--s-1);color:var(--muted);font-variant-numeric:tabular-nums}
 /* notes: small muted text, the same size in every language */
-.note, .ednotes, .notes-top{font-size:var(--s-1);color:var(--muted);max-width:90ch}
+.note, .ednotes{font-size:var(--s-1);color:var(--muted);max-width:90ch}
 .note{margin:4px 0 0}
 .inner > .cat{margin-top:8px}  /* a film's instrumentals table, under its cue sheet */
 .ednotes{margin:0;padding-left:1.3em;display:grid;gap:10px}
 .ednotes li::marker{color:var(--accent)}
 .ed-sub{margin:.3em 0 0;padding-left:1.3em;display:grid;gap:4px} .ed-sub li{list-style:circle}
-.notes-top{margin-bottom:16px}
-.notes-top ul{margin:0;padding-left:1.3em;display:grid;gap:3px}
-.notes-top ul.kome{list-style:none;padding-left:0;gap:10px}
-.notes-top ul ul{margin-top:3px}
-.notes-top ul.cols2{display:block;columns:2 18em;column-gap:2.5em;margin-top:3px}
-.notes-top ul.cols2>li{break-inside:avoid;margin-bottom:4px}
-.nh-key .tx>span, body.l-ja.l-en .nh-key .tx>.ja+.en{font-weight:700;color:var(--muted)}
-.notes-top ul ul li::marker{color:var(--accent)}
-.notes-top b{color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}
 
 /* frozen control bar */
-.bar{position:fixed;top:0;z-index:20;   /* fixed, so it holds still however the page scrolls */
-  /* on an iPhone held sideways Safari can hold fixed things inside the strips beside the notch: the bar reaches out over
-     them (a negative inset of the strip's width), and its padding adds that width back so the buttons clear the notch
-     either way; elsewhere the insets are 0 */
-  --sl:env(safe-area-inset-left, 0px); --sr:env(safe-area-inset-right, 0px);
-  left:calc(0px - var(--sl));right:calc(0px - var(--sr));
-  padding:10px calc(max(16px, var(--sr)) + var(--sr)) 10px calc(max(16px, var(--sl)) + var(--sl));
+.bar{position:fixed;top:0;left:0;right:0;z-index:20;   /* fixed, so it holds still however the page scrolls */
+  padding:10px max(16px, env(safe-area-inset-right)) 10px max(16px, env(safe-area-inset-left));   /* clear of the notch on a phone held sideways */
   /* liquid glass: a gloss highlight fading down the top half over a slightly see-through lavender that blurs the page behind,
      with a bright rim along the top edge and a faint shade along the bottom */
   background:linear-gradient(rgb(255 255 255 / .55), rgb(255 255 255 / .12) 50%, rgb(255 255 255 / 0) 51%, rgb(90 40 90 / .08)),
@@ -319,7 +309,7 @@ details.epi[open]>summary{background:var(--band);color:var(--band-ink);border:1p
 .bar.compact .bar-in{gap:4px 10px}
 .bar.compact :is(.btn, .lt span){font-size:.6875rem}
 /* where you are: hangs under the bar (out of its flow, so the bar keeps its height); one line, the outer levels shortening first */
-.crumbs{position:absolute;top:100%;left:0;right:0;display:flex;gap:.4em;align-items:center;padding:.3em calc(max(16px, var(--sr), (100% - var(--page)) / 2) + var(--sr)) .3em calc(max(16px, var(--sl), (100% - var(--page)) / 2) + var(--sl));
+.crumbs{position:absolute;top:100%;left:0;right:0;display:flex;gap:.4em;align-items:center;padding:.3em max(16px, env(safe-area-inset-right), (100% - var(--page)) / 2) .3em max(16px, env(safe-area-inset-left), (100% - var(--page)) / 2);
   background:var(--paper);border-bottom:1px solid var(--tableborder);box-shadow:0 2px 8px rgb(60 20 40 / .10);
   font-size:var(--s-1);line-height:1.5;color:var(--muted);white-space:nowrap}
 .crumbs[hidden]{display:none}
@@ -361,6 +351,17 @@ details.epi[open]>summary{background:var(--band);color:var(--band-ink);border:1p
 .dlg-body section{padding-top:14px}
 .dlg-body section+section{border-top:1px solid var(--tableborder);margin-top:16px}
 .dlg-body h3{margin:0 0 10px;font-size:var(--s0)}
+.gloss{border-collapse:collapse;width:100%;max-width:60em;font-size:var(--s-1)}   /* the Glossary */
+.gloss th, .gloss td{padding:.45em .75em;text-align:left;vertical-align:top;border-bottom:1px solid var(--tableborder)}
+.gloss thead th{background:var(--part);color:var(--band);font-weight:700}
+.gloss tbody th{font-weight:700;white-space:nowrap}
+.gloss td[lang=ja]{white-space:nowrap}
+.gloss tbody tr:nth-child(even){background:var(--row)}
+/* a column heading's lightbox (the CD key): sized to its table */
+.pop-dlg{width:min(60em,calc(100vw - 24px))}
+body.l-ja .pop-dlg .dlg-head h2 .cv:is(.cr, .ce), body.l-ro .pop-dlg .dlg-head h2 .cv.ce{font-size:var(--s-1);font-weight:400;color:var(--muted)}
+.pop-dlg .dlg-body{padding:16px 20px 20px}
+.pop-dlg table.bk{margin:0;min-width:44em}   /* narrower than the lists' tables; the box scrolls sideways on a phone */
 
 /* the editor's columns: a soft green, in their head cells and (lightly) their data cells, under a labelled group row */
 table.bk tr.grp th{font-weight:700;padding:.3em .75em;background:var(--colhead);color:var(--band);border-bottom:0;vertical-align:bottom}
@@ -368,21 +369,19 @@ table.bk tr.grp th{font-weight:700;padding:.3em .75em;background:var(--colhead);
 table.bk .grp-label{display:block;font-size:.82em;line-height:1.35;font-weight:400;font-style:italic;letter-spacing:.02em}
 table.bk:not([data-kind=album]) th.ed{background:var(--edhead);color:var(--edink)}   /* the albums page is all this site's */
 table.bk tr.grp th.ed{background:var(--edgrp);color:var(--edink)}
-/* a table heading's ? icon and the box explaining its column, shown at once on hover or keyboard focus */
+/* a table heading's ? button; a click opens its notes in the pop-up box (#uses-pop) */
 th:has(>.tip)>.cv{display:inline}   /* the icon sits on the heading line */
-th .tip{position:relative;display:inline-block;margin-left:.35em;vertical-align:.08em;cursor:help;outline:none;white-space:nowrap}
+th .th-h{display:inline-block;vertical-align:baseline}   /* a booklet heading's lines (収録CD over CD): the icon sits after the last one */
+th .tip{display:inline-block;margin-left:.35em;vertical-align:.08em;white-space:nowrap}
 th .tip-i{display:inline-flex;align-items:center;justify-content:center;width:1.25em;height:1.25em;border:1px solid currentColor;
   border-radius:50%;font-family:var(--body);font-size:.72em;font-weight:700;line-height:1;opacity:.75}
-th .tip:hover .tip-i, th .tip:focus-visible .tip-i{opacity:1;background:var(--band);border-color:var(--band);color:#fff}
-th .tip-box{display:none;position:absolute;z-index:30;top:calc(100% + 6px);left:-.6em;width:17em;padding:.55em .7em;
-  border-radius:6px;background:var(--ink);color:var(--paper);box-shadow:0 3px 10px rgb(0 0 0 / .25);
-  font-family:var(--body);font-size:.82rem;font-weight:400;line-height:1.4;text-align:left;white-space:normal;text-transform:none;letter-spacing:0}
-th .tip:hover .tip-box, th .tip:focus .tip-box{display:block}
-th .tip-key{margin-left:.25em} th .tip-key .tip-i svg{width:1.1em;height:1.1em}   /* a key icon in the same circle as the ? */
-th .tip-key .tip-box{width:auto;white-space:nowrap}
-th .tip-box .tip-line{display:block} th .tip-box .tip-line+.tip-line{margin-top:.3em}
-th .tip-box .tip-line:has(>b){padding-left:1.3em;text-indent:-1.3em} th .tip-box b{font-weight:700;display:inline-block;min-width:1.3em;text-indent:0}   /* a key line: its text hangs after the bold symbol */
-th:nth-last-child(-n+2) .tip-box{left:auto;right:-.6em}   /* the last columns: open leftward, so the box stays on screen */
+th .tip-btn{padding:0;background:none;color:inherit;cursor:pointer}   /* a ? that opens its notes in the pop-up box */
+th .tip-btn:hover, th .tip-btn:focus-visible, th .tip-btn[aria-expanded=true]{opacity:1;background:var(--band);border-color:var(--band);color:#fff}
+/* the notes, in the pop-up box */
+.uses-pop .pop-tip{max-width:30em;font-weight:400}
+.uses-pop .tip-line{display:block} .uses-pop .tip-line+.tip-line{margin-top:.35em}
+.uses-pop .tip-line:has(>b){padding-left:1.3em;text-indent:-1.3em} .uses-pop .tip-line b{font-weight:700;display:inline-block;min-width:1.3em;text-indent:0}   /* a key line: its text hangs after the bold symbol */
+body:not(.l-ja) .uses-pop .tip-ja{display:none} body.l-ja:not(.l-en) .uses-pop .tip-en{display:none}
 /* the albums' BGM list reference: a link icon, then the code (with any variant word or film) and the description as one
    run of text; with one language showing it's one paragraph, with several each language gets its own line */
 /* expandable columns (xcolCell in app.js): no wrapping; cut off with … past --xcol-max until the column is opened */
